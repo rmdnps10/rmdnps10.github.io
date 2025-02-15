@@ -15,7 +15,7 @@ module.exports = {
       summary: `Learning by Sharing.`,
     },
     description: `배운 것과 느낀 점을 정리하는 곳`,
-    siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
+    siteUrl: `https://rmdnps10.github.io/`,
     social: {
       twitter: `kylemathews`,
     },
