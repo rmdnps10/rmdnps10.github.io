@@ -9,12 +9,12 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: `rmdnps10 tech blog`,
     author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      name: `Inyoung Chung`,
+      summary: `Learning by Sharing.`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
+    description: `배운 것과 느낀 점을 정리하는 곳`,
     siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
     social: {
       twitter: `kylemathews`,

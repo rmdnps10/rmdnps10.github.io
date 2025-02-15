@@ -4,6 +4,7 @@ import { Link, graphql } from "gatsby"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import Comments from "../components/comment"
 
 const BlogPostTemplate = ({
   data: { previous, next, site, markdownRemark: post },
@@ -29,6 +30,7 @@ const BlogPostTemplate = ({
         <hr />
         <footer>
           <Bio />
+          <Comments />
         </footer>
       </article>
       <nav className="blog-post-nav">

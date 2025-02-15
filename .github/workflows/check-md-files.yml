@@ -1,0 +1,23 @@
+name: Check Blog Markdown Files
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  check-md-files:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Check for index.md in blog subdirectories
+        run: |
+          if [[ -z $(git diff --name-only ${{ github.event.pull_request.base.sha }} ${{ github.event.pull_request.head.sha }} | grep '^content/blog/.*/index\.md$') ]]; then
+            echo "❌ No 'index.md' found in content/blog/[title]/"
+            exit 1
+          else
+            echo "✅ Found 'index.md' file in blog subdirectory"
+          fi
