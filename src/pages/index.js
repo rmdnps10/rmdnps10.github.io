@@ -4,6 +4,7 @@ import { Link, graphql } from "gatsby"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
@@ -25,38 +26,57 @@ const BlogIndex = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <Bio />
-      <ol style={{ listStyle: `none` }}>
+      <p className="text-3xl font-bold text-white m-0 mt-5">
+        All {posts.length} Posts
+      </p>
+      <div className="flex flex-col gap-10 pt-4">
+        {/* TODO: List 컴포넌트로 따로 분리 */}
         {posts.map(post => {
           const title = post.frontmatter.title || post.fields.slug
+          const thumbnail = post.frontmatter.thumbnail
+            ? getImage(post.frontmatter.thumbnail)
+            : null
 
           return (
-            <li key={post.fields.slug}>
-              <article
-                className="post-list-item"
-                itemScope
-                itemType="http://schema.org/Article"
-              >
-                <header>
-                  <h2>
-                    <Link to={post.fields.slug} itemProp="url">
-                      <span itemProp="headline">{title}</span>
-                    </Link>
-                  </h2>
-                  <small>{post.frontmatter.date}</small>
-                </header>
-                <section>
-                  <p
-                    dangerouslySetInnerHTML={{
-                      __html: post.frontmatter.description || post.excerpt,
-                    }}
-                    itemProp="description"
-                  />
-                </section>
-              </article>
-            </li>
+            <div
+              key={post.fields.slug}
+              className="bg-darkBackground  shadow-md rounded-lg overflow-hidden"
+            >
+              <Link to={post.fields.slug} itemProp="url">
+                <article
+                  className="p-0"
+                  itemScope
+                  itemType="http://schema.org/Article"
+                >
+                  {thumbnail && (
+                    <GatsbyImage
+                      image={thumbnail}
+                      alt={title}
+                      className="w-full h-60 object-cover"
+                    />
+                  )}
+
+                  <div className="px-5">
+                    <h2 className="text-xl font-bold mb-2 text-white">{title}</h2>
+                    <small className="text-gray-500">
+                      {post.frontmatter.date}
+                    </small>
+                    <section className="mt-2">
+                      <p
+                        dangerouslySetInnerHTML={{
+                          __html: post.frontmatter.description || post.excerpt,
+                        }}
+                        itemProp="description"
+                        className="text-gray-700"
+                      />
+                    </section>
+                  </div>
+                </article>
+              </Link>
+            </div>
           )
         })}
-      </ol>
+      </div>
     </Layout>
   )
 }
@@ -87,6 +107,11 @@ export const pageQuery = graphql`
           date(formatString: "MMMM DD, YYYY")
           title
           description
+          thumbnail {
+            childImageSharp {
+              gatsbyImageData(width: 300, layout: CONSTRAINED)
+            }
+          }
         }
       }
     }
