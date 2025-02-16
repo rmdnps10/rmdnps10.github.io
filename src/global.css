@@ -66,7 +66,7 @@
   --color-heading-black: black;
   --color-accent: #d1dce5;
 
-  --color-dark: #2c2c2c;
+  --color-dark-main: #2c2c2c;
   --color-lightdark: #424242;
   --color-yellow: #fede22;
   --color-lightdark-translucent: rgba(66, 66, 66, 0.8);
@@ -79,8 +79,6 @@
 
 @import url("https://cdn.jsdelivr.net/npm/pretendard/dist/web/static/pretendard.css");
 
-body {
-}
 /* HTML elements */
 
 *,
@@ -100,6 +98,7 @@ body {
   font-family: var(--font-body) var(--fontFamily-pretendard);
   font-size: var(--fontSize-1);
   color: var(--color-text);
+  background-color: var(--color-dark-main);
 }
 
 footer {

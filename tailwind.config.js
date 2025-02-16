@@ -93,6 +93,7 @@ module.exports = {
         heading: "var(--color-heading)",
         headingBlack: "var(--color-heading-black)",
         accent: "var(--color-accent)",
+        darkMain: "var(--color-dark-main)",
         lightDark: "var(--color-lightdark)",
         yellow: "var(--color-yellow)",
         background: "var(--color-background)",
