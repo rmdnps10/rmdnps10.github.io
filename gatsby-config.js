@@ -9,19 +9,23 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `rmdnps10 tech blog`,
+    title: `Dev-Inyoung`,
     author: {
       name: `Inyoung Chung`,
-      summary: `Learning by Sharing.`,
+      university: 'Sogang University, Art&Technology',
+      summary: `👨‍💻 Junior Developer (Web, AI)`,
     },
-    description: `배운 것과 느낀 점을 정리하는 곳`,
+    description: `Learning by Sharing: 배우고 느낀 점을 공유하며 성장합니다.`,
     siteUrl: `https://rmdnps10.github.io/`,
     social: {
-      twitter: `kylemathews`,
+      instagram: `rmdnps10`,
     },
   },
   plugins: [
     `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-svgr`,
     "gatsby-plugin-postcss",
     {
       resolve: `gatsby-source-filesystem`,

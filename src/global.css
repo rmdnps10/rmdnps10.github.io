@@ -37,6 +37,7 @@
     "Noto Color Emoji";
   --fontFamily-serif: "Merriweather", "Georgia", Cambria, "Times New Roman",
     Times, serif;
+  --fontFamily-pretendard: "Pretendard", system-ui;
   --font-body: var(--fontFamily-serif);
   --font-heading: var(--fontFamily-sans);
   --fontWeight-normal: 400;
@@ -57,13 +58,29 @@
   --fontSize-6: 2.488rem;
   --fontSize-7: 2.986rem;
   --color-primary: #005b99;
+  --color-dark-background: #121212;
+  --color-background: #1c1c1c;
   --color-text: #2e353f;
   --color-text-light: #4f5969;
   --color-heading: #1a202c;
   --color-heading-black: black;
   --color-accent: #d1dce5;
+
+  --color-dark: #2c2c2c;
+  --color-lightdark: #424242;
+  --color-yellow: #fede22;
+  --color-lightdark-translucent: rgba(66, 66, 66, 0.8);
+  --color-light: #ededed;
+  --color-lightgreen: #d3ffcf;
+  --color-darkgreen: #003900;
+
+  color-scheme: light dark;
 }
 
+@import url("https://cdn.jsdelivr.net/npm/pretendard/dist/web/static/pretendard.css");
+
+body {
+}
 /* HTML elements */
 
 *,
@@ -80,7 +97,7 @@ html {
 }
 
 body {
-  font-family: var(--font-body);
+  font-family: var(--font-body) var(--fontFamily-pretendard);
   font-size: var(--fontSize-1);
   color: var(--color-text);
 }
