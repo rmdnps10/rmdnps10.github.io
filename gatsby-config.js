@@ -12,7 +12,7 @@ module.exports = {
     title: `Dev-Inyoung`,
     author: {
       name: `Inyoung Chung`,
-      university: 'Sogang University, Art&Technology',
+      university: `Sogang University, Art&Technology`,
       summary: `👨‍💻 Junior Developer (Web, AI)`,
     },
     description: `Learning by Sharing: 배우고 느낀 점을 공유하며 성장합니다.`,

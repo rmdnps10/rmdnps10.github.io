@@ -1,10 +1,3 @@
-/**
- * Bio component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.com/docs/how-to/querying-data/use-static-query/
- */
-
 import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
@@ -17,6 +10,7 @@ const Bio = () => {
           author {
             name
             summary
+            university
           }
           social {
             instagram
@@ -29,6 +23,7 @@ const Bio = () => {
   const author = data.site.siteMetadata?.author
   const description = data.site.siteMetadata?.description
 
+  console.log(author)
   return (
     <div className="mt-8 flex gap-2">
       <StaticImage
@@ -48,18 +43,22 @@ const Bio = () => {
             {author.name}
           </span>
         </p>
-        <p className="text-gray-300 text-sm m-0 mt-1.5]">
-          {author?.summary || null}{" "}
+        <p className="text-gray-300 text-xs m-0 mt-1.5">
+          {author?.summary || null}
         </p>
-        <p className="m-0">
+        <div className="m-0 flex items-center gap-1">
           <StaticImage
+            className="inline-block"
             src="../images/logo/sogang.png"
-            width={15}
-            height={18}
+            layout="fixed"
+            width={12}
+            height={15}
             alt="서강대학교 로고"
           />
-          {author.university}
-        </p>
+          <p className="text-gray-300 text-xs m-0 mt-1.5]">
+            {author.university}
+          </p>
+        </div>
         <p className="text-gray-300 text-[1.1rem] m-0 mt-auto">
           {description ?? "Learning by Sharing. 배우고 느낀 점을 공유합니다."}
         </p>
