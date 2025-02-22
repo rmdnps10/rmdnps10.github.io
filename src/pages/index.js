@@ -7,7 +7,7 @@ import Seo from "../components/seo"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 const BlogIndex = ({ data, location }) => {
-  const siteTitle = data.site.siteMetadata?.title || `Title`
+  const siteTitle = data.site.siteMetadata?.title || `난너의오른팔's dev blog`
   const posts = data.allMarkdownRemark.nodes
 
   const tagList = new Set()

@@ -60,10 +60,10 @@
   --color-primary: #005b99;
   --color-dark-background: #121212;
   --color-background: #1c1c1c;
-  --color-text: #2e353f;
-  --color-text-light: #4f5969;
-  --color-heading: #1a202c;
-  --color-heading-black: black;
+  --color-text: #ededed; /* 변경된 텍스트 색상 */
+  --color-text-light: #d3d3d3; /* 변경된 밝은 텍스트 색상 */
+  --color-heading: #ffffff; /* 변경된 헤딩 색상 */
+  --color-heading-black: #ffffff; /* 변경된 헤딩 색상 */
   --color-accent: #d1dce5;
 
   --color-dark-main: #2c2c2c;
@@ -222,6 +222,7 @@ blockquote {
   border-left: var(--spacing-1) solid var(--color-primary);
   font-size: var(--fontSize-2);
   font-style: italic;
+  margin-top: var(--spacing-8);
   margin-bottom: var(--spacing-8);
 }
 
@@ -320,13 +321,24 @@ a:focus {
   border-radius: 100%;
 }
 
+.blog-post {
+  margin-top: var(--spacing-16);
+  mix-blend-mode: ;
+}
+
+.blog-post p {
+  margin-bottom: var(--spacing-1);
+}
+
 .blog-post header h1 {
+  color: white;
   margin: var(--spacing-0) var(--spacing-0) var(--spacing-4) var(--spacing-0);
 }
 
 .blog-post header p {
   font-size: var(--fontSize-2);
   font-family: var(--font-heading);
+  color: white;
 }
 
 .blog-post-nav ul {
