@@ -23,7 +23,6 @@ const Bio = () => {
   const author = data.site.siteMetadata?.author
   const description = data.site.siteMetadata?.description
 
-  console.log(author)
   return (
     <div className="mt-10 flex gap-2">
       <StaticImage

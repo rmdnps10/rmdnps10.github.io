@@ -34,6 +34,7 @@ const Header = () => {
               href="https://github.com/rmdnps10"
               className="text hover:text-gray-500 hover:scale-110 text-white block transition-all"
               target="_blank"
+              rel="noreferrer"
             >
               <FontAwesomeIcon icon={faGithub} size="xl" />
             </a>
@@ -42,6 +43,7 @@ const Header = () => {
             <a
               href="https://www.linkedin.com/in/rmdnps10/"
               target="_blank"
+              rel="noreferrer"
               className="text hover:text-gray-500 hover:scale-110 text-white block transition-all"
             >
               <FontAwesomeIcon icon={faLinkedin} size="xl" color="white" />
