@@ -25,7 +25,7 @@ const Bio = () => {
 
   console.log(author)
   return (
-    <div className="mt-8 flex gap-2">
+    <div className="mt-10 flex gap-2">
       <StaticImage
         className="bio-avatar"
         layout="fixed"
@@ -59,8 +59,9 @@ const Bio = () => {
             {author.university}
           </p>
         </div>
-        <p className="text-gray-300 text-[1.1rem] m-0 mt-auto">
-          {description ?? "Learning by Sharing. 배우고 느낀 점을 공유합니다."}
+        <p className="text-white text-[1rem] m-0 mt-auto">
+          {description ??
+            "프론트엔드와 AI를 공부하는 개발자입니다. 개발 커뮤니티를 좋아합니다."}
         </p>
       </div>
     </div>

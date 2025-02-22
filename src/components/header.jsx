@@ -25,7 +25,7 @@ const Header = () => {
     <header className="fixed top-0 w-full h-[54px] m-0 p-0 border-bottom-2 z-50 bg-darkMain border-b border-zinc-600">
       <div className="flex h-full mx-auto max-w-wrapper items-center justify-between">
         <h1 className="text-3 font-bold text-white m-0 px-3">
-          <a href="/">Dev.In_young</a>
+          <a href="/">난너의오른팔 🧑‍💻</a>
         </h1>
         {/* icon */}
         <div className="flex gap-3 px-2">
