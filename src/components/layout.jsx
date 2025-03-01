@@ -26,10 +26,8 @@ const Layout = ({ location, title, children }) => {
       <Header />
       <div className="global-wrapper" data-is-root-path={isRootPath}>
         <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
+        <footer className="text-center">
+          © {new Date().getFullYear()}, 정인영, Built with Gatsby
         </footer>
       </div>
     </>

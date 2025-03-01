@@ -9,13 +9,13 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `난너의오른팔`,
+    title: `난너의오른팔🧑‍💻`,
     author: {
       name: `Inyoung Chung`,
       university: `Sogang University, Art&Technology`,
       summary: `👨‍💻 Junior Developer (Web, AI)`,
     },
-    description: `Learning by Sharing: 배우고 느낀 점을 공유하며 성장합니다.`,
+    description: `Web, AI, PS에 대해 기록합니다.`,
     siteUrl: `https://rmdnps10.github.io/`,
     social: {
       instagram: `rmdnps10`,
@@ -123,7 +123,7 @@ module.exports = {
         // https://css-tricks.com/meta-theme-color-and-trickery/
         // theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/favico.png`, // This path is relative to the root of the site.
       },
     },
   ],

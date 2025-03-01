@@ -7,7 +7,7 @@ import Seo from "../components/seo"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 const BlogIndex = ({ data, location }) => {
-  const siteTitle = data.site.siteMetadata?.title || `난너의오른팔's dev blog`
+  const siteTitle = data.site.siteMetadata?.title || `난너의오른팔`
   const posts = data.allMarkdownRemark.nodes
 
   const tagList = new Set()
@@ -57,14 +57,14 @@ const BlogIndex = ({ data, location }) => {
         {selectedTag === "" ? "All " : `${selectedTag} `}
         {filteredPosts.length} Posts
       </p>
-      <div className="flex gap-2 pt-2 items-center">
+      <div className="flex gap-2 mb-2 pt-2 items-center">
         <button
           onClick={() => setSelectedTag("")}
           className={`px-2 py-0.5 border-2 ${
             selectedTag === ""
-              ? "bg-white text-black"
-              : "border-white text-white"
-          } rounded-lg hover:bg-red hover:text-black`}
+              ? "bg-white text-black font-bold"
+              : "border-white text-white hover:bg-[#383737] font-bold"
+          } rounded-lg hover:scale-110 hover: transition-all`}
         >
           All
         </button>
@@ -75,25 +75,27 @@ const BlogIndex = ({ data, location }) => {
             onClick={() => setSelectedTag(tag)}
             className={`px-2 py-0.5 border-2 ${
               selectedTag === tag
-                ? "bg-white text-black"
-                : "border-white text-white"
-            } rounded-lg hover:scale-110 transition-all`}
+                ? "bg-white text-black font-bold"
+                : "border-white text-white hover:bg-[#383737] font-bold"
+            } rounded-lg hover:scale-110 hover: transition-all`}
           >
             {tag}
           </button>
         ))}
       </div>
+
       <div className="flex flex-col gap-10 pt-4">
         {filteredPosts.map(post => {
           const title = post.frontmatter.title || post.fields.slug
           const thumbnail = post.frontmatter.thumbnail
             ? getImage(post.frontmatter.thumbnail)
             : null
+          const tags = post.frontmatter.tags
 
           return (
             <div
               key={post.fields.slug}
-              className="bg-darkBackground shadow-md rounded-lg overflow-hidden"
+              className="bg-darkBackground shadow-md rounded-lg overflow-hidden hover:scale-105 hover: transition-all"
             >
               <Link to={post.fields.slug} itemProp="url">
                 <article
@@ -110,19 +112,30 @@ const BlogIndex = ({ data, location }) => {
                   )}
 
                   <div className="px-5">
-                    <h2 className="text-xl font-bold mb-2 text-white">
+                    <h2 className="text-2xl font-bold mt-5 mb-0 text-white">
                       {title}
                     </h2>
-                    <small className="text-gray-500">
+                    <small className="text-[#B0B0B0]">
                       {post.frontmatter.date}
                     </small>
+
+                    <div className="flex gap-2 my-3">
+                      {tags.map(tag => (
+                        <button
+                          key={tag}
+                          className="px-3 py-1 text-black bg-yellow font-bold text-[0.9rem] rounded-xl"
+                        >
+                          {tag}
+                        </button>
+                      ))}
+                    </div>
                     <section className="mt-2">
                       <p
                         dangerouslySetInnerHTML={{
                           __html: post.frontmatter.description || post.excerpt,
                         }}
                         itemProp="description"
-                        className="text-gray-700"
+                        className="text-[#757575]"
                       />
                     </section>
                   </div>
@@ -138,7 +151,7 @@ const BlogIndex = ({ data, location }) => {
 
 export default BlogIndex
 
-export const Head = () => <Seo title="All posts" />
+export const Head = () => <Seo title="🏠" />
 
 export const pageQuery = graphql`
   {

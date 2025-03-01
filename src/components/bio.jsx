@@ -15,6 +15,7 @@ const Bio = () => {
           social {
             instagram
           }
+          description
         }
       }
     }
