@@ -39,6 +39,10 @@ const TagFilter = ({ tagList, selectedTag, setSelectedTag }) => (
   </div>
 )
 
+//
+//
+//
+
 const PostCard = ({ post }) => {
   const title = post.frontmatter.title || post.fields.slug
   const thumbnail = post.frontmatter.thumbnail
@@ -81,7 +85,7 @@ const PostCard = ({ post }) => {
                   __html: post.frontmatter.description || post.excerpt,
                 }}
                 itemProp="description"
-                className="text-[#757575]"
+                className="text-white"
               />
             </section>
           </div>
@@ -91,6 +95,10 @@ const PostCard = ({ post }) => {
   )
 }
 
+//
+//
+//
+
 const PostList = ({ posts }) => (
   <div className="flex flex-col gap-10 pt-4">
     {posts.map(post => (
@@ -99,8 +107,12 @@ const PostList = ({ posts }) => (
   </div>
 )
 
+//
+//
+//
+
 const BlogIndex = ({ data, location }) => {
-  const siteTitle = data.site.siteMetadata?.title || `난너의오른팔`
+  const siteTitle = data.site.siteMetadata.title
   const posts = data.allMarkdownRemark.nodes
 
   const tagList = new Set()
