@@ -4,7 +4,7 @@ import { useState, useEffect } from "react"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image"
 
 //
 //
@@ -202,7 +202,7 @@ export const pageQuery = graphql`
           pointColor
           thumbnail {
             childImageSharp {
-              gatsbyImageData(width: 300, layout: CONSTRAINED)
+              gatsbyImageData(width: 1000, layout: CONSTRAINED)
             }
           }
         }
