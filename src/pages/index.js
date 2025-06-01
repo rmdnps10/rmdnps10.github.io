@@ -49,11 +49,11 @@ const PostCard = ({ post }) => {
     ? getImage(post.frontmatter.thumbnail)
     : null
   const tags = post.frontmatter.tags
-
+  const pointColor = post.frontmatter.pointColor
   return (
     <div
       key={post.fields.slug}
-      className="bg-darkBackground shadow-md rounded-lg overflow-hidden hover:scale-105 hover: transition-all"
+      className="bg-darkBackground shadow-[rgba(100,_100,_111,_0.2)_0px_7px_29px_0px] rounded-lg overflow-hidden hover:scale-105 hover: transition-all "
     >
       <Link to={post.fields.slug} itemProp="url">
         <article className="p-0" itemScope itemType="http://schema.org/Article">
@@ -66,7 +66,12 @@ const PostCard = ({ post }) => {
           )}
 
           <div className="px-5">
-            <h2 className="text-2xl font-bold mt-5 mb-0 text-white">{title}</h2>
+            <h2
+              className={`text-2xl font-bold mt-5 mb-0 border-none`}
+              style={{ color: pointColor }}
+            >
+              {title}
+            </h2>
             <small className="text-[#B0B0B0]">{post.frontmatter.date}</small>
 
             <div className="flex gap-2 my-3">
@@ -194,6 +199,7 @@ export const pageQuery = graphql`
           title
           description
           tags
+          pointColor
           thumbnail {
             childImageSharp {
               gatsbyImageData(width: 300, layout: CONSTRAINED)

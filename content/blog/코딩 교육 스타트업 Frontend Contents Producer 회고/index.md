@@ -1,53 +1,34 @@
 ---
-title: 코딩밸리 Frontend Contents Producer 회고
+title: "나의 스타트업에서의 첫번째 인턴 경험"
 date: "2025-01-14"
 description: "6개월동안 코딩 교육 스타트업 코딩밸리 🚀에서 프론트엔드 교육 코스를 기획/개발하게 된 기묘한 경험을 소개합니다."
 thumbnail: "./index.png"
+pointColor: "#6FE7FF"
 tags: ["인턴", "회고"]
 ---
 
-This is my first post on my new fake blog! How exciting!
+> "6개월동안 코딩 교육 스타트업 코딩밸리 🚀에서 프론트엔드 교육 코스를 기획/개발하게 된 기묘한 경험을 소개합니다."
 
-I'm sure I'll write a lot more interesting things in the future.
+# 배경
 
-Oh, and here's a great quote from this Wikipedia on
-[salted duck eggs](https://en.wikipedia.org/wiki/Salted_duck_egg).
+군대에서 전역을 한 후 나는 개발에 입문하게 되었고 당시에 멋사라는 동아리에서 프론트 개발에 대해서 공부를 하게 되면서 자연스레 프론트 개발에 관심이 생기게 되었다.
 
-> A salted duck egg is a Chinese preserved food product made by soaking duck
-> eggs in brine, or packing each egg in damp, salted charcoal. In Asian
-> supermarkets, these eggs are sometimes sold covered in a thick layer of salted
-> charcoal paste. The eggs may also be sold with the salted paste removed,
-> wrapped in plastic, and vacuum packed. From the salt curing process, the
-> salted duck eggs have a briny aroma, a gelatin-like egg white and a
-> firm-textured, round yolk that is bright orange-red in color.
+![셰어마인드](./images/sharemind.png "경험 공유 상담 플랫폼 - 셰어마인드")
+특히 난 운이 좋게도 좋은 사람들을 만나 '셰어마인드' 라는 실사용자가 어느 정도 나오는 프로젝트를 진행하게 되었고, 나의 첫번째 목표인 '사용자가 있는 서비스 만들기' 를 이뤄냈다. 재밌는 경험이었다. 무언가에 완전히 몰입한다는 건 아름다운 거 같다.
 
-![Chinese Salty Egg](./salty_egg.jpg)
+![셰어마인드](./images/sharemind2.png "CEOS 동아리에서 만난 셰어마인드 팀원들.. 다들 잘 지내는지 문득 궁금..")
 
-You can also write code blocks here!
+#### 그런데 이 이후..
 
-```js
-const saltyDuckEgg = "chinese preserved food product"
-```
+서비스가 안정화된 이후, 나는 소강 상태에 빠졌다.
 
-| Number | Title                                    | Year |
-| :----- | :--------------------------------------- | ---: |
-| 1      | Harry Potter and the Philosopher’s Stone | 2001 |
-| 2      | Harry Potter and the Chamber of Secrets  | 2002 |
-| 3      | Harry Potter and the Prisoner of Azkaban | 2004 |
-
-[View raw (TEST.md)](https://raw.github.com/adamschwartz/github-markdown-kitchen-sink/master/README.md)
-
-This is a paragraph.
-
-    This is a paragraph.
+마침 휴학도 했겠다, 지금 내 실력으로는 유명 테크 기업 개발 인턴을 하기에는 무리라고 판단하였고, 현장 실습을 노렸다.
 
 # Header 1
 
 ## Header 2
 
-x
-Header 1
-========
+# Header 1
 
     Header 2
     --------
