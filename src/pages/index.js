@@ -85,7 +85,7 @@ const PostCard = ({ post }) => {
                   __html: post.frontmatter.description || post.excerpt,
                 }}
                 itemProp="description"
-                className="text-white"
+                className="text-white break-keep"
               />
             </section>
           </div>
