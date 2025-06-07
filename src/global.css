@@ -15,7 +15,7 @@
   --maxWidth-3xl: 48rem;
   --maxWidth-4xl: 56rem;
   --maxWidth-full: "100%";
-  --maxWidth-wrapper: var(--maxWidth-2xl);
+  --maxWidth-wrapper: var(--maxWidth-4xl);
   --spacing-px: "1px";
   --spacing-0: 0;
   --spacing-1: 0.25rem;
@@ -365,6 +365,11 @@ h3 {
 
 figure.gatsby-resp-image-figure {
   margin: var(--spacing-10) 0;
+}
+
+code.language-text {
+  background: var(--color-lightdark-translucent);
+  color: #d85352 !important;
 }
 
 /* Media queries */

@@ -27,9 +27,7 @@ const BlogPostTemplate = ({
           dangerouslySetInnerHTML={{ __html: post.html }}
           itemProp="articleBody"
         />
-        <hr />
         <footer>
-          <Bio />
           <Comments />
         </footer>
       </article>
@@ -52,7 +50,7 @@ const BlogPostTemplate = ({
           </li>
           <li>
             {next && (
-              <Link to={next.fields.slug} rel="next">
+              <Link to={next.fields.slug} rel="next" className="">
                 {next.frontmatter.title} →
               </Link>
             )}

@@ -7,7 +7,7 @@ import "./src/normalize.css"
 import "./src/global.css"
 
 // Highlighting for code blocks
-import "prismjs/themes/prism.css"
+import "prismjs/themes/prism-twilight.css"
 
 import { config } from "@fortawesome/fontawesome-svg-core"
 import "@fortawesome/fontawesome-svg-core/styles.css"
