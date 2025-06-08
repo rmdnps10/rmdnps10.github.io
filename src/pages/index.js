@@ -67,7 +67,7 @@ const PostCard = ({ post }) => {
 
           <div className="px-5">
             <h2
-              className={`text-2xl font-bold mt-5 mb-0 border-none`}
+              className={`text-2xl font-bold mt-5 mb-0 border-none break-keep`}
               style={{ color: pointColor }}
             >
               {title}
