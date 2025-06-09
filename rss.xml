@@ -1,219 +1,339 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[Web, AI, PS에 대해 기록합니다.]]></description><link>https://rmdnps10.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 01 Mar 2025 08:53:38 GMT</lastBuildDate><item><title><![CDATA[Hello World]]></title><description><![CDATA[This is my first post on my new fake blog! How exciting! I'm sure I'll write a lot more interesting things in the future. Oh, and here's a…]]></description><link>https://rmdnps10.github.io/hello-world/</link><guid isPermaLink="false">https://rmdnps10.github.io/hello-world/</guid><pubDate>Fri, 01 May 2015 22:12:03 GMT</pubDate><content:encoded>&lt;p&gt;This is my first post on my new fake blog! How exciting!&lt;/p&gt;
-&lt;p&gt;I&apos;m sure I&apos;ll write a lot more interesting things in the future.&lt;/p&gt;
-&lt;p&gt;Oh, and here&apos;s a great quote from this Wikipedia on
-&lt;a href=&quot;https://en.wikipedia.org/wiki/Salted_duck_egg&quot;&gt;salted duck eggs&lt;/a&gt;.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;A salted duck egg is a Chinese preserved food product made by soaking duck
-eggs in brine, or packing each egg in damp, salted charcoal. In Asian
-supermarkets, these eggs are sometimes sold covered in a thick layer of salted
-charcoal paste. The eggs may also be sold with the salted paste removed,
-wrapped in plastic, and vacuum packed. From the salt curing process, the
-salted duck eggs have a briny aroma, a gelatin-like egg white and a
-firm-textured, round yolk that is bright orange-red in color.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[Web, AI, PS에 대해 기록합니다.]]></description><link>https://rmdnps10.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 09 Jun 2025 14:44:15 GMT</lastBuildDate><item><title><![CDATA[서강대학교 멋쟁이사자처럼 운영진 회고]]></title><link>https://rmdnps10.github.io/서강대학교 멋쟁이사자처럼 운영진 회고/</link><guid isPermaLink="false">https://rmdnps10.github.io/서강대학교 멋쟁이사자처럼 운영진 회고/</guid><pubDate>Fri, 31 Jan 2025 00:00:00 GMT</pubDate><content:encoded></content:encoded></item><item><title><![CDATA[나의 IT 스타트업 인턴쉽 회고]]></title><description><![CDATA["…]]></description><link>https://rmdnps10.github.io/코딩 교육 스타트업 Frontend Contents Producer 회고/</link><guid isPermaLink="false">https://rmdnps10.github.io/코딩 교육 스타트업 Frontend Contents Producer 회고/</guid><pubDate>Tue, 14 Jan 2025 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+&lt;p&gt;&quot;6개월동안 코딩 교육 스타트업 코딩밸리 🚀에서 인턴으로 근무하며 프론트엔드 교육 코스를 기획/개발하게 된 기묘한 경험을 소개합니다.&quot;&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;&lt;span
+&lt;h1&gt;배경&lt;/h1&gt;
+&lt;p&gt;군대에서 전역을 한 후 나는 개발에 입문하게 되었고 당시에 멋사라는 동아리에서 프론트 개발에 대해서 공부를 하게 되면서 자연스레 프론트 개발에 관심이 생기게 되었다.&lt;/p&gt;
+&lt;h4&gt;사용자를 배출한 첫 프로젝트&lt;/h4&gt;
+&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
+    &lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1000px; &quot;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/8058f3f26913fea3b6a89a73344fe94a/e1596/salty_egg.jpg&quot;
+    href=&quot;/static/0289dc919fe2815c8d821f2f61c7e11f/60f98/sharemind.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 75.31645569620254%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAMB/8QAFwEAAwEAAAAAAAAAAAAAAAAAAAEEBf/aAAwDAQACEAMQAAABgik0dXC//8QAGRABAAMBAQAAAAAAAAAAAAAAAQACERIy/9oACAEBAAEFAkqW7B5Zox9t8n//xAAXEQEAAwAAAAAAAAAAAAAAAAAAERJB/9oACAEDAQE/AdVl/8QAFhEBAQEAAAAAAAAAAAAAAAAAABEC/9oACAECAQE/AYun/8QAGxAAAQQDAAAAAAAAAAAAAAAAAAECESEiMTL/2gAIAQEABj8CvRjaHMkvIQo//8QAGxAAAwEBAAMAAAAAAAAAAAAAAREhAEGBobH/2gAIAQEAAT8hsTTH203YINmYDPHckkPzQiAnv//aAAwDAQACAAMAAAAQyC//xAAXEQEBAQEAAAAAAAAAAAAAAAABABEh/9oACAEDAQE/EBHDK6y//8QAGBEAAgMAAAAAAAAAAAAAAAAAAAERIVH/2gAIAQIBAT8QWiS0j//EABwQAQEAAgMBAQAAAAAAAAAAAAERADEhYYFB4f/aAAgBAQABPxBOzi0NHmChLtHkL9EcWZeCVJ1kcRoVp3lEYcnjEk0ES7/Jn//Z&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 66.8%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAAsTAAALEwEAmpwYAAACz0lEQVR42k2SyW4UZxSFe0cEUhYRIguyi8SKfRTlBXgMXiNhEYk8QbLLniEDAZMEx2Qw8QR2aHe3DbHVjXt0uV1VXXPXXNX9cf+ysSnp6L/Vdfv855x7a3mSkKcJszynzDOKLJU6kzqvflN1kaYVqr40w3N9+oM+mq5jRyF5lhEmMbGgVkiTghe4BL5LGAT4rsvU8/Bsm0Dq9wkLRZhkBGEk/VOsiY1tOxWiaXRKKKqGz3fovNxhd7dFc7vObrPJ1ovnNOp19KMj5kVOFseV8vGRwXhscKxPME0bQ071nsTpOWHS0tjabPDTj/d5vLDA40cPT7DwiEGvC2VBLpaUwonlCpEjRBbmxGUi0A2bKDy1rBrzUizlCaVYU1nOCpVpepbrCVlc1cfHJoYxwbIcsSx25QLXnYpCIazIBLP0hOxdpmk4JT399j4ygaZpjA4PGQ1H+L7PfD5HPaWIOCP0PBmI71GKAlfqla0tjk0DpOmcLKq+WzLl7khjcDQW4rFcINO2PVEvhGkcodB606EpqxAGvqxAJDmZMmULbWLgTv1KWSwrkkoMkeYwbQ5J9nVCK8SfxgRBTCr51sQXCjP5Q+Q65GFA7NowK+m122xvbhKLYlk25pLRXAgzN8LraJh7fVI/RBlWrkulsOc59H2HUeBxIGqetRrUDzr0hbQ16HF/aZGua9GXPe16FofiIMoKdNlDPQwxA8la1kUR2uK09un6nyhcWVnk8toSl1f/4OMNeV9/WtUfLP7MJ6tLXNv4i6ty3mhsSCQ5RTEjKAoGQuJIzur5ftSj9uGz37m0/Bs3X23z9c5LvhR8Jbj1qlGdtzuvuf5imYvSc+GfX/nsvxX8MMFUu+h4mDIMzbAgKfh22KX20b9PUKTfHOzzoLPHnfYe9zr7/HDQ5m77f36RW7+or1WXXhLCzxvrhP0J9t87mMu72EMDXchJSr4bdnkLjbew/vDS8DIAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;Chinese Salty Egg&quot;
-        title=&quot;&quot;
-        src=&quot;/static/8058f3f26913fea3b6a89a73344fe94a/828fb/salty_egg.jpg&quot;
-        srcset=&quot;/static/8058f3f26913fea3b6a89a73344fe94a/ff44c/salty_egg.jpg 158w,
-/static/8058f3f26913fea3b6a89a73344fe94a/a6688/salty_egg.jpg 315w,
-/static/8058f3f26913fea3b6a89a73344fe94a/828fb/salty_egg.jpg 630w,
-/static/8058f3f26913fea3b6a89a73344fe94a/0ede0/salty_egg.jpg 945w,
-/static/8058f3f26913fea3b6a89a73344fe94a/3ac88/salty_egg.jpg 1260w,
-/static/8058f3f26913fea3b6a89a73344fe94a/e1596/salty_egg.jpg 2048w&quot;
-        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-        decoding=&quot;async&quot;
-      /&gt;
+  &lt;picture&gt;
+          &lt;source
+              srcset=&quot;/static/0289dc919fe2815c8d821f2f61c7e11f/bc904/sharemind.webp 250w,
+/static/0289dc919fe2815c8d821f2f61c7e11f/4be29/sharemind.webp 500w,
+/static/0289dc919fe2815c8d821f2f61c7e11f/03f31/sharemind.webp 1000w,
+/static/0289dc919fe2815c8d821f2f61c7e11f/fab20/sharemind.webp 1122w&quot;
+              sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
+              type=&quot;image/webp&quot;
+            /&gt;
+          &lt;source
+            srcset=&quot;/static/0289dc919fe2815c8d821f2f61c7e11f/43fa5/sharemind.png 250w,
+/static/0289dc919fe2815c8d821f2f61c7e11f/c6e3d/sharemind.png 500w,
+/static/0289dc919fe2815c8d821f2f61c7e11f/da8b6/sharemind.png 1000w,
+/static/0289dc919fe2815c8d821f2f61c7e11f/60f98/sharemind.png 1122w&quot;
+            sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
+            type=&quot;image/png&quot;
+          /&gt;
+          &lt;img
+            class=&quot;gatsby-resp-image-image&quot;
+            src=&quot;/static/0289dc919fe2815c8d821f2f61c7e11f/da8b6/sharemind.png&quot;
+            alt=&quot;셰어마인드&quot;
+            title=&quot;경험 공유 상담 플랫폼 - 셰어마인드&quot;
+            loading=&quot;lazy&quot;
+            decoding=&quot;async&quot;
+            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+          /&gt;
+        &lt;/picture&gt;
   &lt;/a&gt;
-    &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;You can also write code blocks here!&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; saltyDuckEgg &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;chinese preserved food product&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th align=&quot;left&quot;&gt;Number&lt;/th&gt;
-&lt;th align=&quot;left&quot;&gt;Title&lt;/th&gt;
-&lt;th align=&quot;right&quot;&gt;Year&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td align=&quot;left&quot;&gt;1&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;Harry Potter and the Philosopher’s Stone&lt;/td&gt;
-&lt;td align=&quot;right&quot;&gt;2001&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td align=&quot;left&quot;&gt;2&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;Harry Potter and the Chamber of Secrets&lt;/td&gt;
-&lt;td align=&quot;right&quot;&gt;2002&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td align=&quot;left&quot;&gt;3&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;Harry Potter and the Prisoner of Azkaban&lt;/td&gt;
-&lt;td align=&quot;right&quot;&gt;2004&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;&lt;a href=&quot;https://raw.github.com/adamschwartz/github-markdown-kitchen-sink/master/README.md&quot;&gt;View raw (TEST.md)&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;This is a paragraph.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;This is a paragraph.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1&gt;Header 1&lt;/h1&gt;
-&lt;h2&gt;Header 2&lt;/h2&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;Header 1
-========
-
-Header 2
---------&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1&gt;Header 1&lt;/h1&gt;
-&lt;h2&gt;Header 2&lt;/h2&gt;
-&lt;h3&gt;Header 3&lt;/h3&gt;
-&lt;h4&gt;Header 4&lt;/h4&gt;
-&lt;h5&gt;Header 5&lt;/h5&gt;
-&lt;h6&gt;Header 6&lt;/h6&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;# Header 1
-## Header 2
-### Header 3
-#### Header 4
-##### Header 5
-###### Header 6&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1&gt;Header 1&lt;/h1&gt;
-&lt;h2&gt;Header 2&lt;/h2&gt;
-&lt;h3&gt;Header 3&lt;/h3&gt;
-&lt;h4&gt;Header 4&lt;/h4&gt;
-&lt;h5&gt;Header 5&lt;/h5&gt;
-&lt;h6&gt;Header 6&lt;/h6&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;# Header 1 #
-## Header 2 ##
-### Header 3 ###
-#### Header 4 ####
-##### Header 5 #####
-###### Header 6 ######&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus. Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;&gt; Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus. Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;blockquote&gt;
-&lt;h2&gt;This is a header.&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;This is the first list item.&lt;/li&gt;
-&lt;li&gt;This is the second list item.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Here&apos;s some example code:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;Markdown.generate();&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;/blockquote&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;&gt; ## This is a header.
-&gt; 1. This is the first list item.
-&gt; 2. This is the second list item.
-&gt;
-&gt; Here&apos;s some example code:
-&gt;
-&gt;     Markdown.generate();&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;Red&lt;/li&gt;
-&lt;li&gt;Green&lt;/li&gt;
-&lt;li&gt;Blue&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ul&gt;
-&lt;li&gt;Red&lt;/li&gt;
-&lt;li&gt;Green&lt;/li&gt;
-&lt;li&gt;Blue&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ul&gt;
-&lt;li&gt;Red&lt;/li&gt;
-&lt;li&gt;Green&lt;/li&gt;
-&lt;li&gt;Blue&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;markdown&quot;&gt;&lt;pre class=&quot;language-markdown&quot;&gt;&lt;code class=&quot;language-markdown&quot;&gt;&lt;span class=&quot;token list punctuation&quot;&gt;-&lt;/span&gt; Red
-&lt;span class=&quot;token list punctuation&quot;&gt;-&lt;/span&gt; Green
-&lt;span class=&quot;token list punctuation&quot;&gt;-&lt;/span&gt; Blue
-
-&lt;span class=&quot;token list punctuation&quot;&gt;*&lt;/span&gt; Red
-&lt;span class=&quot;token list punctuation&quot;&gt;*&lt;/span&gt; Green
-&lt;span class=&quot;token list punctuation&quot;&gt;*&lt;/span&gt; Blue
-
-&lt;span class=&quot;token list punctuation&quot;&gt;-&lt;/span&gt; Red
-&lt;span class=&quot;token list punctuation&quot;&gt;-&lt;/span&gt; Green
-&lt;span class=&quot;token list punctuation&quot;&gt;-&lt;/span&gt; Blue&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;code goes&lt;/code&gt; here in this line&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;bold&lt;/strong&gt; goes here&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;markdown&quot;&gt;&lt;pre class=&quot;language-markdown&quot;&gt;&lt;code class=&quot;language-markdown&quot;&gt;&lt;span class=&quot;token list punctuation&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token code-snippet code keyword&quot;&gt;`code goes`&lt;/span&gt; here in this line
-&lt;span class=&quot;token list punctuation&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token bold&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;**&lt;/span&gt;&lt;span class=&quot;token content&quot;&gt;bold&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;**&lt;/span&gt;&lt;/span&gt; goes here&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;ol&gt;
-&lt;li&gt;Buy flour and salt&lt;/li&gt;
-&lt;li&gt;Mix together with water&lt;/li&gt;
-&lt;li&gt;Bake&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;markdown&quot;&gt;&lt;pre class=&quot;language-markdown&quot;&gt;&lt;code class=&quot;language-markdown&quot;&gt;&lt;span class=&quot;token list punctuation&quot;&gt;1.&lt;/span&gt; Buy flour and salt
-&lt;span class=&quot;token list punctuation&quot;&gt;1.&lt;/span&gt; Mix together with water
-&lt;span class=&quot;token list punctuation&quot;&gt;1.&lt;/span&gt; Bake&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;code goes&lt;/code&gt; here in this line&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;bold&lt;/strong&gt; goes here&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;markdown&quot;&gt;&lt;pre class=&quot;language-markdown&quot;&gt;&lt;code class=&quot;language-markdown&quot;&gt;&lt;span class=&quot;token list punctuation&quot;&gt;1.&lt;/span&gt; &lt;span class=&quot;token code-snippet code keyword&quot;&gt;`code goes`&lt;/span&gt; here in this line
-&lt;span class=&quot;token list punctuation&quot;&gt;1.&lt;/span&gt; &lt;span class=&quot;token bold&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;**&lt;/span&gt;&lt;span class=&quot;token content&quot;&gt;bold&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;**&lt;/span&gt;&lt;/span&gt; goes here&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Paragraph:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;Code&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;!-- --&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;Paragraph:
-
-    Code&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;hr&gt;
-&lt;hr&gt;
-&lt;hr&gt;
-&lt;hr&gt;
-&lt;hr&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;* * *
-
-***
-
-*****
-
-- - -
-
----------------------------------------&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;This is &lt;a href=&quot;http://example.com&quot; title=&quot;Example&quot;&gt;an example&lt;/a&gt; link.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;http://example.com&quot;&gt;This link&lt;/a&gt; has no title attr.&lt;/p&gt;
-&lt;p&gt;This is &lt;a href=&quot;http://example.com&quot; title=&quot;Optional Title&quot;&gt;an example&lt;/a&gt; reference-style link.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;This is [an example](http://example.com &quot;Example&quot;) link.
-
-[This link](http://example.com) has no title attr.
-
-This is [an example] [id] reference-style link.
-
-[id]: http://example.com &quot;Optional Title&quot;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;em&gt;single asterisks&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;single underscores&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;double asterisks&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;double underscores&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;*single asterisks*
-
-_single underscores_
-
-**double asterisks**
-
-__double underscores__&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;This paragraph has some &lt;code class=&quot;language-text&quot;&gt;code&lt;/code&gt; in it.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;This paragraph has some `code` in it.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;img src=&quot;https://via.placeholder.com/200x50&quot; alt=&quot;Alt Text&quot; title=&quot;Image Title&quot;&gt;&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;![Alt Text](https://via.placeholder.com/200x50 &quot;Image Title&quot;)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item></channel></rss>
+    &lt;/span&gt;
+    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;경험 공유 상담 플랫폼 - 셰어마인드&lt;/figcaption&gt;
+  &lt;/figure&gt;
+특히 난 운이 좋게도 좋은 사람들을 만나 &lt;code class=&quot;language-text&quot;&gt;셰어마인드&lt;/code&gt; 라는 실사용자가 어느 정도 나오는 프로젝트를 진행하게 되었고, 나의 첫번째 목표인 &apos;사용자가 있는 서비스 만들기&apos; 를 이뤄냈다. 재밌는 경험이었다. 무언가애 완전히 몰입할 수 있던, 정말 좋은 기회였다.&lt;/p&gt;
+&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1000px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/7365f1b214a2f90b1d75b595199e3579/f8056/sharemind2.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 46%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAAAsTAAALEwEAmpwYAAACSElEQVR42j1Ry0tUURy+0a7Uaea+X3PvnXvnccfHBJr0koLCKDCjWggh5CKMRGRGi2Km0BknXzNYKNkmN60iSqQWydDCatF/0qLF7JI07tfvXNHF4RzOd873+nHZrh44XhaWmwEvG2iNymg5IdIuIcIr4Tkq6rC9Dhh+BkaXj5Hhwb/V0oOdmeLYzlw5v7NYnfxTfz61W5st/OLUuAfNSkHSHcimB9lwEZNN8EocouYgKpkhZjntMHvboV/0MVW4i5WlCbxYLODN6zIWKveCWnUMczOjTS6Z6YST6oCg2hB0FyJ91qwkTNeHGk+GAqKeQIwEDDMNRU1ibHQIay8fY+PDW2x92cTGu9WAEdcXJpucbpM7zcbxiIA2inkQUTUT0OIukbqhWFTUICgmjhE+X3mGH41NbDc+4ef3Br59/Rxsb33E5vv1JqcYibC7tphCSyVSBTHJIBGLoibCyFFJD0Uk1UIL4QvlCl7NVzFbLKI2XcLaYjmoTxdRKT1scqrphgNhw2CkbBconumkoFN0JhhTLLSSGEsS4TWsLC/j1sBVKEIcua7zGLl5LejvO4WM7zPCBJJ+jlyaRCiH090nTEMyPERCESlczLVI2Hg+j6fFRxi81Ee1pHC6uztIWAbaO7JNTqYhMDesnwOHrALmTCH3vGKHd/vOLbD3E+OjuH7lMnK5NE72dBImBNyRozh3trfJMVXbyxCBcxh7v0P7sEeehhIRdPB0H9MtLD0Z+Td848ze/cLA3up6fu/2nQu7pi0HQ8P9v/8DkromXicNQiQAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+          &lt;source
+              srcset=&quot;/static/7365f1b214a2f90b1d75b595199e3579/bc904/sharemind2.webp 250w,
+/static/7365f1b214a2f90b1d75b595199e3579/4be29/sharemind2.webp 500w,
+/static/7365f1b214a2f90b1d75b595199e3579/03f31/sharemind2.webp 1000w,
+/static/7365f1b214a2f90b1d75b595199e3579/9579c/sharemind2.webp 1500w,
+/static/7365f1b214a2f90b1d75b595199e3579/b1218/sharemind2.webp 2000w,
+/static/7365f1b214a2f90b1d75b595199e3579/16e48/sharemind2.webp 2716w&quot;
+              sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
+              type=&quot;image/webp&quot;
+            /&gt;
+          &lt;source
+            srcset=&quot;/static/7365f1b214a2f90b1d75b595199e3579/43fa5/sharemind2.png 250w,
+/static/7365f1b214a2f90b1d75b595199e3579/c6e3d/sharemind2.png 500w,
+/static/7365f1b214a2f90b1d75b595199e3579/da8b6/sharemind2.png 1000w,
+/static/7365f1b214a2f90b1d75b595199e3579/2e9ed/sharemind2.png 1500w,
+/static/7365f1b214a2f90b1d75b595199e3579/9fabd/sharemind2.png 2000w,
+/static/7365f1b214a2f90b1d75b595199e3579/f8056/sharemind2.png 2716w&quot;
+            sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
+            type=&quot;image/png&quot;
+          /&gt;
+          &lt;img
+            class=&quot;gatsby-resp-image-image&quot;
+            src=&quot;/static/7365f1b214a2f90b1d75b595199e3579/da8b6/sharemind2.png&quot;
+            alt=&quot;셰어마인드&quot;
+            title=&quot;CEOS 동아리에서 만난 셰어마인드 팀원들.. 다들 잘 지내는지 문득 궁금..&quot;
+            loading=&quot;lazy&quot;
+            decoding=&quot;async&quot;
+            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+          /&gt;
+        &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;CEOS 동아리에서 만난 셰어마인드 팀원들.. 다들 잘 지내는지 문득 궁금..&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
+&lt;h4&gt;현타가 오다&lt;/h4&gt;
+&lt;p&gt;3개월 정도 지난 뒤 서비스가 안정화된 이후, 나는 소강 상태에 빠졌다. 미래에 대한 불안감과 함께 이제 무언가를 새로 시작해야 될 거 같은데 아무것도 하기 싫은 느낌이 나를 사로잡았다.&lt;/p&gt;
+&lt;p&gt;마침 휴학도 했겠다, 이렇게 살면 안되겠다 싶어서 현장 실습에 지원했다. 현재 내 이력으로는 메이저 IT 업계에 인턴 개발자로 취업하는 건 불가능하다고 판단했기 때문이다.&lt;/p&gt;
+&lt;p&gt;결론적으로, 글로벌 IT통신사 회사에 지원하여 최종 면접까지 가긴 했으나, 예상치 못하게 최종 면접이 영어(?)로 이루어져서 (사전에 몰랐음) 당황하긴 했지만 결국엔 준비 부족으로 탈락했다. 사실 당시엔 번아웃에 가까웠고, 뭐라도 해야겠다는 압박감으로 억지로 지원한 터라 제대로 준비조차 하지 못했다.&lt;/p&gt;
+&lt;h4&gt;나를 강제로 되돌아보는 시간&lt;/h4&gt;
+&lt;p&gt;나는 막연히 내가 현장 실습에 붙을 거라 생각하고 휴학을 신청하여 6개월이라는 시간동안을 무언가로 채워야 했다.
+어느새 가벼운 우울감과 불안감이 나를 잠식하고 있었기에, 일단 지금 당장 몰입하기 어려운 개발을 제쳐놓기로 했다.&lt;/p&gt;
+&lt;p&gt;그리고 내가 그전까지 하고 싶었던 것들로 일주일을 채워갔다. 운동, 달리기, 밴드 합주, 야구 시청...
+그때는 하루에 2번씩 헬스장에 갔었다.
+&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1000px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/948a0cf728fa0582db060f364395dd96/d66b2/chill.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 102.4%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAAsTAAALEwEAmpwYAAAFf0lEQVR42hWSaUzbhxnG/22Ug9PGJza43D6ghBvaEUi5bAjBGHPZBAM2lyE2hzEEcwZIIK5pwDRplm4kS2iTiE5T1a5Ru61TtnWZ9qlV1W6qKvVD1WhTNU1D2j5sX37798MrvdIr/fQ87/MI/S19zIz48HvGGHH5WFkM01jhpKG4C0tpJ6/kW2mqaGdtPsSdWzs8PPgJ7zy6x93921y5ss7k1CTB2SDR6B6/ffIJwph7mJkxLwvTARaW5/H7ApQazFRXtFLzIxv25nZWF31c39wgun2d6M42kcgWi0shhkeHcXsGGBsfZ2d3j0/++GeElpouRi097DqGCLaP0FPVQ7npPH3Nbi5YLuAZHmRzI8jmzA9OXMz6vWxfW2N1YQZHZysDA734JycIh8P88oOPEJqK7DRk27k1PM7KOS8brT6Mijout3rZ7Z6grtCGu/MCtzdXiKwssxkK8LPdMOF5P3NeF76xEYLT44RC89zYex2hNr2N89kubjjnKTtlw188xLJ1Cmv+AC36Hsw53dgrehh0DtPXZiPg9WKzmDln9dPWvUq7IyiqneXa1TVu7r2GUKN2UB/rwKEYoPZ4D5YYJy7dEM2pHpwZI/Tq3ThLPOy/GuX+9hwvZqvRp2fjtPfRfWGJ+vo+eh1O5qaGGBxyITjTBxnSTdIRO0LLMTdNz/XSeNxBf9owLq2HZkUbTWkt7ATnuHdthu4aIyPWaroam7GcPcfqpIfguItrGwGmfR6ESNMV3m055H3L77hlfEA0eY+3C+5xcHqfw4r7HBTv82HHIdHAOq9emiaytMLW9CWKCtvpsrkY6J/mZvQq2+EVMbxLCA9bDjia/Zpvur/n755v+arq93xn/xNf1n/MX879hs/bf83Xl//A9ZE5llst3Lg4weyoD0mCEnODnfFRP9HXLrN/e4vIpgj05UyzkbnDqjxCRHaVK3EhIplrzEpChE4GmUkJ4q8YZd3ez7KtA3dVLdbGJoTn46goKWY1NMXK0gwP7u/y6G0xZUVRB6WOqxSZx0jKOkuSNh+pXI8qrQxtTiWG4jYyKy9yuj1CSe8b6Lp2qQ68SbUvwrGsl1Hk15FcZEGuL0FZUIugOj3C0PpjwgdfsXH4LQVNoxSccZDRHuaU3kpC8SBdCx+x9f4/sbz1jPWn/+LOp0fsffg5gqmBBMMZYnMbRJCRY8ZXENKye3AvvsejJ0d8/Bl4F+5gyj/Dmem7CHo78rJ+LBMPcb7+Gf7Hz3h29D+++Nt/sExGEBKzyChvEKeO52QZSAtrEPL0jfjW3uPdp0fcf/wN67efYLb20zIpltRkI+NsP82z9ygLPsB/+AV//cd/+fK775ndvUu5zS06cpJaKirT5JLy0nmE+mYPS9EP+PnTfzOzecDl9ZsElnZ5uTeEkF6DIreW4r41yi/uMvrmr1j+8S+YWtoSRUQw9/nIqzQjy8jjeVUmqeVWBHPHKEOLP2Xj4FM6vesEJlapbu6hsNSCRqGnINlEerkdWVUv2Z2L6CodJKXkklVlJ6fETE5RPQpdLrFaA6kFouX8skZ0aUYqX2pAn5mHpb6DHGMhL6YbSFFoSVHnkllqQ1nciCSrmlRTHbllbeiMteiSjZRVNKFRpxEjUYpgA4LhhSwUMhUlxgJSlVrq6uzk55aRIFWhVumQql5Aq83EVFSFUqEh31RKQYkVhcYg3jNQSjScPBlHnDSZRFkKglqZjDRRjlqtIzZeSrw4MqmcBImauJg4YuXpJCTKkCWpOBUjIT42EU2KiXhJMpL4H/Y0kjVa5Km5KNXpYm3SxBKr1OTpjaiVGmLjEpCIQIlo4fiJGE7EJnEyPol4qZK4OCkxIjAr04BMIuOEeE9IlCBXKkgT35aQlMr/AT82H/HRcmpwAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+          &lt;source
+              srcset=&quot;/static/948a0cf728fa0582db060f364395dd96/bc904/chill.webp 250w,
+/static/948a0cf728fa0582db060f364395dd96/4be29/chill.webp 500w,
+/static/948a0cf728fa0582db060f364395dd96/03f31/chill.webp 1000w,
+/static/948a0cf728fa0582db060f364395dd96/9579c/chill.webp 1500w,
+/static/948a0cf728fa0582db060f364395dd96/d3a1a/chill.webp 1721w&quot;
+              sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
+              type=&quot;image/webp&quot;
+            /&gt;
+          &lt;source
+            srcset=&quot;/static/948a0cf728fa0582db060f364395dd96/43fa5/chill.png 250w,
+/static/948a0cf728fa0582db060f364395dd96/c6e3d/chill.png 500w,
+/static/948a0cf728fa0582db060f364395dd96/da8b6/chill.png 1000w,
+/static/948a0cf728fa0582db060f364395dd96/2e9ed/chill.png 1500w,
+/static/948a0cf728fa0582db060f364395dd96/d66b2/chill.png 1721w&quot;
+            sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
+            type=&quot;image/png&quot;
+          /&gt;
+          &lt;img
+            class=&quot;gatsby-resp-image-image&quot;
+            src=&quot;/static/948a0cf728fa0582db060f364395dd96/da8b6/chill.png&quot;
+            alt=&quot;운동하기 야구보기 밴드부하기&quot;
+            title=&quot;운동하기 야구보기 합주하기, &amp;#39;서시&amp;#39; 밴드부원들 보고싶다 ㅠ ㅠ&quot;
+            loading=&quot;lazy&quot;
+            decoding=&quot;async&quot;
+            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+          /&gt;
+        &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;운동하기 야구보기 합주하기, &amp;#39;서시&amp;#39; 밴드부원들 보고싶다 ㅠ ㅠ&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;방구석에서 있을 때보다, 밖에서 생산적인 활동을 하니 서서히 자신감도 생기고, 몸도 좋아졌다.
+이제 슬슬 미래를 향한 날갯짓이 다시 필요한 때가 된 듯 했다.&lt;/p&gt;
+&lt;h4&gt;아 모르겠고 일단 지원해보자&lt;/h4&gt;
+&lt;p&gt;한 코딩 교육 스타트업 인턴 채용 공고가 잡코리아에 올라온 걸 확인했다. 프론트엔드 교육 컨텐츠를 제작하는 업무였다.&lt;/p&gt;
+&lt;p&gt;1년정도 교내 코딩 동아리에서 프론트엔드 교육자로 활동했기에, 나에게 적합한 일이라고 생각이 들었다. 간단한 이력서를 보내고, 면접을 보자는 전화가 왔다.
+면접은 커피챗 형식의 대화와 간단한 과제로 이루어졌다.&lt;/p&gt;
+&lt;p&gt;이전에 최종에서 떨어져본 경험으로 무장하여 자신감 있는 태도로 편하게 이야기를 나눴고, 다음 날 합격 문자가 왔다!&lt;/p&gt;
+&lt;h1&gt;업무 시작&lt;/h1&gt;
+&lt;p&gt;내가 취업한 &lt;code class=&quot;language-text&quot;&gt;코딩밸리&lt;/code&gt; 는 자사 어플을 통해 초심자들을 타겟으로 코딩 교육 컨텐츠를 &lt;code class=&quot;language-text&quot;&gt;모바일 앱, 웹 환경&lt;/code&gt;에서 제공하는 스타트업이었다.
+&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1000px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/ef05e89e810f2679fd1a2fd8a07cf140/f2999/CodingValley.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 61.199999999999996%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAABYlAAAWJQFJUiTwAAADUElEQVR42kWSW0ybBRTHv8SoUaOZCTFzmEiClzGtGQwK7Vp6Xyl0LaVrC5SWD2lLywK4QR2IwkqZwEY3YS4FRsclEjVmxIhkkrEhD0wd4JtZTEg0bDMLmRoztyftz4/twYdf/jk595wjrH+3zMrKEms/LLO2cpUvv5pn4dI3LM7PcenrWS4vzLKwsMjVpSWWr11nfXWNn659y4/r62xsbHD71i1u39zkxs8b3NzcRDDuy0YnfwO7PAt38as8n7GLJ595AXX+XuSyLF7cIZCz52XKD1Xj9HtRqIvwOfS47DZO9MSZSo0zOXmB6ZlpxkdHEMKBIE1H27Ef0OAz7iEv+yU0SjU9sRgD8RhOUzEmRQ6RYB1d77VxbihBw+EIpSYtw2dOMz05weUri6xe/56Ln3+K0C56iIrVHJQ6ew1vsv/1TJp9bmZTSaYnLuA2GzigyKfW68Zn0TPQEqZCXYhOWcCJeDfDsTifJBP0J0dpaT2OUGdUErFbCB/UUWuUYcqT8Y7VQCBD4FTIRai2hrx9uUTe9lNvVhE2awiVaql3Ooi2NtJW5SPe5EPV2ES2ziMV1BcQMEsBFjlhaz763Tn0dnfRIVbSWy4nWl2G6q3dBGoq8UjrV8tl1JRqCPr8dLZGKO9oxxbswX74GIZYI8IhrRK/OhdPqZVC2WsoXsnEYdDQ2dZM8t0g59vDhOwm2kU/DS4XXm0BYomeSoeTRCiMo/F9HGKUVIeHwf5KhBq3j4CrCrezlsefeA5Z1tPk7HyMcIWZ+eEPmBvqZDDaTMRVzfGmI7T5RWy5hZQVSkepqKLY1YTBGWEuqmYmrkEQxRZCjR3Yyv08u2MnmRlPoSjcS29bC31HI5yULnusvh67qgybwkS52iZtI+Kx+hjwRXBFuqkMdTLd5WfkZFD6w6G7mIZ/R5u4g/LDX1H3/YLl7BaWj+9iPH0H0xmJj7YwnPpNsrfQ995A5R1A371KSfI+trF7D7GO3Zd4gKAZg+JRUEuqHX+ESrL3jzzSbR76R/+haEpSMcHZQAneuihFSdBs+0b+RyhOprFOpGm4mCb4RZrSlMT4X5Sl7mFJ/SuRRiclVYz/TcNnD7AemeGPK1Oc6+tHMfgnZmkA3UgarVRsm/8A96Uz4PYLiV4AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+          &lt;source
+              srcset=&quot;/static/ef05e89e810f2679fd1a2fd8a07cf140/bc904/CodingValley.webp 250w,
+/static/ef05e89e810f2679fd1a2fd8a07cf140/4be29/CodingValley.webp 500w,
+/static/ef05e89e810f2679fd1a2fd8a07cf140/03f31/CodingValley.webp 1000w,
+/static/ef05e89e810f2679fd1a2fd8a07cf140/9579c/CodingValley.webp 1500w,
+/static/ef05e89e810f2679fd1a2fd8a07cf140/b1218/CodingValley.webp 2000w,
+/static/ef05e89e810f2679fd1a2fd8a07cf140/a5cbc/CodingValley.webp 2500w&quot;
+              sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
+              type=&quot;image/webp&quot;
+            /&gt;
+          &lt;source
+            srcset=&quot;/static/ef05e89e810f2679fd1a2fd8a07cf140/43fa5/CodingValley.png 250w,
+/static/ef05e89e810f2679fd1a2fd8a07cf140/c6e3d/CodingValley.png 500w,
+/static/ef05e89e810f2679fd1a2fd8a07cf140/da8b6/CodingValley.png 1000w,
+/static/ef05e89e810f2679fd1a2fd8a07cf140/2e9ed/CodingValley.png 1500w,
+/static/ef05e89e810f2679fd1a2fd8a07cf140/9fabd/CodingValley.png 2000w,
+/static/ef05e89e810f2679fd1a2fd8a07cf140/f2999/CodingValley.png 2500w&quot;
+            sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
+            type=&quot;image/png&quot;
+          /&gt;
+          &lt;img
+            class=&quot;gatsby-resp-image-image&quot;
+            src=&quot;/static/ef05e89e810f2679fd1a2fd8a07cf140/da8b6/CodingValley.png&quot;
+            alt=&quot;운동하기 야구보기 밴드부하기&quot;
+            title=&quot;코딩밸리 홈페이지&quot;
+            loading=&quot;lazy&quot;
+            decoding=&quot;async&quot;
+            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+          /&gt;
+        &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;코딩밸리 홈페이지&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;회사에서 프론트엔드 심화 교육 코스를 오픈을 대기중이어서, 해당 코스에 사용될 책의 집필과 실습 코드 제작을 내게 맡기려고 했다.&lt;/p&gt;
+&lt;h4&gt;내가 맡은 일&lt;/h4&gt;
+&lt;p&gt;처음 회사에 와서 맡게 된 업무는 &lt;strong&gt;HTML-CSS 코스북&lt;/strong&gt;을 제작하는 일이었다. 개발적인 엄밀함과 테크니컬 라이팅 스킬이 필요한 업무였다. 사수 분과 함께 책을 집필하며,&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;- 말을 간결하고 핵심만 전달하기 위한 글쓰기에서의 피드백
+- 기술적인 엄밀함을 크게 벗어나지 않으면서 공식 문서에 있는 내용들을 어떻게 쉽게 표현할 수 있는지에 대한 피드백&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;을 거치며 글을 쓸 때 이에 대해서 계속 고민했던 거 같다.&lt;/p&gt;
+&lt;p&gt;특히 기술 문서를 뒤져가며 내가 생각하기에는 확실한 레퍼런스를 들고 와서 사수분께 갑론을박을 벌이기도 했지만..&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&apos;이건 진짜 내가 맞다&apos;&lt;/strong&gt; 라고 생각하고 주장했다가 알고보니 아니었던 적이 한 두 번이 아니었다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;HTML CSS 코스북&lt;/strong&gt; 제작을 시작으로, 통상적인 프론트엔드 공부 순대로 강의 커리큘럼이 하나씩 오픈 예정이었기에 일을 하면서 프론트엔드 전반적인 지식을 리마인드 할 수 있었다.&lt;/p&gt;
+&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 452px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/27e23d03617aff77151f7f8c993b4717/39613/book.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 66.39999999999999%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAAsTAAALEwEAmpwYAAADGUlEQVR42l2S62/bVBiH81/tC9PEWLkMiQ2JT4hvEyBgEgxWYCCtwCT4UIEEHRV0ZQy0m4S0ElDIfS3Z1mRpl2TrLXGcEOrYzqWL48a52E767MQFpGHp1bF/Puc5z3tsX7e0jRGI0w4t0Y7doh1ewvBH6Kl16tU8aiGNXsqKyqDkkxjb65SMLj9LDa7KTa4Um1ySmswVGmy1uvjMP1PUZi/S+PEa9R8uo5/5HPW1STqZNeS1CPk7vyCl/RRSN8iEvkVdXeBm1WAyVeaLbIVXEjKHI0WejEj8sW3g203cRT87TX16ltrUtAfUT3+GdX8LKRcgGzzPWnxe1AWy0Tn0bICEanBEAI4tFnlhUebFxRLHb8pEq21huJREO3Ea/e2z6Kem0N8/h3byI6zcJpJYnAnM8CB2wat7QWF4zy+AbZ4KSxyNFXkmJvF8vMhEtEhY8YAptNc/8Kz09z5Ff/eT/wG/4X5UAKPzAjj7H/BQqMCEsHw2KvG0qCOiworxj6EA1sawd6Y8S/WND+k8BpwTwLnHDA8GC17bz8X2gYfDBUKKd4ZptLc+Fmb7dvrkORqi/e74DP8Fei0LQ/FR9Mzv3NLaAjC2K3qwowI6ES8RUU1hGL1N9eWTqK9OUhWlvXmG1Esn0JZXKWZ+Y+XXaTLBGXKh89xZ+JKNxevElRYHAnkOirafCG5xSNgd+CnGwnoZn7Uu0bp4HfOqH/PyDcxrfpJff4e6JdGsbqJsJFDzy2hSktKDBOX1FaSHFjMbNb7PN5mXW+IfbPJVPE2urOBzhiP6wyFyVUXd2aGsabijEa47ZLQH5YpCZVtFkivIpQrjy7Edb+y022h/lelbHe95vMY36NvYomS5TPL2MsrfCoPuAC8f2OzuWqysZrmbXsUwTAYi6/Ud+s4IVW8Qjca9TfvOUOS2ANoubs/GauxQV3V6ZgdXZOPctoe4g12MWomWXsLtm15mC0NHvDfFuvJOG6PTw3HGuYvPFppus8WwWGHP6jES945pYY8nCIu+qWJpWbp6jp6hiGxPbLYPbA2GbFojHorR9QRcHgHJeW0h0dI3bQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+          &lt;source
+              srcset=&quot;/static/27e23d03617aff77151f7f8c993b4717/bc904/book.webp 250w,
+/static/27e23d03617aff77151f7f8c993b4717/9e838/book.webp 452w&quot;
+              sizes=&quot;(max-width: 452px) 100vw, 452px&quot;
+              type=&quot;image/webp&quot;
+            /&gt;
+          &lt;source
+            srcset=&quot;/static/27e23d03617aff77151f7f8c993b4717/43fa5/book.png 250w,
+/static/27e23d03617aff77151f7f8c993b4717/39613/book.png 452w&quot;
+            sizes=&quot;(max-width: 452px) 100vw, 452px&quot;
+            type=&quot;image/png&quot;
+          /&gt;
+          &lt;img
+            class=&quot;gatsby-resp-image-image&quot;
+            src=&quot;/static/27e23d03617aff77151f7f8c993b4717/39613/book.png&quot;
+            alt=&quot;HTML CSS 코스북&quot;
+            title=&quot;내가 공동집필로 참여한 3종의 코스북&quot;
+            loading=&quot;lazy&quot;
+            decoding=&quot;async&quot;
+            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+          /&gt;
+        &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;내가 공동집필로 참여한 3종의 코스북&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
+&lt;h4&gt;근무 연장&lt;/h4&gt;
+&lt;p&gt;3개월의 계약이 끝난 뒤, 근무 연장 의사를 물어보셨고 나는 연말에 CES 부스 준비와 학과 컨퍼런스 참석 일정이 있어서
+회사와 파트타임으로 오후 2시부터 6시까지 일하는 것으로 합의했다.&lt;/p&gt;
+&lt;p&gt;회사에서 배려해주신 덕분에 엄청난 워라밸을 챙기면서, 내가 진행중인 프로젝트에 더욱 집중할 수 있었다.&lt;/p&gt;
+&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1000px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/d78295b680be6281ade91a37eb477167/dbced/proj.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 28.4%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAGCAYAAADDl76dAAAACXBIWXMAAAsTAAALEwEAmpwYAAABcElEQVR42mWQS0vjUBiGTy6T2DRiWhPEYlcOuKiKeNmLP0B/gX9GcO0mUhnEtS6GgZnNMF5Q6iVpEnpL1LY/JYvH9NSZzSweOJyP857ne4U+oyNUgRD/o6iKnJ2c+KSDjCAIaLfbBaEkCEJ5NyEMwwm5+Lq3TH1jiZJVwjAMzBkTRVEwTROnWqE8W+a0ecp4PKbf75NlKZ1uShSlvL9l9LpdGRZF0eSzXMx7Lp7r4czOYds2lmWhKSqVukdjZ51arYbf9BkOhyRJwmDQ5fp3h+8/2vx5LGyjWNpOAl+CIBfSpvSFuaqFrutyVVVTqW8u01hbpeJV8M98RsMRvV6P7DXl4bbD5dVPzn9d8xDGREVgHMe0Wq1cGJqB23BZOVjBMA2EIrCrNl59AddxcRYd/G8+49F05SROeH554ubufmomO51SWOZCll9YapqGbhSGmmBrd5uj82P2Dw+wa2WaF02yNJNd/X2cxPG/82eY7PADxxEbXfwtAqQAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+          &lt;source
+              srcset=&quot;/static/d78295b680be6281ade91a37eb477167/bc904/proj.webp 250w,
+/static/d78295b680be6281ade91a37eb477167/4be29/proj.webp 500w,
+/static/d78295b680be6281ade91a37eb477167/03f31/proj.webp 1000w,
+/static/d78295b680be6281ade91a37eb477167/9579c/proj.webp 1500w,
+/static/d78295b680be6281ade91a37eb477167/b1218/proj.webp 2000w,
+/static/d78295b680be6281ade91a37eb477167/3045f/proj.webp 2623w&quot;
+              sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
+              type=&quot;image/webp&quot;
+            /&gt;
+          &lt;source
+            srcset=&quot;/static/d78295b680be6281ade91a37eb477167/43fa5/proj.png 250w,
+/static/d78295b680be6281ade91a37eb477167/c6e3d/proj.png 500w,
+/static/d78295b680be6281ade91a37eb477167/da8b6/proj.png 1000w,
+/static/d78295b680be6281ade91a37eb477167/2e9ed/proj.png 1500w,
+/static/d78295b680be6281ade91a37eb477167/9fabd/proj.png 2000w,
+/static/d78295b680be6281ade91a37eb477167/dbced/proj.png 2623w&quot;
+            sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
+            type=&quot;image/png&quot;
+          /&gt;
+          &lt;img
+            class=&quot;gatsby-resp-image-image&quot;
+            src=&quot;/static/d78295b680be6281ade91a37eb477167/da8b6/proj.png&quot;
+            alt=&quot;운동하기 야구보기 밴드부하기&quot;
+            title=&quot;교통 약자를 위한 버스 어플, 모두버스 | 학과 컨퍼런스 아카이빙 웹사이트 &quot;
+            loading=&quot;lazy&quot;
+            decoding=&quot;async&quot;
+            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+          /&gt;
+        &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;교통 약자를 위한 버스 어플, 모두버스 | 학과 컨퍼런스 아카이빙 웹사이트 &lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;연장 기간 동안에는 내 업무 범위를 비교적 더 확장해서 일할 수 있었다. 이제는 회사에서 나를 어느정도 인정해주는 듯 했다.&lt;/p&gt;
+&lt;p&gt;강의 커리큘럼을 직접 기획하고, 이를 기반으로 코스북을 만들고, 강사님과 직접 이야기를 나누면서 강의 구성에 대한 소통을 했다. 이 기간동안에는 React 심화 코스, 타입스크립트 첫걸음, Next.js 첫걸음이라는 강의를 런칭하였다. 🚀&lt;/p&gt;
+&lt;h1&gt;What I&apos;ve learned&lt;/h1&gt;
+&lt;p&gt;결론적으로 난 근무 기간동안 &lt;strong&gt;6개&lt;/strong&gt;의 프론트엔드 강의 코스 제작에 참여하였고, &lt;strong&gt;100&lt;/strong&gt;여개의 프론트엔드 강의 서브 컨텐츠를 개발했다.&lt;/p&gt;
+&lt;p&gt;테크니컬 라이팅, 상사와의 커뮤니케이션과 같은 여러 소프트 스킬 성장과 기술적인 성장도 있었지만, 이번 인턴 경험은 그 이상의 의미가 있었다.&lt;/p&gt;
+&lt;p&gt;콘텐츠를 제작한다는 것은 곧, 누군가에게 ‘배움’을 전달한다는 일이다. 그러기 위해선 내가 먼저 본질을 이해하고, 그것을 구조화해서 설명할 수 있어야 했다. 프론트엔드 프로젝트를 여럿 경험했기에 어느 정도 알고 있다고 생각했지만, 교육자의 시선에서 바라보니 내가 모르고 있던 빈틈들을 많이 마주할 수 있었다.&lt;/p&gt;
+&lt;p&gt;피드백을 주고받으며 겸손한 태도를 배우기도 했고, 내가 틀렸음을 인정하고 다시 고쳐 나가는 경험이 얼마나 빠른 성장을 가져오는지도 체감할 수 있었다. 처음엔 그저 ‘뭐라도 해야겠다’는 마음으로 시작한 인턴십이었지만, 지금은 그 선택이 내 커리어의 중요한 전환점이자 회복의 시작이었음을 확신한다.&lt;br&gt;
+내가 다시 개발에 몰입하고, 내가 좋아하는 일을 계속할 수 있게 만들어준 이 경험이 참 고맙다.&lt;/p&gt;
+&lt;p&gt;이제는 &apos;해야만 해서&apos;가 아닌, &apos;하고 싶어서&apos; 개발을 이어가고 있다.&lt;/p&gt;</content:encoded></item></channel></rss>
