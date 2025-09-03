@@ -1,23 +1,372 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[Web, AI, PS에 대해 기록합니다.]]></description><link>https://rmdnps10.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 03 Sep 2025 11:31:46 GMT</lastBuildDate><item><title><![CDATA[서강대학교 멋쟁이사자처럼 운영진 회고 (장문)]]></title><description><![CDATA[2023-2024년, 서강대학교 멋쟁이사자처럼에서 11기 프론트엔드 아기사자부터 12기 대표까지 경험한…]]></description><link>https://rmdnps10.github.io/서강대학교 멋쟁이사자처럼 운영진 회고/</link><guid isPermaLink="false">https://rmdnps10.github.io/서강대학교 멋쟁이사자처럼 운영진 회고/</guid><pubDate>Fri, 31 Jan 2025 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
-&lt;p&gt;2023-2024년, 서강대학교 멋쟁이사자처럼에서 11기 프론트엔드 아기사자부터 12기 대표까지 경험한 2년간의 여정을 소개합니다.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[Web, AI, PS에 대해 기록합니다.]]></description><link>https://rmdnps10.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 03 Sep 2025 14:59:51 GMT</lastBuildDate><item><title><![CDATA[서강대학교 멋쟁이사자처럼 운영진 회고]]></title><description><![CDATA[2023-2024년, 서강대학교 멋쟁이사자처럼에서 11기 프론트엔드 아기사자부터 12기 대표까지 경험한…]]></description><link>https://rmdnps10.github.io/서강대학교 멋쟁이사자처럼 운영진 회고/</link><guid isPermaLink="false">https://rmdnps10.github.io/서강대학교 멋쟁이사자처럼 운영진 회고/</guid><pubDate>Fri, 31 Jan 2025 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+&lt;p&gt;2023-2024년, 서강대학교 멋쟁이사자처럼에서 11기 프론트엔드 아기사자부터 12기 대표까지 경험한 2년간의 개인적인 여정을 소개합니다.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2&gt;멋사를 선택한 이유&lt;/h2&gt;
 &lt;p&gt;시작은 군 전역 후 넘치는 열정과 개발에 대한 막연한 호기심, 그리고 창업에 대한 관심이었다.&lt;/p&gt;
-&lt;p&gt;전역 후 사회 복귀 계획을 세우던 중 우연히 &apos;멋쟁이사자처럼&apos;이라는 동아리를 알게 되었다. &apos;내 아이디어를 내 손으로 구현한다&apos;는 모토와 배움에 열정 있는 초심자를 위한 커뮤니티라는 점이 나에게 큰 매력으로 다가왔다. 면접을 열심히 준비한 끝에 11기 프론트엔드 트랙으로 합격할 수 있었다!&lt;/p&gt;
-&lt;p&gt;멋사의 선발 과정은 현재의 개발 역량보다는 성장에 대한 열망과 본인만의 아이디어를 중요시했다. 이러한 가치관이 나와 딱 맞았던 것 같다.&lt;/p&gt;
+&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1000px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/0031d512f231d73d2b24bd1581badb3c/c2cc8/mutsa.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 75.2%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAEEA//EABQBAQAAAAAAAAAAAAAAAAAAAAL/2gAMAwEAAhADEAAAAUYoKUuEf//EABsQAAICAwEAAAAAAAAAAAAAAAABAgMRExQh/9oACAEBAAEFAvYt4NeSdEnZzWnPNn//xAAVEQEBAAAAAAAAAAAAAAAAAAAQEf/aAAgBAwEBPwGn/8QAFREBAQAAAAAAAAAAAAAAAAAAARD/2gAIAQIBAT8BCf/EAB0QAAICAQUAAAAAAAAAAAAAAAABESEyAiIxUaH/2gAIAQEABj8CjU0ZWb5TG1j2zj0t2f/EABwQAQACAgMBAAAAAAAAAAAAAAEAIRExUWGBof/aAAgBAQABPyGmbniM66qli2GsQcnSwzFEAY+JseSf/9oADAMBAAIAAwAAABCE7//EABYRAQEBAAAAAAAAAAAAAAAAAAABEf/aAAgBAwEBPxCmV//EABURAQEAAAAAAAAAAAAAAAAAAAEA/9oACAECAQE/EAIS/8QAHBABAQADAQADAAAAAAAAAAAAAREAITFRQYGh/9oACAEBAAE/EKWE9Sp9OBtUaExfO4bmdIru/cUVjYkzCN2BUX9dz4d4XYZq9z//2Q==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+          &lt;source
+              srcset=&quot;/static/0031d512f231d73d2b24bd1581badb3c/bc904/mutsa.webp 250w,
+/static/0031d512f231d73d2b24bd1581badb3c/4be29/mutsa.webp 500w,
+/static/0031d512f231d73d2b24bd1581badb3c/03f31/mutsa.webp 1000w,
+/static/0031d512f231d73d2b24bd1581badb3c/9579c/mutsa.webp 1500w,
+/static/0031d512f231d73d2b24bd1581badb3c/b1218/mutsa.webp 2000w,
+/static/0031d512f231d73d2b24bd1581badb3c/ca3ff/mutsa.webp 4032w&quot;
+              sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
+              type=&quot;image/webp&quot;
+            /&gt;
+          &lt;source
+            srcset=&quot;/static/0031d512f231d73d2b24bd1581badb3c/0988f/mutsa.jpg 250w,
+/static/0031d512f231d73d2b24bd1581badb3c/d1f95/mutsa.jpg 500w,
+/static/0031d512f231d73d2b24bd1581badb3c/dbdff/mutsa.jpg 1000w,
+/static/0031d512f231d73d2b24bd1581badb3c/9d81f/mutsa.jpg 1500w,
+/static/0031d512f231d73d2b24bd1581badb3c/109c0/mutsa.jpg 2000w,
+/static/0031d512f231d73d2b24bd1581badb3c/c2cc8/mutsa.jpg 4032w&quot;
+            sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
+            type=&quot;image/jpeg&quot;
+          /&gt;
+          &lt;img
+            class=&quot;gatsby-resp-image-image&quot;
+            src=&quot;/static/0031d512f231d73d2b24bd1581badb3c/dbdff/mutsa.jpg&quot;
+            alt=&quot;멋사 로고&quot;
+            title=&quot;우리가 뭘하러 모였을까요&quot;
+            loading=&quot;lazy&quot;
+            decoding=&quot;async&quot;
+            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+          /&gt;
+        &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;우리가 뭘하러 모였을까요&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;전역 후 사회 복귀 계획을 세우던 중 우연히 &apos;멋쟁이사자처럼&apos;이라는 동아리를 알게 되었다. &lt;strong&gt;내 아이디어를 내 손으로 구현한다&lt;/strong&gt;는 모토와 배움에 열정 있는 초심자를 위한 커뮤니티라는 점이 나에게 큰 매력으로 다가왔다.&lt;/p&gt;
+&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1000px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/16173c27e9b233805d6ac1448f875dd7/8453d/mutsa.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 52.400000000000006%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAPoAAAD6AG1e1JrAAAA0klEQVR42rWSzwsBQRTH9x918U+4uXD2B1CUUg5KLpwcpI2QA3Igv0qKtLc9yO58zBpjid1WrVeveW/e6zPfmTcGMZvxlgkh3XnErlpdR8X3muu73g8FhpkHjKxQN59WMGnB9QLzNtgW9CqwHsBhDrsxLLowlT1mGTZDfVqAQkeCzKoEjOC8hYsNxSTU09DIQk16PQOlFOQT0Mx9qPeB+j02EtYpKJhn+5n0KVh7pfK4hFVf3carBQJ/MhFxylqp67znz2mKl2mLr4My/vsPYwDeAAq/DTVwQx7dAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+          &lt;source
+              srcset=&quot;/static/16173c27e9b233805d6ac1448f875dd7/bc904/mutsa.webp 250w,
+/static/16173c27e9b233805d6ac1448f875dd7/4be29/mutsa.webp 500w,
+/static/16173c27e9b233805d6ac1448f875dd7/03f31/mutsa.webp 1000w,
+/static/16173c27e9b233805d6ac1448f875dd7/9579c/mutsa.webp 1500w,
+/static/16173c27e9b233805d6ac1448f875dd7/b1218/mutsa.webp 2000w,
+/static/16173c27e9b233805d6ac1448f875dd7/16b68/mutsa.webp 2400w&quot;
+              sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
+              type=&quot;image/webp&quot;
+            /&gt;
+          &lt;source
+            srcset=&quot;/static/16173c27e9b233805d6ac1448f875dd7/43fa5/mutsa.png 250w,
+/static/16173c27e9b233805d6ac1448f875dd7/c6e3d/mutsa.png 500w,
+/static/16173c27e9b233805d6ac1448f875dd7/da8b6/mutsa.png 1000w,
+/static/16173c27e9b233805d6ac1448f875dd7/2e9ed/mutsa.png 1500w,
+/static/16173c27e9b233805d6ac1448f875dd7/9fabd/mutsa.png 2000w,
+/static/16173c27e9b233805d6ac1448f875dd7/8453d/mutsa.png 2400w&quot;
+            sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
+            type=&quot;image/png&quot;
+          /&gt;
+          &lt;img
+            class=&quot;gatsby-resp-image-image&quot;
+            src=&quot;/static/16173c27e9b233805d6ac1448f875dd7/da8b6/mutsa.png&quot;
+            alt=&quot;멋사 로고&quot;
+            title=&quot;멋사라는 비영리단체 아래에 있는 멋사 대학 안에 있는 서강대 멋사&quot;
+            loading=&quot;lazy&quot;
+            decoding=&quot;async&quot;
+            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+          /&gt;
+        &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;멋사라는 비영리단체 아래에 있는 멋사 대학 안에 있는 서강대 멋사&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;결과적으로 면접을 열심히 준비한 끝에 &lt;code class=&quot;language-text&quot;&gt;11기 프론트엔드 트랙&lt;/code&gt;으로 합격할 수 있었다! 멋사의 선발 과정은 현재의 개발 역량보다는 성장에 대한 열망과 본인만의 아이디어를 중요시했다. 이러한 가치관이 나와 딱 맞았던 것 같다.&lt;/p&gt;
+&lt;p&gt;지금부터 내 짧은 25년 인생의 터닝 포인트인 멋사에서 한 활동에 대해서 소개해보고자 한다.&lt;/p&gt;
 &lt;h2&gt;아기사자로서 1년간의 여정&lt;/h2&gt;
 &lt;h4&gt;1학기 (교육)&lt;/h4&gt;
 &lt;p&gt;멋사 활동은 1년 동안 장기적인 여정으로 진행되었다.&lt;/p&gt;
 &lt;p&gt;HTML, CSS, Git을 다루는 기초부터 시작해, 이후 프론트엔드/백엔드 트랙으로 나뉘어 매주 2회 저녁 세션에서 운영진들이 준비한 교육자료를 통해 체계적으로 학습했다.&lt;/p&gt;
+&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1000px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/d88276284d678887a0cf596aa04dd399/ac331/session.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 41.2%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAAAsTAAALEwEAmpwYAAABv0lEQVR42lWQy4oUMRiF+xmkp7s6qUoldUvq1nVrq9oLIqKjD6ArFUQQd4LoQsS3cCWDG19mdKXvYoEFLo5/Msrg4sBJSL7/nH9VVwV8oXB6s8SHFxNeP27x5ulwoScXekv+3bMR75+PuH+rWmSU/uSczbvdbhZCzL7vz0EQzFKpedU1NfwgxsuHPb5/voPzj9dx/ukuvp3d+09fz07x48sDvHrUQMUadVWCMQatNeI4hlIKwzBglaUJkiQB4z44F9BJCh6EWJ94WG/+yvqTLa6st0iEwKHv0ZEspCgKpGnq/PF4xCoMQ0gpQbEd2D40RkOIEFSDJJwPSZyGRoKjbfZou84lM8a4fxY4TRNWFmYPjHHUZYbbxz0OlUStBaauxI3BoMsFxlohkRy5iR0wz3MawJFlmftvg7nK1lwCDa5NIyTdsZ2HfVkgUtJ5nzN4W48AEdq2cVX/7TCKoktgQrGTOHJ1jFbo6gxaMWSRj9IkKLMQJiafBpABp+E+AfcE1vC8ratsq9umDlg3PeruKu1JIq9STIcammBxyNE1FdoyRSoZQS2QIQjF737ofxV5sWw2m4WSLlR7IeAyjuPyBz1A9Lo4cb1mAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+          &lt;source
+              srcset=&quot;/static/d88276284d678887a0cf596aa04dd399/bc904/session.webp 250w,
+/static/d88276284d678887a0cf596aa04dd399/4be29/session.webp 500w,
+/static/d88276284d678887a0cf596aa04dd399/03f31/session.webp 1000w,
+/static/d88276284d678887a0cf596aa04dd399/9579c/session.webp 1500w,
+/static/d88276284d678887a0cf596aa04dd399/b1218/session.webp 2000w,
+/static/d88276284d678887a0cf596aa04dd399/4b320/session.webp 2085w&quot;
+              sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
+              type=&quot;image/webp&quot;
+            /&gt;
+          &lt;source
+            srcset=&quot;/static/d88276284d678887a0cf596aa04dd399/43fa5/session.png 250w,
+/static/d88276284d678887a0cf596aa04dd399/c6e3d/session.png 500w,
+/static/d88276284d678887a0cf596aa04dd399/da8b6/session.png 1000w,
+/static/d88276284d678887a0cf596aa04dd399/2e9ed/session.png 1500w,
+/static/d88276284d678887a0cf596aa04dd399/9fabd/session.png 2000w,
+/static/d88276284d678887a0cf596aa04dd399/ac331/session.png 2085w&quot;
+            sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
+            type=&quot;image/png&quot;
+          /&gt;
+          &lt;img
+            class=&quot;gatsby-resp-image-image&quot;
+            src=&quot;/static/d88276284d678887a0cf596aa04dd399/da8b6/session.png&quot;
+            alt=&quot;멋사 로고&quot;
+            title=&quot;멋사 노션과 세션 교육 자료&quot;
+            loading=&quot;lazy&quot;
+            decoding=&quot;async&quot;
+            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+          /&gt;
+        &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;멋사 노션과 세션 교육 자료&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;1학기가 끝날 무렵, React로 간단한 게시판을 만들 수 있는 수준까지 성장했다. 학업과 병행하다 보니 지식이 완벽히 체계화되진 않았지만, 운영진들의 도움 아래 직접 미션을 수행하며 개발의 즐거움을 느꼈다.&lt;/p&gt;
 &lt;p&gt;학기 중간에는 아이디어톤과 POV 세션을 통해 특정 문제 상황에 대한 내 아이디어를 발표하고 피드백을 받는 소중한 경험도 할 수 있었다.&lt;/p&gt;
+&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1000px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/4128a73162f94285613f8d4bfe9a7740/b8260/pov.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 56.400000000000006%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsTAAALEwEAmpwYAAABqElEQVR42j2Tx6qCUQyEz3O5cCO48P18EBcubQsRRcEKKipWsPdemMsXyF2E0yaTmeT/Q71e1+fzsRgMBmq1Wno+n1qtVnq/33o8HrperxqPx1osFnZ/Op10PB7tzAqG92QyqQAYwHw+1/f7NdDhcLDYbreWsN/vdT6fdbvdtFwudb/f7X02m2m32+lyuRgOrgCIC08ulUp2JgGFgF6vlxXdbDYaDodGzj0C2INFSCaTUQAIASvVGo2GptOpBTYI1FOw3+8b4WQy0Wg0Uq/XM8UIIbfT6SjADhlBEj1tNpsql8uqVCoGgmC9Xqvdbts9K4Wr1arh4YAUtwE7WCkUCtYbAmIK0GxW7GHNkzjjgCIUgJA8I4QMILbYQ4YNrPnAmCx3PulisahUKmU2CR8irTPLqOSAIn9EkU+QflGUPYVzuZwRo4hPjODNFHoPnYTJEgBYUc0elUz19/v9Tx03vvc+Bhru35nbJwDVajVls1kbQDqdtgF0u10bEmroI22hsPfcFPKXUA0gNmkwf0w0GlUsFlM8HlcikbB9JBKxQhCCJ/L5vA0Inj+gzCgAnONyyQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+          &lt;source
+              srcset=&quot;/static/4128a73162f94285613f8d4bfe9a7740/bc904/pov.webp 250w,
+/static/4128a73162f94285613f8d4bfe9a7740/4be29/pov.webp 500w,
+/static/4128a73162f94285613f8d4bfe9a7740/03f31/pov.webp 1000w,
+/static/4128a73162f94285613f8d4bfe9a7740/9579c/pov.webp 1500w,
+/static/4128a73162f94285613f8d4bfe9a7740/0be2b/pov.webp 1848w&quot;
+              sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
+              type=&quot;image/webp&quot;
+            /&gt;
+          &lt;source
+            srcset=&quot;/static/4128a73162f94285613f8d4bfe9a7740/43fa5/pov.png 250w,
+/static/4128a73162f94285613f8d4bfe9a7740/c6e3d/pov.png 500w,
+/static/4128a73162f94285613f8d4bfe9a7740/da8b6/pov.png 1000w,
+/static/4128a73162f94285613f8d4bfe9a7740/2e9ed/pov.png 1500w,
+/static/4128a73162f94285613f8d4bfe9a7740/b8260/pov.png 1848w&quot;
+            sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
+            type=&quot;image/png&quot;
+          /&gt;
+          &lt;img
+            class=&quot;gatsby-resp-image-image&quot;
+            src=&quot;/static/4128a73162f94285613f8d4bfe9a7740/da8b6/pov.png&quot;
+            alt=&quot;멋사 로고&quot;
+            title=&quot;당시에 제출했던 pov.. 뭘 하고 싶었던걸까&quot;
+            loading=&quot;lazy&quot;
+            decoding=&quot;async&quot;
+            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+          /&gt;
+        &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;당시에 제출했던 pov.. 뭘 하고 싶었던걸까&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
 &lt;h4&gt;여름방학 (중앙해커톤)&lt;/h4&gt;
 &lt;p&gt;멋사의 꽃은 단연 양재 AT센터에서 수천 명이 모이는 &apos;중앙 해커톤&apos;이다.
 이를 준비하기 위해 여름방학 동안 테킷의 무료 강의와 &apos;한 입으로 먹는 리액트&apos; 강의를 복습하며 실력을 다졌다.&lt;/p&gt;
-&lt;p&gt;건국대 멋사 백엔드 친구와 사이드 프로젝트도 진행했다.
-이떈 참 성장에 목말라 있던 시기였다.&lt;/p&gt;
+&lt;p&gt;중앙 해커톤에 함께 나가는 건국대 멋사 백엔드 친구와 연습겸 사이드 프로젝트도 진행했다. 이떈 참 성장에 목말라 있던 시기였다.&lt;/p&gt;
+&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1000px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/15300fcd606bca61c9bc6ad452c6284b/8fb61/jyt-universe.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 67.60000000000001%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAYAAAAvxDzwAAAACXBIWXMAAAsTAAALEwEAmpwYAAADNUlEQVR42o2Ta0zTVxiH/4nzQqUtLQUqWEq70gulQAtWLo4pMS7bwG66SUa8bI6JlSjUCxij8TLvtw9bRHBLdGIyNCa6fVhSTGa6xGmyD8uW+WnJmBmTZcMBxi2RpD6ec7Ck8ZP/5M05X/7Ped73/I7mcZdgyc0ny5z7QpVrtWF3ujFkWXhplo7ZGXpmiHXGzAwyDWa0ilCYQHkVpmwrRpNl+kejKWd6b8rOU2W25KE3ZNMWbef8hYscP3GSltXruPBFPz295wQnhOYrrSDHOp+cvAJx+tQqjVN7WWaL9RnQii4zi8HBQeT39z+jXLrUz9Bvv/JoYpTGprfQ3N5S5hXYKSxyUeT0YLO/TL7Ngd3hFnunWIvVAdJYQqeANxTwwb9j7OzaQXuklv7jMSJvr0CzCVBhUTF6YzZzdHrVlkWY6I1mBUkfgwRmzDXy7c2bCjj6YIxTRw/w07mNHNvcQsOyRrRgVTWVVQupqatn0atvsHzlWhqaVmBzejGIQyQkHSgN4/EbPEkmGR7+k8sDA9z7+Ue+S/zAm00RtPrqMM1La2l+7x1aN2zn/TUf0bK+m3D1a8JGry4rBZQznKMzcPv2HWV4//4I165/pfbJ5JOpGX66p4OB3e30HepmbfMqevZ28smx04QqwsrmecNMYR2LbePI0RNs6dzBmnWt7Nq9n86tXZSUBtEa6qqJNi7mw8hS9mxZzddXL3In8Q1L6heLjBmUVTpQzrojtp3PPj/PvgMHad/cyZmePlG9LGlYhuZw+fD6yymwF+Ny+/AHQmL1q5tPz2J6y4lEQrU5MvIXV65c5f//HomWk2xoi05diky+bGWuSHqmCK5Ob1ImqUCn2k7dcjweZ3JykqGh3/ly4DL3/hhmfHyCD9a3opUFw3hLynC6vDhcHuYXOikodKg8mi3zFDhlmjK8det7ZSghXd3drFr+OttiHVQtWITmDwSpXFBDuXiC0lYG3eMLqDG4PH51UCrc0lAC4yLYjx9PMjHxkOimTTTVBXk30kixGJV6KaVlIVWB8kp8AlQkRiAhsqz59umnp2YpbM/29vHL3buMjY2zb//HtG2McvjwEWpqX+Ep0lgQbXp0DGkAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+          &lt;source
+              srcset=&quot;/static/15300fcd606bca61c9bc6ad452c6284b/bc904/jyt-universe.webp 250w,
+/static/15300fcd606bca61c9bc6ad452c6284b/4be29/jyt-universe.webp 500w,
+/static/15300fcd606bca61c9bc6ad452c6284b/03f31/jyt-universe.webp 1000w,
+/static/15300fcd606bca61c9bc6ad452c6284b/9579c/jyt-universe.webp 1500w,
+/static/15300fcd606bca61c9bc6ad452c6284b/d8259/jyt-universe.webp 1712w&quot;
+              sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
+              type=&quot;image/webp&quot;
+            /&gt;
+          &lt;source
+            srcset=&quot;/static/15300fcd606bca61c9bc6ad452c6284b/43fa5/jyt-universe.png 250w,
+/static/15300fcd606bca61c9bc6ad452c6284b/c6e3d/jyt-universe.png 500w,
+/static/15300fcd606bca61c9bc6ad452c6284b/da8b6/jyt-universe.png 1000w,
+/static/15300fcd606bca61c9bc6ad452c6284b/2e9ed/jyt-universe.png 1500w,
+/static/15300fcd606bca61c9bc6ad452c6284b/8fb61/jyt-universe.png 1712w&quot;
+            sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
+            type=&quot;image/png&quot;
+          /&gt;
+          &lt;img
+            class=&quot;gatsby-resp-image-image&quot;
+            src=&quot;/static/15300fcd606bca61c9bc6ad452c6284b/da8b6/jyt-universe.png&quot;
+            alt=&quot;멋사 로고&quot;
+            title=&quot;친구와 모의 해커톤을 통해 만들었던 추억 아키이빙 웹사이트&quot;
+            loading=&quot;lazy&quot;
+            decoding=&quot;async&quot;
+            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+          /&gt;
+        &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;친구와 모의 해커톤을 통해 만들었던 추억 아키이빙 웹사이트&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;중앙 해커톤을 준비하며 나온 아이디어는 &apos;현재 내가 탄 지하철의 위치를 알려주는 서비스&apos;였다. 당시만 해도 이런 서비스가 없었고(지금은 네이버 지도에서 제공), 지하에서 GPS가 부정확해지는 문제를 해결하는 것이 관건이었다. 결국 사용자가 직접 화면에서 선택하는 방식으로 해결책을 찾았다.&lt;/p&gt;
+&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1000px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/9fdb0bf9eb1ae409dde3a813870248d3/451cb/wassuo.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 41.2%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAAAsTAAALEwEAmpwYAAABGklEQVR42p2SzUrDQBDHA/oOzcfuJtlsNtt8NLiVVGolopCjeikevIsvoPYBkgcQfL+CFHqsBz116ZjUCIJYMQMze/nxY/7DatqPmu41k5LhQ989X2Gdz1GPvTQ9iLJ5LA5fienff2d3Vp7n+80raFpNRgUcDXM1zk5BJmOgOFIeicGxRLlltU92t7CFKArLgA6AEr52Ubpxkdhg3V47Vh+IwcuW/lv4BRGdV7YZQMSu1UXxBKP0EULvSlGc1ELWQWiKyrEa4VQVk2eQ4R14+ES5qOuGrZA5vuJ19NBP6pbKNgUQq1NkVgk6AhlfKt+WkPhnkGe3deT4v0Jt+xVwj848cvB2LG8W1AqWyAiWWGeL+q7vtsFnvwk/ADBaWwbPWXB2AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+          &lt;source
+              srcset=&quot;/static/9fdb0bf9eb1ae409dde3a813870248d3/bc904/wassuo.webp 250w,
+/static/9fdb0bf9eb1ae409dde3a813870248d3/4be29/wassuo.webp 500w,
+/static/9fdb0bf9eb1ae409dde3a813870248d3/03f31/wassuo.webp 1000w,
+/static/9fdb0bf9eb1ae409dde3a813870248d3/61321/wassuo.webp 1233w&quot;
+              sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
+              type=&quot;image/webp&quot;
+            /&gt;
+          &lt;source
+            srcset=&quot;/static/9fdb0bf9eb1ae409dde3a813870248d3/43fa5/wassuo.png 250w,
+/static/9fdb0bf9eb1ae409dde3a813870248d3/c6e3d/wassuo.png 500w,
+/static/9fdb0bf9eb1ae409dde3a813870248d3/da8b6/wassuo.png 1000w,
+/static/9fdb0bf9eb1ae409dde3a813870248d3/451cb/wassuo.png 1233w&quot;
+            sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
+            type=&quot;image/png&quot;
+          /&gt;
+          &lt;img
+            class=&quot;gatsby-resp-image-image&quot;
+            src=&quot;/static/9fdb0bf9eb1ae409dde3a813870248d3/da8b6/wassuo.png&quot;
+            alt=&quot;멋사 로고&quot;
+            title=&quot;당시에 만들었던 왓섭(WhatSub) 서비스의 로딩 UI&quot;
+            loading=&quot;lazy&quot;
+            decoding=&quot;async&quot;
+            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+          /&gt;
+        &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;당시에 만들었던 왓섭(WhatSub) 서비스의 로딩 UI&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;처음 본 해커톤 현장의 열기는 지금도 잊을 수 없다. 우리 팀은 수상하지 못했지만, 서강대 다른 팀이 수상하여 다 함께 기뻐했던 한여름 밤의 꿈 같은 경험이었다.&lt;/p&gt;
+&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1000px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/4faf51343e8e932514192d5fbda2dcb5/2e694/hack.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 57.599999999999994%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAACE4AAAhOAFFljFgAAADpElEQVR42g3QbVDaBQDHcd6VFbPaqp0uFZ1MBRF8ApUHJXA+MASTAGWKOpxOBewvNgSVqQgi+HSKdpqy9BylV3rZFt4tvWqmrzrWrsvuurrjul51l11vmvL/xYvf28/d70tpqJGcdLfUnTRp605yMjNPOCmJJ2XM5F8IXcVza7sctrZq9DVL0FMvIM31AhjrpadmTbVvbcI0sTLW4Z3qVXk14qwJQsmc9hNyO+W+kYuvRlvRpVLi8sU3IGXRsGqUw9leBWu3Di7XEOx2C8acQ+g1d0JfU4wPmqR46DdhZ6YDm14D+lsk0a3xBuzN6SOUX+fvkj+HtsnA4jz5evxbpIBBJ7d6ZKSvsxwLdiNCPjv8Tg8G7vlxxzSK9ptyUsplnSklxWdaRdWZ3Wo/c7qm/gtOduDxYuNvFJ/DgSffHuAoGEAltxi1+Wwc2d5DYPgmhuvLEFRfg0tVAKKChVtFNBjU5dBKOKC/nYQBWTZ2HB1Yf/AouuTuRtCpi1D8/nkcb36MfnUdrryZCCthwdPQbqydAhVF2VDxGEhLSEBlSQHaKniQiXKhEDCgyEuFU56JHyYN+HrZHZ0duoUluypCOf7uMfYWpzA3PAidiIMNSxueHX8DS7sGN0rZYGWkgstIg/IdLnrbNBDzC5B/NQk95QwQUgaWzK3Y9nujH3mJGKiOgYcH+H5jBbtTLszrZQh1q/Hjk32M9engs2owQjRgxq7H7EAzepvKIRUWgJGciNviPNy/LcRs/wA+8c9Glz3mGKiJUD5/EMCHHicOVhfxcGMV+5+tY9Vtg7GxEn2mLuxOO7DmuYeFmUWoamTgsK4h/sWXMKnMw55VCqJnFF+sLEU3FoYwfzd2ecZpg810B1ub6/hyP4Sj2PydWnQ3VsGhEmGtjglHLR9mmQj5GWkQCwpgaVGisTQPS4Yy2LsIfProWXQz4MNcryJCUdTIyaz0DNLY0kz+uRMkf3IT5KFFTTbJRbhRQoeYTQcvnYZSRjq0VXyISnIx+L72nJ6adD6mk5wP2obPp5Z3no/0GRB06X+nsFMz8AL1Ilj0LBxO67Fr4mDbKIPuXQlkTBEEKRzksJmgpdDQ0aqFtlYJSXIuijhM8EVCSKVlKOQVRitF+VgZaYtQJomu8GuXE8LUuFfCVbwrYb2QEfaorz+9Lhb+xc8p+qc+W3JaxBec8nj8v/O5vH/5hcI/qi/wPdR4qvvCq5fG4+Ko4y9TL7mvpmf7ivnC/v8BMkH/I1MwQ/sAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+          &lt;source
+              srcset=&quot;/static/4faf51343e8e932514192d5fbda2dcb5/bc904/hack.webp 250w,
+/static/4faf51343e8e932514192d5fbda2dcb5/4be29/hack.webp 500w,
+/static/4faf51343e8e932514192d5fbda2dcb5/03f31/hack.webp 1000w,
+/static/4faf51343e8e932514192d5fbda2dcb5/9579c/hack.webp 1500w,
+/static/4faf51343e8e932514192d5fbda2dcb5/b1218/hack.webp 2000w,
+/static/4faf51343e8e932514192d5fbda2dcb5/ca1ce/hack.webp 5264w&quot;
+              sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
+              type=&quot;image/webp&quot;
+            /&gt;
+          &lt;source
+            srcset=&quot;/static/4faf51343e8e932514192d5fbda2dcb5/43fa5/hack.png 250w,
+/static/4faf51343e8e932514192d5fbda2dcb5/c6e3d/hack.png 500w,
+/static/4faf51343e8e932514192d5fbda2dcb5/da8b6/hack.png 1000w,
+/static/4faf51343e8e932514192d5fbda2dcb5/2e9ed/hack.png 1500w,
+/static/4faf51343e8e932514192d5fbda2dcb5/9fabd/hack.png 2000w,
+/static/4faf51343e8e932514192d5fbda2dcb5/2e694/hack.png 5264w&quot;
+            sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
+            type=&quot;image/png&quot;
+          /&gt;
+          &lt;img
+            class=&quot;gatsby-resp-image-image&quot;
+            src=&quot;/static/4faf51343e8e932514192d5fbda2dcb5/da8b6/hack.png&quot;
+            alt=&quot;멋사 로고&quot;
+            title=&quot;팀원들과 찍은 사진&quot;
+            loading=&quot;lazy&quot;
+            decoding=&quot;async&quot;
+            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+          /&gt;
+        &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;팀원들과 찍은 사진&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;중앙 해커톤 이후 얼마 지나지 않아 연세, 이화, 홍익대와 연합하는 &apos;신촌톤&apos;도 참가했다. 당일 주제가 공개되는 방식이라 더 긴장되었지만, 다른 학교 학생들과의 협업을 통해 ERD 설계 도구 활용법, 개발 명세서 자동화 같은 실무적인 팁들을 많이 배웠다.&lt;/p&gt;
 &lt;h4&gt;2학기 (데모데이)&lt;/h4&gt;
 &lt;p&gt;데모데이를 위해 아이디어 피칭 후 팀빌딩을 거쳐 프론트 3명, 백엔드 3명으로 팀을 구성했다. 우리는 동아리 지원 플랫폼을 개발하기로 했고, 홍익대 미대에 외주도 의뢰하며 열심히 준비했다.&lt;/p&gt;
@@ -32,14 +381,156 @@
 &lt;h3&gt;겨울방학, 멋사 1년 판 짜기&lt;/h3&gt;
 &lt;p&gt;처음에는 5명으로 시작한 운영진이었기에 인원 보강이 필요했다. 아름아름 연락을 돌려 프론트엔드 4명, 백엔드 3명으로 총 7명의 운영진을 추가 모집할 수 있었다.&lt;/p&gt;
 &lt;p&gt;퀄리티 높은 교육을 위해서는 운영진의 개인 역량이 가장 중요하다고 판단했다. 이에 파트별 스터디를 계획했다. 프론트엔드팀은 전년도 세션 자료를 복습하고, tanstack-query와 tailwind-css 같은 업계에서 활용되지만 아직 익숙하지 않은 기술 스택을 학습했다.&lt;/p&gt;
+&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1000px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/d74cc3076e478a30c988f816ba1aed6a/a57e3/study.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 18.4%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAECAYAAACOXx+WAAAACXBIWXMAACE4AAAhOAFFljFgAAAA20lEQVR42mWPy26DMBBF/QHZIZ41uAKDS1tTim0g3rGI+v+fEmUVKeF2iFQUqYuj0Yyuzsww7z1+Tif4aYIzBkmSPEjTdGPdKvVXzrlkLDzkOT+/Co4gCG5RFN3jOL5TZoc55zD2PYa2RS0EXjhHlmUkiTcRCZMnITsopS7TNGNZltVai67rng8AGwaDefbo+28o1eLj/RO1rFHkBUQh1pwqBXdh0zQXrTVl1VpVFQQd8Sd7CF1/hP2aMehxZxw8LM1NN636zYBnxTUMQ0nQy/lZSomyLG+05N/Lv4aYaBxhw7fkAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+          &lt;source
+              srcset=&quot;/static/d74cc3076e478a30c988f816ba1aed6a/bc904/study.webp 250w,
+/static/d74cc3076e478a30c988f816ba1aed6a/4be29/study.webp 500w,
+/static/d74cc3076e478a30c988f816ba1aed6a/03f31/study.webp 1000w,
+/static/d74cc3076e478a30c988f816ba1aed6a/9579c/study.webp 1500w,
+/static/d74cc3076e478a30c988f816ba1aed6a/b1218/study.webp 2000w,
+/static/d74cc3076e478a30c988f816ba1aed6a/cab58/study.webp 3402w&quot;
+              sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
+              type=&quot;image/webp&quot;
+            /&gt;
+          &lt;source
+            srcset=&quot;/static/d74cc3076e478a30c988f816ba1aed6a/43fa5/study.png 250w,
+/static/d74cc3076e478a30c988f816ba1aed6a/c6e3d/study.png 500w,
+/static/d74cc3076e478a30c988f816ba1aed6a/da8b6/study.png 1000w,
+/static/d74cc3076e478a30c988f816ba1aed6a/2e9ed/study.png 1500w,
+/static/d74cc3076e478a30c988f816ba1aed6a/9fabd/study.png 2000w,
+/static/d74cc3076e478a30c988f816ba1aed6a/a57e3/study.png 3402w&quot;
+            sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
+            type=&quot;image/png&quot;
+          /&gt;
+          &lt;img
+            class=&quot;gatsby-resp-image-image&quot;
+            src=&quot;/static/d74cc3076e478a30c988f816ba1aed6a/da8b6/study.png&quot;
+            alt=&quot;멋사 로고&quot;
+            title=&quot;스터디 노션도 따로 만들어서 기록했었다.. 추억..&quot;
+            loading=&quot;lazy&quot;
+            decoding=&quot;async&quot;
+            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+          /&gt;
+        &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;스터디 노션도 따로 만들어서 기록했었다.. 추억..&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;각 파트별로 지식을 쌓은 후에는 1학기 교육 커리큘럼을 전체적으로 개편했다. 우리가 아기사자 시절 느꼈던 아쉬운 점과 변화하는 개발 트렌드를 반영했다. 돌이켜보면 아기사자들이 직접 더 많은 것을 해볼 수 있게 하자는 의도로 다소 무리한 커리큘럼을 구성했던 것 같기도 하다.&lt;/p&gt;
 &lt;p&gt;또한 기존에 노션, 디스코드, 깃허브 등으로 분산되어 있던 멋사 워크스페이스를 하나로 통합했다. 기획/홍보/교육/재무 담당으로 업무를 분담하여 1년간 효율적으로 운영진 활동을 이어갔다.&lt;/p&gt;
 &lt;h3&gt;동아리 지원자 100명+ 만들기&lt;/h3&gt;
 &lt;p&gt;동아리 대표로서 첫 번째 목표는 겨울방학에 많은 지원자를 모으는 것이었다. 이를 위해 단순 에브리타임/서담 홍보를 넘어선 추가적인 액션이 필요했다.&lt;/p&gt;
-&lt;p&gt;홍보팀에서는 서강대 멋사의 이미지를 아트웍 느낌으로 리브랜딩하여 인스타그램에 게시물을 올리기 시작했다. 이와 함께 서강대 멋쟁이사자처럼 소개 사이트를 처음으로 제작했다.&lt;/p&gt;
-&lt;p&gt;흥미를 끄는 스크롤 인터랙션과 three.js로 구현한 멋사 로고 등 시각적으로 매력적인 요소들을 많이 추가했다. 지원 접수 기능도 포함되어 있어 짧은 기간 동안 기획/디자인/개발/검수를 위해 모두가 고생했던 첫 운영진 프로젝트였다.&lt;/p&gt;
+&lt;p&gt;홍보팀에서는 서강대 멋사의 이미지를 아트웍 느낌으로 리브랜딩하여 인스타그램에 게시물을 올리기 시작했다.&lt;/p&gt;
+&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 971px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/9acb9bfb1456cd87bb4509a7d681af6f/589d8/renewal.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 120.8%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAYCAYAAAD6S912AAAACXBIWXMAAAsTAAALEwEAmpwYAAAEUElEQVR42n1VSSxfbxR9qHlqzbOqEqIUNQ+RGmomEoSESIgxpgixsLEoNQQxLISw1YUxVoJIg4ioYKEaItY2RAVR9NS57fv9dfN/yc333u+973z3nnPu/SkzMzPgdXNzg4eHBwleKysrCAsLQ1xcnCZiY2ORmZkJMzMzKIoCLS0tWRkGBgYwMjKCMjU1hV+/fuH8/Bx3d3cCRtCrqyv8uPiB29ufuL+/x8/Hd/zu4uICPj4+AqKrqyvx7Nmz/8AJyIsfMi4vLzUHfPv2DQcHB7Lu7+/j+8F37O7uwt3dHXp6enj58iUcHBxgb28vzwI4NjaGr1+/YnNzE6urq1hfX8fJyYnE9PQ05ubmMDs7C1IzPz+PyclJODs7Q1tbG69evYKTk5M8azJUOby+vpaSWSpXZtXR0YHu7m709vZK9PT04NOnT5KRjo4OXrx4IUFOWbYA8nRe5Enlj9fe3h7a29sFsKurC01NTSgrK0NxcbGU6enpieTkZGRkZOD9+/fym2TJEpjR6ekpzs7OHkW4FcAvX74gLy8PpaWlyMnJQVRUFGJiYhAZGSmlfvjwAZWVlairrZND3r1794dHcvQ0Q3Ulf0+V1NfXl+A9y6VFzM3NJViyRhSmHhERgZCQEISHhyM4OFgyCQoK+sdr6mptbY3x8XGsra1hcXERS0tLWFhYEFGZscJTnz9/DhMTE9lkbGwsp1pZWcHGxgaurq4iAn8zNTWVLHd2dv7hW62KXCtubm6SXUBAAN68eQN/f3/Jjs+0Q2hoqPBjZ2cnvjM0NMT29ra4gh49Pj7G4eGheFcAAwMDkZaWhsTERFEtKSkJKSkpiI6OlvIIzrC0tJRMLSwsxK8tLS1CkYeHB/wfD6eX+/v7oRCssbERNTU1qK2tlbWhoUGUZXbMlBUQiNRQADogPz8f3t7e8PLykuzZIENDQ1BKSkowPDwsxu3r65OVz9zQ2tqKjx8/Cg2qihwC7Kbm5mYRITc3V6qbmJjAwMAAFBqWXvz8+TOWl5fldKbf1tYmFLACckm7EJDA5JDTidwdHR1JaEQpLCxEZ2enADDDwcFBjIyMoLy8XJQmj1yZGRXm+r8qq/PsabDxNb35N1Qf8vfR0VFsbGzIzGRFXLe2tv74kK7nyfQhG50+pAAMFVz9hu9UL6od83TISvAFG5vTOT09XXqUdlA3Ojo6SveQeL4np7QV+Y2Pj5cep2gcuqRH4UbKTktwM+cbPcdsaIvU1FRRMjs7G1lZWQKWkJAgE4Ze5bCgvehn4ihschcXFxlHfn5+oiiVtLW1FRBOHFqIE6W4pFju+f/CiuhPgtH43EvxFHLAsgmgtiBf8JCCggLQBfQqTV9XVyf3pEUFeev3Fr6+vlLNX97/VZjgtAb7tqioSOZhdXW1AFZUVEiG5I68se34//L69Wu5p6gaQHJHDjhd+IIrNxOwvr5e2rGqqkr4JG/MiIeyEn7Le06k308O4bfypOKzAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+          &lt;source
+              srcset=&quot;/static/9acb9bfb1456cd87bb4509a7d681af6f/bc904/renewal.webp 250w,
+/static/9acb9bfb1456cd87bb4509a7d681af6f/4be29/renewal.webp 500w,
+/static/9acb9bfb1456cd87bb4509a7d681af6f/5a50b/renewal.webp 971w&quot;
+              sizes=&quot;(max-width: 971px) 100vw, 971px&quot;
+              type=&quot;image/webp&quot;
+            /&gt;
+          &lt;source
+            srcset=&quot;/static/9acb9bfb1456cd87bb4509a7d681af6f/43fa5/renewal.png 250w,
+/static/9acb9bfb1456cd87bb4509a7d681af6f/c6e3d/renewal.png 500w,
+/static/9acb9bfb1456cd87bb4509a7d681af6f/589d8/renewal.png 971w&quot;
+            sizes=&quot;(max-width: 971px) 100vw, 971px&quot;
+            type=&quot;image/png&quot;
+          /&gt;
+          &lt;img
+            class=&quot;gatsby-resp-image-image&quot;
+            src=&quot;/static/9acb9bfb1456cd87bb4509a7d681af6f/589d8/renewal.png&quot;
+            alt=&quot;멋사 로고&quot;
+            title=&quot;리브랜딩한 결과!&quot;
+            loading=&quot;lazy&quot;
+            decoding=&quot;async&quot;
+            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+          /&gt;
+        &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;리브랜딩한 결과!&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;이와 함께 서강대 멋쟁이사자처럼 소개 사이트를 처음으로 제작했다.
+흥미를 끄는 스크롤 인터랙션과 three.js로 구현한 멋사 로고 등 시각적으로 매력적인 요소들을 많이 추가했다. 지원 접수 기능도 포함되어 있어 짧은 기간 동안 기획/디자인/개발/검수를 위해 모두가 고생했던 첫 운영진 프로젝트였다.&lt;/p&gt;
 &lt;p&gt;또한 학교 커뮤니티인 서담의 연애 상담글들을 학습 데이터로 활용한 챗봇을 개발했다. &apos;까칠한&apos; 또는 &apos;친절한&apos; 서담이를 선택해 연애 고민을 털어놓으면 답변해주는 서비스였는데, 리크루팅 기간에 맞춰 이 챗봇 웹사이트를 서담에 공유했더니 인기글이 될 정도로 화제가 되었다.&lt;/p&gt;
-&lt;p&gt;이러한 노력 덕분에 전년 대비 2배 이상의 지원자가 몰렸다. 운영진들의 책임감도 그만큼 커졌고, 우리만의 다양한 평가 지표를 통해 공정하게 최종 합격자를 선발했다.&lt;/p&gt;
+&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 922px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/4d568110cdd3f0b9abc6b643272b232f/3f081/review.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 104.4%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAVCAYAAABG1c6oAAAACXBIWXMAAAsTAAALEwEAmpwYAAACKUlEQVR42qVVSW4TQRTtE4QVSCxCYolTWGGL4whuAuIMwFWiLLwK7LxKJC+zwYt4lG3Jpu147MHuweOjXuFqtbtt00BJTzX0r1ev/lCt9ft91Ot11Go1iWq1imaziVKphPF4jM1mg/V6vQOuKXC+Wq1k77ouNM/zoOD7vuzn87nsaRhtYTKCNsvlUvaO40AjCQkILhCKfDab7YAKFotFjFRBKpxMJmi1Wuj1ehgOhxgMBvKqhmFgNBqJtRFow7llWfKgfUoDQiqjZC4kaYfUBYS8AtvnL1+RvniDzOUV3mayyGTfIXv1Hun0BfL5vLQ5dt2Qwt+EHz5+wvMXL3F2nsLpq3OcnqWQSr3Gyckz5HI5aaNucpSQRmydTgfF4g+Uy2VUKhU0Gw2UHh/RbrehbI6RBYS6ruP223cRiInIwTo6P3Xh/KmIqiMCYYqI+4nIAkKmQ1dEmNHz/bn0E6GCFQ5aIkJuZlJy4rqe3ByQbon/FIyYQuaZaZoy1zgmSRKCvYThSiE4p2JpxH47VvV6iIxtJw+jBS/B8XYe+xYCOVTZarZtIwZRYrb4aDw8wCgW5bgqUoklus+eJUlwrNnTKWzhxxihkD++voZ+c4NWt4v7uzsUCgUwzeh3RRCFZonHwHp6ghk6JThZBIrgmEE7RLJD6Iio+gJu6E2MBiopqFxe2RMEm4jz/xbcKxXyF9AQdWtu3zvmIpX+cx4ykfkw0Nld4XzK/p/E/gWTmEB9/Wi7PwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+          &lt;source
+              srcset=&quot;/static/4d568110cdd3f0b9abc6b643272b232f/bc904/review.webp 250w,
+/static/4d568110cdd3f0b9abc6b643272b232f/4be29/review.webp 500w,
+/static/4d568110cdd3f0b9abc6b643272b232f/ac3be/review.webp 922w&quot;
+              sizes=&quot;(max-width: 922px) 100vw, 922px&quot;
+              type=&quot;image/webp&quot;
+            /&gt;
+          &lt;source
+            srcset=&quot;/static/4d568110cdd3f0b9abc6b643272b232f/43fa5/review.png 250w,
+/static/4d568110cdd3f0b9abc6b643272b232f/c6e3d/review.png 500w,
+/static/4d568110cdd3f0b9abc6b643272b232f/3f081/review.png 922w&quot;
+            sizes=&quot;(max-width: 922px) 100vw, 922px&quot;
+            type=&quot;image/png&quot;
+          /&gt;
+          &lt;img
+            class=&quot;gatsby-resp-image-image&quot;
+            src=&quot;/static/4d568110cdd3f0b9abc6b643272b232f/3f081/review.png&quot;
+            alt=&quot;멋사 로고&quot;
+            title=&quot;가끔씩 오류가 나기도 했다&quot;
+            loading=&quot;lazy&quot;
+            decoding=&quot;async&quot;
+            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+          /&gt;
+        &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;가끔씩 오류가 나기도 했다&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;이러한 노력 덕분에 전년 대비 2배 이상의 지원자가 몰렸다. 운영진들의 책임감도 그만큼 커졌고, 우리만의 다양한 평가 지표를 통해 공정하게 최종 합격자를 선발했다. 선발할 때 내부적으로 정말 많은 논의를 거쳤다.&lt;/p&gt;
 &lt;h3&gt;본격적인 교육을 시작하며&lt;/h3&gt;
 &lt;p&gt;예상했던 것보다 교육 자료 준비는 훨씬 어려웠다. 지식을 체계화하여 직관적인 강의 자료를 구성해야 할 뿐만 아니라, 실습 과정에서 발생할 수 있는 다양한 변수들도 고려해야 했다.&lt;/p&gt;
 &lt;p&gt;학기 중에는 강의 자료를 일주일 전에 공유하고, 피드백을 반영한 뒤 리허설을 진행하며 교육의 퀄리티를 유지하기 위해 노력했다.&lt;/p&gt;
