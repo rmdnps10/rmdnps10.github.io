@@ -1,10 +1,12 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
 import { useState, useEffect } from "react"
-import Bio from "../components/bio"
+
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image"
+import Bio from "../components/Bio"
+
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 //
 //
