@@ -1,4 +1,1249 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[Web, AI, PS에 대해 기록합니다.]]></description><link>https://rmdnps10.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 04 Sep 2025 01:46:40 GMT</lastBuildDate><item><title><![CDATA[서강대학교 멋쟁이사자처럼 운영진 회고]]></title><description><![CDATA[2023-2024년, 서강대학교 멋쟁이사자처럼에서 11기 프론트엔드 아기사자부터 12기 대표까지 경험한…]]></description><link>https://rmdnps10.github.io/서강대학교 멋쟁이사자처럼 운영진 회고/</link><guid isPermaLink="false">https://rmdnps10.github.io/서강대학교 멋쟁이사자처럼 운영진 회고/</guid><pubDate>Fri, 31 Jan 2025 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[Web, AI, PS에 대해 기록합니다.]]></description><link>https://rmdnps10.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 14 Sep 2025 15:05:24 GMT</lastBuildDate><item><title><![CDATA[서비스 개발부터 DevRel까지: 카카오뱅크 인턴쉽 회고]]></title><description><![CDATA["금융으로 세상을 바꾸는 기업, 카카오뱅크에서 6개월의 인턴쉽을 회고합니다. (+ 네이버랩스 인턴 최종 면접후기)" 네이버랩스 최종 탈락에서 카카오뱅크 인턴 합격까지 지난 1월, 나는 네이버랩스의 Robot FE Developer…]]></description><link>https://rmdnps10.github.io/카카오뱅크 인턴쉽 회고/</link><guid isPermaLink="false">https://rmdnps10.github.io/카카오뱅크 인턴쉽 회고/</guid><pubDate>Thu, 14 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+&lt;p&gt;&quot;금융으로 세상을 바꾸는 기업, 카카오뱅크에서 6개월의 인턴쉽을 회고합니다. (+ 네이버랩스 인턴 최종 면접후기)&quot;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;네이버랩스 최종 탈락에서 카카오뱅크 인턴 합격까지&lt;/h3&gt;
+&lt;p&gt;지난 1월, 나는 &lt;strong&gt;네이버랩스의 Robot FE Developer&lt;/strong&gt;라는 인턴 직무에 지원했다. 내가 열심히 공부해 온 프론트엔드 분야이기도 하고, 로봇 엔지니어링을 경험할 수 있다는 것도 매력으로 다가와 합격을 위해 최선을 다했다.&lt;/p&gt;
+&lt;p&gt;참고로 인턴 전형은 아래와 같은 순서로 진행됐다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;1차 서류 -&gt; 코딩 테스트 -&gt; 전화 면접 -&gt; 최종 면접&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h4&gt;전화 인터뷰&lt;/h4&gt;
+&lt;p&gt;1차와 코딩 테스트를 통과한 뒤 현직자 분과 전화 인터뷰가 있었는데, 현직자 분께서 내 서류를 보고 지금까지 본 서류 중에 제일 잘 쓴 것 같다고 피드백을 주셔서 이미 그때부터 마음속으로 나는 네이버의 아들이 되었다.ㅋㅋㅋ&lt;/p&gt;
+&lt;p&gt;전화 인터뷰에서는 학부 수업이나 스타트업 인턴십을 하면서 경험한 것들을 물어보시고, 특히 당시에 개발하고 있었던 &lt;code class=&quot;language-text&quot;&gt;연애 상담 서비스, 셰어마인드&lt;/code&gt; 프로젝트에 관한 이야기를 나누면서 개발 현황과 앞으로의 계획에 대해 이야기를 나눴다.&lt;/p&gt;
+&lt;p&gt;코테에 관한 이야기도 나누었다. 다익스트라 알고리즘을 쓰는 문제에서 약식으로 &lt;code class=&quot;language-text&quot;&gt;Priority Queue&lt;/code&gt;를 구현했는데, 당시 단순 배열로 구현했던 것의 시간복잡도 한계(O(n) 삽입/삭제)와 제대로 구현한다면 어떻게 할 수 있는지(Binary Heap으로 O(log n) 구현) 물어보셨다.&lt;/p&gt;
+&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 741px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/7a058bd5f907525367b8142a40956454/adb42/call-interview.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 98.8%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAAsTAAALEwEAmpwYAAACmklEQVR42oVU6XriMAzMO5Qj5IAk5ISEAOEIN4FCd7f9+v5vo/XImKZLt/2hT44jj0Yj2VqrpVPHsEnvWNRsinXHJF03qdFo02CQ0vF4oizLyfMCenpqiZj2gwGjrRvUbhuk2bZH5aKg52pHYZRSECTk+zH7fj8ix/EZzLIcMkRi0+x+Mux1ex71/UjEh6Q1mwZZhkm+54hDnsjWEZnMu3U64kDXY3Dbdh4AJWiX42Ba3/MpTceUj2fMLE4y9sgGlgCzbZdcV7I0zd63poVhwoCTyYxGoylNpwuhXcaWZWPq9fp3trpu/Whao6Ezo/2+oqo602KxIiQJgliAjm6JJgJ8Qnk+vSfN80IQyakoFryP5CChATUMB7TbHelwOHEAgBAEMDQFpdYNWsryHZZD7XPJAPS8kA/P5yUtl2sGh1+ttswCOjpOn8uXa5/X0BWG8/DY16CNZFgxEACGwxGzhLZxnHL5QTC4jxTisY6iIf9PkozjkySVDIGOwzD8VIZggENDtaf0hB8OcyYA/eJ4KMbG+gCczZbCSrbpdE7jccENgKb4hqZgBq26XZe1+9cwjwwIPVDu+Xyl9XpHp9OFNps9bbcH0agzl4lgmBwh6+7VQMMYEDSRVWqWc1koQZaf8h5KBzsYdJPlp7xGZ1UyBkQmXKvj8cwMX17+0OvrO12vv5kp9qrqmfcvl19iXo88q/I2RY+AkmGPW48gFejjsgtDNzEOruvfASBTvcxPgKopRbG8ZY5uwFFtzgL+xvhgDnFQ3d0HQJQMAFUuSoV/e3tnX5Zbvmpj8XhAQwB+xazG0GQWZblhhrgh6DCaot5FeJStnrP/gdU0dGtXKGQmUkcJiAlAp/H9I6DqMh4GDLO6VgDA9H93+CvAv2czPlFStlniAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+          &lt;source
+              srcset=&quot;/static/7a058bd5f907525367b8142a40956454/bc904/call-interview.webp 250w,
+/static/7a058bd5f907525367b8142a40956454/4be29/call-interview.webp 500w,
+/static/7a058bd5f907525367b8142a40956454/eae46/call-interview.webp 741w&quot;
+              sizes=&quot;(max-width: 741px) 100vw, 741px&quot;
+              type=&quot;image/webp&quot;
+            /&gt;
+          &lt;source
+            srcset=&quot;/static/7a058bd5f907525367b8142a40956454/43fa5/call-interview.png 250w,
+/static/7a058bd5f907525367b8142a40956454/c6e3d/call-interview.png 500w,
+/static/7a058bd5f907525367b8142a40956454/adb42/call-interview.png 741w&quot;
+            sizes=&quot;(max-width: 741px) 100vw, 741px&quot;
+            type=&quot;image/png&quot;
+          /&gt;
+          &lt;img
+            class=&quot;gatsby-resp-image-image&quot;
+            src=&quot;/static/7a058bd5f907525367b8142a40956454/adb42/call-interview.png&quot;
+            alt=&quot;네이버랩스 전화 면접 회고&quot;
+            title=&quot;당시 전화 면접 회고&quot;
+            loading=&quot;lazy&quot;
+            decoding=&quot;async&quot;
+            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+          /&gt;
+        &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;당시 전화 면접 회고&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
+&lt;h4&gt;PT 준비, HR 인터뷰&lt;/h4&gt;
+&lt;p&gt;전화 합격 약 한 달 뒤에 네이버 사옥에서의 최종 대면 면접을 통보받았다. 사전에 10분 정도 직무와 관련한 경험들에 대한 소개를 하는 presentation을 준비하라고 하셨고, 발표자료를 미리 HR 담당자에게 송부했다.&lt;/p&gt;
+&lt;p&gt;듣던 대로 정말 네이버 사옥에서는 음식 배달 등을 위해 정말 로봇들이 자유롭게 이동하는 모습을 볼 수 있었다.&lt;/p&gt;
+&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1000px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/b6f67ceb9d2af1c855ce7c3007cc2563/8a39b/naver-office.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 33.599999999999994%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAAAsTAAALEwEAmpwYAAACC0lEQVR42g3M3U5SAQDAcd6hXqCtsguXtlJTGYLiceeoiIB4gOMB+VAMdREcBFT8pqmkuYVNV5p6hdYFbk0vcm5ttZXVU5yn4OL88/cAP5O7tMtEpcrkWRX1+Av5yyuWz6usVCqkd97iDgVxhkK1l4efjc3rG45//OX0+jdfft5w9usf2kqRkcCw4XMKDNiadNPK9h4blRMmV5cRg2GGtTyJ7Ay51DSZVxOMxaOo8WhNCo4ZyU+nFM8v2To7p3zxjfLVd6IpDdndZ6gDVvxim25KVS9wZxYQQzG6hnxIowlae4cwCw7iiRjhqIpX8dZEj9MI5Aoky/to796zeHRC7sMBcjSCqniMgKODuCzopsDiGjZvkDt1DTRauukMjHKvxYJVcpKZy6AoXqT+nprdIRieWBQlneVFoUB2a4tcaR1/UEENBwzXoEBb+1Pd1CQ66JL93H1Qz6PnFoTQOB0umR6nCyUW4qg8z8eNZO1+Q73RN+Ij87rA9EKe/ZMdVktzyKqPPqnTcHS10Nr4UDd1e2T6p3I8s/Ug3CbJ2VnWlvOMRwIkEmH+fN2lUp6t2SWr4QrKaEsaweQ0e4ebFEs5BHs7g5LZsLc9oflxnW4yiy482Q1sgsSIqpDOz7C4kLlN02yvZykuJcnPTNQ8/n4jMhUhtZRhPJemfPCG+VUNUbTRK1oMq82MxdKs/wfnQjmqUmaoWAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+          &lt;source
+              srcset=&quot;/static/b6f67ceb9d2af1c855ce7c3007cc2563/bc904/naver-office.webp 250w,
+/static/b6f67ceb9d2af1c855ce7c3007cc2563/4be29/naver-office.webp 500w,
+/static/b6f67ceb9d2af1c855ce7c3007cc2563/03f31/naver-office.webp 1000w,
+/static/b6f67ceb9d2af1c855ce7c3007cc2563/2ab50/naver-office.webp 1149w&quot;
+              sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
+              type=&quot;image/webp&quot;
+            /&gt;
+          &lt;source
+            srcset=&quot;/static/b6f67ceb9d2af1c855ce7c3007cc2563/43fa5/naver-office.png 250w,
+/static/b6f67ceb9d2af1c855ce7c3007cc2563/c6e3d/naver-office.png 500w,
+/static/b6f67ceb9d2af1c855ce7c3007cc2563/da8b6/naver-office.png 1000w,
+/static/b6f67ceb9d2af1c855ce7c3007cc2563/8a39b/naver-office.png 1149w&quot;
+            sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
+            type=&quot;image/png&quot;
+          /&gt;
+          &lt;img
+            class=&quot;gatsby-resp-image-image&quot;
+            src=&quot;/static/b6f67ceb9d2af1c855ce7c3007cc2563/da8b6/naver-office.png&quot;
+            alt=&quot;네이버 사옥 방문&quot;
+            title=&quot;삐까뻔쩍한 네이버 사옥 방문&quot;
+            loading=&quot;lazy&quot;
+            decoding=&quot;async&quot;
+            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+          /&gt;
+        &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;삐까뻔쩍한 네이버 사옥 방문&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;면접 전에 HR 담당자 분과 10분 정도 면접, 직무에 대한 소개를 받았는데...
+나에게 마음을 단단히 먹으라고 하셨다. 면접 난이도가 어려울 수 있다.. 면접은 일대다(&lt;strong&gt;면접자 1, 면접관 4&lt;/strong&gt;)로 1-2시간 동안 진행될 거다...라고 해서, 긴장을 잔뜩 한 채로 면접에 들어갔다.&lt;/p&gt;
+&lt;h4&gt;최종 면접 (망함 ☠)&lt;/h4&gt;
+&lt;p&gt;면접은 약 1시간 30분 동안 진행되었는데, 40분은 내 발표와 발표에 대한 꼬리 질문으로, 나머지 시간은 현장에서 준비한 코딩 사고 테스트와 로봇과 관련된 사고 질문이 주를 이뤘다. 여러 질문이 오갔는데 지금 내 머릿속에 남는 아쉬웠던 것들을 아래에 정리해본다..🥹&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;발표 꼬리 질문&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;화이트보드로 발표에서 소개한 아키텍처 구조도를 그려보라는 질문에 나는 프론트 서버에서 axios 모듈을 통해 Tanstack query를 사용한 API를 호출해서 백엔드 서버로 통신한다는 걸로 답했는데, 실제로 질문의 의도는 Network 계층(TCP/IP, HTTP/HTTPS 프로토콜, DNS 해석 과정 등)에 대한 이해도를 묻는 질문이었던 것 같다. 애플리케이션 레벨이 아닌 더 로우레벨의 통신 메커니즘에 대한 설명을 원했던 것이었다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;코딩 사고 테스트&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;컴퓨터 OS에서 파일 경로를 찾는 알고리즘에 대해 pseudo code를 짠 뒤 예외적인 상황(순환 참조, 권한 부족, 파일 시스템 손상 등)에 대한 고려를 묻는 질문을 하셨고, 로봇과 관련된 사고 질문에서는 &apos;면접자분이 로봇 웹앱을 설계한다면 어떤 서비스를 제공하는 로봇을 만들고 싶은지? 그 로봇의 통신(WebSocket, ROS 통신, MQTT 등), 시스템 아키텍처(마이크로서비스, 이벤트 드리븐 등)를 설계해서 뒤의 화이트보드에 그려봐라&apos; 같은 질문들도 있었는데... 정말 밑바닥 수준인 나의 지식을 체감했다.&lt;/p&gt;
+&lt;p&gt;아무래도 비전공자이다 보니까 컴퓨터 네트워크, 운영체제, 시스템 아키텍처 같은 CS 기초 과목들을 체계적으로 학습하지 못했고, 내가 예상했던 React 컴포넌트 설계나 상태 관리 같은 프론트엔드 개발 관련 질문보다는 그 밑단의 시스템 레벨 지식들을 많이 물어보셨던 것 같다. 특히 로봇과 웹의 인터페이스, 실시간 통신, 임베디드 시스템에서의 리소스 최적화 등에 대한 이해가 부족했다는 걸 느꼈다.&lt;/p&gt;
+&lt;p&gt;지금 생각해보면, 아무래도 로봇 OS 위에서 돌아가는 로봇 웹 애플리케이션을 개발하니까 당연하게도 이에 대한 성능 개선이나 UX 개선을 위해서는 하드웨어 제약사항, 실시간 처리, 메모리 관리, 배터리 최적화 등 로우레벨 시스템 지식이 당연히 많이 필요했을 텐데, 내가 너무 안일하게 생각했구나 하는 반성이 든다.&lt;/p&gt;
+&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 732px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/65aa6a8024e003881cb9be4379f5e38c/8fb8e/naver-labs.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 86.4%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAARCAYAAADdRIy+AAAACXBIWXMAAAsTAAALEwEAmpwYAAABkklEQVR42q1Uu27CQBDk/3tCTSgItAGEQktnCtIETGz8jAGDzRtsXhPPSkhIIcgkrDS6vdPdaPZxm3mtVPBSLOI5n0etVsNbo4GnbBbv7TZox+MR91hmv98jjmPsdjtBFEWy5/kZh8MhFXg3Q+dRxmhEIW273WK5XGK9Xgu4p1LiLkKGSdM0DeVyGYVCAfV6Hc1mU3LaarX+RqgoCkqlEnK5HKrVqpCpqiqXTqfT/SGHYYCx72MwGGA4HAqYAhoJb+EqYRzvJXdRFOOYUtFNhYFvwLY+YZtdDL86CIIA0+k0UR6KP5lMsFgsMJvNMJ/P5Zz+OYofhLbZSZpZEVLX+oBt2wLXdeE4joA+z0hMkGyz2fyiMJwll/nQg+N6sCxLHpPINE1ZPc+TtKQKmSGZRh99TYWuazAMI1l1AX2SM9RrRbpKOB6H6KltGJ9K0pN60jJd9Ho9IaQ65my1WqUvij/yEiU6FsuVKCHOOSIRC8Dfk74PfS0pRhcjfyy5YtL/1TYPGw78ejJ+LsbVvWPrcnx9A8hsH2mZTiXeAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+          &lt;source
+              srcset=&quot;/static/65aa6a8024e003881cb9be4379f5e38c/bc904/naver-labs.webp 250w,
+/static/65aa6a8024e003881cb9be4379f5e38c/4be29/naver-labs.webp 500w,
+/static/65aa6a8024e003881cb9be4379f5e38c/36d60/naver-labs.webp 732w&quot;
+              sizes=&quot;(max-width: 732px) 100vw, 732px&quot;
+              type=&quot;image/webp&quot;
+            /&gt;
+          &lt;source
+            srcset=&quot;/static/65aa6a8024e003881cb9be4379f5e38c/43fa5/naver-labs.png 250w,
+/static/65aa6a8024e003881cb9be4379f5e38c/c6e3d/naver-labs.png 500w,
+/static/65aa6a8024e003881cb9be4379f5e38c/8fb8e/naver-labs.png 732w&quot;
+            sizes=&quot;(max-width: 732px) 100vw, 732px&quot;
+            type=&quot;image/png&quot;
+          /&gt;
+          &lt;img
+            class=&quot;gatsby-resp-image-image&quot;
+            src=&quot;/static/65aa6a8024e003881cb9be4379f5e38c/8fb8e/naver-labs.png&quot;
+            alt=&quot;네이버랩스 면접 결과&quot;
+            title=&quot;탈락! ㅋㅋ&quot;
+            loading=&quot;lazy&quot;
+            decoding=&quot;async&quot;
+            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+          /&gt;
+        &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;탈락! ㅋㅋ&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;결론적으로 나는 최종 면접에서 탈락했다. 하지만 이 경험을 통해 내가 부족한 부분을 명확하게 알 수 있었고, 앞으로 어떤 방향으로 공부해야 할지 구체적인 로드맵을 그릴 수 있었다.&lt;/p&gt;
+&lt;p&gt;포기하지 않고 동시에 카카오뱅크 개발 어시스턴트에도 지원했었다. 당시 우대사항 및 요구되는 역량이&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt; 프론트엔드 개발 역량을 갖추신 &lt;span class=&quot;token function&quot;&gt;분&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;React&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; TypeScript&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; 모던 &lt;span class=&quot;token constant&quot;&gt;JS&lt;/span&gt; 등&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt; 소프트웨어 개발과 개발 커뮤니티에 이해도가 높으신 분
+&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt; 디자인 및 편집 &lt;span class=&quot;token function&quot;&gt;툴&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;Figma&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; Adobe Creative Suite&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; 사용 경험
+&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt; 기술 문서 작성 및 글쓰기 역량을 갖추신 분&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;이정도였던 거 같은데,
+당시에 &lt;code class=&quot;language-text&quot;&gt;개발 커뮤니티 운영진&lt;/code&gt;(멋사)과 &lt;code class=&quot;language-text&quot;&gt;스타트업 인턴&lt;/code&gt;을 하면서 했던 테크니컬 라이팅, 교육 컨텐츠 제작 경험들을 서류에서 어필했다.&lt;/p&gt;
+&lt;p&gt;서류 통과 후 면접에서는 편안한 분위기 속에서 본 전공 수업에서 다뤘던 아트앤테크놀로지 관련 디자인 툴들(Processing, Arduino, Figma 등)에 대한 경험과 개발 관련 기술적인 질문들(React Hooks, 상태 관리, 번들링 최적화 등)이 오갔다.&lt;/p&gt;
+&lt;p&gt;CES 2025 일정이 있어서 원래 근무 시작 일자보다 2주 정도 늦게 출근해야 해서 합격에 대한 미련을 버리고 있었는데,
+결과적으로 합격했다!&lt;/p&gt;
+&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 915px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/f32d5c7e746e44a575c44f02fe49954f/1d62c/kabang-start.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 59.199999999999996%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAAAsTAAALEwEAmpwYAAADp0lEQVR42h3P/1PTdQDH8Y9d1/WLXYl3SoHyxRh6AXcVlIAgxMCdRzZiREhIfG983QBhlkwtKb7IlwUOgtolqYu22tyYTJE4ZHABwca3hjDGlw8njS8f5C5Km+9Xo3/gcc8n5enygj30dWf7qXCWXS8T2jdvhNltrWy7aajLbrQu2bU6lb3qfJ69rV6M7ERuSVwCj75UfAySMh/SKD4CebUryou8EMkOQlL8cVDe7ntw3P8AeBFe6NHWY2JiBMOqKzAYfsXQ9By0tzWoLBOQHxouIzM5XhQTF0Nr6pywoqGIWb4LVvXzWNJQ+CJ/P05yjoFiue1BeMBBxEaw0KMshnn4KmTXpWhTqnGn9z50+k58db7AAX6O1ISY/8Gas/uwfo8itnvPwHL3MJY6n8Nixy7kp7B2QCewj7rhfbYvumRcPNIFYFzJw4A8AwOjY+i4rUPFZ7nkuqQM6fEcB8ijS9Od0dW0m/x8xR21Z11xge+Fy/w3cTradwfci8hAD3DZfrhVw8FmRyYez8qwvWrExj9PoelQoEqUQeR1pUiNPyn6MPEMfS7bD+I0b5L3QQgyYoORk/AOSj9m40TYG6C83PYjKugQuOEsXGu+hEWjDhtGNR4y23hilKBXGoe6Ih6RV+ZAkB4n0ne00TekfHyZ70/KBWyUZLFRmBEJYUo4otiBoA4dPICo4FdxKoyFZmkFpq3zsFmNWN1Yx+Ox79BXEwmJ4F3SXpGF3ORYUXNTJd3WehHi3BDyadbbKEgJRUGqA87hITklCZSbiysijnoiOtQbV6tLYF5YwPzaX7A9XMS/Jgn6Grn4WsglP1Xw8UlSjOiWVk7/PnQHba0V5NvGcqgUTejuUmDwty4oVe2g3F324USQBzihvmgpegu2gVosrW5hldnC5vIYur9JQ33xadJeJUR2aoJIqVbSg8P9+GNKRVashfibfg1/LtXCPGPByKjBAb7iRDhBHoQT4kNa8n3Jsr6Y6IYsRNPdRzr7p8iPaj2pE6U9vVkpxDlBtkjxi4LW6nuw+EBMtq0U1qYorJv3YnJSg5GxCcfyyy+Bs1MY4gNpnj82FdFY6W3AZI8Cs/0y3L1ZBklpElFU5aA0M1HUazDQpnETJs0msjnvB9uD3bBNu2Nt5jBGTfcdoPOLTFSgJ8MJPsLUFHGZtWvvMebv+YylJZ551BTADFQHMA3CaEZ+8czWhZyPCmcsc8szs2aMT82ReUsjntDPYnXGHQtTHAwOavEfz3tgHa8ihrwAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+          &lt;source
+              srcset=&quot;/static/f32d5c7e746e44a575c44f02fe49954f/bc904/kabang-start.webp 250w,
+/static/f32d5c7e746e44a575c44f02fe49954f/4be29/kabang-start.webp 500w,
+/static/f32d5c7e746e44a575c44f02fe49954f/b6f20/kabang-start.webp 915w&quot;
+              sizes=&quot;(max-width: 915px) 100vw, 915px&quot;
+              type=&quot;image/webp&quot;
+            /&gt;
+          &lt;source
+            srcset=&quot;/static/f32d5c7e746e44a575c44f02fe49954f/43fa5/kabang-start.png 250w,
+/static/f32d5c7e746e44a575c44f02fe49954f/c6e3d/kabang-start.png 500w,
+/static/f32d5c7e746e44a575c44f02fe49954f/1d62c/kabang-start.png 915w&quot;
+            sizes=&quot;(max-width: 915px) 100vw, 915px&quot;
+            type=&quot;image/png&quot;
+          /&gt;
+          &lt;img
+            class=&quot;gatsby-resp-image-image&quot;
+            src=&quot;/static/f32d5c7e746e44a575c44f02fe49954f/1d62c/kabang-start.png&quot;
+            alt=&quot;카카오뱅크 입사 준비&quot;
+            title=&quot;웰컴온보드화면과 스타터팩&quot;
+            loading=&quot;lazy&quot;
+            decoding=&quot;async&quot;
+            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+          /&gt;
+        &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;웰컴온보드화면과 스타터팩&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;첫 출근때부터 웰컴 박스에 편지와 함께 따뜻하게 맞이해 주셔서 너무 감사했다.&lt;/p&gt;
+&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1000px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/8cf493a9e973bdcc41588adbb3585dff/da8b6/id-card.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 45.2%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB1UlEQVR42o2STUsbYRDH7UUbv4LHfgQPpZd6ULClBT0YKV58QWNbYk1MQ+Lq+qzZvG7yNLuPiZoWLJSAuERNYpNaRKUedkVWRCgeFXYtKeI30GfHVSyK0jZzmIFh5sef/0xNzU08uEzlslSXjHHFZAxpKTGkkA8BNZ3k1dRlFUPqx1RUyZCIJsXREkKo9vbu3bhqyjK2TYthg4hhSCcmza/ZDPzc34H9XQUWsp+AJDg6NxMHEueOLODD/wKtoXoJT+rL6SisjDnPt7/MUt04ppVfFVrKy3TC7zybwhwIwdFDhLr/DoTrJsbY9j3OGhvsO5A6X5jrKQG+lVahkC/B6uI88GPDdFrkQeD9/1b4B6i43baiz2HkPN2Q9/aaciIAa0vLsJkvQCGXBSHgpRkSAhxmqgPKbrttLTJs/BDeA+poNWdiQTg1juG3rgNBfuCGeiiOMIBDzNHnaoBaBtXnfP06a38Gzx81nM9FeXp6UqEHexolE17KjDjO+HEXcKNDh1Up1C0PpwY6jcGmRnA8bTRnPa9hy7p0wfISOfsgyLopEVjLS1d1Vy5LUp3Qby++bX6svWl5oni6XqqDXW3qq/ZW1eXsURNBn5KMMJql0PpD+70/vABXAQmRpJmmigAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+          &lt;source
+              srcset=&quot;/static/8cf493a9e973bdcc41588adbb3585dff/bc904/id-card.webp 250w,
+/static/8cf493a9e973bdcc41588adbb3585dff/4be29/id-card.webp 500w,
+/static/8cf493a9e973bdcc41588adbb3585dff/03f31/id-card.webp 1000w&quot;
+              sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
+              type=&quot;image/webp&quot;
+            /&gt;
+          &lt;source
+            srcset=&quot;/static/8cf493a9e973bdcc41588adbb3585dff/43fa5/id-card.png 250w,
+/static/8cf493a9e973bdcc41588adbb3585dff/c6e3d/id-card.png 500w,
+/static/8cf493a9e973bdcc41588adbb3585dff/da8b6/id-card.png 1000w&quot;
+            sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
+            type=&quot;image/png&quot;
+          /&gt;
+          &lt;img
+            class=&quot;gatsby-resp-image-image&quot;
+            src=&quot;/static/8cf493a9e973bdcc41588adbb3585dff/da8b6/id-card.png&quot;
+            alt=&quot;카카오뱅크 사원증&quot;
+            title=&quot;Andrew.chung으로서의 삶 시작&quot;
+            loading=&quot;lazy&quot;
+            decoding=&quot;async&quot;
+            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+          /&gt;
+        &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;Andrew.chung으로서의 삶 시작&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
+&lt;h3&gt;우리 팀, 그리고 나의 역할&lt;/h3&gt;
+&lt;p&gt;우리 팀은 카카오뱅크 기술 조직을 위한 활동을 지원하는 업무를 맡았다.
+특히 DR(Developer Relations), PR, IR, HR 업무 중에서 DR과 관련한 활동을 많이 했다.&lt;/p&gt;
+&lt;p&gt;업무 특성 상 주기적인 업무가 있기 보다는 매일매일 다른 컨텍스트 속에서 업무를 많이 했다.
+평소에 많이 했던 일들은,&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;- 카카오뱅크 테크 블로그에 올라가는 기술 글을 검토, 개발 유지보수
+- 기술 블로그 이미지 편집
+- 금요일에 격주 간격으로 있는 사내 개발 컨퍼런스 행사 과정의 end-to-end 지원&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;이런 일을 하면서 개발이 필요한 특정 기간동안에는 위의 일을 진행하며 개발의 비중을 높이면서 업무를 진행했다.&lt;/p&gt;
+&lt;p&gt;어떤 걸 개발했는지는 아래에 작성해보도록 하겠다.&lt;/p&gt;
+&lt;h3&gt;카카오뱅크 최초 해커톤, 뱅커톤 준비&lt;/h3&gt;
+&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1000px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/135d8a6db17a84c933d66d46cdba0cbb/9d489/bankerthon.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 36.8%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAAAsTAAALEwEAmpwYAAACDElEQVR42h2NzUuTcQCAf7lK23J79+m2d0uXbk734ZtzllGmW7rNbbqV4jTEdFqpreEikD7QUCLoECQSnYTKwKBrdO4gCF269A90CjpEf8DvSTo8p+eBRxSSSaZHx5jOZsjPLjOeylDUgnh9YSrdZ8hZBWMuHTecx8g5dRScddxqrqOknmQ2nqSW7CffpGNeFZwzH0dMTVxnqjTJzbkZ8uk0G1c1Xhb6CIX72C0OsB23UHLX8bxboew9cYSOJbcg53VxRXVQ6bRQbjOz7BEMWHSI+7UlqvcW2dx6yGqtSiwc5/yFJJmJeWxmB7HoJQwmK4PpMUaKkxgbGwlFNE6ZjLjtCfa2f7P/4QCL3YmzSUU8Xl9jdn6B2ys13n4+4OPXQ7zNIczeIAaDnk6XFatiQtNiPNnYwm6zcmdhgXDUhyJGWB36yZdPfxnoitLusCHuvt4jNTxOLTFItfKC8sYOT4spqsMJWj1N7D/IotoVhBAEgnEGZzZRHG1EbfW0mI2ErClUT4JHMRt/0i5Eaf0Z4UCI7HAOvy/I2dYov3ZqHK5kqW84yeLoZTJdQRJe/ZHvJVfZRW3TeJcN8L3cS4/H8H821eHmTcSECET8sqc9IPuH8rLFr8lI9KL8tlaWr0biUm9SZKNilT63W070dMqOo86kOKR6ukG+L2jyx7VWORf3S8XhlGa7Q+qNJvkP3Zv02P9RoPoAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+          &lt;source
+              srcset=&quot;/static/135d8a6db17a84c933d66d46cdba0cbb/bc904/bankerthon.webp 250w,
+/static/135d8a6db17a84c933d66d46cdba0cbb/4be29/bankerthon.webp 500w,
+/static/135d8a6db17a84c933d66d46cdba0cbb/03f31/bankerthon.webp 1000w,
+/static/135d8a6db17a84c933d66d46cdba0cbb/9579c/bankerthon.webp 1500w,
+/static/135d8a6db17a84c933d66d46cdba0cbb/b1218/bankerthon.webp 2000w,
+/static/135d8a6db17a84c933d66d46cdba0cbb/27bed/bankerthon.webp 3000w&quot;
+              sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
+              type=&quot;image/webp&quot;
+            /&gt;
+          &lt;source
+            srcset=&quot;/static/135d8a6db17a84c933d66d46cdba0cbb/43fa5/bankerthon.png 250w,
+/static/135d8a6db17a84c933d66d46cdba0cbb/c6e3d/bankerthon.png 500w,
+/static/135d8a6db17a84c933d66d46cdba0cbb/da8b6/bankerthon.png 1000w,
+/static/135d8a6db17a84c933d66d46cdba0cbb/2e9ed/bankerthon.png 1500w,
+/static/135d8a6db17a84c933d66d46cdba0cbb/9fabd/bankerthon.png 2000w,
+/static/135d8a6db17a84c933d66d46cdba0cbb/9d489/bankerthon.png 3000w&quot;
+            sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
+            type=&quot;image/png&quot;
+          /&gt;
+          &lt;img
+            class=&quot;gatsby-resp-image-image&quot;
+            src=&quot;/static/135d8a6db17a84c933d66d46cdba0cbb/da8b6/bankerthon.png&quot;
+            alt=&quot;뱅커톤 2025 포스터&quot;
+            title=&quot;BANKERTHON 2025 포스터&quot;
+            loading=&quot;lazy&quot;
+            decoding=&quot;async&quot;
+            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+          /&gt;
+        &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;BANKERTHON 2025 포스터&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;3월 달에 카카오뱅크 최초 사내 해커톤인 &lt;code class=&quot;language-text&quot;&gt;뱅커톤&lt;/code&gt;을 개최했다. 우리 팀에서 end-to-end로 뱅커톤을 지원했는데, 그래서 처음 입사한 1월 말에는 뱅커톤을 준비하는 회의를 내부적으로 또는 타부서와 매일 하곤 했다.&lt;/p&gt;
+&lt;h4&gt;뱅커톤에서의 개발&lt;/h4&gt;
+&lt;p&gt;나는 뱅커톤 행사를 진행하는데에 있어서 디스플레이할 시계/럭키드로우 프로그램을 개발하고, 단체게임을 개발했다.&lt;/p&gt;
+&lt;p&gt;단체게임은 뱅커톤 개발 애셋으로 이루어진 3D 큐브 전개도에서 움직이는 큐브 조각을 타이밍에 맞춰 스페이스바를 눌러 맞추는 게임이었다. 막판 역전이 가능한 게임성을 위해 Round가 진행됨에 따라 정확도에 가중치를 두는 점수 시스템을 설계했다. 또한 CSS3 transform과 requestAnimationFrame을 활용하여 부드러운 큐브 애니메이션을 구현했다.&lt;/p&gt;
+&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 800px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/7ac3644d5a6ecd34fc6b92f68c605134/47a22/bankerthon-cube.webp&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 56.400000000000006%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAADQAwCdASoUAAsAPtFUo0uoJKMhsAgBABoJYwCdABT4Ukj54ONibcAA/G2YgPZsc1nMIYP6rld6TAncya/4zZ1u9rDfWwmmlTX3K5pNa78+Wlfr0Uz4kNNj6Ix8bcXBFgRArzTe3oWmZ9RdsEq1UW98lAMhWguYj2nFPSAA&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+          &lt;source
+              srcset=&quot;/static/7ac3644d5a6ecd34fc6b92f68c605134/bc904/bankerthon-cube.webp 250w,
+/static/7ac3644d5a6ecd34fc6b92f68c605134/4be29/bankerthon-cube.webp 500w,
+/static/7ac3644d5a6ecd34fc6b92f68c605134/47a22/bankerthon-cube.webp 800w&quot;
+              sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+              type=&quot;image/webp&quot;
+            /&gt;
+          &lt;source
+            srcset=&quot;/static/7ac3644d5a6ecd34fc6b92f68c605134/bc904/bankerthon-cube.webp 250w,
+/static/7ac3644d5a6ecd34fc6b92f68c605134/4be29/bankerthon-cube.webp 500w,
+/static/7ac3644d5a6ecd34fc6b92f68c605134/47a22/bankerthon-cube.webp 800w&quot;
+            sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+            type=&quot;image/webp&quot;
+          /&gt;
+          &lt;img
+            class=&quot;gatsby-resp-image-image&quot;
+            src=&quot;/static/7ac3644d5a6ecd34fc6b92f68c605134/47a22/bankerthon-cube.webp&quot;
+            alt=&quot;뱅커톤 단체게임 시연&quot;
+            title=&quot;단체게임 시연 화면&quot;
+            loading=&quot;lazy&quot;
+            decoding=&quot;async&quot;
+            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+          /&gt;
+        &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;단체게임 시연 화면&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
+&lt;h4&gt;당일&lt;/h4&gt;
+&lt;p&gt;뱅커톤 당일날에는 1박 2일동안 밤을 새서 뒷정리도 다 하고, 토요일 오후가 넘어 터덜터덜 집에 왔다.&lt;/p&gt;
+&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 981px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/d1cf7eb62f7aba7cd0bd6c5994386044/1d7cf/bankerthon-1.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 45.599999999999994%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAAAsTAAALEwEAmpwYAAACcElEQVR42h2SSU9aARSF3+/oxmW1iSg4AIKCokYQEXECHzLJjKIgWLQgKogG61gxmlKNNqaGRGNdtKlNE6Mu+5++vnRxc+/mnPOd5Ao+6yD+UQu+MSsu2xD+yVHC4iQxl8hCMEgqNstqPElR2tvhMCWXm7wosuWeoewLseuPshtIUPAG8JgGEfajc+xHZymHwuQ9XoqBIJuhoGQQ43Alx/XpBXdfa1xtlalmVrjbKPBDun+XD3jaq/Cyd8brYZWXwxNy7hDCfW6ZG0lYKxxLSXFusyvc5EuUnB5yEw4O5tNUFjIcTHuoOOycu5xU3dNUvF6OZsKcxtP/SQ8iUT5KLYTaUoKHfFoy3aAg+nksrvFzc4eCSsdUgwxjs5L33QYunHq+2NVc2DWc2btI9XfhlvfxeXuXyICN0ICbk2QO4Tpb5Hq5yLfVIlnRy+VynsvFJRbUGoYaG9HU12NvasInl+FramBR1Uq6qwO7QoGrs4/zUpYPQTexsXGu1uMIixNTJGwjxCxmQiYT2YkxvAYdY11azMo2hlvlDEpmAb2OaI+e+f4ekvZh1uZ8FBIRjnJpnv7UeL7+xKrLi2DrVmJRyhhSNmNVqwkYDASNJsa1nTi79bh0alI6FbMSWbZHR3LAQG0+xv1OkdvdbY7TGZ4eb3iuHpGZdCD0ahQY2+UMSzRDba1Y5AomNJ1SgIopgx6HNLNaFSGFjLhUtWA1s2kZZFzZzmEmScRm4/nhir+v31mU3k+wKOWIkkDUaZnq1RE2m/AZjVi0Gurr3tDytg5RCktp1fjVSjwdKkYVTYy2yOmtf0fZ4eJXaZ15xwjWNgX/AKuEih+5XMlCAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+          &lt;source
+              srcset=&quot;/static/d1cf7eb62f7aba7cd0bd6c5994386044/bc904/bankerthon-1.webp 250w,
+/static/d1cf7eb62f7aba7cd0bd6c5994386044/4be29/bankerthon-1.webp 500w,
+/static/d1cf7eb62f7aba7cd0bd6c5994386044/1258f/bankerthon-1.webp 981w&quot;
+              sizes=&quot;(max-width: 981px) 100vw, 981px&quot;
+              type=&quot;image/webp&quot;
+            /&gt;
+          &lt;source
+            srcset=&quot;/static/d1cf7eb62f7aba7cd0bd6c5994386044/43fa5/bankerthon-1.png 250w,
+/static/d1cf7eb62f7aba7cd0bd6c5994386044/c6e3d/bankerthon-1.png 500w,
+/static/d1cf7eb62f7aba7cd0bd6c5994386044/1d7cf/bankerthon-1.png 981w&quot;
+            sizes=&quot;(max-width: 981px) 100vw, 981px&quot;
+            type=&quot;image/png&quot;
+          /&gt;
+          &lt;img
+            class=&quot;gatsby-resp-image-image&quot;
+            src=&quot;/static/d1cf7eb62f7aba7cd0bd6c5994386044/1d7cf/bankerthon-1.png&quot;
+            alt=&quot;뱅커톤 카페테리아&quot;
+            title=&quot;뱅커톤 애셋으로 꾸민 카페테리아&quot;
+            loading=&quot;lazy&quot;
+            decoding=&quot;async&quot;
+            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+          /&gt;
+        &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;뱅커톤 애셋으로 꾸민 카페테리아&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;다들 AI를 활용하여서 생각보다 일찍 개발을 마치고 좋은 발표를 하기 위해 힘쓰곤 했다.
+(이후에 카카오에서 개최한 24K 해커톤을 참관했는데, 코딩하는 시간을 약 8시간밖에 제공하지 않고 심사도 AI로 돌리더라 ㄷㄷ)&lt;/p&gt;
+&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1000px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/27d283021f16c89b0e53d6b3e7317456/9aac5/bankerthon-2.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 84.39999999999999%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAARCAYAAADdRIy+AAAACXBIWXMAAAsTAAALEwEAmpwYAAAEr0lEQVR42h2S2VPTZxiFf20vOhawyBIJIeyQRAhhi5AEwhoJ+74kICKbgAqCIoJCWAoooLYwIFpQEQVGUcSlOqNlBnV0xLFaO51qx/GmF12s0+0PePrTi2fOzXnP975nPsG2q4ipwV2MdVdTU5jEvspMbLsK6Gu20N1YzKGGQgZaK0TNo6Mu94MeaavmcHsNX3XXc2KwkbnxDpZn+lk4fRShr8XKpZljzIx1iYNWpkaaWDh5kOvnB5ifHmLuVBe3Lg5xde4Iy/PDXJsf4ezUKLduLnBlfpRL50ZYOP8ls7MTdNsOIDQ3bKOy0kJnXzdLK7fpG+4nJ8tMcUkRpxavsHB3hSKrFW2IGm1YOC1d/Zxd/ZnO0w+oah6kpLwB2/gcCw9/omrPIYThrk5qK7fTdnSSb1//wdDsEhpdAnGpBUzeecqT5y+50NvFYF4Kx0vzWD3zNYsPX7N7dFH05JGQs5XB05cZnbtJU8cAwuWZa5ycmMFSVcf+IxPs7xqgssSCtaCIw/3DXDg2wlx7I4s7S5mvt3K7v4uz47McPtBJT2kBEw017N29D2vVbnJyrQgGnZHB/nGaW3qICtdwvGUnd5q2Ml1bwtX9O7jaVs9YbSknyrLoyDbRWl5F9446RioK6SlKZ6gki2KTic36eN5nCYoAXwzR0aSmFhMV6E2uKYG8jAzSUsyYzOkkm8wY9DEYY4xk5xViEDVKb0QdGkmi2cIXx5eZnL5OQWE5muBQhJBNKrQRofh6e+Do5EqKKYmW+mosllJaDhxic6SWsBAN1dVVfPfDC/a07EWlUBKti6Opd43Li3+z9uQ/VsVeE2ITEYIU/h9Olbg487HwEVKpjKhoPa3tNu7eW6OurgG1KpD4GD293Z1sLbWi9PVBpzeTXnefij0PmJx6xrOnbykr2obgJ3dns7hhelQYnwgCDus3EKxSUVZWwfSZBYwGA2HqUIL8fQn08Ubp54e/nz/BykBiU3owFd+gtfsx56buoQ+LRPByl2CICONi+zYkjvbIPTxxcXbGS+5FTloGWbm1tA3fIbugBZVYi1qpIDk0GLWvFzJ3D5SqDJLia4jWRBEolyH4e7izyceTHVsiCZBKcJdIKdBqyIxSo/BW0FA/ysHRb2hon8XXywerRsFb23Z6i800GkLpz9bh4/o5fhJnlHIPhEAxUOEpw9ttI272djja29Ooi2S2PAOllycpMSWUWQ9izbfgL5Nh9PRgtSCR520VvKxIY2l7FsFyOWqZuJjUTfw2MilKMSxAfMFl3ac429kT4ikGBSkJ8pSLpo2Eyf1EjxvR4kljaXoet1ewtrOQ+VgNWb4y/JydCJRI8HNyQpA6OCDf4Ih8vQPSz9YhtbND5eyKv6MTIS4SItzc0bnLCBOryPSQ8zDTyP3GUi4m6bgWrmbFGIlNG4reVUqixB1hMCCYyaAIyuU+uDk6EuDsQn+4nuXIOJYi47mhjWdFv4VVQwr3RX6MS+eFPoVXsem8ScjidVwGr+IzeBaTyvciwiNtLI+0Rk4pNKT4+GMLCueuNo43xjR+Scjk9+Rc3m3J59+0Yv4xF/POXPSBtyK/mfL59T3Jefwp8pcpn/8BfPXDHPsHPpsAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+          &lt;source
+              srcset=&quot;/static/27d283021f16c89b0e53d6b3e7317456/bc904/bankerthon-2.webp 250w,
+/static/27d283021f16c89b0e53d6b3e7317456/4be29/bankerthon-2.webp 500w,
+/static/27d283021f16c89b0e53d6b3e7317456/03f31/bankerthon-2.webp 1000w,
+/static/27d283021f16c89b0e53d6b3e7317456/151f9/bankerthon-2.webp 1022w&quot;
+              sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
+              type=&quot;image/webp&quot;
+            /&gt;
+          &lt;source
+            srcset=&quot;/static/27d283021f16c89b0e53d6b3e7317456/43fa5/bankerthon-2.png 250w,
+/static/27d283021f16c89b0e53d6b3e7317456/c6e3d/bankerthon-2.png 500w,
+/static/27d283021f16c89b0e53d6b3e7317456/da8b6/bankerthon-2.png 1000w,
+/static/27d283021f16c89b0e53d6b3e7317456/9aac5/bankerthon-2.png 1022w&quot;
+            sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
+            type=&quot;image/png&quot;
+          /&gt;
+          &lt;img
+            class=&quot;gatsby-resp-image-image&quot;
+            src=&quot;/static/27d283021f16c89b0e53d6b3e7317456/da8b6/bankerthon-2.png&quot;
+            alt=&quot;뱅커톤 스태프 활동&quot;
+            title=&quot;뱅커톤 스태프로 일하면서, 한 컷&quot;
+            loading=&quot;lazy&quot;
+            decoding=&quot;async&quot;
+            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+          /&gt;
+        &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;뱅커톤 스태프로 일하면서, 한 컷&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
+&lt;h4&gt;행사 이후&lt;/h4&gt;
+&lt;p&gt;뱅커톤 행사 이후에는 오히려 행사 뒷작업을 하느라 바빴다.
+뱅커톤에 출품한 모든 작품들에 대한 &lt;code class=&quot;language-text&quot;&gt;아카이빙 웹사이트&lt;/code&gt;를 만들고, 해커톤에 대한 &lt;code class=&quot;language-text&quot;&gt;KPT 회고&lt;/code&gt;를 진행했다. (Keep, Probelm, Try)
+결과물을 아카이빙하면서 코드를 뜯어볼 수 있는, 지금까지 내가 본 학생들로만 이루어진 해커톤에서 나온 결과물과는 확실히 수준 차이가 많이 났다. 카뱅 개발자의 프로페셜리즘을 여실히 느꼈다.&lt;/p&gt;
+&lt;p&gt;또 카카오뱅크 기술블로그에 DevRel로서 뱅커톤을 회고하는 글을 작성하고, PR팀의 검토를 받아서 release를 했다.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://tech.kakaobank.com/posts/2504-bankerthon-2025/&quot;&gt;🟨 카카오뱅크 기술블로그 뱅커톤 회고글&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;글을 세상 밖으로 내보내는 과정은... 정말 리소스가 많이 드는 작업이다. 이떄의 기억 때문에 지금 기술 블로그에 글을 쓸때도 습관적으로 퇴고의 과정을 거치고 있다.&lt;/p&gt;
+&lt;h3&gt;🧑‍🧑‍🧒 DevRel 활동&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&quot;개발자들을 위해서 우리가 뭘 해줄 수 있는 게 뭐가 있을까&quot;
+DevRel로서 우리 팀이 장소와 시간과 관계 없이 항상 생각하는 질문이다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;그들의 성장을 돕기 위해 카카오뱅크에서는 개발자들을 위한 여럿 프로그램을 지원하고 있다.
+기존에는 카카오 기술조직 내에서 인사이트를 공유하는 세션, &lt;code class=&quot;language-text&quot;&gt;DevCon&lt;/code&gt;을 주기적으로 개최하여 End-to-end 로 지원했는데, 만족도 조사를 하면서 외부 인사의 목소리를 듣고 싶다는 후기가 많이 올라왔다. 종종 외부 인사를 초청하긴 했지만, 아예 외부 인사 초청 밋업을 &lt;code class=&quot;language-text&quot;&gt;DevInvite&lt;/code&gt; 라는 이름으로 리브랜딩하여 행사를 운영하기로 했다.&lt;/p&gt;
+&lt;h4&gt;DevInvite 기획부터 운영까지&lt;/h4&gt;
+&lt;p&gt;DevInvite는 카카오뱅크 개발자들이 외부 기술 인사들과 만나며 새로운 인사이트를 얻을 수 있는 자리로 기획되었다. 단순히 강연을 듣는 것을 넘어서, 네트워킹과 질의응답을 통해 실무에 도움이 되는 깊이 있는 대화가 이루어질 수 있도록 구성했다.&lt;/p&gt;
+&lt;p&gt;당시 일하던 선임자분과 함께, 이 행사의 기저를 차근차근 완성했다.
+지금 생각나는 것들로는..&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt; 행사 브랜딩
+&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt; 행사 홍보
+&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt; 행사 준비 프로세스 확립
+&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt; 행사 &lt;span class=&quot;token function&quot;&gt;중&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;카메라 설치&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; 행사장에 포스터&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;X&lt;/span&gt;배너&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;과자&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;출입증 설치&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt; 후속 &lt;span class=&quot;token function&quot;&gt;처리&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;다시보기 편집&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; 스케치 글 작성 후 사내에 공유&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;매 회차마다 참가자 피드백을 수집하고, 무엇이 잘되었고 무엇을 개선해야 할지 꼼꼼히 기록했다. 음향, 좌석 배치, 다과 준비, 네트워킹 시간 등 세세한 부분까지 최적화해 나갔다. 행사가 끝나면 단순히 끝내는 것이 아니라, 핵심 내용을 정리한 스케치 글을 작성해서 참석하지 못한 카뱅 크루들도 인사이트를 얻을 수 있도록 했다. 또 영상 편집을 통해 다시보기 컨텐츠도 제공했다.&lt;/p&gt;
+&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 729px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/97f576b7b7039314ea92df56b2ad23da/6a49a/devinvite.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 74.4%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAAAsTAAALEwEAmpwYAAADhUlEQVR42nXR+09aZxgHcHf5H5otabNsMVmTJi2mqTa2Q+uN9dQj6g4lbRWnpdJBu6I4KqtFW3VYb+VyTFEqCMMiUorAREG5WHXDOktKDGnW7e9Ycsj5DhhdlqBP8l5+eT95vs9bVJQtddGH2YNobDxRWVtrPH7qlOGz4i/oI0eP0seKi2lOWRntC67RDzUaupqopuuIOpoSUvp6PjHL41VxcoRanTNyRVHUR9mzW6kkbisUuNzSwl7k88GtqUJ5ZQUqeHWwP7dhXDeMkrOluH7rJr65KmAaKT6aBA3N2bdcLvfj/0Cn05kDfcH1i8vrESwseRl6xpQeejSa7lHdTXfK5Gmx9GxarjiZ7u5VpAe1k2nhVcHfnDMl4JSXNh0KmmxO4udFN2asdnZMZ4CiV4UOyQ3wqSaUc8+Dd4mHhUynA+Nj+GXVzcya9ZDKJc35yIWgZmKC0BtNmHpqYbVPptFzrx/UtQ58zW/CV9V1OH7yNB6ODMPqsGJoZIB5tmiG3WEqBN/P8E5mht13VVAP/cRqJmkYtH2Yn+7EnF6UWS0wPWrAmrsPmrEH+G1njXn31+9wvbDmwEjkALD9RjshlkogErexLZ034TR24M/AFST9V7C/0op9P4XXXhFmLXooVXLGt/wMiUQsD0YKI/vNo0RwbgxbiwZ2xazDhkOBpR+4eDFcAoeZhF9/HqFZEvF4AB6vnbmnVkAsEeUj//9T8h3GNDLCJRfAIuaxT6hKuO/zoB2oxUhvFVwTZbh/6zQWaCHWg1ashlxMbMMNs/nxQTMsyoGyM58TbSc+QSvnGKtpKEd0SIrN+WsIOYQImgm4DTXwTzcgtGJFOBZitrbXEA57CyO/n6Gs4ktC11YNT99lNv5YCk9XB2yKGoSmhIguqRHOfEjEO4hoZAnxV78yu3vxDBg6aIb/grtmJZGcU2J9pJ21fd+I/vpzoFtJbDif4u27JPZTu3j9ZgubL4PY3dth9hKvsLkZOxwM6+4Q3sHrmOgg2B8vncMoVQufth8bmwG8jPoQDXsQCjoRCQews7vDJPffHNJhPrJRRhGD39bjO/4FViUWwD4zDp/HhlBgAavLDvj983A5TRlwFcn9JPP2jxQSyUQhmKkPstvtC6VHukQCfpdYSD7okZCe5xbSZtGTFtMk6Zw3kvOWqcxdTwYCHnJ7e7s+mUo2p1KpT7NvAeSMfwBmfy0HA/VSwwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+          &lt;source
+              srcset=&quot;/static/97f576b7b7039314ea92df56b2ad23da/bc904/devinvite.webp 250w,
+/static/97f576b7b7039314ea92df56b2ad23da/4be29/devinvite.webp 500w,
+/static/97f576b7b7039314ea92df56b2ad23da/4aa7e/devinvite.webp 729w&quot;
+              sizes=&quot;(max-width: 729px) 100vw, 729px&quot;
+              type=&quot;image/webp&quot;
+            /&gt;
+          &lt;source
+            srcset=&quot;/static/97f576b7b7039314ea92df56b2ad23da/43fa5/devinvite.png 250w,
+/static/97f576b7b7039314ea92df56b2ad23da/c6e3d/devinvite.png 500w,
+/static/97f576b7b7039314ea92df56b2ad23da/6a49a/devinvite.png 729w&quot;
+            sizes=&quot;(max-width: 729px) 100vw, 729px&quot;
+            type=&quot;image/png&quot;
+          /&gt;
+          &lt;img
+            class=&quot;gatsby-resp-image-image&quot;
+            src=&quot;/static/97f576b7b7039314ea92df56b2ad23da/6a49a/devinvite.png&quot;
+            alt=&quot;DevInvite 행사 쿠키&quot;
+            title=&quot;DevInvite 행사 후킹을 위해 세션마다 나누어 준 쿠키&quot;
+            loading=&quot;lazy&quot;
+            decoding=&quot;async&quot;
+            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+          /&gt;
+        &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;DevInvite 행사 후킹을 위해 세션마다 나누어 준 쿠키&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;인턴십 기간 동안 총 5회차의 DevInvite 행사를 기획하고 운영했다. 높은 퀄리티의 강의를 세션 때 마다 들을 수 있어서, 개발에 진로를 설정한 내 입장에서도 세션이 열릴 떄마다 흥미롭게 들었다.&lt;/p&gt;
+&lt;h4&gt;외부 활동&lt;/h4&gt;
+&lt;p&gt;사내 개발자들의 외부 활동 지원을 하러 외부로 많이 나가기도 했다.&lt;/p&gt;
+&lt;p&gt;Spring Camp 2025 컨퍼런스에서 카카오뱅크 개발자들의 세션을 확보하기 위해 주최측과 적극적으로 소통하고, 현장에서 서버 개발자를 홍보했다!
+&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1000px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/5cde045380439b8d4a0477c7c7a36ba8/9ed60/spring-camp.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 51.2%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAC4klEQVR42g3Q2U/TBwDA8d8ejMniER42NURQY8QDReMByuERmYVAEUovbX9gobQNZEJbaoscIliEauVqkRaQKoe0Ea144rB2Iia4rXZbdNGX8WSMf8RXnr6f568w6PMyGZpiKjiBx+umw9lEjUFDXbWIw2LAVluJ/bwOm+kMuqIc9Bnbccmy8clzGKlW4bVUIMnYh/rkYdxVJQgvorN8XvqTT0sfiH38m/jHGEOBITodOh56zAT77Ty908nUrW4azCaObk2kRZqJX5nDfatI1O3grbeZ2c46hswahPCTR0RmCpgPJ7MYe8Zi/A+u915n1JLJ+4HT/P/YTOyenW5zPoq8dIoO7Ka9OIeu4uN06DVUFuZiKDyOImMPYlYqQmh6hvcRNc9vCYz2W5mbjdDn7aWrMp3JS6X01BZgUJ6gvvwIxuVelOXTZdTiNJZRc0ZLQ0MLNTY7ZaqzlGSlIzRddjIzqSQ8uAJPdxmDIwGsjlpy96fgUu7lyOa1bF23mvLcLfySlUa9rJCR8WG6x4ZpdbfhW3YoEsHl7sVUVYVQrNbg75OwEBLoupqPtfkSOr2KDT8n0ng6hTuWdK7oj6E9mcyubUnUK6V4/P20+r1MxF/z8nOMwEKYyfnHeEOjCNJSBX0uCS/Hf+Ci7SA6gxFpSR7l2Rt407yTpUAhwdZTpCWvYt/u7bSIMi5fsOIY6mdicZZn/77jQXyecHyB6b9eIaSk7MKoWceXBQG19EcSEn5i/foE3PpDfBmX83V5x1j9UXYkrSF12yacYgl2nYqanmamP8zx4J9XhGK/EXw3x923TxG2JG1EJVnDtzcCJsVKdm5MJDM1kRsVh/l0U07UWYDvvIQ6RTa/yk/g0slp1MrQqKVcaLfQ5nNy7d4A3udjBKLTCNq8LNpMe/nviYC/KY1Os0hPo8hYu46ox8jvHj3Bjgpuu20Mu2wMmLQMVp/jSoWIWVmKVaOg6qwcjaIItajkOyz53RyveA8RAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+          &lt;source
+              srcset=&quot;/static/5cde045380439b8d4a0477c7c7a36ba8/bc904/spring-camp.webp 250w,
+/static/5cde045380439b8d4a0477c7c7a36ba8/4be29/spring-camp.webp 500w,
+/static/5cde045380439b8d4a0477c7c7a36ba8/03f31/spring-camp.webp 1000w,
+/static/5cde045380439b8d4a0477c7c7a36ba8/ba98e/spring-camp.webp 1058w&quot;
+              sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
+              type=&quot;image/webp&quot;
+            /&gt;
+          &lt;source
+            srcset=&quot;/static/5cde045380439b8d4a0477c7c7a36ba8/43fa5/spring-camp.png 250w,
+/static/5cde045380439b8d4a0477c7c7a36ba8/c6e3d/spring-camp.png 500w,
+/static/5cde045380439b8d4a0477c7c7a36ba8/da8b6/spring-camp.png 1000w,
+/static/5cde045380439b8d4a0477c7c7a36ba8/9ed60/spring-camp.png 1058w&quot;
+            sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
+            type=&quot;image/png&quot;
+          /&gt;
+          &lt;img
+            class=&quot;gatsby-resp-image-image&quot;
+            src=&quot;/static/5cde045380439b8d4a0477c7c7a36ba8/da8b6/spring-camp.png&quot;
+            alt=&quot;Spring Camp 2025 참여&quot;
+            title=&quot;Spring Camp 2025에 카카오뱅크 채용 홍보와 지원을 위해 참여했다!&quot;
+            loading=&quot;lazy&quot;
+            decoding=&quot;async&quot;
+            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+          /&gt;
+        &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;Spring Camp 2025에 카카오뱅크 채용 홍보와 지원을 위해 참여했다!&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;카카오 공동체 안에서의 교류 행사에도 참석했다.
+&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 956px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/d831d08fec9abd6c49c7ca32c4be3af9/04410/devconnect.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 48.400000000000006%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsTAAALEwEAmpwYAAACsklEQVR42m2SyU8TARjFG/XqgUSjHIQAtVLoMtCNLlAKKXRDCtJCwy6bgtS2WEiqMEIsWBaNUSSiFRKDCAclhBiCiQQyxIk7hngExYPB/0DamScty4H4Xd7p/fK+vMex2WxHOTunLLA6aro7v5cH/CuWDh9d1VJNF7ta6BK7ha6y6+h8o5QmCC5dWW2jG531dF2Hc6W207tW0e4si/hJkjwSUY6WJI9FtLi719M8HkTj2GgoRa0ELzEeonQCYrEQ2gwRNCoJjFYlfMEHIF/NwDcSCHfe68XI3Kw74p+eno4G45CLi1Gg8/G4e+DjZ9zf/PVXrs9h+Lx4hicUMXFcHqNV8RiNgs/UXm1i/GM9jD84xLj6XNtNLisaW+2uiH//0wNg++SMZ/jrGia2tkJqswnchDiICBFSUpOhlKVCkpoAR7kRXb0OlFVroDMlhSXaUxBnnHDvAjm7wMU94MvlZc+HjR/49nM9ZC0sgECQDLVaDrkiDedNGhTmKSFRxYLIjIFUdRKy9JiwLSsWdbncw0BEgZPvPnkW1jfx5vefkKm0DAnxZyAmhEjm85CnJWDVy0BIT0NOHEdt/llcyUkIt2Ynokkvdv/35btvKU//3Dx8Y2MheVYmDPps6LIzIZOlocKet5NQDoshA33t9bheU4hGkzx8o7kaA13e3VIOgHstNzTXua+1NuBW26VtvU7DFhUaWZMhl5VK09gii5Y16NJYR5GeHb5NsoEuL9vvc4cm7nRj1Ffv2m35EPBypc3j73Di4WBPqMCcB4VCAo1agSRuIvTZBAw6IWodZkw9GsDToW4svngS3liZx9rrqWhC7M9mfz+Bm97STnfz6mCXd+liRQklEPApoZBPiUQplFohpFTSc9QFs5YaItuo4GAP9X72+dLqwsyXhaln9igQiA77H5r9Tp0XqzVjAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+          &lt;source
+              srcset=&quot;/static/d831d08fec9abd6c49c7ca32c4be3af9/bc904/devconnect.webp 250w,
+/static/d831d08fec9abd6c49c7ca32c4be3af9/4be29/devconnect.webp 500w,
+/static/d831d08fec9abd6c49c7ca32c4be3af9/98c77/devconnect.webp 956w&quot;
+              sizes=&quot;(max-width: 956px) 100vw, 956px&quot;
+              type=&quot;image/webp&quot;
+            /&gt;
+          &lt;source
+            srcset=&quot;/static/d831d08fec9abd6c49c7ca32c4be3af9/43fa5/devconnect.png 250w,
+/static/d831d08fec9abd6c49c7ca32c4be3af9/c6e3d/devconnect.png 500w,
+/static/d831d08fec9abd6c49c7ca32c4be3af9/04410/devconnect.png 956w&quot;
+            sizes=&quot;(max-width: 956px) 100vw, 956px&quot;
+            type=&quot;image/png&quot;
+          /&gt;
+          &lt;img
+            class=&quot;gatsby-resp-image-image&quot;
+            src=&quot;/static/d831d08fec9abd6c49c7ca32c4be3af9/04410/devconnect.png&quot;
+            alt=&quot;카카오 공동체 밋업&quot;
+            title=&quot;카카오 공동체 밋업&quot;
+            loading=&quot;lazy&quot;
+            decoding=&quot;async&quot;
+            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+          /&gt;
+        &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;카카오 공동체 밋업&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;코드러너 장소 견학을 위해 수원 컨벤션 센터에도 방문했다.
+&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1000px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/2a21ce003ee8c559e1e9233c2ae81ed5/48cc5/suwon-expo.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 42.4%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAAAsTAAALEwEAmpwYAAACKElEQVR42mXRW0/TABgGYBL9HQYSDBKBDRdmYGzN2KYrhY0dunWdYyuMDnegtMO6so1y2iEeliCZMQaJiTdeGG/0zsQLE/6GJv0DxPRGtzSvA7NwwXf75nvyfvkGCIK4OdCbdJJeT0Xmf9M+zy/SQ2gJNqjxXERLxigtv85p2TSjcbEFTdzgNSG/pu3tbWuNuvqzWiroLE2uXRg0Td8YUFX1EuTYsHxy3MDH98fd0zcvUSosYyubgMAt4bkqoFUrQs5GcFjZxEm7hrMfX/H92+fOl0/vwCeC0oWhqr1yfXDnqfDk7fEztFu1v/Vq0eBifmPR6zK8cw7DabMa09ZJ455pzJiymA23026spOJGZjX2p7G7hVetmvgfVK/AVlOVK3IBxY1MN0aHYLfZ4XG5MTpyF7ZZB+yEA7MOAkODg6AeuDAxPg7LpLlzuFvCh9O2dA1svziQdxUR1ZLYzfHp3pIHYR8Fi8kESRSglLZQlARYzGOIBijMzNwH6XZ2Xh810T5qXgczq5y8kmCRjEe6bDgAJhRAeJHCneHbmDSbMTExhtHREQwP3cKCdw5W6xQI23Qny3MQcvwV2P8yRZFylA5iyT/fTSYiSKUegWVpMEwIfp8X5IL7IkM0OI/lZBgRxo94PNRh40E8JF2X4KXVb5jLpTc3CnzvvMfn24qk7+8peqUs6Qf7il4ti3qtrugME9Bn7TZdkjK6ouT1SlU6r6oSyjtSod/wH7rzGTcuomRIAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+          &lt;source
+              srcset=&quot;/static/2a21ce003ee8c559e1e9233c2ae81ed5/bc904/suwon-expo.webp 250w,
+/static/2a21ce003ee8c559e1e9233c2ae81ed5/4be29/suwon-expo.webp 500w,
+/static/2a21ce003ee8c559e1e9233c2ae81ed5/03f31/suwon-expo.webp 1000w,
+/static/2a21ce003ee8c559e1e9233c2ae81ed5/88ac4/suwon-expo.webp 1005w&quot;
+              sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
+              type=&quot;image/webp&quot;
+            /&gt;
+          &lt;source
+            srcset=&quot;/static/2a21ce003ee8c559e1e9233c2ae81ed5/43fa5/suwon-expo.png 250w,
+/static/2a21ce003ee8c559e1e9233c2ae81ed5/c6e3d/suwon-expo.png 500w,
+/static/2a21ce003ee8c559e1e9233c2ae81ed5/da8b6/suwon-expo.png 1000w,
+/static/2a21ce003ee8c559e1e9233c2ae81ed5/48cc5/suwon-expo.png 1005w&quot;
+            sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
+            type=&quot;image/png&quot;
+          /&gt;
+          &lt;img
+            class=&quot;gatsby-resp-image-image&quot;
+            src=&quot;/static/2a21ce003ee8c559e1e9233c2ae81ed5/da8b6/suwon-expo.png&quot;
+            alt=&quot;수원 컨벤션 센터 방문&quot;
+            title=&quot;세상 거대한 수원 컨벤션 센터&quot;
+            loading=&quot;lazy&quot;
+            decoding=&quot;async&quot;
+            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+          /&gt;
+        &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;세상 거대한 수원 컨벤션 센터&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;카카오뱅크 내부 인턴들끼리 네트워킹 활동, 일명 어시의 숲도 있었다.
+&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 877px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/d88f737137d4e26ab5cc26f4b3262534/4bed3/assis.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 59.599999999999994%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAAAsTAAALEwEAmpwYAAAC+UlEQVR42nXT60uTcRQH8JH1JogsKk0q03Li1FLpAlIZvfBlN1kXyRgZYZhpmF0ofaxMrKXOx7VpFzOl+TT1mc5NN13Pcu7RXXUzL1O0SCMq6g8QfvDNNrthnTfn3YdzvocjEMyXWq0O8ndr/9mr7WbDMp2rJbTFzMZYR9nkk2fYjcJtbMyOvWzCnlQ2OCKWXStMYNcLk1pCohINIVsTMgWBWiL4WZTZvPRHv931unqfyQeR8z2J48eRZRpCOiVFcFgkRNEipOzaiRUborE6PAbBG6NJcHgcVobH0gtM0C9QkJLiB8MOHK6KyixA4TNm7nJjGynW8iTjQR0Ji99N7p8/TbKPHSSC5WtI6NY4si4ybi5kkxARW0Sy/4KrIuPpQ/tTcDM3m5TIKnHpUSMkJTW4WFELPduAO9ezEBGbhBPSOuwqUpLEHApCSX5gQrH4N0hRlB8sUDbRGTnXID6SRkrLSpB/7QpulVdApdXAWl+OZvldSB/WQPlCgXv1T0mh5hVymzk/KF64w18ZPuZ9dN3gLNKKleTchXzQ0jKwrAac4xX6zCq0tWvQ1NIKY/tj2EwaMuEawBBnpP88bGBjKgAebeDodEUnJEVyonpWj9GhXlgdOui6lNAZGJg5DlaTHhZLL0a8Q+TT7DvoO7T/AgMrZ5XK6YLSGpSVKwivU6N/2A6Ob4aTN2Jy7A0cXgcUFgtGvSp4PS7y7ctHzE77/CCAxRlShbfpispqSCurSU93N3TufnwYZ8F6HOA9nXC7myGzuOYxHpO+EWIwmZCZWxDIUKxeDD5/UldVVvkQOTfuzFn5ftI54SQzo01E77QQ3vWEDDsNxNbbMQ91kDaDce6WTI7U9ExZAPzHlW8WFVdnZeciOy+PdGrVaJ3w4OusFp/fGjHjewm3/TksvTVo19Wjo8dEHF4P9By3OMOfbyPanizZHJOkPZ5xSuWyW5haWx8zPaxgvHY5M2hjmJkpOzM1NsjY+NfM+LBbNTbi1brsAxJ/hhTlf73vaeTPzMpIKvIAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+          &lt;source
+              srcset=&quot;/static/d88f737137d4e26ab5cc26f4b3262534/bc904/assis.webp 250w,
+/static/d88f737137d4e26ab5cc26f4b3262534/4be29/assis.webp 500w,
+/static/d88f737137d4e26ab5cc26f4b3262534/d1707/assis.webp 877w&quot;
+              sizes=&quot;(max-width: 877px) 100vw, 877px&quot;
+              type=&quot;image/webp&quot;
+            /&gt;
+          &lt;source
+            srcset=&quot;/static/d88f737137d4e26ab5cc26f4b3262534/43fa5/assis.png 250w,
+/static/d88f737137d4e26ab5cc26f4b3262534/c6e3d/assis.png 500w,
+/static/d88f737137d4e26ab5cc26f4b3262534/4bed3/assis.png 877w&quot;
+            sizes=&quot;(max-width: 877px) 100vw, 877px&quot;
+            type=&quot;image/png&quot;
+          /&gt;
+          &lt;img
+            class=&quot;gatsby-resp-image-image&quot;
+            src=&quot;/static/d88f737137d4e26ab5cc26f4b3262534/4bed3/assis.png&quot;
+            alt=&quot;인턴 네트워킹 활동&quot;
+            title=&quot;신사업 개발을 위해 어시들끼리 브레인스토밍을 하기도 했다&quot;
+            loading=&quot;lazy&quot;
+            decoding=&quot;async&quot;
+            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+          /&gt;
+        &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;신사업 개발을 위해 어시들끼리 브레인스토밍을 하기도 했다&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
+&lt;h3&gt;👨‍💻 코드러너 행사 진행을 위한 개발&lt;/h3&gt;
+&lt;h4&gt;&lt;strong&gt;코드러너 소개&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 800px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/c2b460e7e6031b191c5951a8fdd83051/7842b/kode-runner.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 48.400000000000006%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAIAAAA7N+mxAAAACXBIWXMAAAsTAAALEwEAmpwYAAACCElEQVR42iWPWZPSUBCFs9wsZN9DSAJJCCQQIAlhYIZ1gMjgIDpKSU1Zo5b6Zlk++CP83d6UXeep+3zdpxEcB1AoiiMIQnOq7BWCFbOSVeMNipVxnMBQaCBxQAFAMbzKcionGqLmmHaI/IehCfK8ZMUPP5P993ZvEQ7WTmdG0jyG4gSgCYIGOEkxEi/VJdVSDcdpdiq4ogkSjhXdjdP1qNjms0M2fegOlyyvwj5BUFAAkAwriJIuK7pmNFpeiAAIA4BhVWxRNoOo6CazfraMhvMgmtCMgGGAJCmCJKGN5YSK1ExF0XWjAS9XhaIoNGEYRgKcp0FgKk1DInEMQzE4AVW4qggYgKJZhgU1pm4ZSK3GMAzHcUKtxvK8yLCc77Ymo3yUDDW9Iak2lKw7mm7LsqkattVoCaLWCuIsTREv7Pvd3PX62bS8vX9y23mU7Wx/kIzX09Xr3uCmWJxm+0/jxbti9bR+/Hp9+bXcfRwv3k9WF0TW6qYbut1Jsfng+j0nyKJ8p9bD++NLMT8m43m+PJdvvxzPz8Vsm90sytM1m97aTnv16hkRZENUDD9K83mpGK1gWHrxRG/4bjSJ0rnt9dVGPD9cprtLM7rzdSmwDbjxbvMIIyO61YTPIijq+P26E3ZGcMk5vdnMtrsff/62uznLMtdvvwfF1vWSdJCnUVS++bzcnvaHyz91AkeMSsGDRQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+          &lt;source
+              srcset=&quot;/static/c2b460e7e6031b191c5951a8fdd83051/bc904/kode-runner.webp 250w,
+/static/c2b460e7e6031b191c5951a8fdd83051/4be29/kode-runner.webp 500w,
+/static/c2b460e7e6031b191c5951a8fdd83051/47a22/kode-runner.webp 800w&quot;
+              sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+              type=&quot;image/webp&quot;
+            /&gt;
+          &lt;source
+            srcset=&quot;/static/c2b460e7e6031b191c5951a8fdd83051/43fa5/kode-runner.png 250w,
+/static/c2b460e7e6031b191c5951a8fdd83051/c6e3d/kode-runner.png 500w,
+/static/c2b460e7e6031b191c5951a8fdd83051/7842b/kode-runner.png 800w&quot;
+            sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+            type=&quot;image/png&quot;
+          /&gt;
+          &lt;img
+            class=&quot;gatsby-resp-image-image&quot;
+            src=&quot;/static/c2b460e7e6031b191c5951a8fdd83051/7842b/kode-runner.png&quot;
+            alt=&quot;코드러너 2024 현장&quot;
+            title=&quot;2024년 코드러너 현장 사진&quot;
+            loading=&quot;lazy&quot;
+            decoding=&quot;async&quot;
+            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+          /&gt;
+        &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;2024년 코드러너 현장 사진&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://tech.kakaobank.com/posts/2410-koderunner-2024/&quot;&gt;🟨 코드러너 소개글&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;카카오뱅크에서는 사내 기술 컨퍼런스인 코드러너를 매년 개최한다. 어떻게 보면 우리 팀의 1년 중 가장 큰 과제이기도 한데, 행사 진행을 위해 나는 개발 업무를 담당했다.&lt;/p&gt;
+&lt;p&gt;작년 코드러너에서는 운영진이 QR 리더기를 통해 참석자들의 출석을 체크했는데, 이번에는 참가자들에게 핸드북 링크를 제공하여 더 풍부한 기능을 추가하는 것이 목표였다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt; 컨퍼런스 최초 출석 체크
+&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt; 세션&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;부스&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;토론 출석 체크&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; 일정 조건 만족 시 럭키드로우 응모권 지급
+&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt; 단체게임 베팅&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; 베팅 성공 시 럭키드로우 응모권 지급&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;참고로 코드러너에서는 기술조직 구성원들이 모두 참여하는 단체 게임이 매년 있다. 예선을 거친 뒤 현장에서 결선을 치르는데, 지금까지는 돈 개수 세기, 타자 빨리치기 같은 게임들이 있었다.&lt;/p&gt;
+&lt;p&gt;코드러너를 진행 보조를 위해 인턴 마지막 2개월 동안 총 6개의 프로그램을 개발했다&lt;/p&gt;
+&lt;h4&gt;1. 코드러너 메인서버 개발&lt;/h4&gt;
+&lt;p&gt;요구사항에 따른 백엔드 개발부터 시작했다. &lt;code class=&quot;language-text&quot;&gt;FastAPI + PostgreSQL + Docker Container&lt;/code&gt; 스택으로 구성했고, 다른 팀과 협의한 AES-256 대칭키 암호화를 통해 사용자 ID를 안전하게 관리했다.&lt;/p&gt;
+&lt;p&gt;RESTful API 설계 원칙에 따라 출석 체크, 베팅, 럭키드로우 응모권 관리 엔드포인트를 구현했다. FastAPI로 제대로 개발해보는 건 처음이어서 Pydantic 모델링과 의존성 주입 패턴을 익히는 데 시간이 걸렸다.&lt;/p&gt;
+&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1000px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/0522b845fa27a56be3a999b16919b375/610eb/api-docs.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 60%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAAAsTAAALEwEAmpwYAAABi0lEQVR42pWSW0/bQBCF/f//DiqtiqBIlXhD9KEKpQmJ7fXe15e9+IrK6SQI3gjh4dNI1uzxnDmTKW2xyxmEUGCMMH+QJoN/T89YluXTZF2XYGwD52q0bQfvPUIIVAPGcfy8oG4cpLP0eELse6Q3EqZ5wrzMVD9moJ/va/ZDr/C1vEOlFda8xKOssFMchVXgrYXoHFSooVN7FEk9YUjILu1vfGG3YFLigeUH9sI7LUhUHkSlr2Ho0TFUbF4EfxYDLv62YMJgzTTWpUJpOpSavtkOxo9wcYYN01G0H2hlI7Kb/BlX9yMqYbEpLR5LR/YDdEONfjng9oQnqu9juoUEaYfXnOPbdotSSGy4oKkcREM76TxMTCejQiTLA1muGnzfkE26w02lUGgKoYuoe5owDiejQ484kOUru8I5uztMuMq3eChz5BQIbx10pB0mfxKKesPQI7tQ9zgrfqEQHGvJwGqNipLl+3Oh5D46l7ezeU35lo+42XoIslqoGpyStZRY2y9o0nwyLk5Iw4T/GASMjtDJ/4MAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+          &lt;source
+              srcset=&quot;/static/0522b845fa27a56be3a999b16919b375/bc904/api-docs.webp 250w,
+/static/0522b845fa27a56be3a999b16919b375/4be29/api-docs.webp 500w,
+/static/0522b845fa27a56be3a999b16919b375/03f31/api-docs.webp 1000w,
+/static/0522b845fa27a56be3a999b16919b375/96fbe/api-docs.webp 1201w&quot;
+              sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
+              type=&quot;image/webp&quot;
+            /&gt;
+          &lt;source
+            srcset=&quot;/static/0522b845fa27a56be3a999b16919b375/43fa5/api-docs.png 250w,
+/static/0522b845fa27a56be3a999b16919b375/c6e3d/api-docs.png 500w,
+/static/0522b845fa27a56be3a999b16919b375/da8b6/api-docs.png 1000w,
+/static/0522b845fa27a56be3a999b16919b375/610eb/api-docs.png 1201w&quot;
+            sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
+            type=&quot;image/png&quot;
+          /&gt;
+          &lt;img
+            class=&quot;gatsby-resp-image-image&quot;
+            src=&quot;/static/0522b845fa27a56be3a999b16919b375/da8b6/api-docs.png&quot;
+            alt=&quot;API 명세서&quot;
+            title=&quot;API 명세서, 시간이 없어서 집에서 개발을 하면서 명세를 만들었다 ㅋㅋ&quot;
+            loading=&quot;lazy&quot;
+            decoding=&quot;async&quot;
+            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+          /&gt;
+        &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;API 명세서, 시간이 없어서 집에서 개발을 하면서 명세를 만들었다 ㅋㅋ&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
+&lt;h4&gt;2. 핸드북 (참여자 클라이언트 웹)&lt;/h4&gt;
+&lt;p&gt;핸드북은 코드러너 컨퍼런스 정보 제공과 베팅/출석 기능을 제공하는 참가자 전용 웹앱이다.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://stackflow.so/&quot;&gt;Stackflow&lt;/a&gt; 라이브러리로 네이티브 앱 같은 자연스러운 페이지 전환을 구현했고, Intersection Observer API를 활용해 스크롤 기반 패럴럭스 효과와 요소별 지연 애니메이션을 적용했다.&lt;/p&gt;
+&lt;p&gt;특히 동시 접속자가 몰릴 상황을 대비해 TanStack Query의 staleTime, cacheTime 설정으로 서버 요청을 최소화하고, 데이터 prefetching과 background refetch 전략을 활용했다.&lt;/p&gt;
+&lt;h4&gt;3. 럭키드로우&lt;/h4&gt;
+&lt;p&gt;경품 정보(이름, 사진, 당첨자 수)를 입력하면 Rolling 애니메이션을 통해 숫자를 추첨하는 럭키드로우 머신을 구현했다.&lt;/p&gt;
+&lt;p&gt;카카오뱅크 디자인 애셋을 활용해 SVG 형태로 럭키드로우 머신을 웹에 구현했다. 자연스러운 Rolling 애니메이션 구현이 까다로웠는데, CSS3 transform과 GSAP 라이브러리를 조합해 부드러운 추첨 효과를 만들 수 있었다.&lt;/p&gt;
+&lt;h4&gt;4. 단체게임 개발&lt;/h4&gt;
+&lt;p&gt;단체 게임 컨셉을 정하는 데 많은 논의가 있었는데, 결국 &lt;code class=&quot;language-text&quot;&gt;김카뱅의 환전소&lt;/code&gt;라는 보드게임 &apos;카지노&apos; 룰 기반 게임으로 기획했다.&lt;/p&gt;
+&lt;p&gt;참가자들이 실물 주사위를 굴린 결과를 Admin 화면에 반영하면, 관객들이 Display 화면에서 경기 현황을 실시간으로 확인할 수 있도록 했다.&lt;/p&gt;
+&lt;p&gt;WebSocket 기반 실시간 양방향 통신으로 Supervisor Admin과 Display 화면 간 상태를 동기화했다. 고빈도 데이터 전송을 위한 debouncing과 throttling을 적용하고, 불필요한 리렌더링을 방지하기 위해 노력했다.&lt;/p&gt;
+&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 480px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/f329c158eeb76ed097ce1e8b5732d5a4/42669/group-game.webp&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 177.6%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/webp;base64,UklGRgoBAABXRUJQVlA4IP4AAACwBgCdASoUACQAPtFep0+oJKMiJWsxABoJZQDInAgOXgrsxEMwPpGrX3ASxLLspikV/nL97ArL5Yd4ndrwAAD90gQMLL+a9qcCxDL4C3WtEZF/9RzjOpKsy6d9RRoG5bLGy+/2MJdqXZlg0Ek8ZngRig+WmAlCMcS7Oi/31/TWEjtkW2QUJwOYydDfcbWGjcwaHEZPKG/hE6xAGANvB0iX8rNxjZ0/KJ/3U3vF6V14T0l3CAqg5aWBBVr0KxPXUt5O60QhBPr8NUFdNJqYHqNkIZ3RbMiVL24eHSyCLJhJFfSJsJYALr/r3a3G1tGEt7vqGoKmJjWm5VW/k9AAAA==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+          &lt;source
+              srcset=&quot;/static/f329c158eeb76ed097ce1e8b5732d5a4/bc904/group-game.webp 250w,
+/static/f329c158eeb76ed097ce1e8b5732d5a4/42669/group-game.webp 480w&quot;
+              sizes=&quot;(max-width: 480px) 100vw, 480px&quot;
+              type=&quot;image/webp&quot;
+            /&gt;
+          &lt;source
+            srcset=&quot;/static/f329c158eeb76ed097ce1e8b5732d5a4/bc904/group-game.webp 250w,
+/static/f329c158eeb76ed097ce1e8b5732d5a4/42669/group-game.webp 480w&quot;
+            sizes=&quot;(max-width: 480px) 100vw, 480px&quot;
+            type=&quot;image/webp&quot;
+          /&gt;
+          &lt;img
+            class=&quot;gatsby-resp-image-image&quot;
+            src=&quot;/static/f329c158eeb76ed097ce1e8b5732d5a4/42669/group-game.webp&quot;
+            alt=&quot;코드러너 단체게임 시연&quot;
+            title=&quot;코드러너 단체게임 시연 화면&quot;
+            loading=&quot;lazy&quot;
+            decoding=&quot;async&quot;
+            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+          /&gt;
+        &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;코드러너 단체게임 시연 화면&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
+&lt;h4&gt;5. 메인 디스플레이 화면&lt;/h4&gt;
+&lt;p&gt;세션장에서 쉬는 시간에 트랙별 세션 장소가 다르다 보니 시간표 가이드가 필요했다.&lt;/p&gt;
+&lt;p&gt;Three.js를 활용한 카메라 애니메이션을 구현했다. Star 컴포넌트들을 배치하고 트랙별 컬러로 오로라 느낌을 주면서, 카메라 시점을 바꿔가며 전환 효과를 만들었다.&lt;/p&gt;
+&lt;p&gt;별도 Admin 패널을 통한 실시간 메시지 브로드캐스팅 기능도 WebSocket을 활용해 구현했다.&lt;/p&gt;
+&lt;h4&gt;6. 운영진 QR 스캔 전용 웹앱&lt;/h4&gt;
+&lt;p&gt;운영진이 사용자의 핸드북 웹 애플리케이션 QR코드를 스캔하면 코드러너 메인 서버와 API 연동을 통해 출석 체크가 되도록 했다.&lt;/p&gt;
+&lt;p&gt;npm 생태계의 여러 QR 스캔 라이브러리들을 실제 테스트해보고 성능, 호환성, 사용성을 기준으로 최적의 라이브러리를 선택했다. 가장 마지막에 개발한 프로젝트라 시간이 촉박했지만, 핵심 기능에 집중해 안정적인 QR 스캔 환경을 구축할 수 있었다.&lt;/p&gt;
+&lt;h3&gt;인턴을 마무리하며..&lt;/h3&gt;
+&lt;p&gt;팀 특성상 기술 조직에 있는 크루들과 이야기할 기회가 많아서, 현업 개발자들의 시각에서 내가 부족한 부분과 앞으로 필요한 역량에 대한 구체적인 조언을 들을 수 있었다.&lt;/p&gt;
+&lt;p&gt;카뱅같은 기술 조직에서 &lt;strong&gt;AI 활용 전략&lt;/strong&gt;에 대해 어떤 고민을 하고 있는지 엿볼 수 있었다.&lt;/p&gt;
+&lt;p&gt;단순히 코드 생성을 위한 도구가 아니라, 문제 해결의 사고 과정을 확장하고 학습 효율을 높이는 방향으로 AI를 활용하는 방법에 대해 많은 인사이트를 얻었다. 또한 &lt;strong&gt;기술 트렌드와 학습 로드맵&lt;/strong&gt;에 대해서도 실무진들의 경험담을 통해 어떤 기술을 언제, 어떻게 학습해야 효과적인지에 대한 현실적인 조언을 받을 수 있었다.&lt;/p&gt;
+&lt;p&gt;기술조직의 채용 과정을 옆에서 지켜보면서는... 개발자로서 어떤 역량을 어필해야 하고, 반대로 어떤 부분들이 감점 요소가 될 수 있는지에 대한 실질적인 인사이트도 얻었다.ㅋㅋㅋ&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;6개월의 인턴십을 통해 얻은 가장 큰 수확은 &apos;개발자로서의 시야 확장&apos;이었다.&lt;/strong&gt; 단순히 코드를 작성하는 것을 넘어서, 사용자 경험, 시스템 아키텍처, 팀 협업, 기술 문서화, 커뮤니티 기여 등 개발자가 갖춰야 할 다양한 역량들을 실무 환경에서 직접 경험할 수 있었다는 것이 정말 값진 경험이었다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[나의 IT 스타트업 인턴쉽 회고]]></title><description><![CDATA["…]]></description><link>https://rmdnps10.github.io/코딩 교육 스타트업 Frontend Contents Producer 회고/</link><guid isPermaLink="false">https://rmdnps10.github.io/코딩 교육 스타트업 Frontend Contents Producer 회고/</guid><pubDate>Fri, 14 Mar 2025 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+&lt;p&gt;&quot;6개월의 카카오뱅크 인턴쉽&quot;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1&gt;배경&lt;/h1&gt;
+&lt;p&gt;군대에서 전역을 한 후 나는 개발에 입문하게 되었고 당시에 멋사라는 동아리에서 프론트 개발에 대해서 공부를 하게 되면서 자연스레 프론트 개발에 관심이 생기게 되었다.&lt;/p&gt;
+&lt;h4&gt;사용자를 배출한 첫 프로젝트&lt;/h4&gt;
+&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1000px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/0289dc919fe2815c8d821f2f61c7e11f/60f98/sharemind.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 66.8%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAAsTAAALEwEAmpwYAAACz0lEQVR42k2SyW4UZxSFe0cEUhYRIguyi8SKfRTlBXgMXiNhEYk8QbLLniEDAZMEx2Qw8QR2aHe3DbHVjXt0uV1VXXPXXNX9cf+ysSnp6L/Vdfv855x7a3mSkKcJszynzDOKLJU6kzqvflN1kaYVqr40w3N9+oM+mq5jRyF5lhEmMbGgVkiTghe4BL5LGAT4rsvU8/Bsm0Dq9wkLRZhkBGEk/VOsiY1tOxWiaXRKKKqGz3fovNxhd7dFc7vObrPJ1ovnNOp19KMj5kVOFseV8vGRwXhscKxPME0bQ071nsTpOWHS0tjabPDTj/d5vLDA40cPT7DwiEGvC2VBLpaUwonlCpEjRBbmxGUi0A2bKDy1rBrzUizlCaVYU1nOCpVpepbrCVlc1cfHJoYxwbIcsSx25QLXnYpCIazIBLP0hOxdpmk4JT399j4ygaZpjA4PGQ1H+L7PfD5HPaWIOCP0PBmI71GKAlfqla0tjk0DpOmcLKq+WzLl7khjcDQW4rFcINO2PVEvhGkcodB606EpqxAGvqxAJDmZMmULbWLgTv1KWSwrkkoMkeYwbQ5J9nVCK8SfxgRBTCr51sQXCjP5Q+Q65GFA7NowK+m122xvbhKLYlk25pLRXAgzN8LraJh7fVI/RBlWrkulsOc59H2HUeBxIGqetRrUDzr0hbQ16HF/aZGua9GXPe16FofiIMoKdNlDPQwxA8la1kUR2uK09un6nyhcWVnk8toSl1f/4OMNeV9/WtUfLP7MJ6tLXNv4i6ty3mhsSCQ5RTEjKAoGQuJIzur5ftSj9uGz37m0/Bs3X23z9c5LvhR8Jbj1qlGdtzuvuf5imYvSc+GfX/nsvxX8MMFUu+h4mDIMzbAgKfh22KX20b9PUKTfHOzzoLPHnfYe9zr7/HDQ5m77f36RW7+or1WXXhLCzxvrhP0J9t87mMu72EMDXchJSr4bdnkLjbew/vDS8DIAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+          &lt;source
+              srcset=&quot;/static/0289dc919fe2815c8d821f2f61c7e11f/bc904/sharemind.webp 250w,
+/static/0289dc919fe2815c8d821f2f61c7e11f/4be29/sharemind.webp 500w,
+/static/0289dc919fe2815c8d821f2f61c7e11f/03f31/sharemind.webp 1000w,
+/static/0289dc919fe2815c8d821f2f61c7e11f/fab20/sharemind.webp 1122w&quot;
+              sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
+              type=&quot;image/webp&quot;
+            /&gt;
+          &lt;source
+            srcset=&quot;/static/0289dc919fe2815c8d821f2f61c7e11f/43fa5/sharemind.png 250w,
+/static/0289dc919fe2815c8d821f2f61c7e11f/c6e3d/sharemind.png 500w,
+/static/0289dc919fe2815c8d821f2f61c7e11f/da8b6/sharemind.png 1000w,
+/static/0289dc919fe2815c8d821f2f61c7e11f/60f98/sharemind.png 1122w&quot;
+            sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
+            type=&quot;image/png&quot;
+          /&gt;
+          &lt;img
+            class=&quot;gatsby-resp-image-image&quot;
+            src=&quot;/static/0289dc919fe2815c8d821f2f61c7e11f/da8b6/sharemind.png&quot;
+            alt=&quot;셰어마인드&quot;
+            title=&quot;경험 공유 상담 플랫폼 - 셰어마인드&quot;
+            loading=&quot;lazy&quot;
+            decoding=&quot;async&quot;
+            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+          /&gt;
+        &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;경험 공유 상담 플랫폼 - 셰어마인드&lt;/figcaption&gt;
+  &lt;/figure&gt;
+특히 난 운이 좋게도 좋은 사람들을 만나 &lt;code class=&quot;language-text&quot;&gt;셰어마인드&lt;/code&gt; 라는 실사용자가 어느 정도 나오는 프로젝트를 진행하게 되었고, 나의 첫번째 목표인 &apos;사용자가 있는 서비스 만들기&apos; 를 이뤄냈다. 재밌는 경험이었다. 무언가애 완전히 몰입할 수 있던, 정말 좋은 기회였다.&lt;/p&gt;
+&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1000px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/7365f1b214a2f90b1d75b595199e3579/f8056/sharemind2.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 46%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAAAsTAAALEwEAmpwYAAACSElEQVR42j1Ry0tUURy+0a7Uaea+X3PvnXvnccfHBJr0koLCKDCjWggh5CKMRGRGi2Km0BknXzNYKNkmN60iSqQWydDCatF/0qLF7JI07tfvXNHF4RzOd873+nHZrh44XhaWmwEvG2iNymg5IdIuIcIr4Tkq6rC9Dhh+BkaXj5Hhwb/V0oOdmeLYzlw5v7NYnfxTfz61W5st/OLUuAfNSkHSHcimB9lwEZNN8EocouYgKpkhZjntMHvboV/0MVW4i5WlCbxYLODN6zIWKveCWnUMczOjTS6Z6YST6oCg2hB0FyJ91qwkTNeHGk+GAqKeQIwEDDMNRU1ibHQIay8fY+PDW2x92cTGu9WAEdcXJpucbpM7zcbxiIA2inkQUTUT0OIukbqhWFTUICgmjhE+X3mGH41NbDc+4ef3Br59/Rxsb33E5vv1JqcYibC7tphCSyVSBTHJIBGLoibCyFFJD0Uk1UIL4QvlCl7NVzFbLKI2XcLaYjmoTxdRKT1scqrphgNhw2CkbBconumkoFN0JhhTLLSSGEsS4TWsLC/j1sBVKEIcua7zGLl5LejvO4WM7zPCBJJ+jlyaRCiH090nTEMyPERCESlczLVI2Hg+j6fFRxi81Ee1pHC6uztIWAbaO7JNTqYhMDesnwOHrALmTCH3vGKHd/vOLbD3E+OjuH7lMnK5NE72dBImBNyRozh3trfJMVXbyxCBcxh7v0P7sEeehhIRdPB0H9MtLD0Z+Td848ze/cLA3up6fu/2nQu7pi0HQ8P9v/8DkromXicNQiQAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+          &lt;source
+              srcset=&quot;/static/7365f1b214a2f90b1d75b595199e3579/bc904/sharemind2.webp 250w,
+/static/7365f1b214a2f90b1d75b595199e3579/4be29/sharemind2.webp 500w,
+/static/7365f1b214a2f90b1d75b595199e3579/03f31/sharemind2.webp 1000w,
+/static/7365f1b214a2f90b1d75b595199e3579/9579c/sharemind2.webp 1500w,
+/static/7365f1b214a2f90b1d75b595199e3579/b1218/sharemind2.webp 2000w,
+/static/7365f1b214a2f90b1d75b595199e3579/16e48/sharemind2.webp 2716w&quot;
+              sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
+              type=&quot;image/webp&quot;
+            /&gt;
+          &lt;source
+            srcset=&quot;/static/7365f1b214a2f90b1d75b595199e3579/43fa5/sharemind2.png 250w,
+/static/7365f1b214a2f90b1d75b595199e3579/c6e3d/sharemind2.png 500w,
+/static/7365f1b214a2f90b1d75b595199e3579/da8b6/sharemind2.png 1000w,
+/static/7365f1b214a2f90b1d75b595199e3579/2e9ed/sharemind2.png 1500w,
+/static/7365f1b214a2f90b1d75b595199e3579/9fabd/sharemind2.png 2000w,
+/static/7365f1b214a2f90b1d75b595199e3579/f8056/sharemind2.png 2716w&quot;
+            sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
+            type=&quot;image/png&quot;
+          /&gt;
+          &lt;img
+            class=&quot;gatsby-resp-image-image&quot;
+            src=&quot;/static/7365f1b214a2f90b1d75b595199e3579/da8b6/sharemind2.png&quot;
+            alt=&quot;셰어마인드&quot;
+            title=&quot;CEOS 동아리에서 만난 셰어마인드 팀원들.. 다들 잘 지내는지 문득 궁금..&quot;
+            loading=&quot;lazy&quot;
+            decoding=&quot;async&quot;
+            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+          /&gt;
+        &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;CEOS 동아리에서 만난 셰어마인드 팀원들.. 다들 잘 지내는지 문득 궁금..&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
+&lt;h4&gt;현타가 오다&lt;/h4&gt;
+&lt;p&gt;3개월 정도 지난 뒤 서비스가 안정화된 이후, 나는 소강 상태에 빠졌다. 미래에 대한 불안감과 함께 이제 무언가를 새로 시작해야 될 거 같은데 아무것도 하기 싫은 느낌이 나를 사로잡았다.&lt;/p&gt;
+&lt;p&gt;마침 휴학도 했겠다, 이렇게 살면 안되겠다 싶어서 현장 실습에 지원했다. 현재 내 이력으로는 메이저 IT 업계에 인턴 개발자로 취업하는 건 불가능하다고 판단했기 때문이다.&lt;/p&gt;
+&lt;p&gt;결론적으로, 글로벌 IT통신사 회사에 지원하여 최종 면접까지 가긴 했으나, 예상치 못하게 최종 면접이 영어(?)로 이루어져서 (사전에 몰랐음) 당황하긴 했지만 결국엔 준비 부족으로 탈락했다. 사실 당시엔 번아웃에 가까웠고, 뭐라도 해야겠다는 압박감으로 억지로 지원한 터라 제대로 준비조차 하지 못했다.&lt;/p&gt;
+&lt;h4&gt;나를 강제로 되돌아보는 시간&lt;/h4&gt;
+&lt;p&gt;나는 막연히 내가 현장 실습에 붙을 거라 생각하고 휴학을 신청하여 6개월이라는 시간동안을 무언가로 채워야 했다.
+어느새 가벼운 우울감과 불안감이 나를 잠식하고 있었기에, 일단 지금 당장 몰입하기 어려운 개발을 제쳐놓기로 했다.&lt;/p&gt;
+&lt;p&gt;그리고 내가 그전까지 하고 싶었던 것들로 일주일을 채워갔다. 운동, 달리기, 밴드 합주, 야구 시청...
+그때는 하루에 2번씩 헬스장에 갔었다.
+&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1000px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/948a0cf728fa0582db060f364395dd96/d66b2/chill.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 102.4%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAAsTAAALEwEAmpwYAAAFf0lEQVR42hWSaUzbhxnG/22Ug9PGJza43D6ghBvaEUi5bAjBGHPZBAM2lyE2hzEEcwZIIK5pwDRplm4kS2iTiE5T1a5Ru61TtnWZ9qlV1W6qKvVD1WhTNU1D2j5sX37798MrvdIr/fQ87/MI/S19zIz48HvGGHH5WFkM01jhpKG4C0tpJ6/kW2mqaGdtPsSdWzs8PPgJ7zy6x93921y5ss7k1CTB2SDR6B6/ffIJwph7mJkxLwvTARaW5/H7ApQazFRXtFLzIxv25nZWF31c39wgun2d6M42kcgWi0shhkeHcXsGGBsfZ2d3j0/++GeElpouRi097DqGCLaP0FPVQ7npPH3Nbi5YLuAZHmRzI8jmzA9OXMz6vWxfW2N1YQZHZysDA734JycIh8P88oOPEJqK7DRk27k1PM7KOS8brT6Mijout3rZ7Z6grtCGu/MCtzdXiKwssxkK8LPdMOF5P3NeF76xEYLT44RC89zYex2hNr2N89kubjjnKTtlw188xLJ1Cmv+AC36Hsw53dgrehh0DtPXZiPg9WKzmDln9dPWvUq7IyiqneXa1TVu7r2GUKN2UB/rwKEYoPZ4D5YYJy7dEM2pHpwZI/Tq3ThLPOy/GuX+9hwvZqvRp2fjtPfRfWGJ+vo+eh1O5qaGGBxyITjTBxnSTdIRO0LLMTdNz/XSeNxBf9owLq2HZkUbTWkt7ATnuHdthu4aIyPWaroam7GcPcfqpIfguItrGwGmfR6ESNMV3m055H3L77hlfEA0eY+3C+5xcHqfw4r7HBTv82HHIdHAOq9emiaytMLW9CWKCtvpsrkY6J/mZvQq2+EVMbxLCA9bDjia/Zpvur/n755v+arq93xn/xNf1n/MX879hs/bf83Xl//A9ZE5llst3Lg4weyoD0mCEnODnfFRP9HXLrN/e4vIpgj05UyzkbnDqjxCRHaVK3EhIplrzEpChE4GmUkJ4q8YZd3ez7KtA3dVLdbGJoTn46goKWY1NMXK0gwP7u/y6G0xZUVRB6WOqxSZx0jKOkuSNh+pXI8qrQxtTiWG4jYyKy9yuj1CSe8b6Lp2qQ68SbUvwrGsl1Hk15FcZEGuL0FZUIugOj3C0PpjwgdfsXH4LQVNoxSccZDRHuaU3kpC8SBdCx+x9f4/sbz1jPWn/+LOp0fsffg5gqmBBMMZYnMbRJCRY8ZXENKye3AvvsejJ0d8/Bl4F+5gyj/Dmem7CHo78rJ+LBMPcb7+Gf7Hz3h29D+++Nt/sExGEBKzyChvEKeO52QZSAtrEPL0jfjW3uPdp0fcf/wN67efYLb20zIpltRkI+NsP82z9ygLPsB/+AV//cd/+fK775ndvUu5zS06cpJaKirT5JLy0nmE+mYPS9EP+PnTfzOzecDl9ZsElnZ5uTeEkF6DIreW4r41yi/uMvrmr1j+8S+YWtoSRUQw9/nIqzQjy8jjeVUmqeVWBHPHKEOLP2Xj4FM6vesEJlapbu6hsNSCRqGnINlEerkdWVUv2Z2L6CodJKXkklVlJ6fETE5RPQpdLrFaA6kFouX8skZ0aUYqX2pAn5mHpb6DHGMhL6YbSFFoSVHnkllqQ1nciCSrmlRTHbllbeiMteiSjZRVNKFRpxEjUYpgA4LhhSwUMhUlxgJSlVrq6uzk55aRIFWhVumQql5Aq83EVFSFUqEh31RKQYkVhcYg3jNQSjScPBlHnDSZRFkKglqZjDRRjlqtIzZeSrw4MqmcBImauJg4YuXpJCTKkCWpOBUjIT42EU2KiXhJMpL4H/Y0kjVa5Km5KNXpYm3SxBKr1OTpjaiVGmLjEpCIQIlo4fiJGE7EJnEyPol4qZK4OCkxIjAr04BMIuOEeE9IlCBXKkgT35aQlMr/AT82H/HRcmpwAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+          &lt;source
+              srcset=&quot;/static/948a0cf728fa0582db060f364395dd96/bc904/chill.webp 250w,
+/static/948a0cf728fa0582db060f364395dd96/4be29/chill.webp 500w,
+/static/948a0cf728fa0582db060f364395dd96/03f31/chill.webp 1000w,
+/static/948a0cf728fa0582db060f364395dd96/9579c/chill.webp 1500w,
+/static/948a0cf728fa0582db060f364395dd96/d3a1a/chill.webp 1721w&quot;
+              sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
+              type=&quot;image/webp&quot;
+            /&gt;
+          &lt;source
+            srcset=&quot;/static/948a0cf728fa0582db060f364395dd96/43fa5/chill.png 250w,
+/static/948a0cf728fa0582db060f364395dd96/c6e3d/chill.png 500w,
+/static/948a0cf728fa0582db060f364395dd96/da8b6/chill.png 1000w,
+/static/948a0cf728fa0582db060f364395dd96/2e9ed/chill.png 1500w,
+/static/948a0cf728fa0582db060f364395dd96/d66b2/chill.png 1721w&quot;
+            sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
+            type=&quot;image/png&quot;
+          /&gt;
+          &lt;img
+            class=&quot;gatsby-resp-image-image&quot;
+            src=&quot;/static/948a0cf728fa0582db060f364395dd96/da8b6/chill.png&quot;
+            alt=&quot;운동하기 야구보기 밴드부하기&quot;
+            title=&quot;운동하기 야구보기 합주하기, &amp;#39;서시&amp;#39; 밴드부원들 보고싶다 ㅠ ㅠ&quot;
+            loading=&quot;lazy&quot;
+            decoding=&quot;async&quot;
+            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+          /&gt;
+        &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;운동하기 야구보기 합주하기, &amp;#39;서시&amp;#39; 밴드부원들 보고싶다 ㅠ ㅠ&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;방구석에서 있을 때보다, 밖에서 생산적인 활동을 하니 서서히 자신감도 생기고, 몸도 좋아졌다.
+이제 슬슬 미래를 향한 날갯짓이 다시 필요한 때가 된 듯 했다.&lt;/p&gt;
+&lt;h4&gt;아 모르겠고 일단 지원해보자&lt;/h4&gt;
+&lt;p&gt;한 코딩 교육 스타트업 인턴 채용 공고가 잡코리아에 올라온 걸 확인했다. 프론트엔드 교육 컨텐츠를 제작하는 업무였다.&lt;/p&gt;
+&lt;p&gt;1년정도 교내 코딩 동아리에서 프론트엔드 교육자로 활동했기에, 나에게 적합한 일이라고 생각이 들었다. 간단한 이력서를 보내고, 면접을 보자는 전화가 왔다.
+면접은 커피챗 형식의 대화와 간단한 과제로 이루어졌다.&lt;/p&gt;
+&lt;p&gt;이전에 최종에서 떨어져본 경험으로 무장하여 자신감 있는 태도로 편하게 이야기를 나눴고, 다음 날 합격 문자가 왔다!&lt;/p&gt;
+&lt;h1&gt;업무 시작&lt;/h1&gt;
+&lt;p&gt;내가 취업한 &lt;code class=&quot;language-text&quot;&gt;코딩밸리&lt;/code&gt; 는 자사 어플을 통해 초심자들을 타겟으로 코딩 교육 컨텐츠를 &lt;code class=&quot;language-text&quot;&gt;모바일 앱, 웹 환경&lt;/code&gt;에서 제공하는 스타트업이었다.
+&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1000px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/ef05e89e810f2679fd1a2fd8a07cf140/f2999/CodingValley.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 61.199999999999996%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAABYlAAAWJQFJUiTwAAADUElEQVR42kWSW0ybBRTHv8SoUaOZCTFzmEiClzGtGQwK7Vp6Xyl0LaVrC5SWD2lLywK4QR2IwkqZwEY3YS4FRsclEjVmxIhkkrEhD0wd4JtZTEg0bDMLmRoztyftz4/twYdf/jk595wjrH+3zMrKEms/LLO2cpUvv5pn4dI3LM7PcenrWS4vzLKwsMjVpSWWr11nfXWNn659y4/r62xsbHD71i1u39zkxs8b3NzcRDDuy0YnfwO7PAt38as8n7GLJ595AXX+XuSyLF7cIZCz52XKD1Xj9HtRqIvwOfS47DZO9MSZSo0zOXmB6ZlpxkdHEMKBIE1H27Ef0OAz7iEv+yU0SjU9sRgD8RhOUzEmRQ6RYB1d77VxbihBw+EIpSYtw2dOMz05weUri6xe/56Ln3+K0C56iIrVHJQ6ew1vsv/1TJp9bmZTSaYnLuA2GzigyKfW68Zn0TPQEqZCXYhOWcCJeDfDsTifJBP0J0dpaT2OUGdUErFbCB/UUWuUYcqT8Y7VQCBD4FTIRai2hrx9uUTe9lNvVhE2awiVaql3Ooi2NtJW5SPe5EPV2ES2ziMV1BcQMEsBFjlhaz763Tn0dnfRIVbSWy4nWl2G6q3dBGoq8UjrV8tl1JRqCPr8dLZGKO9oxxbswX74GIZYI8IhrRK/OhdPqZVC2WsoXsnEYdDQ2dZM8t0g59vDhOwm2kU/DS4XXm0BYomeSoeTRCiMo/F9HGKUVIeHwf5KhBq3j4CrCrezlsefeA5Z1tPk7HyMcIWZ+eEPmBvqZDDaTMRVzfGmI7T5RWy5hZQVSkepqKLY1YTBGWEuqmYmrkEQxRZCjR3Yyv08u2MnmRlPoSjcS29bC31HI5yULnusvh67qgybwkS52iZtI+Kx+hjwRXBFuqkMdTLd5WfkZFD6w6G7mIZ/R5u4g/LDX1H3/YLl7BaWj+9iPH0H0xmJj7YwnPpNsrfQ995A5R1A371KSfI+trF7D7GO3Zd4gKAZg+JRUEuqHX+ESrL3jzzSbR76R/+haEpSMcHZQAneuihFSdBs+0b+RyhOprFOpGm4mCb4RZrSlMT4X5Sl7mFJ/SuRRiclVYz/TcNnD7AemeGPK1Oc6+tHMfgnZmkA3UgarVRsm/8A96Uz4PYLiV4AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+          &lt;source
+              srcset=&quot;/static/ef05e89e810f2679fd1a2fd8a07cf140/bc904/CodingValley.webp 250w,
+/static/ef05e89e810f2679fd1a2fd8a07cf140/4be29/CodingValley.webp 500w,
+/static/ef05e89e810f2679fd1a2fd8a07cf140/03f31/CodingValley.webp 1000w,
+/static/ef05e89e810f2679fd1a2fd8a07cf140/9579c/CodingValley.webp 1500w,
+/static/ef05e89e810f2679fd1a2fd8a07cf140/b1218/CodingValley.webp 2000w,
+/static/ef05e89e810f2679fd1a2fd8a07cf140/a5cbc/CodingValley.webp 2500w&quot;
+              sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
+              type=&quot;image/webp&quot;
+            /&gt;
+          &lt;source
+            srcset=&quot;/static/ef05e89e810f2679fd1a2fd8a07cf140/43fa5/CodingValley.png 250w,
+/static/ef05e89e810f2679fd1a2fd8a07cf140/c6e3d/CodingValley.png 500w,
+/static/ef05e89e810f2679fd1a2fd8a07cf140/da8b6/CodingValley.png 1000w,
+/static/ef05e89e810f2679fd1a2fd8a07cf140/2e9ed/CodingValley.png 1500w,
+/static/ef05e89e810f2679fd1a2fd8a07cf140/9fabd/CodingValley.png 2000w,
+/static/ef05e89e810f2679fd1a2fd8a07cf140/f2999/CodingValley.png 2500w&quot;
+            sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
+            type=&quot;image/png&quot;
+          /&gt;
+          &lt;img
+            class=&quot;gatsby-resp-image-image&quot;
+            src=&quot;/static/ef05e89e810f2679fd1a2fd8a07cf140/da8b6/CodingValley.png&quot;
+            alt=&quot;운동하기 야구보기 밴드부하기&quot;
+            title=&quot;코딩밸리 홈페이지&quot;
+            loading=&quot;lazy&quot;
+            decoding=&quot;async&quot;
+            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+          /&gt;
+        &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;코딩밸리 홈페이지&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;회사에서 프론트엔드 심화 교육 코스를 오픈을 대기중이어서, 해당 코스에 사용될 책의 집필과 실습 코드 제작을 내게 맡기려고 했다.&lt;/p&gt;
+&lt;h4&gt;내가 맡은 일&lt;/h4&gt;
+&lt;p&gt;처음 회사에 와서 맡게 된 업무는 &lt;strong&gt;HTML-CSS 코스북&lt;/strong&gt;을 제작하는 일이었다. 개발적인 엄밀함과 테크니컬 라이팅 스킬이 필요한 업무였다. 사수 분과 함께 책을 집필하며,&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;- 말을 간결하고 핵심만 전달하기 위한 글쓰기에서의 피드백
+- 기술적인 엄밀함을 크게 벗어나지 않으면서 공식 문서에 있는 내용들을 어떻게 쉽게 표현할 수 있는지에 대한 피드백&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;을 거치며 글을 쓸 때 이에 대해서 계속 고민했던 거 같다.&lt;/p&gt;
+&lt;p&gt;특히 기술 문서를 뒤져가며 내가 생각하기에는 확실한 레퍼런스를 들고 와서 사수분께 갑론을박을 벌이기도 했지만..&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&apos;이건 진짜 내가 맞다&apos;&lt;/strong&gt; 라고 생각하고 주장했다가 알고보니 아니었던 적이 한 두 번이 아니었다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;HTML CSS 코스북&lt;/strong&gt; 제작을 시작으로, 통상적인 프론트엔드 공부 순대로 강의 커리큘럼이 하나씩 오픈 예정이었기에 일을 하면서 프론트엔드 전반적인 지식을 리마인드 할 수 있었다.&lt;/p&gt;
+&lt;h4&gt;AI 도움을 받은 코스북 제작&lt;/h4&gt;
+&lt;p&gt;코스북을 제작하는데에 AI 도움을 적극적으로 활용했다. 강의 스크립트를 input으로 받으면 앤트로픽의 클로드 모델을 사용하여 학습 데이터, 가이드 등을 포함한 프롬프트 틀을 설정해서 코스북에 들어갈 내용을 마크다운으로 생성해주는 시스템을 구축했다.&lt;/p&gt;
+&lt;p&gt;한 페이지 당 책의 특정한 규격에 맞춰서 이미지와 글을 배치해야 하는 문제점이 있었는데, 마크다운으로 제작한 텍스트 블록들을 웹 뷰를 통해 Python 코드로 HTML을 제어하여 인쇄 규격에 맞춰서 커스텀으로 편집하여 PDF로 추출하는 방식을 개발했다. 이를 통해 일관된 품질의 교육 자료를 효율적으로 제작할 수 있었다.&lt;/p&gt;
+&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 452px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/27e23d03617aff77151f7f8c993b4717/39613/book.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 66.39999999999999%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAAsTAAALEwEAmpwYAAADGUlEQVR42l2S62/bVBiH81/tC9PEWLkMiQ2JT4hvEyBgEgxWYCCtwCT4UIEEHRV0ZQy0m4S0ElDIfS3Z1mRpl2TrLXGcEOrYzqWL48a52E767MQFpGHp1bF/Puc5z3tsX7e0jRGI0w4t0Y7doh1ewvBH6Kl16tU8aiGNXsqKyqDkkxjb65SMLj9LDa7KTa4Um1ySmswVGmy1uvjMP1PUZi/S+PEa9R8uo5/5HPW1STqZNeS1CPk7vyCl/RRSN8iEvkVdXeBm1WAyVeaLbIVXEjKHI0WejEj8sW3g203cRT87TX16ltrUtAfUT3+GdX8LKRcgGzzPWnxe1AWy0Tn0bICEanBEAI4tFnlhUebFxRLHb8pEq21huJREO3Ea/e2z6Kem0N8/h3byI6zcJpJYnAnM8CB2wat7QWF4zy+AbZ4KSxyNFXkmJvF8vMhEtEhY8YAptNc/8Kz09z5Ff/eT/wG/4X5UAKPzAjj7H/BQqMCEsHw2KvG0qCOiworxj6EA1sawd6Y8S/WND+k8BpwTwLnHDA8GC17bz8X2gYfDBUKKd4ZptLc+Fmb7dvrkORqi/e74DP8Fei0LQ/FR9Mzv3NLaAjC2K3qwowI6ES8RUU1hGL1N9eWTqK9OUhWlvXmG1Esn0JZXKWZ+Y+XXaTLBGXKh89xZ+JKNxevElRYHAnkOirafCG5xSNgd+CnGwnoZn7Uu0bp4HfOqH/PyDcxrfpJff4e6JdGsbqJsJFDzy2hSktKDBOX1FaSHFjMbNb7PN5mXW+IfbPJVPE2urOBzhiP6wyFyVUXd2aGsabijEa47ZLQH5YpCZVtFkivIpQrjy7Edb+y022h/lelbHe95vMY36NvYomS5TPL2MsrfCoPuAC8f2OzuWqysZrmbXsUwTAYi6/Ud+s4IVW8Qjca9TfvOUOS2ANoubs/GauxQV3V6ZgdXZOPctoe4g12MWomWXsLtm15mC0NHvDfFuvJOG6PTw3HGuYvPFppus8WwWGHP6jES945pYY8nCIu+qWJpWbp6jp6hiGxPbLYPbA2GbFojHorR9QRcHgHJeW0h0dI3bQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+          &lt;source
+              srcset=&quot;/static/27e23d03617aff77151f7f8c993b4717/bc904/book.webp 250w,
+/static/27e23d03617aff77151f7f8c993b4717/9e838/book.webp 452w&quot;
+              sizes=&quot;(max-width: 452px) 100vw, 452px&quot;
+              type=&quot;image/webp&quot;
+            /&gt;
+          &lt;source
+            srcset=&quot;/static/27e23d03617aff77151f7f8c993b4717/43fa5/book.png 250w,
+/static/27e23d03617aff77151f7f8c993b4717/39613/book.png 452w&quot;
+            sizes=&quot;(max-width: 452px) 100vw, 452px&quot;
+            type=&quot;image/png&quot;
+          /&gt;
+          &lt;img
+            class=&quot;gatsby-resp-image-image&quot;
+            src=&quot;/static/27e23d03617aff77151f7f8c993b4717/39613/book.png&quot;
+            alt=&quot;HTML CSS 코스북&quot;
+            title=&quot;내가 공동집필로 참여한 3종의 코스북&quot;
+            loading=&quot;lazy&quot;
+            decoding=&quot;async&quot;
+            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+          /&gt;
+        &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;내가 공동집필로 참여한 3종의 코스북&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
+&lt;h4&gt;근무 연장&lt;/h4&gt;
+&lt;p&gt;3개월의 계약이 끝난 뒤, 근무 연장 의사를 물어보셨고 나는 연말에 CES 부스 준비와 학과 컨퍼런스 참석 일정이 있어서
+회사와 파트타임으로 오후 2시부터 6시까지 일하는 것으로 합의했다.&lt;/p&gt;
+&lt;p&gt;회사에서 배려해주신 덕분에 엄청난 워라밸을 챙기면서, 내가 진행중인 프로젝트에 더욱 집중할 수 있었다.&lt;/p&gt;
+&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1000px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/d78295b680be6281ade91a37eb477167/dbced/proj.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 28.4%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAGCAYAAADDl76dAAAACXBIWXMAAAsTAAALEwEAmpwYAAABcElEQVR42mWQS0vjUBiGTy6T2DRiWhPEYlcOuKiKeNmLP0B/gX9GcO0mUhnEtS6GgZnNMF5Q6iVpEnpL1LY/JYvH9NSZzSweOJyP857ne4U+oyNUgRD/o6iKnJ2c+KSDjCAIaLfbBaEkCEJ5NyEMwwm5+Lq3TH1jiZJVwjAMzBkTRVEwTROnWqE8W+a0ecp4PKbf75NlKZ1uShSlvL9l9LpdGRZF0eSzXMx7Lp7r4czOYds2lmWhKSqVukdjZ51arYbf9BkOhyRJwmDQ5fp3h+8/2vx5LGyjWNpOAl+CIBfSpvSFuaqFrutyVVVTqW8u01hbpeJV8M98RsMRvV6P7DXl4bbD5dVPzn9d8xDGREVgHMe0Wq1cGJqB23BZOVjBMA2EIrCrNl59AddxcRYd/G8+49F05SROeH554ubufmomO51SWOZCll9YapqGbhSGmmBrd5uj82P2Dw+wa2WaF02yNJNd/X2cxPG/82eY7PADxxEbXfwtAqQAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+          &lt;source
+              srcset=&quot;/static/d78295b680be6281ade91a37eb477167/bc904/proj.webp 250w,
+/static/d78295b680be6281ade91a37eb477167/4be29/proj.webp 500w,
+/static/d78295b680be6281ade91a37eb477167/03f31/proj.webp 1000w,
+/static/d78295b680be6281ade91a37eb477167/9579c/proj.webp 1500w,
+/static/d78295b680be6281ade91a37eb477167/b1218/proj.webp 2000w,
+/static/d78295b680be6281ade91a37eb477167/3045f/proj.webp 2623w&quot;
+              sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
+              type=&quot;image/webp&quot;
+            /&gt;
+          &lt;source
+            srcset=&quot;/static/d78295b680be6281ade91a37eb477167/43fa5/proj.png 250w,
+/static/d78295b680be6281ade91a37eb477167/c6e3d/proj.png 500w,
+/static/d78295b680be6281ade91a37eb477167/da8b6/proj.png 1000w,
+/static/d78295b680be6281ade91a37eb477167/2e9ed/proj.png 1500w,
+/static/d78295b680be6281ade91a37eb477167/9fabd/proj.png 2000w,
+/static/d78295b680be6281ade91a37eb477167/dbced/proj.png 2623w&quot;
+            sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
+            type=&quot;image/png&quot;
+          /&gt;
+          &lt;img
+            class=&quot;gatsby-resp-image-image&quot;
+            src=&quot;/static/d78295b680be6281ade91a37eb477167/da8b6/proj.png&quot;
+            alt=&quot;운동하기 야구보기 밴드부하기&quot;
+            title=&quot;교통 약자를 위한 버스 어플, 모두버스 | 학과 컨퍼런스 아카이빙 웹사이트 &quot;
+            loading=&quot;lazy&quot;
+            decoding=&quot;async&quot;
+            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+          /&gt;
+        &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;교통 약자를 위한 버스 어플, 모두버스 | 학과 컨퍼런스 아카이빙 웹사이트 &lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;연장 기간 동안에는 내 업무 범위를 비교적 더 확장해서 일할 수 있었다.
+이제는 강의 커리큘럼을 직접 기획하고, 이를 기반으로 코스북을 만들고, 강사님과 직접 이야기를 나누면서 강의 구성에 대한 소통을 했다.&lt;/p&gt;
+&lt;p&gt;React 심화 코스, 타입스크립트 첫걸음, Next.js 첫걸음이라는 강의를 런칭하였다. 🚀&lt;/p&gt;
+&lt;h1&gt;What I&apos;ve learned&lt;/h1&gt;
+&lt;p&gt;결론적으로 난 근무 기간동안 &lt;strong&gt;6개&lt;/strong&gt;의 프론트엔드 강의 코스 제작에 참여하였고, &lt;strong&gt;100&lt;/strong&gt;여개의 프론트엔드 강의 서브 컨텐츠를 개발했다.&lt;/p&gt;
+&lt;p&gt;테크니컬 라이팅, 상사와의 커뮤니케이션과 같은 여러 소프트 스킬 성장과 기술적인 성장도 있었지만, 이번 인턴 경험은 그 이상의 의미가 있었다.&lt;/p&gt;
+&lt;p&gt;콘텐츠를 제작한다는 것은 곧, 누군가에게 ‘배움’을 전달한다는 일이다. 그러기 위해선 내가 먼저 본질을 이해하고, 그것을 구조화해서 설명할 수 있어야 했다. 프론트엔드 프로젝트를 여럿 경험했기에 어느 정도 알고 있다고 생각했지만, 교육자의 시선에서 바라보니 내가 모르고 있던 빈틈들을 많이 마주할 수 있었다.&lt;/p&gt;
+&lt;p&gt;피드백을 주고받으며 겸손한 태도를 배우기도 했고, 내가 틀렸음을 인정하고 다시 고쳐 나가는 경험이 얼마나 빠른 성장을 가져오는지도 체감할 수 있었다. 처음엔 그저 ‘뭐라도 해야겠다’는 마음으로 시작한 인턴십이었지만, 지금은 그 선택이 내 커리어의 중요한 전환점이자 회복의 시작이었음을 확신한다.&lt;br&gt;
+내가 다시 개발에 몰입하고, 내가 좋아하는 일을 계속할 수 있게 만들어준 이 경험이 참 고맙다.&lt;/p&gt;
+&lt;p&gt;이제는 &apos;해야만 해서&apos;가 아닌, &apos;하고 싶어서&apos; 개발을 이어가고 있다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[서강대학교 멋쟁이사자처럼 운영진 회고]]></title><description><![CDATA[2023-2024년, 서강대학교 멋쟁이사자처럼에서 11기 프론트엔드 아기사자부터 12기 대표까지 경험한…]]></description><link>https://rmdnps10.github.io/서강대학교 멋쟁이사자처럼 운영진 회고/</link><guid isPermaLink="false">https://rmdnps10.github.io/서강대학교 멋쟁이사자처럼 운영진 회고/</guid><pubDate>Mon, 03 Mar 2025 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
 &lt;p&gt;2023-2024년, 서강대학교 멋쟁이사자처럼에서 11기 프론트엔드 아기사자부터 12기 대표까지 경험한 2년간의 개인적인 여정을 소개합니다.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2&gt;멋사를 선택한 이유&lt;/h2&gt;
@@ -543,342 +1788,4 @@
 &lt;h3&gt;운영진을 하면서 느낀 점&lt;/h3&gt;
 &lt;p&gt;운영진 활동과 병행하여 개인적으로는 프론트엔드 인턴십을 준비했다. 내 지식을 타인에게 공유하고 정리하는 과정에서 나 자신도 크게 성장할 수 있었다. 아기사자 시절에 떨어졌던 인턴 자리에 운영진 활동을 하면서 합격할 수 있었다. 인턴십 탈락으로 자존감이 낮아졌을 때, 운영진 활동을 통해 다른 이들에게 도움을 주면서 스스로를 더 사랑할 수 있게 되었다.&lt;/p&gt;
 &lt;p&gt;멋사라는 동아리에는 특유의 낭만이 있다. 실력 중심으로 리쿠르팅하고 현업자 네트워킹에 중점을 두는 다른 메이저 동아리들과 달리, 아무것도 모르는 학생이 2-3개월 만에 코딩을 배워 자신의 아이디어를 맨땅에 헤딩하며 구현해보는 경험은 멋사에서만 가능한 특별한 여정이다.&lt;/p&gt;
-&lt;p&gt;12기 아기사자들 중에는 유달리 명문 해외 기업에 취업하는 경우가 많은 거 같다. 정작 나는 아직 졸업도 못했지만ㅋㅋ 나도 언젠가는 할 수 있을 거라 믿는다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[나의 IT 스타트업 인턴쉽 회고]]></title><description><![CDATA["…]]></description><link>https://rmdnps10.github.io/코딩 교육 스타트업 Frontend Contents Producer 회고/</link><guid isPermaLink="false">https://rmdnps10.github.io/코딩 교육 스타트업 Frontend Contents Producer 회고/</guid><pubDate>Tue, 14 Jan 2025 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
-&lt;p&gt;&quot;6개월동안 코딩 교육 스타트업 코딩밸리 🚀에서 인턴으로 근무하며 프론트엔드 교육 코스를 기획/개발하게 된 기묘한 경험을 소개합니다.&quot;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h1&gt;배경&lt;/h1&gt;
-&lt;p&gt;군대에서 전역을 한 후 나는 개발에 입문하게 되었고 당시에 멋사라는 동아리에서 프론트 개발에 대해서 공부를 하게 되면서 자연스레 프론트 개발에 관심이 생기게 되었다.&lt;/p&gt;
-&lt;h4&gt;사용자를 배출한 첫 프로젝트&lt;/h4&gt;
-&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
-    &lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1000px; &quot;
-    &gt;
-      &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/0289dc919fe2815c8d821f2f61c7e11f/60f98/sharemind.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 66.8%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAAsTAAALEwEAmpwYAAACz0lEQVR42k2SyW4UZxSFe0cEUhYRIguyi8SKfRTlBXgMXiNhEYk8QbLLniEDAZMEx2Qw8QR2aHe3DbHVjXt0uV1VXXPXXNX9cf+ysSnp6L/Vdfv855x7a3mSkKcJszynzDOKLJU6kzqvflN1kaYVqr40w3N9+oM+mq5jRyF5lhEmMbGgVkiTghe4BL5LGAT4rsvU8/Bsm0Dq9wkLRZhkBGEk/VOsiY1tOxWiaXRKKKqGz3fovNxhd7dFc7vObrPJ1ovnNOp19KMj5kVOFseV8vGRwXhscKxPME0bQ071nsTpOWHS0tjabPDTj/d5vLDA40cPT7DwiEGvC2VBLpaUwonlCpEjRBbmxGUi0A2bKDy1rBrzUizlCaVYU1nOCpVpepbrCVlc1cfHJoYxwbIcsSx25QLXnYpCIazIBLP0hOxdpmk4JT399j4ygaZpjA4PGQ1H+L7PfD5HPaWIOCP0PBmI71GKAlfqla0tjk0DpOmcLKq+WzLl7khjcDQW4rFcINO2PVEvhGkcodB606EpqxAGvqxAJDmZMmULbWLgTv1KWSwrkkoMkeYwbQ5J9nVCK8SfxgRBTCr51sQXCjP5Q+Q65GFA7NowK+m122xvbhKLYlk25pLRXAgzN8LraJh7fVI/RBlWrkulsOc59H2HUeBxIGqetRrUDzr0hbQ16HF/aZGua9GXPe16FofiIMoKdNlDPQwxA8la1kUR2uK09un6nyhcWVnk8toSl1f/4OMNeV9/WtUfLP7MJ6tLXNv4i6ty3mhsSCQ5RTEjKAoGQuJIzur5ftSj9uGz37m0/Bs3X23z9c5LvhR8Jbj1qlGdtzuvuf5imYvSc+GfX/nsvxX8MMFUu+h4mDIMzbAgKfh22KX20b9PUKTfHOzzoLPHnfYe9zr7/HDQ5m77f36RW7+or1WXXhLCzxvrhP0J9t87mMu72EMDXchJSr4bdnkLjbew/vDS8DIAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;picture&gt;
-          &lt;source
-              srcset=&quot;/static/0289dc919fe2815c8d821f2f61c7e11f/bc904/sharemind.webp 250w,
-/static/0289dc919fe2815c8d821f2f61c7e11f/4be29/sharemind.webp 500w,
-/static/0289dc919fe2815c8d821f2f61c7e11f/03f31/sharemind.webp 1000w,
-/static/0289dc919fe2815c8d821f2f61c7e11f/fab20/sharemind.webp 1122w&quot;
-              sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
-              type=&quot;image/webp&quot;
-            /&gt;
-          &lt;source
-            srcset=&quot;/static/0289dc919fe2815c8d821f2f61c7e11f/43fa5/sharemind.png 250w,
-/static/0289dc919fe2815c8d821f2f61c7e11f/c6e3d/sharemind.png 500w,
-/static/0289dc919fe2815c8d821f2f61c7e11f/da8b6/sharemind.png 1000w,
-/static/0289dc919fe2815c8d821f2f61c7e11f/60f98/sharemind.png 1122w&quot;
-            sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
-            type=&quot;image/png&quot;
-          /&gt;
-          &lt;img
-            class=&quot;gatsby-resp-image-image&quot;
-            src=&quot;/static/0289dc919fe2815c8d821f2f61c7e11f/da8b6/sharemind.png&quot;
-            alt=&quot;셰어마인드&quot;
-            title=&quot;경험 공유 상담 플랫폼 - 셰어마인드&quot;
-            loading=&quot;lazy&quot;
-            decoding=&quot;async&quot;
-            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-          /&gt;
-        &lt;/picture&gt;
-  &lt;/a&gt;
-    &lt;/span&gt;
-    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;경험 공유 상담 플랫폼 - 셰어마인드&lt;/figcaption&gt;
-  &lt;/figure&gt;
-특히 난 운이 좋게도 좋은 사람들을 만나 &lt;code class=&quot;language-text&quot;&gt;셰어마인드&lt;/code&gt; 라는 실사용자가 어느 정도 나오는 프로젝트를 진행하게 되었고, 나의 첫번째 목표인 &apos;사용자가 있는 서비스 만들기&apos; 를 이뤄냈다. 재밌는 경험이었다. 무언가애 완전히 몰입할 수 있던, 정말 좋은 기회였다.&lt;/p&gt;
-&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
-    &lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1000px; &quot;
-    &gt;
-      &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/7365f1b214a2f90b1d75b595199e3579/f8056/sharemind2.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 46%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAAAsTAAALEwEAmpwYAAACSElEQVR42j1Ry0tUURy+0a7Uaea+X3PvnXvnccfHBJr0koLCKDCjWggh5CKMRGRGi2Km0BknXzNYKNkmN60iSqQWydDCatF/0qLF7JI07tfvXNHF4RzOd873+nHZrh44XhaWmwEvG2iNymg5IdIuIcIr4Tkq6rC9Dhh+BkaXj5Hhwb/V0oOdmeLYzlw5v7NYnfxTfz61W5st/OLUuAfNSkHSHcimB9lwEZNN8EocouYgKpkhZjntMHvboV/0MVW4i5WlCbxYLODN6zIWKveCWnUMczOjTS6Z6YST6oCg2hB0FyJ91qwkTNeHGk+GAqKeQIwEDDMNRU1ibHQIay8fY+PDW2x92cTGu9WAEdcXJpucbpM7zcbxiIA2inkQUTUT0OIukbqhWFTUICgmjhE+X3mGH41NbDc+4ef3Br59/Rxsb33E5vv1JqcYibC7tphCSyVSBTHJIBGLoibCyFFJD0Uk1UIL4QvlCl7NVzFbLKI2XcLaYjmoTxdRKT1scqrphgNhw2CkbBconumkoFN0JhhTLLSSGEsS4TWsLC/j1sBVKEIcua7zGLl5LejvO4WM7zPCBJJ+jlyaRCiH090nTEMyPERCESlczLVI2Hg+j6fFRxi81Ee1pHC6uztIWAbaO7JNTqYhMDesnwOHrALmTCH3vGKHd/vOLbD3E+OjuH7lMnK5NE72dBImBNyRozh3trfJMVXbyxCBcxh7v0P7sEeehhIRdPB0H9MtLD0Z+Td848ze/cLA3up6fu/2nQu7pi0HQ8P9v/8DkromXicNQiQAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;picture&gt;
-          &lt;source
-              srcset=&quot;/static/7365f1b214a2f90b1d75b595199e3579/bc904/sharemind2.webp 250w,
-/static/7365f1b214a2f90b1d75b595199e3579/4be29/sharemind2.webp 500w,
-/static/7365f1b214a2f90b1d75b595199e3579/03f31/sharemind2.webp 1000w,
-/static/7365f1b214a2f90b1d75b595199e3579/9579c/sharemind2.webp 1500w,
-/static/7365f1b214a2f90b1d75b595199e3579/b1218/sharemind2.webp 2000w,
-/static/7365f1b214a2f90b1d75b595199e3579/16e48/sharemind2.webp 2716w&quot;
-              sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
-              type=&quot;image/webp&quot;
-            /&gt;
-          &lt;source
-            srcset=&quot;/static/7365f1b214a2f90b1d75b595199e3579/43fa5/sharemind2.png 250w,
-/static/7365f1b214a2f90b1d75b595199e3579/c6e3d/sharemind2.png 500w,
-/static/7365f1b214a2f90b1d75b595199e3579/da8b6/sharemind2.png 1000w,
-/static/7365f1b214a2f90b1d75b595199e3579/2e9ed/sharemind2.png 1500w,
-/static/7365f1b214a2f90b1d75b595199e3579/9fabd/sharemind2.png 2000w,
-/static/7365f1b214a2f90b1d75b595199e3579/f8056/sharemind2.png 2716w&quot;
-            sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
-            type=&quot;image/png&quot;
-          /&gt;
-          &lt;img
-            class=&quot;gatsby-resp-image-image&quot;
-            src=&quot;/static/7365f1b214a2f90b1d75b595199e3579/da8b6/sharemind2.png&quot;
-            alt=&quot;셰어마인드&quot;
-            title=&quot;CEOS 동아리에서 만난 셰어마인드 팀원들.. 다들 잘 지내는지 문득 궁금..&quot;
-            loading=&quot;lazy&quot;
-            decoding=&quot;async&quot;
-            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-          /&gt;
-        &lt;/picture&gt;
-  &lt;/a&gt;
-    &lt;/span&gt;
-    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;CEOS 동아리에서 만난 셰어마인드 팀원들.. 다들 잘 지내는지 문득 궁금..&lt;/figcaption&gt;
-  &lt;/figure&gt;&lt;/p&gt;
-&lt;h4&gt;현타가 오다&lt;/h4&gt;
-&lt;p&gt;3개월 정도 지난 뒤 서비스가 안정화된 이후, 나는 소강 상태에 빠졌다. 미래에 대한 불안감과 함께 이제 무언가를 새로 시작해야 될 거 같은데 아무것도 하기 싫은 느낌이 나를 사로잡았다.&lt;/p&gt;
-&lt;p&gt;마침 휴학도 했겠다, 이렇게 살면 안되겠다 싶어서 현장 실습에 지원했다. 현재 내 이력으로는 메이저 IT 업계에 인턴 개발자로 취업하는 건 불가능하다고 판단했기 때문이다.&lt;/p&gt;
-&lt;p&gt;결론적으로, 글로벌 IT통신사 회사에 지원하여 최종 면접까지 가긴 했으나, 예상치 못하게 최종 면접이 영어(?)로 이루어져서 (사전에 몰랐음) 당황하긴 했지만 결국엔 준비 부족으로 탈락했다. 사실 당시엔 번아웃에 가까웠고, 뭐라도 해야겠다는 압박감으로 억지로 지원한 터라 제대로 준비조차 하지 못했다.&lt;/p&gt;
-&lt;h4&gt;나를 강제로 되돌아보는 시간&lt;/h4&gt;
-&lt;p&gt;나는 막연히 내가 현장 실습에 붙을 거라 생각하고 휴학을 신청하여 6개월이라는 시간동안을 무언가로 채워야 했다.
-어느새 가벼운 우울감과 불안감이 나를 잠식하고 있었기에, 일단 지금 당장 몰입하기 어려운 개발을 제쳐놓기로 했다.&lt;/p&gt;
-&lt;p&gt;그리고 내가 그전까지 하고 싶었던 것들로 일주일을 채워갔다. 운동, 달리기, 밴드 합주, 야구 시청...
-그때는 하루에 2번씩 헬스장에 갔었다.
-&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
-    &lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1000px; &quot;
-    &gt;
-      &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/948a0cf728fa0582db060f364395dd96/d66b2/chill.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 102.4%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAAsTAAALEwEAmpwYAAAFf0lEQVR42hWSaUzbhxnG/22Ug9PGJza43D6ghBvaEUi5bAjBGHPZBAM2lyE2hzEEcwZIIK5pwDRplm4kS2iTiE5T1a5Ru61TtnWZ9qlV1W6qKvVD1WhTNU1D2j5sX37798MrvdIr/fQ87/MI/S19zIz48HvGGHH5WFkM01jhpKG4C0tpJ6/kW2mqaGdtPsSdWzs8PPgJ7zy6x93921y5ss7k1CTB2SDR6B6/ffIJwph7mJkxLwvTARaW5/H7ApQazFRXtFLzIxv25nZWF31c39wgun2d6M42kcgWi0shhkeHcXsGGBsfZ2d3j0/++GeElpouRi097DqGCLaP0FPVQ7npPH3Nbi5YLuAZHmRzI8jmzA9OXMz6vWxfW2N1YQZHZysDA734JycIh8P88oOPEJqK7DRk27k1PM7KOS8brT6Mijout3rZ7Z6grtCGu/MCtzdXiKwssxkK8LPdMOF5P3NeF76xEYLT44RC89zYex2hNr2N89kubjjnKTtlw188xLJ1Cmv+AC36Hsw53dgrehh0DtPXZiPg9WKzmDln9dPWvUq7IyiqneXa1TVu7r2GUKN2UB/rwKEYoPZ4D5YYJy7dEM2pHpwZI/Tq3ThLPOy/GuX+9hwvZqvRp2fjtPfRfWGJ+vo+eh1O5qaGGBxyITjTBxnSTdIRO0LLMTdNz/XSeNxBf9owLq2HZkUbTWkt7ATnuHdthu4aIyPWaroam7GcPcfqpIfguItrGwGmfR6ESNMV3m055H3L77hlfEA0eY+3C+5xcHqfw4r7HBTv82HHIdHAOq9emiaytMLW9CWKCtvpsrkY6J/mZvQq2+EVMbxLCA9bDjia/Zpvur/n755v+arq93xn/xNf1n/MX879hs/bf83Xl//A9ZE5llst3Lg4weyoD0mCEnODnfFRP9HXLrN/e4vIpgj05UyzkbnDqjxCRHaVK3EhIplrzEpChE4GmUkJ4q8YZd3ez7KtA3dVLdbGJoTn46goKWY1NMXK0gwP7u/y6G0xZUVRB6WOqxSZx0jKOkuSNh+pXI8qrQxtTiWG4jYyKy9yuj1CSe8b6Lp2qQ68SbUvwrGsl1Hk15FcZEGuL0FZUIugOj3C0PpjwgdfsXH4LQVNoxSccZDRHuaU3kpC8SBdCx+x9f4/sbz1jPWn/+LOp0fsffg5gqmBBMMZYnMbRJCRY8ZXENKye3AvvsejJ0d8/Bl4F+5gyj/Dmem7CHo78rJ+LBMPcb7+Gf7Hz3h29D+++Nt/sExGEBKzyChvEKeO52QZSAtrEPL0jfjW3uPdp0fcf/wN67efYLb20zIpltRkI+NsP82z9ygLPsB/+AV//cd/+fK775ndvUu5zS06cpJaKirT5JLy0nmE+mYPS9EP+PnTfzOzecDl9ZsElnZ5uTeEkF6DIreW4r41yi/uMvrmr1j+8S+YWtoSRUQw9/nIqzQjy8jjeVUmqeVWBHPHKEOLP2Xj4FM6vesEJlapbu6hsNSCRqGnINlEerkdWVUv2Z2L6CodJKXkklVlJ6fETE5RPQpdLrFaA6kFouX8skZ0aUYqX2pAn5mHpb6DHGMhL6YbSFFoSVHnkllqQ1nciCSrmlRTHbllbeiMteiSjZRVNKFRpxEjUYpgA4LhhSwUMhUlxgJSlVrq6uzk55aRIFWhVumQql5Aq83EVFSFUqEh31RKQYkVhcYg3jNQSjScPBlHnDSZRFkKglqZjDRRjlqtIzZeSrw4MqmcBImauJg4YuXpJCTKkCWpOBUjIT42EU2KiXhJMpL4H/Y0kjVa5Km5KNXpYm3SxBKr1OTpjaiVGmLjEpCIQIlo4fiJGE7EJnEyPol4qZK4OCkxIjAr04BMIuOEeE9IlCBXKkgT35aQlMr/AT82H/HRcmpwAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;picture&gt;
-          &lt;source
-              srcset=&quot;/static/948a0cf728fa0582db060f364395dd96/bc904/chill.webp 250w,
-/static/948a0cf728fa0582db060f364395dd96/4be29/chill.webp 500w,
-/static/948a0cf728fa0582db060f364395dd96/03f31/chill.webp 1000w,
-/static/948a0cf728fa0582db060f364395dd96/9579c/chill.webp 1500w,
-/static/948a0cf728fa0582db060f364395dd96/d3a1a/chill.webp 1721w&quot;
-              sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
-              type=&quot;image/webp&quot;
-            /&gt;
-          &lt;source
-            srcset=&quot;/static/948a0cf728fa0582db060f364395dd96/43fa5/chill.png 250w,
-/static/948a0cf728fa0582db060f364395dd96/c6e3d/chill.png 500w,
-/static/948a0cf728fa0582db060f364395dd96/da8b6/chill.png 1000w,
-/static/948a0cf728fa0582db060f364395dd96/2e9ed/chill.png 1500w,
-/static/948a0cf728fa0582db060f364395dd96/d66b2/chill.png 1721w&quot;
-            sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
-            type=&quot;image/png&quot;
-          /&gt;
-          &lt;img
-            class=&quot;gatsby-resp-image-image&quot;
-            src=&quot;/static/948a0cf728fa0582db060f364395dd96/da8b6/chill.png&quot;
-            alt=&quot;운동하기 야구보기 밴드부하기&quot;
-            title=&quot;운동하기 야구보기 합주하기, &amp;#39;서시&amp;#39; 밴드부원들 보고싶다 ㅠ ㅠ&quot;
-            loading=&quot;lazy&quot;
-            decoding=&quot;async&quot;
-            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-          /&gt;
-        &lt;/picture&gt;
-  &lt;/a&gt;
-    &lt;/span&gt;
-    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;운동하기 야구보기 합주하기, &amp;#39;서시&amp;#39; 밴드부원들 보고싶다 ㅠ ㅠ&lt;/figcaption&gt;
-  &lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;방구석에서 있을 때보다, 밖에서 생산적인 활동을 하니 서서히 자신감도 생기고, 몸도 좋아졌다.
-이제 슬슬 미래를 향한 날갯짓이 다시 필요한 때가 된 듯 했다.&lt;/p&gt;
-&lt;h4&gt;아 모르겠고 일단 지원해보자&lt;/h4&gt;
-&lt;p&gt;한 코딩 교육 스타트업 인턴 채용 공고가 잡코리아에 올라온 걸 확인했다. 프론트엔드 교육 컨텐츠를 제작하는 업무였다.&lt;/p&gt;
-&lt;p&gt;1년정도 교내 코딩 동아리에서 프론트엔드 교육자로 활동했기에, 나에게 적합한 일이라고 생각이 들었다. 간단한 이력서를 보내고, 면접을 보자는 전화가 왔다.
-면접은 커피챗 형식의 대화와 간단한 과제로 이루어졌다.&lt;/p&gt;
-&lt;p&gt;이전에 최종에서 떨어져본 경험으로 무장하여 자신감 있는 태도로 편하게 이야기를 나눴고, 다음 날 합격 문자가 왔다!&lt;/p&gt;
-&lt;h1&gt;업무 시작&lt;/h1&gt;
-&lt;p&gt;내가 취업한 &lt;code class=&quot;language-text&quot;&gt;코딩밸리&lt;/code&gt; 는 자사 어플을 통해 초심자들을 타겟으로 코딩 교육 컨텐츠를 &lt;code class=&quot;language-text&quot;&gt;모바일 앱, 웹 환경&lt;/code&gt;에서 제공하는 스타트업이었다.
-&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
-    &lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1000px; &quot;
-    &gt;
-      &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/ef05e89e810f2679fd1a2fd8a07cf140/f2999/CodingValley.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 61.199999999999996%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAABYlAAAWJQFJUiTwAAADUElEQVR42kWSW0ybBRTHv8SoUaOZCTFzmEiClzGtGQwK7Vp6Xyl0LaVrC5SWD2lLywK4QR2IwkqZwEY3YS4FRsclEjVmxIhkkrEhD0wd4JtZTEg0bDMLmRoztyftz4/twYdf/jk595wjrH+3zMrKEms/LLO2cpUvv5pn4dI3LM7PcenrWS4vzLKwsMjVpSWWr11nfXWNn659y4/r62xsbHD71i1u39zkxs8b3NzcRDDuy0YnfwO7PAt38as8n7GLJ595AXX+XuSyLF7cIZCz52XKD1Xj9HtRqIvwOfS47DZO9MSZSo0zOXmB6ZlpxkdHEMKBIE1H27Ef0OAz7iEv+yU0SjU9sRgD8RhOUzEmRQ6RYB1d77VxbihBw+EIpSYtw2dOMz05weUri6xe/56Ln3+K0C56iIrVHJQ6ew1vsv/1TJp9bmZTSaYnLuA2GzigyKfW68Zn0TPQEqZCXYhOWcCJeDfDsTifJBP0J0dpaT2OUGdUErFbCB/UUWuUYcqT8Y7VQCBD4FTIRai2hrx9uUTe9lNvVhE2awiVaql3Ooi2NtJW5SPe5EPV2ES2ziMV1BcQMEsBFjlhaz763Tn0dnfRIVbSWy4nWl2G6q3dBGoq8UjrV8tl1JRqCPr8dLZGKO9oxxbswX74GIZYI8IhrRK/OhdPqZVC2WsoXsnEYdDQ2dZM8t0g59vDhOwm2kU/DS4XXm0BYomeSoeTRCiMo/F9HGKUVIeHwf5KhBq3j4CrCrezlsefeA5Z1tPk7HyMcIWZ+eEPmBvqZDDaTMRVzfGmI7T5RWy5hZQVSkepqKLY1YTBGWEuqmYmrkEQxRZCjR3Yyv08u2MnmRlPoSjcS29bC31HI5yULnusvh67qgybwkS52iZtI+Kx+hjwRXBFuqkMdTLd5WfkZFD6w6G7mIZ/R5u4g/LDX1H3/YLl7BaWj+9iPH0H0xmJj7YwnPpNsrfQ995A5R1A371KSfI+trF7D7GO3Zd4gKAZg+JRUEuqHX+ESrL3jzzSbR76R/+haEpSMcHZQAneuihFSdBs+0b+RyhOprFOpGm4mCb4RZrSlMT4X5Sl7mFJ/SuRRiclVYz/TcNnD7AemeGPK1Oc6+tHMfgnZmkA3UgarVRsm/8A96Uz4PYLiV4AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;picture&gt;
-          &lt;source
-              srcset=&quot;/static/ef05e89e810f2679fd1a2fd8a07cf140/bc904/CodingValley.webp 250w,
-/static/ef05e89e810f2679fd1a2fd8a07cf140/4be29/CodingValley.webp 500w,
-/static/ef05e89e810f2679fd1a2fd8a07cf140/03f31/CodingValley.webp 1000w,
-/static/ef05e89e810f2679fd1a2fd8a07cf140/9579c/CodingValley.webp 1500w,
-/static/ef05e89e810f2679fd1a2fd8a07cf140/b1218/CodingValley.webp 2000w,
-/static/ef05e89e810f2679fd1a2fd8a07cf140/a5cbc/CodingValley.webp 2500w&quot;
-              sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
-              type=&quot;image/webp&quot;
-            /&gt;
-          &lt;source
-            srcset=&quot;/static/ef05e89e810f2679fd1a2fd8a07cf140/43fa5/CodingValley.png 250w,
-/static/ef05e89e810f2679fd1a2fd8a07cf140/c6e3d/CodingValley.png 500w,
-/static/ef05e89e810f2679fd1a2fd8a07cf140/da8b6/CodingValley.png 1000w,
-/static/ef05e89e810f2679fd1a2fd8a07cf140/2e9ed/CodingValley.png 1500w,
-/static/ef05e89e810f2679fd1a2fd8a07cf140/9fabd/CodingValley.png 2000w,
-/static/ef05e89e810f2679fd1a2fd8a07cf140/f2999/CodingValley.png 2500w&quot;
-            sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
-            type=&quot;image/png&quot;
-          /&gt;
-          &lt;img
-            class=&quot;gatsby-resp-image-image&quot;
-            src=&quot;/static/ef05e89e810f2679fd1a2fd8a07cf140/da8b6/CodingValley.png&quot;
-            alt=&quot;운동하기 야구보기 밴드부하기&quot;
-            title=&quot;코딩밸리 홈페이지&quot;
-            loading=&quot;lazy&quot;
-            decoding=&quot;async&quot;
-            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-          /&gt;
-        &lt;/picture&gt;
-  &lt;/a&gt;
-    &lt;/span&gt;
-    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;코딩밸리 홈페이지&lt;/figcaption&gt;
-  &lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;회사에서 프론트엔드 심화 교육 코스를 오픈을 대기중이어서, 해당 코스에 사용될 책의 집필과 실습 코드 제작을 내게 맡기려고 했다.&lt;/p&gt;
-&lt;h4&gt;내가 맡은 일&lt;/h4&gt;
-&lt;p&gt;처음 회사에 와서 맡게 된 업무는 &lt;strong&gt;HTML-CSS 코스북&lt;/strong&gt;을 제작하는 일이었다. 개발적인 엄밀함과 테크니컬 라이팅 스킬이 필요한 업무였다. 사수 분과 함께 책을 집필하며,&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;- 말을 간결하고 핵심만 전달하기 위한 글쓰기에서의 피드백
-- 기술적인 엄밀함을 크게 벗어나지 않으면서 공식 문서에 있는 내용들을 어떻게 쉽게 표현할 수 있는지에 대한 피드백&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;을 거치며 글을 쓸 때 이에 대해서 계속 고민했던 거 같다.&lt;/p&gt;
-&lt;p&gt;특히 기술 문서를 뒤져가며 내가 생각하기에는 확실한 레퍼런스를 들고 와서 사수분께 갑론을박을 벌이기도 했지만..&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;&apos;이건 진짜 내가 맞다&apos;&lt;/strong&gt; 라고 생각하고 주장했다가 알고보니 아니었던 적이 한 두 번이 아니었다.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;HTML CSS 코스북&lt;/strong&gt; 제작을 시작으로, 통상적인 프론트엔드 공부 순대로 강의 커리큘럼이 하나씩 오픈 예정이었기에 일을 하면서 프론트엔드 전반적인 지식을 리마인드 할 수 있었다.&lt;/p&gt;
-&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
-    &lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 452px; &quot;
-    &gt;
-      &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/27e23d03617aff77151f7f8c993b4717/39613/book.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 66.39999999999999%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAAsTAAALEwEAmpwYAAADGUlEQVR42l2S62/bVBiH81/tC9PEWLkMiQ2JT4hvEyBgEgxWYCCtwCT4UIEEHRV0ZQy0m4S0ElDIfS3Z1mRpl2TrLXGcEOrYzqWL48a52E767MQFpGHp1bF/Puc5z3tsX7e0jRGI0w4t0Y7doh1ewvBH6Kl16tU8aiGNXsqKyqDkkxjb65SMLj9LDa7KTa4Um1ySmswVGmy1uvjMP1PUZi/S+PEa9R8uo5/5HPW1STqZNeS1CPk7vyCl/RRSN8iEvkVdXeBm1WAyVeaLbIVXEjKHI0WejEj8sW3g203cRT87TX16ltrUtAfUT3+GdX8LKRcgGzzPWnxe1AWy0Tn0bICEanBEAI4tFnlhUebFxRLHb8pEq21huJREO3Ea/e2z6Kem0N8/h3byI6zcJpJYnAnM8CB2wat7QWF4zy+AbZ4KSxyNFXkmJvF8vMhEtEhY8YAptNc/8Kz09z5Ff/eT/wG/4X5UAKPzAjj7H/BQqMCEsHw2KvG0qCOiworxj6EA1sawd6Y8S/WND+k8BpwTwLnHDA8GC17bz8X2gYfDBUKKd4ZptLc+Fmb7dvrkORqi/e74DP8Fei0LQ/FR9Mzv3NLaAjC2K3qwowI6ES8RUU1hGL1N9eWTqK9OUhWlvXmG1Esn0JZXKWZ+Y+XXaTLBGXKh89xZ+JKNxevElRYHAnkOirafCG5xSNgd+CnGwnoZn7Uu0bp4HfOqH/PyDcxrfpJff4e6JdGsbqJsJFDzy2hSktKDBOX1FaSHFjMbNb7PN5mXW+IfbPJVPE2urOBzhiP6wyFyVUXd2aGsabijEa47ZLQH5YpCZVtFkivIpQrjy7Edb+y022h/lelbHe95vMY36NvYomS5TPL2MsrfCoPuAC8f2OzuWqysZrmbXsUwTAYi6/Ud+s4IVW8Qjca9TfvOUOS2ANoubs/GauxQV3V6ZgdXZOPctoe4g12MWomWXsLtm15mC0NHvDfFuvJOG6PTw3HGuYvPFppus8WwWGHP6jES945pYY8nCIu+qWJpWbp6jp6hiGxPbLYPbA2GbFojHorR9QRcHgHJeW0h0dI3bQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;picture&gt;
-          &lt;source
-              srcset=&quot;/static/27e23d03617aff77151f7f8c993b4717/bc904/book.webp 250w,
-/static/27e23d03617aff77151f7f8c993b4717/9e838/book.webp 452w&quot;
-              sizes=&quot;(max-width: 452px) 100vw, 452px&quot;
-              type=&quot;image/webp&quot;
-            /&gt;
-          &lt;source
-            srcset=&quot;/static/27e23d03617aff77151f7f8c993b4717/43fa5/book.png 250w,
-/static/27e23d03617aff77151f7f8c993b4717/39613/book.png 452w&quot;
-            sizes=&quot;(max-width: 452px) 100vw, 452px&quot;
-            type=&quot;image/png&quot;
-          /&gt;
-          &lt;img
-            class=&quot;gatsby-resp-image-image&quot;
-            src=&quot;/static/27e23d03617aff77151f7f8c993b4717/39613/book.png&quot;
-            alt=&quot;HTML CSS 코스북&quot;
-            title=&quot;내가 공동집필로 참여한 3종의 코스북&quot;
-            loading=&quot;lazy&quot;
-            decoding=&quot;async&quot;
-            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-          /&gt;
-        &lt;/picture&gt;
-  &lt;/a&gt;
-    &lt;/span&gt;
-    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;내가 공동집필로 참여한 3종의 코스북&lt;/figcaption&gt;
-  &lt;/figure&gt;&lt;/p&gt;
-&lt;h4&gt;근무 연장&lt;/h4&gt;
-&lt;p&gt;3개월의 계약이 끝난 뒤, 근무 연장 의사를 물어보셨고 나는 연말에 CES 부스 준비와 학과 컨퍼런스 참석 일정이 있어서
-회사와 파트타임으로 오후 2시부터 6시까지 일하는 것으로 합의했다.&lt;/p&gt;
-&lt;p&gt;회사에서 배려해주신 덕분에 엄청난 워라밸을 챙기면서, 내가 진행중인 프로젝트에 더욱 집중할 수 있었다.&lt;/p&gt;
-&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
-    &lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1000px; &quot;
-    &gt;
-      &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/d78295b680be6281ade91a37eb477167/dbced/proj.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 28.4%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAGCAYAAADDl76dAAAACXBIWXMAAAsTAAALEwEAmpwYAAABcElEQVR42mWQS0vjUBiGTy6T2DRiWhPEYlcOuKiKeNmLP0B/gX9GcO0mUhnEtS6GgZnNMF5Q6iVpEnpL1LY/JYvH9NSZzSweOJyP857ne4U+oyNUgRD/o6iKnJ2c+KSDjCAIaLfbBaEkCEJ5NyEMwwm5+Lq3TH1jiZJVwjAMzBkTRVEwTROnWqE8W+a0ecp4PKbf75NlKZ1uShSlvL9l9LpdGRZF0eSzXMx7Lp7r4czOYds2lmWhKSqVukdjZ51arYbf9BkOhyRJwmDQ5fp3h+8/2vx5LGyjWNpOAl+CIBfSpvSFuaqFrutyVVVTqW8u01hbpeJV8M98RsMRvV6P7DXl4bbD5dVPzn9d8xDGREVgHMe0Wq1cGJqB23BZOVjBMA2EIrCrNl59AddxcRYd/G8+49F05SROeH554ubufmomO51SWOZCll9YapqGbhSGmmBrd5uj82P2Dw+wa2WaF02yNJNd/X2cxPG/82eY7PADxxEbXfwtAqQAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;picture&gt;
-          &lt;source
-              srcset=&quot;/static/d78295b680be6281ade91a37eb477167/bc904/proj.webp 250w,
-/static/d78295b680be6281ade91a37eb477167/4be29/proj.webp 500w,
-/static/d78295b680be6281ade91a37eb477167/03f31/proj.webp 1000w,
-/static/d78295b680be6281ade91a37eb477167/9579c/proj.webp 1500w,
-/static/d78295b680be6281ade91a37eb477167/b1218/proj.webp 2000w,
-/static/d78295b680be6281ade91a37eb477167/3045f/proj.webp 2623w&quot;
-              sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
-              type=&quot;image/webp&quot;
-            /&gt;
-          &lt;source
-            srcset=&quot;/static/d78295b680be6281ade91a37eb477167/43fa5/proj.png 250w,
-/static/d78295b680be6281ade91a37eb477167/c6e3d/proj.png 500w,
-/static/d78295b680be6281ade91a37eb477167/da8b6/proj.png 1000w,
-/static/d78295b680be6281ade91a37eb477167/2e9ed/proj.png 1500w,
-/static/d78295b680be6281ade91a37eb477167/9fabd/proj.png 2000w,
-/static/d78295b680be6281ade91a37eb477167/dbced/proj.png 2623w&quot;
-            sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
-            type=&quot;image/png&quot;
-          /&gt;
-          &lt;img
-            class=&quot;gatsby-resp-image-image&quot;
-            src=&quot;/static/d78295b680be6281ade91a37eb477167/da8b6/proj.png&quot;
-            alt=&quot;운동하기 야구보기 밴드부하기&quot;
-            title=&quot;교통 약자를 위한 버스 어플, 모두버스 | 학과 컨퍼런스 아카이빙 웹사이트 &quot;
-            loading=&quot;lazy&quot;
-            decoding=&quot;async&quot;
-            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-          /&gt;
-        &lt;/picture&gt;
-  &lt;/a&gt;
-    &lt;/span&gt;
-    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;교통 약자를 위한 버스 어플, 모두버스 | 학과 컨퍼런스 아카이빙 웹사이트 &lt;/figcaption&gt;
-  &lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;연장 기간 동안에는 내 업무 범위를 비교적 더 확장해서 일할 수 있었다. 이제는 회사에서 나를 어느정도 인정해주는 듯 했다.&lt;/p&gt;
-&lt;p&gt;강의 커리큘럼을 직접 기획하고, 이를 기반으로 코스북을 만들고, 강사님과 직접 이야기를 나누면서 강의 구성에 대한 소통을 했다. 이 기간동안에는 React 심화 코스, 타입스크립트 첫걸음, Next.js 첫걸음이라는 강의를 런칭하였다. 🚀&lt;/p&gt;
-&lt;h1&gt;What I&apos;ve learned&lt;/h1&gt;
-&lt;p&gt;결론적으로 난 근무 기간동안 &lt;strong&gt;6개&lt;/strong&gt;의 프론트엔드 강의 코스 제작에 참여하였고, &lt;strong&gt;100&lt;/strong&gt;여개의 프론트엔드 강의 서브 컨텐츠를 개발했다.&lt;/p&gt;
-&lt;p&gt;테크니컬 라이팅, 상사와의 커뮤니케이션과 같은 여러 소프트 스킬 성장과 기술적인 성장도 있었지만, 이번 인턴 경험은 그 이상의 의미가 있었다.&lt;/p&gt;
-&lt;p&gt;콘텐츠를 제작한다는 것은 곧, 누군가에게 ‘배움’을 전달한다는 일이다. 그러기 위해선 내가 먼저 본질을 이해하고, 그것을 구조화해서 설명할 수 있어야 했다. 프론트엔드 프로젝트를 여럿 경험했기에 어느 정도 알고 있다고 생각했지만, 교육자의 시선에서 바라보니 내가 모르고 있던 빈틈들을 많이 마주할 수 있었다.&lt;/p&gt;
-&lt;p&gt;피드백을 주고받으며 겸손한 태도를 배우기도 했고, 내가 틀렸음을 인정하고 다시 고쳐 나가는 경험이 얼마나 빠른 성장을 가져오는지도 체감할 수 있었다. 처음엔 그저 ‘뭐라도 해야겠다’는 마음으로 시작한 인턴십이었지만, 지금은 그 선택이 내 커리어의 중요한 전환점이자 회복의 시작이었음을 확신한다.&lt;br&gt;
-내가 다시 개발에 몰입하고, 내가 좋아하는 일을 계속할 수 있게 만들어준 이 경험이 참 고맙다.&lt;/p&gt;
-&lt;p&gt;이제는 &apos;해야만 해서&apos;가 아닌, &apos;하고 싶어서&apos; 개발을 이어가고 있다.&lt;/p&gt;</content:encoded></item></channel></rss>
+&lt;p&gt;12기 아기사자들 중에는 유달리 명문 해외 기업에 취업하는 경우가 많은 거 같다. 정작 나는 아직 졸업도 못했지만ㅋㅋ 나도 언젠가는 할 수 있을 거라 믿는다.&lt;/p&gt;</content:encoded></item></channel></rss>
