@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[Web, AI, PS에 대해 기록합니다.]]></description><link>https://rmdnps10.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 14 Sep 2025 15:05:24 GMT</lastBuildDate><item><title><![CDATA[서비스 개발부터 DevRel까지: 카카오뱅크 인턴쉽 회고]]></title><description><![CDATA["금융으로 세상을 바꾸는 기업, 카카오뱅크에서 6개월의 인턴쉽을 회고합니다. (+ 네이버랩스 인턴 최종 면접후기)" 네이버랩스 최종 탈락에서 카카오뱅크 인턴 합격까지 지난 1월, 나는 네이버랩스의 Robot FE Developer…]]></description><link>https://rmdnps10.github.io/카카오뱅크 인턴쉽 회고/</link><guid isPermaLink="false">https://rmdnps10.github.io/카카오뱅크 인턴쉽 회고/</guid><pubDate>Thu, 14 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[Web, AI, PS에 대해 기록합니다.]]></description><link>https://rmdnps10.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 15 Sep 2025 03:13:57 GMT</lastBuildDate><item><title><![CDATA[서비스 개발부터 DevRel까지: 카카오뱅크 인턴쉽 회고]]></title><description><![CDATA["금융으로 세상을 바꾸는 기업, 카카오뱅크에서 6개월의 인턴쉽을 회고합니다. (+ 네이버랩스 인턴 최종 면접후기)" 네이버랩스 최종 탈락에서 카카오뱅크 인턴 합격까지 지난 1월, 나는 네이버랩스의 Robot FE Developer…]]></description><link>https://rmdnps10.github.io/카카오뱅크 인턴쉽 회고/</link><guid isPermaLink="false">https://rmdnps10.github.io/카카오뱅크 인턴쉽 회고/</guid><pubDate>Thu, 14 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
 &lt;p&gt;&quot;금융으로 세상을 바꾸는 기업, 카카오뱅크에서 6개월의 인턴쉽을 회고합니다. (+ 네이버랩스 인턴 최종 면접후기)&quot;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h3&gt;네이버랩스 최종 탈락에서 카카오뱅크 인턴 합격까지&lt;/h3&gt;
@@ -9,7 +9,7 @@
 &lt;p&gt;1차와 코딩 테스트를 통과한 뒤 현직자 분과 전화 인터뷰가 있었는데, 현직자 분께서 내 서류를 보고 지금까지 본 서류 중에 제일 잘 쓴 것 같다고 피드백을 주셔서 이미 그때부터 마음속으로 나는 네이버의 아들이 되었다.ㅋㅋㅋ&lt;/p&gt;
 &lt;p&gt;전화 인터뷰에서는 학부 수업이나 스타트업 인턴십을 하면서 경험한 것들을 물어보시고, 특히 당시에 개발하고 있었던 &lt;code class=&quot;language-text&quot;&gt;연애 상담 서비스, 셰어마인드&lt;/code&gt; 프로젝트에 관한 이야기를 나누면서 개발 현황과 앞으로의 계획에 대해 이야기를 나눴다.&lt;/p&gt;
 &lt;p&gt;코테에 관한 이야기도 나누었다. 다익스트라 알고리즘을 쓰는 문제에서 약식으로 &lt;code class=&quot;language-text&quot;&gt;Priority Queue&lt;/code&gt;를 구현했는데, 당시 단순 배열로 구현했던 것의 시간복잡도 한계(O(n) 삽입/삭제)와 제대로 구현한다면 어떻게 할 수 있는지(Binary Heap으로 O(log n) 구현) 물어보셨다.&lt;/p&gt;
-&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
+&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;background: transparent;&quot;&gt;
     &lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 741px; &quot;
@@ -57,7 +57,7 @@
 &lt;h4&gt;PT 준비, HR 인터뷰&lt;/h4&gt;
 &lt;p&gt;전화 합격 약 한 달 뒤에 네이버 사옥에서의 최종 대면 면접을 통보받았다. 사전에 10분 정도 직무와 관련한 경험들에 대한 소개를 하는 presentation을 준비하라고 하셨고, 발표자료를 미리 HR 담당자에게 송부했다.&lt;/p&gt;
 &lt;p&gt;듣던 대로 정말 네이버 사옥에서는 음식 배달 등을 위해 정말 로봇들이 자유롭게 이동하는 모습을 볼 수 있었다.&lt;/p&gt;
-&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
+&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;background: transparent;&quot;&gt;
     &lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1000px; &quot;
@@ -71,7 +71,7 @@
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 33.599999999999994%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAAAsTAAALEwEAmpwYAAACC0lEQVR42g3M3U5SAQDAcd6hXqCtsguXtlJTGYLiceeoiIB4gOMB+VAMdREcBFT8pqmkuYVNV5p6hdYFbk0vcm5ttZXVU5yn4OL88/cAP5O7tMtEpcrkWRX1+Av5yyuWz6usVCqkd97iDgVxhkK1l4efjc3rG45//OX0+jdfft5w9usf2kqRkcCw4XMKDNiadNPK9h4blRMmV5cRg2GGtTyJ7Ay51DSZVxOMxaOo8WhNCo4ZyU+nFM8v2To7p3zxjfLVd6IpDdndZ6gDVvxim25KVS9wZxYQQzG6hnxIowlae4cwCw7iiRjhqIpX8dZEj9MI5Aoky/to796zeHRC7sMBcjSCqniMgKODuCzopsDiGjZvkDt1DTRauukMjHKvxYJVcpKZy6AoXqT+nprdIRieWBQlneVFoUB2a4tcaR1/UEENBwzXoEBb+1Pd1CQ66JL93H1Qz6PnFoTQOB0umR6nCyUW4qg8z8eNZO1+Q73RN+Ij87rA9EKe/ZMdVktzyKqPPqnTcHS10Nr4UDd1e2T6p3I8s/Ug3CbJ2VnWlvOMRwIkEmH+fN2lUp6t2SWr4QrKaEsaweQ0e4ebFEs5BHs7g5LZsLc9oflxnW4yiy482Q1sgsSIqpDOz7C4kLlN02yvZykuJcnPTNQ8/n4jMhUhtZRhPJemfPCG+VUNUbTRK1oMq82MxdKs/wfnQjmqUmaoWAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 33.599999999999994%; position: relative; bottom: 0; left: 0; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;picture&gt;
           &lt;source
@@ -116,7 +116,7 @@
 &lt;p&gt;컴퓨터 OS에서 파일 경로를 찾는 알고리즘에 대해 pseudo code를 짠 뒤 예외적인 상황(순환 참조, 권한 부족, 파일 시스템 손상 등)에 대한 고려를 묻는 질문을 하셨고, 로봇과 관련된 사고 질문에서는 &apos;면접자분이 로봇 웹앱을 설계한다면 어떤 서비스를 제공하는 로봇을 만들고 싶은지? 그 로봇의 통신(WebSocket, ROS 통신, MQTT 등), 시스템 아키텍처(마이크로서비스, 이벤트 드리븐 등)를 설계해서 뒤의 화이트보드에 그려봐라&apos; 같은 질문들도 있었는데... 정말 밑바닥 수준인 나의 지식을 체감했다.&lt;/p&gt;
 &lt;p&gt;아무래도 비전공자이다 보니까 컴퓨터 네트워크, 운영체제, 시스템 아키텍처 같은 CS 기초 과목들을 체계적으로 학습하지 못했고, 내가 예상했던 React 컴포넌트 설계나 상태 관리 같은 프론트엔드 개발 관련 질문보다는 그 밑단의 시스템 레벨 지식들을 많이 물어보셨던 것 같다. 특히 로봇과 웹의 인터페이스, 실시간 통신, 임베디드 시스템에서의 리소스 최적화 등에 대한 이해가 부족했다는 걸 느꼈다.&lt;/p&gt;
 &lt;p&gt;지금 생각해보면, 아무래도 로봇 OS 위에서 돌아가는 로봇 웹 애플리케이션을 개발하니까 당연하게도 이에 대한 성능 개선이나 UX 개선을 위해서는 하드웨어 제약사항, 실시간 처리, 메모리 관리, 배터리 최적화 등 로우레벨 시스템 지식이 당연히 많이 필요했을 텐데, 내가 너무 안일하게 생각했구나 하는 반성이 든다.&lt;/p&gt;
-&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
+&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;background: transparent;&quot;&gt;
     &lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 732px; &quot;
@@ -172,7 +172,7 @@
 &lt;p&gt;서류 통과 후 면접에서는 편안한 분위기 속에서 본 전공 수업에서 다뤘던 아트앤테크놀로지 관련 디자인 툴들(Processing, Arduino, Figma 등)에 대한 경험과 개발 관련 기술적인 질문들(React Hooks, 상태 관리, 번들링 최적화 등)이 오갔다.&lt;/p&gt;
 &lt;p&gt;CES 2025 일정이 있어서 원래 근무 시작 일자보다 2주 정도 늦게 출근해야 해서 합격에 대한 미련을 버리고 있었는데,
 결과적으로 합격했다!&lt;/p&gt;
-&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
+&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;background: transparent;&quot;&gt;
     &lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 915px; &quot;
@@ -186,7 +186,7 @@
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 59.199999999999996%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAAAsTAAALEwEAmpwYAAADp0lEQVR42h3P/1PTdQDH8Y9d1/WLXYl3SoHyxRh6AXcVlIAgxMCdRzZiREhIfG983QBhlkwtKb7IlwUOgtolqYu22tyYTJE4ZHABwca3hjDGlw8njS8f5C5Km+9Xo3/gcc8n5enygj30dWf7qXCWXS8T2jdvhNltrWy7aajLbrQu2bU6lb3qfJ69rV6M7ERuSVwCj75UfAySMh/SKD4CebUryou8EMkOQlL8cVDe7ntw3P8AeBFe6NHWY2JiBMOqKzAYfsXQ9By0tzWoLBOQHxouIzM5XhQTF0Nr6pywoqGIWb4LVvXzWNJQ+CJ/P05yjoFiue1BeMBBxEaw0KMshnn4KmTXpWhTqnGn9z50+k58db7AAX6O1ISY/8Gas/uwfo8itnvPwHL3MJY6n8Nixy7kp7B2QCewj7rhfbYvumRcPNIFYFzJw4A8AwOjY+i4rUPFZ7nkuqQM6fEcB8ijS9Od0dW0m/x8xR21Z11xge+Fy/w3cTradwfci8hAD3DZfrhVw8FmRyYez8qwvWrExj9PoelQoEqUQeR1pUiNPyn6MPEMfS7bD+I0b5L3QQgyYoORk/AOSj9m40TYG6C83PYjKugQuOEsXGu+hEWjDhtGNR4y23hilKBXGoe6Ih6RV+ZAkB4n0ne00TekfHyZ70/KBWyUZLFRmBEJYUo4otiBoA4dPICo4FdxKoyFZmkFpq3zsFmNWN1Yx+Ox79BXEwmJ4F3SXpGF3ORYUXNTJd3WehHi3BDyadbbKEgJRUGqA87hITklCZSbiysijnoiOtQbV6tLYF5YwPzaX7A9XMS/Jgn6Grn4WsglP1Xw8UlSjOiWVk7/PnQHba0V5NvGcqgUTejuUmDwty4oVe2g3F324USQBzihvmgpegu2gVosrW5hldnC5vIYur9JQ33xadJeJUR2aoJIqVbSg8P9+GNKRVashfibfg1/LtXCPGPByKjBAb7iRDhBHoQT4kNa8n3Jsr6Y6IYsRNPdRzr7p8iPaj2pE6U9vVkpxDlBtkjxi4LW6nuw+EBMtq0U1qYorJv3YnJSg5GxCcfyyy+Bs1MY4gNpnj82FdFY6W3AZI8Cs/0y3L1ZBklpElFU5aA0M1HUazDQpnETJs0msjnvB9uD3bBNu2Nt5jBGTfcdoPOLTFSgJ8MJPsLUFHGZtWvvMebv+YylJZ551BTADFQHMA3CaEZ+8czWhZyPCmcsc8szs2aMT82ReUsjntDPYnXGHQtTHAwOavEfz3tgHa8ihrwAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 59.199999999999996%; position: relative; bottom: 0; left: 0; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;picture&gt;
           &lt;source
@@ -218,7 +218,7 @@
     &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;웰컴온보드화면과 스타터팩&lt;/figcaption&gt;
   &lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;첫 출근때부터 웰컴 박스에 편지와 함께 따뜻하게 맞이해 주셔서 너무 감사했다.&lt;/p&gt;
-&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
+&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;background: transparent;&quot;&gt;
     &lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1000px; &quot;
@@ -232,7 +232,7 @@
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 45.2%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB1UlEQVR42o2STUsbYRDH7UUbv4LHfgQPpZd6ULClBT0YKV58QWNbYk1MQ+Lq+qzZvG7yNLuPiZoWLJSAuERNYpNaRKUedkVWRCgeFXYtKeI30GfHVSyK0jZzmIFh5sef/0xNzU08uEzlslSXjHHFZAxpKTGkkA8BNZ3k1dRlFUPqx1RUyZCIJsXREkKo9vbu3bhqyjK2TYthg4hhSCcmza/ZDPzc34H9XQUWsp+AJDg6NxMHEueOLODD/wKtoXoJT+rL6SisjDnPt7/MUt04ppVfFVrKy3TC7zybwhwIwdFDhLr/DoTrJsbY9j3OGhvsO5A6X5jrKQG+lVahkC/B6uI88GPDdFrkQeD9/1b4B6i43baiz2HkPN2Q9/aaciIAa0vLsJkvQCGXBSHgpRkSAhxmqgPKbrttLTJs/BDeA+poNWdiQTg1juG3rgNBfuCGeiiOMIBDzNHnaoBaBtXnfP06a38Gzx81nM9FeXp6UqEHexolE17KjDjO+HEXcKNDh1Up1C0PpwY6jcGmRnA8bTRnPa9hy7p0wfISOfsgyLopEVjLS1d1Vy5LUp3Qby++bX6svWl5oni6XqqDXW3qq/ZW1eXsURNBn5KMMJql0PpD+70/vABXAQmRpJmmigAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 45.2%; position: relative; bottom: 0; left: 0; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;picture&gt;
           &lt;source
@@ -274,7 +274,7 @@
 &lt;p&gt;이런 일을 하면서 개발이 필요한 특정 기간동안에는 위의 일을 진행하며 개발의 비중을 높이면서 업무를 진행했다.&lt;/p&gt;
 &lt;p&gt;어떤 걸 개발했는지는 아래에 작성해보도록 하겠다.&lt;/p&gt;
 &lt;h3&gt;카카오뱅크 최초 해커톤, 뱅커톤 준비&lt;/h3&gt;
-&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
+&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;background: transparent;&quot;&gt;
     &lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1000px; &quot;
@@ -288,7 +288,7 @@
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 36.8%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAAAsTAAALEwEAmpwYAAACDElEQVR42h2NzUuTcQCAf7lK23J79+m2d0uXbk734ZtzllGmW7rNbbqV4jTEdFqpreEikD7QUCLoECQSnYTKwKBrdO4gCF269A90CjpEf8DvSTo8p+eBRxSSSaZHx5jOZsjPLjOeylDUgnh9YSrdZ8hZBWMuHTecx8g5dRScddxqrqOknmQ2nqSW7CffpGNeFZwzH0dMTVxnqjTJzbkZ8uk0G1c1Xhb6CIX72C0OsB23UHLX8bxboew9cYSOJbcg53VxRXVQ6bRQbjOz7BEMWHSI+7UlqvcW2dx6yGqtSiwc5/yFJJmJeWxmB7HoJQwmK4PpMUaKkxgbGwlFNE6ZjLjtCfa2f7P/4QCL3YmzSUU8Xl9jdn6B2ys13n4+4OPXQ7zNIczeIAaDnk6XFatiQtNiPNnYwm6zcmdhgXDUhyJGWB36yZdPfxnoitLusCHuvt4jNTxOLTFItfKC8sYOT4spqsMJWj1N7D/IotoVhBAEgnEGZzZRHG1EbfW0mI2ErClUT4JHMRt/0i5Eaf0Z4UCI7HAOvy/I2dYov3ZqHK5kqW84yeLoZTJdQRJe/ZHvJVfZRW3TeJcN8L3cS4/H8H821eHmTcSECET8sqc9IPuH8rLFr8lI9KL8tlaWr0biUm9SZKNilT63W070dMqOo86kOKR6ukG+L2jyx7VWORf3S8XhlGa7Q+qNJvkP3Zv02P9RoPoAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 36.8%; position: relative; bottom: 0; left: 0; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;picture&gt;
           &lt;source
@@ -329,7 +329,7 @@
 &lt;h4&gt;뱅커톤에서의 개발&lt;/h4&gt;
 &lt;p&gt;나는 뱅커톤 행사를 진행하는데에 있어서 디스플레이할 시계/럭키드로우 프로그램을 개발하고, 단체게임을 개발했다.&lt;/p&gt;
 &lt;p&gt;단체게임은 뱅커톤 개발 애셋으로 이루어진 3D 큐브 전개도에서 움직이는 큐브 조각을 타이밍에 맞춰 스페이스바를 눌러 맞추는 게임이었다. 막판 역전이 가능한 게임성을 위해 Round가 진행됨에 따라 정확도에 가중치를 두는 점수 시스템을 설계했다. 또한 CSS3 transform과 requestAnimationFrame을 활용하여 부드러운 큐브 애니메이션을 구현했다.&lt;/p&gt;
-&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
+&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;background: transparent;&quot;&gt;
     &lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 800px; &quot;
@@ -376,7 +376,7 @@
   &lt;/figure&gt;&lt;/p&gt;
 &lt;h4&gt;당일&lt;/h4&gt;
 &lt;p&gt;뱅커톤 당일날에는 1박 2일동안 밤을 새서 뒷정리도 다 하고, 토요일 오후가 넘어 터덜터덜 집에 왔다.&lt;/p&gt;
-&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
+&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;background: transparent;&quot;&gt;
     &lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 981px; &quot;
@@ -423,7 +423,7 @@
   &lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;다들 AI를 활용하여서 생각보다 일찍 개발을 마치고 좋은 발표를 하기 위해 힘쓰곤 했다.
 (이후에 카카오에서 개최한 24K 해커톤을 참관했는데, 코딩하는 시간을 약 8시간밖에 제공하지 않고 심사도 AI로 돌리더라 ㄷㄷ)&lt;/p&gt;
-&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
+&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;background: transparent;&quot;&gt;
     &lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1000px; &quot;
@@ -494,7 +494,7 @@ DevRel로서 우리 팀이 장소와 시간과 관계 없이 항상 생각하는
 &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt; 행사 &lt;span class=&quot;token function&quot;&gt;중&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;카메라 설치&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; 행사장에 포스터&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;X&lt;/span&gt;배너&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;과자&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;출입증 설치&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt; 후속 &lt;span class=&quot;token function&quot;&gt;처리&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;다시보기 편집&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; 스케치 글 작성 후 사내에 공유&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;매 회차마다 참가자 피드백을 수집하고, 무엇이 잘되었고 무엇을 개선해야 할지 꼼꼼히 기록했다. 음향, 좌석 배치, 다과 준비, 네트워킹 시간 등 세세한 부분까지 최적화해 나갔다. 행사가 끝나면 단순히 끝내는 것이 아니라, 핵심 내용을 정리한 스케치 글을 작성해서 참석하지 못한 카뱅 크루들도 인사이트를 얻을 수 있도록 했다. 또 영상 편집을 통해 다시보기 컨텐츠도 제공했다.&lt;/p&gt;
-&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
+&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;background: transparent;&quot;&gt;
     &lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 729px; &quot;
@@ -508,7 +508,7 @@ DevRel로서 우리 팀이 장소와 시간과 관계 없이 항상 생각하는
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 74.4%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAAAsTAAALEwEAmpwYAAADhUlEQVR42nXR+09aZxgHcHf5H5otabNsMVmTJi2mqTa2Q+uN9dQj6g4lbRWnpdJBu6I4KqtFW3VYb+VyTFEqCMMiUorAREG5WHXDOktKDGnW7e9Ycsj5DhhdlqBP8l5+eT95vs9bVJQtddGH2YNobDxRWVtrPH7qlOGz4i/oI0eP0seKi2lOWRntC67RDzUaupqopuuIOpoSUvp6PjHL41VxcoRanTNyRVHUR9mzW6kkbisUuNzSwl7k88GtqUJ5ZQUqeHWwP7dhXDeMkrOluH7rJr65KmAaKT6aBA3N2bdcLvfj/0Cn05kDfcH1i8vrESwseRl6xpQeejSa7lHdTXfK5Gmx9GxarjiZ7u5VpAe1k2nhVcHfnDMl4JSXNh0KmmxO4udFN2asdnZMZ4CiV4UOyQ3wqSaUc8+Dd4mHhUynA+Nj+GXVzcya9ZDKJc35yIWgZmKC0BtNmHpqYbVPptFzrx/UtQ58zW/CV9V1OH7yNB6ODMPqsGJoZIB5tmiG3WEqBN/P8E5mht13VVAP/cRqJmkYtH2Yn+7EnF6UWS0wPWrAmrsPmrEH+G1njXn31+9wvbDmwEjkALD9RjshlkogErexLZ034TR24M/AFST9V7C/0op9P4XXXhFmLXooVXLGt/wMiUQsD0YKI/vNo0RwbgxbiwZ2xazDhkOBpR+4eDFcAoeZhF9/HqFZEvF4AB6vnbmnVkAsEeUj//9T8h3GNDLCJRfAIuaxT6hKuO/zoB2oxUhvFVwTZbh/6zQWaCHWg1ashlxMbMMNs/nxQTMsyoGyM58TbSc+QSvnGKtpKEd0SIrN+WsIOYQImgm4DTXwTzcgtGJFOBZitrbXEA57CyO/n6Gs4ktC11YNT99lNv5YCk9XB2yKGoSmhIguqRHOfEjEO4hoZAnxV78yu3vxDBg6aIb/grtmJZGcU2J9pJ21fd+I/vpzoFtJbDif4u27JPZTu3j9ZgubL4PY3dth9hKvsLkZOxwM6+4Q3sHrmOgg2B8vncMoVQufth8bmwG8jPoQDXsQCjoRCQews7vDJPffHNJhPrJRRhGD39bjO/4FViUWwD4zDp/HhlBgAavLDvj983A5TRlwFcn9JPP2jxQSyUQhmKkPstvtC6VHukQCfpdYSD7okZCe5xbSZtGTFtMk6Zw3kvOWqcxdTwYCHnJ7e7s+mUo2p1KpT7NvAeSMfwBmfy0HA/VSwwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 74.4%; position: relative; bottom: 0; left: 0; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;picture&gt;
           &lt;source
@@ -543,7 +543,7 @@ DevRel로서 우리 팀이 장소와 시간과 관계 없이 항상 생각하는
 &lt;h4&gt;외부 활동&lt;/h4&gt;
 &lt;p&gt;사내 개발자들의 외부 활동 지원을 하러 외부로 많이 나가기도 했다.&lt;/p&gt;
 &lt;p&gt;Spring Camp 2025 컨퍼런스에서 카카오뱅크 개발자들의 세션을 확보하기 위해 주최측과 적극적으로 소통하고, 현장에서 서버 개발자를 홍보했다!
-&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
+&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;background: transparent;&quot;&gt;
     &lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1000px; &quot;
@@ -591,7 +591,7 @@ DevRel로서 우리 팀이 장소와 시간과 관계 없이 항상 생각하는
     &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;Spring Camp 2025에 카카오뱅크 채용 홍보와 지원을 위해 참여했다!&lt;/figcaption&gt;
   &lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;카카오 공동체 안에서의 교류 행사에도 참석했다.
-&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
+&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;background: transparent;&quot;&gt;
     &lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 956px; &quot;
@@ -605,7 +605,7 @@ DevRel로서 우리 팀이 장소와 시간과 관계 없이 항상 생각하는
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 48.400000000000006%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsTAAALEwEAmpwYAAACsklEQVR42m2SyU8TARjFG/XqgUSjHIQAtVLoMtCNLlAKKXRDCtJCwy6bgtS2WEiqMEIsWBaNUSSiFRKDCAclhBiCiQQyxIk7hngExYPB/0DamScty4H4Xd7p/fK+vMex2WxHOTunLLA6aro7v5cH/CuWDh9d1VJNF7ta6BK7ha6y6+h8o5QmCC5dWW2jG531dF2Hc6W207tW0e4si/hJkjwSUY6WJI9FtLi719M8HkTj2GgoRa0ELzEeonQCYrEQ2gwRNCoJjFYlfMEHIF/NwDcSCHfe68XI3Kw74p+eno4G45CLi1Gg8/G4e+DjZ9zf/PVXrs9h+Lx4hicUMXFcHqNV8RiNgs/UXm1i/GM9jD84xLj6XNtNLisaW+2uiH//0wNg++SMZ/jrGia2tkJqswnchDiICBFSUpOhlKVCkpoAR7kRXb0OlFVroDMlhSXaUxBnnHDvAjm7wMU94MvlZc+HjR/49nM9ZC0sgECQDLVaDrkiDedNGhTmKSFRxYLIjIFUdRKy9JiwLSsWdbncw0BEgZPvPnkW1jfx5vefkKm0DAnxZyAmhEjm85CnJWDVy0BIT0NOHEdt/llcyUkIt2Ynokkvdv/35btvKU//3Dx8Y2MheVYmDPps6LIzIZOlocKet5NQDoshA33t9bheU4hGkzx8o7kaA13e3VIOgHstNzTXua+1NuBW26VtvU7DFhUaWZMhl5VK09gii5Y16NJYR5GeHb5NsoEuL9vvc4cm7nRj1Ffv2m35EPBypc3j73Di4WBPqMCcB4VCAo1agSRuIvTZBAw6IWodZkw9GsDToW4svngS3liZx9rrqWhC7M9mfz+Bm97STnfz6mCXd+liRQklEPApoZBPiUQplFohpFTSc9QFs5YaItuo4GAP9X72+dLqwsyXhaln9igQiA77H5r9Tp0XqzVjAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 48.400000000000006%; position: relative; bottom: 0; left: 0; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;picture&gt;
           &lt;source
@@ -637,7 +637,7 @@ DevRel로서 우리 팀이 장소와 시간과 관계 없이 항상 생각하는
     &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;카카오 공동체 밋업&lt;/figcaption&gt;
   &lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;코드러너 장소 견학을 위해 수원 컨벤션 센터에도 방문했다.
-&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
+&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;background: transparent;&quot;&gt;
     &lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1000px; &quot;
@@ -651,7 +651,7 @@ DevRel로서 우리 팀이 장소와 시간과 관계 없이 항상 생각하는
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 42.4%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAAAsTAAALEwEAmpwYAAACKElEQVR42mXRW0/TABgGYBL9HQYSDBKBDRdmYGzN2KYrhY0dunWdYyuMDnegtMO6so1y2iEeliCZMQaJiTdeGG/0zsQLE/6GJv0DxPRGtzSvA7NwwXf75nvyfvkGCIK4OdCbdJJeT0Xmf9M+zy/SQ2gJNqjxXERLxigtv85p2TSjcbEFTdzgNSG/pu3tbWuNuvqzWiroLE2uXRg0Td8YUFX1EuTYsHxy3MDH98fd0zcvUSosYyubgMAt4bkqoFUrQs5GcFjZxEm7hrMfX/H92+fOl0/vwCeC0oWhqr1yfXDnqfDk7fEztFu1v/Vq0eBifmPR6zK8cw7DabMa09ZJ455pzJiymA23026spOJGZjX2p7G7hVetmvgfVK/AVlOVK3IBxY1MN0aHYLfZ4XG5MTpyF7ZZB+yEA7MOAkODg6AeuDAxPg7LpLlzuFvCh9O2dA1svziQdxUR1ZLYzfHp3pIHYR8Fi8kESRSglLZQlARYzGOIBijMzNwH6XZ2Xh810T5qXgczq5y8kmCRjEe6bDgAJhRAeJHCneHbmDSbMTExhtHREQwP3cKCdw5W6xQI23Qny3MQcvwV2P8yRZFylA5iyT/fTSYiSKUegWVpMEwIfp8X5IL7IkM0OI/lZBgRxo94PNRh40E8JF2X4KXVb5jLpTc3CnzvvMfn24qk7+8peqUs6Qf7il4ti3qtrugME9Bn7TZdkjK6ouT1SlU6r6oSyjtSod/wH7rzGTcuomRIAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 42.4%; position: relative; bottom: 0; left: 0; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;picture&gt;
           &lt;source
@@ -685,7 +685,7 @@ DevRel로서 우리 팀이 장소와 시간과 관계 없이 항상 생각하는
     &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;세상 거대한 수원 컨벤션 센터&lt;/figcaption&gt;
   &lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;카카오뱅크 내부 인턴들끼리 네트워킹 활동, 일명 어시의 숲도 있었다.
-&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
+&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;background: transparent;&quot;&gt;
     &lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 877px; &quot;
@@ -699,7 +699,7 @@ DevRel로서 우리 팀이 장소와 시간과 관계 없이 항상 생각하는
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 59.599999999999994%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAAAsTAAALEwEAmpwYAAAC+UlEQVR42nXT60uTcRQH8JH1JogsKk0q03Li1FLpAlIZvfBlN1kXyRgZYZhpmF0ofaxMrKXOx7VpFzOl+TT1mc5NN13Pcu7RXXUzL1O0SCMq6g8QfvDNNrthnTfn3YdzvocjEMyXWq0O8ndr/9mr7WbDMp2rJbTFzMZYR9nkk2fYjcJtbMyOvWzCnlQ2OCKWXStMYNcLk1pCohINIVsTMgWBWiL4WZTZvPRHv931unqfyQeR8z2J48eRZRpCOiVFcFgkRNEipOzaiRUborE6PAbBG6NJcHgcVobH0gtM0C9QkJLiB8MOHK6KyixA4TNm7nJjGynW8iTjQR0Ji99N7p8/TbKPHSSC5WtI6NY4si4ybi5kkxARW0Sy/4KrIuPpQ/tTcDM3m5TIKnHpUSMkJTW4WFELPduAO9ezEBGbhBPSOuwqUpLEHApCSX5gQrH4N0hRlB8sUDbRGTnXID6SRkrLSpB/7QpulVdApdXAWl+OZvldSB/WQPlCgXv1T0mh5hVymzk/KF64w18ZPuZ9dN3gLNKKleTchXzQ0jKwrAac4xX6zCq0tWvQ1NIKY/tj2EwaMuEawBBnpP88bGBjKgAebeDodEUnJEVyonpWj9GhXlgdOui6lNAZGJg5DlaTHhZLL0a8Q+TT7DvoO7T/AgMrZ5XK6YLSGpSVKwivU6N/2A6Ob4aTN2Jy7A0cXgcUFgtGvSp4PS7y7ctHzE77/CCAxRlShbfpispqSCurSU93N3TufnwYZ8F6HOA9nXC7myGzuOYxHpO+EWIwmZCZWxDIUKxeDD5/UldVVvkQOTfuzFn5ftI54SQzo01E77QQ3vWEDDsNxNbbMQ91kDaDce6WTI7U9ExZAPzHlW8WFVdnZeciOy+PdGrVaJ3w4OusFp/fGjHjewm3/TksvTVo19Wjo8dEHF4P9By3OMOfbyPanizZHJOkPZ5xSuWyW5haWx8zPaxgvHY5M2hjmJkpOzM1NsjY+NfM+LBbNTbi1brsAxJ/hhTlf73vaeTPzMpIKvIAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 59.599999999999994%; position: relative; bottom: 0; left: 0; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;picture&gt;
           &lt;source
@@ -732,7 +732,7 @@ DevRel로서 우리 팀이 장소와 시간과 관계 없이 항상 생각하는
   &lt;/figure&gt;&lt;/p&gt;
 &lt;h3&gt;👨‍💻 코드러너 행사 진행을 위한 개발&lt;/h3&gt;
 &lt;h4&gt;&lt;strong&gt;코드러너 소개&lt;/strong&gt;&lt;/h4&gt;
-&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
+&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;background: transparent;&quot;&gt;
     &lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 800px; &quot;
@@ -788,7 +788,7 @@ DevRel로서 우리 팀이 장소와 시간과 관계 없이 항상 생각하는
 &lt;h4&gt;1. 코드러너 메인서버 개발&lt;/h4&gt;
 &lt;p&gt;요구사항에 따른 백엔드 개발부터 시작했다. &lt;code class=&quot;language-text&quot;&gt;FastAPI + PostgreSQL + Docker Container&lt;/code&gt; 스택으로 구성했고, 다른 팀과 협의한 AES-256 대칭키 암호화를 통해 사용자 ID를 안전하게 관리했다.&lt;/p&gt;
 &lt;p&gt;RESTful API 설계 원칙에 따라 출석 체크, 베팅, 럭키드로우 응모권 관리 엔드포인트를 구현했다. FastAPI로 제대로 개발해보는 건 처음이어서 Pydantic 모델링과 의존성 주입 패턴을 익히는 데 시간이 걸렸다.&lt;/p&gt;
-&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
+&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;background: transparent;&quot;&gt;
     &lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1000px; &quot;
@@ -846,7 +846,7 @@ DevRel로서 우리 팀이 장소와 시간과 관계 없이 항상 생각하는
 &lt;p&gt;단체 게임 컨셉을 정하는 데 많은 논의가 있었는데, 결국 &lt;code class=&quot;language-text&quot;&gt;김카뱅의 환전소&lt;/code&gt;라는 보드게임 &apos;카지노&apos; 룰 기반 게임으로 기획했다.&lt;/p&gt;
 &lt;p&gt;참가자들이 실물 주사위를 굴린 결과를 Admin 화면에 반영하면, 관객들이 Display 화면에서 경기 현황을 실시간으로 확인할 수 있도록 했다.&lt;/p&gt;
 &lt;p&gt;WebSocket 기반 실시간 양방향 통신으로 Supervisor Admin과 Display 화면 간 상태를 동기화했다. 고빈도 데이터 전송을 위한 debouncing과 throttling을 적용하고, 불필요한 리렌더링을 방지하기 위해 노력했다.&lt;/p&gt;
-&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
+&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;background: transparent;&quot;&gt;
     &lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 480px; &quot;
@@ -907,7 +907,7 @@ DevRel로서 우리 팀이 장소와 시간과 관계 없이 항상 생각하는
 &lt;h1&gt;배경&lt;/h1&gt;
 &lt;p&gt;군대에서 전역을 한 후 나는 개발에 입문하게 되었고 당시에 멋사라는 동아리에서 프론트 개발에 대해서 공부를 하게 되면서 자연스레 프론트 개발에 관심이 생기게 되었다.&lt;/p&gt;
 &lt;h4&gt;사용자를 배출한 첫 프로젝트&lt;/h4&gt;
-&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
+&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;background: transparent;&quot;&gt;
     &lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1000px; &quot;
@@ -955,7 +955,7 @@ DevRel로서 우리 팀이 장소와 시간과 관계 없이 항상 생각하는
     &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;경험 공유 상담 플랫폼 - 셰어마인드&lt;/figcaption&gt;
   &lt;/figure&gt;
 특히 난 운이 좋게도 좋은 사람들을 만나 &lt;code class=&quot;language-text&quot;&gt;셰어마인드&lt;/code&gt; 라는 실사용자가 어느 정도 나오는 프로젝트를 진행하게 되었고, 나의 첫번째 목표인 &apos;사용자가 있는 서비스 만들기&apos; 를 이뤄냈다. 재밌는 경험이었다. 무언가애 완전히 몰입할 수 있던, 정말 좋은 기회였다.&lt;/p&gt;
-&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
+&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;background: transparent;&quot;&gt;
     &lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1000px; &quot;
@@ -969,7 +969,7 @@ DevRel로서 우리 팀이 장소와 시간과 관계 없이 항상 생각하는
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 46%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAAAsTAAALEwEAmpwYAAACSElEQVR42j1Ry0tUURy+0a7Uaea+X3PvnXvnccfHBJr0koLCKDCjWggh5CKMRGRGi2Km0BknXzNYKNkmN60iSqQWydDCatF/0qLF7JI07tfvXNHF4RzOd873+nHZrh44XhaWmwEvG2iNymg5IdIuIcIr4Tkq6rC9Dhh+BkaXj5Hhwb/V0oOdmeLYzlw5v7NYnfxTfz61W5st/OLUuAfNSkHSHcimB9lwEZNN8EocouYgKpkhZjntMHvboV/0MVW4i5WlCbxYLODN6zIWKveCWnUMczOjTS6Z6YST6oCg2hB0FyJ91qwkTNeHGk+GAqKeQIwEDDMNRU1ibHQIay8fY+PDW2x92cTGu9WAEdcXJpucbpM7zcbxiIA2inkQUTUT0OIukbqhWFTUICgmjhE+X3mGH41NbDc+4ef3Br59/Rxsb33E5vv1JqcYibC7tphCSyVSBTHJIBGLoibCyFFJD0Uk1UIL4QvlCl7NVzFbLKI2XcLaYjmoTxdRKT1scqrphgNhw2CkbBconumkoFN0JhhTLLSSGEsS4TWsLC/j1sBVKEIcua7zGLl5LejvO4WM7zPCBJJ+jlyaRCiH090nTEMyPERCESlczLVI2Hg+j6fFRxi81Ee1pHC6uztIWAbaO7JNTqYhMDesnwOHrALmTCH3vGKHd/vOLbD3E+OjuH7lMnK5NE72dBImBNyRozh3trfJMVXbyxCBcxh7v0P7sEeehhIRdPB0H9MtLD0Z+Td848ze/cLA3up6fu/2nQu7pi0HQ8P9v/8DkromXicNQiQAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 46%; position: relative; bottom: 0; left: 0; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;picture&gt;
           &lt;source
@@ -1015,7 +1015,7 @@ DevRel로서 우리 팀이 장소와 시간과 관계 없이 항상 생각하는
 어느새 가벼운 우울감과 불안감이 나를 잠식하고 있었기에, 일단 지금 당장 몰입하기 어려운 개발을 제쳐놓기로 했다.&lt;/p&gt;
 &lt;p&gt;그리고 내가 그전까지 하고 싶었던 것들로 일주일을 채워갔다. 운동, 달리기, 밴드 합주, 야구 시청...
 그때는 하루에 2번씩 헬스장에 갔었다.
-&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
+&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;background: transparent;&quot;&gt;
     &lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1000px; &quot;
@@ -1073,7 +1073,7 @@ DevRel로서 우리 팀이 장소와 시간과 관계 없이 항상 생각하는
 &lt;p&gt;이전에 최종에서 떨어져본 경험으로 무장하여 자신감 있는 태도로 편하게 이야기를 나눴고, 다음 날 합격 문자가 왔다!&lt;/p&gt;
 &lt;h1&gt;업무 시작&lt;/h1&gt;
 &lt;p&gt;내가 취업한 &lt;code class=&quot;language-text&quot;&gt;코딩밸리&lt;/code&gt; 는 자사 어플을 통해 초심자들을 타겟으로 코딩 교육 컨텐츠를 &lt;code class=&quot;language-text&quot;&gt;모바일 앱, 웹 환경&lt;/code&gt;에서 제공하는 스타트업이었다.
-&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
+&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;background: transparent;&quot;&gt;
     &lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1000px; &quot;
@@ -1136,7 +1136,7 @@ DevRel로서 우리 팀이 장소와 시간과 관계 없이 항상 생각하는
 &lt;h4&gt;AI 도움을 받은 코스북 제작&lt;/h4&gt;
 &lt;p&gt;코스북을 제작하는데에 AI 도움을 적극적으로 활용했다. 강의 스크립트를 input으로 받으면 앤트로픽의 클로드 모델을 사용하여 학습 데이터, 가이드 등을 포함한 프롬프트 틀을 설정해서 코스북에 들어갈 내용을 마크다운으로 생성해주는 시스템을 구축했다.&lt;/p&gt;
 &lt;p&gt;한 페이지 당 책의 특정한 규격에 맞춰서 이미지와 글을 배치해야 하는 문제점이 있었는데, 마크다운으로 제작한 텍스트 블록들을 웹 뷰를 통해 Python 코드로 HTML을 제어하여 인쇄 규격에 맞춰서 커스텀으로 편집하여 PDF로 추출하는 방식을 개발했다. 이를 통해 일관된 품질의 교육 자료를 효율적으로 제작할 수 있었다.&lt;/p&gt;
-&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
+&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;background: transparent;&quot;&gt;
     &lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 452px; &quot;
@@ -1183,7 +1183,7 @@ DevRel로서 우리 팀이 장소와 시간과 관계 없이 항상 생각하는
 &lt;p&gt;3개월의 계약이 끝난 뒤, 근무 연장 의사를 물어보셨고 나는 연말에 CES 부스 준비와 학과 컨퍼런스 참석 일정이 있어서
 회사와 파트타임으로 오후 2시부터 6시까지 일하는 것으로 합의했다.&lt;/p&gt;
 &lt;p&gt;회사에서 배려해주신 덕분에 엄청난 워라밸을 챙기면서, 내가 진행중인 프로젝트에 더욱 집중할 수 있었다.&lt;/p&gt;
-&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
+&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;background: transparent;&quot;&gt;
     &lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1000px; &quot;
@@ -1197,7 +1197,7 @@ DevRel로서 우리 팀이 장소와 시간과 관계 없이 항상 생각하는
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 28.4%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAGCAYAAADDl76dAAAACXBIWXMAAAsTAAALEwEAmpwYAAABcElEQVR42mWQS0vjUBiGTy6T2DRiWhPEYlcOuKiKeNmLP0B/gX9GcO0mUhnEtS6GgZnNMF5Q6iVpEnpL1LY/JYvH9NSZzSweOJyP857ne4U+oyNUgRD/o6iKnJ2c+KSDjCAIaLfbBaEkCEJ5NyEMwwm5+Lq3TH1jiZJVwjAMzBkTRVEwTROnWqE8W+a0ecp4PKbf75NlKZ1uShSlvL9l9LpdGRZF0eSzXMx7Lp7r4czOYds2lmWhKSqVukdjZ51arYbf9BkOhyRJwmDQ5fp3h+8/2vx5LGyjWNpOAl+CIBfSpvSFuaqFrutyVVVTqW8u01hbpeJV8M98RsMRvV6P7DXl4bbD5dVPzn9d8xDGREVgHMe0Wq1cGJqB23BZOVjBMA2EIrCrNl59AddxcRYd/G8+49F05SROeH554ubufmomO51SWOZCll9YapqGbhSGmmBrd5uj82P2Dw+wa2WaF02yNJNd/X2cxPG/82eY7PADxxEbXfwtAqQAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 28.4%; position: relative; bottom: 0; left: 0; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;picture&gt;
           &lt;source
@@ -1248,7 +1248,7 @@ DevRel로서 우리 팀이 장소와 시간과 관계 없이 항상 생각하는
 &lt;/blockquote&gt;
 &lt;h2&gt;멋사를 선택한 이유&lt;/h2&gt;
 &lt;p&gt;시작은 군 전역 후 넘치는 열정과 개발에 대한 막연한 호기심, 그리고 창업에 대한 관심이었다.&lt;/p&gt;
-&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
+&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;background: transparent;&quot;&gt;
     &lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1000px; &quot;
@@ -1300,7 +1300,7 @@ DevRel로서 우리 팀이 장소와 시간과 관계 없이 항상 생각하는
     &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;우리가 뭘하러 모였을까요&lt;/figcaption&gt;
   &lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;전역 후 사회 복귀 계획을 세우던 중 우연히 &apos;멋쟁이사자처럼&apos;이라는 동아리를 알게 되었다. &lt;strong&gt;내 아이디어를 내 손으로 구현한다&lt;/strong&gt;는 모토와 배움에 열정 있는 초심자를 위한 커뮤니티라는 점이 나에게 큰 매력으로 다가왔다.&lt;/p&gt;
-&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
+&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;background: transparent;&quot;&gt;
     &lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1000px; &quot;
@@ -1357,7 +1357,7 @@ DevRel로서 우리 팀이 장소와 시간과 관계 없이 항상 생각하는
 &lt;h4&gt;1학기 (교육)&lt;/h4&gt;
 &lt;p&gt;멋사 활동은 1년 동안 장기적인 여정으로 진행되었다.&lt;/p&gt;
 &lt;p&gt;HTML, CSS, Git을 다루는 기초부터 시작해, 이후 프론트엔드/백엔드 트랙으로 나뉘어 매주 2회 저녁 세션에서 운영진들이 준비한 교육자료를 통해 체계적으로 학습했다.&lt;/p&gt;
-&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
+&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;background: transparent;&quot;&gt;
     &lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1000px; &quot;
@@ -1371,7 +1371,7 @@ DevRel로서 우리 팀이 장소와 시간과 관계 없이 항상 생각하는
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 41.2%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAAAsTAAALEwEAmpwYAAABv0lEQVR42lWQy4oUMRiF+xmkp7s6qUoldUvq1nVrq9oLIqKjD6ArFUQQd4LoQsS3cCWDG19mdKXvYoEFLo5/Msrg4sBJSL7/nH9VVwV8oXB6s8SHFxNeP27x5ulwoScXekv+3bMR75+PuH+rWmSU/uSczbvdbhZCzL7vz0EQzFKpedU1NfwgxsuHPb5/voPzj9dx/ukuvp3d+09fz07x48sDvHrUQMUadVWCMQatNeI4hlIKwzBglaUJkiQB4z44F9BJCh6EWJ94WG/+yvqTLa6st0iEwKHv0ZEspCgKpGnq/PF4xCoMQ0gpQbEd2D40RkOIEFSDJJwPSZyGRoKjbfZou84lM8a4fxY4TRNWFmYPjHHUZYbbxz0OlUStBaauxI3BoMsFxlohkRy5iR0wz3MawJFlmftvg7nK1lwCDa5NIyTdsZ2HfVkgUtJ5nzN4W48AEdq2cVX/7TCKoktgQrGTOHJ1jFbo6gxaMWSRj9IkKLMQJiafBpABp+E+AfcE1vC8ratsq9umDlg3PeruKu1JIq9STIcammBxyNE1FdoyRSoZQS2QIQjF737ofxV5sWw2m4WSLlR7IeAyjuPyBz1A9Lo4cb1mAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 41.2%; position: relative; bottom: 0; left: 0; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;picture&gt;
           &lt;source
@@ -1410,7 +1410,7 @@ DevRel로서 우리 팀이 장소와 시간과 관계 없이 항상 생각하는
   &lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;1학기가 끝날 무렵, React로 간단한 게시판을 만들 수 있는 수준까지 성장했다. 학업과 병행하다 보니 지식이 완벽히 체계화되진 않았지만, 운영진들의 도움 아래 직접 미션을 수행하며 개발의 즐거움을 느꼈다.&lt;/p&gt;
 &lt;p&gt;학기 중간에는 아이디어톤과 POV 세션을 통해 특정 문제 상황에 대한 내 아이디어를 발표하고 피드백을 받는 소중한 경험도 할 수 있었다.&lt;/p&gt;
-&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
+&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;background: transparent;&quot;&gt;
     &lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1000px; &quot;
@@ -1463,7 +1463,7 @@ DevRel로서 우리 팀이 장소와 시간과 관계 없이 항상 생각하는
 &lt;p&gt;멋사의 꽃은 단연 양재 AT센터에서 수천 명이 모이는 &apos;중앙 해커톤&apos;이다.
 이를 준비하기 위해 여름방학 동안 테킷의 무료 강의와 &apos;한 입으로 먹는 리액트&apos; 강의를 복습하며 실력을 다졌다.&lt;/p&gt;
 &lt;p&gt;중앙 해커톤에 함께 나가는 건국대 멋사 백엔드 친구와 연습겸 사이드 프로젝트도 진행했다. 이떈 참 성장에 목말라 있던 시기였다.&lt;/p&gt;
-&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
+&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;background: transparent;&quot;&gt;
     &lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1000px; &quot;
@@ -1513,7 +1513,7 @@ DevRel로서 우리 팀이 장소와 시간과 관계 없이 항상 생각하는
     &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;친구와 모의 해커톤을 통해 만들었던 추억 아키이빙 웹사이트&lt;/figcaption&gt;
   &lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;중앙 해커톤을 준비하며 나온 아이디어는 &apos;현재 내가 탄 지하철의 위치를 알려주는 서비스&apos;였다. 당시만 해도 이런 서비스가 없었고(지금은 네이버 지도에서 제공), 지하에서 GPS가 부정확해지는 문제를 해결하는 것이 관건이었다. 결국 사용자가 직접 화면에서 선택하는 방식으로 해결책을 찾았다.&lt;/p&gt;
-&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
+&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;background: transparent;&quot;&gt;
     &lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1000px; &quot;
@@ -1527,7 +1527,7 @@ DevRel로서 우리 팀이 장소와 시간과 관계 없이 항상 생각하는
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 41.2%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAAAsTAAALEwEAmpwYAAABGklEQVR42p2SzUrDQBDHA/oOzcfuJtlsNtt8NLiVVGolopCjeikevIsvoPYBkgcQfL+CFHqsBz116ZjUCIJYMQMze/nxY/7DatqPmu41k5LhQ989X2Gdz1GPvTQ9iLJ5LA5fienff2d3Vp7n+80raFpNRgUcDXM1zk5BJmOgOFIeicGxRLlltU92t7CFKArLgA6AEr52Ubpxkdhg3V47Vh+IwcuW/lv4BRGdV7YZQMSu1UXxBKP0EULvSlGc1ELWQWiKyrEa4VQVk2eQ4R14+ES5qOuGrZA5vuJ19NBP6pbKNgUQq1NkVgk6AhlfKt+WkPhnkGe3deT4v0Jt+xVwj848cvB2LG8W1AqWyAiWWGeL+q7vtsFnvwk/ADBaWwbPWXB2AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 41.2%; position: relative; bottom: 0; left: 0; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;picture&gt;
           &lt;source
@@ -1561,7 +1561,7 @@ DevRel로서 우리 팀이 장소와 시간과 관계 없이 항상 생각하는
     &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;당시에 만들었던 왓섭(WhatSub) 서비스의 로딩 UI&lt;/figcaption&gt;
   &lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;처음 본 해커톤 현장의 열기는 지금도 잊을 수 없다. 우리 팀은 수상하지 못했지만, 서강대 다른 팀이 수상하여 다 함께 기뻐했던 한여름 밤의 꿈 같은 경험이었다.&lt;/p&gt;
-&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
+&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;background: transparent;&quot;&gt;
     &lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1000px; &quot;
@@ -1575,7 +1575,7 @@ DevRel로서 우리 팀이 장소와 시간과 관계 없이 항상 생각하는
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 57.599999999999994%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAACE4AAAhOAFFljFgAAADpElEQVR42g3QbVDaBQDHcd6VFbPaqp0uFZ1MBRF8ApUHJXA+MASTAGWKOpxOBewvNgSVqQgi+HSKdpqy9BylV3rZFt4tvWqmrzrWrsvuurrjul51l11vmvL/xYvf28/d70tpqJGcdLfUnTRp605yMjNPOCmJJ2XM5F8IXcVza7sctrZq9DVL0FMvIM31AhjrpadmTbVvbcI0sTLW4Z3qVXk14qwJQsmc9hNyO+W+kYuvRlvRpVLi8sU3IGXRsGqUw9leBWu3Di7XEOx2C8acQ+g1d0JfU4wPmqR46DdhZ6YDm14D+lsk0a3xBuzN6SOUX+fvkj+HtsnA4jz5evxbpIBBJ7d6ZKSvsxwLdiNCPjv8Tg8G7vlxxzSK9ptyUsplnSklxWdaRdWZ3Wo/c7qm/gtOduDxYuNvFJ/DgSffHuAoGEAltxi1+Wwc2d5DYPgmhuvLEFRfg0tVAKKChVtFNBjU5dBKOKC/nYQBWTZ2HB1Yf/AouuTuRtCpi1D8/nkcb36MfnUdrryZCCthwdPQbqydAhVF2VDxGEhLSEBlSQHaKniQiXKhEDCgyEuFU56JHyYN+HrZHZ0duoUluypCOf7uMfYWpzA3PAidiIMNSxueHX8DS7sGN0rZYGWkgstIg/IdLnrbNBDzC5B/NQk95QwQUgaWzK3Y9nujH3mJGKiOgYcH+H5jBbtTLszrZQh1q/Hjk32M9engs2owQjRgxq7H7EAzepvKIRUWgJGciNviPNy/LcRs/wA+8c9Glz3mGKiJUD5/EMCHHicOVhfxcGMV+5+tY9Vtg7GxEn2mLuxOO7DmuYeFmUWoamTgsK4h/sWXMKnMw55VCqJnFF+sLEU3FoYwfzd2ecZpg810B1ub6/hyP4Sj2PydWnQ3VsGhEmGtjglHLR9mmQj5GWkQCwpgaVGisTQPS4Yy2LsIfProWXQz4MNcryJCUdTIyaz0DNLY0kz+uRMkf3IT5KFFTTbJRbhRQoeYTQcvnYZSRjq0VXyISnIx+L72nJ6adD6mk5wP2obPp5Z3no/0GRB06X+nsFMz8AL1Ilj0LBxO67Fr4mDbKIPuXQlkTBEEKRzksJmgpdDQ0aqFtlYJSXIuijhM8EVCSKVlKOQVRitF+VgZaYtQJomu8GuXE8LUuFfCVbwrYb2QEfaorz+9Lhb+xc8p+qc+W3JaxBec8nj8v/O5vH/5hcI/qi/wPdR4qvvCq5fG4+Ko4y9TL7mvpmf7ivnC/v8BMkH/I1MwQ/sAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 57.599999999999994%; position: relative; bottom: 0; left: 0; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;picture&gt;
           &lt;source
@@ -1626,7 +1626,7 @@ DevRel로서 우리 팀이 장소와 시간과 관계 없이 항상 생각하는
 &lt;h3&gt;겨울방학, 멋사 1년 판 짜기&lt;/h3&gt;
 &lt;p&gt;처음에는 5명으로 시작한 운영진이었기에 인원 보강이 필요했다. 아름아름 연락을 돌려 프론트엔드 4명, 백엔드 3명으로 총 7명의 운영진을 추가 모집할 수 있었다.&lt;/p&gt;
 &lt;p&gt;퀄리티 높은 교육을 위해서는 운영진의 개인 역량이 가장 중요하다고 판단했다. 이에 파트별 스터디를 계획했다. 프론트엔드팀은 전년도 세션 자료를 복습하고, tanstack-query와 tailwind-css 같은 업계에서 활용되지만 아직 익숙하지 않은 기술 스택을 학습했다.&lt;/p&gt;
-&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
+&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;background: transparent;&quot;&gt;
     &lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1000px; &quot;
@@ -1640,7 +1640,7 @@ DevRel로서 우리 팀이 장소와 시간과 관계 없이 항상 생각하는
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 18.4%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAECAYAAACOXx+WAAAACXBIWXMAACE4AAAhOAFFljFgAAAA20lEQVR42mWPy26DMBBF/QHZIZ41uAKDS1tTim0g3rGI+v+fEmUVKeF2iFQUqYuj0Yyuzsww7z1+Tif4aYIzBkmSPEjTdGPdKvVXzrlkLDzkOT+/Co4gCG5RFN3jOL5TZoc55zD2PYa2RS0EXjhHlmUkiTcRCZMnITsopS7TNGNZltVai67rng8AGwaDefbo+28o1eLj/RO1rFHkBUQh1pwqBXdh0zQXrTVl1VpVFQQd8Sd7CF1/hP2aMehxZxw8LM1NN636zYBnxTUMQ0nQy/lZSomyLG+05N/Lv4aYaBxhw7fkAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 18.4%; position: relative; bottom: 0; left: 0; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;picture&gt;
           &lt;source
@@ -1682,7 +1682,7 @@ DevRel로서 우리 팀이 장소와 시간과 관계 없이 항상 생각하는
 &lt;h3&gt;동아리 지원자 100명+ 만들기&lt;/h3&gt;
 &lt;p&gt;동아리 대표로서 첫 번째 목표는 겨울방학에 많은 지원자를 모으는 것이었다. 이를 위해 단순 에브리타임/서담 홍보를 넘어선 추가적인 액션이 필요했다.&lt;/p&gt;
 &lt;p&gt;홍보팀에서는 서강대 멋사의 이미지를 아트웍 느낌으로 리브랜딩하여 인스타그램에 게시물을 올리기 시작했다.&lt;/p&gt;
-&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
+&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;background: transparent;&quot;&gt;
     &lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 971px; &quot;
@@ -1730,7 +1730,7 @@ DevRel로서 우리 팀이 장소와 시간과 관계 없이 항상 생각하는
 &lt;p&gt;이와 함께 서강대 멋쟁이사자처럼 소개 사이트를 처음으로 제작했다.
 흥미를 끄는 스크롤 인터랙션과 three.js로 구현한 멋사 로고 등 시각적으로 매력적인 요소들을 많이 추가했다. 지원 접수 기능도 포함되어 있어 짧은 기간 동안 기획/디자인/개발/검수를 위해 모두가 고생했던 첫 운영진 프로젝트였다.&lt;/p&gt;
 &lt;p&gt;또한 학교 커뮤니티인 서담의 연애 상담글들을 학습 데이터로 활용한 챗봇을 개발했다. &apos;까칠한&apos; 또는 &apos;친절한&apos; 서담이를 선택해 연애 고민을 털어놓으면 답변해주는 서비스였는데, 리크루팅 기간에 맞춰 이 챗봇 웹사이트를 서담에 공유했더니 인기글이 될 정도로 화제가 되었다.&lt;/p&gt;
-&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
+&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;background: transparent;&quot;&gt;
     &lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 922px; &quot;
