@@ -13,27 +13,27 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 //
 
 const TagFilter = ({ tagList, selectedTag, setSelectedTag }) => (
-  <div className="flex gap-2 mb-2 items-center bg-darkBackground rounded-lg px-2 py-4 mt-2">
+  <div className="flex gap-1 md:gap-2 mb-2 items-center bg-darkBackground rounded-lg px-2 py-2 md:py-4 mt-2 overflow-x-auto w-full">
     <button
       onClick={() => setSelectedTag("")}
-      className={`px-2 py-0.5 border-2 ${
+      className={`px-1.5 md:px-2 py-0.5 border-2 text-xs md:text-sm ${
         selectedTag === ""
           ? "bg-white text-black font-bold"
           : "border-white text-white hover:bg-[#383737] font-bold"
-      } rounded-lg hover:scale-110 hover: transition-all`}
+      } rounded-lg hover:scale-110 hover: transition-all whitespace-nowrap flex-shrink-0`}
     >
       All
     </button>
-    <div className="w-0.5 h-[30px] bg-white"></div>
+    <div className="w-0.5 h-[20px] md:h-[30px] bg-white flex-shrink-0"></div>
     {[...tagList].map(tag => (
       <button
         key={tag}
         onClick={() => setSelectedTag(tag)}
-        className={`px-2 py-0.5 border-2 ${
+        className={`px-1.5 md:px-2 py-0.5 border-2 text-xs md:text-sm ${
           selectedTag === tag
             ? "bg-white text-black font-bold"
             : "border-white text-white hover:bg-[#383737] font-bold"
-        } rounded-lg hover:scale-110 hover: transition-all`}
+        } rounded-lg hover:scale-110 hover: transition-all whitespace-nowrap flex-shrink-0`}
       >
         {tag}
       </button>
@@ -55,7 +55,7 @@ const PostCard = ({ post }) => {
   return (
     <div
       key={post.fields.slug}
-      className="bg-darkBackground shadow-[rgba(100,_100,_111,_0.2)_0px_7px_29px_0px] rounded-lg overflow-hidden hover:scale-105 hover: transition-all "
+      className="bg-darkBackground shadow-[rgba(100,_100,_111,_0.2)_0px_7px_29px_0px] rounded-lg overflow-hidden hover:scale-105 hover: transition-all w-full"
     >
       <Link to={post.fields.slug} itemProp="url">
         <article className="p-0" itemScope itemType="http://schema.org/Article">
@@ -63,36 +63,36 @@ const PostCard = ({ post }) => {
             <GatsbyImage
               image={thumbnail}
               alt={title}
-              className="w-full h-60 object-cover"
+              className="w-full h-40 md:h-60 object-cover"
             />
           )}
 
-          <div className="px-5">
+          <div className="px-3 md:px-5">
             <h2
-              className={`text-2xl font-bold mt-5 mb-0 border-none break-keep`}
+              className={`text-lg md:text-2xl font-bold mt-3 md:mt-5 mb-0 border-none break-keep`}
               style={{ color: pointColor }}
             >
               {title}
             </h2>
-            <small className="text-[#B0B0B0]">{post.frontmatter.date}</small>
+            <small className="text-[#B0B0B0] text-xs md:text-sm">{post.frontmatter.date}</small>
 
-            <div className="flex gap-2 my-3">
+            <div className="flex gap-1 md:gap-2 my-2 md:my-3 flex-wrap">
               {tags.map(tag => (
                 <button
                   key={tag}
-                  className="px-2 py-0.5 border-2 border-white rounded-lg text-white hover:bg-[#383737] font-bold"
+                  className="px-1.5 md:px-2 py-0.5 border-2 border-white rounded-lg text-white hover:bg-[#383737] font-bold text-xs md:text-sm"
                 >
                   {tag}
                 </button>
               ))}
             </div>
-            <section className="mt-2">
+            <section className="mt-2 md:pb-0">
               <p
                 dangerouslySetInnerHTML={{
                   __html: post.frontmatter.description || post.excerpt,
                 }}
                 itemProp="description"
-                className="text-white break-keep"
+                className="text-white break-keep text-sm md:text-base"
               />
             </section>
           </div>
@@ -107,7 +107,7 @@ const PostCard = ({ post }) => {
 //
 
 const PostList = ({ posts }) => (
-  <div className="flex flex-col gap-10 pt-4">
+  <div className="flex flex-col gap-6 md:gap-10 pt-4 w-full">
     {posts.map(post => (
       <PostCard key={post.fields.slug} post={post} />
     ))}
@@ -165,7 +165,7 @@ const BlogIndex = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <Bio />
-      <p className="text-3xl font-bold text-white m-0 mt-5">
+      <p className="text-xl md:text-3xl font-bold text-white m-0 mt-5">
         {selectedTag === "" ? "All " : `${selectedTag} `}
         {filteredPosts.length} Posts
       </p>
