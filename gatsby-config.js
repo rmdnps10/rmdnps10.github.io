@@ -53,6 +53,9 @@ module.exports = {
               withWebp: true,
               quality: 90,
               linkImagesToOriginal: true,
+              backgroundColor: `transparent`,
+              disableBgImageOnAlpha: true,
+              wrapperStyle: `background: transparent;`,
             },
           },
           {
@@ -66,7 +69,17 @@ module.exports = {
       },
     },
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        defaults: {
+          formats: [`auto`, `webp`, `png`],
+          placeholder: `blurred`,
+          quality: 90,
+          backgroundColor: `transparent`,
+        },
+      },
+    },
     {
       resolve: `gatsby-plugin-feed`,
       options: {
