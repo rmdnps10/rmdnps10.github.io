@@ -15,7 +15,7 @@ module.exports = {
       university: `Sogang University, Art&Technology`,
       summary: `👨‍💻 Junior Developer (Web, AI)`,
     },
-    description: `Web, AI, PS에 대해 기록합니다.`,
+    description: `모든 걸 기록해보려 합니다.`,
     siteUrl: `https://rmdnps10.github.io/`,
     social: {
       instagram: `rmdnps10`,

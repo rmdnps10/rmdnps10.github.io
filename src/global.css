@@ -195,6 +195,16 @@ ol {
   list-style-image: none;
 }
 
+ul {
+  list-style-type: disc;
+  padding-left: var(--spacing-8);
+}
+
+ol {
+  list-style-type: decimal;
+  padding-left: var(--spacing-8);
+}
+
 ul li,
 ol li {
   padding-left: var(--spacing-0);
@@ -210,6 +220,12 @@ li *:last-child {
 }
 
 li > ul {
+  margin-left: var(--spacing-8);
+  margin-top: calc(var(--spacing-8) / 2);
+  list-style-type: circle;
+}
+
+li > ol {
   margin-left: var(--spacing-8);
   margin-top: calc(var(--spacing-8) / 2);
 }
@@ -244,6 +260,16 @@ table {
 
 table thead tr th {
   border-bottom: 1px solid var(--color-accent);
+  padding: var(--spacing-3) var(--spacing-4);
+}
+
+table tbody tr td {
+  padding: var(--spacing-3) var(--spacing-4);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+table tr {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 /* Link */
