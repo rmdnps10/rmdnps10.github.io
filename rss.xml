@@ -1,4 +1,234 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[Web, AI, PS에 대해 기록합니다.]]></description><link>https://rmdnps10.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 15 Sep 2025 03:26:10 GMT</lastBuildDate><item><title><![CDATA[서비스 개발부터 DevRel까지: 카카오뱅크 인턴쉽 회고]]></title><description><![CDATA["금융으로 세상을 바꾸는 기업, 카카오뱅크에서 6개월의 인턴쉽을 회고합니다. (+ 네이버랩스 인턴 최종 면접후기)" 네이버랩스 최종 탈락에서 카카오뱅크 인턴 합격까지 지난 1월, 나는 네이버랩스의 Robot FE Developer…]]></description><link>https://rmdnps10.github.io/카카오뱅크 인턴쉽 회고/</link><guid isPermaLink="false">https://rmdnps10.github.io/카카오뱅크 인턴쉽 회고/</guid><pubDate>Mon, 28 Jul 2025 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[모든 걸 기록해보려 합니다.]]></description><link>https://rmdnps10.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 16 Sep 2025 04:17:27 GMT</lastBuildDate><item><title><![CDATA[데이터베이스 시스템 개론 📚 – Chapter 1. Introduction of Database Systems]]></title><description><![CDATA[학부 수업 "데이터베이스시스템" Chapter 1 정리 1.1 An Introductory Example…]]></description><link>https://rmdnps10.github.io/데이터베이스 - Chapter1. An Overview of Database Management/</link><guid isPermaLink="false">https://rmdnps10.github.io/데이터베이스 - Chapter1. An Overview of Database Management/</guid><pubDate>Tue, 16 Sep 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1000px; background: transparent;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/8ff3098d292b0f0e19daaa6f2e9913f6/dbbc9/index.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 56.400000000000006%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAABYlAAAWJQFJUiTwAAACG0lEQVR42o3P3UuTYRzGcf+NYHM6pz7PhCyjToQI0/B1ljBZWSoqRbCcougKbAZGKdayomkakvnSTDGnpmxJDZfkINJ5MCGURlajiWjMg2r67WkQREHzhvvouu7P/ftFCYLA75uUlIRcJsNgMPDrfPP7CQUCbG9ssLO1RSgY5MfmZjizWCzIpK5areZPI+ofUC6jstJAaAc8y6ssffCz9GmNd/51fGtf8X4MENzeJShKoTImGs3JcnperfLQucyAa4WROR/2+VWm3/p4vfSZ9+vfaWoxEy2XRwbjYhVka0uwPPPSPblIr2ORgecenrzwcMc6jcPtZX7lC0bTVRSK6F1MKIG52mLaJxa43OPkYpcd/e1RGh5M0tI+RJ15gIZHTo6XVaNSxiCK/wOlUKWMJV1TKEFT6K4NU9Q8TGGTlXujswyPODCZH9PY50J3rlbaJgIoiCKJKiX70/LJMHaTUdtBdn0HmTV36be7sY05aesc4kLbCPnF+vDnovQmIrj3iIYsUx8VrYOUXO+noKET28wCE+NO+ofsnL1h5fCJUhKkbkRQiI9DTM0k+fwt0uotpFebyTDcZOaNl6mndkYnXlJ3f5yDeWfCXSESKCaoUBxKI0V3iYoCPTJtPQZjM7bBMaxdvcy53HTaZknJOU1iRFAQUSfGI0tORXW0DO2xYvbk6tmXV05WaQ1FVVeoajRT19rNgZxT4ZX/Bn8CGuHScOGujmgAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+          &lt;source
+              srcset=&quot;/static/8ff3098d292b0f0e19daaa6f2e9913f6/bc904/index.webp 250w,
+/static/8ff3098d292b0f0e19daaa6f2e9913f6/4be29/index.webp 500w,
+/static/8ff3098d292b0f0e19daaa6f2e9913f6/03f31/index.webp 1000w,
+/static/8ff3098d292b0f0e19daaa6f2e9913f6/9579c/index.webp 1500w,
+/static/8ff3098d292b0f0e19daaa6f2e9913f6/b1218/index.webp 2000w,
+/static/8ff3098d292b0f0e19daaa6f2e9913f6/6eae7/index.webp 2464w&quot;
+              sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
+              type=&quot;image/webp&quot;
+            /&gt;
+          &lt;source
+            srcset=&quot;/static/8ff3098d292b0f0e19daaa6f2e9913f6/43fa5/index.png 250w,
+/static/8ff3098d292b0f0e19daaa6f2e9913f6/c6e3d/index.png 500w,
+/static/8ff3098d292b0f0e19daaa6f2e9913f6/da8b6/index.png 1000w,
+/static/8ff3098d292b0f0e19daaa6f2e9913f6/2e9ed/index.png 1500w,
+/static/8ff3098d292b0f0e19daaa6f2e9913f6/9fabd/index.png 2000w,
+/static/8ff3098d292b0f0e19daaa6f2e9913f6/dbbc9/index.png 2464w&quot;
+            sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
+            type=&quot;image/png&quot;
+          /&gt;
+          &lt;img
+            class=&quot;gatsby-resp-image-image&quot;
+            src=&quot;/static/8ff3098d292b0f0e19daaa6f2e9913f6/da8b6/index.png&quot;
+            alt=&quot;index&quot;
+            title=&quot;&quot;
+            loading=&quot;lazy&quot;
+            decoding=&quot;async&quot;
+            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+          /&gt;
+        &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;학부 수업 &quot;데이터베이스시스템&quot; Chapter 1 정리&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;1.1 An Introductory Example&lt;/h2&gt;
+&lt;p&gt;데이터베이스 시스템은 흔히 &lt;code class=&quot;language-text&quot;&gt;전산화된 기록 관리 시스템(computerized record-keeping system)&lt;/code&gt;이라고 불린다.
+쉽게 말하면, 전자 파일 캐비닛 같은 존재다. 데이터를 구조적으로 보관해두고 필요할 때 꺼내 쓸 수 있다.&lt;/p&gt;
+&lt;h4&gt;DB의 기본 연산 (CRUD)&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;추가&lt;/strong&gt; (&lt;code class=&quot;language-text&quot;&gt;INSERT&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;검색&lt;/strong&gt; (&lt;code class=&quot;language-text&quot;&gt;SELECT&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;수정&lt;/strong&gt; (&lt;code class=&quot;language-text&quot;&gt;UPDATE&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;삭제&lt;/strong&gt; (&lt;code class=&quot;language-text&quot;&gt;DELETE&lt;/code&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;책에서는 &lt;code class=&quot;language-text&quot;&gt;와인 저장고(wine cellar)&lt;/code&gt; 예시를 들고 있다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;와인의 이름, 생산자, 연도, 병 수량, 마실 수 있는 시기 등을 테이블 형태로 저장&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;SQL&lt;/code&gt;을 이용하면 특정 연도 와인만 조회하거나, 새로운 와인을 추가하고, 수량을 수정하고, 소진된 와인을 삭제할 수 있다&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;💡 &lt;strong&gt;핵심 포인트&lt;/strong&gt;: 데이터베이스는 단순한 데이터 모음이 아니라, 데이터를 구조적으로 관리하고 조작하는 시스템&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;1.2 What is a Database System?&lt;/h2&gt;
+&lt;p&gt;데이터베이스 시스템은 크게 &lt;strong&gt;4가지 축&lt;/strong&gt;으로 구성된다.&lt;/p&gt;
+&lt;h4&gt;1️⃣ Data&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;단일 사용자가 아니라 &lt;strong&gt;다수 사용자가 공유&lt;/strong&gt;하는 통합된 데이터&lt;/li&gt;
+&lt;li&gt;예: 기업 내 여러 부서가 동일한 고객 데이터를 참조&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5&gt;2️⃣ Hardware&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;디스크, 드라이브, I/O 채널 같은 &lt;strong&gt;저장 장치&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;CPU와 메모리까지 포함&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;DBMS&lt;/code&gt;가 실행되는 물리적 기반&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;3️⃣ Software&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;핵심은 &lt;strong&gt;DBMS(Database Management System)&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;사용자는 저장 방식은 몰라도 되고, &lt;code class=&quot;language-text&quot;&gt;논리적 관점&lt;/code&gt;으로만 데이터를 다룰 수 있다&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;4️⃣ Users&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;응용 프로그래머&lt;/strong&gt;: 프로그램을 통해 DB에 접근&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;최종 사용자&lt;/strong&gt;: 쿼리나 메뉴 기반 UI로 직접 접근&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;DBA(Database Administrator)&lt;/strong&gt;: 전체 시스템 관리(보안, 무결성, 백업 등 책임)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;💡 &lt;strong&gt;핵심 포인트&lt;/strong&gt;: 데이터베이스 시스템은 &lt;code class=&quot;language-text&quot;&gt;데이터 + 하드웨어 + 소프트웨어 + 사용자&lt;/code&gt;가 맞물려 돌아가는 유기적 구조&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2&gt;1.3 What is a Database?&lt;/h2&gt;
+&lt;p&gt;데이터베이스에서 가장 중요한 개념은 **지속적 데이터(persistent data)**다.
+휘발성 데이터(I/O 버퍼, 제어문 등)와 달리, 삭제하지 않는 이상 오랫동안 보존된다.&lt;/p&gt;
+&lt;h4&gt;📌 Database 정의&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;특정 기관의 응용 시스템에서 사용되는 &lt;strong&gt;지속적 데이터의 집합&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;은행&lt;/strong&gt; → 계좌 데이터&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;병원&lt;/strong&gt; → 환자 데이터&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;학교&lt;/strong&gt; → 학생 데이터&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;Entity(개체)&lt;/h4&gt;
+&lt;p&gt;독립적으로 구분 가능한 객체 (예: &lt;code class=&quot;language-text&quot;&gt;학생&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;직원&lt;/code&gt;)&lt;/p&gt;
+&lt;h4&gt;Relationship(관계)&lt;/h4&gt;
+&lt;p&gt;개체 간의 연관성&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;단항(unary)&lt;/strong&gt;: 부품-구성관계&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;이항(binary)&lt;/strong&gt;: 직원-부서&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;삼항(ternary)&lt;/strong&gt;: 공급자-부품-프로젝트&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;이런 관계는 &lt;code class=&quot;language-text&quot;&gt;ER 다이어그램(ERD)&lt;/code&gt;으로 표현할 수 있고, 관계 자체도 데이터로 간주된다.&lt;/p&gt;
+&lt;h4&gt;📌 Data와 Data Model&lt;/h4&gt;
+&lt;h4&gt;데이터의 본질&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;데이터&lt;/strong&gt; = 사실(fact), 즉 참인 명제들의 모음&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;데이터베이스&lt;/strong&gt; = 이런 명제들의 집합&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;관계형 모델&lt;/strong&gt;: 테이블(행=명제, 열=속성)로 표현&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;데이터 모델(Data Model)의 구성요소&lt;/h4&gt;
+&lt;p&gt;데이터를 표현하는 논리적 틀&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;객체(object)&lt;/strong&gt;: 무엇을 다루는지 (예: 테이블, 속성)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;연산자(operator)&lt;/strong&gt;: 어떻게 다루는지 (예: &lt;code class=&quot;language-text&quot;&gt;SELECT&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;JOIN&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;제약조건(constraint)&lt;/strong&gt;: 반드시 지켜야 하는 규칙 (예: 기본키, 외래키)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;💡 &lt;strong&gt;핵심&lt;/strong&gt;: 사용자는 &lt;code class=&quot;language-text&quot;&gt;데이터 모델&lt;/code&gt;만 알면 된다. 물리적 구현은 몰라도 된다 → &lt;strong&gt;데이터 독립성의 기반&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;1.4 Why Database?&lt;/h2&gt;
+&lt;p&gt;그렇다면 왜 데이터베이스를 써야 할까?
+바로 기존 파일 관리 방식(&lt;code class=&quot;language-text&quot;&gt;FMS&lt;/code&gt;)와 &lt;code class=&quot;language-text&quot;&gt;DBMS&lt;/code&gt;의 차이 때문이다.&lt;/p&gt;
+&lt;h4&gt;📊 FMS vs DBMS 비교표&lt;/h4&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;구분&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;FMS&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;DBMS&lt;/strong&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;데이터 접근 방식&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;프로그램이 직접 파일 read/write&lt;/td&gt;
+&lt;td&gt;DBMS 통해 &lt;code class=&quot;language-text&quot;&gt;SQL&lt;/code&gt;/API로 접근&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;구조 의존성&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;파일 구조에 의존 → &lt;code class=&quot;language-text&quot;&gt;Data Dependence&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;논리적 스키마만 알면 됨 → &lt;code class=&quot;language-text&quot;&gt;Data Independence&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;데이터 중복&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;여러 파일에 중복 저장&lt;/td&gt;
+&lt;td&gt;DBA가 통제하는 &lt;code class=&quot;language-text&quot;&gt;Controlled redundancy&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;일관성&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;일부만 갱신 시 불일치 발생&lt;/td&gt;
+&lt;td&gt;무결성 제약조건으로 자동 일관성 유지&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;보안&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;파일 단위 제한&lt;/td&gt;
+&lt;td&gt;사용자 권한/뷰(&lt;code class=&quot;language-text&quot;&gt;View&lt;/code&gt;) 기반 세밀한 접근 제어&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;동시성 제어&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;다중 사용자 충돌 발생&lt;/td&gt;
+&lt;td&gt;트랜잭션, 동시성 제어(&lt;code class=&quot;language-text&quot;&gt;ACID&lt;/code&gt;) 지원&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;확장성&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;파일 구조 바뀌면 프로그램 전부 수정&lt;/td&gt;
+&lt;td&gt;스키마 변경 시 영향 최소화&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;처리 단위&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Record-at-a-time&lt;/td&gt;
+&lt;td&gt;Set-at-a-time (&lt;code class=&quot;language-text&quot;&gt;SQL&lt;/code&gt; 집합 연산)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;DBMS&lt;/strong&gt;는 단순히 데이터를 모아두는 게 아니라, 중복을 줄이고, 일관성과 보안을 유지하며, 확장성과 동시성을 보장하는 시스템이다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4&gt;📌 관리 주체&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;DA(Data Administrator)&lt;/strong&gt;: 어떤 데이터를 보관할지, 보안 정책 등을 결정&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;DBA(Database Administrator)&lt;/strong&gt;: DA가 정한 정책을 실제로 구현하고 DB를 운영&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;1.5 Data Independence&lt;/h2&gt;
+&lt;p&gt;마지막으로 데이터베이스 철학의 핵심, &lt;strong&gt;데이터 독립성(Data Independence)&lt;/strong&gt;.&lt;/p&gt;
+&lt;h4&gt;🚫 과거의 문제 (Data Dependence)&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;파일 시스템에서는 프로그램이 파일 구조에 의존&lt;/li&gt;
+&lt;li&gt;구조가 바뀌면 프로그램도 전부 수정해야 했다&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;✅ Data Independence 정의&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;데이터의 저장 방식이나 구조가 바뀌더라도, &lt;strong&gt;응용 프로그램이 영향을 받지 않는 성질&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4&gt;1️⃣ Physical Data Independence (물리적 독립성)&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;내부 저장 구조(인덱스, 파일 조직 등)가 바뀌어도 논리 스키마는 그대로&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;예시&lt;/strong&gt;: &lt;code class=&quot;language-text&quot;&gt;B-Tree&lt;/code&gt; 인덱스를 &lt;code class=&quot;language-text&quot;&gt;해시&lt;/code&gt; 인덱스로 바꿔도 &lt;code class=&quot;language-text&quot;&gt;SELECT&lt;/code&gt; 쿼리는 동일하게 동작&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;2️⃣ Logical Data Independence (논리적 독립성)&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;논리 스키마(테이블, 속성 등)가 바뀌어도 외부 뷰/응용은 그대로&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;예시&lt;/strong&gt;: 테이블 속성을 추가해도 기존 뷰를 쓰는 앱은 문제 없음&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;💡 &lt;strong&gt;결과&lt;/strong&gt;: DB는 확장성과 유지보수성이 크게 향상된다&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;✅ 정리&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;📊 &lt;strong&gt;데이터베이스&lt;/strong&gt; = 단순한 저장소가 아니라 통합적이고 공유 가능한 &lt;code class=&quot;language-text&quot;&gt;지속적 데이터&lt;/code&gt;의 집합&lt;/li&gt;
+&lt;li&gt;🔧 &lt;strong&gt;DBMS&lt;/strong&gt;는 &lt;code class=&quot;language-text&quot;&gt;데이터&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;하드웨어&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;소프트웨어&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;사용자(DBA 포함)&lt;/code&gt; 네 가지 축으로 이루어진다&lt;/li&gt;
+&lt;li&gt;🔗 &lt;strong&gt;데이터&lt;/strong&gt;는 엔티티와 관계를 중심으로 구조화되며, &lt;code class=&quot;language-text&quot;&gt;ER 모델&lt;/code&gt;과 &lt;code class=&quot;language-text&quot;&gt;관계형 모델&lt;/code&gt;로 표현된다&lt;/li&gt;
+&lt;li&gt;🆚 &lt;strong&gt;DBMS&lt;/strong&gt;는 FMS 대비 중복 제어, 무결성 보장, 보안, 동시성 제어, 데이터 독립성에서 큰 장점을 가진다&lt;/li&gt;
+&lt;li&gt;🎯 &lt;strong&gt;데이터 독립성(Data Independence)&lt;/strong&gt; ➡️ 시스템이 변해도 응용 프로그램은 그대로 유지된다&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[서비스 개발부터 DevRel까지: 카카오뱅크 인턴쉽 회고]]></title><description><![CDATA["금융으로 세상을 바꾸는 기업, 카카오뱅크에서 6개월의 인턴쉽을 회고합니다. (+ 네이버랩스 인턴 최종 면접후기)" 네이버랩스 최종 탈락에서 카카오뱅크 인턴 합격까지 지난 1월, 나는 네이버랩스의 Robot FE Developer…]]></description><link>https://rmdnps10.github.io/카카오뱅크 인턴쉽 회고/</link><guid isPermaLink="false">https://rmdnps10.github.io/카카오뱅크 인턴쉽 회고/</guid><pubDate>Mon, 28 Jul 2025 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
 &lt;p&gt;&quot;금융으로 세상을 바꾸는 기업, 카카오뱅크에서 6개월의 인턴쉽을 회고합니다. (+ 네이버랩스 인턴 최종 면접후기)&quot;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h3&gt;네이버랩스 최종 탈락에서 카카오뱅크 인턴 합격까지&lt;/h3&gt;
@@ -1460,7 +1690,7 @@ DevRel로서 우리 팀이 장소와 시간과 관계 없이 항상 생각하는
     &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;당시에 제출했던 pov.. 뭘 하고 싶었던걸까&lt;/figcaption&gt;
   &lt;/figure&gt;&lt;/p&gt;
 &lt;h4&gt;여름방학 (중앙해커톤)&lt;/h4&gt;
-&lt;p&gt;멋사의 꽃은 단연 양재 AT센터에서 수천 명이 모이는 &apos;중앙 해커톤&apos;이다.
+&lt;p&gt;멋사의 꽃은 단연 양재 AT센터에서 수천 명이 모이는 &lt;code class=&quot;language-text&quot;&gt;중앙 해커톤&lt;/code&gt; 이다.
 이를 준비하기 위해 여름방학 동안 테킷의 무료 강의와 &apos;한 입으로 먹는 리액트&apos; 강의를 복습하며 실력을 다졌다.&lt;/p&gt;
 &lt;p&gt;중앙 해커톤에 함께 나가는 건국대 멋사 백엔드 친구와 연습겸 사이드 프로젝트도 진행했다. 이떈 참 성장에 목말라 있던 시기였다.&lt;/p&gt;
 &lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;background: transparent;&quot;&gt;
@@ -1612,7 +1842,7 @@ DevRel로서 우리 팀이 장소와 시간과 관계 없이 항상 생각하는
     &lt;/span&gt;
     &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;팀원들과 찍은 사진&lt;/figcaption&gt;
   &lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;중앙 해커톤 이후 얼마 지나지 않아 연세, 이화, 홍익대와 연합하는 &apos;신촌톤&apos;도 참가했다. 당일 주제가 공개되는 방식이라 더 긴장되었지만, 다른 학교 학생들과의 협업을 통해 ERD 설계 도구 활용법, 개발 명세서 자동화 같은 실무적인 팁들을 많이 배웠다.&lt;/p&gt;
+&lt;p&gt;중앙 해커톤 이후 얼마 지나지 않아 연세, 이화, 홍익대와 연합하는 &lt;code class=&quot;language-text&quot;&gt;신촌톤&lt;/code&gt; 도 참가했다. 당일 주제가 공개되는 방식이라 더 긴장되었지만, 다른 학교 학생들과의 협업을 통해 ERD 설계 도구 활용법, 개발 명세서 자동화 같은 실무적인 팁들을 많이 배웠다.&lt;/p&gt;
 &lt;h4&gt;2학기 (데모데이)&lt;/h4&gt;
 &lt;p&gt;데모데이를 위해 아이디어 피칭 후 팀빌딩을 거쳐 프론트 3명, 백엔드 3명으로 팀을 구성했다. 우리는 동아리 지원 플랫폼을 개발하기로 했고, 홍익대 미대에 외주도 의뢰하며 열심히 준비했다.&lt;/p&gt;
 &lt;p&gt;하지만 개발 과정에서 팀 내 갈등이 지속되면서 점차 소강 상태에 빠졌고, 처음 가졌던 열정도 사그라들었다. 당시 내가 좀 더 주체적이고 유연하게 대처했더라면 하는 아쉬움이 남는다.&lt;/p&gt;
@@ -1622,7 +1852,7 @@ DevRel로서 우리 팀이 장소와 시간과 관계 없이 항상 생각하는
 &lt;p&gt;이 과정에서 나는 내가 받은 도움을 나와 같은 상황에 놓인 학생들에게 돌려주고 싶다는 마음이 커졌다. 멋사라는 커뮤니티를 우리 학교에서 더욱 활성화시키고 싶은 열망이 생겼다.&lt;/p&gt;
 &lt;p&gt;그래서 큰 결심을 하게 되는데...&lt;/p&gt;
 &lt;h2&gt;대표로서 1년간의 여정&lt;/h2&gt;
-&lt;p&gt;데모데이가 끝난 후 운영진을 하기로 결심했다. 대표/부대표를 정하는 과정에서 함께 고민하던 친구가 교환학생 일정이 있어, 자연스럽게 내가 대표직을 맡게 되었다.&lt;/p&gt;
+&lt;p&gt;데모데이가 끝난 후 &lt;code class=&quot;language-text&quot;&gt;운영진&lt;/code&gt; 을 하기로 결심했다. 대표/부대표를 정하는 과정에서 함께 고민하던 친구가 교환학생 일정이 있어, 자연스럽게 내가 &lt;code class=&quot;language-text&quot;&gt;대표직&lt;/code&gt; 을 맡게 되었다.&lt;/p&gt;
 &lt;h3&gt;겨울방학, 멋사 1년 판 짜기&lt;/h3&gt;
 &lt;p&gt;처음에는 5명으로 시작한 운영진이었기에 인원 보강이 필요했다. 아름아름 연락을 돌려 프론트엔드 4명, 백엔드 3명으로 총 7명의 운영진을 추가 모집할 수 있었다.&lt;/p&gt;
 &lt;p&gt;퀄리티 높은 교육을 위해서는 운영진의 개인 역량이 가장 중요하다고 판단했다. 이에 파트별 스터디를 계획했다. 프론트엔드팀은 전년도 세션 자료를 복습하고, tanstack-query와 tailwind-css 같은 업계에서 활용되지만 아직 익숙하지 않은 기술 스택을 학습했다.&lt;/p&gt;
@@ -1727,9 +1957,9 @@ DevRel로서 우리 팀이 장소와 시간과 관계 없이 항상 생각하는
     &lt;/span&gt;
     &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;리브랜딩한 결과!&lt;/figcaption&gt;
   &lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;이와 함께 서강대 멋쟁이사자처럼 소개 사이트를 처음으로 제작했다.
+&lt;p&gt;이와 함께 &lt;code class=&quot;language-text&quot;&gt;서강대 멋쟁이사자처럼 소개 사이트&lt;/code&gt; 를 처음으로 제작했다.
 흥미를 끄는 스크롤 인터랙션과 three.js로 구현한 멋사 로고 등 시각적으로 매력적인 요소들을 많이 추가했다. 지원 접수 기능도 포함되어 있어 짧은 기간 동안 기획/디자인/개발/검수를 위해 모두가 고생했던 첫 운영진 프로젝트였다.&lt;/p&gt;
-&lt;p&gt;또한 학교 커뮤니티인 서담의 연애 상담글들을 학습 데이터로 활용한 챗봇을 개발했다. &apos;까칠한&apos; 또는 &apos;친절한&apos; 서담이를 선택해 연애 고민을 털어놓으면 답변해주는 서비스였는데, 리크루팅 기간에 맞춰 이 챗봇 웹사이트를 서담에 공유했더니 인기글이 될 정도로 화제가 되었다.&lt;/p&gt;
+&lt;p&gt;또한 학교 커뮤니티인 서담의 연애 상담글들을 학습 데이터로 활용한 &lt;code class=&quot;language-text&quot;&gt;챗봇을 개발&lt;/code&gt; 했다. &apos;까칠한&apos; 또는 &apos;친절한&apos; 서담이를 선택해 연애 고민을 털어놓으면 답변해주는 서비스였는데, 리크루팅 기간에 맞춰 이 챗봇 웹사이트를 서담에 공유했더니 인기글이 될 정도로 화제가 되었다.&lt;/p&gt;
 &lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;background: transparent;&quot;&gt;
     &lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
