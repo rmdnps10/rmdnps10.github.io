@@ -987,10 +987,10 @@ React에서 Redux나 Zustand를 사용해본 경험이 있다면, Riverpod의 �
 
 | React 생태계  | Flutter Riverpod      | 공통점      |
 | ------------- | --------------------- | ----------- |
-| `useSelector` | `ref.watch()`         | 상태 구독   |
-| `dispatch`    | `ref.read().method()` | 상태 변경   |
-| `Provider`    | `ProviderScope`       | 상태 제공자 |
-| `useEffect`   | `ref.listen()`        | 부수 효과   |
+| `useSelector` | ref.watch()         | 상태 구독   |
+| `dispatch`    | ref.read().method() | 상태 변경   |
+| `Provider`    | ProviderScope       | 상태 제공자 |
+| `useEffect`   | ref.listen()        | 부수 효과   |
 
 ### 결론
 
