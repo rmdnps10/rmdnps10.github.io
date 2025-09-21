@@ -256,16 +256,21 @@ table {
   margin-bottom: var(--spacing-8);
   border-collapse: collapse;
   border-spacing: 0.25rem;
+  /* border: 2px solid white; */
 }
 
 table thead tr th {
-  border-bottom: 1px solid var(--color-accent);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   padding: var(--spacing-3) var(--spacing-4);
+  background-color: rgba(255, 255, 255, 0.5);
+  color: black;
 }
 
 table tbody tr td {
   padding: var(--spacing-3) var(--spacing-4);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  /* border-bottom: 1px solid rgba(255, 255, 255, 0.3); */
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  text-align: center;
 }
 
 table tr {

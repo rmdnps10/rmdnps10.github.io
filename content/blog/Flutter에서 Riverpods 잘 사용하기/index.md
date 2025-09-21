@@ -24,9 +24,9 @@ TODO 리스트 그냥 띡 만들어봐가 아닌 거 같아서, 나도 이에 �
 
 ## 1️⃣ Riverpod 핵심 개념 완전 정복
 
-#### 1.1 Riverpod이 뭘까? 🎯
+#### 1.1 `Riverpod`이 뭘까? 🎯
 
-Riverpod은 Flutter에서 사용하는 **상태 관리 라이브러리**다. 쉽게 말해서 앱의 데이터를 여러 화면에서 공유하고 관리할 수 있게 해주는 도구라고 생각하면 된다.
+Riverpod은 Flutter에서 사용하는 `상태 관리 라이브러리`다. 쉽게 말해서 앱의 데이터를 여러 화면에서 공유하고 관리할 수 있게 해주는 도구라고 생각하면 된다.
 
 ##### 왜 상태 관리가 필요할까?🤔
 
@@ -52,7 +52,7 @@ Riverpod은 4가지 핵심 요소로 구성되어 있다:
 ```dart
 🏪 Provider (상점)         ↔️  📱 Consumer (고객)
       ⬇️                       ⬆️
-🎪 ProviderContainer      ↔️  🔗 Ref (다리)
+🎪 ProviderScope          ↔️  🔗 Ref (다리)
    (쇼핑몰 관리소)              (연결고리)
 ```
 
@@ -60,8 +60,10 @@ Riverpod은 4가지 핵심 요소로 구성되어 있다:
 
 - **🏪 Provider**: 데이터를 파는 **상점**
 - **📱 Consumer**: 데이터를 사는 **고객** (UI)
-- **🎪 ProviderContainer**: 모든 상점을 관리하는 **쇼핑몰**
+- **🎪 ProviderScope**: 모든 상점을 관리하는 **쇼핑몰** (Flutter Widget용)
 - **🔗 Ref**: 고객과 상점을 연결하는 **다리** 역할
+
+> **💡 참고:** 실제로는 ProviderContainer가 핵심 관리 시스템이지만, Flutter 앱에서는 ProviderScope(Widget 버전)를 사용하는 것이 권장된다. Todo 앱에서도 ProviderScope를 사용했다!
 
 이제 각각을 자세히 알아보자!
 
@@ -102,20 +104,27 @@ final chatProvider = StreamProvider<List<Message>>((ref) {
 
 #### 1.4 🎪 ProviderScope 핵심 개념
 
-ProviderScope는 Riverpod의 **진입점**이다. 모든 Provider들이 작동할 수 있는 **환경을 제공**하는 특별한 Widget이다.
+ProviderScope는 Riverpod의 **Flutter 전용 진입점**이다. 모든 Provider들이 작동할 수 있는 **환경을 제공**하는 특별한 Widget이다.
 
-**Todo 앱에서의 ProviderScope 사용하는 모습**
+**Todo 앱에서 ProviderScope를 선택한 이유:**
 
 ```dart
 // main.dart - 앱의 시작점
 void main() {
   runApp(
-    ProviderScope(  // 👈 필수! 이 안에서만 Provider 사용 가능
+    ProviderScope(  // 👈 Flutter 앱에서는 이것을 사용!
       child: TodoApp(),
     ),
   );
 }
 ```
+
+**ProviderScope vs ProviderContainer:**
+
+- **ProviderContainer**: Riverpod의 **핵심 엔진** (모든 상태 관리의 중심)
+- **ProviderScope**: ProviderContainer의 **Widget 래퍼** (Flutter 앱에서 사용하기 위한 형태)
+
+Todo 앱에서는 Flutter Widget 트리와 자연스럽게 통합되어야 하므로 ProviderScope를 사용했다!
 
 ##### ProviderScope의 역할
 
@@ -919,4 +928,70 @@ testWidgets('Todo 추가 테스트', (tester) async {
 
 ## 마무리 🎉
 
-Riverpod은 처음에는 복잡해 보일 수 있지만, 본질적으로 React에서 상태 관리와 크게 다르진 않은 거 같다.
+### Riverpod을 언제 사용해야 할까? 🤔
+
+이번 Todo 앱을 만들면서 Riverpod을 사용해보니, 다음과 같은 상황에서 특히 유용하다고 느꼈다:
+
+**✅ Riverpod을 사용하면 좋은 경우:**
+
+- **여러 화면에서 같은 데이터를 공유**해야 할 때 (로그인 정보, 장바구니 등)
+- **복잡한 비즈니스 로직**이 있을 때 (Todo 추가/수정/삭제 등)
+- **테스트가 중요한 프로젝트**일 때 (Provider 교체로 쉬운 테스트)
+- **타입 안전성**이 중요할 때 (컴파일 타임 오류 검출)
+
+**❌ 굳이 Riverpod까지 필요 없는 경우:**
+
+- 단순한 UI 상태만 관리하는 경우 (`setState`로 충분)
+- 한 화면에서만 사용하는 데이터인 경우
+- 프로젝트 규모가 매우 작은 경우
+
+### 큰 관점에서 배운 점 📚
+
+#### 1. **상태 관리의 본질**
+
+Riverpod을 통해 상태 관리의 핵심은 **"누가, 언제, 어떻게 데이터를 관리할 것인가"**라는 것을 깨달았다. React의 상태 관리와 비슷하지만, Flutter의 Widget 생명주기와 더 자연스럽게 통합된다는 점이 인상적이었다.
+
+#### 2. **선언적 UI의 힘**
+
+```dart
+// 상태가 변하면 UI가 자동으로 업데이트됨
+final todos = ref.watch(todoListProvider);  // 이것만으로 끝!
+```
+
+상태가 변하면 자동으로 UI가 업데이트되는 **선언적 패러다임**이 얼마나 강력한지 체감했다. 개발자는 "무엇을 보여줄 것인가"에만 집중하면 된다.
+
+#### 3. **불변성의 중요성**
+
+```dart
+// ❌ 기존 객체 수정
+state[0].isDone = true;
+
+// ✅ 새 객체 생성
+state = state.map((todo) =>
+  todo.id == id ? todo.copyWith(isDone: true) : todo
+).toList();
+```
+
+React와 마찬가지로 **불변성을 유지**해야 상태 변화를 정확히 감지할 수 있다는 것을 다시 한번 확인했다.
+
+#### 4. **관심사의 분리**
+
+- **Model**: 데이터 구조 정의 (`Todo` 클래스)
+- **Notifier**: 비즈니스 로직 (`TodoNotifier`)
+- **Provider**: 상태 제공 (`todoListProvider`)
+- **Consumer**: UI 렌더링 (`TodoList`, `TodoItem`)
+
+### React 개발자 관점에서의 Riverpod 💭
+
+React에서 Redux나 Zustand를 사용해본 경험이 있다면, Riverpod의 접근 방식이 매우 친숙하게 느껴질 것이다:
+
+| React 생태계  | Flutter Riverpod      | 공통점      |
+| ------------- | --------------------- | ----------- |
+| `useSelector` | `ref.watch()`         | 상태 구독   |
+| `dispatch`    | `ref.read().method()` | 상태 변경   |
+| `Provider`    | `ProviderScope`       | 상태 제공자 |
+| `useEffect`   | `ref.listen()`        | 부수 효과   |
+
+### 결론
+
+Riverpod은 처음에는 복잡해 보일 수 있지만, 본질적으로 React의 상태 관리와 크게 다르지 않다.
