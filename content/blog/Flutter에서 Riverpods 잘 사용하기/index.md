@@ -4,7 +4,7 @@ date: "2025-09-20"
 description: "React에 익숙한 개발자 입장에서 투두리스트를 구현하며 Flutter의 Riverpod 사용법을 다뤄봅니다."
 thumbnail: "./index.png"
 pointColor: "#0468d7"
-tags: ["Flutter", "Riverpod", "상태관리"]
+tags: ["Flutter"]
 ---
 
 > LG전자 산학 캡스톤에서 Flutter로 프로젝트를 진행하기 전 프리코스로 TODO 리스트 개발 과제가 주어졌다.
