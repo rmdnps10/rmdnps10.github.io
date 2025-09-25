@@ -29,6 +29,14 @@ module.exports = {
     "gatsby-plugin-postcss",
     "gatsby-plugin-sitemap",
     {
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        host: "https://rmdnps10.github.io/",
+        sitemap: "https://rmdnps10.github.io/sitemap-0.xml",
+        policy: [{ userAgent: "*", allow: "/" }],
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/content/blog`,
