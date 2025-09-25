@@ -1,4 +1,4 @@
 User-agent: *
-Disallow:
-
-Sitemap: https://rmdnps10.github.io/sitemap.xml
+Allow: /
+Sitemap: https://rmdnps10.github.io/sitemap-0.xml
+Host: https://rmdnps10.github.io
