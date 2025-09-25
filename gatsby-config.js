@@ -27,6 +27,7 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-svgr`,
     "gatsby-plugin-postcss",
+    "gatsby-plugin-sitemap",
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -143,53 +144,6 @@ module.exports = {
         // theme_color: `#663399`,
         display: `minimal-ui`,
         icon: `src/images/favico.png`, // This path is relative to the root of the site.
-      },
-    },
-    {
-      resolve: `gatsby-plugin-sitemap`,
-      options: {
-        output: `/sitemap.xml`,
-        excludes: [`/404`, `/404.html`, `/dev-404-page/`],
-        query: `
-          {
-            allSitePage {
-              nodes {
-                path
-              }
-            }
-            allMarkdownRemark {
-              nodes {
-                fields {
-                  slug
-                }
-                frontmatter {
-                  date(formatString: "YYYY-MM-DD")
-                }
-              }
-            }
-          }
-        `,
-        resolveSiteUrl: ({ site }) => site.siteMetadata.siteUrl,
-        serialize: ({ site, allSitePage, allMarkdownRemark }) => {
-          const pages = allSitePage.nodes.map(node => {
-            return {
-              url: `${site.siteMetadata.siteUrl}${node.path}`,
-              changefreq: `daily`,
-              priority: node.path === "/" ? 1.0 : 0.7,
-            }
-          })
-
-          const posts = allMarkdownRemark.nodes.map(node => {
-            return {
-              url: `${site.siteMetadata.siteUrl}${node.fields.slug}`,
-              changefreq: `weekly`,
-              priority: 0.8,
-              lastmod: node.frontmatter.date,
-            }
-          })
-
-          return [...pages, ...posts]
-        },
       },
     },
   ],
