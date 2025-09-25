@@ -43,7 +43,13 @@ module.exports = {
         name: `blog`,
       },
     },
-
+    {
+      resolve: `gatsby-plugin-canonical-urls`,
+      options: {
+        siteUrl: `https://rmdnps10.github.io/`,
+        stripQueryString: true,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
