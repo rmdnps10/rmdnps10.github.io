@@ -1,2 +1,4 @@
 User-agent: *
 Disallow:
+
+Sitemap: https://rmdnps10.github.io/sitemap.xml
