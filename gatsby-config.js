@@ -32,7 +32,7 @@ module.exports = {
       resolve: "gatsby-plugin-robots-txt",
       options: {
         host: "https://rmdnps10.github.io/",
-        sitemap: "https://rmdnps10.github.io/sitemap.xml",
+        sitemap: "https://rmdnps10.github.io/sitemap-index.xml",
         policy: [{ userAgent: "*", allow: "/" }],
       },
     },
