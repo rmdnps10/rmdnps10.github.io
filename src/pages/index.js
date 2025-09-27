@@ -74,7 +74,9 @@ const PostCard = ({ post }) => {
             >
               {title}
             </h2>
-            <small className="text-[#B0B0B0] text-xs md:text-sm">{post.frontmatter.date}</small>
+            <small className="text-[#B0B0B0] text-xs md:text-sm">
+              {post.frontmatter.date}
+            </small>
 
             <div className="flex gap-1 md:gap-2 my-2 md:my-3 flex-wrap">
               {tags.map(tag => (
@@ -181,7 +183,7 @@ const BlogIndex = ({ data, location }) => {
 
 export default BlogIndex
 
-export const Head = () => <Seo title="🏠" />
+export const Head = () => <Seo title="기술 블로그 🏠" />
 
 export const pageQuery = graphql`
   {
