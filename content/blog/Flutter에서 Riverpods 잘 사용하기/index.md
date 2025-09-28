@@ -7,24 +7,27 @@ pointColor: "#0468d7"
 tags: ["Flutter"]
 ---
 
-> LG전자 산학 캡스톤에서 Flutter로 프로젝트를 진행하기 전 프리코스로 TODO 리스트 개발 과제가 주어졌다.
+> LG전자 산학 캡스톤에서 Flutter로 프로젝트를 진행하기 전 프리코스로 TODO 리스트 개발 과제가 주어졌다. 이 글에서는 TODO 리스트 실습을 통해 어떻게 Riverpod을 통한 상태구현을 잘 구현할 수 있는지 다뤄본다.
 
-#### 📋 요구사항
+### 📋 과제 요구사항
 
-```
 - 투두리스트 기본적인 기능 구현
 - Riverpod 상태 관리 구현
 - DevTools 사용
-```
+- README 파일 작성
+  - 상태 자료구조, 위젯 구현 설명 
+  - DevTools에서 Inspector&Timeline&Memory&Performance 화면 스크린샷
 
-그리고 따로 README 파일을 만들어서 상태 자료구조, widget 설명, DevTools에서 Inspector&Timeline&Memory&Performance 화면을 스크린샷해야 한다.
 
-TODO 리스트 그냥 띡 만들어봐가 아닌 거 같아서, 나도 이에 부응해서 Flutter, Riverpod 공식문서를 살펴보면서 관련 내용을 학습하며 투두 리스트를 완성했다.
+위 과제를 수행하며 나는 Flutter, Riverpod 공식문서를 살펴보면서 관련 내용을 학습하며 투두 리스트를 완성했다.
+
+[➡️ 작업 레포지토리](https://github.com/rmdnps10/CSE4103-Flutter-TODO)
+
 오늘은 이 과정 속 내가 학습한 내용에 대해 다뤄보고자 한다.
 
-## 1️⃣ Riverpod 핵심 개념 완전 정복
+## 1️⃣ Riverpod 핵심 개념
 
-#### 1.1 `Riverpod`이 뭘까? 🎯
+#### 1-1 `Riverpod`이 뭘까? 🎯
 
 Riverpod은 Flutter에서 사용하는 `상태 관리 라이브러리`다. 쉽게 말해서 앱의 데이터를 여러 화면에서 공유하고 관리할 수 있게 해주는 도구라고 생각하면 된다.
 
@@ -45,7 +48,7 @@ Flutter에서 기본적으로 제공하는 `setState()`는 한 화면 안에서�
 - 📱 **DevTools 지원**: 상태 변화를 눈으로 확인할 수 있다
 - 🏗️ **확장성**: 큰 프로젝트에서도 깔끔하게 관리된다
 
-#### 1.2 Riverpod 아키텍처 한눈에 보기 📐
+#### 1-2 Riverpod 아키텍처 한눈에 보기 📐
 
 Riverpod은 4가지 핵심 요소로 구성되어 있다:
 
@@ -63,11 +66,11 @@ Riverpod은 4가지 핵심 요소로 구성되어 있다:
 - **🎪 ProviderScope**: 모든 상점을 관리하는 **쇼핑몰** (Flutter Widget용)
 - **🔗 Ref**: 고객과 상점을 연결하는 **다리** 역할
 
-> **💡 참고:** 실제로는 ProviderContainer가 핵심 관리 시스템이지만, Flutter 앱에서는 ProviderScope(Widget 버전)를 사용하는 것이 권장된다. Todo 앱에서도 ProviderScope를 사용했다!
+> **💡 참고:** 실제로는 ProviderContainer가 핵심 관리 시스템이지만, Flutter 앱에서는 `ProviderScope`(Widget 버전)를 사용하는 것이 권장된다. Todo 앱에서도 ProviderScope를 사용했다!
 
 이제 각각을 자세히 알아보자!
 
-#### 1.3 🏪 Provider 핵심 개념
+#### 1-3 🏪 Provider 핵심 개념
 
 Provider는 **데이터를 제공하는 상점**이다. 앱에서 필요한 데이터를 생성하고 관리하는 역할을 한다.
 
@@ -102,7 +105,7 @@ final chatProvider = StreamProvider<List<Message>>((ref) {
 | `FutureProvider`   | API 호출 (비동기)    | 사용자 프로필 조회    |
 | `StreamProvider`   | 실시간 데이터        | 채팅, 알림            |
 
-#### 1.4 🎪 ProviderScope 핵심 개념
+#### 1-4 🎪 ProviderScope 핵심 개념
 
 ProviderScope는 Riverpod의 **Flutter 전용 진입점**이다. 모든 Provider들이 작동할 수 있는 **환경을 제공**하는 특별한 Widget이다.
 
@@ -156,7 +159,7 @@ testWidgets('Todo 추가 테스트', (tester) async {
 - **백그라운드 서비스**: UI와 분리된 백그라운드 작업에서 상태 관리가 필요할 때
 - **서버 사이드**: Dart 서버 애플리케이션에서 Riverpod을 사용할 때
 
-#### 1.5 🔗 Ref 핵심 개념
+#### 1-5 🔗 Ref 핵심 개념
 
 Ref는 Provider와 Consumer를 연결하는 **다리** 역할을 한다. Widget에서 Provider의 데이터에 접근하거나 상태를 변경할 때 사용한다.
 
@@ -202,7 +205,7 @@ class TodoPage extends ConsumerWidget {
 | `ref.read()`   | 데이터 변경 | ❌ 리빌드 안함 | 버튼 클릭시 상태 변경 |
 | `ref.listen()` | 부수 효과   | ❌ 리빌드 안함 | 알림, 네비게이션      |
 
-#### 1.6 📱 Consumer Widget 핵심 개념
+#### 1-6 📱 Consumer Widget 핵심 개념
 
 Consumer Widget은 Provider의 데이터를 **구독**하고 **UI에 표시**하는 특별한 위젯이다. 일반 Widget과 달리 `WidgetRef ref` 매개변수를 통해 Provider에 접근할 수 있다.
 
@@ -273,7 +276,7 @@ class TodoItem extends ConsumerWidget {
 - 🎯 `ref.read()`로 상태를 **변경**할 때는 리빌드되지 않음
 - 🔄 Todo가 추가/삭제/수정되면 TodoList와 TodoItem이 자동으로 업데이트됨
 
-#### 1.7 🔄 setState vs Riverpod 비교
+#### 1-7 🔄 setState vs Riverpod 비교
 
 **기존 setState 방식의 한계**
 
@@ -329,7 +332,7 @@ class CounterButton extends ConsumerWidget {
 - **타입 안전성**: 컴파일 타임에 오류 검출
 - **테스트 용이성**: Provider 교체로 쉬운 테스트
 
-#### 1.8 🎯 설치 및 설정 방법
+#### 1-8 🎯 설치 및 설정 방법
 
 **패키지 설치 (권장 방법)**
 
@@ -370,7 +373,7 @@ void main() {
 - 완료된 Todo 개수 표시하기
 ```
 
-#### 2.1 프로젝트 기본 설정
+#### 2-1 프로젝트 기본 설정
 
 먼저 `main.dart`에서 **ProviderScope**로 앱을 감싸자:
 
@@ -390,7 +393,7 @@ void main() {
 
 > **💡 중요!** `ProviderScope` 없이는 `ref.watch()`, `ref.read()` 등을 사용할 수 없다. Todo 앱의 모든 기능이 이 ProviderScope 덕분에 작동한다!
 
-#### 2.2 모델 정의
+#### 2-2 모델 정의
 
 Todo가 어떤 정보를 가질지 정의해보자. `class`를 선언하자.
 보다시피 Flutter가 기반으로 하는 Dart는 객체 지향 언이이다.
@@ -425,9 +428,9 @@ Riverpod에서는 React와 마찬가지로 상태를 업데이트할 때 **불�
 
 이건 React 해봤으면 익숙할듯
 
-### 3. `Notifier`로 상태관리하기
+#### 2-3 `Notifier`로 상태관리하기
 
-#### 3.1 Notifier 핵심 개념
+##### Notifier 핵심 개념
 
 `Notifier`는 Riverpod에서 **복잡한 상태 로직을 관리하는 클래스**다. 단순한 값 하나만 관리하는 `StateProvider`와 달리, Notifier는:
 
@@ -449,7 +452,7 @@ class CounterNotifier extends Notifier<int> {
 }
 ```
 
-#### 3.2 상태 업데이트 메커니즘
+##### 상태 업데이트 메커니즘
 
 Notifier에서 상태를 업데이트하는 과정은 다음과 같다:
 
@@ -477,7 +480,7 @@ class TodoNotifier extends Notifier<List<Todo>> {
 }
 ```
 
-#### 3.3 TodoNotifier 구현
+#### 2-4 TodoNotifier 구현
 
 이제 Todo 리스트를 관리하는 **완전한 비즈니스 로직**을 만들어보자:
 
@@ -545,7 +548,7 @@ class TodoNotifier extends Notifier<List<Todo>> {
 - **불변성**: 기존 객체를 수정하지 않고 새 객체/리스트를 생성
 - **유효성 검사**: 비즈니스 로직을 Notifier에 캡슐화
 
-#### 3.4 UI 반영 과정
+#### 2-5 UI 반영 과정
 
 ```dart
 // 1. 사용자가 버튼 클릭
@@ -576,7 +579,7 @@ class TodoList extends ConsumerWidget {
 }
 ```
 
-#### 3.5 Provider 연결
+#### 2-6 Provider 연결
 
 이제 UI에서 사용할 수 있도록 Provider를 만든다:
 
@@ -595,7 +598,7 @@ final todoListProvider = NotifierProvider<TodoNotifier, List<Todo>>(
 - `TodoNotifier.new`: 클래스의 생성자를 전달
   이렇게 하면 어느 Widget에서든 이 Provider를 사용할 수 있다.
 
-#### 3.6 ref.watch vs ref.read 활용
+##### ref.watch vs ref.read
 
 **이 둘의 차이점을 명확히 알아야 한다!**
 
@@ -675,7 +678,7 @@ class TodoPage extends ConsumerWidget {
 
 ⭐️ **핵심:** 상태 반영이 이루어져야 될 때만 `ref.watch`를 사용하자!
 
-#### 3.7 React useReducer와의 비교
+##### React useReducer와의 비교
 
 React에서는 `useReducer`를 사용해봤다면, `reducer` 함수 내에서 상태 업데이트 로직을 구현하고, `dispatch` 함수에 action을 전달하여 실제 상태를 업데이트하는 거에 익숙할 것이다.
 
@@ -715,9 +718,9 @@ notifier.toggle('1');
 reducer함수처럼, flutter에서 Nofitifer 내에 상태 업데이트 로직을 구현하고
 실제 상태를 업데이트하는 로직을 전달할 때는 `ref.watch` or `ref.read` 로 Notifier를 구독한 뒤 Notifier의 값(현재 상태)이나 메서드를 불러올 수 있다.
 
-### 4️⃣ 애플리케이션 로직 구현
+### 애플리케이션 로직 구현
 
-#### 4.1 Todo 추가 기능
+#### 2-7 Todo 추가 기능
 
 메인 화면에서 새로운 Todo를 추가하는 로직:
 
@@ -794,7 +797,7 @@ class _TodoPageState extends ConsumerState<TodoPage> {
 }
 ```
 
-#### 4.2 Todo 삭제 및 토글 기능
+#### 2-8 Todo 삭제 및 토글 기능
 
 개별 Todo 아이템의 UI와 상호작용:
 
@@ -837,9 +840,9 @@ class TodoItem extends ConsumerWidget {
 }
 ```
 
-## 5.⭐️ Best Practice 정리
+## 3️⃣ ⭐️ Best Practice 정리
 
-### 5-1. Provider 네이밍 규칙
+#### 3-1. Provider 네이밍 규칙
 
 ```dart
 // ✅ 좋은 예 - Provider임을 명확히 표시
@@ -851,7 +854,7 @@ final user = Provider<User>(...);
 final todos = NotifierProvider<TodoNotifier, List<Todo>>(...);
 ```
 
-### 5-2. 상태와 UI 분리
+#### 3-2. 상태와 UI 분리
 
 ```dart
 // ✅ 좋은 예 - 비즈니스 로직을 Notifier에 캡슐화
@@ -873,7 +876,7 @@ ElevatedButton(
 );
 ```
 
-### 5-3. 적절한 Provider 타입 선택
+#### 3-3. 적절한 Provider 타입 선택
 
 ```dart
 // 간단한 값일 때
@@ -890,7 +893,7 @@ final weatherProvider = FutureProvider<Weather>((ref) async {
 });
 ```
 
-### 5-4. 에러 처리
+#### 3-4. 에러 처리
 
 ```dart
 // AsyncNotifier를 사용한 에러 처리
@@ -908,7 +911,7 @@ return todosAsync.when(
 );
 ```
 
-### 5-5. 테스트하기 쉬운 구조
+#### 3-5. 테스트하기 쉬운 구조
 
 ```dart
 // Provider를 가짜 구현으로 교체하여 테스트
@@ -926,9 +929,9 @@ testWidgets('Todo 추가 테스트', (tester) async {
 });
 ```
 
-## 마무리 🎉
+## 4️⃣ 마무리 🎉
 
-### Riverpod을 언제 사용해야 할까? 🤔
+#### Riverpod을 언제 사용해야 할까? 🤔
 
 이번 Todo 앱을 만들면서 Riverpod을 사용해보니, 다음과 같은 상황에서 특히 유용하다고 느꼈다:
 
@@ -985,8 +988,8 @@ React와 마찬가지로 **불변성을 유지**해야 상태 변화를 정확�
 
 React에서 Redux나 Zustand를 사용해본 경험이 있다면, Riverpod의 접근 방식이 매우 친숙하게 느껴질 것이다:
 
-| React 생태계  | Flutter Riverpod      | 공통점      |
-| ------------- | --------------------- | ----------- |
+| React 생태계  | Flutter Riverpod    | 공통점      |
+| ------------- | ------------------- | ----------- |
 | `useSelector` | ref.watch()         | 상태 구독   |
 | `dispatch`    | ref.read().method() | 상태 변경   |
 | `Provider`    | ProviderScope       | 상태 제공자 |

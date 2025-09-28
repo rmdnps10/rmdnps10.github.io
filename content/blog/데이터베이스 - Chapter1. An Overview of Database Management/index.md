@@ -12,7 +12,7 @@ tags: ["DB"]
 > 학부 수업 "데이터베이스시스템" Chapter 1 정리
 
 
-## 1.1 An Introductory Example
+## 1-1 An Introductory Example
 
 데이터베이스 시스템은 흔히 `전산화된 기록 관리 시스템(computerized record-keeping system)`이라고 불린다.
 쉽게 말하면, 전자 파일 캐비닛 같은 존재다. 데이터를 구조적으로 보관해두고 필요할 때 꺼내 쓸 수 있다.
@@ -31,7 +31,7 @@ tags: ["DB"]
 
 > 💡 **핵심 포인트**: 데이터베이스는 단순한 데이터 모음이 아니라, 데이터를 구조적으로 관리하고 조작하는 시스템
 
-## 1.2 What is a Database System?
+## 1-2 What is a Database System?
 
 데이터베이스 시스템은 크게 **4가지 축**으로 구성된다.
 
@@ -61,7 +61,7 @@ tags: ["DB"]
 
 ---
 
-## 1.3 What is a Database?
+## 1-3 What is a Database?
 
 데이터베이스에서 가장 중요한 개념은 **지속적 데이터(persistent data)**다.
 휘발성 데이터(I/O 버퍼, 제어문 등)와 달리, 삭제하지 않는 이상 오랫동안 보존된다.
@@ -106,7 +106,7 @@ tags: ["DB"]
 
 > 💡 **핵심**: 사용자는 `데이터 모델`만 알면 된다. 물리적 구현은 몰라도 된다 → **데이터 독립성의 기반**
 
-## 1.4 Why Database?
+## 1-4 Why Database?
 
 그렇다면 왜 데이터베이스를 써야 할까?
 바로 기존 파일 관리 방식(`FMS`)와 `DBMS`의 차이 때문이다.
@@ -131,7 +131,7 @@ tags: ["DB"]
 - **DA(Data Administrator)**: 어떤 데이터를 보관할지, 보안 정책 등을 결정
 - **DBA(Database Administrator)**: DA가 정한 정책을 실제로 구현하고 DB를 운영
 
-## 1.5 Data Independence
+## 1-5 Data Independence
 
 마지막으로 데이터베이스 철학의 핵심, **데이터 독립성(Data Independence)**.
 
