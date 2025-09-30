@@ -1,4 +1,515 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[모든 걸 기록해보려 합니다.]]></description><link>https://rmdnps10.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 28 Sep 2025 07:58:08 GMT</lastBuildDate><item><title><![CDATA[프롬프트 엔지니어링 기초 - AI와 효과적으로 소통하는 방법]]></title><description><![CDATA[AI 시대에 접어들면서 프롬프트 엔지니어링은 필수 스킬이 되었다. 단순히 질문을 던지는 것을 넘어서, AI로부터 원하는 결과를 정확하게 얻어내는 기술을 체계적으로 알아보자.  1️⃣ 프롬프트 엔지니어링이란? 1-1. 프롬프트 엔지니어링의 정의 은 AI…]]></description><link>https://rmdnps10.github.io/프롬프팅 엔지니어링 기초/</link><guid isPermaLink="false">https://rmdnps10.github.io/프롬프팅 엔지니어링 기초/</guid><pubDate>Sun, 28 Sep 2025 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[모든 걸 기록해보려 합니다.]]></description><link>https://rmdnps10.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 30 Sep 2025 02:16:43 GMT</lastBuildDate><item><title><![CDATA[RAG의 핵심 개념과 실습]]></title><description><![CDATA[대형 언어 모델의 한계를 극복하고 실시간 정보 활용을 가능하게 하는 RAG 기술이 주목받고 있다. 검색과 생성을 결합한 이 혁신적인 접근법을 이론부터 실습까지 알아보자. 1️⃣ RAG란? 1-1 RAG…]]></description><link>https://rmdnps10.github.io/RAG/</link><guid isPermaLink="false">https://rmdnps10.github.io/RAG/</guid><pubDate>Sun, 28 Sep 2025 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+&lt;p&gt;대형 언어 모델의 한계를 극복하고 실시간 정보 활용을 가능하게 하는 RAG 기술이 주목받고 있다. 검색과 생성을 결합한 이 혁신적인 접근법을 이론부터 실습까지 알아보자.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;1️⃣ RAG란?&lt;/h2&gt;
+&lt;h4&gt;1-1 RAG의 정의&lt;/h4&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;RAG(Retrieval-Augmented Generation)&lt;/code&gt;는 자연어 처리 분야에서 사용되는 기술로 &lt;strong&gt;정보 검색을 통해&lt;/strong&gt; 언어 생성 과정을 향상시키는 방식이다.&lt;/p&gt;
+&lt;p&gt;기존 언어 모델이 사전 학습된 지식에만 의존하는 반면, RAG는 외부 데이터베이스에서 관련 정보를 실시간으로 검색하여 더 정확하고 최신의 답변을 생성한다.&lt;/p&gt;
+&lt;h4&gt;1-2 RAG 작동 원리&lt;/h4&gt;
+&lt;p&gt;RAG의 작동 과정은 다음과 같다:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;사용자가 질문을 입력한다&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;RAG는 외부 데이터베이스에서 질문과 관련된 정보를 검색한다&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;검색된 정보를 기반으로 LLM이 답변을 생성한다&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# RAG 작동 원리 예시&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;rag_process&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;user_query&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;token comment&quot;&gt;# 1. 사용자 질문 입력&lt;/span&gt;
+    query &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; user_query
+
+    &lt;span class=&quot;token comment&quot;&gt;# 2. 외부 DB에서 관련 정보 검색&lt;/span&gt;
+    relevant_docs &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; vector_db&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;search&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;query&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; top_k&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+    &lt;span class=&quot;token comment&quot;&gt;# 3. 검색된 정보와 함께 LLM에 전달&lt;/span&gt;
+    context &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;\n&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;join&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;relevant_docs&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    prompt &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string-interpolation&quot;&gt;&lt;span class=&quot;token string&quot;&gt;f&quot;Context: &lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;context&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;\nQuestion: &lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;query&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;\nAnswer:&quot;&lt;/span&gt;&lt;/span&gt;
+
+    &lt;span class=&quot;token comment&quot;&gt;# 4. 최종 답변 생성&lt;/span&gt;
+    answer &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; llm&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;generate&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;prompt&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; answer&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;2️⃣ RAG는 왜 필요할까?&lt;/h2&gt;
+&lt;h4&gt;2-1 대형 언어 모델의 한계&lt;/h4&gt;
+&lt;p&gt;ChatGPT와 같은 &lt;strong&gt;대량의 데이터를 학습한 대규모 언어 모델&lt;/strong&gt;도 다음과 같은 한계를 가진다:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Knowledge Cutoff&lt;/strong&gt;: 학습 이후에 새로 나온 데이터에 대해서는 답변이 어려움&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Training Data Cutoff&lt;/strong&gt;: 학습하지 않은 특정 도메인 데이터들에 대한 제한적 지식&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;할루시네이션&lt;/strong&gt;: 사실이 아닌 내용을 그럴듯하게 생성하는 문제&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;2-2 RAG의 해결 방안&lt;/h4&gt;
+&lt;p&gt;RAG는 &lt;strong&gt;실시간으로 부족한 데이터를 주입&lt;/strong&gt;하기 위해 고안된 방법으로 다음과 같은 이점을 제공한다:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;최신 정보에 기반한 정확한 답변 생성&lt;/li&gt;
+&lt;li&gt;특정 도메인 지식의 실시간 활용&lt;/li&gt;
+&lt;li&gt;출처가 명확한 신뢰할 수 있는 응답 제공&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;3️⃣ RAG 작동 과정&lt;/h2&gt;
+&lt;h4&gt;3-1 데이터 임베딩 및 Vector DB 구축&lt;/h4&gt;
+&lt;p&gt;RAG의 첫 번째 단계는 &lt;strong&gt;데이터를 임베딩 모델에 통합&lt;/strong&gt;하는 것이다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# 임베딩 과정 예시&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;create_embeddings&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;text_data&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;token triple-quoted-string string&quot;&gt;&quot;&quot;&quot;
+    텍스트 데이터를 임베딩 벡터로 변환
+    &quot;&quot;&quot;&lt;/span&gt;
+    &lt;span class=&quot;token comment&quot;&gt;# 텍스트를 chunk 단위로 분할&lt;/span&gt;
+    chunks &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; chunk_text&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;text_data&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; chunk_size&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;400&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; chunk_overlap&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;50&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+    &lt;span class=&quot;token comment&quot;&gt;# 각 chunk를 벡터로 변환&lt;/span&gt;
+    embeddings &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; chunk &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; chunks&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+        embedding &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; embedding_model&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;encode&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;chunk&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+        embeddings&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;append&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;embedding&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; chunks&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; embeddings&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;임베딩&lt;/strong&gt;이란 텍스트, 이미지 등의 데이터를 &lt;code class=&quot;language-text&quot;&gt;벡터 임베딩(Vector Embedding)&lt;/code&gt;라고 하는 수치화된 배열로 변환한 방법을 의미한다:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;사과 = [0.00212, -0.00328, 0.00789...]&lt;/li&gt;
+&lt;li&gt;배 = [0.00234, -0.00222, 0.00635...]&lt;/li&gt;
+&lt;li&gt;컴퓨터 = [-0.078, 0.00986, 0.00123...]&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Chunking의 이해&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Chunking&lt;/strong&gt;이란 긴 문서를 AI에게 통째로 전달하면 성능이 떨어지거나 context 길이 제한을 초과해 제대로 처리하지 못할 수 있어서, &lt;strong&gt;긴 문서를 작은 덩어리로 나누는 작업&lt;/strong&gt;이다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# Chunking 예시&lt;/span&gt;
+document &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token triple-quoted-string string&quot;&gt;&quot;&quot;&quot;안녕하세요. 저는 인공지능에 관심이 많고 생성형 AI에 대해서
+공부하고 있습니다. 오늘은 RAG를 배웠습니다.&quot;&quot;&quot;&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;# Chunk 결과&lt;/span&gt;
+chunks &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;
+    &lt;span class=&quot;token string&quot;&gt;&quot;안녕하세요. 저는 인공지능에 관심이 많고 생성형 AI에 대해서 공부하&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token string&quot;&gt;&quot;형 AI에 대해서 공부하고 있습니다. 오늘은 RAG를 배웠습니다.&quot;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;주요 파라미터:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;chunk_size&lt;/strong&gt;: 하나의 chunk에 포함되는 글자 수&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;chunk_overlap&lt;/strong&gt;: 청크끼리 일정 부분 겹치게 만드는 설정&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;chunk_overlap&lt;/code&gt;을 사용하는 이유는 chunk가 정확히 잘리는 지점에서 문장의 맥락이 끊기면 AI가 의미를 파악하기 어려워지기 때문이다.&lt;/p&gt;
+&lt;h4&gt;3-2 쿼리 벡터화 및 관련 정보 추출&lt;/h4&gt;
+&lt;p&gt;사용자의 &lt;strong&gt;질문을 벡터화&lt;/strong&gt;하고, &lt;strong&gt;벡터 DB를 대상으로 유사도 검색&lt;/strong&gt;을 사용하여 가장 관련성이 높은 상위 K개의 항목을 추출한다.&lt;/p&gt;
+&lt;h5&gt;벡터 유사도 검색&lt;/h5&gt;
+&lt;p&gt;임베딩을 통해 저장된 데이터는 &lt;strong&gt;벡터 간의 거리를 측정&lt;/strong&gt;하여 얼마나 유사한지를 평가한다. 주요 유사도 측정 방식은 다음과 같다:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;방식&lt;/th&gt;
+&lt;th&gt;설명&lt;/th&gt;
+&lt;th&gt;특징&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;유클리드 거리&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;두 벡터의 끝점을 잇는 가장 짧은 직선거리&lt;/td&gt;
+&lt;td&gt;벡터의 크기와 방향을 모두 고려&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;코사인 유사도&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;두 벡터간의 각도를 이용하여 측정&lt;/td&gt;
+&lt;td&gt;벡터의 방향에 중점, 고차원 데이터에 효과적&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;내적 기반 유사도&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;벡터의 내적으로 측정&lt;/td&gt;
+&lt;td&gt;방향성과 크기를 모두 고려&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;vector_similarity_search&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;query_vector&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; database_vectors&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; top_k&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;token triple-quoted-string string&quot;&gt;&quot;&quot;&quot;
+    쿼리 벡터와 가장 유사한 상위 k개 벡터 검색
+    &quot;&quot;&quot;&lt;/span&gt;
+    similarities &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; i&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; doc_vector &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;enumerate&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;database_vectors&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;token comment&quot;&gt;# 코사인 유사도 계산&lt;/span&gt;
+        similarity &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; cosine_similarity&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;query_vector&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; doc_vector&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+        similarities&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;append&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;i&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; similarity&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+    &lt;span class=&quot;token comment&quot;&gt;# 유사도 기준 정렬 후 상위 k개 반환&lt;/span&gt;
+    similarities&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;sort&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;key&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;lambda&lt;/span&gt; x&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; x&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; reverse&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token boolean&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; similarities&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;top_k&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h4&gt;3-3 LLM을 통한 답변 생성&lt;/h4&gt;
+&lt;p&gt;LLM은 &lt;strong&gt;쿼리 텍스트와 추출된 관련 정보&lt;/strong&gt;를 바탕으로 최종 답변을 생성한다. 이 과정에서 &lt;strong&gt;정확한 출처에 기반한 답변&lt;/strong&gt;이 가능해진다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;generate_final_answer&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;query&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; retrieved_docs&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;token triple-quoted-string string&quot;&gt;&quot;&quot;&quot;
+    검색된 문서를 바탕으로 최종 답변 생성
+    &quot;&quot;&quot;&lt;/span&gt;
+    &lt;span class=&quot;token comment&quot;&gt;# 검색된 문서들을 하나의 컨텍스트로 결합&lt;/span&gt;
+    context &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;\n&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;join&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;doc&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;content &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; doc &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; retrieved_docs&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+    prompt &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string-interpolation&quot;&gt;&lt;span class=&quot;token string&quot;&gt;f&quot;&quot;&quot;
+    다음 문서들을 참고하여 질문에 답변해주세요:
+
+    문서 내용:
+    &lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;context&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;
+
+    질문: &lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;query&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;
+    답변:
+    &quot;&quot;&quot;&lt;/span&gt;&lt;/span&gt;
+
+    response &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; llm&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;generate&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;prompt&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; response&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;4️⃣ RAG vs Fine-tuning&lt;/h2&gt;
+&lt;p&gt;두 가지 접근법의 차이점을 명확히 이해해보자.&lt;/p&gt;
+&lt;h4&gt;4-1 RAG (검색 기반 생성)&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;외부 지식을 검색해 GPT에게 전달&lt;/strong&gt;하고 그를 바탕으로 응답을 생성하는 방식이다.&lt;/p&gt;
+&lt;h4&gt;4-2 Fine-tuning (모델 미세조정)&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;기존 GPT 모델에 새로운 데이터를 학습&lt;/strong&gt;시켜, 모델 자체를 바꾸는 방식이다.&lt;/p&gt;
+&lt;h4&gt;4-3 비교 분석&lt;/h4&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;구분&lt;/th&gt;
+&lt;th&gt;RAG&lt;/th&gt;
+&lt;th&gt;Fine-tuning&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;데이터 반영&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;외부 문서만 바꾸면 즉시 반영&lt;/td&gt;
+&lt;td&gt;새로 학습해야 반영됨 (느림)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;구축 복잡도&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;문서 쪼개기 + 벡터DB 구성&lt;/td&gt;
+&lt;td&gt;학습 데이터 준비 + 학습 + 파라미터 조정&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;비용&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;상대적으로 저렴&lt;/td&gt;
+&lt;td&gt;GPU 비용 + 학습시간 + 모델 호스팅 비용&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;응답 속도&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;검색 단계로 인해 상대적으로 느림&lt;/td&gt;
+&lt;td&gt;모델 내장 지식이라 빠름&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;유연성&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;실시간 정보 업데이트 가능&lt;/td&gt;
+&lt;td&gt;모델 재학습 필요&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# RAG 방식 예시&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;rag_approach&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;query&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    docs &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; vector_db&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;search&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;query&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;  &lt;span class=&quot;token comment&quot;&gt;# 실시간 검색&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; llm&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;generate_with_context&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;query&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; docs&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;# Fine-tuning 방식 예시&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;finetuned_approach&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;query&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; finetuned_model&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;generate&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;query&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;  &lt;span class=&quot;token comment&quot;&gt;# 학습된 지식 활용&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;5️⃣ Vector DB&lt;/h2&gt;
+&lt;h4&gt;5-1 Vector DB의 정의&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;Vector DB&lt;/strong&gt;는 데이터를 &lt;strong&gt;벡터 형태로 저장&lt;/strong&gt;하고, &lt;strong&gt;벡터 간 유사도를 기반으로 검색&lt;/strong&gt;하는 데이터베이스다.&lt;/p&gt;
+&lt;p&gt;기존의 관계형 DB가 행과 열의 2차원 형식으로 데이터를 표현하는 반면, Vector DB는 &lt;strong&gt;다차원 공간으로 개념을 확장&lt;/strong&gt;한다.&lt;/p&gt;
+&lt;h4&gt;5-2 Vector DB가 필요한 이유&lt;/h4&gt;
+&lt;p&gt;생성형 AI나 RAG에서 Vector DB를 사용하는 이유:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;자연어 문서를 텍스트 그대로 저장하지 않음&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;AI가 이해 가능한 형태인 벡터로 변환&lt;/strong&gt;하여 저장&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;유사한 의미의 문서나 문장들을 빠르게 검색&lt;/strong&gt; 가능&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# Vector DB 저장 및 검색 예시&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;SimpleVectorDB&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;__init__&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;self&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+        self&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;vectors &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+        self&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;documents &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;add_document&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;self&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; text&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; vector&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;token triple-quoted-string string&quot;&gt;&quot;&quot;&quot;문서와 벡터를 DB에 저장&quot;&quot;&quot;&lt;/span&gt;
+        self&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;documents&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;append&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;text&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+        self&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;vectors&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;append&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;vector&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;search&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;self&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; query_vector&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; top_k&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;token triple-quoted-string string&quot;&gt;&quot;&quot;&quot;쿼리 벡터와 유사한 문서 검색&quot;&quot;&quot;&lt;/span&gt;
+        similarities &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; i&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; vec &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;enumerate&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;self&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;vectors&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+            sim &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; cosine_similarity&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;query_vector&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; vec&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+            similarities&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;append&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;i&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; sim&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+        &lt;span class=&quot;token comment&quot;&gt;# 상위 k개 반환&lt;/span&gt;
+        similarities&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;sort&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;key&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;lambda&lt;/span&gt; x&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; x&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; reverse&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token boolean&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+        results &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; i&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; _ &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; similarities&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;top_k&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+            results&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;append&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;self&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;documents&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;i&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+        &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; results&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h4&gt;5-3 주요 Vector DB 종류&lt;/h4&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;DB 이름&lt;/th&gt;
+&lt;th&gt;특징&lt;/th&gt;
+&lt;th&gt;사용 케이스&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Chroma&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Python 기반 오픈소스, 설치 간단&lt;/td&gt;
+&lt;td&gt;프로토타입, 실습용&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Pinecone&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;클라우드 기반, 확장성 우수&lt;/td&gt;
+&lt;td&gt;상용 서비스&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Weaviate&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;GraphQL 지원, 다양한 벡터 검색&lt;/td&gt;
+&lt;td&gt;복합 검색&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Qdrant&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Rust 기반, 고성능&lt;/td&gt;
+&lt;td&gt;대용량 처리&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4&gt;5-4 Chroma 선택 이유&lt;/h4&gt;
+&lt;p&gt;실습에서 &lt;strong&gt;Chroma&lt;/strong&gt;를 선택한 이유:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Python 기반의 오픈소스 라이브러리로 &lt;strong&gt;설치 과정이 단순&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;별도의 서버를 띄우거나 복잡한 설정 없이 &lt;strong&gt;몇 줄의 코드만으로 벡터 DB 구축 가능&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;빠르게 개념을 익히고 간단한 환경에서 직접 체험하기에 적합&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# Chroma 설치&lt;/span&gt;
+pip &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; chromadb&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;6️⃣ 실습코드 1 - Vector DB 구축&lt;/h2&gt;
+&lt;h4&gt;6-1 전체 흐름 요약&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;초기화&lt;/strong&gt;: 데이터베이스와 컬렉션을 초기화하여 영구 저장소 준비&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;데이터 로드&lt;/strong&gt;: 지정된 폴더에서 텍스트 파일들을 불러옴&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;전처리&lt;/strong&gt;: 각 텍스트 파일을 일정 길이의 청크로 분할하여 문맥 유지&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;임베딩 생성 및 저장&lt;/strong&gt;: 각 청크에 대해 OpenAI 임베딩을 생성하고 벡터 DB에 저장&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;6-2 build_vector_db.py 구현&lt;/h4&gt;
+&lt;h5&gt;환경 설정 및 초기화&lt;/h5&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; os
+&lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; openai &lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; OpenAI
+&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; chromadb
+&lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; chromadb&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;config &lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; Settings
+&lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; dotenv &lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; load_dotenv
+
+&lt;span class=&quot;token comment&quot;&gt;# 환경 변수 로드하여 API 키 가져오고 OpenAI 클라이언트 초기화&lt;/span&gt;
+load_dotenv&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+api_key &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; os&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;getenv&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;OPENAI_API_KEY&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+client &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; OpenAI&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;api_key&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;api_key&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h5&gt;DB 초기화 함수&lt;/h5&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;init_db&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;db_path&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;./chroma_db&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;token triple-quoted-string string&quot;&gt;&quot;&quot;&quot;Vector DB 초기화 및 컬렉션 생성&quot;&quot;&quot;&lt;/span&gt;
+    dbclient &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; chromadb&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;PersistentClient&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;path&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;db_path&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token comment&quot;&gt;# rag_collection이라는 데이터 컬렉션 생성&lt;/span&gt;
+    collection &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; dbclient&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;create_collection&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+        name&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;rag_collection&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+        get_or_create&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token boolean&quot;&gt;True&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; dbclient&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; collection&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h5&gt;텍스트 파일 로딩&lt;/h5&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;load_text_files&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;folder_path&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;token triple-quoted-string string&quot;&gt;&quot;&quot;&quot;지정된 폴더에서 모든 .txt 파일 로드&quot;&quot;&quot;&lt;/span&gt;
+    docs &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; filename &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; os&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;listdir&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;folder_path&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+        file_path &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; os&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;path&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;join&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;folder_path&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; filename&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; file_path&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;endswith&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;.txt&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+            &lt;span class=&quot;token keyword&quot;&gt;with&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;file_path&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;r&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; encoding&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;utf-8&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;as&lt;/span&gt; f&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+                text &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; f&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;read&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+                docs&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;append&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;filename&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; text&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; docs&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h5&gt;임베딩 생성&lt;/h5&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;get_embedding&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;text&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; model&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;text-embedding-3-large&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;token triple-quoted-string string&quot;&gt;&quot;&quot;&quot;주어진 텍스트를 임베딩 벡터로 변환&quot;&quot;&quot;&lt;/span&gt;
+    response &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; client&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;embeddings&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;create&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token builtin&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;text&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; model&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;model&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    embedding &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; response&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;data&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;embedding
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; embedding&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h5&gt;텍스트 청킹&lt;/h5&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;chunk_text&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;text&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; chunk_size&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;400&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; chunk_overlap&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;50&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;token triple-quoted-string string&quot;&gt;&quot;&quot;&quot;원천 데이터를 청크 단위로 나누고 overlap 적용&quot;&quot;&quot;&lt;/span&gt;
+    chunks &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+    start &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;while&lt;/span&gt; start &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;text&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+        end &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; start &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; chunk_size
+        chunk &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; text&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;start&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;end&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+        chunks&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;append&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;chunk&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+        start &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; end &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt; chunk_overlap
+
+        &lt;span class=&quot;token comment&quot;&gt;# 예외 처리&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; start &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+            start &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; start &lt;span class=&quot;token operator&quot;&gt;&gt;=&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;text&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+            &lt;span class=&quot;token keyword&quot;&gt;break&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; chunks&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h5&gt;메인 실행 로직&lt;/h5&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; __name__ &lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;__main__&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;token comment&quot;&gt;# DB 초기화&lt;/span&gt;
+    dbclient&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; collection &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; init_db&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;./chroma_db&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+    &lt;span class=&quot;token comment&quot;&gt;# 문서 로드&lt;/span&gt;
+    folder_path &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;./source_data&quot;&lt;/span&gt;
+    docs &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; load_text_files&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;folder_path&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+    doc_id &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; filename&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; text &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; docs&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+        chunks &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; chunk_text&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;text&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; chunk_size&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;400&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; chunk_overlap&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;50&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+        &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; idx&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; chunk &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;enumerate&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;chunks&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+            doc_id &lt;span class=&quot;token operator&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;
+            embedding &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; get_embedding&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;chunk&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+            &lt;span class=&quot;token comment&quot;&gt;# Vector DB에 저장&lt;/span&gt;
+            collection&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;add&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+                documents&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;chunk&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;  &lt;span class=&quot;token comment&quot;&gt;# 실제 청크 텍스트&lt;/span&gt;
+                embeddings&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;embedding&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;  &lt;span class=&quot;token comment&quot;&gt;# 생성된 임베딩 벡터&lt;/span&gt;
+                metadatas&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+                    &lt;span class=&quot;token string&quot;&gt;&quot;filename&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; filename&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+                    &lt;span class=&quot;token string&quot;&gt;&quot;chunk_index&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; idx
+                &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+                ids&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token builtin&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;doc_id&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;  &lt;span class=&quot;token comment&quot;&gt;# 고유 식별자&lt;/span&gt;
+            &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;모든 문서가 Vector DB에 저장 완료&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;7️⃣ 실습코드 2 - RAG 챗봇 구현&lt;/h2&gt;
+&lt;h4&gt;7-1 rag_chatbot.py 구현&lt;/h4&gt;
+&lt;h5&gt;환경 설정 및 DB 연결&lt;/h5&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; os
+&lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; openai &lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; OpenAI
+&lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; build_vector_db &lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; get_embedding
+&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; chromadb
+&lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; dotenv &lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; load_dotenv
+
+load_dotenv&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+dbclient &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; chromadb&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;PersistentClient&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;path&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;./chroma_db&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+collection &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; dbclient&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;get_or_create_collection&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;rag_collection&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h5&gt;문서 검색 함수&lt;/h5&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;retrieve&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;query&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; top_k&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;token triple-quoted-string string&quot;&gt;&quot;&quot;&quot;쿼리를 임베딩하여 가장 유사한 top-k개 문서 검색&quot;&quot;&quot;&lt;/span&gt;
+    query_embedding &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; get_embedding&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;query&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+    &lt;span class=&quot;token comment&quot;&gt;# Vector DB에서 유사한 문서 검색&lt;/span&gt;
+    results &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; collection&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;query&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+        query_embeddings&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;query_embedding&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+        n_results&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;top_k
+    &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; results&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h5&gt;RAG 기반 답변 생성&lt;/h5&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;generate_answer_with_context&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;query&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; top_k&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;token triple-quoted-string string&quot;&gt;&quot;&quot;&quot;
+    RAG 기반 답변 생성 프로세스:
+    1) 쿼리에 대해 Vector DB에서 top_k개 문서 검색
+    2) 검색된 문서들을 context로 구성
+    3) Context와 함께 GPT에 프롬프트 전달
+    4) 최종 답변 반환
+    &quot;&quot;&quot;&lt;/span&gt;
+
+    &lt;span class=&quot;token comment&quot;&gt;# 1. 관련 문서 검색&lt;/span&gt;
+    results &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; retrieve&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;query&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; top_k&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    found_docs &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; results&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;documents&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+    found_metadatas &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; results&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;metadatas&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+
+    &lt;span class=&quot;token comment&quot;&gt;# 2. Context 구성&lt;/span&gt;
+    context_texts &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; doc_text&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; meta &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;zip&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;found_docs&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; found_metadatas&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+        context_texts&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;append&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+            &lt;span class=&quot;token string-interpolation&quot;&gt;&lt;span class=&quot;token string&quot;&gt;f&quot;&amp;lt;&amp;lt;filename: &lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;meta&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;filename&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&gt;&gt;\n&lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;doc_text&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    context_str &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;\n\n&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;join&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;context_texts&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+    &lt;span class=&quot;token comment&quot;&gt;# 3. 프롬프트 작성&lt;/span&gt;
+    system_prompt &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token triple-quoted-string string&quot;&gt;&quot;&quot;&quot;
+    당신은 주어진 문서 정보를 바탕으로 사용자 질문에 답변하는
+    지능형 어시스턴트입니다. 다음 원칙을 엄격히 지키세요:
+
+    1. 반드시 제공된 문서 내용에 근거해서만 답변을 작성하세요.
+    2. 문서에 언급되지 않은 내용이라면, 함부로 추측하거나 만들어내지 마세요.
+    3. 사실 관계를 명확히 기술하고, 불확실한 부분은 &quot;정확한 정보를 찾지 못했습니다&quot;라고 말하세요.
+    4. 지나치게 장황하지 않게, 간결하고 알기 쉽게 설명하세요.
+    5. 문서 출처나 연도가 중요하다면, 가능한 정확하게 전달하세요.
+    &quot;&quot;&quot;&lt;/span&gt;
+
+    user_prompt &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string-interpolation&quot;&gt;&lt;span class=&quot;token string&quot;&gt;f&quot;&quot;&quot;아래는 검색된 문서들의 내용입니다:
+    &lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;context_str&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;
+    질문: &lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;query&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;&quot;&quot;&lt;/span&gt;&lt;/span&gt;
+
+    &lt;span class=&quot;token comment&quot;&gt;# 4. ChatGPT 호출&lt;/span&gt;
+    api_key &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; os&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;getenv&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;OPENAI_API_KEY&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    client &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; OpenAI&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;api_key&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;api_key&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+    response &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; client&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;chat&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;completions&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;create&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+        model&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;gpt-4o-mini&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+        messages&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;
+            &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;role&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;system&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;content&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; system_prompt&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;role&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;user&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;content&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; user_prompt&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+    answer &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; response&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;choices&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;message&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;content
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; answer&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h5&gt;비교용 일반 GPT 답변&lt;/h5&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;generate_answer_without_context&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;query&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;token triple-quoted-string string&quot;&gt;&quot;&quot;&quot;RAG 없이 일반 GPT로 답변하는 함수&quot;&quot;&quot;&lt;/span&gt;
+    api_key &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; os&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;getenv&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;OPENAI_API_KEY&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    client &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; OpenAI&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;api_key&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;api_key&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+    response &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; client&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;chat&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;completions&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;create&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+        model&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;gpt-4o-mini&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+        messages&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;
+            &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;role&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;system&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;content&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;You are a helpful assistant&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;role&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;user&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;content&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; query&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+    answer &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; response&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;choices&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;message&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;content
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; answer&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h5&gt;메인 실행 루프&lt;/h5&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; __name__ &lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;__main__&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+        user_query &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;질문을 입력하세요(종료: quit): &quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; user_query&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;lower&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;quit&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+            &lt;span class=&quot;token keyword&quot;&gt;break&lt;/span&gt;
+
+        &lt;span class=&quot;token comment&quot;&gt;# RAG 기반 답변&lt;/span&gt;
+        answer &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; generate_answer_with_context&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;user_query&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; top_k&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;token comment&quot;&gt;# 일반 GPT 답변 (비교용)&lt;/span&gt;
+        &lt;span class=&quot;token comment&quot;&gt;# answer = generate_answer_without_context(user_query)&lt;/span&gt;
+
+        &lt;span class=&quot;token keyword&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;===답변===&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;answer&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;==========\n&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h4&gt;7-2 검색 결과 데이터 구조&lt;/h4&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# collection.query() 결과 예시&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token string&quot;&gt;&quot;documents&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;문서&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; 문서&lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; 문서&lt;span class=&quot;token number&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;  &lt;span class=&quot;token comment&quot;&gt;# 한 개의 쿼리에 대한 top_k 문서 리스트&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token string&quot;&gt;&quot;metadatas&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;메타데이터&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; 메타데이터&lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; 메타데이터&lt;span class=&quot;token number&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;  &lt;span class=&quot;token comment&quot;&gt;# 각 문서에 해당하는 메타데이터 리스트&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;✅ 정리&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;RAG의 핵심 포인트&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;🔍 &lt;strong&gt;검색 기반&lt;/strong&gt;: 외부 지식을 실시간으로 검색하여 활용&lt;/li&gt;
+&lt;li&gt;📊 &lt;strong&gt;벡터 검색&lt;/strong&gt;: 의미적 유사도 기반의 정확한 문서 검색&lt;/li&gt;
+&lt;li&gt;🎯 &lt;strong&gt;맥락 제공&lt;/strong&gt;: 검색된 문서를 맥락으로 활용한 정확한 답변 생성&lt;/li&gt;
+&lt;li&gt;⚡ &lt;strong&gt;실시간 반영&lt;/strong&gt;: 새로운 데이터를 즉시 활용 가능&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;RAG vs Fine-tuning 선택 기준&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;RAG&lt;/strong&gt;: 실시간 정보 업데이트, 비용 효율성, 출처 명시가 중요한 경우&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Fine-tuning&lt;/strong&gt;: 특정 스타일/톤 학습, 응답 속도, 일관된 행동 패턴이 중요한 경우&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;구현 시 고려사항&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;청킹 전략&lt;/strong&gt;: chunk_size와 overlap 최적화&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;벡터 DB 선택&lt;/strong&gt;: 용량과 성능 요구사항에 맞는 DB 선택&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;임베딩 모델&lt;/strong&gt;: 도메인에 특화된 임베딩 모델 활용&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;검색 최적화&lt;/strong&gt;: 유사도 기준과 상위 K개 결과 수 조정&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;RAG는 현재 생성형 AI의 한계를 극복하고 신뢰할 수 있는 AI 서비스를 구축하는 핵심 기술이다. 체계적인 이해와 실습을 통해 실무에서 효과적으로 활용할 수 있다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[프롬프트 엔지니어링 기초 - AI와 효과적으로 소통하는 방법]]></title><description><![CDATA[AI 시대에 접어들면서 프롬프트 엔지니어링은 필수 스킬이 되었다. 단순히 질문을 던지는 것을 넘어서, AI로부터 원하는 결과를 정확하게 얻어내는 기술을 체계적으로 알아보자.  1️⃣ 프롬프트 엔지니어링이란? 1-1. 프롬프트 엔지니어링의 정의 은 AI…]]></description><link>https://rmdnps10.github.io/프롬프팅 엔지니어링 기초/</link><guid isPermaLink="false">https://rmdnps10.github.io/프롬프팅 엔지니어링 기초/</guid><pubDate>Sun, 28 Sep 2025 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
 &lt;p&gt;AI 시대에 접어들면서 프롬프트 엔지니어링은 필수 스킬이 되었다. 단순히 질문을 던지는 것을 넘어서, AI로부터 원하는 결과를 정확하게 얻어내는 기술을 체계적으로 알아보자.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;background: transparent;&quot;&gt;
