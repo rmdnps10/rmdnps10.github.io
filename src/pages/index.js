@@ -109,7 +109,7 @@ const PostCard = ({ post }) => {
 //
 
 const PostList = ({ posts }) => (
-  <div className="flex flex-col gap-6 md:gap-10 pt-4 w-full">
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 pt-4 w-full">
     {posts.map(post => (
       <PostCard key={post.fields.slug} post={post} />
     ))}
