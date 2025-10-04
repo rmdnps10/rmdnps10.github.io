@@ -1,4 +1,652 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[모든 걸 기록해보려 합니다.]]></description><link>https://rmdnps10.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 30 Sep 2025 02:16:43 GMT</lastBuildDate><item><title><![CDATA[RAG의 핵심 개념과 실습]]></title><description><![CDATA[대형 언어 모델의 한계를 극복하고 실시간 정보 활용을 가능하게 하는 RAG 기술이 주목받고 있다. 검색과 생성을 결합한 이 혁신적인 접근법을 이론부터 실습까지 알아보자. 1️⃣ RAG란? 1-1 RAG…]]></description><link>https://rmdnps10.github.io/RAG/</link><guid isPermaLink="false">https://rmdnps10.github.io/RAG/</guid><pubDate>Sun, 28 Sep 2025 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[모든 걸 기록해보려 합니다.]]></description><link>https://rmdnps10.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 04 Oct 2025 05:08:40 GMT</lastBuildDate><item><title><![CDATA[허깅페이스로 파이프라인을 만들어보자 - 트랜스포머 모델 활용 가이드]]></title><description><![CDATA[수많은 트랜스포머 모델이 쏟아져 나오지만 각각 다른 구현 방식으로 인해 활용이 어려웠다. 허깅페이스는 통일된 인터페이스로 이 문제를 해결하고, 복잡한 NLP 파이프라인을 간단하게 구축할 수 있게 해준다. 0️⃣ 구글 코랩과 깃허브 연동하기 0-…]]></description><link>https://rmdnps10.github.io/허깅페이스로 파이프라인을 만들어보자/</link><guid isPermaLink="false">https://rmdnps10.github.io/허깅페이스로 파이프라인을 만들어보자/</guid><pubDate>Sat, 04 Oct 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;background: transparent;&quot;&gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 600px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/1b3d79daf52aff8152fd2b54c697b855/ff59c/index.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 52.400000000000006%; position: relative; bottom: 0; left: 0; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+          &lt;source
+              srcset=&quot;/static/1b3d79daf52aff8152fd2b54c697b855/bc904/index.webp 250w,
+/static/1b3d79daf52aff8152fd2b54c697b855/4be29/index.webp 500w,
+/static/1b3d79daf52aff8152fd2b54c697b855/f8b1b/index.webp 600w&quot;
+              sizes=&quot;(max-width: 600px) 100vw, 600px&quot;
+              type=&quot;image/webp&quot;
+            /&gt;
+          &lt;source
+            srcset=&quot;/static/1b3d79daf52aff8152fd2b54c697b855/43fa5/index.png 250w,
+/static/1b3d79daf52aff8152fd2b54c697b855/c6e3d/index.png 500w,
+/static/1b3d79daf52aff8152fd2b54c697b855/ff59c/index.png 600w&quot;
+            sizes=&quot;(max-width: 600px) 100vw, 600px&quot;
+            type=&quot;image/png&quot;
+          /&gt;
+          &lt;img
+            class=&quot;gatsby-resp-image-image&quot;
+            src=&quot;/static/1b3d79daf52aff8152fd2b54c697b855/ff59c/index.png&quot;
+            alt=&quot;ㄱㅇㅇ&quot;
+            title=&quot;&quot;
+            loading=&quot;lazy&quot;
+            decoding=&quot;async&quot;
+            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+          /&gt;
+        &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;ㄱㅇㅇ&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;수많은 트랜스포머 모델이 쏟아져 나오지만 각각 다른 구현 방식으로 인해 활용이 어려웠다. 허깅페이스는 통일된 인터페이스로 이 문제를 해결하고, 복잡한 NLP 파이프라인을 간단하게 구축할 수 있게 해준다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;0️⃣ 구글 코랩과 깃허브 연동하기&lt;/h2&gt;
+&lt;h4&gt;0-1 개발 환경 준비&lt;/h4&gt;
+&lt;p&gt;실습을 위해 구글 코랩(Google Colab)과 깃허브(Github) 연동이 필요하다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# GPU 사용 설정 확인&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; torch
+device &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; torch&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;cuda&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;is_available&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string-interpolation&quot;&gt;&lt;span class=&quot;token string&quot;&gt;f&quot;Using device: &lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;GPU&apos;&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; device &lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;CPU&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;# 필요한 라이브러리 설치&lt;/span&gt;
+!pip install transformers datasets torch pandas&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;1️⃣ 허깅페이스 개요&lt;/h2&gt;
+&lt;h4&gt;1-1 등장 배경&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;💡 문제점&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;트랜스포머 아키텍처 기반 모델들이 급속히 증가 ⬆&lt;/li&gt;
+&lt;li&gt;모델마다 서로 다른 구현 방식과 인터페이스 존재&lt;/li&gt;
+&lt;li&gt;새로운 모델 사용법을 매번 새로 익혀야 하는 어려움&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;✅ 해결 방안&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;공통된 인터페이스로 다양한 트랜스포머 모델을 활용할 수 있도록 지원하는 라이브러리 개발 → &lt;code class=&quot;language-text&quot;&gt;Huggingface&lt;/code&gt; 팀의 &lt;code class=&quot;language-text&quot;&gt;transformers&lt;/code&gt; 라이브러리&lt;/p&gt;
+&lt;h4&gt;1-2 허깅페이스란?&lt;/h4&gt;
+&lt;p&gt;다양한 트랜스포머 모델을 &lt;strong&gt;통일된 인터페이스&lt;/strong&gt;로 사용 가능하도록 지원하는 오픈소스 라이브러리/플랫폼이다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;라이브러리 구성&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;transformers&lt;/code&gt;: 사전 학습된 트랜스포머 모델 및 토크나이저 지원&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;datasets&lt;/code&gt;: 데이터셋 업로드 및 다운로드 지원&lt;/li&gt;
+&lt;li&gt;서로 다른 모델을 통일된 인터페이스로 활용 가능&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# 통일된 인터페이스 예시&lt;/span&gt;
+text &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;What is Huggingface Transformers?&quot;&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;# BERT 모델 활용&lt;/span&gt;
+bert_model &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; AutoModel&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;from_pretrained&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;bert-base-uncased&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+bert_tokenizer &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; AutoTokenizer&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;from_pretrained&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;bert-base-uncased&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+encoded_input &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; bert_tokenizer&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;text&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; return_tensors&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;pt&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+bert_output &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; bert_model&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;**&lt;/span&gt;encoded_input&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;# GPT-2 모델 활용&lt;/span&gt;
+gpt_model &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; GPT2LMHeadModel&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;from_pretrained&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;gpt2&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+gpt_tokenizer &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; AutoTokenizer&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;from_pretrained&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;gpt2&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+encoded_input &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; gpt_tokenizer&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;text&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; return_tensors&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;pt&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+gpt_output &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; gpt_model&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;**&lt;/span&gt;encoded_input&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;플랫폼(Hub)&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;huggingface_hub&lt;/code&gt;: 모델과 데이터셋 탐색 및 공유 지원&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://huggingface.co/&quot;&gt;https://huggingface.co/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;1-3 허깅페이스 허브 탐색하기&lt;/h4&gt;
+&lt;h5&gt;모델 허브&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://huggingface.co/models&quot;&gt;https://huggingface.co/models&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;필터링 옵션&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;카테고리&lt;/th&gt;
+&lt;th&gt;설명&lt;/th&gt;
+&lt;th&gt;예시&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Tasks&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;작업 종류별 필터링&lt;/td&gt;
+&lt;td&gt;NLP, CV, Audio, Multimodal&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Libraries&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;학습 라이브러리별 필터링&lt;/td&gt;
+&lt;td&gt;PyTorch, TensorFlow, Transformers&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Languages&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;지원 언어별 필터링&lt;/td&gt;
+&lt;td&gt;한국어, 영어, 중국어&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;주요 Task 유형&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Task&lt;/th&gt;
+&lt;th&gt;설명&lt;/th&gt;
+&lt;th&gt;모델 예시&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;NLP&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;자연어 처리&lt;/td&gt;
+&lt;td&gt;번역, 요약, 감정 분석 모델&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;CV&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;컴퓨터 비전&lt;/td&gt;
+&lt;td&gt;이미지 분류, 객체 탐지 모델&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Audio&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;오디오 처리&lt;/td&gt;
+&lt;td&gt;음성 인식, TTS&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Multimodal&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;복합 모달리티&lt;/td&gt;
+&lt;td&gt;이미지 캡셔닝, VQA 모델&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h5&gt;데이터셋 허브&lt;/h5&gt;
+&lt;p&gt;&lt;a href=&quot;https://huggingface.co/datasets&quot;&gt;https://huggingface.co/datasets&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;KLUE Dataset 예시&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Subset&lt;/strong&gt;: 데이터셋의 하위 데이터셋으로 각각 다른 학습 목적&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Split&lt;/strong&gt;: Train/Validation 8:2 비율로 구성&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Train&lt;/strong&gt;: 모델 학습에 사용되는 데이터셋으로, 모델이 패턴을 학습하는 데 활용된다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Validation&lt;/strong&gt;: 모델 성능을 검증하는 데이터셋으로, 학습 과정에서 과적합을 방지하고 모델의 일반화 성능을 평가한다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;2️⃣ 트랜스포머 모델 활용하기&lt;/h2&gt;
+&lt;h4&gt;2-1 모델 구조: 바디 + 헤드&lt;/h4&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&quot;center&quot;&gt;바디&lt;/th&gt;
+&lt;th align=&quot;center&quot;&gt;헤드&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&quot;center&quot;&gt;모델의 중심 엔진으로 추론 모델의 핵심 부분&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;특정 태스크를 수행하는 기능별 세분화된 부분&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;허깅페이스 라이브러리로 동일한 바디에 서로 다른 헤드를 붙여 다양한 작업을 수행할 수 있다.&lt;/p&gt;
+&lt;h4&gt;2-2 모델 불러오기&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;1. 바디만 불러오기&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; transformers &lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; AutoModel
+
+base_model_id &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;bert-base-uncased&apos;&lt;/span&gt;
+base_model &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; AutoModel&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;from_pretrained&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;base_model_id&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# 출력: hidden state(고차원 벡터)&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# 목적: 모델을 feature extractor(특징 추출기)로 활용&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;2. 분류 헤드가 포함된 모델 불러오기&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; transformers &lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; AutoModelForSequenceClassification
+
+model_id &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;SamLowe/roberta-base-go_emotions&apos;&lt;/span&gt;
+classification_model &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; AutoModelForSequenceClassification&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;from_pretrained&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;model_id&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# 감정 분류가 이미 학습된 모델&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;3. 분류 헤드가 랜덤 초기화된 모델 불러오기&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; transformers &lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; AutoModelForSequenceClassification
+
+model_id &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;klue/roberta-base&apos;&lt;/span&gt;
+random_model &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; AutoModelForSequenceClassification&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;from_pretrained&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;model_id&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# 바디: 사전학습 완료, 헤드: 랜덤 초기화&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# 목적: 특정 task에 맞춰 fine-tuning할 때 사용&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h4&gt;2-3 토크나이저 활용하기&lt;/h4&gt;
+&lt;h3&gt;토크나이저의 역할&lt;/h3&gt;
+&lt;p&gt;텍스트를 토큰 단위로 나누고 각 토큰을 대응하는 &lt;strong&gt;토큰 ID&lt;/strong&gt;로 변환하는 아키텍처다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;토큰&lt;/strong&gt;: 언어 모델이 텍스트를 이해하고 생성하는 기본 단위&lt;/li&gt;
+&lt;li&gt;학습 데이터를 통해 토큰 사전 구축 → 모델마다 토크나이징 방법이 다름&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;동일한 모델 ID&lt;/strong&gt;로 모델과 토크나이저를 통일해야 함&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; transformers &lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; AutoTokenizer
+
+model_id &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;klue/roberta-base&apos;&lt;/span&gt;
+tokenizer &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; AutoTokenizer&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;from_pretrained&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;model_id&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;토크나이저 출력값&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; transformers &lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; AutoTokenizer
+
+tokenizer &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; AutoTokenizer&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;from_pretrained&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;bert-base-uncased&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+text &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;I love banana&quot;&lt;/span&gt;
+encoded &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; tokenizer&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;text&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; padding&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token boolean&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; truncation&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token boolean&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;encoded&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# 출력 예시:&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# {&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;#  &apos;input_ids&apos;: [101, 1045, 2293, 15212, 102],&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;#  &apos;token_type_ids&apos;: [0, 0, 0, 0, 0],&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;#  &apos;attention_mask&apos;: [1, 1, 1, 1, 1]&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# }&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;주요 출력 요소&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;input_ids&lt;/code&gt;: 각 토큰의 사전 내 인덱스 번호&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;token_type_ids&lt;/code&gt;: 토큰이 속한 문장 ID (첫 번째 문장: 0, 두 번째 문장: 1)&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;attention_mask&lt;/code&gt;: padding token 여부 (실제 토큰: 1, padding: 0)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;주요 메서드&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;토큰 확인하기&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;tokenized &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; tokenizer&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;토크나이저는 텍스트를 토큰 단위로 나눈다&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;# 토큰 리스트로 변환&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;tokenizer&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;convert_ids_to_tokens&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;tokenized&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;input_ids&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# [&apos;[CLS]&apos;, &apos;토크&apos;, &apos;##나이&apos;, &apos;##저&apos;, &apos;##는&apos;, &apos;텍스트&apos;, &apos;##를&apos;, &apos;토&apos;, &apos;##큰&apos;, &apos;단위&apos;, &apos;##로&apos;, &apos;나눈다&apos;, &apos;[SEP]&apos;]&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;# 원래 문장으로 디코딩&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;tokenizer&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;decode&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;tokenized&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;input_ids&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; skip_special_tokens&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token boolean&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# 토크나이저는 텍스트를 토큰 단위로 나눈다&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;배치 디코딩&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# 개별 문장들의 배치 처리&lt;/span&gt;
+first_tokenized &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; tokenizer&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;첫 번째 문장&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;두 번째 문장&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;input_ids&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;tokenizer&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;batch_decode&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;first_tokenized&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# [&apos;[CLS] 첫 번째 문장 [SEP]&apos;, &apos;[CLS] 두 번째 문장 [SEP]&apos;]&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;# 문장 쌍으로 처리&lt;/span&gt;
+second_tokenized &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; tokenizer&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;첫 번째 문장&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;두 번째 문장&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;input_ids&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;tokenizer&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;batch_decode&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;second_tokenized&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# [&apos;[CLS] 첫 번째 문장 [SEP] 두 번째 문장 [SEP]&apos;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;3️⃣ 데이터셋 활용하기&lt;/h2&gt;
+&lt;h4&gt;3-1 데이터셋 다운로드&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;허깅페이스 허브에서 다운로드&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; datasets &lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; load_dataset
+
+&lt;span class=&quot;token comment&quot;&gt;# MRC(Machine Reading Comprehension) 데이터셋&lt;/span&gt;
+klue_mrc_dataset &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; load_dataset&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;klue&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;mrc&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+klue_mrc_dataset_only_train &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; load_dataset&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;klue&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;mrc&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; split&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;train&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;로컬 데이터 활용&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# JSON 파일 로드&lt;/span&gt;
+dataset_json &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; load_dataset&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;json&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; data_files&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;/path/to/data.json&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;# 수동으로 train/test 분할&lt;/span&gt;
+dataset_json_test &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; dataset_json&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;train&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;train_test_split&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;test_size&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0.2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; seed&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;42&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;test&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Python 딕셔너리/DataFrame 활용&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; datasets &lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; Dataset
+&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; pandas &lt;span class=&quot;token keyword&quot;&gt;as&lt;/span&gt; pd
+
+&lt;span class=&quot;token comment&quot;&gt;# 딕셔너리에서 생성&lt;/span&gt;
+my_dict &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;a&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+dataset &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; Dataset&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;from_dict&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;my_dict&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;# pandas DataFrame에서 생성&lt;/span&gt;
+df &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; pd&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;DataFrame&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;a&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+dataset &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; Dataset&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;from_pandas&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;df&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h4&gt;3-2 데이터셋 가공하기&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;KLUE YNAT 데이터셋 예시&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; datasets &lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; load_dataset
+
+klue_tc_train &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; load_dataset&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;klue&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;ynat&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; split&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;train&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+klue_tc_eval &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; load_dataset&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;klue&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;ynat&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; split&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;validation&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;# 데이터셋 구조 확인&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;klue_tc_train&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# Dataset({&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;#     features: [&apos;guid&apos;, &apos;title&apos;, &apos;label&apos;, &apos;url&apos;, &apos;date&apos;],&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;#     num_rows: 45678&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# })&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;불필요한 컬럼 제거&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;klue_tc_train_removed &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; klue_tc_train&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;remove_columns&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;guid&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;url&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;date&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;컬럼 추가하기&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# label을 문자열로 변환하는 함수&lt;/span&gt;
+klue_tc_label &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; klue_tc_train_removed&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;features&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;label&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;make_str_label&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;batch&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    batch&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;label_str&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; klue_tc_label&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;int2str&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;batch&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;label&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; batch
+
+
+&lt;span class=&quot;token comment&quot;&gt;# map을 사용하여 배치 처리&lt;/span&gt;
+klue_tc_train_removed &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; klue_tc_train_removed&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token builtin&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+    make_str_label&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    batched&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token boolean&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    batch_size&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1000&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;💡 map 함수란?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;데이터셋의 모든 요소에 대해 동일한 함수를 적용하는 허깅페이스 datasets의 핵심 메서드다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;batched=True&lt;/strong&gt;: 여러 샘플을 한 번에 처리하여 성능 향상&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;batch_size&lt;/strong&gt;: 한 번에 처리할 샘플 수 지정 (메모리 효율성)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;num_proc&lt;/strong&gt;: 멀티프로세싱을 통한 병렬 처리 지원&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Train/Validation/Test 분할&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# 학습용 데이터 1만개 추출&lt;/span&gt;
+train_dataset &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; klue_tc_train&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;train_test_split&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;test_size&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;10000&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; shuffle&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token boolean&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; seed&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;42&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;test&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;# 테스트용 데이터 1000개 추출&lt;/span&gt;
+dataset &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; klue_tc_eval&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;train_test_split&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;test_size&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1000&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; shuffle&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token boolean&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; seed&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;42&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+test_dataset &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; dataset&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;test&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;# 검증용 데이터 1000개 추출&lt;/span&gt;
+valid_dataset &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; dataset&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;train&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;train_test_split&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;test_size&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1000&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; shuffle&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token boolean&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; seed&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;42&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;test&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;4️⃣ 모델을 이용하여 추론하기&lt;/h2&gt;
+&lt;h4&gt;4-1 BERT vs GPT 모델 비교&lt;/h4&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;특징&lt;/th&gt;
+&lt;th&gt;BERT&lt;/th&gt;
+&lt;th&gt;GPT&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;아키텍처&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;트랜스포머 인코더만 사용&lt;/td&gt;
+&lt;td&gt;트랜스포머 디코더만 사용&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;방향성&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;양방향(Bidirectional)&lt;/td&gt;
+&lt;td&gt;단방향(왼쪽→오른쪽)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;사전학습 목표&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;MLM + NSP&lt;/td&gt;
+&lt;td&gt;표준 언어 모델링&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;주요 강점&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;텍스트 이해 및 분석&lt;/td&gt;
+&lt;td&gt;텍스트 생성&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;활용 분야&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;분류, 개체명 인식, 질의응답&lt;/td&gt;
+&lt;td&gt;텍스트 생성, 대화형 AI&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;활용 방식&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Fine-tuning 중심&lt;/td&gt;
+&lt;td&gt;Zero-shot, Few-shot 학습&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;💡 인코더와 디코더&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;인코더(Encoder)&lt;/strong&gt;: 입력 텍스트를 이해하고 문맥 정보를 추출하는 역할&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;입력 전체를 한 번에 보고 양방향으로 정보 처리&lt;/li&gt;
+&lt;li&gt;텍스트의 의미를 파악하는 데 특화&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;디코더(Decoder)&lt;/strong&gt;: 순차적으로 토큰을 생성하는 역할&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;이전 토큰들만 참조하여 다음 토큰 예측&lt;/li&gt;
+&lt;li&gt;자연스러운 텍스트 생성에 특화&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h4&gt;4-2 BERT 모델로 추론하기&lt;/h4&gt;
+&lt;h5&gt;파이프라인 활용&lt;/h5&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; transformers &lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; pipeline
+
+model_id &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;hykiim/roberta-base-klue-ynat-classification&quot;&lt;/span&gt;
+model_pipeline &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; pipeline&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;text-classification&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; model&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;model_id&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;# 텍스트 분류 실행&lt;/span&gt;
+results &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; model_pipeline&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;test_dataset&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;title&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;results&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;주요 파이프라인 종류&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;파이프라인&lt;/th&gt;
+&lt;th&gt;작업&lt;/th&gt;
+&lt;th&gt;예시&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code class=&quot;language-text&quot;&gt;text-classification&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;텍스트 분류&lt;/td&gt;
+&lt;td&gt;감정 분석, 스팸 감지&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code class=&quot;language-text&quot;&gt;token-classification&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;토큰 분류&lt;/td&gt;
+&lt;td&gt;개체명 인식, 품사 태깅&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code class=&quot;language-text&quot;&gt;text-generation&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;텍스트 생성&lt;/td&gt;
+&lt;td&gt;글쓰기, 코딩&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code class=&quot;language-text&quot;&gt;question-answering&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;질의응답&lt;/td&gt;
+&lt;td&gt;독해, FAQ 챗봇&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code class=&quot;language-text&quot;&gt;summarization&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;요약&lt;/td&gt;
+&lt;td&gt;뉴스 기사 요약&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code class=&quot;language-text&quot;&gt;translation&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;번역&lt;/td&gt;
+&lt;td&gt;다국어 번역&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h5&gt;커스텀 파이프라인 구현&lt;/h5&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; torch
+&lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; torch&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;nn&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;functional &lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; softmax
+&lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; transformers &lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; AutoModelForSequenceClassification&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; AutoTokenizer
+
+&lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;CustomPipeline&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;__init__&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;self&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; model_id&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+        self&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;model &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; AutoModelForSequenceClassification&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;from_pretrained&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;model_id&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+        self&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;tokenizer &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; AutoTokenizer&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;from_pretrained&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;model_id&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+        self&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;model&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token builtin&quot;&gt;eval&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;  &lt;span class=&quot;token comment&quot;&gt;# 평가 모드&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;__call__&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;self&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; texts&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;token comment&quot;&gt;# 텍스트 토크나이징&lt;/span&gt;
+        tokenized &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; self&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;tokenizer&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+            texts&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            return_tensors&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;pt&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            padding&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token boolean&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            truncation&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token boolean&quot;&gt;True&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+        &lt;span class=&quot;token comment&quot;&gt;# 추론 실행&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;with&lt;/span&gt; torch&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;no_grad&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+            outputs &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; self&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;model&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;**&lt;/span&gt;tokenized&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+            logits &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; outputs&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;logits
+
+        &lt;span class=&quot;token comment&quot;&gt;# 확률 계산 및 예측&lt;/span&gt;
+        probabilities &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; softmax&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;logits&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; dim&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+        scores&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; labels &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; torch&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token builtin&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;probabilities&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; dim&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+        labels_str &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;self&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;model&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;config&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;id2label&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;label_idx&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; label_idx &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; labels&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;tolist&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+
+        &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;label&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; label&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;score&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; score&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;item&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; label&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; score &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;zip&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;labels_str&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; scores&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;# 사용 예시&lt;/span&gt;
+custom_pipeline &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; CustomPipeline&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;model_id&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+results &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; custom_pipeline&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;test_dataset&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;title&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h4&gt;4-3 GPT 모델로 문장 이어쓰기&lt;/h4&gt;
+&lt;h5&gt;파이프라인 버전&lt;/h5&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; transformers &lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; pipeline
+&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; torch
+
+&lt;span class=&quot;token comment&quot;&gt;# 텍스트 생성 파이프라인&lt;/span&gt;
+generator &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; pipeline&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;text-generation&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; model&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;gpt2&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; device&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+prompt &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;Once upon a time, in a land far, far away,&quot;&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;# 텍스트 생성&lt;/span&gt;
+results &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; generator&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+    prompt&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    max_length&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    num_return_sequences&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    do_sample&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token boolean&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    temperature&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0.7&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    top_k&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;50&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    no_repeat_ngram_size&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; i&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; result &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;enumerate&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;results&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string-interpolation&quot;&gt;&lt;span class=&quot;token string&quot;&gt;f&quot;결과 &lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;i&lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;: &lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;result&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;generated_text&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h5&gt;직접 구현 버전&lt;/h5&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; transformers &lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; GPT2LMHeadModel&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; AutoTokenizer
+&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; torch
+
+&lt;span class=&quot;token comment&quot;&gt;# 모델과 토크나이저 로드&lt;/span&gt;
+gpt_model &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; GPT2LMHeadModel&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;from_pretrained&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;gpt2&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+gpt_tokenizer &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; AutoTokenizer&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;from_pretrained&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;gpt2&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;# pad 토큰 설정&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; gpt_tokenizer&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;pad_token &lt;span class=&quot;token keyword&quot;&gt;is&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;None&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    gpt_tokenizer&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;pad_token &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; gpt_tokenizer&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;eos_token
+
+&lt;span class=&quot;token comment&quot;&gt;# 텍스트 생성&lt;/span&gt;
+text &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;What is Huggingface Transformer?&quot;&lt;/span&gt;
+encoded_input &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; gpt_tokenizer&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;text&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; return_tensors&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;pt&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+output_sequences &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; gpt_model&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;generate&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+    input_ids&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;encoded_input&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;input_ids&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    max_length&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;50&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    num_return_sequences&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    pad_token_id&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;gpt_tokenizer&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;pad_token_id&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    do_sample&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token boolean&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    top_k&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;50&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    top_p&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0.95&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    temperature&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0.7&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;# 결과 디코딩&lt;/span&gt;
+generated_text &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; gpt_tokenizer&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;decode&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;output_sequences&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; skip_special_tokens&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token boolean&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;Generated Text:&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; generated_text&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;5️⃣ 뉴스기사 요약→번역→감정분석 파이프라인&lt;/h2&gt;
+&lt;h4&gt;5-1 파이프라인 설계&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;전체 워크플로우&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;기사 내용(한국어) → 요약(한국어)&lt;/li&gt;
+&lt;li&gt;요약(한국어) → 번역(영어)&lt;/li&gt;
+&lt;li&gt;번역(영어) → 감정분석&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4&gt;5-2 데이터셋 준비&lt;/h4&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; datasets &lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; load_dataset
+&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; pandas &lt;span class=&quot;token keyword&quot;&gt;as&lt;/span&gt; pd
+
+&lt;span class=&quot;token comment&quot;&gt;# KLUE MRC 데이터셋 로드&lt;/span&gt;
+full_dataset &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; load_dataset&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;klue&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;mrc&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; split&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;train&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;# 실습용 데이터 일부 선택&lt;/span&gt;
+num_samples_to_use &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;10&lt;/span&gt;
+klue_mrc_subset &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; full_dataset&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;select&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token builtin&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;num_samples_to_use&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;로드된 데이터셋 정보:&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;klue_mrc_subset&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h4&gt;5-3 1단계: 기사 요약&lt;/h4&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# 요약 모델 파이프라인 로드&lt;/span&gt;
+summarizer &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; pipeline&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+    task&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;summarization&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    model&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;gogamza/kobart-summarization&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    device&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;device
+&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;# 요약 함수 정의&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;summarize_context&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;example&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    summary_result &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; summarizer&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+        example&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;context&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+        max_length&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;150&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+        min_length&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+        do_sample&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token boolean&quot;&gt;False&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    example&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;summary&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; summary_result&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;summary_text&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; example
+
+&lt;span class=&quot;token comment&quot;&gt;# 데이터셋에 요약 적용&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;요약 작업을 시작합니다...&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+summarized_dataset &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; klue_mrc_subset&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token builtin&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;summarize_context&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;요약 작업 완료.&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h4&gt;5-4 2단계: 한영 번역&lt;/h4&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# 번역 모델 파이프라인 로드&lt;/span&gt;
+translator &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; pipeline&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+    task&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;translation&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    model&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;facebook/nllb-200-distilled-600M&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    device&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;device
+&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;# 번역 함수 정의&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;translate_summary_to_english&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;example&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    translation_result &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; translator&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+        example&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;summary&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+        src_lang&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;kor_Hang&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+        tgt_lang&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;eng_Latn&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+        max_length&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;150&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+        min_length&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+        do_sample&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token boolean&quot;&gt;False&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    example&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;english_summary&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; translation_result&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;translation_text&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; example
+
+&lt;span class=&quot;token comment&quot;&gt;# 데이터셋에 번역 적용&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;번역 작업을 시작합니다...&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+translated_dataset &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; summarized_dataset&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token builtin&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;translate_summary_to_english&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;번역 작업 완료.&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h4&gt;5-5 3단계: 감정 분석&lt;/h4&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# 감정 분석 모델 파이프라인 로드&lt;/span&gt;
+emotion_classifier &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; pipeline&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+    task&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;text-classification&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    model&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;SamLowe/roberta-base-go_emotions&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    top_k&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    device&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;device
+&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;# 감정 분석 함수 정의&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;analyze_emotion&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;example&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    emotion_result &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; emotion_classifier&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;example&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;english_summary&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    example&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;emotion&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; emotion_result&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;label&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; example
+
+&lt;span class=&quot;token comment&quot;&gt;# 데이터셋에 감정 분석 적용&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;감정 분석 작업을 시작합니다...&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+final_dataset &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; translated_dataset&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token builtin&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;analyze_emotion&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;감정 분석 작업 완료.&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h4&gt;5-6 결과 확인&lt;/h4&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;최종 데이터셋 컬럼:&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; final_dataset&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;column_names&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;# 최종 결과 확인&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; i &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token builtin&quot;&gt;min&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;final_dataset&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string-interpolation&quot;&gt;&lt;span class=&quot;token string&quot;&gt;f&quot;\n--- 샘플 &lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;i&lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt; ---&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string-interpolation&quot;&gt;&lt;span class=&quot;token string&quot;&gt;f&quot;원문 일부: &lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;final_dataset&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;i&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;context&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token format-spec&quot;&gt;100]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;...&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string-interpolation&quot;&gt;&lt;span class=&quot;token string&quot;&gt;f&quot;요약: &lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;final_dataset&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;i&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;summary&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string-interpolation&quot;&gt;&lt;span class=&quot;token string&quot;&gt;f&quot;영어 번역: &lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;final_dataset&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;i&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;english_summary&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string-interpolation&quot;&gt;&lt;span class=&quot;token string&quot;&gt;f&quot;감정 분석: &lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;final_dataset&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;i&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;emotion&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;# CSV로 저장 (선택사항)&lt;/span&gt;
+df_final &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; pd&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;DataFrame&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;final_dataset&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+df_final&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;to_csv&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;news_analysis_pipeline_results.csv&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; index&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token boolean&quot;&gt;False&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;✅ 정리&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;⭐️ 허깅페이스의 핵심 가치&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;🔄 &lt;strong&gt;통일된 인터페이스&lt;/strong&gt;: 다양한 모델을 동일한 방식으로 활용&lt;/li&gt;
+&lt;li&gt;🚀 &lt;strong&gt;간편한 파이프라인&lt;/strong&gt;: 복잡한 전처리 과정을 자동화&lt;/li&gt;
+&lt;li&gt;🛠️ &lt;strong&gt;유연한 커스터마이징&lt;/strong&gt;: 필요에 따라 세부 구현 가능&lt;/li&gt;
+&lt;li&gt;🌐 &lt;strong&gt;풍부한 생태계&lt;/strong&gt;: 모델부터 데이터셋까지 원스톱 지원&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;👀 파이프라인 구축을 어떻게??&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;모델 선택&lt;/strong&gt;: 도메인과 언어에 적합한 모델 활용&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;배치 처리&lt;/strong&gt;: &lt;code class=&quot;language-text&quot;&gt;map&lt;/code&gt; 함수를 활용한 효율적인 데이터 처리&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;에러 핸들링&lt;/strong&gt;: 각 단계별 예외 처리 및 로깅&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;성능 최적화&lt;/strong&gt;: GPU 활용과 적절한 batch_size 설정&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;허깅페이스는 복잡한 NLP 파이프라인을 누구나 쉽게 구축할 수 있게 해주는 강력한 도구다. 기본 사용법부터 복합 파이프라인까지 단계적으로 학습하여 실무에서 효과적으로 활용할 수 있다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[RAG의 핵심 개념과 실습]]></title><description><![CDATA[대형 언어 모델의 한계를 극복하고 실시간 정보 활용을 가능하게 하는 RAG 기술이 주목받고 있다. 검색과 생성을 결합한 이 혁신적인 접근법을 이론부터 실습까지 알아보자. 1️⃣ RAG란? 1-1 RAG…]]></description><link>https://rmdnps10.github.io/RAG/</link><guid isPermaLink="false">https://rmdnps10.github.io/RAG/</guid><pubDate>Wed, 01 Oct 2025 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
 &lt;p&gt;대형 언어 모델의 한계를 극복하고 실시간 정보 활용을 가능하게 하는 RAG 기술이 주목받고 있다. 검색과 생성을 결합한 이 혁신적인 접근법을 이론부터 실습까지 알아보자.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2&gt;1️⃣ RAG란?&lt;/h2&gt;
