@@ -1,6 +1,6 @@
 ---
 title: "RAG의 핵심 개념과 실습"
-date: "2025-09-28"
+date: "2025-10-01"
 description: "RAG의 핵심 개념부터 벡터 DB 구축, 실제 챗봇 구현까지 Python 코드와 함께 알아보자."
 thumbnail: "./index.png"
 pointColor: "#FF6B6B"
