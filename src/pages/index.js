@@ -7,6 +7,7 @@ import Seo from "../components/seo"
 import Bio from "../components/Bio"
 
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { getTagColor } from "../utils/tagColors"
 
 //
 //
@@ -31,9 +32,14 @@ const TagFilter = ({ tagList, selectedTag, setSelectedTag }) => (
         onClick={() => setSelectedTag(tag)}
         className={`px-1.5 md:px-2 py-0.5 border-2 text-xs md:text-sm ${
           selectedTag === tag
-            ? "bg-white text-black font-bold"
+            ? "text-white font-bold"
             : "border-white text-white hover:bg-[#383737] font-bold"
         } rounded-lg hover:scale-110 hover: transition-all whitespace-nowrap flex-shrink-0`}
+        style={
+          selectedTag === tag
+            ? { backgroundColor: getTagColor(tag), borderColor: getTagColor(tag) }
+            : {}
+        }
       >
         {tag}
       </button>
@@ -80,12 +86,13 @@ const PostCard = ({ post }) => {
 
             <div className="flex gap-1 md:gap-2 my-2 md:my-3 flex-wrap">
               {tags.map(tag => (
-                <button
+                <span
                   key={tag}
-                  className="px-1.5 md:px-2 py-0.5 border-2 border-white rounded-lg text-white hover:bg-[#383737] font-bold text-xs md:text-sm"
+                  className="px-1.5 md:px-2 py-0.5 rounded-lg text-white font-bold text-xs md:text-sm"
+                  style={{ backgroundColor: getTagColor(tag) }}
                 >
                   {tag}
-                </button>
+                </span>
               ))}
             </div>
             <section className="mt-2 md:pb-0">
