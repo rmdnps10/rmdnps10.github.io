@@ -156,6 +156,7 @@ h1 {
 
 h2 {
   font-size: var(--fontSize-5);
+  color: var(--color-yellow);
 }
 h3 {
   font-size: var(--fontSize-4);
@@ -194,6 +195,7 @@ p {
   --x-height-multiplier: 0.35;
   margin: var(--spacing-0) var(--spacing-0) var(--spacing-8) var(--spacing-0);
   padding: var(--spacing-0);
+  font-size: var(--fontSize-1);
 }
 
 /* Lists */
@@ -404,13 +406,13 @@ table tbody tr td {
 }
 
 code.language-text {
-  background: var(--color-lightdark-translucent);
   color: #d85352 !important;
-  font-size: 0.875rem;
-  padding: 0.125rem 0.25rem;
+  margin-right: 0.2rem;
+  padding: 0.2rem 0.25rem;
   border-radius: 0.25rem;
   word-break: break-all;
   overflow-wrap: break-word;
+  font-size: 14px;
 }
 
 /* =============================================================================
@@ -570,6 +572,11 @@ figure.gatsby-resp-image-figure {
 
   code.language-text {
     font-size: 12px;
+  }
+
+  p,
+  li {
+    font-size: var(--fontSize-0);
   }
 }
 
