@@ -155,7 +155,7 @@ random_model = AutoModelForSequenceClassification.from_pretrained(model_id)
 
 #### 2-3 토크나이저 활용하기
 
-### 토크나이저의 역할
+**토크나이저의 역할**
 
 텍스트를 토큰 단위로 나누고 각 토큰을 대응하는 **토큰 ID**로 변환하는 아키텍처다.
 
@@ -170,7 +170,7 @@ model_id = 'klue/roberta-base'
 tokenizer = AutoTokenizer.from_pretrained(model_id)
 ```
 
-### 토크나이저 출력값
+**토크나이저 출력값**
 
 ```python
 from transformers import AutoTokenizer
@@ -194,7 +194,6 @@ print(encoded)
 - `token_type_ids`: 토큰이 속한 문장 ID (첫 번째 문장: 0, 두 번째 문장: 1)
 - `attention_mask`: padding token 여부 (실제 토큰: 1, padding: 0)
 
-### 주요 메서드
 
 **토큰 확인하기**
 
