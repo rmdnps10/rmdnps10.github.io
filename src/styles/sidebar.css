@@ -27,8 +27,8 @@ html {
   .toc-sidebar {
     display: block;
     position: sticky;
-    top: 100px;
-    max-height: calc(100vh - 120px);
+    top: 60px;
+    max-height: calc(100vh - 50px);
     overflow-y: auto;
     align-self: start;
   }
@@ -36,16 +36,13 @@ html {
 
 .toc-container {
   padding: 1.5rem;
-  background: #f8f9fa;
-  border-radius: 8px;
-  border-left: 3px solid #3b82f6;
 }
 
 .toc-title {
   margin: 0 0 1rem 0;
   font-size: 1.125rem;
   font-weight: 700;
-  color: #1f2937;
+  color: white;
   font-family: var(--fontFamily-pretendard);
 }
 
@@ -56,7 +53,7 @@ html {
 }
 
 .toc-item {
-  margin: 0.5rem 0;
+  margin: 0.2rem 0;
   transition: all 0.2s ease;
 }
 
@@ -83,7 +80,7 @@ html {
 }
 
 .toc-link {
-  color: #4b5563;
+  color: var(--color-text-light);
   text-decoration: none;
   transition: color 0.2s ease;
   display: block;
