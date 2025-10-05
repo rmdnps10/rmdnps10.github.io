@@ -36,7 +36,6 @@ const Bio = () => {
         quality={95}
         alt="Profile picture"
       />
-      
       <div className="flex flex-col">
         <p className="text-white m-0 mt-3">
           Written by{" "}

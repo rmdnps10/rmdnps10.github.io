@@ -6,6 +6,11 @@ import "./src/normalize.css"
 // custom CSS styles
 import "prismjs/themes/prism-twilight.css"
 import "./src/global.css"
+import "./src/styles/code-highlight.css"
+import "./src/styles/image.css"
+import "./src/styles/sidebar.css"
+import "./src/styles/table.css"
+import "./src/styles/typography.css"
 
 // Highlighting for code blocks
 import "remark-admonitions/styles/classic.css"

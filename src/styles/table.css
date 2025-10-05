@@ -1,0 +1,123 @@
+/* =============================================================================
+  Tables
+  ============================================================================= */
+
+
+table {
+  margin-bottom: var(--spacing-8);
+  border-collapse: collapse;
+  border-spacing: 0.25rem;
+  width: auto;
+  min-width: 100%;
+  display: table;
+}
+
+/* Article 내부 테이블 래퍼 */
+article table {
+  width: auto;
+  min-width: 100%;
+  display: block;
+  overflow-x: auto;
+  max-width: 100%;
+  -webkit-overflow-scrolling: touch;
+}
+
+article table thead,
+article table tbody {
+  display: table-header-group;
+  width: 100%;
+}
+
+article table tbody {
+  display: table-row-group;
+}
+
+article table tr {
+  display: table-row;
+}
+
+article table th,
+article table td {
+  display: table-cell;
+}
+
+/* 테이블 컨테이너 */
+.table-container {
+  overflow-x: auto;
+  max-width: 100%;
+  -webkit-overflow-scrolling: touch;
+  margin-bottom: var(--spacing-8);
+}
+
+.table-container table {
+  width: auto;
+  min-width: 100%;
+  margin-bottom: 0;
+  overflow-x: visible;
+  display: table;
+}
+
+/* 테이블 내부 요소들 */
+table thead {
+  display: table-header-group;
+  
+}
+table tbody {
+  display: table-row-group;
+}
+table tr {
+  display: table-row;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+table th,
+table td {
+  display: table-cell;
+  white-space: nowrap;
+}
+
+table thead tr th {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: var(--spacing-3) var(--spacing-4);
+  background-color: rgba(255, 255, 255, 0.5);
+  color: black;
+  min-width: 120px;
+  white-space: nowrap;
+}
+
+table tbody tr td {
+  padding: var(--spacing-3) var(--spacing-4);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  text-align: center;
+  min-width: 120px;
+  white-space: nowrap;
+}
+
+  
+@media (max-width: 768px) {
+    table thead tr th,
+    table tbody tr td {
+        min-width: 100px;
+        padding: var(--spacing-2) var(--spacing-3);
+        font-size: 0.875rem;
+    }
+    
+    table thead,
+    table tbody {
+        min-width: 500px;
+    }
+}
+
+@media (max-width: 480px) {
+    table thead tr th,
+    table tbody tr td {
+        min-width: 80px;
+        padding: var(--spacing-1) var(--spacing-2);
+        font-size: 0.75rem;
+    }
+    
+    table thead,
+    table tbody {
+        min-width: 400px;
+    }
+}
