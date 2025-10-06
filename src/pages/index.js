@@ -37,8 +37,14 @@ const TagFilter = ({ tagList, selectedTag, setSelectedTag }) => (
         } rounded-lg hover:scale-110 hover: transition-all whitespace-nowrap flex-shrink-0`}
         style={
           selectedTag === tag
-            ? { backgroundColor: getTagColor(tag), borderColor: getTagColor(tag) }
-            : {}
+            ? {
+                backgroundColor: getTagColor(tag),
+                borderColor: getTagColor(tag),
+              }
+            : {
+                color: getTagColor(tag),
+                borderColor: getTagColor(tag),
+              }
         }
       >
         {tag}
@@ -86,13 +92,16 @@ const PostCard = ({ post }) => {
 
             <div className="flex gap-1 md:gap-2 my-2 md:my-3 flex-wrap">
               {tags.map(tag => (
-                <span
+                <button
                   key={tag}
-                  className="px-1.5 md:px-2 py-0.5 rounded-lg text-white font-bold text-xs md:text-sm"
-                  style={{ backgroundColor: getTagColor(tag) }}
+                  className="px-1.5 md:px-2 py-0.5 rounded-lg text-white font-bold text-xs md:text-sm border-2"
+                  style={{
+                    color: getTagColor(tag),
+                    borderColor: getTagColor(tag),
+                  }}
                 >
                   {tag}
-                </span>
+                </button>
               ))}
             </div>
             <section className="mt-2 md:pb-0">
