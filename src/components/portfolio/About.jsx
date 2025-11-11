@@ -7,44 +7,28 @@ const formatLabel = key =>
     .replace(/^\w/, c => c.toUpperCase())
     .trim()
 
-const sectionStyle = {
-  width: "100vw",
-  marginLeft: "calc(50% - 50vw)",
-  marginRight: "calc(50% - 50vw)",
-}
-
 export default function About() {
   const { tagline, summary, education, skills } = profile
 
   return (
-    <section
-      id="about"
-      className="portfolio-section bg-black/90 px-6 py-24 text-white"
-      style={sectionStyle}
-    >
-      <div className="mx-auto grid max-w-6xl gap-12 md:grid-cols-[1.2fr,1fr] md:gap-20">
+    <section id="about" className="portfolio-about">
+      <div className="portfolio-about-content">
         <div>
-          <p className="text-sm font-semibold uppercase tracking-[0.4em] text-cyan-200">
-            About
-          </p>
-          <h2 className="mt-6 text-3xl font-bold md:text-4xl">{tagline}</h2>
-          <p className="mt-6 text-lg text-white/70 md:text-xl">{summary}</p>
-          <p className="mt-6 text-base text-white/60">
-            <span className="font-semibold text-white">{education}</span>
+          <h2 className="portfolio-section-title">{tagline}</h2>
+          <p className="portfolio-about-text">{summary}</p>
+          <p className="portfolio-about-text mt-4">
+            <span className="font-semibold text-cyan-300">📚 {education}</span>
           </p>
         </div>
-        <div className="space-y-6 rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur">
+        <div className="portfolio-skills-grid">
           {Object.entries(skills).map(([key, list]) => (
-            <div key={key} className="space-y-3">
-              <h3 className="text-sm font-semibold uppercase tracking-[0.3em] text-cyan-100/80">
+            <div key={key} className="space-y-2">
+              <p className="text-xs uppercase tracking-widest text-yellow-400 font-semibold">
                 {formatLabel(key)}
-              </h3>
-              <div className="flex flex-wrap gap-2">
+              </p>
+              <div className="flex flex-wrap gap-1">
                 {list.map(item => (
-                  <span
-                    key={item}
-                    className="rounded-full border border-white/20 bg-black/60 px-3 py-1 text-sm text-white/80"
-                  >
+                  <span key={item} className="portfolio-skill-tag">
                     {item}
                   </span>
                 ))}

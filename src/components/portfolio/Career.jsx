@@ -7,50 +7,33 @@ const formatPeriod = period => {
   return `${start.replace("-", ".")} – ${end.replace("-", ".")}`
 }
 
-const sectionStyle = {
-  width: "100vw",
-  marginLeft: "calc(50% - 50vw)",
-  marginRight: "calc(50% - 50vw)",
-}
-
 export default function Career() {
   return (
-    <section
-      id="career"
-      className="portfolio-section bg-[#080808] px-6 py-24 text-white"
-      style={sectionStyle}
-    >
-      <div className="mx-auto flex max-w-5xl flex-col gap-16">
-        <div>
-          <p className="text-sm font-semibold uppercase tracking-[0.4em] text-cyan-200">
-            Career
-          </p>
-          <h2 className="mt-6 text-3xl font-bold md:text-4xl">
-            Experience that bridges product, people, and AI.
-          </h2>
-        </div>
+    <section id="career" className="portfolio-career">
+      <h2 className="portfolio-section-title text-center mb-8">Career</h2>
+      <p className="text-center text-gray-400 mb-12 max-w-2xl mx-auto">
+        Experience that bridges product, people, and AI.
+      </p>
 
-        <ol className="relative border-l border-white/20 pl-10">
-          {roles.map(role => (
-            <li key={role.organization} className="mb-12 last:mb-0">
-              <div className="absolute -left-[9px] mt-2 h-4 w-4 rounded-full border border-cyan-300 bg-black" />
-              <span className="text-sm uppercase tracking-[0.2em] text-cyan-100/80">
-                {formatPeriod(role.period)}
-              </span>
-              <h3 className="mt-2 text-2xl font-semibold">
-                {role.organization}
-              </h3>
-              <p className="text-white/60">{role.position}</p>
-              <ul className="mt-4 space-y-2 text-sm text-white/70">
+      <div className="portfolio-timeline">
+        {roles.map(role => (
+          <div key={role.organization} className="portfolio-career-item">
+            <div className="portfolio-career-date">
+              {formatPeriod(role.period)}
+            </div>
+            <div className="portfolio-career-card">
+              <h3 className="text-purple-300">{role.organization}</h3>
+              <p className="text-yellow-400 font-semibold">{role.position}</p>
+              <ul className="mt-3 space-y-1">
                 {role.highlights?.map(highlight => (
-                  <li key={highlight} className="leading-relaxed">
+                  <li key={highlight} className="text-gray-300 text-sm">
                     • {highlight}
                   </li>
                 ))}
               </ul>
-            </li>
-          ))}
-        </ol>
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   )

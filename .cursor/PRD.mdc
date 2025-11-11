@@ -82,15 +82,8 @@ AI 시대의 개발자로서, 나의 기술적 정체성과 사고방식을 시�
 ---
 
 ## 7. 디자인 방향
+기존의 블로그의 스타일 톤과 동일하게 구성한다.
 
-| 항목                    | 설명                                                                                          |
-| ----------------------- | --------------------------------------------------------------------------------------------- |
-| **전체 분위기**         | Futuristic Minimalism — Dark tone (#0D0D0D ~ #1A1A1A) + Subtle glow                           |
-| **컬러 팔레트**         | Primary: #00E0FF (Cyan Glow) / Secondary: #C084FC (Violet Accent) / Neutral: #FFFFFF, #B0B0B0 |
-| **폰트**                | Inter / IBM Plex Sans — 굵고 정제된 라인 중심                                                 |
-| **Hero Section 스타일** | Neuron particle system with 3D depth, responsive large typography                             |
-| **인터랙션**            | Framer Motion 기반 Fade-in / Scale / Scroll Parallax                                          |
-| **전환효과**            | Smooth Scroll Transition (react-scroll + cubic easing)                                        |
 
 ---
 

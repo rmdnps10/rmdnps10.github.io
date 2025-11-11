@@ -69,7 +69,7 @@ const PostCard = ({ post }) => {
   return (
     <div
       key={post.fields.slug}
-      className="bg-gradient-to-br from-[#262626] to-[#212121] rounded-lg overflow-hidden hover:scale-105 transition-all w-full border border-gray-700 hover:border-gray-500"
+      className="bg-gradient-to-br from-[#262626] to-[#212121] rounded-lg overflow-hidden hover:scale-105 transition-all w-full border border-[#52525B]"
       style={{
         boxShadow:
           "0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.05)",
