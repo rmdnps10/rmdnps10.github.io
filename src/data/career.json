@@ -1,0 +1,32 @@
+[
+  {
+    "period": { "start": "2025-01", "end": "2025-07" },
+    "organization": "Kakaobank",
+    "position": "Developer Relations Intern",
+    "highlights": [
+      "Built internal tech conference web app (React + FastAPI)",
+      "Maintained Hugo-based tech blog (7 articles)",
+      "Designed visuals for DevCon & Bankerthon",
+      "Led developer engagement initiatives"
+    ]
+  },
+  {
+    "period": { "start": "2024-10", "end": "2025-01" },
+    "organization": "Seoul Metropolitan Government (CES 2025)",
+    "position": "Global Ambassador (Markcloud Inc.)",
+    "highlights": [
+      "Developed CES 2025 landing page",
+      "Planned booth operations",
+      "Coordinated B2B communications"
+    ]
+  },
+  {
+    "period": { "start": "2024-06", "end": "2024-12" },
+    "organization": "ULIFT Inc.",
+    "position": "Freelance Frontend Content Producer",
+    "highlights": [
+      "Planned and reviewed front-end education content",
+      "Co-authored HTML/CSS, React, Next, TypeScript primers"
+    ]
+  }
+]

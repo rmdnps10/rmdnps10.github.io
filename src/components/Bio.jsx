@@ -27,10 +27,11 @@ const Bio = () => {
   return (
     <div className="mt-10 flex gap-2">
       <StaticImage
-        className="bio-avatar"
+        className="bio-avatar flex-shrink-0 w-[120px] h-[120px] overflow-hidden rounded-full"
+        imgClassName="w-full h-full object-cover rounded-full"
         layout="fixed"
         formats={["auto", "webp", "avif"]}
-        src="../images/profile-pic.jpg"
+        src="../images/profile-pic.png"
         width={120}
         height={120}
         quality={95}
@@ -39,13 +40,15 @@ const Bio = () => {
       <div className="flex flex-col">
         <p className="text-white m-0 mt-3">
           Written by{" "}
-          <span className="inline-block text-[1.1rem] font-bold px-2.5 py-0.3 ml-0.3 rounded-xl bg-[#2d3748]">
+          <span className="inline-block text-[1.1rem] font-bold px-2.5 py-0.3 ml-0.3 rounded-xl bg-[#444857] text-white">
             {author.name}
           </span>
         </p>
         <p className="text-gray-300 text-xs m-0 mt-1.5">
           {author?.summary || null}
         </p>
+
+        {/* 학력 */}
         <div className="m-0 flex items-center gap-1">
           <StaticImage
             className="inline-block"
@@ -59,10 +62,24 @@ const Bio = () => {
             {author.university}
           </p>
         </div>
-        <p className="text-white text-[1rem] m-0 mt-auto">
-          {description ??
-            "프론트엔드와 AI를 공부하는 개발자입니다. 개발 커뮤니티를 좋아합니다."}
+
+        {/* 구분선 */}
+        <p className="text-white text-sm sm:text-base md:text-[14px] m-0 mt-2">
+          {description}
         </p>
+      </div>
+
+      {/* 금일 방문자와 전체 방문자 수 */}
+      <div className="ml-auto flex gap-6">
+        <div className="text-center">
+          <p className="text-gray-400 text-xs m-0">Today</p>
+          <p className="text-white text-lg font-semibold m-0 mt-1">224</p>
+        </div>
+
+        <div className="text-center">
+          <p className="text-gray-400 text-xs m-0">Total</p>
+          <p className="text-white text-lg font-semibold m-0 mt-1">2.3K</p>
+        </div>
       </div>
     </div>
   )

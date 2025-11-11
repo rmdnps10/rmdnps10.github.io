@@ -1,0 +1,424 @@
+---
+alwaysApply: false
+---
+⚙️ TRD — Gatsby Web Portfolio (JS, existing scaffold 기반)
+0) 목표
+
+기존 Gatsby 블로그의 Header에 Portfolio 탭 추가
+
+/portfolio 경로에 원페이지형 포트폴리오 생성 (Hero → About → Career → Activity → Featured → All Projects → Contact)
+
+컴포넌트는 src/components/portfolio 하위에 구성, 데이터는 src/data/*.json로 분리
+
+1) 변경/추가 파일 개요
+src/
+├─ components/
+│  ├─ portfolio/
+│  │  ├─ Hero.jsx
+│  │  ├─ About.jsx
+│  │  ├─ Career.jsx
+│  │  ├─ Activity.jsx
+│  │  ├─ FeaturedProjects.jsx
+│  │  ├─ ProjectGrid.jsx
+│  │  └─ FooterSignature.jsx
+│  ├─ Header.jsx            # ⬅️ Portfolio 탭 추가 (수정)
+│  ├─ layout.jsx
+│  └─ seo.jsx
+├─ data/
+│  ├─ profile.json
+│  ├─ career.json
+│  ├─ activity.json
+│  └─ projects.json
+├─ pages/
+│  ├─ index.js
+│  ├─ portfolio.js          # ⬅️ 신규 페이지
+│  └─ 404.jsx
+└─ styles/
+   └─ (기존 유지: global.css/normalize.css 등)
+
+
+디자인 원칙: 기존 블로그의 톤&매너 유지. 포트폴리오는 다크톤·대형 타이포 중심이나, 전역 CSS와 충돌 최소화(섹션별 래퍼 클래스 사용).
+
+2) 데이터 스키마 (JSON)
+
+src/data/profile.json
+
+{
+  "name": "CHUNG INYOUNG",
+  "title": "Software Developer",
+  "tagline": "AI-driven Software Developer",
+  "summary": "I’m an AI-driven software developer passionate about building intelligent and accessible experiences through leadership and technology.",
+  "education": "Sogang University — B.A. in Art & Technology / B.S. in Software Convergence",
+  "skills": {
+    "frontend": ["React", "Gatsby", "Tailwind", "Framer Motion"],
+    "aiTools": ["Python", "LLM tooling", "Vector DB"],
+    "collab": ["Git", "Figma", "Jira"]
+  }
+}
+
+
+src/data/career.json
+
+[
+  {
+    "period": { "start": "2025-01", "end": "2025-07" },
+    "organization": "Kakaobank",
+    "position": "Developer Relations Intern",
+    "highlights": [
+      "Built internal tech conference web app (React + FastAPI)",
+      "Maintained Hugo-based tech blog (7 articles)",
+      "Designed visuals for DevCon & Bankerthon",
+      "Led developer engagement initiatives"
+    ]
+  },
+  {
+    "period": { "start": "2024-10", "end": "2025-01" },
+    "organization": "Seoul Metropolitan Government (CES 2025)",
+    "position": "Global Ambassador (Markcloud Inc.)",
+    "highlights": [
+      "Developed CES 2025 landing page",
+      "Planned booth operations",
+      "Coordinated B2B communications"
+    ]
+  },
+  {
+    "period": { "start": "2024-06", "end": "2024-12" },
+    "organization": "ULIFT Inc.",
+    "position": "Freelance Frontend Content Producer",
+    "highlights": [
+      "Planned/reviewed FE education content",
+      "Co-authored HTML/CSS, React, Next, TypeScript primers"
+    ]
+  }
+]
+
+
+src/data/activity.json
+
+[
+  { "type": "Community", "title": "멋쟁이사자처럼 12기 회장", "organization": "Sogang Univ.", "year": 2024 },
+  { "type": "Community", "title": "CEOS 18기 프론트엔드 개발", "organization": "CEOS", "year": 2024 },
+  { "type": "Community", "title": "ATC 웹개발팀장", "organization": "ATC", "year": 2024 },
+  { "type": "Community", "title": "학생대표", "organization": "지식융합미디어학부", "year": 2024 },
+
+  { "type": "Award", "title": "Lovable AI Hackathon 대상", "organization": "—", "year": 2025 },
+  { "type": "Award", "title": "CEOS Demo Day 우수상", "organization": "CEOS", "year": 2024 },
+
+  { "type": "Certification", "title": "정보처리기사", "organization": "KISA", "year": 2024 },
+  { "type": "Certification", "title": "SQLD", "organization": "Kdata", "year": 2023 }
+]
+
+
+src/data/projects.json
+
+[
+  {
+    "slug": "ai-portfolio-search",
+    "title": "AI-driven Portfolio Search Engine",
+    "role": "Full-stack",
+    "domainTags": ["AI"],              // 고정 필터용: ["Front-end","Full-stack","AI","Art-Tech"] 중 택일
+    "techStack": ["React", "FastAPI", "Vector Search"],
+    "githubUrl": "https://github.com/...",
+    "thumbnail": "/images/portfolio/ai-search.jpg",
+    "featured": true,
+    "year": 2025
+  }
+]
+
+3) Header.jsx — Portfolio 탭 추가 (수정)
+// src/components/Header.jsx
+import React from 'react';
+import { Link } from 'gatsby';
+import './header.css'; // 있다면 유지
+
+const NavLink = ({ to, children }) => (
+  <Link
+    to={to}
+    activeClassName="active"
+    className="nav-link"
+    partiallyActive={to !== '/'}
+  >
+    {children}
+  </Link>
+);
+
+export default function Header() {
+  return (
+    <header className="site-header">
+      <div className="container">
+        <Link to="/" className="brand">YourBlogName</Link>
+        <nav className="nav">
+          <NavLink to="/">Home</NavLink>
+          <NavLink to="/portfolio">Portfolio</NavLink> {/* ✅ 추가 */}
+          <NavLink to="/blog">Blog</NavLink>
+          <NavLink to="/about">About</NavLink>
+        </nav>
+      </div>
+    </header>
+  );
+}
+
+
+헤더 스타일 충돌 방지를 위해 기존 CSS 유지를 권장. 필요 시 nav-link.active에 굵기/언더라인.
+
+4) pages/portfolio.js — 원페이지 구성이미
+// src/pages/portfolio.js
+import React from 'react';
+import Layout from '../components/layout';
+import SEO from '../components/seo';
+
+import Hero from '../components/portfolio/Hero';
+import About from '../components/portfolio/About';
+import Career from '../components/portfolio/Career';
+import Activity from '../components/portfolio/Activity';
+import FeaturedProjects from '../components/portfolio/FeaturedProjects';
+import ProjectGrid from '../components/portfolio/ProjectGrid';
+import FooterSignature from '../components/portfolio/FooterSignature';
+
+export default function PortfolioPage() {
+  return (
+    <Layout>
+      <SEO title="Portfolio — CHUNG INYOUNG" />
+      <Hero />
+      <About />
+      <Career />
+      <Activity />
+      <FeaturedProjects />
+      <ProjectGrid />
+      <FooterSignature />
+    </Layout>
+  );
+}
+
+5) 포트폴리오 섹션 컴포넌트 스텁
+5.1 Hero.jsx
+// src/components/portfolio/Hero.jsx
+import React from 'react';
+
+export default function Hero() {
+  return (
+    <section className="portfolio-hero" style={{ minHeight: '100vh', display: 'grid', placeItems: 'center', background: '#0d0d0d', color: '#fff' }}>
+      <div className="inner" style={{ textAlign: 'center', padding: '0 24px' }}>
+        <h1 style={{ fontSize: 'clamp(42px, 9vw, 120px)', lineHeight: 0.95, fontWeight: 800 }}>
+          CHUNG INYOUNG — <span style={{ opacity: 0.9 }}>Software Developer</span>
+        </h1>
+        <p style={{ marginTop: 16, fontSize: 'clamp(16px, 2.2vw, 28px)', color: '#c9c9c9' }}>
+          I think, learn, and build with AI.
+        </p>
+      </div>
+    </section>
+  );
+}
+
+
+r3f/three.js 배경은 추후 NeuralBackground.jsx로 확장(지금은 스텁로 두고 먼저 라우팅 완성).
+
+5.2 About.jsx
+// src/components/portfolio/About.jsx
+import React from 'react';
+import profile from '../../data/profile.json';
+
+export default function About() {
+  const { tagline, summary, education, skills } = profile;
+  return (
+    <section id="about" className="container" style={{ padding: '80px 20px' }}>
+      <h2>About</h2>
+      <p><strong>{tagline}</strong></p>
+      <p style={{ margin: '12px 0 24px' }}>{summary}</p>
+      <p><em>{education}</em></p>
+
+      <div className="skills" style={{ display: 'grid', gap: 12, marginTop: 24 }}>
+        {Object.entries(skills).map(([group, list]) => (
+          <div key={group}>
+            <h4 style={{ marginBottom: 8 }}>{group}</h4>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
+              {list.map(s => (
+                <span key={s} className="chip">{s}</span>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+5.3 Career.jsx
+// src/components/portfolio/Career.jsx
+import React from 'react';
+import items from '../../data/career.json';
+
+export default function Career() {
+  return (
+    <section id="career" className="container" style={{ padding: '80px 20px' }}>
+      <h2>Career</h2>
+      <ul className="timeline">
+        {items.map((c, idx) => (
+          <li key={idx} className="timeline-item" style={{ margin: '24px 0' }}>
+            <div style={{ fontWeight: 600 }}>
+              {c.period.start} – {c.period.end} · {c.organization}
+            </div>
+            <div style={{ opacity: 0.9 }}>{c.position}</div>
+            <ul style={{ marginTop: 8, color: '#666' }}>
+              {c.highlights.map((h, i) => <li key={i}>• {h}</li>)}
+            </ul>
+          </li>
+        ))}
+      </ul>
+    </section>
+  );
+}
+
+5.4 Activity.jsx
+// src/components/portfolio/Activity.jsx
+import React from 'react';
+import list from '../../data/activity.json';
+
+export default function Activity() {
+  const groups = {
+    Community: list.filter(x => x.type === 'Community'),
+    Awards: list.filter(x => x.type === 'Award'),
+    Certifications: list.filter(x => x.type === 'Certification')
+  };
+
+  return (
+    <section id="activity" className="container" style={{ padding: '80px 20px' }}>
+      <h2>Activity</h2>
+      {Object.entries(groups).map(([k, arr]) => (
+        <div key={k} style={{ marginTop: 20 }}>
+          <h3>{k}</h3>
+          <ul>
+            {arr.map((x, i) => (
+              <li key={i}>
+                <strong>{x.title}</strong> — {x.organization} {x.year ? `(${x.year})` : ''}
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </section>
+  );
+}
+
+5.5 FeaturedProjects.jsx
+// src/components/portfolio/FeaturedProjects.jsx
+import React from 'react';
+import data from '../../data/projects.json';
+import ProjectCard from './_ProjectCard';
+
+export default function FeaturedProjects() {
+  const featured = data.filter(p => p.featured);
+  if (!featured.length) return null;
+  return (
+    <section id="featured" className="container" style={{ padding: '80px 20px' }}>
+      <h2>Featured Projects</h2>
+      <div className="grid" style={{ display: 'grid', gap: 16, gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))' }}>
+        {featured.map(p => <ProjectCard key={p.slug} {...p} />)}
+      </div>
+    </section>
+  );
+}
+
+5.6 ProjectGrid.jsx
+// src/components/portfolio/ProjectGrid.jsx
+import React from 'react';
+import data from '../../data/projects.json';
+import ProjectCard from './_ProjectCard';
+
+const ORDER = ['Front-end', 'Full-stack', 'AI', 'Art-Tech'];
+
+export default function ProjectGrid() {
+  // 고정 도메인 태그로 그룹화
+  const byGroup = ORDER.map(tag => ({
+    tag,
+    items: data.filter(p => (p.domainTags || []).includes(tag))
+  })).filter(g => g.items.length);
+
+  return (
+    <section id="projects" className="container" style={{ padding: '80px 20px' }}>
+      <h2>All Projects</h2>
+      {byGroup.map(group => (
+        <div key={group.tag} style={{ marginTop: 24 }}>
+          <h3>{group.tag}</h3>
+          <div className="grid" style={{ display: 'grid', gap: 16, gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))' }}>
+            {group.items.map(p => <ProjectCard key={p.slug} {...p} />)}
+          </div>
+        </div>
+      ))}
+    </section>
+  );
+}
+
+5.7 _ProjectCard.jsx
+// src/components/portfolio/_ProjectCard.jsx
+import React from 'react';
+
+export default function ProjectCard({ title, techStack = [], year, githubUrl, thumbnail }) {
+  return (
+    <a href={githubUrl} target="_blank" rel="noreferrer"
+       className="project-card" style={{ display:'block', padding:16, borderRadius:16, border:'1px solid #eee' }}>
+      {thumbnail && <img src={thumbnail} alt={`${title} thumbnail`} style={{ width:'100%', height:160, objectFit:'cover', borderRadius:12, marginBottom:12 }} />}
+      <div style={{ display:'flex', justifyContent:'space-between', alignItems:'center' }}>
+        <h4 style={{ margin:0 }}>{title}</h4>
+        {year && <small style={{ color:'#888' }}>{year}</small>}
+      </div>
+      <div style={{ marginTop:8, display:'flex', flexWrap:'wrap', gap:6 }}>
+        {techStack.map(t => <span key={t} style={{ fontSize:12, padding:'4px 8px', background:'#f3f3f3', borderRadius:999 }}>{t}</span>)}
+      </div>
+    </a>
+  );
+}
+
+5.8 FooterSignature.jsx
+// src/components/portfolio/FooterSignature.jsx
+import React from 'react';
+
+export default function FooterSignature() {
+  return (
+    <footer style={{ padding: '48px 20px', textAlign: 'center', color: '#666' }}>
+      Designed &amp; built by Chung Inyoung, 2025
+    </footer>
+  );
+}
+
+6) 스타일/접근성
+
+전역 충돌 방지: 각 섹션에 .portfolio-* 클래스 또는 인라인 스타일 래핑(점진적 Tailwind 치환 가능)
+
+이미지 alt, 키보드 포커스 스타일 유지
+
+prefers-reduced-motion 대응은 추후 애니메이션 도입 시 반영
+
+7) 리팩토링 제안 (선택)
+
+layout.jsx / seo.jsx 대문자화
+
+React 컴포넌트 관례: Layout.jsx, Seo.jsx로 (import 경로만 맞추면 영향 없음)
+
+스타일 일원화
+
+/src/global.css에서 .portfolio-hero, .portfolio-section 등 네임스페이스 클래스 정의 → 인라인 제거
+
+이미지 자산 분리
+
+src/images/portfolio/ 하위로 프로젝트 썸네일을 모으고, projects.json의 thumbnail 경로 일관화
+
+컴포넌트 폴더링
+
+portfolio/ 내부에서 섹션별 하위 폴더(hero, projects 등)로 분리하면 유지보수 쉬움
+
+배경 인터랙션 단계적 적용
+
+v1: 정적 Hero → v1.1: 간단 파티클 → v1.2: r3f 뉴런 그래프(성능 튜닝)
+
+8) 동작 확인 순서 (체크리스트)
+
+/portfolio 페이지 라우팅 OK
+
+Header에 Portfolio 탭 노출 및 활성화 상태 OK
+
+Featured/All Projects에 projects.json 반영 OK
+
+Activity/ Career JSON 렌더 OK
+
+Footer 시그니처 노출 OK

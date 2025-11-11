@@ -36,13 +36,21 @@ html {
 
 .toc-container {
   padding: 1.5rem;
+  background: linear-gradient(
+    135deg,
+    rgba(38, 38, 38, 0.5),
+    rgba(33, 33, 33, 0.3)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 0.5rem;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .toc-title {
   margin: 0 0 1rem 0;
   font-size: 1.125rem;
   font-weight: 700;
-  color: white;
+  color: #fede22;
   font-family: var(--fontFamily-pretendard);
 }
 
@@ -80,9 +88,9 @@ html {
 }
 
 .toc-link {
-  color: var(--color-text-light);
+  color: #d3d3d3;
   text-decoration: none;
-  transition: color 0.2s ease;
+  transition: all 0.2s ease;
   display: block;
   line-height: 1.5;
   font-family: var(--fontFamily-pretendard);
@@ -90,11 +98,16 @@ html {
 
 .toc-link:hover {
   color: #3b82f6;
+  padding-left: 0.25rem;
 }
 
 .toc-item.active .toc-link {
   color: #3b82f6;
   font-weight: 600;
+  background-color: rgba(59, 130, 246, 0.1);
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  margin-left: -0.5rem;
 }
 
 .anchor {

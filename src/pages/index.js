@@ -14,36 +14,38 @@ import { getTagColor } from "../utils/tagColors"
 //
 
 const TagFilter = ({ tagList, selectedTag, setSelectedTag }) => (
-  <div className="flex gap-1 md:gap-2 mb-2 items-center bg-darkBackground rounded-lg px-2 py-2 md:py-4 mt-2 overflow-x-auto w-full">
+  <div className="flex gap-1 md:gap-2 mb-2 items-center bg-gradient-to-r from-[#262626] to-[#212121] rounded-lg px-2 py-2 md:py-4 mt-2 overflow-x-auto w-full border border-[#52525B]">
     <button
       onClick={() => setSelectedTag("")}
       className={`px-1.5 md:px-2 py-0.5 border-2 text-xs md:text-sm ${
         selectedTag === ""
           ? "bg-white text-black font-bold"
-          : "border-white text-white hover:bg-[#383737] font-bold"
-      } rounded-lg hover:scale-110 hover: transition-all whitespace-nowrap flex-shrink-0`}
+          : "border-gray-500 text-gray-300 hover:border-white hover:text-white font-bold"
+      } rounded-lg hover:scale-110 transition-all whitespace-nowrap flex-shrink-0`}
     >
       All
     </button>
-    <div className="w-0.5 h-[20px] md:h-[30px] bg-white flex-shrink-0"></div>
+    <div className="w-0.5 h-[20px] md:h-[30px] bg-gray-600 flex-shrink-0"></div>
     {[...tagList].map(tag => (
       <button
         key={tag}
         onClick={() => setSelectedTag(tag)}
-        className={`px-1.5 md:px-2 py-0.5 border-2 text-xs md:text-sm ${
-          selectedTag === tag
-            ? "text-white font-bold"
-            : "border-white text-white hover:bg-[#383737] font-bold"
-        } rounded-lg hover:scale-110 hover: transition-all whitespace-nowrap flex-shrink-0`}
+        className={`px-1.5 md:px-2 py-0.5 border-2 text-xs md:text-sm font-bold rounded-lg hover:scale-110 transition-all whitespace-nowrap flex-shrink-0 ${
+          selectedTag === tag ? "text-white" : "hover:border-opacity-80"
+        }`}
         style={
           selectedTag === tag
             ? {
+                color: "white",
                 backgroundColor: getTagColor(tag),
                 borderColor: getTagColor(tag),
+                boxShadow: `0 0 12px ${getTagColor(tag)}40`,
               }
             : {
                 color: getTagColor(tag),
                 borderColor: getTagColor(tag),
+                backgroundColor: `${getTagColor(tag)}15`,
+                boxShadow: `inset 0 1px 2px rgba(0, 0, 0, 0.3)`,
               }
         }
       >
@@ -67,7 +69,11 @@ const PostCard = ({ post }) => {
   return (
     <div
       key={post.fields.slug}
-      className="bg-darkBackground shadow-[rgba(100,_100,_111,_0.2)_0px_7px_29px_0px] rounded-lg overflow-hidden hover:scale-105 hover: transition-all w-full"
+      className="bg-gradient-to-br from-[#262626] to-[#212121] rounded-lg overflow-hidden hover:scale-105 transition-all w-full border border-gray-700 hover:border-gray-500"
+      style={{
+        boxShadow:
+          "0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.05)",
+      }}
     >
       <Link to={post.fields.slug} itemProp="url">
         <article className="p-0" itemScope itemType="http://schema.org/Article">
@@ -86,7 +92,7 @@ const PostCard = ({ post }) => {
             >
               {title}
             </h2>
-            <small className="text-[#B0B0B0] text-xs md:text-sm">
+            <small className="text-gray-400 text-xs md:text-sm">
               {post.frontmatter.date}
             </small>
 
@@ -94,23 +100,24 @@ const PostCard = ({ post }) => {
               {tags.map(tag => (
                 <button
                   key={tag}
-                  className="px-1.5 md:px-2 py-0.5 rounded-lg text-white font-bold text-xs md:text-sm border-2"
+                  className="px-1.5 md:px-2 py-0.5 rounded-lg text-white font-bold text-xs md:text-sm border-2 hover:shadow-md transition-all"
                   style={{
                     color: getTagColor(tag),
                     borderColor: getTagColor(tag),
+                    backgroundColor: `${getTagColor(tag)}15`,
                   }}
                 >
                   {tag}
                 </button>
               ))}
             </div>
-            <section className="mt-2 md:pb-0">
+            <section className="mt-2 md:pb-4">
               <p
                 dangerouslySetInnerHTML={{
                   __html: post.frontmatter.description || post.excerpt,
                 }}
                 itemProp="description"
-                className="text-white break-keep text-sm md:text-base"
+                className="text-gray-300 break-keep text-sm md:text-base"
               />
             </section>
           </div>
@@ -199,7 +206,7 @@ const BlogIndex = ({ data, location }) => {
 
 export default BlogIndex
 
-export const Head = () => <Seo title="기술 블로그 🏠" />
+export const Head = () => <Seo title="난너의오른팔" />
 
 export const pageQuery = graphql`
   {

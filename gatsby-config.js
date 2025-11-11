@@ -9,13 +9,13 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `난너의오른팔🧑‍💻`,
+    title: `메인`,
     author: {
       name: `Inyoung Chung`,
-      university: `Sogang University, Art&Technology`,
-      summary: `👨‍💻 Junior Developer (Web, AI)`,
+      university: `Sogang University`,
+      summary: ` 🧑‍💻 Junior Software Developer`,
     },
-    description: `모든 걸 기록해보려 합니다.`,
+    description: `Web 기술과 AI 활용법을 공부하는 개발자`,
     siteUrl: `https://rmdnps10.github.io/`,
     social: {
       instagram: `rmdnps10`,

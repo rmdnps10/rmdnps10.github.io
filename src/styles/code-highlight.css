@@ -11,6 +11,9 @@
   border-radius: 1rem;
   line-height: 1.5;
   border: none;
+  background: linear-gradient(to bottom, #262626, #212121) !important;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5), 0 4px 12px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .gatsby-highlight code {
@@ -18,16 +21,19 @@
   line-height: 1.5;
   white-space: pre;
   overflow-wrap: normal;
+  color: #e0e0e0;
 }
 
 code.language-text {
-  color: #d85352 !important;
+  color: #ff6b6b !important;
   margin-right: 0.2rem;
   padding: 0.2rem 0.25rem;
   border-radius: 0.25rem;
   word-break: break-all;
   overflow-wrap: break-word;
   font-size: 14px;
+  background-color: rgba(255, 107, 107, 0.15);
+  border: 1px solid rgba(255, 107, 107, 0.3);
 }
 
 @media (max-width: 768px) {

@@ -1,0 +1,12 @@
+{
+  "name": "CHUNG INYOUNG",
+  "title": "Software Developer",
+  "tagline": "AI-driven Software Developer",
+  "summary": "I’m an AI-driven software developer passionate about building intelligent and accessible experiences through leadership and technology.",
+  "education": "Sogang University — B.A. in Art & Technology / B.S. in Software Convergence",
+  "skills": {
+    "frontend": ["React", "Gatsby", "Tailwind CSS", "Framer Motion"],
+    "aiTools": ["Python", "LLM Tooling", "Vector DB"],
+    "collab": ["Git", "Figma", "Jira"]
+  }
+}

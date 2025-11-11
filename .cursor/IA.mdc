@@ -1,0 +1,133 @@
+---
+alwaysApply: false
+---
+
+# 🎯 Web Portfolio — IA v1.0 (Content Integrated)
+
+## 0. 목적 및 원칙
+
+* **목적:**  ‘AI-driven Developer’로서의 정체성을 시각적·정보적으로 명확히 전달하는 원페이지형 웹 포트폴리오.
+* **원칙:** 10초 내 인지, 매끄러운 스크롤 흐름, 시각 중심 구조(아이콘, 인터랙션)로 정보 과잉 없이 강한 인상.
+
+---
+
+## 1. 페이지 구조 (Sitemap)
+
+```
+/
+├─ Hero
+├─ About
+├─ Career
+├─ Activity
+├─ Featured Projects
+├─ All Projects
+└─ Contact
+```
+
+> 원페이지 구조. `/projects`에서 전체 그리드 탐색 확장 가능.
+
+---
+
+## 2. 섹션별 구조 및 콘텐츠
+
+### 🧠 Hero Section
+
+* **Main Title:** `CHUNG INYOUNG — Software Developer`
+* **Subtitle:** `I think, learn, and build with AI.`
+* **Visuals:** Dynamic neuron network (cursor-reactive, no scroll interaction)
+* **CTA:** 없음
+* **Tone:** Dark, calm, intelligent, kinetic
+* **의도:** 방문 즉시 “AI-driven Developer”라는 정체성 직관적 인식
+
+---
+
+### 🧬 About Section
+
+* **Main Phrase:** `AI-driven Software Developer`
+* **Narrative:** “I’m an AI-driven software developer passionate about building intelligent and accessible experiences through leadership and technology.”
+* **Layout:** 2열 구조 — (좌) 소개문 / (우) 기술 스택 아이콘
+* **Education:** Sogang University — B.A. in Art & Technology / B.S. in Software Convergence
+
+---
+
+### 💼 Career Section (Timeline)
+
+| 기간              | 기관                                           | 포지션                                 | 핵심 기여                                                                                                                                                                           |
+| --------------- | -------------------------------------------- | ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 2025.01–2025.07 | **Kakaobank**                                | Developer Relations Intern          | Built internal tech conference platform (React+FastAPI); maintained Hugo-based tech blog (7 articles); designed DevCon/Bankerthon visuals; led developer engagement initiatives |
+| 2024.10–2025.01 | **Seoul Metropolitan Government (CES 2025)** | Global Ambassador (Markcloud Inc.)  | Developed CES 2025 landing page; planned booth operations; coordinated B2B communications                                                                                       |
+| 2024.06–2024.12 | **ULIFT Inc.**                               | Freelance Frontend Content Producer | Co-authored *HTML/CSS Hands-on*, *React First Steps*, *Next First Steps*, *TypeScript First Steps*; planned and reviewed front-end education content                            |
+
+**Format:** 타임라인 (좌: 기간 / 우: 상세 카드)
+
+---
+
+### 🌱 Activity Section
+
+* **Community:** 멋쟁이사자처럼 12기 — 회장 / CEOS 18기 — 프론트엔드 개발 / ATC 웹개발팀 — 팀장 / 서강대 지식융합미디어학부 — 학생대표
+* **Awards:** Lovable AI Hackathon — 대상 / CEOS Demo Day — 우수상
+* **Certifications:** 정보처리기사 (KISA, 2024) / SQLD (Kdata, 2023)
+* **Layout:** 카테고리별 블록, 단일 컬럼 렌더링
+
+---
+
+### 🧩 Featured Projects
+
+* **선정 기준:** 기술력 + 창의성 중심
+* **구성:** 카드 3장 — 썸네일 + 기술 요약 + 한 줄 설명
+* **예시 문장:** “AI-driven portfolio search engine using vector embeddings.”
+* **클릭 시:** GitHub 새 탭 이동
+
+---
+
+### 🧱 All Projects (Grid)
+
+* **필드:** 썸네일 / 기술 스택 / 역할 / 연도 / GitHub 링크
+* **필터:** Front-end / Full-stack / AI / Art-Tech (고정)
+* **기술스택 태그:** 프로젝트별 유동, 검색 기능 없음
+
+---
+
+### ✉️ Contact Section
+
+* **CTA 문구:** 없음
+* **표시 채널:** 없음 (Header에 존재)
+* **Footer Signature:** `Designed & built by Chung Inyoung, 2025`
+
+---
+
+## 3. 데이터 구조 요약
+
+| 섹션       | 데이터 소스                    | 주요 필드                                             |
+| -------- | ------------------------- | ------------------------------------------------- |
+| About    | `/src/data/profile.json`  | name, title, summary, skills[], education         |
+| Career   | `/src/data/career.json`   | period, organization, position, highlights[]      |
+| Activity | `/src/data/activity.json` | type, title, organization, year, details          |
+| Projects | `/src/data/projects.json` | slug, title, role, tags[], techStack[], githubUrl |
+
+---
+
+## 4. 상호작용 요약
+
+* **Hero:** Cursor-reactive neurons (Three.js)
+* **About:** Fade-in on scroll
+* **Career:** Sequential reveal timeline
+* **Activity:** Hover glow + subtle rise
+* **Projects:** Card hover glow + GitHub link
+* **Global:** Smooth scroll + section-based fade
+
+---
+
+## 5. 성공 지표
+
+* Hero 인식률 (10초 내 “AI-driven” 인지)
+* Projects 클릭률 ≥ 40%
+* Career/Activity 체류시간 ≥ 15초
+* Scroll completion rate ≥ 80%
+
+---
+
+## 6. Footer Summary
+
+> “Designed & built by Chung Inyoung, 2025”
+> — Where AI meets Art & Technology.
