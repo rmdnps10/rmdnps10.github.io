@@ -1,32 +1,31 @@
 [
   {
-    "period": { "start": "2025-01", "end": "2025-07" },
-    "organization": "Kakaobank",
-    "position": "Developer Relations Intern",
+    "period": { "start": "24.06", "end": "24.12" },
+    "organization": "ULIFT - IT 교육 스타트업",
+    "position": "프론트엔드 콘텐츠 프로듀서 인턴",
     "highlights": [
-      "Built internal tech conference web app (React + FastAPI)",
-      "Maintained Hugo-based tech blog (7 articles)",
-      "Designed visuals for DevCon & Bankerthon",
-      "Led developer engagement initiatives"
+      "프론트엔드 교육 콘텐츠 기획 및 검토",
+      "수강생들을 위한 HTML/CSS, React, Next, TypeScript 입문서 공동 저술"
     ]
   },
   {
-    "period": { "start": "2024-10", "end": "2025-01" },
-    "organization": "Seoul Metropolitan Government (CES 2025)",
-    "position": "Global Ambassador (Markcloud Inc.)",
+    "period": { "start": "24.10", "end": "25.01" },
+    "organization": "서울시청",
+    "position": "CES 글로벌 앰배서더",
     "highlights": [
-      "Developed CES 2025 landing page",
-      "Planned booth operations",
-      "Coordinated B2B communications"
+      "담당 기업을 소개하는 랜딩 페이지 개발",
+      "담당 기업과 컨택하여 현장 부스 운영 계획 수립",
+      "미국 라스베가스(CES 2025) 현장 행사 응대 지원"
     ]
   },
   {
-    "period": { "start": "2024-06", "end": "2024-12" },
-    "organization": "ULIFT Inc.",
-    "position": "Freelance Frontend Content Producer",
+    "period": { "start": "25.01", "end": "25.07" },
+    "organization": "카카오뱅크 DevRel팀",
+    "position": "개발 어시스턴트",
     "highlights": [
-      "Planned and reviewed front-end education content",
-      "Co-authored HTML/CSS, React, Next, TypeScript primers"
+      "카카오뱅크 내부 기술 컨퍼런스, 코드러너 에셋 개발 - 참가자/운영진 전용 웹, 단체게임 ",
+      "기술 블로그 유지보수 및 글 발행 지원(7개의 글 발행)",
+      "사내 행사(해커톤, 밋업) 비주얼 디자인"
     ]
   }
 ]

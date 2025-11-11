@@ -108,7 +108,7 @@ html {
 }
 
 body {
-  font-family: var(--font-body) var(--fontFamily-pretendard);
+  font-family: var(--fontFamily-pretendard);
   font-size: var(--fontSize-1);
   color: var(--color-text);
   background-color: var(--color-dark-main);

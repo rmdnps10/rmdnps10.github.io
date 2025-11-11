@@ -1,59 +1,59 @@
-import React from "react"
+import React, { useState } from "react"
 import projects from "../../data/projects.json"
 import ProjectCard from "./_ProjectCard"
 
-const DOMAIN_ORDER = ["Front-end", "Full-stack", "AI", "Art-Tech"]
-
-const groupByDomain = () => {
-  const groups = DOMAIN_ORDER.map(tag => ({
-    tag,
-    items: projects.filter(project => (project.domainTags || []).includes(tag)),
-  }))
-
-  const remaining = projects.filter(project => {
-    return !DOMAIN_ORDER.some(tag => (project.domainTags || []).includes(tag))
-  })
-
-  if (remaining.length) {
-    groups.push({ tag: "Other", items: remaining })
-  }
-
-  return groups.filter(group => group.items.length > 0)
-}
+const DOMAIN_ORDER = ["All", "Front-end", "Full-stack", "AI", "Art-Tech"]
 
 export default function ProjectGrid() {
-  const groupedProjects = groupByDomain()
+  const [selectedTag, setSelectedTag] = useState("All")
 
-  if (!groupedProjects.length) {
+  const filteredProjects =
+    selectedTag === "All"
+      ? projects
+      : projects.filter(project =>
+          (project.domainTags || []).includes(selectedTag)
+        )
+
+  if (!projects.length) {
     return null
   }
 
   return (
-    <section id="projects" className="portfolio-all-projects">
-      <h2 className="portfolio-section-title text-center mb-4">All Projects</h2>
-      <p className="text-center text-gray-400 mb-12 max-w-2xl mx-auto">
-        Explore the full stack of experiments, products, and research.
-      </p>
+    <section id="projects" className="py-16">
+      <h2 className="text-4xl font-bold text-center mb-4 font-paperozi text-white pb-4 max-w-fit mx-auto px-4">
+        All Projects
+      </h2>
 
-      <div className="max-w-6xl mx-auto space-y-12">
-        {groupedProjects.map(group => (
-          <div key={group.tag}>
-            <div className="flex items-center justify-between mb-6">
-              <h3 className="text-xl font-semibold text-cyan-300 uppercase">
-                {group.tag}
-              </h3>
-              <span className="text-xs uppercase tracking-widest text-gray-500">
-                {group.items.length} project
-                {group.items.length !== 1 ? "s" : ""}
-              </span>
-            </div>
-            <div className="portfolio-projects-grid">
-              {group.items.map(project => (
-                <ProjectCard key={project.slug} {...project} />
-              ))}
-            </div>
-          </div>
-        ))}
+      <div className="max-w-7xl mx-auto px-4">
+        {/* 태그 필터 */}
+        <div className="flex gap-3 justify-center mb-12 flex-wrap">
+          {DOMAIN_ORDER.map(tag => (
+            <button
+              key={tag}
+              onClick={() => setSelectedTag(tag)}
+              className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+                selectedTag === tag
+                  ? "bg-cyan-500 text-white"
+                  : "bg-gray-800 text-gray-300 border border-gray-700 hover:border-gray-500"
+              }`}
+            >
+              {tag}
+            </button>
+          ))}
+        </div>
+
+        {/* 3x3 그리드 */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {filteredProjects.map(project => (
+            <ProjectCard key={project.slug} {...project} />
+          ))}
+        </div>
+
+        {filteredProjects.length === 0 && (
+          <p className="text-center text-gray-400 py-12">
+            No projects found for this category.
+          </p>
+        )}
       </div>
     </section>
   )

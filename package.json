@@ -34,7 +34,8 @@
     "gatsby-transformer-sharp": "^5.14.0",
     "prismjs": "^1.29.0",
     "react": "^18.1.0",
-    "react-dom": "^18.1.0"
+    "react-dom": "^18.1.0",
+    "react-icons": "^5.5.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.20",

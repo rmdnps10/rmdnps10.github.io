@@ -13,30 +13,39 @@ export default function ProjectCard({
       href={githubUrl}
       target="_blank"
       rel="noreferrer"
-      className="portfolio-project-card"
+      className="block border border-gray-700 rounded-lg overflow-hidden hover:border-gray-500 hover:shadow-lg hover:shadow-white/5 transition-all duration-300 bg-transparent"
     >
       {thumbnail && (
-        <div className="portfolio-project-thumbnail">
+        <div className="relative aspect-video overflow-hidden bg-gray-800">
           <img
             src={thumbnail}
             alt={`${title} thumbnail`}
             className="w-full h-full object-cover"
           />
           {year && (
-            <div className="absolute top-3 left-3 bg-cyan-500/80 text-white text-xs px-2 py-1 rounded">
+            <div className="absolute top-3 right-3 bg-cyan-500/90 text-white text-xs font-semibold px-3 py-1 rounded-full">
               {year}
             </div>
           )}
         </div>
       )}
-      <div className="portfolio-project-info">
-        <h3>{title}</h3>
-        {summary && <p className="text-gray-400">{summary}</p>}
+      <div className="p-6">
+        <h3 className="text-white font-bold text-xl mb-3 border-none">
+          {title}
+        </h3>
+        {summary && (
+          <p className="text-gray-300 text-sm mb-4 leading-relaxed">
+            {summary}
+          </p>
+        )}
 
         {!!techStack.length && (
-          <div className="portfolio-tech-tags">
+          <div className="flex flex-wrap gap-2">
             {techStack.map(tech => (
-              <span key={tech} className="portfolio-tech-tag">
+              <span
+                key={tech}
+                className="inline-block px-3 py-1 text-xs font-medium text-cyan-300 bg-cyan-500/10 border border-cyan-500/30 rounded-full"
+              >
                 {tech}
               </span>
             ))}

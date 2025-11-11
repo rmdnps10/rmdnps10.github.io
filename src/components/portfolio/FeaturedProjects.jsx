@@ -10,17 +10,16 @@ export default function FeaturedProjects() {
   }
 
   return (
-    <section id="featured" className="portfolio-featured-projects">
-      <h2 className="portfolio-section-title text-center mb-4">
+    <section id="featured" className="py-16">
+      <h2 className="text-4xl font-bold text-center mb-4 font-paperozi text-white pb-4 max-w-fit mx-auto px-4">
         Featured Projects
       </h2>
-      <p className="text-center text-gray-400 mb-12 max-w-2xl mx-auto">
-        Selected work exploring AI, product, and experience design.
-      </p>
 
-      <div className="portfolio-projects-grid">
+      <div className="flex gap-8 max-w-7xl mx-auto px-4">
         {featured.map(project => (
-          <ProjectCard key={project.slug} {...project} />
+          <div key={project.slug} className="flex-1">
+            <ProjectCard {...project} />
+          </div>
         ))}
       </div>
     </section>

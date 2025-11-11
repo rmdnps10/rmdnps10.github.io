@@ -160,7 +160,9 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: inherit; /* 1 */
+  font-family: var(--fontFamily-pretendard); /* 1 */
+  appearance: none; /* Standard property */
+  -webkit-appearance: none; /* Webkit-specific */
   font-size: 100%; /* 1 */
   line-height: 1.15; /* 1 */
   margin: 0; /* 2 */
@@ -197,6 +199,7 @@ button,
 [type="reset"],
 [type="submit"] {
   -webkit-appearance: button;
+  appearance: button; /* Standard property */
 }
 
 /**
@@ -338,4 +341,9 @@ summary {
 
 [hidden] {
   display: none;
+}
+
+input[type="text"] {
+  appearance: textfield; /* Standard property */
+  -webkit-appearance: textfield; /* Webkit-specific */
 }

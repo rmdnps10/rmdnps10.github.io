@@ -64,6 +64,8 @@ module.exports = {
         ],
         body: ["var(--font-body)"],
         heading: ["var(--font-heading)"],
+        pretendard: ["Pretendard", "sans-serif"],
+        paperozi: ["Paperozi", "sans-serif"],
       },
       fontWeight: {
         normal: "400",

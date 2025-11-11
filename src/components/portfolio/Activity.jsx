@@ -15,38 +15,47 @@ const groupedActivities = activities.reduce((acc, item) => {
 }, {})
 
 export default function Activity() {
-  return (
-    <section id="activity" className="portfolio-activity">
-      <h2 className="portfolio-section-title text-center mb-8">Activity</h2>
-      <p className="text-center text-gray-400 mb-12 max-w-2xl mx-auto">
-        Communities, awards, and certifications.
-      </p>
+  const groupOrder = ["Community", "Awards", "Certifications"]
 
-      <div className="portfolio-activity-grid">
-        {Object.entries(groupedActivities).map(([label, list]) => (
-          <div key={label} className="portfolio-activity-card">
-            <h3 className="text-cyan-300 uppercase text-xs tracking-widest">
-              {label}
-            </h3>
-            <ul className="mt-4 space-y-3">
-              {list.map(activity => (
-                <li key={`${label}-${activity.title}`} className="text-sm">
-                  <span className="font-semibold text-white">
-                    {activity.title}
-                  </span>
-                  <p className="text-gray-400 text-xs mt-1">
-                    {activity.organization}
-                  </p>
-                  {activity.year && (
-                    <span className="inline-block mt-2 rounded-full bg-yellow-400/20 border border-yellow-400/30 px-2 py-0.5 text-[11px] uppercase tracking-wider text-yellow-300">
-                      {activity.year}
-                    </span>
-                  )}
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
+  return (
+    <section id="activity" className="portfolio-activity py-16">
+      <div className="max-w-7xl mx-auto px-4">
+        <div className="grid grid-cols-3 gap-8">
+          {groupOrder.map((label, index) => {
+            const list = groupedActivities[label]
+            if (!list) return null
+
+            return (
+              <div
+                key={label}
+                style={{ paddingTop: `${index * 30}vh`, minHeight: "120vh" }}
+              >
+                <div className="sticky top-20">
+                  <h3 className="mb-4 font-paperozi border-none text-[40px]">
+                    {label}
+                  </h3>
+
+                  <div className="flex flex-col gap-6">
+                    {list.map(activity => (
+                      <div
+                        key={`${label}-${activity.title}`}
+                        className="flex flex-col gap-0"
+                      >
+                        <p className="font-semibold text-whit font-paperozi m-0">
+                          {activity.title}
+                        </p>
+                        <p className="text-gray-400 text-xs mt-1">
+                          {activity.organization}
+                        </p>
+                        <p className="text-right">{activity.year}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            )
+          })}
+        </div>
       </div>
     </section>
   )
