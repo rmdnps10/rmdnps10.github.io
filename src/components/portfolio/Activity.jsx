@@ -42,7 +42,7 @@ export default function Activity() {
                 style={{ paddingTop: `${index * 40}vh`, minHeight: "200vh" }}
               >
                 <div className="sticky top-20">
-                  <h3 className="font-paperozi border-none text-[40px] mb-5">
+                  <h3 className="font-paperozi border-none text-[50px] font-bold mb-5 text-white">
                     {heading}
                   </h3>
 

@@ -10,7 +10,6 @@ import Career from "../components/portfolio/Career"
 import Activity from "../components/portfolio/Activity"
 import FeaturedProjects from "../components/portfolio/FeaturedProjects"
 import ProjectGrid from "../components/portfolio/ProjectGrid"
-import FooterSignature from "../components/portfolio/FooterSignature"
 
 const PortfolioPage = ({ location }) => {
   const data = useStaticQuery(graphql`
@@ -33,7 +32,6 @@ const PortfolioPage = ({ location }) => {
       <Activity />
       <FeaturedProjects />
       <ProjectGrid />
-      <FooterSignature />
     </Layout>
   )
 }

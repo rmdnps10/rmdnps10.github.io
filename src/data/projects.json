@@ -6,7 +6,7 @@
     "domainTags": ["AI", "Full-stack"],
     "techStack": ["React", "FastAPI", "Pinecone"],
     "githubUrl": "https://github.com/rmdnps10/ai-portfolio-search",
-    "thumbnail": "/images/portfolio/ai-search.jpg",
+    "thumbnail": "/images/project/sharemind.png",
     "featured": true,
     "year": 2025,
     "summary": "Vector-semantic search that lets recruiters explore my portfolio with natural language queries."
@@ -18,7 +18,7 @@
     "domainTags": ["AI", "Front-end"],
     "techStack": ["Next.js", "LangChain", "Supabase"],
     "githubUrl": "https://github.com/rmdnps10/neural-writing-companion",
-    "thumbnail": "/images/portfolio/neural-writing.jpg",
+    "thumbnail": "/images/project/sharemind.png",
     "featured": true,
     "year": 2024,
     "summary": "Realtime drafting assistant that blends ideation prompts with custom knowledge embeddings."
@@ -30,7 +30,7 @@
     "domainTags": ["Front-end"],
     "techStack": ["Gatsby", "Framer Motion", "Firebase"],
     "githubUrl": "https://github.com/rmdnps10/sogang-tech-con",
-    "thumbnail": "/images/portfolio/sogang-tech-con.jpg",
+    "thumbnail": "/images/project/sharemind.png",
     "featured": true,
     "year": 2024,
     "summary": "Interactive conference experience featuring speaker journeys, schedules, and live engagement tools."

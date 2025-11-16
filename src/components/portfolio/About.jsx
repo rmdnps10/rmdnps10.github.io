@@ -11,13 +11,41 @@ import {
   SiC,
   SiJava,
 } from "react-icons/si"
+import { useInView } from "react-intersection-observer"
+import { motion } from "motion/react"
+
+// Fade Up 효과가 적용된 텍스트 컴포넌트
+function FadeUpBlurText({ text, delay, className }) {
+  const { ref, inView } = useInView({
+    threshold: 0.2,
+    triggerOnce: true,
+    rootMargin: "-50px 0px",
+  })
+
+  return (
+    <motion.p
+      ref={ref}
+      initial={{ opacity: 0, y: 80 }}
+      animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 80 }}
+      transition={{
+        duration: 5,
+        ease: [0.16, 1, 0.3, 1],
+        delay: delay / 1000,
+      }}
+      style={{ willChange: "transform, opacity" }}
+      className={className}
+    >
+      {text}
+    </motion.p>
+  )
+}
 
 export default function About() {
   return (
-    <section id="about" className="portfolio-about">
+    <section id="about" className="w-full h-[100vh]">
       <div className="flex w-full justify-between">
         <div>
-          <h1 className="text-[24px] font-semibold font-paperozi">
+          <h1 className="text-[24px] font-semibold">
             Software Developer
           </h1>
           <div>
@@ -73,20 +101,37 @@ export default function About() {
       </div>
 
       {/* text-animation section*/}
-      <div className="text-center mt-[500px] font-pretendard">
-        <p>
-          내 손으로 내 아이디어를 구현하자 라는 모토에서 프론트엔드 개발을
-          시작했습니다.
-        </p>
-        <p>런칭한 서비스가 처음 수익화가 되었을 때의 희열감은,</p>
-        <p>
-          전공 지식 학습의 원천이자 지금까지 다양한 프로젝트에 참여하는데 큰
-          동기부여가 되었습니다.
-        </p>
-        <p>
-          최근에는 AI 툴 활용과 더불어 백엔드, 시스템 프로그래밍에 관심을 가지고
-          <br /> 넓은 분야의 제너릴리스트가 되기 위해 노력하고 있습니다.
-        </p>
+      <div className="text-center mt-[200px] font-extralight">
+        <FadeUpBlurText
+          text="내 손으로 내 아이디어를 구현하자 라는 모토에서 프론트엔드 개발을 시작했습니다."
+          delay={0}
+          className="w-full flex justify-center text-[24px]"
+        />
+
+        <FadeUpBlurText
+          text="런칭한 서비스가 처음 수익화가 되었을 때의 희열감은,"
+          delay={30}
+          className="w-full flex justify-center text-[24px] "
+        />
+
+        <FadeUpBlurText
+          text="전공 지식 학습의 원천이자 지금까지 다양한 프로젝트에 참여하는데 큰 동기부여가 되었습니다."
+          delay={30}
+          className="w-full flex justify-center text-[24px] "
+        />
+
+ 
+        <FadeUpBlurText
+          text="최근에는 AI 툴 활용과 더불어 백엔드, 시스템 프로그래밍에 관심을 가지고"
+          delay={30}
+          className="w-full flex justify-center text-[24px] mt-[300px]"
+        />
+
+        <FadeUpBlurText
+          text="넓은 분야의 제너릴리스트가 되기 위해 노력하고 있습니다."
+          delay={30}
+          className="w-full flex justify-center text-[24px]"
+          />
       </div>
     </section>
   )

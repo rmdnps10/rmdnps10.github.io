@@ -10,7 +10,7 @@ const formatPeriod = period => {
 export default function Career() {
   return (
     <section id="career" className="py-16 mt-[200px]">
-      <h2 className="text-[50px] font-bold text-center font-paperozi text-white nline-block border-none mb-10">
+      <h2 className="text-[50px] font-bold text-center font-paperozi text-white border-none mb-10">
         Career
       </h2>
       <div className="max-w-4xl px-4 flex flex-col gap-[80px] items-start w-full">
@@ -20,7 +20,7 @@ export default function Career() {
               {/* Card */}
               <div className="flex-1 transition-all">
                 <h3
-                  className="font-bold text-[22px] mb-0 border-none font-paperozi mt-0 p-0"
+                  className="font-bold text-[22px] mb-0 border-none  mt-0 p-0"
                   style={{ color: role.color || "#FFFFFF" }}
                 >
                   {role.organization}{" "}
@@ -28,7 +28,7 @@ export default function Career() {
                     {formatPeriod(role.period)}
                   </span>
                 </h3>
-                <p className="text-white font-semibold text-base mb-3 font-paperozi">
+                <p className="text-white font-semibold text-base mb-3">
                   {role.position}
                 </p>
                 {role.highlights && role.highlights.length > 0 && (

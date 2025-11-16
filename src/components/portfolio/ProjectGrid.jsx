@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import projects from "../../data/projects.json"
 import ProjectCard from "./_ProjectCard"
 
-const DOMAIN_ORDER = ["All", "Front-end", "Full-stack", "AI", "Art-Tech"]
+const DOMAIN_ORDER = ["Front-end", "Full-stack", "AI", "Art-Tech"]
 
 export default function ProjectGrid() {
   const [selectedTag, setSelectedTag] = useState("All")
@@ -19,8 +19,8 @@ export default function ProjectGrid() {
   }
 
   return (
-    <section id="projects" className="py-16">
-      <h2 className="text-4xl font-bold text-center mb-4 font-paperozi text-white pb-4 max-w-fit mx-auto px-4">
+    <section id="projects" className="py-16 h-[100vh] pt-[200px]">
+      <h2 className="text-[50px] font-bold text-center mb-4 font-paperozi text-white pb-4 max-w-fit mx-auto px-4 border-none">
         All Projects
       </h2>
 
@@ -33,8 +33,8 @@ export default function ProjectGrid() {
               onClick={() => setSelectedTag(tag)}
               className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                 selectedTag === tag
-                  ? "bg-cyan-500 text-white"
-                  : "bg-gray-800 text-gray-300 border border-gray-700 hover:border-gray-500"
+                  ? "bg-white text-[#252525]"
+                  : "bg-[#2A2A2A] text-[#CFCFCF] border border-white/10 hover:border-white/20"
               }`}
             >
               {tag}

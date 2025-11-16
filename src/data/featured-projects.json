@@ -1,0 +1,48 @@
+[
+  {
+    "slug": "ai-portfolio-search",
+    "title": "AI-driven Portfolio Search Engine",
+    "role": "Full-stack",
+    "domainTags": ["AI", "Full-stack"],
+    "techStack": ["React", "FastAPI", "Pinecone"],
+    "githubUrl": "https://github.com/rmdnps10/ai-portfolio-search",
+    "thumbnail": "/images/project/sharemind.png",
+    "year": 2025,
+    "summaryList": [
+      "Vector-semantic search that lets recruiters explore my portfolio with natural language queries.",
+      "Built with React frontend and FastAPI backend",
+      "Integrated Pinecone for vector database management"
+    ]
+  },
+  {
+    "slug": "neural-writing-companion",
+    "title": "Neural Writing Companion",
+    "role": "Product Engineer",
+    "domainTags": ["AI", "Front-end"],
+    "techStack": ["Next.js", "LangChain", "Supabase"],
+    "githubUrl": "https://github.com/rmdnps10/neural-writing-companion",
+    "thumbnail": "/images/project/sharemind.png",
+    "year": 2024,
+    "summaryList": [
+      "Realtime drafting assistant that blends ideation prompts with custom knowledge embeddings.",
+      "Powered by LangChain for AI orchestration",
+      "Supabase for real-time data synchronization"
+    ]
+  },
+  {
+    "slug": "sogang-tech-con",
+    "title": "Sogang Tech Con Platform",
+    "role": "Frontend Lead",
+    "domainTags": ["Front-end"],
+    "techStack": ["Gatsby", "Framer Motion", "Firebase"],
+    "githubUrl": "https://github.com/rmdnps10/sogang-tech-con",
+    "thumbnail": "/images/project/sharemind.png",
+    "year": 2024,
+    "summaryList": [
+      "Interactive conference experience featuring speaker journeys, schedules, and live engagement tools.",
+      "Built with Gatsby for static site generation",
+      "Framer Motion for smooth animations and transitions"
+    ]
+  }
+]
+
