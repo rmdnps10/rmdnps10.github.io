@@ -41,7 +41,7 @@ function FadeUpBlurText({ text, delay, className }) {
 
 export default function About() {
   return (
-    <section id="about" className="w-full h-[100vh]">
+    <section id="about" className="w-full">
       <div className="flex w-full justify-between">
         <div>
           <h1 className="text-[24px] font-semibold">Software Developer</h1>
@@ -100,7 +100,7 @@ export default function About() {
       {/* 랜덤 애니메이션 효과 추가 */}
       <div className="text-center mt-[400px]">
         <DecryptedText
-          text="안녕하세요, 개발을 하고 있는 정인영입니다."
+          text="안녕하세요, 소프트웨어 개발을 하고 있는 정인영입니다."
           revealDirection="start"
           sequential={true}
           animateOn="view"

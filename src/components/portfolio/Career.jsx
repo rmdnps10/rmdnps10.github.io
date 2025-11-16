@@ -22,6 +22,22 @@ const hexToRgba = (hex, opacity = 0.12) => {
   return `rgba(${r}, ${g}, ${b}, ${opacity})`
 }
 
+// Subtle glow effect styles for borders
+const borderGlowStyles = `
+  @keyframes borderGlow {
+    0%, 100% {
+      filter: brightness(1) drop-shadow(0 0 2px rgba(255, 255, 255, 0.3));
+    }
+    50% {
+      filter: brightness(1.2) drop-shadow(0 0 6px rgba(255, 255, 255, 0.4));
+    }
+  }
+  
+  .career-card-border {
+    animation: borderGlow 3s ease-in-out infinite;
+  }
+`
+
 export default function Career() {
   const cardRefs = useRef([])
 
@@ -112,6 +128,7 @@ export default function Career() {
 
   return (
     <section id="career" className="py-[500px]">
+      <style>{borderGlowStyles}</style>
       <h2 className="text-[100px] font-bold text-center font-paperozi border-none mb-1 text-stroke">
         Internship
       </h2>
@@ -143,7 +160,7 @@ export default function Career() {
             >
               {/* 위쪽 border */}
               <div
-                className="career-card-top-border absolute top-0 left-0 h-[4px]"
+                className="career-card-top-border career-card-border absolute top-0 left-0 h-[4px]"
                 style={{
                   width: 0,
                   backgroundColor: role.color || "#FFFFFF",
@@ -151,7 +168,7 @@ export default function Career() {
               />
               {/* 오른쪽 border */}
               <div
-                className="career-card-right-border absolute top-0 right-0 w-[4px]"
+                className="career-card-right-border career-card-border absolute top-0 right-0 w-[4px]"
                 style={{
                   height: 0,
                   backgroundColor: role.color || "#FFFFFF",
@@ -159,7 +176,7 @@ export default function Career() {
               />
               {/* 왼쪽 border */}
               <div
-                className="career-card-left-border absolute top-0 left-0 w-[4px]"
+                className="career-card-left-border career-card-border absolute top-0 left-0 w-[4px]"
                 style={{
                   height: 0,
                   backgroundColor: role.color || "#FFFFFF",
@@ -168,7 +185,7 @@ export default function Career() {
               {/* 아래쪽 border (마지막 요소만) */}
               {index === roles.length - 1 && (
                 <div
-                  className="career-card-bottom-border absolute bottom-0 left-0 h-[4px]"
+                  className="career-card-bottom-border career-card-border absolute bottom-0 left-0 h-[4px]"
                   style={{
                     width: 0,
                     backgroundColor: role.color || "#FFFFFF",
