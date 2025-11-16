@@ -1,6 +1,14 @@
 import React from "react"
+import { Swiper, SwiperSlide } from "swiper/react"
+import { EffectCoverflow, Navigation, Pagination } from "swiper/modules"
 import featuredProjects from "../../data/featured-projects.json"
 import FeaturedProjectCard from "./_FeaturedProjectCard"
+
+// Swiper 스타일 import
+import "swiper/css"
+import "swiper/css/effect-coverflow"
+import "swiper/css/navigation"
+import "swiper/css/pagination"
 
 export default function FeaturedProjects() {
   const featured = featuredProjects
@@ -10,31 +18,79 @@ export default function FeaturedProjects() {
   }
 
   return (
-    <section id="featured mt-[100px]">
+    <section id="featured" className="pt-[200px] pb-[100px]">
       <div className="w-full">
         {/* 섹션 타이틀 */}
         <div className="text-center mb-12" style={{ marginTop: "48px" }}>
-          <h2 className="text-white font-bold mb-2 font-paperozi border-none text-[50px]" >
+          <h2 className="font-bold mb-2 font-paperozi border-none text-[80px] text-stroke">
             Featured Projects
           </h2>
- 
         </div>
 
-        {/* 좌우 교차 배치 - Zigzag Layout (3개의 프로젝트) */}
-        <div className="flex flex-col gap-[120px] mt-[100px] w-full">
-          {featured.map((project, index) => {
-            const isEven = index % 2 === 0
-            return (
-              <div
-                key={project.slug}
-                className={`flex ${isEven ? 'justify-start' : 'justify-end'}`}
-              >
-                <div className="w-full max-w-[60%]">
-                  <FeaturedProjectCard {...project} colorIndex={index} />
-                </div>
-              </div>
-            )
-          })}
+        {/* Fancy Carousel */}
+        <div className="w-full py-12">
+          <Swiper
+            effect={"coverflow"}
+            grabCursor={true}
+            centeredSlides={true}
+            slidesPerView={"auto"}
+            coverflowEffect={{
+              rotate: 20,
+              stretch: 0,
+              depth: 200,
+              modifier: 1,
+              slideShadows: false,
+            }}
+            navigation={false}
+            pagination={{
+              clickable: true,
+              dynamicBullets: true,
+            }}
+            loop={false}
+            initialSlide={Math.floor(featured.length / 2)}
+            watchSlidesProgress={true}
+            speed={600}
+            spaceBetween={30}
+            modules={[EffectCoverflow, Navigation, Pagination]}
+            className="featured-swiper"
+            style={{
+              paddingBottom: "60px",
+            }}
+          >
+            {featured.map((project, index) => {
+              // 각 프로젝트에 맞는 태그 텍스트 결정
+              const tagText = project.domainTags?.includes("AI")
+                ? "AI"
+                : project.domainTags?.includes("Full-stack")
+                ? "Full-stack"
+                : project.domainTags?.includes("Front-end")
+                ? "Frontend"
+                : project.domainTags?.[0] || ""
+
+              return (
+                <SwiperSlide key={project.slug} className="!w-auto">
+                  <div className="w-[600px] max-w-[90vw] relative">
+                    {/* 카드 위 텍스트 */}
+                    {tagText && (
+                      <div
+                        className="absolute -top-12 left-1/2 transform -translate-x-1/2 z-20"
+                        style={{
+                          fontSize: "48px",
+                          fontWeight: 700,
+                          color: "rgba(255, 255, 255, 0.9)",
+                          textShadow: "0 2px 10px rgba(0, 0, 0, 0.5)",
+                          fontFamily: "Paperozi, sans-serif",
+                        }}
+                      >
+                        {tagText}
+                      </div>
+                    )}
+                    <FeaturedProjectCard {...project} colorIndex={index} />
+                  </div>
+                </SwiperSlide>
+              )
+            })}
+          </Swiper>
         </div>
       </div>
     </section>

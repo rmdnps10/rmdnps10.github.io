@@ -5,14 +5,13 @@ import {
   SiGatsby,
   SiExpress,
   SiFastapi,
-  SiJavascript,
   SiTypescript,
   SiPython,
   SiC,
-  SiJava,
 } from "react-icons/si"
 import { useInView } from "react-intersection-observer"
 import { motion } from "motion/react"
+import DecryptedText from "../animation/DecryptedText"
 
 // Fade Up 효과가 적용된 텍스트 컴포넌트
 function FadeUpBlurText({ text, delay, className }) {
@@ -45,9 +44,7 @@ export default function About() {
     <section id="about" className="w-full h-[100vh]">
       <div className="flex w-full justify-between">
         <div>
-          <h1 className="text-[24px] font-semibold">
-            Software Developer
-          </h1>
+          <h1 className="text-[24px] font-semibold">Software Developer</h1>
           <div>
             <div className="flex gap-2">
               <p className="text-white font-semibold">Email.</p>
@@ -100,6 +97,18 @@ export default function About() {
         </div>
       </div>
 
+      {/* 랜덤 애니메이션 효과 추가 */}
+      <div className="text-center mt-[400px]">
+        <DecryptedText
+          text="안녕하세요, 개발을 하고 있는 정인영입니다."
+          revealDirection="start"
+          sequential={true}
+          animateOn="view"
+          speed={100}
+          className="text-white"
+          parentClassName="text-[40px]"
+        />
+      </div>
       {/* text-animation section*/}
       <div className="text-center mt-[200px] font-extralight">
         <FadeUpBlurText
@@ -120,7 +129,6 @@ export default function About() {
           className="w-full flex justify-center text-[24px] "
         />
 
- 
         <FadeUpBlurText
           text="최근에는 AI 툴 활용과 더불어 백엔드, 시스템 프로그래밍에 관심을 가지고"
           delay={30}
@@ -131,7 +139,7 @@ export default function About() {
           text="넓은 분야의 제너릴리스트가 되기 위해 노력하고 있습니다."
           delay={30}
           className="w-full flex justify-center text-[24px]"
-          />
+        />
       </div>
     </section>
   )

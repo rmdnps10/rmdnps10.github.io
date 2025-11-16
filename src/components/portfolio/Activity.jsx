@@ -4,7 +4,7 @@ import activities from "../../data/activity.json"
 const GROUP_LABELS = {
   Award: "Awards",
   Certification: "Certifications",
-  Community: "Community",
+  Leadership: "Leadership",
 }
 
 // Support two shapes for activities data:
@@ -24,7 +24,7 @@ if (Array.isArray(activities)) {
 
 export default function Activity() {
   // Render in the requested order (Community, Award, Certification)
-  const groupOrder = ["Community", "Award", "Certification"]
+  const groupOrder = ["Leadership", "Award", "Certification"]
 
   return (
     <section id="activity" className="portfolio-activity py-16 mt-[200px]">
@@ -39,24 +39,24 @@ export default function Activity() {
             return (
               <div
                 key={label}
-                style={{ paddingTop: `${index * 40}vh`, minHeight: "200vh" }}
+                style={{ paddingTop: `${index * 40}vh`, minHeight: "250vh" }}
               >
-                <div className="sticky top-20">
-                  <h3 className="font-paperozi border-none text-[50px] font-bold mb-5 text-white">
+                <div className="sticky top-20 mb-[500px]">
+                  <h3 className="font-paperozi border-none text-[50px] font-bold mb-5 text-stroke">
                     {heading}
                   </h3>
 
-                  <div className="flex flex-col gap-6">
+                  <div className="flex flex-col gap-[40px] mt-[50px]">
                     {list.map(activity => (
                       <div
                         key={`${label}-${activity.title}`}
                         className="flex flex-col gap-0"
                       >
-                        <p className="font-semibold text-[18px] font-paperozi m-0">
-                          {activity.organization}
-                        </p>
-                        <p className="text-xs m-0 font-light font-paperozi text-[15px] mt-2">
+                        <p className="m-0 font-light font-paperozi text-[24px] mt-2">
                           {activity.title}
+                        </p>
+                        <p className="font-paperozi text-[20px] m-0">
+                          {activity.organization}
                         </p>
                         <p className="text-right">{String(activity.year)}</p>
                       </div>

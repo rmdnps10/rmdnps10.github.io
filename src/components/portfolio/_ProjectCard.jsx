@@ -20,10 +20,7 @@ export default function ProjectCard({
   const projectLabel = domainTags?.[0] || role
 
   return (
-    <a
-      href={githubUrl}
-      target="_blank"
-      rel="noreferrer"
+    <div
       className="group/card block w-full bg-[#252525] rounded-[14px] overflow-hidden relative flex flex-col"
       style={{
         boxShadow: "0 4px 18px rgba(0,0,0,0.28)",
@@ -46,7 +43,7 @@ export default function ProjectCard({
 
       {/* 상단 이미지 영역 - 250px 높이 */}
       {thumbnail && (
-        <div 
+        <div
           className="w-full h-[180px] relative"
           style={{
             backgroundImage: `url(${thumbnail})`,
@@ -55,7 +52,7 @@ export default function ProjectCard({
           }}
         >
           {/* 이미지 상단 그라데이션 오버레이 */}
-          <div 
+          <div
             className="absolute top-0 left-0 right-0 pointer-events-none"
             style={{
               height: "70%",
@@ -64,7 +61,7 @@ export default function ProjectCard({
           />
 
           {/* 이미지 하단 그라데이션 오버레이 */}
-          <div 
+          <div
             className="absolute bottom-0 left-0 right-0 pointer-events-none"
             style={{
               height: "70%",
@@ -73,7 +70,10 @@ export default function ProjectCard({
           />
 
           {/* 프로젝트명 */}
-          <h3 className="font-bold mb-4 leading-tight mt-0 border-none absolute bottom-0 left-[24px]" style={{ fontSize: "20px", color: "#FFFFFF" }}>
+          <h3
+            className="font-bold mb-4 leading-tight mt-0 border-none absolute bottom-0 left-[24px]"
+            style={{ fontSize: "20px", color: "#FFFFFF" }}
+          >
             {title}
           </h3>
         </div>
@@ -100,14 +100,17 @@ export default function ProjectCard({
 
         {/* 설명 - flex-grow로 남은 공간 차지 */}
         {summary && (
-          <div className="mb-6 flex-grow relative z-20" style={{ marginTop: "5px" }}>
-            <p 
-              className="leading-relaxed m-0" 
-              style={{ 
-                fontSize: "15px", 
+          <div
+            className="mb-6 flex-grow relative z-20"
+            style={{ marginTop: "5px" }}
+          >
+            <p
+              className="leading-relaxed m-0"
+              style={{
+                fontSize: "15px",
                 fontWeight: 400,
                 color: "white",
-                lineHeight: "1.6"
+                lineHeight: "1.6",
               }}
             >
               {summary}
@@ -135,6 +138,6 @@ export default function ProjectCard({
           />
         </div>
       </div>
-    </a>
+    </div>
   )
 }

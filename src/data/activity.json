@@ -1,32 +1,50 @@
 {
-  "Community": [
+  "Leadership": [
     {
-      "title": "멋쟁이사자처럼 12기 회장",
-      "organization": "Sogang Univ.",
-      "year": "2024"
+      "title": "12기 회장",
+      "organization": "서강대 멋쟁이사자처럼",
+      "year": "2023.03 - 2024.12"
     },
     {
-      "title": "CEOS 18기 프론트엔드 개발",
-      "organization": "CEOS",
+      "title": "18기 프론트엔드",
+      "organization": "신촌 연합 창업학회 CEOS",
+      "year": "2023.07 - 2024.02"
+    },
+    {
+      "title": "웹개발팀장",
+      "organization": "서강대 ATC 2025",
       "year": "2024"
     },
-    { "title": "ATC 웹개발팀장", "organization": "ATC", "year": "2024" },
     {
       "title": "학생대표",
-      "organization": "지식융합미디어학부",
-      "year": "2024"
+      "organization": "서강대 지식융합미디어학부 학생회",
+      "year": "2020.12 - 2021.12"
+    },
+    {
+      "title": "부대표",
+      "organization": "서강대 중앙동아리 건드림",
+      "year": "2020.12 - 2021.12"
     }
   ],
   "Award": [
     {
-      "title": "Lovable AI Hackathon 대상",
-      "organization": "—",
-      "year": "2025"
+      "title": "1st prize",
+      "organization": "Loavable AI 해커톤",
+      "year": "2025.11.07"
     },
-    { "title": "CEOS Demo Day 우수상", "organization": "CEOS", "year": "2024" }
+    {
+      "title": "결선 진출",
+      "organization": "뤼튼 AI 아이디어톤 ",
+      "year": "2024.02.22"
+    },
+    {
+      "title": "결선 진출",
+      "organization": "k - 해커톤",
+      "year": "2024.02.22"
+    }
   ],
   "Certification": [
-    { "title": "정보처리기사", "organization": "KISA", "year": "2024" },
-    { "title": "SQLD", "organization": "Kdata", "year": "2023" }
+    { "title": "정보처리기사", "organization": "q-net", "year": "2024" },
+    { "title": "SQLD", "organization": "Kdata", "year": "2024" }
   ]
 }
