@@ -17,7 +17,9 @@ export default function About() {
     <section id="about" className="portfolio-about">
       <div className="flex w-full justify-between">
         <div>
-          <h1 className="text-[20px] font-semibold">Software Developer</h1>
+          <h1 className="text-[24px] font-semibold font-paperozi">
+            Software Developer
+          </h1>
           <div>
             <div className="flex gap-2">
               <p className="text-white font-semibold">Email.</p>
@@ -71,7 +73,7 @@ export default function About() {
       </div>
 
       {/* text-animation section*/}
-      <div className="text-center mt-20 font-pretendard">
+      <div className="text-center mt-[500px] font-pretendard">
         <p>
           내 손으로 내 아이디어를 구현하자 라는 모토에서 프론트엔드 개발을
           시작했습니다.

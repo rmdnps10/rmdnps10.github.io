@@ -9,36 +9,30 @@ const formatPeriod = period => {
 
 export default function Career() {
   return (
-    <section id="career" className="py-16">
-      <h2 className="text-4xl font-bold text-center mb-12 font-paperozi text-white pb-4 max-w-fit mx-auto px-4">
+    <section id="career" className="py-16 mt-[200px]">
+      <h2 className="text-[50px] font-bold text-center font-paperozi text-white nline-block border-none mb-10">
         Career
       </h2>
-      <div className="max-w-4xl mx-auto px-4 flex flex-col gap-4">
+      <div className="max-w-4xl px-4 flex flex-col gap-[80px] items-start w-full">
         {roles.map((role, index) => (
-          <div key={role.organization} className="relative">
+          <div key={role.organization} className="relative w-[50%]">
             <div className="flex gap-6 pb-8 last:pb-0">
-              {/* Timeline dot and date */}
-              <div className="relative flex flex-col items-center flex-shrink-0">
-                <div className="w-4 h-4 bg-white rounded-full border-2 border-gray-900 relative z-10"></div>
-                {/* Timeline line - positioned absolutely from dot center */}
-                {index !== roles.length - 1 && (
-                  <div className="absolute top-4 left-1/2 -translate-x-1/2 w-0.5 h-full bg-gray-600"></div>
-                )}
-                <p className="text-gray-400 font-semibold text-sm mt-0 text-center w-24 bg-darkMain relative z-10">
-                  {formatPeriod(role.period)}
-                </p>
-              </div>
-
               {/* Card */}
-              <div className="flex-1 border border-gray-700 rounded-lg p-5 hover:border-gray-500 hover:shadow-lg hover:shadow-white/5 transition-all duration-300">
-                <h3 className="text-white font-bold text-lg mb-1 border-none mt-2 font-paperozi">
-                  {role.organization}
+              <div className="flex-1 transition-all">
+                <h3
+                  className="font-bold text-[22px] mb-0 border-none font-paperozi mt-0 p-0"
+                  style={{ color: role.color || "#FFFFFF" }}
+                >
+                  {role.organization}{" "}
+                  <span className="text-[13px] pl-4 text-white/80">
+                    {formatPeriod(role.period)}
+                  </span>
                 </h3>
                 <p className="text-white font-semibold text-base mb-3 font-paperozi">
                   {role.position}
                 </p>
                 {role.highlights && role.highlights.length > 0 && (
-                  <ul className="space-y-2">
+                  <ul className="space-y-2 mb-0">
                     {role.highlights.map(highlight => (
                       <li
                         key={highlight}
@@ -51,6 +45,7 @@ export default function Career() {
                   </ul>
                 )}
               </div>
+              <div></div>
             </div>
           </div>
         ))}

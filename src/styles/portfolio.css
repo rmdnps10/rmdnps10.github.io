@@ -89,6 +89,8 @@
 .portfolio-hero {
   position: relative;
   overflow: hidden;
+  width: 100%;
+  height: calc(100vh - 60px);
 }
 
 .portfolio-hero h1 {

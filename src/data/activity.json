@@ -1,10 +1,32 @@
-[
-  { "type": "Community", "title": "멋쟁이사자처럼 12기 회장", "organization": "Sogang Univ.", "year": 2024 },
-  { "type": "Community", "title": "CEOS 18기 프론트엔드 개발", "organization": "CEOS", "year": 2024 },
-  { "type": "Community", "title": "ATC 웹개발팀장", "organization": "ATC", "year": 2024 },
-  { "type": "Community", "title": "학생대표", "organization": "지식융합미디어학부", "year": 2024 },
-  { "type": "Award", "title": "Lovable AI Hackathon 대상", "organization": "—", "year": 2025 },
-  { "type": "Award", "title": "CEOS Demo Day 우수상", "organization": "CEOS", "year": 2024 },
-  { "type": "Certification", "title": "정보처리기사", "organization": "KISA", "year": 2024 },
-  { "type": "Certification", "title": "SQLD", "organization": "Kdata", "year": 2023 }
-]
+{
+  "Community": [
+    {
+      "title": "멋쟁이사자처럼 12기 회장",
+      "organization": "Sogang Univ.",
+      "year": "2024"
+    },
+    {
+      "title": "CEOS 18기 프론트엔드 개발",
+      "organization": "CEOS",
+      "year": "2024"
+    },
+    { "title": "ATC 웹개발팀장", "organization": "ATC", "year": "2024" },
+    {
+      "title": "학생대표",
+      "organization": "지식융합미디어학부",
+      "year": "2024"
+    }
+  ],
+  "Award": [
+    {
+      "title": "Lovable AI Hackathon 대상",
+      "organization": "—",
+      "year": "2025"
+    },
+    { "title": "CEOS Demo Day 우수상", "organization": "CEOS", "year": "2024" }
+  ],
+  "Certification": [
+    { "title": "정보처리기사", "organization": "KISA", "year": "2024" },
+    { "title": "SQLD", "organization": "Kdata", "year": "2023" }
+  ]
+}
