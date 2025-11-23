@@ -92,16 +92,13 @@ html {
 
 .toc-link:hover {
   color: #3b82f6;
-  padding-left: 0.25rem;
 }
 
 .toc-item.active .toc-link {
   color: #3b82f6;
   font-weight: 600;
   background-color: rgba(59, 130, 246, 0.1);
-  padding: 0.25rem 0.5rem;
   border-radius: 0.25rem;
-  margin-left: -0.5rem;
 }
 
 .anchor {

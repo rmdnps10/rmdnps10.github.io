@@ -61,8 +61,7 @@ const TableOfContents = ({ html }) => {
   if (headings.length === 0) return null
 
   return (
-    <nav className="toc-container">
-      <h3 className="toc-title">목차</h3>
+    <nav className="toc-container mt-5">
       <ul className="toc-list">
         {headings.map((heading, index) => (
           <li
