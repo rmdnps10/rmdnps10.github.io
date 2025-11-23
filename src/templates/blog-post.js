@@ -69,9 +69,17 @@ const BlogPostTemplate = ({
 export const Head = ({ data: { markdownRemark: post, site } }) => {
   const siteUrl = site.siteMetadata.siteUrl
   const postUrl = `${siteUrl}${post.fields.slug}`
-  const postImage = post.frontmatter.thumbnail
-    ? `${siteUrl}${post.frontmatter.thumbnail.publicURL}`
-    : null
+
+  // Gatsby가 처리한 실제 이미지 URL 사용
+  let postImage = null
+  if (post.frontmatter.thumbnail?.childImageSharp?.fixed?.src) {
+    // fixed 레이아웃에서 실제 처리된 이미지 경로 사용
+    postImage = `${siteUrl}${post.frontmatter.thumbnail.childImageSharp.fixed.src}`
+  } else if (post.frontmatter.thumbnail?.publicURL) {
+    // fallback: publicURL 사용
+    postImage = `${siteUrl}${post.frontmatter.thumbnail.publicURL}`
+  }
+
   const publishedTime = post.frontmatter.date
     ? new Date(post.frontmatter.date).toISOString()
     : null
@@ -120,8 +128,12 @@ export const pageQuery = graphql`
         description
         pointColor
         thumbnail {
+          publicURL
           childImageSharp {
             gatsbyImageData(width: 1200, layout: FIXED)
+            fixed(width: 1200) {
+              src
+            }
           }
         }
       }
