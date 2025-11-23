@@ -206,7 +206,12 @@ const BlogIndex = ({ data, location }) => {
 
 export default BlogIndex
 
-export const Head = () => <Seo title="난너의오른팔" />
+export const Head = () => (
+  <Seo 
+    title="난너의오른팔" 
+    description="Web 기술과 AI 활용법을 공부하는 주니어 개발자, 커뮤니티 빌더의 기술 블로그"
+  />
+)
 
 export const pageQuery = graphql`
   {

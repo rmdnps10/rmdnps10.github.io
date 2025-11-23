@@ -136,7 +136,7 @@ export default function Career() {
               }}
               className="relative py-[50px] px-[0px]"
               style={{
-                paddingLeft: 5 + index * 30 + "%",
+                paddingLeft: 5 + index * 30 + " ",
                 width: `${cardWidth}px`,
                 boxSizing: "content-box",
               }}

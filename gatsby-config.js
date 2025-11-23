@@ -60,10 +60,12 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `Gatsby`,
+        name: `난너의오른팔 - 기술 블로그`,
+        short_name: `난너의오른팔`,
+        description: `Web 기술과 AI 활용법을 공부하는 주니어 개발자, 커뮤니티 빌더`,
         start_url: `/`,
         background_color: `#ffffff`,
+        theme_color: `#000000`,
         display: `minimal-ui`,
         icon: `src/images/favico.png`, // This path is relative to the root of the site.
       },
@@ -163,7 +165,8 @@ module.exports = {
               }
             }`,
             output: "/rss.xml",
-            title: "Gatsby Starter Blog RSS Feed",
+            title: "난너의오른팔 기술 블로그 RSS Feed",
+            description: "Web 기술과 AI 활용법을 공부하는 주니어 개발자, 커뮤니티 빌더의 기술 블로그",
           },
         ],
       },

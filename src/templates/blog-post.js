@@ -66,11 +66,26 @@ const BlogPostTemplate = ({
   )
 }
 
-export const Head = ({ data: { markdownRemark: post } }) => {
+export const Head = ({ data: { markdownRemark: post, site } }) => {
+  const siteUrl = site.siteMetadata.siteUrl
+  const postUrl = `${siteUrl}${post.fields.slug}`
+  const postImage = post.frontmatter.thumbnail
+    ? `${siteUrl}${post.frontmatter.thumbnail.publicURL}`
+    : null
+  const publishedTime = post.frontmatter.date
+    ? new Date(post.frontmatter.date).toISOString()
+    : null
+
   return (
     <Seo
       title={post.frontmatter.title}
       description={post.frontmatter.description || post.excerpt}
+      image={postImage}
+      imageAlt={post.frontmatter.title}
+      type="article"
+      url={postUrl}
+      publishedTime={publishedTime}
+      author={site.siteMetadata.author.name}
     />
   )
 }
@@ -86,17 +101,29 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+        siteUrl
+        author {
+          name
+        }
       }
     }
     markdownRemark(id: { eq: $id }) {
       id
       excerpt(pruneLength: 160)
       html
+      fields {
+        slug
+      }
       frontmatter {
         title
-        date(formatString: "MMMM DD, YYYY")
+        date(formatString: "YYYY-MM-DD")
         description
         pointColor
+        thumbnail {
+          childImageSharp {
+            gatsbyImageData(width: 1200, layout: FIXED)
+          }
+        }
       }
     }
     previous: markdownRemark(id: { eq: $previousPostId }) {
