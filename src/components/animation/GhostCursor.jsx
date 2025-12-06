@@ -1,9 +1,10 @@
-import { useEffect, useMemo, useRef } from 'react';
-import * as THREE from 'three';
-import { EffectComposer } from 'three/examples/jsm/postprocessing/EffectComposer.js';
-import { RenderPass } from 'three/examples/jsm/postprocessing/RenderPass.js';
-import { UnrealBloomPass } from 'three/examples/jsm/postprocessing/UnrealBloomPass.js';
-import { ShaderPass } from 'three/examples/jsm/postprocessing/ShaderPass.js';
+import { useEffect, useMemo, useRef } from "react"
+import * as THREE from "three"
+import React from "react"
+import { EffectComposer } from "three/examples/jsm/postprocessing/EffectComposer.js"
+import { RenderPass } from "three/examples/jsm/postprocessing/RenderPass.js"
+import { UnrealBloomPass } from "three/examples/jsm/postprocessing/UnrealBloomPass.js"
+import { ShaderPass } from "three/examples/jsm/postprocessing/ShaderPass.js"
 
 const GhostCursor = ({
   className,
@@ -16,8 +17,8 @@ const GhostCursor = ({
   bloomThreshold = 0.025,
 
   brightness = 1,
-  color = '#B19EEF',
-  mixBlendMode = 'screen',
+  color = "#B19EEF",
+  mixBlendMode = "screen",
   edgeIntensity = 0,
 
   maxDevicePixelRatio = 0.5,
@@ -25,35 +26,39 @@ const GhostCursor = ({
 
   fadeDelayMs,
   fadeDurationMs,
-  zIndex = 10
+  zIndex = 10,
 }) => {
-  const containerRef = useRef(null);
-  const rendererRef = useRef(null);
-  const composerRef = useRef(null);
-  const materialRef = useRef(null);
-  const bloomPassRef = useRef(null);
-  const filmPassRef = useRef(null);
+  const containerRef = useRef(null)
+  const rendererRef = useRef(null)
+  const composerRef = useRef(null)
+  const materialRef = useRef(null)
+  const bloomPassRef = useRef(null)
+  const filmPassRef = useRef(null)
 
-  const trailBufRef = useRef([]);
-  const headRef = useRef(0);
+  const trailBufRef = useRef([])
+  const headRef = useRef(0)
 
-  const rafRef = useRef(null);
-  const resizeObsRef = useRef(null);
-  const currentMouseRef = useRef(new THREE.Vector2(0.5, 0.5));
-  const velocityRef = useRef(new THREE.Vector2(0, 0));
-  const fadeOpacityRef = useRef(1.0);
-  const lastMoveTimeRef = useRef(typeof performance !== 'undefined' ? performance.now() : Date.now());
-  const pointerActiveRef = useRef(false);
-  const runningRef = useRef(false);
+  const rafRef = useRef(null)
+  const resizeObsRef = useRef(null)
+  const currentMouseRef = useRef(new THREE.Vector2(0.5, 0.5))
+  const velocityRef = useRef(new THREE.Vector2(0, 0))
+  const fadeOpacityRef = useRef(1.0)
+  const lastMoveTimeRef = useRef(
+    typeof performance !== "undefined" ? performance.now() : Date.now()
+  )
+  const pointerActiveRef = useRef(false)
+  const runningRef = useRef(false)
 
   const isTouch = useMemo(
-    () => typeof window !== 'undefined' && ('ontouchstart' in window || navigator.maxTouchPoints > 0),
+    () =>
+      typeof window !== "undefined" &&
+      ("ontouchstart" in window || navigator.maxTouchPoints > 0),
     []
-  );
+  )
 
-  const pixelBudget = targetPixels ?? (isTouch ? 0.9e6 : 1.3e6);
-  const fadeDelay = fadeDelayMs ?? (isTouch ? 500 : 1000);
-  const fadeDuration = fadeDurationMs ?? (isTouch ? 1000 : 1500);
+  const pixelBudget = targetPixels ?? (isTouch ? 0.9e6 : 1.3e6)
+  const fadeDelay = fadeDelayMs ?? (isTouch ? 500 : 1000)
+  const fadeDuration = fadeDurationMs ?? (isTouch ? 1000 : 1500)
 
   const baseVertexShader = `
     varying vec2 vUv;
@@ -61,7 +66,7 @@ const GhostCursor = ({
       vUv = uv;
       gl_Position = vec4(position, 1.0);
     }
-  `;
+  `
 
   const fragmentShader = `
     uniform float iTime;
@@ -145,14 +150,14 @@ const GhostCursor = ({
       float outAlpha = clamp(alphaAcc * iOpacity * edgeMask, 0.0, 1.0);
       gl_FragColor = vec4(colorAcc, outAlpha);
     }
-  `;
+  `
 
   const FilmGrainShader = useMemo(() => {
     return {
       uniforms: {
         tDiffuse: { value: null },
         iTime: { value: 0 },
-        intensity: { value: grainIntensity }
+        intensity: { value: grainIntensity },
       },
       vertexShader: `
         varying vec2 vUv;
@@ -175,9 +180,9 @@ const GhostCursor = ({
           color.rgb += n * intensity * color.rgb;
           gl_FragColor = color;
         }
-      `
-    };
-  }, [grainIntensity]);
+      `,
+    }
+  }, [grainIntensity])
 
   const UnpremultiplyPass = useMemo(
     () =>
@@ -199,26 +204,26 @@ const GhostCursor = ({
             vec3 straight = c.rgb / a;
             gl_FragColor = vec4(clamp(straight, 0.0, 1.0), c.a);
           }
-        `
+        `,
       }),
     []
-  );
+  )
 
   function calculateScale(el) {
-    const r = el.getBoundingClientRect();
-    const base = 600;
-    const current = Math.min(Math.max(1, r.width), Math.max(1, r.height));
-    return Math.max(0.5, Math.min(2.0, current / base));
+    const r = el.getBoundingClientRect()
+    const base = 600
+    const current = Math.min(Math.max(1, r.width), Math.max(1, r.height))
+    return Math.max(0.5, Math.min(2.0, current / base))
   }
 
   useEffect(() => {
-    const host = containerRef.current;
-    const parent = host?.parentElement;
-    if (!host || !parent) return;
+    const host = containerRef.current
+    const parent = host?.parentElement
+    if (!host || !parent) return
 
-    const prevParentPos = parent.style.position;
-    if (!prevParentPos || prevParentPos === 'static') {
-      parent.style.position = 'relative';
+    const prevParentPos = parent.style.position
+    if (!prevParentPos || prevParentPos === "static") {
+      parent.style.position = "relative"
     }
 
     const renderer = new THREE.WebGLRenderer({
@@ -226,37 +231,40 @@ const GhostCursor = ({
       alpha: true,
       depth: false,
       stencil: false,
-      powerPreference: isTouch ? 'low-power' : 'high-performance',
+      powerPreference: isTouch ? "low-power" : "high-performance",
       premultipliedAlpha: false,
-      preserveDrawingBuffer: false
-    });
-    renderer.setClearColor(0x000000, 0);
-    rendererRef.current = renderer;
+      preserveDrawingBuffer: false,
+    })
+    renderer.setClearColor(0x000000, 0)
+    rendererRef.current = renderer
 
-    renderer.domElement.style.pointerEvents = 'none';
+    renderer.domElement.style.pointerEvents = "none"
     if (mixBlendMode) {
-      renderer.domElement.style.mixBlendMode = String(mixBlendMode);
+      renderer.domElement.style.mixBlendMode = String(mixBlendMode)
     } else {
-      renderer.domElement.style.removeProperty('mix-blend-mode');
+      renderer.domElement.style.removeProperty("mix-blend-mode")
     }
 
-    renderer.domElement.style.display = 'block';
-    renderer.domElement.style.width = '100%';
-    renderer.domElement.style.height = '100%';
-    renderer.domElement.style.background = 'transparent';
+    renderer.domElement.style.display = "block"
+    renderer.domElement.style.width = "100%"
+    renderer.domElement.style.height = "100%"
+    renderer.domElement.style.background = "transparent"
 
-    host.appendChild(renderer.domElement);
+    host.appendChild(renderer.domElement)
 
-    const scene = new THREE.Scene();
-    const camera = new THREE.OrthographicCamera(-1, 1, 1, -1, 0, 1);
+    const scene = new THREE.Scene()
+    const camera = new THREE.OrthographicCamera(-1, 1, 1, -1, 0, 1)
 
-    const geom = new THREE.PlaneGeometry(2, 2);
+    const geom = new THREE.PlaneGeometry(2, 2)
 
-    const maxTrail = Math.max(1, Math.floor(trailLength));
-    trailBufRef.current = Array.from({ length: maxTrail }, () => new THREE.Vector2(0.5, 0.5));
-    headRef.current = 0;
+    const maxTrail = Math.max(1, Math.floor(trailLength))
+    trailBufRef.current = Array.from(
+      { length: maxTrail },
+      () => new THREE.Vector2(0.5, 0.5)
+    )
+    headRef.current = 0
 
-    const baseColor = new THREE.Color(color);
+    const baseColor = new THREE.Color(color)
 
     const material = new THREE.ShaderMaterial({
       defines: { MAX_TRAIL_LENGTH: maxTrail },
@@ -267,178 +275,200 @@ const GhostCursor = ({
         iPrevMouse: { value: trailBufRef.current.map(v => v.clone()) },
         iOpacity: { value: 1.0 },
         iScale: { value: 1.0 },
-        iBaseColor: { value: new THREE.Vector3(baseColor.r, baseColor.g, baseColor.b) },
+        iBaseColor: {
+          value: new THREE.Vector3(baseColor.r, baseColor.g, baseColor.b),
+        },
         iBrightness: { value: brightness },
-        iEdgeIntensity: { value: edgeIntensity }
+        iEdgeIntensity: { value: edgeIntensity },
       },
       vertexShader: baseVertexShader,
       fragmentShader,
       transparent: true,
       depthTest: false,
-      depthWrite: false
-    });
-    materialRef.current = material;
+      depthWrite: false,
+    })
+    materialRef.current = material
 
-    const mesh = new THREE.Mesh(geom, material);
-    scene.add(mesh);
+    const mesh = new THREE.Mesh(geom, material)
+    scene.add(mesh)
 
-    const composer = new EffectComposer(renderer);
-    composerRef.current = composer;
+    const composer = new EffectComposer(renderer)
+    composerRef.current = composer
 
-    const renderPass = new RenderPass(scene, camera);
-    composer.addPass(renderPass);
+    const renderPass = new RenderPass(scene, camera)
+    composer.addPass(renderPass)
 
-    const bloomPass = new UnrealBloomPass(new THREE.Vector2(1, 1), bloomStrength, bloomRadius, bloomThreshold);
-    bloomPassRef.current = bloomPass;
-    composer.addPass(bloomPass);
+    const bloomPass = new UnrealBloomPass(
+      new THREE.Vector2(1, 1),
+      bloomStrength,
+      bloomRadius,
+      bloomThreshold
+    )
+    bloomPassRef.current = bloomPass
+    composer.addPass(bloomPass)
 
-    const filmPass = new ShaderPass(FilmGrainShader);
-    filmPassRef.current = filmPass;
-    composer.addPass(filmPass);
+    const filmPass = new ShaderPass(FilmGrainShader)
+    filmPassRef.current = filmPass
+    composer.addPass(filmPass)
 
-    composer.addPass(UnpremultiplyPass);
+    composer.addPass(UnpremultiplyPass)
 
     const resize = () => {
-      const rect = host.getBoundingClientRect();
-      const cssW = Math.max(1, Math.floor(rect.width));
-      const cssH = Math.max(1, Math.floor(rect.height));
+      const rect = host.getBoundingClientRect()
+      const cssW = Math.max(1, Math.floor(rect.width))
+      const cssH = Math.max(1, Math.floor(rect.height))
 
       const currentDPR = Math.min(
-        typeof window !== 'undefined' ? window.devicePixelRatio || 1 : 1,
+        typeof window !== "undefined" ? window.devicePixelRatio || 1 : 1,
         maxDevicePixelRatio
-      );
-      const need = cssW * cssH * currentDPR * currentDPR;
-      const scale = need <= pixelBudget ? 1 : Math.max(0.5, Math.min(1, Math.sqrt(pixelBudget / Math.max(1, need))));
-      const pixelRatio = currentDPR * scale;
+      )
+      const need = cssW * cssH * currentDPR * currentDPR
+      const scale =
+        need <= pixelBudget
+          ? 1
+          : Math.max(
+              0.5,
+              Math.min(1, Math.sqrt(pixelBudget / Math.max(1, need)))
+            )
+      const pixelRatio = currentDPR * scale
 
-      renderer.setPixelRatio(pixelRatio);
-      renderer.setSize(cssW, cssH, false);
+      renderer.setPixelRatio(pixelRatio)
+      renderer.setSize(cssW, cssH, false)
 
-      composer.setPixelRatio?.(pixelRatio);
-      composer.setSize(cssW, cssH);
+      composer.setPixelRatio?.(pixelRatio)
+      composer.setSize(cssW, cssH)
 
-      const wpx = Math.max(1, Math.floor(cssW * pixelRatio));
-      const hpx = Math.max(1, Math.floor(cssH * pixelRatio));
-      material.uniforms.iResolution.value.set(wpx, hpx, 1);
-      material.uniforms.iScale.value = calculateScale(host);
-      bloomPass.setSize(wpx, hpx);
-    };
+      const wpx = Math.max(1, Math.floor(cssW * pixelRatio))
+      const hpx = Math.max(1, Math.floor(cssH * pixelRatio))
+      material.uniforms.iResolution.value.set(wpx, hpx, 1)
+      material.uniforms.iScale.value = calculateScale(host)
+      bloomPass.setSize(wpx, hpx)
+    }
 
-    resize();
-    const ro = new ResizeObserver(resize);
-    resizeObsRef.current = ro;
-    ro.observe(parent);
-    ro.observe(host);
+    resize()
+    const ro = new ResizeObserver(resize)
+    resizeObsRef.current = ro
+    ro.observe(parent)
+    ro.observe(host)
 
-    const start = typeof performance !== 'undefined' ? performance.now() : Date.now();
+    const start =
+      typeof performance !== "undefined" ? performance.now() : Date.now()
     const animate = () => {
-      const now = performance.now();
-      const t = (now - start) / 1000;
+      const now = performance.now()
+      const t = (now - start) / 1000
 
-      const mat = materialRef.current;
-      const comp = composerRef.current;
+      const mat = materialRef.current
+      const comp = composerRef.current
 
       if (pointerActiveRef.current) {
         velocityRef.current.set(
           currentMouseRef.current.x - mat.uniforms.iMouse.value.x,
           currentMouseRef.current.y - mat.uniforms.iMouse.value.y
-        );
-        mat.uniforms.iMouse.value.copy(currentMouseRef.current);
-        fadeOpacityRef.current = 1.0;
+        )
+        mat.uniforms.iMouse.value.copy(currentMouseRef.current)
+        fadeOpacityRef.current = 1.0
       } else {
-        velocityRef.current.multiplyScalar(inertia);
+        velocityRef.current.multiplyScalar(inertia)
         if (velocityRef.current.lengthSq() > 1e-6) {
-          mat.uniforms.iMouse.value.add(velocityRef.current);
+          mat.uniforms.iMouse.value.add(velocityRef.current)
         }
-        const dt = now - lastMoveTimeRef.current;
+        const dt = now - lastMoveTimeRef.current
         if (dt > fadeDelay) {
-          const k = Math.min(1, (dt - fadeDelay) / fadeDuration);
-          fadeOpacityRef.current = Math.max(0, 1 - k);
+          const k = Math.min(1, (dt - fadeDelay) / fadeDuration)
+          fadeOpacityRef.current = Math.max(0, 1 - k)
         }
       }
 
-      const N = trailBufRef.current.length;
-      headRef.current = (headRef.current + 1) % N;
-      trailBufRef.current[headRef.current].copy(mat.uniforms.iMouse.value);
-      const arr = mat.uniforms.iPrevMouse.value;
+      const N = trailBufRef.current.length
+      headRef.current = (headRef.current + 1) % N
+      trailBufRef.current[headRef.current].copy(mat.uniforms.iMouse.value)
+      const arr = mat.uniforms.iPrevMouse.value
       for (let i = 0; i < N; i++) {
-        const srcIdx = (headRef.current - i + N) % N;
-        arr[i].copy(trailBufRef.current[srcIdx]);
+        const srcIdx = (headRef.current - i + N) % N
+        arr[i].copy(trailBufRef.current[srcIdx])
       }
 
-      mat.uniforms.iOpacity.value = fadeOpacityRef.current;
-      mat.uniforms.iTime.value = t;
+      mat.uniforms.iOpacity.value = fadeOpacityRef.current
+      mat.uniforms.iTime.value = t
 
       if (filmPassRef.current?.uniforms?.iTime) {
-        filmPassRef.current.uniforms.iTime.value = t;
+        filmPassRef.current.uniforms.iTime.value = t
       }
 
-      comp.render();
+      comp.render()
 
       if (!pointerActiveRef.current && fadeOpacityRef.current <= 0.001) {
-        runningRef.current = false;
-        rafRef.current = null;
-        return;
+        runningRef.current = false
+        rafRef.current = null
+        return
       }
 
-      rafRef.current = requestAnimationFrame(animate);
-    };
+      rafRef.current = requestAnimationFrame(animate)
+    }
 
     const ensureLoop = () => {
       if (!runningRef.current) {
-        runningRef.current = true;
-        rafRef.current = requestAnimationFrame(animate);
+        runningRef.current = true
+        rafRef.current = requestAnimationFrame(animate)
       }
-    };
+    }
 
     const onPointerMove = e => {
-      const rect = parent.getBoundingClientRect();
-      const x = THREE.MathUtils.clamp((e.clientX - rect.left) / Math.max(1, rect.width), 0, 1);
-      const y = THREE.MathUtils.clamp(1 - (e.clientY - rect.top) / Math.max(1, rect.height), 0, 1);
-      currentMouseRef.current.set(x, y);
-      pointerActiveRef.current = true;
-      lastMoveTimeRef.current = performance.now();
-      ensureLoop();
-    };
+      const rect = parent.getBoundingClientRect()
+      const x = THREE.MathUtils.clamp(
+        (e.clientX - rect.left) / Math.max(1, rect.width),
+        0,
+        1
+      )
+      const y = THREE.MathUtils.clamp(
+        1 - (e.clientY - rect.top) / Math.max(1, rect.height),
+        0,
+        1
+      )
+      currentMouseRef.current.set(x, y)
+      pointerActiveRef.current = true
+      lastMoveTimeRef.current = performance.now()
+      ensureLoop()
+    }
     const onPointerEnter = () => {
-      pointerActiveRef.current = true;
-      ensureLoop();
-    };
+      pointerActiveRef.current = true
+      ensureLoop()
+    }
     const onPointerLeave = () => {
-      pointerActiveRef.current = false;
-      lastMoveTimeRef.current = performance.now();
-      ensureLoop();
-    };
+      pointerActiveRef.current = false
+      lastMoveTimeRef.current = performance.now()
+      ensureLoop()
+    }
 
-    parent.addEventListener('pointermove', onPointerMove, { passive: true });
-    parent.addEventListener('pointerenter', onPointerEnter, { passive: true });
-    parent.addEventListener('pointerleave', onPointerLeave, { passive: true });
+    parent.addEventListener("pointermove", onPointerMove, { passive: true })
+    parent.addEventListener("pointerenter", onPointerEnter, { passive: true })
+    parent.addEventListener("pointerleave", onPointerLeave, { passive: true })
 
-    ensureLoop();
+    ensureLoop()
 
     return () => {
-      if (rafRef.current) cancelAnimationFrame(rafRef.current);
-      runningRef.current = false;
-      rafRef.current = null;
+      if (rafRef.current) cancelAnimationFrame(rafRef.current)
+      runningRef.current = false
+      rafRef.current = null
 
-      parent.removeEventListener('pointermove', onPointerMove);
-      parent.removeEventListener('pointerenter', onPointerEnter);
-      parent.removeEventListener('pointerleave', onPointerLeave);
-      resizeObsRef.current?.disconnect();
+      parent.removeEventListener("pointermove", onPointerMove)
+      parent.removeEventListener("pointerenter", onPointerEnter)
+      parent.removeEventListener("pointerleave", onPointerLeave)
+      resizeObsRef.current?.disconnect()
 
-      scene.clear();
-      geom.dispose();
-      material.dispose();
-      composer.dispose();
-      renderer.dispose();
+      scene.clear()
+      geom.dispose()
+      material.dispose()
+      composer.dispose()
+      renderer.dispose()
 
       if (renderer.domElement && renderer.domElement.parentElement) {
-        renderer.domElement.parentElement.removeChild(renderer.domElement);
+        renderer.domElement.parentElement.removeChild(renderer.domElement)
       }
-      if (!prevParentPos || prevParentPos === 'static') {
-        parent.style.position = prevParentPos;
+      if (!prevParentPos || prevParentPos === "static") {
+        parent.style.position = prevParentPos
       }
-    };
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [
     trailLength,
@@ -454,47 +484,53 @@ const GhostCursor = ({
     color,
     brightness,
     mixBlendMode,
-    edgeIntensity
-  ]);
+    edgeIntensity,
+  ])
 
   useEffect(() => {
     if (materialRef.current) {
-      const c = new THREE.Color(color);
-      materialRef.current.uniforms.iBaseColor.value.set(c.r, c.g, c.b);
+      const c = new THREE.Color(color)
+      materialRef.current.uniforms.iBaseColor.value.set(c.r, c.g, c.b)
     }
-  }, [color]);
+  }, [color])
 
   useEffect(() => {
     if (materialRef.current) {
-      materialRef.current.uniforms.iBrightness.value = brightness;
+      materialRef.current.uniforms.iBrightness.value = brightness
     }
-  }, [brightness]);
+  }, [brightness])
 
   useEffect(() => {
     if (materialRef.current) {
-      materialRef.current.uniforms.iEdgeIntensity.value = edgeIntensity;
+      materialRef.current.uniforms.iEdgeIntensity.value = edgeIntensity
     }
-  }, [edgeIntensity]);
+  }, [edgeIntensity])
 
   useEffect(() => {
     if (filmPassRef.current?.uniforms?.intensity) {
-      filmPassRef.current.uniforms.intensity.value = grainIntensity;
+      filmPassRef.current.uniforms.intensity.value = grainIntensity
     }
-  }, [grainIntensity]);
+  }, [grainIntensity])
 
   useEffect(() => {
-    const el = rendererRef.current?.domElement;
-    if (!el) return;
+    const el = rendererRef.current?.domElement
+    if (!el) return
     if (mixBlendMode) {
-      el.style.mixBlendMode = String(mixBlendMode);
+      el.style.mixBlendMode = String(mixBlendMode)
     } else {
-      el.style.removeProperty('mix-blend-mode');
+      el.style.removeProperty("mix-blend-mode")
     }
-  }, [mixBlendMode]);
+  }, [mixBlendMode])
 
-  const mergedStyle = useMemo(() => ({ zIndex, ...style }), [zIndex, style]);
+  const mergedStyle = useMemo(() => ({ zIndex, ...style }), [zIndex, style])
 
-  return <div ref={containerRef} className={`ghost-cursor ${className ?? ''}`} style={mergedStyle} />;
-};
+  return (
+    <div
+      ref={containerRef}
+      className={`ghost-cursor ${className ?? ""}`}
+      style={mergedStyle}
+    />
+  )
+}
 
-export default GhostCursor;
+export default GhostCursor
