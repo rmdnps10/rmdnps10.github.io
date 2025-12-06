@@ -1,48 +1,53 @@
 [
   {
-    "slug": "ai-portfolio-search",
-    "title": "AI-driven Portfolio Search Engine",
+    "slug": "sharemin",
+    "title": "셰어마인드",
     "role": "Full-stack",
-    "domainTags": ["AI", "Full-stack"],
-    "techStack": ["React", "FastAPI", "Pinecone"],
-    "githubUrl": "https://github.com/rmdnps10/ai-portfolio-search",
+    "domainTags": ["Front-end"],
+    "techStack": [
+      "TypeScript",
+      "React",
+      "React Query",
+      "styled-components",
+      "Recoil"
+    ],
+    "githubUrl": "https://github.com/sharemindteam/sharemind-client",
     "thumbnail": "/images/project/sharemind.png",
+    "year": 2024,
+    "summaryList": [
+      "상담사와 고객 간의 실시간 채팅을 제공하는 경험 공유 기반 연애 상담 플랫폼",
+      "TypeScript와 React를 활용한 프론트엔드 개발",
+      "React Query와 Recoil을 사용한 상태 관리 및 데이터 페칭"
+    ]
+  },
+  {
+    "slug": "webos-design",
+    "title": "webOS의 첫 화면을 디자인해라",
+    "role": "Full-stack",
+    "domainTags": ["Full-stack"],
+    "techStack": ["Express", "Flutter", "PostgreSQL", "AWS", "Docker"],
+    "githubUrl": "https://github.com/rmdnps10/ai-portfolio-search",
+    "thumbnail": "/images/project/webos.jpg",
     "year": 2025,
     "summaryList": [
-      "Vector-semantic search that lets recruiters explore my portfolio with natural language queries.",
-      "Built with React frontend and FastAPI backend",
-      "Integrated Pinecone for vector database management"
+      "스탠바이미를 활용한 LG 전자 산학 협력 프로젝트",
+      "임베디드 환경에서 webOS 기반 첫 화면을 디자인",
+      "Express 백엔드와 Flutter 프론트엔드로 구성된 풀스택 애플리케이션"
     ]
   },
   {
-    "slug": "neural-writing-companion",
-    "title": "Neural Writing Companion",
-    "role": "Product Engineer",
-    "domainTags": ["AI", "Front-end"],
-    "techStack": ["Next.js", "LangChain", "Supabase"],
-    "githubUrl": "https://github.com/rmdnps10/neural-writing-companion",
-    "thumbnail": "/images/project/sharemind.png",
+    "slug": "3-character-chat",
+    "title": "The Hollowslop Station",
+    "role": "Full-stack",
+    "domainTags": ["AI", "Full-stack"],
+    "techStack": ["Python", "Flask", "OpenAI", "LangChain", "Docker"],
+    "githubUrl": "https://github.com/ghdrua1/3-character-chat",
+    "thumbnail": "/images/project/hollowslop-station.png",
     "year": 2024,
     "summaryList": [
-      "Realtime drafting assistant that blends ideation prompts with custom knowledge embeddings.",
-      "Powered by LangChain for AI orchestration",
-      "Supabase for real-time data synchronization"
-    ]
-  },
-  {
-    "slug": "sogang-tech-con",
-    "title": "Sogang Tech Con Platform",
-    "role": "Frontend Lead",
-    "domainTags": ["Front-end"],
-    "techStack": ["Gatsby", "Framer Motion", "Firebase"],
-    "githubUrl": "https://github.com/rmdnps10/sogang-tech-con",
-    "thumbnail": "/images/project/sharemind.png",
-    "year": 2024,
-    "summaryList": [
-      "Interactive conference experience featuring speaker journeys, schedules, and live engagement tools.",
-      "Built with Gatsby for static site generation",
-      "Framer Motion for smooth animations and transitions"
+      "AI 기반 인터랙티브 추리 게임. 플레이어는 탐정이 되어 3명의 용의자를 심문하며 15번의 질문 안에 범인을 찾아내는 웹 기반 추리 챗봇",
+      "RAG와 하이브리드 검색을 활용한 지식 기반 답변 시스템",
+      "LangChain과 OpenAI를 활용한 AI 오케스트레이션"
     ]
   }
 ]
-

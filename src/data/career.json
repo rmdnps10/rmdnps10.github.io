@@ -4,7 +4,7 @@
     "organization": "코딩밸리",
     "position": "프론트엔드 컨텐츠 프로듀서 인턴",
     "highlights": [
-      "프론트엔드 교육 콘텐츠 기획 및 검토",
+      "HTML, CSS, Javascript, React, Next.js, Typescript 강의 검수 및 커리큘럼 기획",
       "수강생들을 위한 HTML/CSS, React, Next, TypeScript 입문서 공동 저술"
     ]
   },
@@ -24,9 +24,10 @@
     "organization": "카카오뱅크 기술XR",
     "position": "개발 어시스턴트",
     "highlights": [
-      "카카오뱅크 내부 기술 컨퍼런스, 코드러너 에셋 개발 - 참가자/운영진 전용 웹, 단체게임 ",
-      "기술 블로그 유지보수 및 글 발행 지원(7개의 글 발행)",
-      "사내 행사(해커톤, 밋업) 비주얼 디자인"
+      "카카오뱅크 내부 기술 컨퍼런스 'Kode Runner' React + TypeScript / FastAPI 웹 애플리케이션 개발 및 약 1,000명 규모 참가자용 인터랙티브 단체게임 구축",
+      "Hugo 기반 카카오뱅크 기술 블로그 유지보수 및 기술 글 작성/발행 지원 (7개 글 발행)",
+      "사내 기술 행사(DevCon, DevInvite 등) 비주얼 디자인 및 브랜딩 에셋 제작",
+      "카카오뱅크 첫 내부 해커톤 'Bankerthon' 기획 및 운영, 개발자 참여 프로그램 기획"
     ],
     "color": "#fede22"
   }

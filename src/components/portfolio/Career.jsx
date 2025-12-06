@@ -22,7 +22,7 @@ export default function Career() {
         Internship
       </h2>
 
-      <div className="relative max-w-4xl px-4 flex flex-col items-start w-full mt-[100px] gap-[100px]">
+      <div className="relative px-4 flex flex-col items-start w-full mt-[100px] gap-[100px]">
         {/* 계단형 카드들 */}
         {roles.map((role, index) => {
           return (
@@ -82,8 +82,9 @@ export default function Career() {
                   >
                     {role.position}
                   </span>
+
                   {role.highlights && role.highlights.length > 0 && (
-                    <ul className="space-y-2 mb-0 mt-3">
+                    <ul className="space-y-2 mb-0 mt-3 w-full">
                       {role.highlights.map(highlight => (
                         <li
                           key={highlight}

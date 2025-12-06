@@ -28,7 +28,7 @@ export default function FeaturedProjects() {
         </div>
 
         {/* Fancy Carousel */}
-        <div className="w-full py-12">
+        <div className="w-full py-12 overflow-hidden">
           <Swiper
             effect={"coverflow"}
             grabCursor={true}

@@ -73,16 +73,16 @@ export default function Hero() {
 
           <div className="absolute top-[30px] left-[30px] ">
             <p className="text-[#1e1e1d] text-[20px]">
-              풍부한 개발 협업 경험 (Fe/Be)
+              전공수업, 대외활동에서의 풍부한 개발 협업 경험 (Fe/Be)
             </p>
             <p className="text-[#1e1e1d] text-[20px]">
-              1년동안 2번의 개발 인턴 경험
+              1년동안 2번의 서비스 개발 인턴 경험
             </p>
             <p className="text-[#1e1e1d] text-[20px]">
               스스로 글을 작성하며 CS 기초를 다집니다.
             </p>
             <p className="text-[#1e1e1d] text-[20px]">
-              AI 툴을 잘 사용하기 위해 노력하는 개발자
+              Cursor, Windsurf와 같은 AI 툴을 잘 사용하기 위해 노력합니다.
             </p>
           </div>
         </div>

@@ -11,6 +11,7 @@ export default function ProjectCard({
   techStack = [],
   year,
   githubUrl,
+  liveUrl,
   thumbnail,
   summary,
   role,
@@ -28,19 +29,6 @@ export default function ProjectCard({
         border: "1px solid rgba(255, 255, 255, 0.08)",
       }}
     >
-      {/* 프로젝트 라벨 배지 - 오른쪽 상단 */}
-      {projectLabel && (
-        <div
-          className="absolute top-6 right-6 px-[10px] py-1 rounded-lg text-[14px] z-10"
-          style={{
-            background: POINT_COLOR_RGBA,
-            color: POINT_COLOR,
-          }}
-        >
-          {projectLabel}
-        </div>
-      )}
-
       {/* 상단 이미지 영역 - 250px 높이 */}
       {thumbnail && (
         <div
@@ -119,24 +107,48 @@ export default function ProjectCard({
         )}
 
         {/* 아이콘 영역 - 항상 하단 고정 */}
-        <div className="flex justify-end gap-3 mt-auto pt-4 relative z-10">
-          <FontAwesomeIcon
-            icon={faGithub}
-            className="transition-colors duration-200"
-            style={{
-              fontSize: "20px",
-              color: "#AFAFAF",
-            }}
-          />
-          <FontAwesomeIcon
-            icon={faExternalLinkAlt}
-            className="transition-colors duration-200"
-            style={{
-              fontSize: "20px",
-              color: "#AFAFAF",
-            }}
-          />
-        </div>
+        {(githubUrl || liveUrl) && (
+          <div className="flex justify-end gap-3 mt-auto pt-4 relative z-10">
+            {githubUrl && (
+              <a
+                href={githubUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-colors duration-200 hover:opacity-70"
+                style={{
+                  cursor: "pointer",
+                }}
+              >
+                <FontAwesomeIcon
+                  icon={faGithub}
+                  style={{
+                    fontSize: "20px",
+                    color: "#AFAFAF",
+                  }}
+                />
+              </a>
+            )}
+            {liveUrl && (
+              <a
+                href={liveUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-colors duration-200 hover:opacity-70"
+                style={{
+                  cursor: "pointer",
+                }}
+              >
+                <FontAwesomeIcon
+                  icon={faExternalLinkAlt}
+                  style={{
+                    fontSize: "20px",
+                    color: "#AFAFAF",
+                  }}
+                />
+              </a>
+            )}
+          </div>
+        )}
       </div>
     </div>
   )

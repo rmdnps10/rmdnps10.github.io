@@ -19,7 +19,7 @@ export default function ProjectGrid() {
   }
 
   return (
-    <section id="projects" className="py-16 h-[100vh] pt-[200px]">
+    <section id="projects" className="py-16 pt-[200px] pb-[100px]">
       <h2 className="text-[80px] font-bold text-center mb-4 font-paperozi text-stroke pb-4 max-w-fit mx-auto px-4 border-none">
         All Projects
       </h2>

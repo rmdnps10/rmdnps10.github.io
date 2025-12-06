@@ -1,62 +1,213 @@
 [
   {
     "slug": "ai-portfolio-search",
-    "title": "AI-driven Portfolio Search Engine",
+    "title": "간달프",
     "role": "Full-stack",
-    "domainTags": ["AI", "Full-stack"],
-    "techStack": ["React", "FastAPI", "Pinecone"],
-    "githubUrl": "https://github.com/rmdnps10/ai-portfolio-search",
-    "thumbnail": "/images/project/sharemind.png",
+    "domainTags": ["AI", "Front-end"],
+    "techStack": ["Typescript", "React", "FastAPI", "TailwindCSS", "RAG"],
+    "githubUrl": "https://github.com/rmdnps10/Gandalf-FE",
+    "thumbnail": "/images/project/gandalf.png",
     "featured": true,
     "year": 2025,
-    "summary": "Vector-semantic search that lets recruiters explore my portfolio with natural language queries."
+    "summary": "채용 담당자/학생/교수가 자연어 쿼리로 본인 조직의 사람을 탐색할 수 있는 벡터 시맨틱 검색 서비스 - AI 해커톤 대상 수상작"
   },
   {
-    "slug": "neural-writing-companion",
-    "title": "Neural Writing Companion",
-    "role": "Product Engineer",
-    "domainTags": ["AI", "Front-end"],
-    "techStack": ["Next.js", "LangChain", "Supabase"],
-    "githubUrl": "https://github.com/rmdnps10/neural-writing-companion",
-    "thumbnail": "/images/project/sharemind.png",
-    "featured": true,
-    "year": 2024,
-    "summary": "Realtime drafting assistant that blends ideation prompts with custom knowledge embeddings."
-  },
-  {
-    "slug": "sogang-tech-con",
-    "title": "Sogang Tech Con Platform",
-    "role": "Frontend Lead",
-    "domainTags": ["Front-end"],
-    "techStack": ["Gatsby", "Framer Motion", "Firebase"],
-    "githubUrl": "https://github.com/rmdnps10/sogang-tech-con",
-    "thumbnail": "/images/project/sharemind.png",
-    "featured": true,
-    "year": 2024,
-    "summary": "Interactive conference experience featuring speaker journeys, schedules, and live engagement tools."
-  },
-  {
-    "slug": "art-tech-installation",
-    "title": "Art-Tech Installation Toolkit",
-    "role": "Creative Coder",
-    "domainTags": ["Art-Tech"],
-    "techStack": ["TouchDesigner", "Three.js", "Arduino"],
-    "githubUrl": "https://github.com/rmdnps10/art-tech-installation",
-    "thumbnail": "/images/portfolio/art-tech-installation.jpg",
-    "featured": false,
-    "year": 2023,
-    "summary": "Immersive light installation that reacts to audience gestures and live audio."
-  },
-  {
-    "slug": "dev-rel-insights",
-    "title": "DevRel Insights Dashboard",
+    "slug": "ai-portfolio-search",
+    "title": "webOS의 첫 화면을 디자인해라",
     "role": "Full-stack",
     "domainTags": ["Full-stack"],
-    "techStack": ["Remix", "PlanetScale", "Tailwind CSS"],
-    "githubUrl": "https://github.com/rmdnps10/dev-rel-insights",
-    "thumbnail": "/images/portfolio/devrel-dashboard.jpg",
-    "featured": false,
+    "techStack": ["Express", "Flutter", "PostgreSQL", "AWS", "Docker"],
+    "githubUrl": "https://github.com/rmdnps10/ai-portfolio-search",
+    "thumbnail": "/images/project/webos.jpg",
+    "featured": true,
     "year": 2025,
-    "summary": "Operational analytics dashboard surfacing community health metrics and contributor journeys."
+    "summary": "스탠바이미를 활용한 LG 전자 산학 협력 프로젝트. 임베디드 환경에서 webOS 기반 첫 화면을 디자인하기 "
+  },
+
+  {
+    "slug": "sharemin",
+    "title": "셰어마인드",
+    "role": "Full-stack",
+    "domainTags": ["Front-end"],
+    "techStack": [
+      "TypeScript",
+      "React",
+      "React Query",
+      "styled-components",
+      "Recoil"
+    ],
+    "githubUrl": "https://github.com/sharemindteam/sharemind-client",
+    "liveUrl": "https://www.sharemindapp.com/",
+    "thumbnail": "/images/project/sharemind.png",
+    "featured": true,
+    "year": 2024,
+    "summary": "상담사와 고객 간의 실시간 채팅을 제공하는 경험 공유 기반 연애 상담 플랫폼"
+  },
+  {
+    "slug": "modubus",
+    "title": "모두버스",
+    "role": "Full-stack",
+    "domainTags": ["Front-end"],
+    "techStack": [
+      "TypeScript",
+      "Stackflow",
+      "TailwindCSS",
+      "Zustand",
+      "React Query"
+    ],
+    "githubUrl": "https://github.com/Modubus/ModubusFrontend",
+    "thumbnail": "/images/project/modubus.png",
+    "featured": true,
+    "year": 2024,
+    "summary": "노약자와 버스 기사를 매칭하여 사회문제를 해결하는 공공 교통 어플. K-Hacathon 결선 진출 프로젝트"
+  },
+  {
+    "slug": "atc2024",
+    "title": "ATC2024 웹사이트",
+    "role": "Full-stack",
+    "domainTags": ["Full-stack"],
+    "techStack": [
+      "JavaScript",
+      "Next.js",
+      "Three.js",
+      "MongoDB",
+      "Vercel",
+      "GitHub Actions"
+    ],
+    "githubUrl": "https://github.com/rmdnps10/ATC-2024",
+    "liveUrl": "https://www.atc2024.site/",
+    "thumbnail": "/images/project/atc2024.png",
+    "featured": false,
+    "year": 2024,
+    "summary": "2024 아트 & 테크놀로지 컨퍼런스 공식 웹사이트. 인터랙티브 3D 경험을 포함한 아카이빙 사이트"
+  },
+  {
+    "slug": "likelion-sogang",
+    "title": "멋쟁이사자처럼 웹사이트",
+    "role": "Full-stack",
+    "domainTags": ["Front-end"],
+    "techStack": ["TypeScript", "Next.js", "TailwindCSS", "GitHub Actions"],
+    "githubUrl": "https://github.com/LIKELION-SOGANG/LIKELION-WEBSITE-NEXTJS",
+    "liveUrl": "https://www.likelionsg.site/",
+    "thumbnail": "/images/project/likelion.png",
+    "featured": false,
+    "year": 2024,
+    "summary": "멋쟁이사자처럼 서강대학교 지부 공식 웹사이트. Next.js와 TypeScript로 구축"
+  },
+
+  {
+    "slug": "korea-population-simulator",
+    "title": "한국 인구 시뮬레이터",
+    "role": "Creative Coder",
+    "domainTags": ["Art-Tech"],
+    "techStack": ["JavaScript", "p5.js", "matter.js"],
+    "githubUrl": "https://github.com/rmdnps10/Korea-Population-Simulator",
+    "liveUrl": "https://korea-population-simulator.vercel.app/",
+    "thumbnail": "/images/project/korea-population.png",
+    "featured": false,
+    "year": 2023,
+    "summary": "p5.js를 활용한 한국 인구 동태를 시각화한 인터랙티브 데이터 시각화 시뮬레이터"
+  },
+  {
+    "slug": "eta",
+    "title": "What's your ETA",
+    "role": "Full-stack",
+    "domainTags": ["Front-end"],
+    "techStack": [
+      "TypeScript",
+      "React",
+      "Firebase",
+      "Google Calendar API",
+      "Tmap API"
+    ],
+    "githubUrl": "https://github.com/rmdnps10/ETA",
+    "thumbnail": "/images/project/eta.png",
+    "featured": false,
+    "year": 2023,
+    "summary": "구글 캘린더에 일정을 등록하면, 목적지까지의 소요시간에 따라 적절한 시간에 출발 알림을 주는 웹서비스"
+  },
+  {
+    "slug": "3-character-chat",
+    "title": "The Hollowslop Station",
+    "role": "Full-stack",
+    "domainTags": ["AI", "Full-stack"],
+    "techStack": ["Python", "Flask", "OpenAI", "LangChain", "Docker"],
+    "githubUrl": "https://github.com/ghdrua1/3-character-chat",
+    "thumbnail": "/images/project/hollowslop-station.png",
+    "featured": true,
+    "year": 2024,
+    "summary": "AI 기반 인터랙티브 추리 게임. 플레이어는 탐정이 되어 3명의 용의자를 심문하며 15번의 질문 안에 범인을 찾아내는 웹 기반 추리 챗봇. RAG와 하이브리드 검색을 활용한 지식 기반 답변 시스템"
+  },
+  {
+    "slug": "slow-mail",
+    "title": "Slow mail (느린 우체통)",
+    "role": "Creative Coder",
+    "domainTags": ["Art-Tech"],
+    "techStack": ["p5.js", "MediaPipe", "FFT"],
+    "liveUrl": "https://p5-js-algorithmic-work-5mvs-git-main-asdfadsfzxc.vercel.app/",
+    "thumbnail": "/images/project/slow-mail.png",
+    "featured": false,
+    "year": 2023,
+    "summary": "과거의 편지(느린 우체통) 컨셉으로 부모님의 헌신과 노력을 과거의 기억을 탐색하며 칭찬하기 위한 인터랙티브 편지 프로젝트. MediaPipe handPose를 활용한 제스처 추적, 사용자 인터랙티브 파티클 시스템, FFT 분석을 사용"
+  },
+  {
+    "slug": "apple-brand-pr",
+    "title": "Apple Brand PR Website",
+    "role": "Creative Coder",
+    "domainTags": ["Art-Tech"],
+    "techStack": ["p5.js", "ml5.js"],
+    "liveUrl": "https://p5-js-algorithmic-work.vercel.app/",
+    "thumbnail": "/images/project/apple-brand.png",
+    "featured": false,
+    "year": 2023,
+    "summary": "사용자 인터랙티브 파티클 시스템. 머신러닝 모델 ml5를 사용하여 제스처 인터페이스를 구축. 모든 Apple 로고 컬렉션과 마우스에 반응하는 파티클 시스템"
+  },
+  {
+    "slug": "red-sun",
+    "title": "Red sun",
+    "role": "Creative Coder",
+    "domainTags": ["Art-Tech"],
+    "techStack": ["p5.js", "FFT"],
+    "liveUrl": "https://editor.p5js.org/rmdnps10/sketches/GO9eLTtDE",
+    "thumbnail": "/images/project/red-sun.png",
+    "featured": false,
+    "year": 2023,
+    "summary": "오디오 데이터 매핑 및 시각화. Show Me the Money 힙합 곡 'red sun' by 행주의 오디오 데이터의 주파수와 스펙트럼을 시각화"
+  },
+  {
+    "slug": "electronic-magnetic-field",
+    "title": "Electronic Magetic Field",
+    "role": "Creative Coder",
+    "domainTags": ["Art-Tech"],
+    "techStack": ["p5.js", "WEBGL", "Bezier Curves"],
+    "liveUrl": "https://editor.p5js.org/rmdnps10/sketches/9NCmgClhr",
+    "thumbnail": "/images/project/electronic.png",
+    "featured": false,
+    "year": 2023,
+    "summary": "생성적 디자인 시스템. 베지어 곡선을 사용하여 다각형을 생성하여 3D 환경(WEBGL)에서 회전하는 전자기장을 구현. 슬라이더를 사용하여 전자기장의 색상과 회전 속도를 커스터마이징 가능"
+  },
+  {
+    "slug": "planting-tree-city",
+    "title": "Planting Tree in the City",
+    "role": "Creative Coder",
+    "domainTags": ["Art-Tech"],
+    "techStack": ["p5.js"],
+    "liveUrl": "https://editor.p5js.org/rmdnps10/sketches/2YKfRS5fb",
+    "thumbnail": "/images/project/war.png",
+    "featured": false,
+    "year": 2023,
+    "summary": "콜라주 작품. 화면을 클릭하면 서울 중심 좌표에 나무가 생성됨. 작품에 전달하고자 하는 메시지가 숨겨져 있음"
+  },
+  {
+    "slug": "recursive-birch-tree",
+    "title": "Recursive Birch Tree Generator",
+    "role": "Creative Coder",
+    "domainTags": ["Art-Tech"],
+    "techStack": ["p5.js"],
+    "liveUrl": "https://editor.p5js.org/rmdnps10/sketches/xBod-ihS9",
+    "thumbnail": "/images/project/recursive.png",
+    "featured": false,
+    "year": 2023,
+    "summary": "코드를 실행할 때마다 재귀적으로 다른 모양의 자작나무가 생성됨. 벡터를 사용하여 텍스처와 잎 등 세부 사항을 구현"
   }
 ]
