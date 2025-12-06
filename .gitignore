@@ -57,6 +57,8 @@ typings/
 # gatsby files
 .cache/
 public
+# 하지만 public/images는 Git에 추적해야 함 (정적 이미지 파일)
+!public/images/
 
 # Mac files
 .DS_Store
