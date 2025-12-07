@@ -1,6 +1,7 @@
 import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
+import { useVisitorCount } from "../hooks/useVisitorCount"
 
 const Bio = () => {
   const data = useStaticQuery(graphql`
@@ -23,6 +24,7 @@ const Bio = () => {
 
   const author = data.site.siteMetadata?.author
   const description = data.site.siteMetadata?.description
+  const { formattedToday, formattedTotal, loading } = useVisitorCount()
 
   return (
     <div className="mt-10 flex gap-2">
@@ -70,15 +72,19 @@ const Bio = () => {
       </div>
 
       {/* 금일 방문자와 전체 방문자 수 */}
-      <div className="ml-auto flex gap-6">
+      <div className="ml-auto hidden md:flex gap-6">
         <div className="text-center">
           <p className="text-gray-400 text-xs m-0">Today</p>
-          <p className="text-white text-lg font-semibold m-0 mt-1">224</p>
+          <p className="text-white text-lg font-semibold m-0 mt-1">
+            {loading ? "..." : formattedToday}
+          </p>
         </div>
 
         <div className="text-center">
           <p className="text-gray-400 text-xs m-0">Total</p>
-          <p className="text-white text-lg font-semibold m-0 mt-1">2.3K</p>
+          <p className="text-white text-lg font-semibold m-0 mt-1">
+            {loading ? "..." : formattedTotal}
+          </p>
         </div>
       </div>
     </div>
