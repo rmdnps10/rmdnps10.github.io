@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react"
 import { supabase } from "../lib/supabase"
+import { trackVisitor } from "../lib/trackVisitor"
 
 export const useVisitorCount = () => {
   const [todayCount, setTodayCount] = useState(null)
@@ -12,25 +13,13 @@ export const useVisitorCount = () => {
       return
     }
 
-    const trackAndFetchVisitors = async () => {
+    const fetchVisitors = async () => {
       try {
+        // 조회수 추적 (이미 추적되었으면 아무것도 하지 않음)
+        await trackVisitor()
+
         // 오늘 날짜 (YYYY-MM-DD 형식)
         const today = new Date().toISOString().split("T")[0]
-        const storageKey = `visit_tracked_${today}`
-
-        // 오늘 이미 방문 추적했는지 확인 (localStorage 사용)
-        const alreadyTracked =
-          typeof window !== "undefined" && localStorage.getItem(storageKey)
-
-        // 오늘 첫 방문인 경우에만 기록 추가
-        if (!alreadyTracked) {
-          await supabase.from("visits").insert([{ visit_date: today }])
-
-          // localStorage에 기록
-          if (typeof window !== "undefined") {
-            localStorage.setItem(storageKey, "true")
-          }
-        }
 
         // 오늘 방문자수 조회
         const { count: todayCount, error: todayError } = await supabase
@@ -50,7 +39,7 @@ export const useVisitorCount = () => {
         setTodayCount(todayCount || 0)
         setTotalCount(totalCount || 0)
       } catch (error) {
-        console.error("Error tracking visitors:", error)
+        console.error("Error fetching visitors:", error)
         // 에러 발생 시 기본값 설정
         setTodayCount(0)
         setTotalCount(0)
@@ -59,7 +48,7 @@ export const useVisitorCount = () => {
       }
     }
 
-    trackAndFetchVisitors()
+    fetchVisitors()
   }, [])
 
   // 숫자를 포맷팅 (예: 1234 -> "1.2K")

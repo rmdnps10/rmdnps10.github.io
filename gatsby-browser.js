@@ -18,3 +18,20 @@ import "remark-admonitions/styles/classic.css"
 import { config } from "@fortawesome/fontawesome-svg-core"
 import "@fortawesome/fontawesome-svg-core/styles.css"
 config.autoAddCss = false
+
+// 조회수 추적
+import { trackVisitor } from "./src/lib/trackVisitor"
+
+/**
+ * 초기 페이지 로드 시 조회수 추적
+ */
+export const onInitialClientRender = () => {
+  trackVisitor()
+}
+
+/**
+ * 페이지 이동 시 조회수 추적
+ */
+export const onRouteUpdate = () => {
+  trackVisitor()
+}
