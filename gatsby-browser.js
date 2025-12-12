@@ -17,10 +17,10 @@ import "remark-admonitions/styles/classic.css"
 
 import { config } from "@fortawesome/fontawesome-svg-core"
 import "@fortawesome/fontawesome-svg-core/styles.css"
+import { trackVisitor } from "./src/lib/trackVisitor"
 config.autoAddCss = false
 
 // 조회수 추적
-import { trackVisitor } from "./src/lib/trackVisitor"
 
 /**
  * 초기 페이지 로드 시 조회수 추적
