@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[난너의오른팔 기술 블로그 RSS Feed]]></title><description><![CDATA[Web 기술과 AI 활용법을 공부하는 주니어 개발자, 커뮤니티 빌더의 기술 블로그]]></description><link>https://rmdnps10.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 12 Dec 2025 15:39:30 GMT</lastBuildDate><item><title><![CDATA[알고리즘설계와분석 - 최단경로 (Shortest Path)]]></title><description><![CDATA[학부 수업 "알고리즘설계와분석" 내용을 정리한다. 최단경로를 구하는 두 가지 핵심 알고리즘인 와 의 원리와 차이점에 대해 알아보자. 1️⃣ 최단경로의 기본 개념 1-1 최단경로의 정의 그래프의 각 간선에는 가중치(weight…]]></description><link>https://rmdnps10.github.io/알고리즘설계와분석 - 최단경로/</link><guid isPermaLink="false">https://rmdnps10.github.io/알고리즘설계와분석 - 최단경로/</guid><pubDate>Sat, 13 Dec 2025 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[난너의오른팔 기술 블로그 RSS Feed]]></title><description><![CDATA[Web 기술과 AI 활용법을 공부하는 주니어 개발자, 커뮤니티 빌더의 기술 블로그]]></description><link>https://rmdnps10.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 16 Dec 2025 06:07:25 GMT</lastBuildDate><item><title><![CDATA[알고리즘설계와분석 - 최단경로 (Shortest Path)]]></title><description><![CDATA[학부 수업 "알고리즘설계와분석" 내용을 정리한다. 최단경로를 구하는 두 가지 핵심 알고리즘인 와 의 원리와 차이점에 대해 알아보자. 1️⃣ 최단경로의 기본 개념 1-1 최단경로의 정의 그래프의 각 간선에는 가중치(weight…]]></description><link>https://rmdnps10.github.io/알고리즘설계와분석 - 최단경로/</link><guid isPermaLink="false">https://rmdnps10.github.io/알고리즘설계와분석 - 최단경로/</guid><pubDate>Sat, 13 Dec 2025 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
 &lt;p&gt;학부 수업 &quot;알고리즘설계와분석&quot; 내용을 정리한다.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;최단경로를 구하는 두 가지 핵심 알고리즘인 &lt;code class=&quot;language-text&quot;&gt;Bellman-Ford&lt;/code&gt;와 &lt;code class=&quot;language-text&quot;&gt;Dijkstra&lt;/code&gt;의 원리와 차이점에 대해 알아보자.&lt;/p&gt;
@@ -500,7 +500,403 @@ while heap이 비어있지 않음:
 &lt;p&gt;🎯 &lt;strong&gt;결론&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;모든 edge weight가 distinct이면, 각 Cut의 최소 간선이 자동으로 유일하므로 &lt;strong&gt;MST는 항상 유일하다&lt;/strong&gt;.&lt;/p&gt;
 &lt;h4 id=&quot;7-2-second-best-mst&quot;&gt;7-2 Second Best MST&lt;/h4&gt;
-&lt;p&gt;&lt;strong&gt;MST는 unique할 수 있으나, Second Best MST는 unique할 필요가 없다.&lt;/strong&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[알고리즘설계와분석 - Greedy algorithm (그리디 알고리즘)]]></title><description><![CDATA[학부 수업 "알고리즘설계와분석"에서 배운 내용을 정리합니다. Greedy Algorithm의 기본 개념과 Interval Scheduling, Huffman Coding 등 대표적인 문제를 학습해보자. 1️⃣ Greedy Algorithm…]]></description><link>https://rmdnps10.github.io/알고리즘설계와분석 - Greedy algorithm (그리디 알고리즘)/</link><guid isPermaLink="false">https://rmdnps10.github.io/알고리즘설계와분석 - Greedy algorithm (그리디 알고리즘)/</guid><pubDate>Wed, 10 Dec 2025 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;MST는 unique할 수 있으나, Second Best MST는 unique할 필요가 없다.&lt;/strong&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[알고리즘설계와분석 - BFS/DFS와 Topological Sort]]></title><description><![CDATA[학부 수업 "알고리즘설계와분석" 내용을 정리한다. 1️⃣ BFS (Breadth-First Search) BFS 핵심 개념 1-1 BFS란? BFS는 그래프 탐색 알고리즘으로, 거리(distance) 기준으로 정점을 계층별로 방문한다. 출발점 S…]]></description><link>https://rmdnps10.github.io/알고리즘설계와분석 - BFS/DFS/</link><guid isPermaLink="false">https://rmdnps10.github.io/알고리즘설계와분석 - BFS/DFS/</guid><pubDate>Thu, 11 Dec 2025 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+&lt;p&gt;학부 수업 &quot;알고리즘설계와분석&quot; 내용을 정리한다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;1️-bfs-breadth-first-search&quot;&gt;1️⃣ BFS (Breadth-First Search)&lt;/h2&gt;
+&lt;h3 id=&quot;bfs-핵심-개념&quot;&gt;BFS 핵심 개념&lt;/h3&gt;
+&lt;h4 id=&quot;1-1-bfs란&quot;&gt;1-1 BFS란?&lt;/h4&gt;
+&lt;p&gt;BFS는 그래프 탐색 알고리즘으로, &lt;strong&gt;거리(distance)&lt;/strong&gt; 기준으로 정점을 계층별로 방문한다. 출발점 S에서 시작해 인접한 정점들을 단계적으로 탐색하는 방식이다.&lt;/p&gt;
+&lt;p&gt;🔥 &lt;strong&gt;Wave 기반 탐색&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;BFS는 파동(wave)처럼 확장되며 탐색을 진행한다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;출발점 S에서 시작&lt;/li&gt;
+&lt;li&gt;S와 인접한 정점들(거리 1) 먼저 탐색&lt;/li&gt;
+&lt;li&gt;그 다음 거리 2인 정점들 탐색&lt;/li&gt;
+&lt;li&gt;거리 k → k+1 순서로 wavefront 확장&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;이러한 특성으로 인해 BFS는 &lt;strong&gt;unweighted graph에서 최단 경로&lt;/strong&gt;를 보장한다.&lt;/p&gt;
+&lt;h4 id=&quot;1-2-bfs가-생성하는-정보&quot;&gt;1-2 BFS가 생성하는 정보&lt;/h4&gt;
+&lt;p&gt;BFS는 탐색 과정에서 각 정점에 대해 다음 정보를 제공한다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;v.d&lt;/code&gt; (distance)&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;S에서 v까지의 최단 거리&lt;/li&gt;
+&lt;li&gt;거리는 간선 개수로 측정&lt;/li&gt;
+&lt;li&gt;BFS 실행 중 점진적으로 갱신됨&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;v.π&lt;/code&gt; (predecessor)&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;v의 부모 정점&lt;/li&gt;
+&lt;li&gt;BFS 트리에서 v를 처음 발견하게 한 정점&lt;/li&gt;
+&lt;li&gt;parent chain을 따라가면 S→v 최단 경로를 복원할 수 있음&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Predecessor subgraph = BFS Tree&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;BFS로 만든 parent 구조는 트리가 된다&lt;/li&gt;
+&lt;li&gt;트리의 간선들은 최단 경로를 구성하는 간선들만 포함한다&lt;/li&gt;
+&lt;li&gt;이를 &lt;strong&gt;최단 경로 트리(shortest path tree)&lt;/strong&gt; 라고 한다&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;bfs-알고리즘-구조&quot;&gt;BFS 알고리즘 구조&lt;/h3&gt;
+&lt;h4 id=&quot;1-3-자료구조와-색상-관리&quot;&gt;1-3 자료구조와 색상 관리&lt;/h4&gt;
+&lt;p&gt;🔥 &lt;strong&gt;큐(FIFO Queue)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;BFS는 큐를 사용하여 방문할 정점들을 관리한다. 큐의 FIFO 특성으로 인해 거리 순서가 자동으로 보장된다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;큐에는 항상 거리 k와 k+1인 정점들만 존재&lt;/li&gt;
+&lt;li&gt;먼저 발견된 정점이 먼저 처리됨&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;🔥 &lt;strong&gt;색상(Color) 시스템&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;BFS는 세 가지 색상으로 정점의 상태를 관리한다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;white&lt;/code&gt;: 아직 방문되지 않은 정점&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;gray&lt;/code&gt;: 발견되어 큐에 들어간 정점&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;black&lt;/code&gt;: 탐색이 완료된 정점&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;정점은 항상 &lt;strong&gt;white → gray → black&lt;/strong&gt; 순서로 상태가 변한다.&lt;/p&gt;
+&lt;h4 id=&quot;1-4-bfs-의사코드&quot;&gt;1-4 BFS 의사코드&lt;/h4&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# 초기화&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; each vertex v &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; G&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;V &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;S&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    v&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;color &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; white
+    v&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;d &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; ∞
+    v&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;π &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; nil
+
+S&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;color &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; gray
+S&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;d &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;
+S&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;π &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; nil
+Q &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; empty queue
+enqueue&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;Q&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; S&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;# 메인 루프&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;while&lt;/span&gt; Q ≠ ∅&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    u &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; dequeue&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;Q&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; each v &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; G&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;Adj&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;u&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;  &lt;span class=&quot;token comment&quot;&gt;# u의 모든 인접 정점&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; v&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;color &lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt; white&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;  &lt;span class=&quot;token comment&quot;&gt;# 처음 발견한 정점&lt;/span&gt;
+            v&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;color &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; gray
+            v&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;d &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; u&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;d &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;
+            v&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;π &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; u
+            enqueue&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;Q&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; v&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    u&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;color &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; black  &lt;span class=&quot;token comment&quot;&gt;# 탐색 완료&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h4 id=&quot;1-5-bfs-동작-예시&quot;&gt;1-5 BFS 동작 예시&lt;/h4&gt;
+&lt;p&gt;다음과 같은 그래프에서 S를 출발점으로 BFS를 수행한다고 가정하자.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;S --- R --- T
+|     |     |
+U --- V     W --- X
+|           |
+Y           Z&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;탐색 과정:&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;S에서 시작, S와 인접한 R, U, V 발견 → 거리 = 1 → 큐에 삽입&lt;/li&gt;
+&lt;li&gt;S는 black으로 변경&lt;/li&gt;
+&lt;li&gt;큐에서 R 꺼냄 → 인접한 W, T 발견 → 거리 = 2 → 큐 삽입&lt;/li&gt;
+&lt;li&gt;R은 black으로 변경&lt;/li&gt;
+&lt;li&gt;큐에서 U 꺼냄 → white인 Y 발견 → 거리 = 2 → 큐 삽입&lt;/li&gt;
+&lt;li&gt;U는 black으로 변경&lt;/li&gt;
+&lt;li&gt;큐에서 V 꺼냄 → 모든 이웃이 이미 방문됨 → 변화 없음&lt;/li&gt;
+&lt;li&gt;큐에서 T 꺼냄 → white 없음 → 변화 없음&lt;/li&gt;
+&lt;li&gt;큐에서 W 꺼냄 → X, Z 발견 → 거리 3 → gray → 큐 삽입&lt;/li&gt;
+&lt;li&gt;큐가 빌 때까지 반복&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;최종적으로 모든 reachable 정점이 black 상태가 되며 탐색이 완료된다.&lt;/p&gt;
+&lt;h3 id=&quot;bfs-성능-분석&quot;&gt;BFS 성능 분석&lt;/h3&gt;
+&lt;h4 id=&quot;1-6-시간-복잡도&quot;&gt;1-6 시간 복잡도&lt;/h4&gt;
+&lt;p&gt;BFS의 시간 복잡도는 그래프 표현 방식에 따라 결정된다. adjacency list를 사용할 때 가장 효율적이다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;초기화 단계&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;모든 정점에 대해 색상, 거리, 부모 설정&lt;/li&gt;
+&lt;li&gt;시간 복잡도: &lt;code class=&quot;language-text&quot;&gt;O(V)&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;큐 연산&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;각 정점은 최대 한 번 enqueue &amp;#x26; dequeue&lt;/li&gt;
+&lt;li&gt;시간 복잡도: &lt;code class=&quot;language-text&quot;&gt;O(V)&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;인접 리스트 스캔&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;각 간선 (u,v)는 최대 한 번씩만 확인됨&lt;/li&gt;
+&lt;li&gt;시간 복잡도: &lt;code class=&quot;language-text&quot;&gt;O(E)&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;최종 시간 복잡도: &lt;code class=&quot;language-text&quot;&gt;O(V + E)&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;이는 그래프 탐색에서 가장 효율적인 형태 중 하나이다.&lt;/p&gt;
+&lt;h3 id=&quot;bfs-정확성-증명&quot;&gt;BFS 정확성 증명&lt;/h3&gt;
+&lt;h4 id=&quot;1-7-bfs가-최단-경로를-찾는-이유&quot;&gt;1-7 BFS가 최단 경로를 찾는 이유&lt;/h4&gt;
+&lt;p&gt;🔥 &lt;strong&gt;핵심 명제&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;모든 간선 (u, v)에 대해 다음 부등식이 성립한다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;δ(S, v) ≤ δ(S, u) + 1&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;여기서 &lt;code class=&quot;language-text&quot;&gt;δ(S, v)&lt;/code&gt;는 S에서 v까지의 최단 거리를 의미한다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;직관적 이해:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;S→u까지 최단 경로 뒤에 u→v 간선 하나만 추가하면 S→v에 도달 가능&lt;/li&gt;
+&lt;li&gt;따라서 v까지의 최단 경로는 u까지의 최단 경로보다 최대 1만 크다&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;🔥 &lt;strong&gt;모순법을 이용한 증명&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;BFS가 올바른 최단 거리를 계산하지 못한다고 가정하자.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;BFS가 &lt;code class=&quot;language-text&quot;&gt;v.d&lt;/code&gt;를 최단 거리 &lt;code class=&quot;language-text&quot;&gt;δ(S,v)&lt;/code&gt;와 다르게 설정한 정점 v 중, &lt;code class=&quot;language-text&quot;&gt;δ(S,v)&lt;/code&gt;가 가장 작은 정점을 선택&lt;/li&gt;
+&lt;li&gt;v의 실제 최단 경로 상의 parent를 u라고 하면, &lt;code class=&quot;language-text&quot;&gt;δ(S,v) = δ(S,u) + 1&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;v가 가장 작은 최단 거리를 가진 오류 정점이므로, u는 올바른 거리를 가짐: &lt;code class=&quot;language-text&quot;&gt;u.d = δ(S,u)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;BFS 알고리즘 절차를 분석하면:
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;v가 white일 때:&lt;/strong&gt; u를 처리할 때 &lt;code class=&quot;language-text&quot;&gt;v.d = u.d + 1 = δ(S,u) + 1 = δ(S,v)&lt;/code&gt;로 올바르게 설정됨 → 모순&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;v가 black일 때:&lt;/strong&gt; v가 u보다 먼저 처리됨 → &lt;code class=&quot;language-text&quot;&gt;v.d ≤ u.d&lt;/code&gt; → 거리 관계 모순&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;v가 gray일 때:&lt;/strong&gt; v가 더 일찍 발견됨 → &lt;code class=&quot;language-text&quot;&gt;v.d ≤ u.d + 1 = δ(S,v)&lt;/code&gt; → 모순&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;모든 경우에서 모순이 발생하므로 BFS는 항상 최단 거리를 올바르게 계산한다.&lt;/p&gt;
+&lt;h4 id=&quot;1-8-최단-경로-복원&quot;&gt;1-8 최단 경로 복원&lt;/h4&gt;
+&lt;p&gt;BFS가 생성한 predecessor 정보를 이용하여 실제 최단 경로를 복원할 수 있다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;print_path&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;s&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; v&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; v &lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt; s&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;s&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;elif&lt;/span&gt; v&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;π &lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt; nil&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;경로 없음&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+        print_path&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;s&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; v&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;π&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;v&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;이 재귀 함수는 parent chain을 따라 역순으로 경로를 복원한다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;💡 &lt;strong&gt;BFS의 주요 특징 정리&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;거리 순서 보장&lt;/strong&gt;: 항상 거리 증가 순서로 방문 (wave 1 → wave 2 → wave 3)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;최단 경로 보장&lt;/strong&gt;: unweighted graph에서 최단 경로를 찾음&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;효율성&lt;/strong&gt;: &lt;code class=&quot;language-text&quot;&gt;O(V + E)&lt;/code&gt; 시간 복잡도로 최적의 성능&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;완전성&lt;/strong&gt;: 출발점에서 reachable한 모든 정점을 탐색&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;2️-dfs-depth-first-search&quot;&gt;2️⃣ DFS (Depth-First Search)&lt;/h2&gt;
+&lt;h3 id=&quot;dfs-핵심-개념&quot;&gt;DFS 핵심 개념&lt;/h3&gt;
+&lt;h4 id=&quot;2-1-dfs란&quot;&gt;2-1 DFS란?&lt;/h4&gt;
+&lt;p&gt;DFS는 그래프 탐색 알고리즘으로, BFS와 달리 &lt;strong&gt;깊이(depth)&lt;/strong&gt; 기준으로 탐색한다. 한 정점에서 가능한 한 깊이 들어간 후, 더 이상 갈 곳이 없으면 되돌아오는 방식이다.&lt;/p&gt;
+&lt;p&gt;🔥 &lt;strong&gt;BFS와의 주요 차이점&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;자료구조&lt;/strong&gt;: 큐 대신 재귀 호출 스택 사용 (또는 명시적 스택)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;출력 구조&lt;/strong&gt;: 단일 트리가 아닌 &lt;strong&gt;forest(포레스트)&lt;/strong&gt; 생성 가능&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;시작점&lt;/strong&gt;: 하나의 고정된 source가 없음&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;기록 정보&lt;/strong&gt;: 거리 대신 &lt;code class=&quot;language-text&quot;&gt;discovery time&lt;/code&gt;과 &lt;code class=&quot;language-text&quot;&gt;finish time&lt;/code&gt; 기록&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;2-2-dfs가-생성하는-정보&quot;&gt;2-2 DFS가 생성하는 정보&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;v.d&lt;/code&gt; (discovery time)&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;v를 처음 발견한 시점&lt;/li&gt;
+&lt;li&gt;탐색을 시작할 때 증가하는 타임스탬프&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;v.f&lt;/code&gt; (finish time)&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;v의 탐색이 완료된 시점&lt;/li&gt;
+&lt;li&gt;항상 &lt;code class=&quot;language-text&quot;&gt;v.f &gt; v.d&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;v.π&lt;/code&gt; (predecessor)&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;DFS 트리에서 v의 부모 정점&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;dfs-알고리즘-구조&quot;&gt;DFS 알고리즘 구조&lt;/h3&gt;
+&lt;h4 id=&quot;2-3-dfs-의사코드&quot;&gt;2-3 DFS 의사코드&lt;/h4&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# 초기화 및 메인 루프&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;DFS&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;G&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; each vertex u &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; G&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;V&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+        u&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;color &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; white
+        u&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;π &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; nil
+    time &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; each vertex u &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; G&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;V&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; u&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;color &lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt; white&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+            DFS_VISIT&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;G&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; u&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;# 재귀적 방문&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;DFS_VISIT&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;G&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; u&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;global&lt;/span&gt; time
+    time &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; time &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;
+    u&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;d &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; time          &lt;span class=&quot;token comment&quot;&gt;# discovery time 기록&lt;/span&gt;
+    u&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;color &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; gray
+
+    &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; each v &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; G&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;Adj&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;u&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; v&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;color &lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt; white&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+            v&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;π &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; u
+            DFS_VISIT&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;G&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; v&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+    u&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;color &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; black
+    time &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; time &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;
+    u&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;f &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; time          &lt;span class=&quot;token comment&quot;&gt;# finish time 기록&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h4 id=&quot;2-4-dfs-작동-방식&quot;&gt;2-4 DFS 작동 방식&lt;/h4&gt;
+&lt;p&gt;🔥 &lt;strong&gt;재귀적 탐색&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;큐를 사용하지 않고 재귀 호출 스택 활용&lt;/li&gt;
+&lt;li&gt;한 경로를 끝까지 탐색한 후 백트래킹&lt;/li&gt;
+&lt;li&gt;discovery time과 finish time을 보존하며 깊이 우선 탐색&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;🔥 &lt;strong&gt;색상 의미&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;gray&lt;/code&gt;: 방문했지만 아직 완료되지 않은 상태 (현재 탐색 중인 경로 상의 정점)&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;black&lt;/code&gt;: 해당 정점 관련된 모든 탐색이 끝남&lt;/li&gt;
+&lt;li&gt;finish time이 기록되는 순간은 &quot;이 정점에서 더 이상 탐색할 곳이 없음&quot;을 의미&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;dfs-성능-분석&quot;&gt;DFS 성능 분석&lt;/h3&gt;
+&lt;h4 id=&quot;2-5-시간-복잡도&quot;&gt;2-5 시간 복잡도&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;정점 방문&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;각 정점은 정확히 한 번 방문&lt;/li&gt;
+&lt;li&gt;시간 복잡도: &lt;code class=&quot;language-text&quot;&gt;Θ(V)&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;간선 스캔&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;각 간선은 정확히 한 번 확인&lt;/li&gt;
+&lt;li&gt;시간 복잡도: &lt;code class=&quot;language-text&quot;&gt;Θ(E)&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;최종 시간 복잡도: &lt;code class=&quot;language-text&quot;&gt;Θ(V + E)&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;BFS와 동일하지만, tight bound로 표현된다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;💡 &lt;strong&gt;BFS vs DFS 비교&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;특성&lt;/th&gt;
+&lt;th&gt;BFS&lt;/th&gt;
+&lt;th&gt;DFS&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;자료구조&lt;/td&gt;
+&lt;td&gt;큐(Queue)&lt;/td&gt;
+&lt;td&gt;스택(Stack) 또는 재귀&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;탐색 방식&lt;/td&gt;
+&lt;td&gt;너비 우선 (레벨별)&lt;/td&gt;
+&lt;td&gt;깊이 우선 (경로별)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;출력 구조&lt;/td&gt;
+&lt;td&gt;단일 트리&lt;/td&gt;
+&lt;td&gt;포레스트&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;기록 정보&lt;/td&gt;
+&lt;td&gt;거리(distance)&lt;/td&gt;
+&lt;td&gt;discovery/finish time&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;최단 경로&lt;/td&gt;
+&lt;td&gt;보장&lt;/td&gt;
+&lt;td&gt;보장 안 함&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;시간 복잡도&lt;/td&gt;
+&lt;td&gt;O(V + E)&lt;/td&gt;
+&lt;td&gt;Θ(V + E)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;3️-dag와-topological-sort&quot;&gt;3️⃣ DAG와 Topological Sort&lt;/h2&gt;
+&lt;h3 id=&quot;dag-개념&quot;&gt;DAG 개념&lt;/h3&gt;
+&lt;h4 id=&quot;3-1-dag란&quot;&gt;3-1 DAG란?&lt;/h4&gt;
+&lt;p&gt;DAG(Directed Acyclic Graph)는 &lt;strong&gt;방향 그래프이며 사이클이 없는&lt;/strong&gt; 그래프이다.&lt;/p&gt;
+&lt;p&gt;🔥 &lt;strong&gt;DAG의 특징과 활용&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;사이클이 없으므로 &lt;strong&gt;의존성(dependency)&lt;/strong&gt; 표현에 적합&lt;/li&gt;
+&lt;li&gt;작업 순서, 컴파일 순서, 강의 선수과목 등을 모델링&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;예시: 옷 입는 순서&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;속옷 → 바지 → 벨트
+양말 → 신발
+셔츠 → 넥타이
+셔츠 → 재킷&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;각 화살표는 &quot;이것을 먼저 입어야 한다&quot;는 의존성을 나타낸다.&lt;/p&gt;
+&lt;h3 id=&quot;topological-sort-기본&quot;&gt;Topological Sort 기본&lt;/h3&gt;
+&lt;h4 id=&quot;3-2-topological-sort-정의&quot;&gt;3-2 Topological Sort 정의&lt;/h4&gt;
+&lt;p&gt;DAG의 정점들을 &lt;strong&gt;선형 순서로 나열&lt;/strong&gt;하되, 모든 간선 (u → v)에 대해 &lt;strong&gt;u가 v보다 앞에 오도록&lt;/strong&gt; 정렬하는 것을 Topological Sort라고 한다.&lt;/p&gt;
+&lt;p&gt;이 순서를 &lt;strong&gt;topological order&lt;/strong&gt; 또는 &lt;strong&gt;topological ordering&lt;/strong&gt;이라고 한다.&lt;/p&gt;
+&lt;h4 id=&quot;3-3-in-degree-기반-알고리즘&quot;&gt;3-3 In-degree 기반 알고리즘&lt;/h4&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;result &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;while&lt;/span&gt; 그래프에 정점이 남아있음&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    진입 차수가 &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;인 정점 v 선택
+    result에 v 추가
+    v와 v에서 나가는 모든 간선 제거
+&lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; result&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;🔥 &lt;strong&gt;문제점&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;매 단계마다 in-degree가 0인 정점을 찾는 데 비용이 큼&lt;/li&gt;
+&lt;li&gt;adjacency list 전체 탐색이 필요 → &lt;code class=&quot;language-text&quot;&gt;O(V + E)&lt;/code&gt; per deletion&lt;/li&gt;
+&lt;li&gt;전체 수행 시간 = &lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;O(V² + VE)&lt;/code&gt;&lt;/strong&gt; → 비효율적&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;dfs를-이용한-topological-sort&quot;&gt;DFS를 이용한 Topological Sort&lt;/h3&gt;
+&lt;h4 id=&quot;3-4-핵심-아이디어&quot;&gt;3-4 핵심 아이디어&lt;/h4&gt;
+&lt;p&gt;DFS의 finish time을 활용하면 효율적으로 topological sort를 수행할 수 있다.&lt;/p&gt;
+&lt;p&gt;🔥 &lt;strong&gt;Finish Time의 의미&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;finish time이 기록되는 순간은:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;그 정점으로부터 나가는 모든 경로를 이미 방문 완료&lt;/li&gt;
+&lt;li&gt;즉, 그 정점 이후에 방문할 정점이 없음&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;따라서:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;DFS에서 finish time이 큰 정점일수록 선형 순서의 앞쪽에 배치되어야 한다.&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&quot;3-5-dfs-기반-topological-sort-알고리즘&quot;&gt;3-5 DFS 기반 Topological Sort 알고리즘&lt;/h4&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;topological_sort&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;G&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    result &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+
+    &lt;span class=&quot;token comment&quot;&gt;# DFS 수행&lt;/span&gt;
+    DFS&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;G&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+    &lt;span class=&quot;token comment&quot;&gt;# finish time 내림차순으로 정렬&lt;/span&gt;
+    &lt;span class=&quot;token comment&quot;&gt;# (또는 DFS 중 finish될 때마다 리스트 앞에 삽입)&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;sorted&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;G&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;V&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; key&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;lambda&lt;/span&gt; v&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; v&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;f&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; reverse&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token boolean&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;더 효율적인 방법:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;DFS_VISIT_with_topological&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;G&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; u&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; result&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;global&lt;/span&gt; time
+    time &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; time &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;
+    u&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;d &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; time
+    u&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;color &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; gray
+
+    &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; each v &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; G&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;Adj&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;u&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; v&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;color &lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt; white&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+            v&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;π &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; u
+            DFS_VISIT_with_topological&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;G&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; v&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; result&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+    u&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;color &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; black
+    time &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; time &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;
+    u&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;f &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; time
+    result&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;insert&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; u&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;  &lt;span class=&quot;token comment&quot;&gt;# 앞에 삽입 (finish time 큰 것부터)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h4 id=&quot;3-6-시간-복잡도&quot;&gt;3-6 시간 복잡도&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;DFS 실행: &lt;code class=&quot;language-text&quot;&gt;Θ(V + E)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;추가 비용: &lt;code class=&quot;language-text&quot;&gt;O(1)&lt;/code&gt; (각 정점의 finish 시 리스트 앞에 삽입)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;최종 시간 복잡도: &lt;code class=&quot;language-text&quot;&gt;Θ(V + E)&lt;/code&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;이는 in-degree 기반 방법보다 훨씬 효율적이다.&lt;/p&gt;
+&lt;h3 id=&quot;dfs와-topological-sort의-특성&quot;&gt;DFS와 Topological Sort의 특성&lt;/h3&gt;
+&lt;h4 id=&quot;3-7-비결정성과-정확성&quot;&gt;3-7 비결정성과 정확성&lt;/h4&gt;
+&lt;p&gt;🔥 &lt;strong&gt;DFS 결과의 비결정성&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;DFS 결과는 &lt;strong&gt;유일하지 않다&lt;/strong&gt;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;시작 정점 선택 순서&lt;/li&gt;
+&lt;li&gt;adjacency list 내부 정점 순서&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;에 따라 discovery time과 finish time이 달라진다.&lt;/p&gt;
+&lt;p&gt;🔥 &lt;strong&gt;Topological Sort의 정확성&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;하지만 &lt;strong&gt;topological sort 결과는 순서가 달라도 언제나 valid하다&lt;/strong&gt;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;finish time ordering은 상대적 순서를 보존&lt;/li&gt;
+&lt;li&gt;간선 (u → v)에 대해 u가 v보다 먼저 finish되는 경우는 없음&lt;/li&gt;
+&lt;li&gt;따라서 어떤 DFS 수행 결과든 올바른 topological order를 생성&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;예시:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;같은 DAG에서 DFS를 여러 번 수행하면 다른 topological order를 얻을 수 있지만, 모두 유효한 순서이다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;A → C
+B → C
+
+가능한 topological orders:
+- A, B, C
+- B, A, C&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;두 순서 모두 &quot;C보다 A와 B가 앞에 온다&quot;는 조건을 만족한다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;💡 &lt;strong&gt;Topological Sort 응용 분야&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;작업 스케줄링&lt;/strong&gt;: 작업 간 의존성을 고려한 실행 순서 결정&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;컴파일 순서&lt;/strong&gt;: 모듈 간 의존성을 고려한 컴파일 순서&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;선수과목 체계&lt;/strong&gt;: 강의 수강 순서 결정&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Makefile 의존성&lt;/strong&gt;: 파일 빌드 순서 결정&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;</content:encoded></item><item><title><![CDATA[알고리즘설계와분석 - Greedy algorithm (그리디 알고리즘)]]></title><description><![CDATA[학부 수업 "알고리즘설계와분석"에서 배운 내용을 정리합니다. Greedy Algorithm의 기본 개념과 Interval Scheduling, Huffman Coding 등 대표적인 문제를 학습해보자. 1️⃣ Greedy Algorithm…]]></description><link>https://rmdnps10.github.io/알고리즘설계와분석 - Greedy algorithm (그리디 알고리즘)/</link><guid isPermaLink="false">https://rmdnps10.github.io/알고리즘설계와분석 - Greedy algorithm (그리디 알고리즘)/</guid><pubDate>Wed, 10 Dec 2025 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
 &lt;p&gt;학부 수업 &quot;알고리즘설계와분석&quot;에서 배운 내용을 정리합니다.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Greedy Algorithm의 기본 개념과 Interval Scheduling, Huffman Coding 등 대표적인 문제를 학습해보자.&lt;/p&gt;
