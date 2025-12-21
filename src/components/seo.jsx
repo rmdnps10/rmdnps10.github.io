@@ -97,6 +97,13 @@ const Seo = ({
       />
       <meta name="naver-site-verification" content="6b66d2dd57797b90627f661b558aca36ceac6104" />
       
+      {/* Google AdSense */}
+      <script
+        async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1707103676035407"
+        crossOrigin="anonymous"
+      />
+      
       {/* Open Graph */}
       <meta property="og:title" content={title} />
       <meta property="og:description" content={metaDescription} />
