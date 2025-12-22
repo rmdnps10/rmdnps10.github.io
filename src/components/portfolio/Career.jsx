@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react"
+import React, { useRef, useEffect, useState } from "react"
 import roles from "../../data/career.json"
 
 // 이미지 import - 인덱스 순서대로
@@ -15,33 +15,51 @@ const formatPeriod = period => {
   return `${start.replace("-", ".")} – ${end.replace("-", ".")}`
 }
 
+const useMediaQuery = query => {
+  const [matches, setMatches] = useState(false)
+
+  useEffect(() => {
+    const media = window.matchMedia(query)
+    if (media.matches !== matches) {
+      setMatches(media.matches)
+    }
+    const listener = () => setMatches(media.matches)
+    media.addEventListener("change", listener)
+    return () => media.removeEventListener("change", listener)
+  }, [matches, query])
+
+  return matches
+}
+
 export default function Career() {
+  const isDesktop = useMediaQuery("(min-width: 768px)")
+
   return (
-    <section id="career" className="py-[500px]">
-      <h2 className="text-[100px] font-bold text-center font-paperozi border-none mb-1 text-stroke">
+    <section id="career" className="py-[100px] md:py-[500px]">
+      <h2 className="text-[40px] md:text-[100px] font-bold text-center font-paperozi border-none mb-1 text-stroke">
         Internship
       </h2>
 
-      <div className="relative px-4 flex flex-col items-start w-full mt-[100px] gap-[100px]">
+      <div className="relative px-4 flex flex-col items-start w-full mt-[50px] md:mt-[100px] gap-[50px] md:gap-[100px]">
         {/* 계단형 카드들 */}
         {roles.map((role, index) => {
           return (
             <div
               key={role.organization}
-              className="relative py-[50px] px-[0px]"
+              className="relative py-[20px] md:py-[50px] px-[0px] w-full"
               style={{
-                paddingLeft: 5 + index * 30 + " ",
+                paddingLeft: isDesktop ? 5 + index * 30 : 0,
                 boxSizing: "content-box",
               }}
             >
-              <div className="flex gap-6 pb-8 last:pb-0">
+              <div className="flex flex-col md:flex-row gap-4 md:gap-6 pb-8 last:pb-0">
                 {/* 이미지 섹션 */}
                 {careerImages[index] && (
-                  <div className="flex-shrink-0">
+                  <div className="flex-shrink-0 w-full md:w-auto">
                     <img
                       src={careerImages[index]}
                       alt={role.organization}
-                      className="w-[400px] h-[300px] object-cover border-2"
+                      className="w-full md:w-[400px] h-[200px] md:h-[300px] object-cover border-2"
                       style={{
                         borderColor: role.color || "#FFFFFF",
                       }}
@@ -49,9 +67,9 @@ export default function Career() {
                   </div>
                 )}
                 <div className="flex-1 transition-all">
-                  <div className="flex items-center gap-3 mb-0">
+                  <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-3 mb-0">
                     <h3
-                      className="mb-0 border-none mt-0 p-0"
+                      className="mb-0 border-none mt-0 p-0 text-[24px] md:text-[32px]"
                       style={{
                         color: role.color || "#FFFFFF",
                       }}
@@ -59,7 +77,7 @@ export default function Career() {
                       {role.organization}
                     </h3>
                     <span
-                      className="career-period-badge inline-flex items-center px-2 py-0.5 rounded-md font-medium"
+                      className="career-period-badge inline-flex items-center px-2 py-0.5 rounded-md font-medium text-[12px] md:text-[14px]"
                       style={{
                         color: role.color || "#FFFFFF",
                       }}
@@ -69,7 +87,7 @@ export default function Career() {
                   </div>
 
                   <span
-                    className="career-position-button inline-flex items-center border-2 font-bold rounded-lg whitespace-nowrap mt-2 mb-3 px-2 py-1"
+                    className="career-position-button inline-flex items-center border-2 font-bold rounded-lg whitespace-nowrap mt-2 mb-3 px-2 py-1 text-[12px] md:text-[14px]"
                     style={{
                       color: role.color || "#FFFFFF",
                       borderColor: role.color || "#FFFFFF",
@@ -88,7 +106,7 @@ export default function Career() {
                       {role.highlights.map(highlight => (
                         <li
                           key={highlight}
-                          className="text-gray-300 flex items-start gap-2"
+                          className="text-gray-300 flex items-start gap-2 text-[14px] md:text-[16px]"
                         >
                           <span className="text-white font-bold">›</span>
                           <span>{highlight}</span>

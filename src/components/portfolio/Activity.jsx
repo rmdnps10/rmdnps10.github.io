@@ -1,10 +1,26 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import activities from "../../data/activity.json"
 
 const GROUP_LABELS = {
   Award: "Awards",
   Certification: "Certifications",
   Leadership: "Leadership",
+}
+
+const useMediaQuery = query => {
+  const [matches, setMatches] = useState(false)
+
+  useEffect(() => {
+    const media = window.matchMedia(query)
+    if (media.matches !== matches) {
+      setMatches(media.matches)
+    }
+    const listener = () => setMatches(media.matches)
+    media.addEventListener("change", listener)
+    return () => media.removeEventListener("change", listener)
+  }, [matches, query])
+
+  return matches
 }
 
 // Support two shapes for activities data:
@@ -40,14 +56,18 @@ const activityStyles = `
 `
 
 export default function Activity() {
+  const isDesktop = useMediaQuery("(min-width: 768px)")
   // Render in the requested order (Community, Award, Certification)
   const groupOrder = ["Leadership", "Award", "Certification"]
 
   return (
-    <section id="activity" className="portfolio-activity py-16 mt-[200px]">
+    <section
+      id="activity"
+      className="portfolio-activity py-8 md:py-16 mt-[100px] md:mt-[200px]"
+    >
       <style>{activityStyles}</style>
       <div className="max-w-7xl mx-auto px-4">
-        <div className="grid grid-cols-3 gap-[100px]">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-[50px] md:gap-[100px]">
           {groupOrder.map((label, index) => {
             const list = groupedActivities[label]
             if (!list) return null
@@ -57,9 +77,12 @@ export default function Activity() {
             return (
               <div
                 key={label}
-                style={{ paddingTop: `${index * 40}vh`, minHeight: "3000px" }}
+                className="md:min-h-[3000px]"
+                style={{
+                  paddingTop: isDesktop ? `${index * 40}vh` : 0,
+                }}
               >
-                <div className="sticky top-20 mb-[500px]">
+                <div className="md:sticky md:top-20 mb-[50px] md:mb-[500px]">
                   <h3 className="activity-heading font-paperozi border-none font-bold text-stroke mb-0">
                     {heading}
                   </h3>

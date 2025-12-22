@@ -42,25 +42,41 @@ function FadeUpBlurText({ text, delay, className }) {
 export default function About() {
   return (
     <section id="about" className="w-full">
-      <div className="flex w-full justify-between">
+      <div className="flex flex-col md:flex-row w-full justify-between gap-8">
         <div>
-          <h1 className="text-[24px] font-semibold">Software Developer</h1>
-          <div>
+          <h1 className="text-[20px] md:text-[24px] font-semibold">
+            Software Developer
+          </h1>
+          <div className="text-[14px] md:text-[16px]">
             <div className="flex gap-2">
-              <p className="text-white font-semibold">Email.</p>
-              <p className="text-white">rmdnps10@gmail.com</p>
+              <p className="text-white font-semibold text-[14px] md:text-[16px]">
+                Email.
+              </p>
+              <p className="text-white text-[14px] md:text-[16px]">
+                rmdnps10@gmail.com
+              </p>
             </div>
             <div className="flex gap-2">
-              <p className="text-white font-semibold">Birth.</p>
-              <p className="text-white">2001.12.15</p>
+              <p className="text-white font-semibold text-[14px] md:text-[16px]">
+                Birth.
+              </p>
+              <p className="text-white text-[14px] md:text-[16px]">
+                2001.12.15
+              </p>
             </div>
             <div className="flex gap-2">
-              <p className="text-white font-semibold">Residence.</p>
-              <p className="text-white">Seoul, Yangcheon</p>
+              <p className="text-white font-semibold text-[14px] md:text-[16px]">
+                Residence.
+              </p>
+              <p className="text-white text-[14px] md:text-[16px]">
+                Seoul, Yangcheon
+              </p>
             </div>
             <div className="flex gap-2">
-              <p className="text-white font-semibold">Degree.</p>
-              <p className="text-white">
+              <p className="text-white font-semibold text-[14px] md:text-[16px]">
+                Degree.
+              </p>
+              <p className="text-white text-[12px] md:text-[16px]">
                 Sogang Univ. Art&Technology, Software Convergence (double major)
               </p>
             </div>
@@ -68,9 +84,9 @@ export default function About() {
         </div>
 
         {/* tech stack */}
-        <div className="flex flex-col gap-4 mt-6 items-end">
+        <div className="flex flex-col gap-4 mt-6 items-center md:items-end">
           <div className="flex flex-col">
-            <p className="text-white font-semibold text-right m-1 text-[14px]">
+            <p className="text-white font-semibold text-center md:text-right m-1 text-[14px]">
               Frontend
             </p>
             <div className="flex gap-3">
@@ -80,14 +96,18 @@ export default function About() {
             </div>
           </div>
           <div className="flex flex-col">
-            <p className="text-white font-semibold text-right m-1">Backend</p>
-            <div className="flex gap-3 justify-end">
+            <p className="text-white font-semibold text-center md:text-right m-1 text-[14px]">
+              Backend
+            </p>
+            <div className="flex gap-3">
               <SiExpress size={24} title="Express.js" />
               <SiFastapi size={24} title="FastAPI" />
             </div>
           </div>
           <div className="flex flex-col">
-            <p className="text-white font-semibold text-right m-1">Language</p>
+            <p className="text-white font-semibold text-center md:text-right m-1 text-[14px]">
+              Language
+            </p>
             <div className="flex gap-3">
               <SiTypescript size={24} title="TypeScript" />
               <SiPython size={24} title="Python" />
@@ -98,7 +118,7 @@ export default function About() {
       </div>
 
       {/* 랜덤 애니메이션 효과 추가 */}
-      <div className="text-center mt-[400px]">
+      <div className="text-center mt-[200px] md:mt-[400px]">
         <DecryptedText
           text="안녕하세요, 소프트웨어 개발을 하고 있는 정인영입니다."
           revealDirection="start"
@@ -106,39 +126,39 @@ export default function About() {
           animateOn="view"
           speed={100}
           className="text-white"
-          parentClassName="text-[40px]"
+          parentClassName="text-[24px] md:text-[40px]"
         />
       </div>
       {/* text-animation section*/}
-      <div className="text-center mt-[200px] font-extralight">
+      <div className="text-center mt-[100px] md:mt-[200px] font-extralight px-4">
         <FadeUpBlurText
           text="내 손으로 내 아이디어를 구현하자 라는 모토에서 프론트엔드 개발을 시작했습니다."
           delay={0}
-          className="w-full flex justify-center text-[24px]"
+          className="w-full flex justify-center text-[16px] md:text-[24px]"
         />
 
         <FadeUpBlurText
           text="런칭한 서비스가 처음 수익화가 되었을 때의 희열감은,"
           delay={30}
-          className="w-full flex justify-center text-[24px] "
+          className="w-full flex justify-center text-[16px] md:text-[24px]"
         />
 
         <FadeUpBlurText
           text="전공 지식 학습의 원천이자 지금까지 다양한 프로젝트에 참여하는데 큰 동기부여가 되었습니다."
           delay={30}
-          className="w-full flex justify-center text-[24px] "
+          className="w-full flex justify-center text-[16px] md:text-[24px]"
         />
 
         <FadeUpBlurText
           text="최근에는 AI 툴 활용과 더불어 백엔드, 시스템 프로그래밍에 관심을 가지고"
           delay={30}
-          className="w-full flex justify-center text-[24px] mt-[300px]"
+          className="w-full flex justify-center text-[16px] md:text-[24px] mt-[150px] md:mt-[300px]"
         />
 
         <FadeUpBlurText
           text="넓은 분야의 제너릴리스트가 되기 위해 노력하고 있습니다."
           delay={30}
-          className="w-full flex justify-center text-[24px]"
+          className="w-full flex justify-center text-[16px] md:text-[24px]"
         />
       </div>
     </section>

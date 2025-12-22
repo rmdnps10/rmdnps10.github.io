@@ -33,17 +33,18 @@ export default function Hero() {
         id="hero"
         className="relative overflow-hidden w-full h-[calc(100vh_-_53px)]"
       >
-        <h1 className="absolute top-[10px] left-[10px] text-[5vw] text-white">
+        <h1 className="absolute top-[10px] left-[10px] text-[24px] md:text-[5vw] text-white">
           소프트웨어 개발자, 정인영입니다.{" "}
         </h1>
 
-        <p className="absolute bottom-[100px] right-[10px] text-white text-[14px]">
+        <p className="hidden md:block absolute bottom-[100px] right-[10px] text-white text-[14px]">
           위에 빈 공간에 커서를 올려주세요.
         </p>
-        <h1 className="text-[3vw] text-white absolute bottom-[20px] right-[10px]">
+        <h1 className="text-[16px] md:text-[3vw] text-white absolute bottom-[20px] left-[10px] md:left-auto md:right-[10px]">
           a.k.a 난너의오른팔{" "}
         </h1>
         <div
+          className="hidden md:block"
           style={{
             width: "50%",
             height: "250px",
@@ -87,14 +88,14 @@ export default function Hero() {
           </div>
         </div>
         <div
-          className={`absolute bottom-[100px] left-[10px] w-[500px] h-[500px] z-10 bg-[#1e1e1d] transition-transform duration-1000 ease-out ${
+          className={`absolute bottom-[100px] left-[10px] w-[250px] h-[250px] md:w-[500px] md:h-[500px] z-10 bg-[#1e1e1d] transition-transform duration-1000 ease-out ${
             isMounted ? "translate-y-full" : "translate-y-0"
           }`}
         ></div>
         <img
           src={myImage}
           alt="myImage"
-          className="absolute bottom-[100px] left-[10px] w-[500px] twinkle-effect"
+          className="absolute bottom-[100px] left-[10px] w-[350px] md:w-[500px] twinkle-effect"
         />
       </section>
     </>

@@ -18,11 +18,11 @@ export default function FeaturedProjects() {
   }
 
   return (
-    <section id="featured" className="pt-[200px] pb-[100px]">
+    <section id="featured" className="pt-[100px] md:pt-[200px] pb-[50px] md:pb-[100px]">
       <div className="w-full">
         {/* 섹션 타이틀 */}
-        <div className="text-center mb-12" style={{ marginTop: "48px" }}>
-          <h2 className="font-bold mb-2 font-paperozi border-none text-[80px] text-stroke">
+        <div className="text-center mb-6 md:mb-12 mt-6 md:mt-12">
+          <h2 className="font-bold mb-2 font-paperozi border-none text-[40px] md:text-[80px] text-stroke px-4">
             Featured Projects
           </h2>
         </div>
@@ -73,9 +73,9 @@ export default function FeaturedProjects() {
                     {/* 카드 위 텍스트 */}
                     {tagText && (
                       <div
-                        className="absolute -top-12 left-1/2 transform -translate-x-1/2 z-20"
+                        className="absolute -top-8 md:-top-12 left-1/2 transform -translate-x-1/2 z-20"
                         style={{
-                          fontSize: "48px",
+                          fontSize: "clamp(24px, 5vw, 48px)",
                           fontWeight: 700,
                           color: "rgba(255, 255, 255, 0.9)",
                           textShadow: "0 2px 10px rgba(0, 0, 0, 0.5)",
