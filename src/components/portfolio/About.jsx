@@ -118,7 +118,7 @@ export default function About() {
       </div>
 
       {/* 랜덤 애니메이션 효과 추가 */}
-      <div className="text-center mt-[200px] md:mt-[400px]">
+      <div className="text-center mt-[200px] md:mt-[400px] mx-4">
         <DecryptedText
           text="안녕하세요, 소프트웨어 개발을 하고 있는 정인영입니다."
           revealDirection="start"
