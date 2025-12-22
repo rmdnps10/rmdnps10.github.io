@@ -12,7 +12,7 @@ const Layout = ({ location, title, children }) => {
         <main>{children}</main>
 
         <footer className="text-center">
-          © {new Date().getFullYear()}, 정인영, Design & Developed by 정인영
+          © {new Date().getFullYear()}, Design & Developed by 정인영
         </footer>
       </div>
     </>
