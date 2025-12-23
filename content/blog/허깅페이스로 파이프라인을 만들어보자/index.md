@@ -5,6 +5,7 @@ description: "허깅페이스 라이브러리로 NLP 모델을 쉽게 활용하�
 thumbnail: "./index.png"
 pointColor: "#FF9A00"
 tags: ["AI"]
+keywords: "허깅페이스, Hugging Face, 트랜스포머, Transformer, NLP, 자연어 처리, 머신러닝, AI, Python, 파이프라인, BERT, GPT, 딥러닝"
 ---
 
 ![ㄱㅇㅇ](./index.png)

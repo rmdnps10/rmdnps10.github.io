@@ -84,6 +84,11 @@ export const Head = ({ data: { markdownRemark: post, site } }) => {
     ? new Date(post.frontmatter.date).toISOString()
     : null
 
+  // keywords 생성: frontmatter의 keywords가 있으면 사용, 없으면 tags 사용
+  const keywords = post.frontmatter.keywords 
+    ? post.frontmatter.keywords 
+    : post.frontmatter.tags?.join(', ')
+
   return (
     <Seo
       title={post.frontmatter.title}
@@ -94,6 +99,7 @@ export const Head = ({ data: { markdownRemark: post, site } }) => {
       url={postUrl}
       publishedTime={publishedTime}
       author={site.siteMetadata.author.name}
+      keywords={keywords}
     />
   )
 }
@@ -127,6 +133,8 @@ export const pageQuery = graphql`
         date(formatString: "YYYY-MM-DD")
         description
         pointColor
+        tags
+        keywords
         thumbnail {
           publicURL
           childImageSharp {

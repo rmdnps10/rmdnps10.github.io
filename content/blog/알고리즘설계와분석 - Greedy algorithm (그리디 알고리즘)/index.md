@@ -5,6 +5,7 @@ description: 매 순간 최선의 선택을 하는 Greedy Algorithm의 원리와
 thumbnail: "./index.png"
 pointColor: "#ffffff"
 tags: ["알고리즘"]
+keywords: "알고리즘, 그리디, Greedy Algorithm, 탐욕 알고리즘, 최적화, Interval Scheduling, Huffman Coding, 알고리즘 설계"
 ---
 
 > 학부 수업 "알고리즘설계와분석"에서 배운 내용을 정리합니다.

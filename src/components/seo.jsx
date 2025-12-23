@@ -8,9 +8,9 @@
 import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
-const Seo = ({ 
-  description, 
-  title, 
+const Seo = ({
+  description,
+  title,
   image,
   imageAlt,
   type = "website",
@@ -18,7 +18,8 @@ const Seo = ({
   publishedTime,
   modifiedTime,
   author,
-  children 
+  keywords,
+  children,
 }) => {
   const { site } = useStaticQuery(
     graphql`
@@ -45,8 +46,10 @@ const Seo = ({
   const siteUrl = site.siteMetadata.siteUrl
   const fullTitle = defaultTitle ? `${title} | ${defaultTitle}` : title
   const canonicalUrl = url || siteUrl
-  const ogImage = image 
-    ? (image.startsWith('http') ? image : `${siteUrl}${image.startsWith('/') ? image : `/${image}`}`)
+  const ogImage = image
+    ? image.startsWith("http")
+      ? image
+      : `${siteUrl}${image.startsWith("/") ? image : `/${image}`}`
     : null
   const ogImageAlt = imageAlt || title
 
@@ -54,33 +57,33 @@ const Seo = ({
   const structuredData = {
     "@context": "https://schema.org",
     "@type": type === "article" ? "BlogPosting" : "WebSite",
-    "name": fullTitle,
-    "description": metaDescription,
-    "url": canonicalUrl,
+    name: fullTitle,
+    description: metaDescription,
+    url: canonicalUrl,
     ...(type === "article" && {
-      "headline": title,
-      "datePublished": publishedTime,
-      "dateModified": modifiedTime || publishedTime,
-      "author": {
+      headline: title,
+      datePublished: publishedTime,
+      dateModified: modifiedTime || publishedTime,
+      author: {
         "@type": "Person",
-        "name": author || site.siteMetadata.author.name
+        name: author || site.siteMetadata.author.name,
       },
-      "publisher": {
+      publisher: {
         "@type": "Person",
-        "name": site.siteMetadata.author.name
+        name: site.siteMetadata.author.name,
       },
-      ...(ogImage && { "image": ogImage })
+      ...(ogImage && { image: ogImage }),
     }),
     ...(type === "website" && {
-      "potentialAction": {
+      potentialAction: {
         "@type": "SearchAction",
-        "target": {
+        target: {
           "@type": "EntryPoint",
-          "urlTemplate": `${siteUrl}/?tag={search_term_string}`
+          urlTemplate: `${siteUrl}/?tag={search_term_string}`,
         },
-        "query-input": "required name=search_term_string"
-      }
-    })
+        "query-input": "required name=search_term_string",
+      },
+    }),
   }
 
   return (
@@ -88,22 +91,26 @@ const Seo = ({
       <html lang="ko" />
       <title>{fullTitle}</title>
       <meta name="description" content={metaDescription} />
+      {keywords && <meta name="keywords" content={keywords} />}
       <link rel="canonical" href={canonicalUrl} />
-      
+
       {/* 검색 엔진 검증 */}
       <meta
         name="google-site-verification"
         content="qF0J_4XAYAbU9SwIaK0vZrv0zfjMDParCNbO-CwMCow"
       />
-      <meta name="naver-site-verification" content="6b66d2dd57797b90627f661b558aca36ceac6104" />
-      
+      <meta
+        name="naver-site-verification"
+        content="6b66d2dd57797b90627f661b558aca36ceac6104"
+      />
+
       {/* Google AdSense */}
       <script
         async
         src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1707103676035407"
         crossOrigin="anonymous"
       />
-      
+
       {/* Open Graph */}
       <meta property="og:title" content={title} />
       <meta property="og:description" content={metaDescription} />
@@ -126,9 +133,12 @@ const Seo = ({
           {author && <meta property="article:author" content={author} />}
         </>
       )}
-      
+
       {/* Twitter Card */}
-      <meta name="twitter:card" content={image ? "summary_large_image" : "summary"} />
+      <meta
+        name="twitter:card"
+        content={image ? "summary_large_image" : "summary"}
+      />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={metaDescription} />
       {image && <meta name="twitter:image" content={ogImage} />}
@@ -138,13 +148,13 @@ const Seo = ({
           content={site.siteMetadata.social.twitter}
         />
       )}
-      
+
       {/* 구조화된 데이터 */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
-      
+
       {children}
     </>
   )

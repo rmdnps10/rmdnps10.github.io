@@ -5,6 +5,7 @@ description: "LG 전자 산학 협력 커넥티드 플랫폼 수업에서, TV에
 thumbnail: "./index.png"
 pointColor: "#ffffff"
 tags: ["회고"]
+keywords: "webOS, LG전자, LG, 임베디드, Flutter, TV 애플리케이션, 풀스택, 산학협력, 스마트TV, Connected Platform, React, 서강대학교"
 ---
 
 > 25-2학기에 LG 전자에서 산학 협력 커넥티드 플랫폼 수업을 들으면서 배웠던 점을 공유합니다.

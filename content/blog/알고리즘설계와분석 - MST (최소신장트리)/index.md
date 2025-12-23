@@ -5,6 +5,7 @@ description: 최소 비용으로 모든 정점을 연결하는 MST의 개념과 
 thumbnail: "./index.png"
 pointColor: "#ffffff"
 tags: ["알고리즘"]
+keywords: "알고리즘, 최소신장트리, MST, Minimum Spanning Tree, Kruskal, Prim, 그래프, Graph, 그리디, 자료구조"
 ---
 
 > 학부 수업 "알고리즘설계와분석"에서 배운 MST(Minimum Spanning Tree)의 핵심 개념과 알고리즘, 증명을 정리한다.

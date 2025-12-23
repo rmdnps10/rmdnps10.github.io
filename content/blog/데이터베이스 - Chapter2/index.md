@@ -5,6 +5,7 @@ description: "E-R 모델의 핵심 개념부터 실제 관계형 스키마 변�
 thumbnail: "./index.png"
 pointColor: "#ffffff"
 tags: ["DB"]
+keywords: "데이터베이스, DB, ERD, Entity-Relationship Diagram, 엔티티 관계 모델, 데이터베이스 설계, 스키마, 정규화, 관계형 모델, DBMS"
 ---
 
 ![](./index.png)

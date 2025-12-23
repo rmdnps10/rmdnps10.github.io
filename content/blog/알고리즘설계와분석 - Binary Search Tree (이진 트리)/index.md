@@ -5,6 +5,7 @@ description: Binary Search Tree(이진 탐색 트리) 의 정의, 핵심 연산,
 thumbnail: "./index.png"
 pointColor: "#ffffff"
 tags: ["알고리즘"]
+keywords: "알고리즘, 이진 탐색 트리, Binary Search Tree, BST, 자료구조, 트리, Tree, 탐색, 삽입, 삭제, 시간 복잡도"
 ---
 
 > 학부 수업 "알고리즘설계와분석" 내용을 정리합니다.

@@ -5,6 +5,7 @@ description: "React에 익숙한 개발자 입장에서 투두리스트를 구�
 thumbnail: "./index.png"
 pointColor: "#0468d7"
 tags: ["Flutter"]
+keywords: "Flutter, Riverpod, 상태관리, State Management, Dart, 모바일 개발, TODO, 투두리스트, Provider, React, 크로스플랫폼"
 ---
 
 > LG전자 산학 캡스톤에서 Flutter로 프로젝트를 진행하기 전 프리코스로 TODO 리스트 개발 과제가 주어졌다. 이 글에서는 TODO 리스트 실습을 통해 어떻게 Riverpod을 통한 상태구현을 잘 구현할 수 있는지 다뤄본다.

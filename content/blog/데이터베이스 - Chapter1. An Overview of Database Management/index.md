@@ -5,6 +5,7 @@ description: "학부 수업 데이터베이스시스템을 수강하고 배운 �
 thumbnail: "./index.png"
 pointColor: "#ffffff"
 tags: ["DB"]
+keywords: "데이터베이스, DB, Database, SQL, DBMS, 관계형 데이터베이스, RDBMS, CRUD, 데이터 모델, 스키마, 트랜잭션"
 ---
 
 ![](./index.png)

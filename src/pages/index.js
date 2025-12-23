@@ -210,6 +210,7 @@ export const Head = () => (
   <Seo 
     title="난너의오른팔" 
     description="Web 기술과 AI 활용법을 공부하는 주니어 개발자, 커뮤니티 빌더의 기술 블로그"
+    keywords="기술 블로그, 웹 개발, AI, 머신러닝, React, Gatsby, 프론트엔드, 백엔드, RAG, 프롬프트 엔지니어링, Flutter, 개발자 블로그"
   />
 )
 

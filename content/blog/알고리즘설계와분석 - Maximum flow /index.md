@@ -5,6 +5,7 @@ description: 네트워크에서 최대 유량을 찾는 Max Flow 문제와 Ford-
 thumbnail: "./index.png"
 pointColor: "#ffffff"
 tags: ["알고리즘"]
+keywords: "알고리즘, 최대 유량, Maximum Flow, Max Flow, Ford-Fulkerson, 네트워크 플로우, Network Flow, 그래프, Graph, 최소 컷"
 ---
 
 > 학부 수업 "알고리즘설계와분석" 내용을 정리한다. 

@@ -5,6 +5,7 @@ description: Dynamic Programming의 개념부터 Rod Cutting, Optimal BST, LCS, 
 thumbnail: "./index.png"
 pointColor: "#ffffff"
 tags: ["알고리즘"]
+keywords: "알고리즘, 동적 계획법, Dynamic Programming, DP, 메모이제이션, Memoization, 최적화, Rod Cutting, LCS, 최장 공통 부분 수열, 알고리즘 설계"
 ---
 
 > 학부 수업 "알고리즘설계와분석"에서 배운 내용을 정리합니다.

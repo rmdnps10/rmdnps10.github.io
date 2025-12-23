@@ -5,6 +5,7 @@ description: 그래프 탐색의 두 가지 핵심 알고리즘인 BFS와 DFS의
 thumbnail: ./index.png
 pointColor: "#ffffff"
 tags: ["알고리즘"]
+keywords: "알고리즘, BFS, DFS, 너비 우선 탐색, 깊이 우선 탐색, 그래프 탐색, Topological Sort, 위상 정렬, 그래프, Graph"
 ---
 
 > 학부 수업 "알고리즘설계와분석" 내용을 정리한다. 

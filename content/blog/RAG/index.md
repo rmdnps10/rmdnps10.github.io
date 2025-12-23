@@ -5,6 +5,7 @@ description: "RAG의 핵심 개념부터 벡터 DB 구축, 실제 챗봇 구현�
 thumbnail: "./index.png"
 pointColor: "#FF6B6B"
 tags: ["AI"]
+keywords: "RAG, 검색 증강 생성, Retrieval-Augmented Generation, 벡터 데이터베이스, Vector DB, LLM, 대형 언어 모델, 챗봇, AI, 머신러닝, 자연어 처리, NLP, Python, 임베딩, Embedding"
 ---
 
 > 대형 언어 모델의 한계를 극복하고 실시간 정보 활용을 가능하게 하는 RAG 기술이 주목받고 있다. 검색과 생성을 결합한 이 혁신적인 접근법을 이론부터 실습까지 알아보자.

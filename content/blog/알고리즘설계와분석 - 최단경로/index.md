@@ -5,6 +5,7 @@ description: Bellman-Ford와 Dijkstra 알고리즘으로 그래프의 최단경�
 thumbnail: "./index.png"
 pointColor: "#ffffff"
 tags: ["알고리즘"]
+keywords: "알고리즘, 최단경로, Shortest Path, Dijkstra, 다익스트라, Bellman-Ford, 벨만-포드, 그래프, Graph, 동적 계획법"
 ---
 
 > 학부 수업 "알고리즘설계와분석" 내용을 정리한다. 

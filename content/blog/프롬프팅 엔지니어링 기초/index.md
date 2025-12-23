@@ -5,6 +5,7 @@ description: "프롬프트 엔지니어링의 기초 개념부터 실전 기법�
 thumbnail: "./index.png"
 pointColor: "#ffffff"
 tags: ["AI"]
+keywords: "프롬프트 엔지니어링, Prompt Engineering, AI, ChatGPT, LLM, 대형 언어 모델, 자연어 처리, NLP, Python, 머신러닝, GPT, 인공지능"
 ---
 
 > AI 시대에 접어들면서 프롬프트 엔지니어링은 필수 스킬이 되었다. 단순히 질문을 던지는 것을 넘어서, AI로부터 원하는 결과를 정확하게 얻어내는 기술을 체계적으로 알아보자.
