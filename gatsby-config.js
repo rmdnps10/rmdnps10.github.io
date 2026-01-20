@@ -15,8 +15,8 @@ module.exports = {
       university: `Sogang University`,
       summary: ` 🧑‍💻 Junior Software Developer`,
     },
-    description: `Web 기술과 AI 활용법을 공부하는 주니어 개발자, 커뮤니티 빌더`,
-    siteUrl: `https://rmdnps10.github.io/`,
+    description: `Web 기술과 AI 활용법을 공부하는 주니어 개발자, 🧑‍💻 정인영입니다.`,
+    siteUrl: `https://inyoung.dev/`,
     social: {
       instagram: `rmdnps10`,
     },
@@ -31,8 +31,8 @@ module.exports = {
     {
       resolve: "gatsby-plugin-robots-txt",
       options: {
-        host: "https://rmdnps10.github.io/",
-        sitemap: "https://rmdnps10.github.io/sitemap-index.xml",
+        host: "https://inyoung.dev/",
+        sitemap: "https://inyoung.dev/sitemap-index.xml",
         policy: [{ userAgent: "*", allow: "/" }],
       },
     },
@@ -46,7 +46,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-canonical-urls`,
       options: {
-        siteUrl: `https://rmdnps10.github.io/`,
+        siteUrl: `https://inyoung.dev/`,
         stripQueryString: true,
       },
     },
@@ -166,7 +166,8 @@ module.exports = {
             }`,
             output: "/rss.xml",
             title: "난너의오른팔 기술 블로그 RSS Feed",
-            description: "Web 기술과 AI 활용법을 공부하는 주니어 개발자, 커뮤니티 빌더의 기술 블로그",
+            description:
+              "Web 기술과 AI 활용법을 공부하는 주니어 개발자, 커뮤니티 빌더의 기술 블로그",
           },
         ],
       },
