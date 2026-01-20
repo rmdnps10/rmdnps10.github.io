@@ -1,5 +1,6 @@
 ---
 title: 알고리즘설계와분석 - 최단경로 (Shortest Path)
+slug: "algorithm-shortest-path"
 date: 2025-12-13
 description: Bellman-Ford와 Dijkstra 알고리즘으로 그래프의 최단경로를 찾는 방법을 알아보자.
 thumbnail: "./index.png"

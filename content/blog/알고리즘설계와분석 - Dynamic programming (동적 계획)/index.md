@@ -1,5 +1,6 @@
 ---
 title: 알고리즘설계와분석 - Dynamic Programming (동적 계획법)
+slug: "algorithm-dynamic-programming"
 date: 2025-12-07
 description: Dynamic Programming의 개념부터 Rod Cutting, Optimal BST, LCS, BST 개수 세기 등 구체적인 예제와 함께 정리한다.
 thumbnail: "./index.png"

@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from "react"
+import React, { useEffect, useState } from "react"
 import roles from "../../data/career.json"
 
 // 이미지 import - 인덱스 순서대로

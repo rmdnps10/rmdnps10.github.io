@@ -1,5 +1,6 @@
 ---
 title: 데이터베이스 시스템 개론 📚 – Chapter 1. Introduction of Database Systems
+slug: "database-system-introduction"
 date: "2025-09-16"
 description: "학부 수업 데이터베이스시스템을 수강하고 배운 내용을 정리합니다."
 thumbnail: "./index.png"

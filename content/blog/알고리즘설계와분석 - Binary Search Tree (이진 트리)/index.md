@@ -1,5 +1,6 @@
 ---
 title: 알고리즘설계와분석 - Binary Search Tree (이진 탐색 트리)
+slug: "algorithm-binary-search-tree"
 date: 2025-12-05
 description: Binary Search Tree(이진 탐색 트리) 의 정의, 핵심 연산, 그리고 시간 복잡도에 관한 모든 것에 대해 알아보자.
 thumbnail: "./index.png"

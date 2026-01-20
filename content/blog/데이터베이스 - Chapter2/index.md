@@ -1,5 +1,6 @@
 ---
 title: "데이터베이스 시스템 개론 📚 - Chapter2. ERD로 데이터베이스 설계하기"
+slug: "database-system-erd"
 date: "2025-10-05"
 description: "E-R 모델의 핵심 개념부터 실제 관계형 스키마 변환까지 체계적인 데이터베이스 설계 방법을 알아보자."
 thumbnail: "./index.png"

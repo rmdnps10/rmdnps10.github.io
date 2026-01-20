@@ -1,5 +1,6 @@
 ---
 title: "[컴퓨터구조] 3. CPU"
+slug: "computer-architecture-cpu"
 date: "2026-01-18"
 description: "이것이 컴퓨터 과학이다 + 혼자 공부하는 컴퓨터 구조/운영체제를 읽으면서 배운 내용을 정리합니다. CPU의 내부 구조와 명령어 처리 과정, 성능 향상 기법을 학습합니다."
 thumbnail: "./index.png"

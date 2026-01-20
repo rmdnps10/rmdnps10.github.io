@@ -1,5 +1,6 @@
 ---
 title: "WebOS TV에 들어갈 풀스택 애플리케이션을 만들어보자 (LG전자 산학 프로젝트 후기)"
+slug: "lg-webos-tv-fullstack-appliaction"
 date: "2025-12-22"
 description: "LG 전자 산학 협력 커넥티드 플랫폼 수업에서, TV에 들어갈 풀스택 webOS application을 만들었던 후기를 공유한다."
 thumbnail: "./index.png"

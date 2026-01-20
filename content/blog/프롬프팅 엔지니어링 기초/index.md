@@ -1,5 +1,6 @@
 ---
 title: "프롬프트 엔지니어링 기초 - AI와 효과적으로 소통하는 방법"
+slug: "prompt-engineering-basic"
 date: "2025-09-28"
 description: "프롬프트 엔지니어링의 기초 개념부터 실전 기법까지, Python 코드 예제와 함께 알아보자."
 thumbnail: "./index.png"

@@ -1,5 +1,6 @@
 ---
 title: 알고리즘설계와분석 - Greedy algorithm (그리디 알고리즘)
+slug: "algorithm-greedy-algorithm"
 date: 2025-12-10
 description: 매 순간 최선의 선택을 하는 Greedy Algorithm의 원리와 대표 문제들을 정리한다.
 thumbnail: "./index.png"

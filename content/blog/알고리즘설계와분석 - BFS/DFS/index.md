@@ -1,5 +1,6 @@
 ---
 title: 알고리즘설계와분석 - BFS/DFS와 Topological Sort
+slug: "algorithm-bfs-dfs"
 date: 2025-12-11
 description: 그래프 탐색의 두 가지 핵심 알고리즘인 BFS와 DFS의 원리, 구현 및 Topological Sort에 대해 알아본다.
 thumbnail: ./index.png

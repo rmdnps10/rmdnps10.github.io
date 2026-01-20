@@ -1,5 +1,6 @@
 ---
 title: 알고리즘설계와분석 - 최대 유량 문제 (Maximum Flow)
+slug: "algorithm-maximum-flow"
 date: 2025-12-16
 description: 네트워크에서 최대 유량을 찾는 Max Flow 문제와 Ford-Fulkerson 알고리즘, 그리고 실전 응용 문제에 대해 정리한다.
 thumbnail: "./index.png"

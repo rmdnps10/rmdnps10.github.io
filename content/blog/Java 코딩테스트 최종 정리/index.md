@@ -1,5 +1,6 @@
 ---
 title: "Java 코딩테스트 문법 최종 정리"
+slug: "java-coding-test-grammer"
 date: "2026-01-08"
 description: "Java로 코딩테스트를 준비하며 자주 사용하는 문법과 메서드들을 다~ 정리해보자."
 thumbnail: "./index.png"

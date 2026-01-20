@@ -6,6 +6,7 @@
 
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
+const slugify = require("slugify")
 
 // Define the template for blog post
 const blogPost = path.resolve(`./src/templates/blog-post.js`)
@@ -69,12 +70,24 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
 
   if (node.internal.type === `MarkdownRemark`) {
-    const value = createFilePath({ node, getNode })
+    // 1. frontmatter에 slug가 있으면 그것을 사용
+    let slug = node.frontmatter?.slug
+
+    if (slug) {
+      // 사용자 지정 slug 정규화
+      slug = slug.toLowerCase().trim()
+      // 슬래시가 없으면 앞뒤에 추가
+      if (!slug.startsWith("/")) slug = `/${slug}`
+      if (!slug.endsWith("/")) slug = `${slug}/`
+    } else {
+      // 2. slug가 없으면 기존 방식 (파일 경로 기반)
+      slug = createFilePath({ node, getNode })
+    }
 
     createNodeField({
       name: `slug`,
       node,
-      value,
+      value: slug,
     })
   }
 }
@@ -116,6 +129,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       title: String
       description: String
       date: Date @dateformat
+      slug: String
     }
 
     type Fields {

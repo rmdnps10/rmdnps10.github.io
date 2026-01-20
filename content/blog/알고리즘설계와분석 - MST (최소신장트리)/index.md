@@ -1,5 +1,6 @@
 ---
 title: 알고리즘설계와분석 - MST (최소신장트리)
+slug: "algorithm-minimum-spanning-tree"
 date: 2025-12-12
 description: 최소 비용으로 모든 정점을 연결하는 MST의 개념과 Kruskal, Prim 알고리즘을 정리한다.
 thumbnail: "./index.png"

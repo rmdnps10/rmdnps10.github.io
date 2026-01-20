@@ -1,5 +1,6 @@
 ---
 title: "허깅페이스로 파이프라인을 만들어보자 - 트랜스포머 모델 활용 가이드"
+slug: "make-huggingface-pipeline"
 date: "2025-10-04"
 description: "허깅페이스 라이브러리로 NLP 모델을 쉽게 활용하는 방법부터 복합 파이프라인 구축까지 단계별로 알아보자."
 thumbnail: "./index.png"

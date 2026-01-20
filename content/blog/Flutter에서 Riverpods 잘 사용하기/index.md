@@ -1,5 +1,6 @@
 ---
 title: "초심자 입장에서 Flutter Riverpod을 '잘' 사용하는 방법 (장문)"
+slug: "how-to-use-flutter-riverpod"
 date: "2025-09-20"
 description: "React에 익숙한 개발자 입장에서 투두리스트를 구현하며 Flutter의 Riverpod 사용법을 다뤄봅니다."
 thumbnail: "./index.png"

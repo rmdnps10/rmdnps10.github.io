@@ -1,5 +1,6 @@
 ---
 title: "[컴퓨터구조] 2. 컴퓨터가 이해하는 정보"
+slug: "computer-architecture-computer-information"
 date: "2026-01-17"
 description: "이것이 컴퓨터 과학이다 + 혼자 공부하는 컴퓨터 구조/운영체제를 읽으면서 배운 내용을 정리합니다. 컴퓨터가 데이터와 명령어를 어떻게 이해하고 처리하는지 2진법 체계와 명령어 구조를 중심으로 살펴봅니다. "
 thumbnail: "./index.png"
