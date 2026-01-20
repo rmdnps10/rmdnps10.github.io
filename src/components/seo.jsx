@@ -97,7 +97,7 @@ const Seo = ({
       {/* 검색 엔진 검증 */}
       <meta
         name="google-site-verification"
-        content="qF0J_4XAYAbU9SwIaK0vZrv0zfjMDParCNbO-CwMCow"
+        content="xQKLF2y2-wtxhlY8T_2vxX7OTpw80YwsTUcOGBzgJh0"
       />
       <meta
         name="naver-site-verification"
