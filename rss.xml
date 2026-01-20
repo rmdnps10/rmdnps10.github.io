@@ -1,4 +1,655 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[난너의오른팔 기술 블로그 RSS Feed]]></title><description><![CDATA[Web 기술과 AI 활용법을 공부하는 주니어 개발자, 커뮤니티 빌더의 기술 블로그]]></description><link>https://rmdnps10.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 20 Jan 2026 08:15:49 GMT</lastBuildDate><item><title><![CDATA[[컴퓨터구조] 1. 컴퓨터구조의 큰 그림]]></title><description><![CDATA['이것이 취업을 위한 컴퓨터 과학이다 with CS…]]></description><link>https://rmdnps10.github.io/[컴퓨터구조]  컴퓨터 구조의 큰 그림/</link><guid isPermaLink="false">https://rmdnps10.github.io/[컴퓨터구조]  컴퓨터 구조의 큰 그림/</guid><pubDate>Sat, 17 Jan 2026 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[난너의오른팔 기술 블로그 RSS Feed]]></title><description><![CDATA[Web 기술과 AI 활용법을 공부하는 주니어 개발자, 커뮤니티 빌더의 기술 블로그]]></description><link>https://rmdnps10.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 20 Jan 2026 11:48:34 GMT</lastBuildDate><item><title><![CDATA[[컴퓨터구조] 3. CPU]]></title><description><![CDATA[책을 읽으면서 배운 점을 정리합니다. 이번 글에서는 개발자가 알아야 할 의 핵심 개념들을 학습합니다. 레지스터의 역할부터 인터럽트 처리 과정, 그리고 CPU 성능 향상을 위한 다양한 설계 기법에 대해 다룹니다. 1️⃣ 레지스터 는 CPU…]]></description><link>https://rmdnps10.github.io/[컴퓨터구조] CPU/</link><guid isPermaLink="false">https://rmdnps10.github.io/[컴퓨터구조] CPU/</guid><pubDate>Sun, 18 Jan 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1000px; background: transparent;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/f0a910359965b97ebd62fb1d0d744e59/60f98/index.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 47.599999999999994%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsTAAALEwEAmpwYAAACaklEQVR42h2S124aURCG95Ej5SpSepMTEoc4NjZem2p6r0tZwNSlF4OxAVeiRJFf4svAxUhnz5n55y+rLG7WLG/X3K+fWNz8ZXn3j+XjE4PpktZwTH96LbXAGF5iDGZU6l1SWoUTu59ILMv1as3q7g/L1QPzq1uUhYBdrx7J6Q3SuSpGf8ZKwINxjXJzQHs0pzO+onexEOAlYbmPxHO8eW/Ccuig2Z7QG1zSMvqMJ3OUq+UDLk+Yjzs/UG0ezL+sDGc3xLUyg/kdk+Wa2eo3U6m5MAkncviCCWyuoMxFsRy7OTp24XT6aAqoksqW2N1T+f7TinlfFUCVnW8H2GVJttIiLxK1qoEmZ63cwnxwilOAQvE8Lm+UU2cQfyjNx08mtEIZxbRr4e2HL0yv7ml1pzx7/pIXrz9TrHVJ5s/xRjKYj2ycOAN4QykcAhJLl1AdfpxyDkaypPNVbHYPermGUpFB0+4+aTH6LBDn8OSMSmvI8PKWsSxp9KbojT75akdCmnMhFpTku9G9IFuobwE3nuaLNVqdIUpH0tOK9W0o/kiagDSEpMEbTuMOJKRihFNF7N4YbmHYkXDy52180SxZmdFrva30ZEanLYEq5+0R58amhhzZvMLQI/5FOHYEOFDd7KsuLKdnmPasuER+OK1jFbmZUoNATONQ3lMiudaZUKr3RLKA1YV+pTUiKs2+WG5bkUyZkHi1ATx2B4iJpGBKJ5wsooqfr959Ze/QTqZQ2xIqCmtdbFEK1R56vS++DCjIRTJfk+0GzdE1JWOMTeT4BaS88axsbOVuGAXl94mL7z5hnchWKJTqYl2V/w5jdma0jL+fAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+          &lt;source
+              srcset=&quot;/static/f0a910359965b97ebd62fb1d0d744e59/bc904/index.webp 250w,
+/static/f0a910359965b97ebd62fb1d0d744e59/4be29/index.webp 500w,
+/static/f0a910359965b97ebd62fb1d0d744e59/03f31/index.webp 1000w,
+/static/f0a910359965b97ebd62fb1d0d744e59/fab20/index.webp 1122w&quot;
+              sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
+              type=&quot;image/webp&quot;
+            /&gt;
+          &lt;source
+            srcset=&quot;/static/f0a910359965b97ebd62fb1d0d744e59/43fa5/index.png 250w,
+/static/f0a910359965b97ebd62fb1d0d744e59/c6e3d/index.png 500w,
+/static/f0a910359965b97ebd62fb1d0d744e59/da8b6/index.png 1000w,
+/static/f0a910359965b97ebd62fb1d0d744e59/60f98/index.png 1122w&quot;
+            sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
+            type=&quot;image/png&quot;
+          /&gt;
+          &lt;img
+            class=&quot;gatsby-resp-image-image&quot;
+            src=&quot;/static/f0a910359965b97ebd62fb1d0d744e59/da8b6/index.png&quot;
+            alt=&quot;index&quot;
+            title=&quot;&quot;
+            loading=&quot;lazy&quot;
+            decoding=&quot;async&quot;
+            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+          /&gt;
+        &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;이것이 취업을 위한 컴퓨터 과학이다 with CS 기술 면접&lt;/code&gt; 책을 읽으면서 배운 점을 정리합니다.&lt;/p&gt;
+&lt;p&gt;이번 글에서는 개발자가 알아야 할 &lt;code class=&quot;language-text&quot;&gt;CPU&lt;/code&gt;의 핵심 개념들을 학습합니다. 레지스터의 역할부터 인터럽트 처리 과정, 그리고 CPU 성능 향상을 위한 다양한 설계 기법에 대해 다룹니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;1️-레지스터&quot;&gt;1️⃣ 레지스터&lt;/h2&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;레지스터&lt;/code&gt;는 CPU 안에 있는 작은 &lt;code class=&quot;language-text&quot;&gt;임시 저장장치&lt;/code&gt;다. 프로그램을 이루는 데이터와 명령어가 실행 전후로 레지스터에 저장되기 때문에 레지스터에 저장된 값만 잘 관찰해도 프로그램이 어떻게 작동하는지 파악할 수 있다.&lt;/p&gt;
+&lt;h3 id=&quot;주요-레지스터의-종류&quot;&gt;주요 레지스터의 종류&lt;/h3&gt;
+&lt;h4 id=&quot;프로그램-카운터-program-counter&quot;&gt;프로그램 카운터 (Program Counter)&lt;/h4&gt;
+&lt;p&gt;프로그램 카운터는 메모리에서 다음으로 읽어 들일 명령어의 주소를 저장한다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;📍 프로그램 카운터의 동작&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;일반적으로 1씩 증가하며 다음 명령어 주소를 가리킨다&lt;/li&gt;
+&lt;li&gt;순차적인 프로그램 실행은 프로그램 카운터가 1씩 증가하기 때문에 가능하다&lt;/li&gt;
+&lt;li&gt;조건문이나 리턴문 실행 시에는 임의의 위치로 변경된다&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;명령어-레지스터-instruction-register&quot;&gt;명령어 레지스터 (Instruction Register)&lt;/h4&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;명령어 레지스터&lt;/code&gt;는 메모리에서 방금 읽어 들인 &lt;code class=&quot;language-text&quot;&gt;명령어&lt;/code&gt;를 저장한다. 제어장치는 명령어 레지스터 속 명령어를 해석한 뒤 ALU로 하여금 연산하도록 시키거나 다른 부품으로 제어 신호를 보낸다.&lt;/p&gt;
+&lt;h4 id=&quot;범용-레지스터-general-purpose-register&quot;&gt;범용 레지스터 (General Purpose Register)&lt;/h4&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;범용 레지스터&lt;/code&gt;는 다양하고 &lt;code class=&quot;language-text&quot;&gt;일반적인 상황&lt;/code&gt;에서 자유롭게 사용할 수 있는 레지스터다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;데이터, 명령어, 주소 모두 저장 가능&lt;/li&gt;
+&lt;li&gt;CPU 안에 여러 개 존재&lt;/li&gt;
+&lt;li&gt;프로그래머가 직접 활용 가능&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;플래그-레지스터-flag-register&quot;&gt;플래그 레지스터 (Flag Register)&lt;/h4&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;플래그 레지스터&lt;/code&gt;는 &lt;code class=&quot;language-text&quot;&gt;연산의 결과 혹은 CPU 상태&lt;/code&gt;에 대한 &lt;code class=&quot;language-text&quot;&gt;부가 정보&lt;/code&gt;를 저장한다. 플래그는 CPU가 명령어를 처리하는 과정에서 반드시 참조해야 할 상태 정보를 의미하는 비트다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;🚩 주요 플래그의 종류&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;플래그&lt;/th&gt;
+&lt;th&gt;설명&lt;/th&gt;
+&lt;th&gt;의미&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;부호 플래그&lt;/td&gt;
+&lt;td&gt;연산 결과의 부호&lt;/td&gt;
+&lt;td&gt;1: 음수, 0: 양수&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;제로 플래그&lt;/td&gt;
+&lt;td&gt;연산 결과가 0인지 여부&lt;/td&gt;
+&lt;td&gt;1: 결과가 0, 0: 결과가 0이 아님&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;캐리 플래그&lt;/td&gt;
+&lt;td&gt;올림수나 빌림수 발생 여부&lt;/td&gt;
+&lt;td&gt;1: 발생, 0: 미발생&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;오버플로우 플래그&lt;/td&gt;
+&lt;td&gt;오버플로우 발생 여부&lt;/td&gt;
+&lt;td&gt;1: 발생, 0: 미발생&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;인터럽트 플래그&lt;/td&gt;
+&lt;td&gt;인터럽트 가능 여부&lt;/td&gt;
+&lt;td&gt;1: 가능, 0: 불가능&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;슈퍼바이저 플래그&lt;/td&gt;
+&lt;td&gt;실행 모드 구분&lt;/td&gt;
+&lt;td&gt;1: 커널 모드, 0: 사용자 모드&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4 id=&quot;스택-포인터-stack-pointer&quot;&gt;스택 포인터 (Stack Pointer)&lt;/h4&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;스택 포인터&lt;/code&gt;는 &lt;code class=&quot;language-text&quot;&gt;메모리&lt;/code&gt; 내 스택 영역의 최상단 &lt;code class=&quot;language-text&quot;&gt;데이터 위치&lt;/code&gt;를 가리키는 레지스터다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;🔝 스택 포인터의 역할&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;마지막으로 스택에 저장된 데이터의 위치를 가리킴&lt;/li&gt;
+&lt;li&gt;스택이 채워진 정도를 나타냄&lt;/li&gt;
+&lt;li&gt;데이터를 꺼내면 이전 데이터 위치를 가리키도록 갱신됨&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# 스택 포인터 동작 예시&lt;/span&gt;
+메모리 &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt; 스택 영역
+&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;스택 데이터 &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;스택 데이터 &lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;스택 데이터 &lt;span class=&quot;token number&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; ← 스택 포인터
+
+&lt;span class=&quot;token comment&quot;&gt;# pop() 후&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;스택 데이터 &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;스택 데이터 &lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; ← 스택 포인터&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id=&quot;2️-인터럽트&quot;&gt;2️⃣ 인터럽트&lt;/h2&gt;
+&lt;p&gt;인터럽트는 CPU의 작업을 방해하는 신호를 의미한다. 인터럽트는 크게 &lt;code class=&quot;language-text&quot;&gt;동기 인터럽트&lt;/code&gt;와 &lt;code class=&quot;language-text&quot;&gt;비동기 인터럽트&lt;/code&gt;로 나뉜다.&lt;/p&gt;
+&lt;h3 id=&quot;인터럽트의-분류&quot;&gt;인터럽트의 분류&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;🔄 동기 인터럽트 (Synchronous Interrupts)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;동기 인터럽트는 CPU에 의해 발생하는 인터럽트다. CPU가 예외적인 상황을 마주쳤을 때 발생하며, &lt;code class=&quot;language-text&quot;&gt;예외(Exception)&lt;/code&gt;라고도 부른다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;⚡ 비동기 인터럽트 (Asynchronous Interrupts)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;비동기 인터럽트는 주로 입출력장치에 의해 발생하는 인터럽트다. &lt;code class=&quot;language-text&quot;&gt;하드웨어 인터럽트&lt;/code&gt;라고도 부른다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;입출력 작업 완료 알림&lt;/li&gt;
+&lt;li&gt;키보드, 마우스 입력 알림&lt;/li&gt;
+&lt;li&gt;하드웨어 이벤트 알림&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;하드웨어-인터럽트&quot;&gt;하드웨어 인터럽트&lt;/h3&gt;
+&lt;p&gt;하드웨어 인터럽트는 CPU가 효율적으로 명령어를 처리하기 위해 사용한다. 인터럽트를 사용하지 않는다면 CPU는 입출력장치의 작업 완료 여부를 주기적으로 확인해야 한다(&lt;code class=&quot;language-text&quot;&gt;폴링&lt;/code&gt;).&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;💡 폴링(Polling)이란?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;폴링은 입출력장치의 상태가 어떤지, 처리할 데이터가 있는지 주기적으로 확인하는 방식이다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;CPU 사이클을 낭비함&lt;/li&gt;
+&lt;li&gt;입출력 완료를 기다리는 동안 다른 작업 불가&lt;/li&gt;
+&lt;li&gt;인터럽트 방식에 비해 비효율적&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;하드웨어 인터럽트를 사용하면 CPU는 입출력 작업이 진행되는 동안 다른 작업을 처리할 수 있다.&lt;/p&gt;
+&lt;h4 id=&quot;하드웨어-인터럽트-처리-과정&quot;&gt;하드웨어 인터럽트 처리 과정&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;1️⃣ 인터럽트 요청 신호&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;입출력장치는 CPU에게 &lt;code class=&quot;language-text&quot;&gt;인터럽트 요청(Interrupt Request)&lt;/code&gt; 신호를 보낸다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2️⃣ 인터럽트 여부 확인&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;CPU는 실행 사이클이 끝나고 명령어를 인출하기 전에 항상 인터럽트 여부를 확인한다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;3️⃣ 인터럽트 플래그 확인&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;CPU는 플래그 레지스터의 &lt;code class=&quot;language-text&quot;&gt;인터럽트 플래그&lt;/code&gt;를 통해 현재 인터럽트를 받아들일 수 있는지 확인한다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;인터럽트 플래그가 활성화되어 있어야 인터럽트 수용 가능&lt;/li&gt;
+&lt;li&gt;일부 인터럽트는 플래그와 무관하게 처리됨 (&lt;code class=&quot;language-text&quot;&gt;Non-Maskable Interrupt&lt;/code&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;4️⃣ 작업 백업&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;CPU는 현재까지의 작업을 메모리 내 스택에 백업한다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;백업 내용
+- 프로그램 카운터 값
+- 레지스터 값들
+- 프로그램 재개에 필요한 모든 정보&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;5️⃣ 인터럽트 서비스 루틴 실행&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;CPU는 &lt;code class=&quot;language-text&quot;&gt;인터럽트 벡터(Interrupt Vector)&lt;/code&gt;를 참조하여 해당하는 &lt;code class=&quot;language-text&quot;&gt;인터럽트 서비스 루틴(ISR)&lt;/code&gt;을 실행한다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;💡 인터럽트 서비스 루틴(ISR)이란?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;인터럽트를 처리하기 위한 프로그램으로, &lt;code class=&quot;language-text&quot;&gt;인터럽트 핸들러&lt;/code&gt;라고도 부른다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;입출력장치마다 각기 다른 ISR을 가짐&lt;/li&gt;
+&lt;li&gt;메모리에 여러 개의 ISR이 저장되어 있음&lt;/li&gt;
+&lt;li&gt;인터럽트 벡터를 통해 적절한 ISR을 찾아 실행함&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;6️⃣ 작업 복구&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;ISR 실행이 끝나면 백업해 둔 작업을 복구하여 실행을 재개한다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;인터럽트 처리 흐름
+
+정상 작업 진행
+    ↓
+인터럽트 발생
+    ↓
+현재 상태 백업
+    ↓
+ISR으로 점프
+    ↓
+ISR 실행
+    ↓
+백업 상태 복구
+    ↓
+이전 작업 재개&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h4 id=&quot;인터럽트-벡터&quot;&gt;인터럽트 벡터&lt;/h4&gt;
+&lt;p&gt;인터럽트 벡터는 인터럽트 서비스 루틴을 식별하기 위한 정보다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;ISR의 시작 주소를 포함&lt;/li&gt;
+&lt;li&gt;CPU는 인터럽트 벡터를 통해 특정 ISR을 실행&lt;/li&gt;
+&lt;li&gt;버스를 통해 전달됨&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# 인터럽트 벡터 예시&lt;/span&gt;
+메모리
+┌─────────────────────────┐
+│ ISR A &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;키보드&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;          │ ← 인터럽트 벡터 A
+├─────────────────────────┤
+│ ISR B &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;프린터&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;          │ ← 인터럽트 벡터 B
+├─────────────────────────┤
+│ ISR C &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;마우스&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;          │ ← 인터럽트 벡터 C
+└─────────────────────────┘
+
+프린터 인터럽트 발생
+→ 인터럽트 벡터 B 전달
+→ ISR B의 시작 주소로 점프
+→ 프린터 ISR 실행&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id=&quot;명령어-사이클과-인터럽트&quot;&gt;명령어 사이클과 인터럽트&lt;/h3&gt;
+&lt;p&gt;인터럽트 사이클까지 포함한 명령어 사이클의 전체 흐름은 다음과 같다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;인출 사이클 → (간접 사이클) → 실행 사이클 → 인터럽트 사이클 → 인출 사이클 → ...&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id=&quot;예외-exception&quot;&gt;예외 (Exception)&lt;/h3&gt;
+&lt;p&gt;예외는 동기 인터럽트로, CPU에 의해 발생한다. 예외의 종류는 다음과 같다.&lt;/p&gt;
+&lt;h4 id=&quot;폴트-fault&quot;&gt;폴트 (Fault)&lt;/h4&gt;
+&lt;p&gt;폴트는 예외를 처리한 직후에 예외가 발생한 명령어부터 실행을 재개하는 예외다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;📄 페이지 폴트 예시&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;1. CPU가 명령어 실행 시도
+2. 필요한 데이터가 메모리에 없음
+3. 폴트 발생
+4. 보조기억장치에서 데이터를 메모리로 로드
+5. 폴트가 발생한 명령어부터 다시 실행&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h4 id=&quot;트랩-trap&quot;&gt;트랩 (Trap)&lt;/h4&gt;
+&lt;p&gt;트랩은 예외를 처리한 직후에 예외가 발생한 명령어의 다음 명령어부터 실행을 재개하는 예외다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;🐛 브레이크포인트 예시&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;calculate&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    x &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;10&lt;/span&gt;
+    y &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;20&lt;/span&gt;
+    &lt;span class=&quot;token comment&quot;&gt;# 브레이크포인트 설정 → 트랩 발생&lt;/span&gt;
+    result &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; x &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; y  &lt;span class=&quot;token comment&quot;&gt;# 디버깅 후 이 줄부터 실행 재개&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; result&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h4 id=&quot;중단-abort&quot;&gt;중단 (Abort)&lt;/h4&gt;
+&lt;p&gt;중단은 실행 중인 프로그램을 강제로 중단시킬 수밖에 없는 심각한 오류를 발견했을 때 발생하는 예외다.&lt;/p&gt;
+&lt;h4 id=&quot;소프트웨어-인터럽트&quot;&gt;소프트웨어 인터럽트&lt;/h4&gt;
+&lt;p&gt;소프트웨어 인터럽트는 시스템 콜이 발생했을 때 발생하는 예외다.&lt;/p&gt;
+&lt;h2 id=&quot;3️-cpu-성능-향상-기법&quot;&gt;3️⃣ CPU 성능 향상 기법&lt;/h2&gt;
+&lt;h3 id=&quot;cpu-클럭-속도&quot;&gt;CPU 클럭 속도&lt;/h3&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;클럭(Clock)&lt;/code&gt;은 컴퓨터의 부품을 일사불란하게 움직일 수 있게 하는 시간의 단위다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;⏱️ 클럭의 특징&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;클럭 주기에 맞춰 데이터 이동 및 연산 수행&lt;/li&gt;
+&lt;li&gt;클럭 속도는 헤르츠(Hz) 단위로 측정&lt;/li&gt;
+&lt;li&gt;1초에 몇 번 반복되는지를 나타냄&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;클럭 속도 = 1초당 클럭 횟수
+
+예시:
+- 100Hz = 1초에 100번 클럭
+- 1GHz = 1초에 1,000,000,000번 클럭&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;⚠️ 클럭 속도 향상의 한계&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;클럭 속도를 높이면 CPU 성능이 향상되지만, 과도하게 높이면 발열 문제가 발생한다. 따라서 클럭 속도만으로는 CPU 성능을 높이는 데 한계가 있다.&lt;/p&gt;
+&lt;h3 id=&quot;멀티코어&quot;&gt;멀티코어&lt;/h3&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;코어(Core)&lt;/code&gt;는 CPU 내에서 명령어를 읽어 들이고, 해석하고, 실행하는 부품을 의미한다.
+여러 개의 코어를 포함하고 있는 CPU를 &lt;code class=&quot;language-text&quot;&gt;멀티코어 CPU&lt;/code&gt; 또는 &lt;code class=&quot;language-text&quot;&gt;멀티코어 프로세서&lt;/code&gt;라고 부른다.&lt;/p&gt;
+&lt;h3 id=&quot;멀티스레드&quot;&gt;멀티스레드&lt;/h3&gt;
+&lt;h4 id=&quot;하드웨어-스레드&quot;&gt;하드웨어 스레드&lt;/h4&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;하드웨어 스레드&lt;/code&gt;는 하나의 코어가 동시에 처리하는 명령어의 단위를 의미한다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;1코어 1스레드 CPU
+- 한 번에 1개의 명령어 처리
+
+2코어 4스레드 CPU
+- 한 번에 4개의 명령어 동시 처리&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;하드웨어 스레드는 &lt;code class=&quot;language-text&quot;&gt;논리 프로세서(Logical Processor)&lt;/code&gt;라고도 부른다.&lt;/p&gt;
+&lt;h4 id=&quot;소프트웨어-스레드&quot;&gt;소프트웨어 스레드&lt;/h4&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;소프트웨어 스레드&lt;/code&gt;는 하나의 프로그램에서 독립적으로 실행되는 단위를 의미한다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; threading
+&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; time
+
+&lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;task1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; _ &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;Task 1 is running&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+        time&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;sleep&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;task2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; _ &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;Task 2 is running&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+        time&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;sleep&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;# 2개의 소프트웨어 스레드 생성&lt;/span&gt;
+thread1 &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; threading&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;Thread&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;target&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;task1&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+thread2 &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; threading&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;Thread&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;target&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;task2&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;# 동시 실행&lt;/span&gt;
+thread1&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;start&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+thread2&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;start&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+thread1&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;join&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+thread2&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;join&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;💡 하드웨어 스레드 vs 소프트웨어 스레드&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;하드웨어 스레드&lt;/strong&gt;: 병렬성(Parallelism)을 구현하기 위한 물리적 실행 단위&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;소프트웨어 스레드&lt;/strong&gt;: 동시성(Concurrency)을 구현하기 위한 논리적 실행 단위&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;1코어 1스레드 CPU에서도 여러 소프트웨어 스레드를 실행할 수 있다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&quot;병렬성과-동시성&quot;&gt;병렬성과 동시성&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;⚡ 병렬성 (Parallelism)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;병렬성은 작업을 물리적으로 동시에 처리하는 성질이다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;병렬성 예시 (4개의 하드웨어 스레드)
+
+시간 →
+Task1: ████████████████████████
+Task2: ████████████████████████
+Task3: ████████████████████████
+Task4: ████████████████████████
+
+4개의 작업이 실제로 동시에 실행됨&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;🔄 동시성 (Concurrency)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;동시성은 동시에 작업을 처리하는 것처럼 보이는 성질이다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;동시성 예시 (1개의 하드웨어 스레드)
+
+시간 →
+Task1: ███     ███     ███
+Task2:    ███     ███     ███
+Task3:       ███     ███     ███
+
+빠르게 번갈아가며 실행되어 동시에 실행되는 것처럼 보임&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id=&quot;명령어-파이프라이닝&quot;&gt;명령어 파이프라이닝&lt;/h3&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;명령어 병렬 처리 기법(Instruction-level Parallelism)&lt;/code&gt;은 여러 명령어를 동시에 처리하여 CPU를 한시도 쉬지 않고 작동시키는 기법이다.&lt;/p&gt;
+&lt;h4 id=&quot;파이프라이닝의-원리&quot;&gt;파이프라이닝의 원리&lt;/h4&gt;
+&lt;p&gt;하나의 명령어 처리 과정을 여러 단계로 나눌 수 있다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;📊 명령어 처리 단계&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;명령어 인출 (Instruction Fetch)&lt;/li&gt;
+&lt;li&gt;명령어 해석 (Instruction Decode)&lt;/li&gt;
+&lt;li&gt;명령어 실행 (Execute Instruction)&lt;/li&gt;
+&lt;li&gt;결과 저장 (Write Back)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;같은 단계가 겹치지 않는다면 CPU는 각 단계를 동시에 실행할 수 있다.&lt;/p&gt;
+&lt;h3 id=&quot;cisc-vs-risc&quot;&gt;CISC vs RISC&lt;/h3&gt;
+&lt;h4 id=&quot;cisc-complex-instruction-set-computer&quot;&gt;CISC (Complex Instruction Set Computer)&lt;/h4&gt;
+&lt;p&gt;CISC는 복잡한 명령어들로 구성된 명령어 집합이다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;🔧 CISC의 특징&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;다양한 기능을 지원하는 복잡한 명령어&lt;/li&gt;
+&lt;li&gt;적은 수의 명령어로 프로그램 실행 가능&lt;/li&gt;
+&lt;li&gt;명령어 크기와 실행 시간이 일정하지 않음&lt;/li&gt;
+&lt;li&gt;파이프라이닝에 비효율적&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;CISC 명령어 예시 (x86)
+MOVS    ; 메모리 간 데이터 복사
+LOOP    ; 반복문 실행
+CALL    ; 함수 호출&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h4 id=&quot;risc-reduced-instruction-set-computer&quot;&gt;RISC (Reduced Instruction Set Computer)&lt;/h4&gt;
+&lt;p&gt;RISC는 짧고 규격화된 명령어로 구성된 명령어 집합이다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;⚡ RISC의 특징&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;단순하고 규격화된 명령어&lt;/li&gt;
+&lt;li&gt;1클럭 내외로 실행되는 명령어 지향&lt;/li&gt;
+&lt;li&gt;같은 프로그램이라도 더 많은 명령어 필요&lt;/li&gt;
+&lt;li&gt;파이프라이닝에 최적화&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;RISC 명령어 예시 (ARM)
+ADD  R1, R2, R3  ; R2 + R3 → R1
+LOAD R1, [R2]    ; 메모리 → R1
+STORE R1, [R2]   ; R1 → 메모리&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;💡 CISC vs RISC 비교&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;특징&lt;/th&gt;
+&lt;th&gt;CISC&lt;/th&gt;
+&lt;th&gt;RISC&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;명령어 복잡도&lt;/td&gt;
+&lt;td&gt;복잡&lt;/td&gt;
+&lt;td&gt;단순&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;명령어 개수&lt;/td&gt;
+&lt;td&gt;적음&lt;/td&gt;
+&lt;td&gt;많음&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;실행 시간&lt;/td&gt;
+&lt;td&gt;불규칙&lt;/td&gt;
+&lt;td&gt;규칙적&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;파이프라이닝&lt;/td&gt;
+&lt;td&gt;비효율적&lt;/td&gt;
+&lt;td&gt;효율적&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;대표 CPU&lt;/td&gt;
+&lt;td&gt;Intel x86&lt;/td&gt;
+&lt;td&gt;ARM, Apple M1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;파이프라인-위험-pipeline-hazard&quot;&gt;파이프라인 위험 (Pipeline Hazard)&lt;/h3&gt;
+&lt;p&gt;파이프라이닝이 실패하여 성능 향상이 이루어지지 않는 상황을 &lt;code class=&quot;language-text&quot;&gt;파이프라인 위험&lt;/code&gt;이라고 한다.&lt;/p&gt;
+&lt;h4 id=&quot;데이터-위험-data-hazard&quot;&gt;데이터 위험 (Data Hazard)&lt;/h4&gt;
+&lt;p&gt;데이터 위험은 명령어 간 데이터 의존성에 의해 발생한다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;명령어 &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;R1&lt;/span&gt; ← &lt;span class=&quot;token constant&quot;&gt;R2&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;R3&lt;/span&gt;
+명령어 &lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;R4&lt;/span&gt; ← &lt;span class=&quot;token constant&quot;&gt;R1&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;R5&lt;/span&gt;  &lt;span class=&quot;token comment&quot;&gt;// R1에 의존&lt;/span&gt;
+
+명령어 &lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;는 명령어 &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;의 결과를 기다려야 함
+→ 파이프라이닝 불가&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h4 id=&quot;제어-위험-control-hazard&quot;&gt;제어 위험 (Control Hazard)&lt;/h4&gt;
+&lt;p&gt;제어 위험은 프로그램 카운터의 갑작스러운 변화에 의해 발생한다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# 분기문으로 인한 제어 위험&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; condition&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    jump to address  &lt;span class=&quot;token comment&quot;&gt;# 프로그램 카운터가 갑자기 변경&lt;/span&gt;
+                     &lt;span class=&quot;token comment&quot;&gt;# 미리 인출한 명령어들이 무용지물이 됨&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h4 id=&quot;구조적-위험-structural-hazard&quot;&gt;구조적 위험 (Structural Hazard)&lt;/h4&gt;
+&lt;p&gt;구조적 위험은 서로 다른 명령어가 동시에 같은 CPU 부품을 사용하려고 할 때 발생한다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;명령어 1과 명령어 2가 동시에 ALU를 사용하려고 시도
+→ 구조적 위험 발생
+→ 한 명령어는 대기해야 함&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[[컴퓨터구조] 2. 컴퓨터가 이해하는 정보]]></title><description><![CDATA['이것이 취업을 위한 컴퓨터 과학이다 with CS 기술 면접' 책을 읽으면서 배운 점을 정리합니다. 2진법 체계와 명령어 구조를 중심으로 살펴봅니다. 1비트와 바이트 컴퓨터는 0과 1만을 이해한다. 0과…]]></description><link>https://rmdnps10.github.io/[컴퓨터구조]  컴퓨터가 이해하는 정보/</link><guid isPermaLink="false">https://rmdnps10.github.io/[컴퓨터구조]  컴퓨터가 이해하는 정보/</guid><pubDate>Sat, 17 Jan 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1000px; background: transparent;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/f0a910359965b97ebd62fb1d0d744e59/60f98/index.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 47.599999999999994%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsTAAALEwEAmpwYAAACaklEQVR42h2S124aURCG95Ej5SpSepMTEoc4NjZem2p6r0tZwNSlF4OxAVeiRJFf4svAxUhnz5n55y+rLG7WLG/X3K+fWNz8ZXn3j+XjE4PpktZwTH96LbXAGF5iDGZU6l1SWoUTu59ILMv1as3q7g/L1QPzq1uUhYBdrx7J6Q3SuSpGf8ZKwINxjXJzQHs0pzO+onexEOAlYbmPxHO8eW/Ccuig2Z7QG1zSMvqMJ3OUq+UDLk+Yjzs/UG0ezL+sDGc3xLUyg/kdk+Wa2eo3U6m5MAkncviCCWyuoMxFsRy7OTp24XT6aAqoksqW2N1T+f7TinlfFUCVnW8H2GVJttIiLxK1qoEmZ63cwnxwilOAQvE8Lm+UU2cQfyjNx08mtEIZxbRr4e2HL0yv7ml1pzx7/pIXrz9TrHVJ5s/xRjKYj2ycOAN4QykcAhJLl1AdfpxyDkaypPNVbHYPermGUpFB0+4+aTH6LBDn8OSMSmvI8PKWsSxp9KbojT75akdCmnMhFpTku9G9IFuobwE3nuaLNVqdIUpH0tOK9W0o/kiagDSEpMEbTuMOJKRihFNF7N4YbmHYkXDy52180SxZmdFrva30ZEanLYEq5+0R58amhhzZvMLQI/5FOHYEOFDd7KsuLKdnmPasuER+OK1jFbmZUoNATONQ3lMiudaZUKr3RLKA1YV+pTUiKs2+WG5bkUyZkHi1ATx2B4iJpGBKJ5wsooqfr959Ze/QTqZQ2xIqCmtdbFEK1R56vS++DCjIRTJfk+0GzdE1JWOMTeT4BaS88axsbOVuGAXl94mL7z5hnchWKJTqYl2V/w5jdma0jL+fAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+          &lt;source
+              srcset=&quot;/static/f0a910359965b97ebd62fb1d0d744e59/bc904/index.webp 250w,
+/static/f0a910359965b97ebd62fb1d0d744e59/4be29/index.webp 500w,
+/static/f0a910359965b97ebd62fb1d0d744e59/03f31/index.webp 1000w,
+/static/f0a910359965b97ebd62fb1d0d744e59/fab20/index.webp 1122w&quot;
+              sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
+              type=&quot;image/webp&quot;
+            /&gt;
+          &lt;source
+            srcset=&quot;/static/f0a910359965b97ebd62fb1d0d744e59/43fa5/index.png 250w,
+/static/f0a910359965b97ebd62fb1d0d744e59/c6e3d/index.png 500w,
+/static/f0a910359965b97ebd62fb1d0d744e59/da8b6/index.png 1000w,
+/static/f0a910359965b97ebd62fb1d0d744e59/60f98/index.png 1122w&quot;
+            sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
+            type=&quot;image/png&quot;
+          /&gt;
+          &lt;img
+            class=&quot;gatsby-resp-image-image&quot;
+            src=&quot;/static/f0a910359965b97ebd62fb1d0d744e59/da8b6/index.png&quot;
+            alt=&quot;index&quot;
+            title=&quot;&quot;
+            loading=&quot;lazy&quot;
+            decoding=&quot;async&quot;
+            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+          /&gt;
+        &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&apos;이것이 취업을 위한 컴퓨터 과학이다 with CS 기술 면접&apos; 책을 읽으면서 배운 점을 정리합니다. 2진법 체계와 명령어 구조를 중심으로 살펴봅니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;1비트와-바이트&quot;&gt;1비트와 바이트&lt;/h2&gt;
+&lt;p&gt;컴퓨터는 0과 1만을 이해한다. 0과 1을 나타내는 가장 작은 작업 단위를 &lt;code class=&quot;language-text&quot;&gt;비트(bit)&lt;/code&gt;라고 한다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;비트와 정보 표현&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;k비트는 2^k 만큼의 정보를 표현할 수 있다&lt;/li&gt;
+&lt;li&gt;1byte = 8bit (256가지 표현 가능)&lt;/li&gt;
+&lt;li&gt;1KB = 1,000byte&lt;/li&gt;
+&lt;li&gt;1MB = 1,000KB&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# 비트로 표현 가능한 정보의 수&lt;/span&gt;
+bits &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;8&lt;/span&gt;
+possible_values &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;**&lt;/span&gt; bits
+&lt;span class=&quot;token keyword&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string-interpolation&quot;&gt;&lt;span class=&quot;token string&quot;&gt;f&quot;&lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;bits&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;비트로 표현 가능한 값: &lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;possible_values&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;개&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;  &lt;span class=&quot;token comment&quot;&gt;# 256개&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id=&quot;2️-2진법으로-소수-표현하기&quot;&gt;2️⃣ 2진법으로 소수 표현하기&lt;/h2&gt;
+&lt;h3 id=&quot;부동-소수점의-한계&quot;&gt;부동 소수점의 한계&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0.1&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0.2&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0.3&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;  &lt;span class=&quot;token comment&quot;&gt;# False&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0.1&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0.2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;  &lt;span class=&quot;token comment&quot;&gt;# 0.30000000000000004&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;대부분의 프로그래밍 언어에서 위 코드의 결과는 &lt;code class=&quot;language-text&quot;&gt;False&lt;/code&gt;이다. 이유는 &lt;code class=&quot;language-text&quot;&gt;부동 소수점(floating point)&lt;/code&gt; 표현 방식의 정밀도에 한계가 있기 때문이다.&lt;/p&gt;
+&lt;h3 id=&quot;부동-소수점-표현-방식&quot;&gt;부동 소수점 표현 방식&lt;/h3&gt;
+&lt;p&gt;부동 소수점은 소수점의 위치가 고정되지 않은(floating) 소수 표현 방식이다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;🔍 10진수 예시&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;10진수 123.123을 m*10^n 형태로 표현하면:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;n=2, m=1.23123&lt;/li&gt;
+&lt;li&gt;n=-1, m=1231.23&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;이렇게 소수점의 위치를 고정시키지 않고 같은 소수를 다양하게 표현할 수 있는 방식이 부동 소수점 표현 방식이다.&lt;/p&gt;
+&lt;h3 id=&quot;ieee-754-표준&quot;&gt;IEEE 754 표준&lt;/h3&gt;
+&lt;p&gt;2진수 체계에서는 IEEE 754 표준을 사용하여 부동 소수점을 표현한다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;⚙️ IEEE 754 구조 (32bit 단정밀도)&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;구성 요소&lt;/th&gt;
+&lt;th&gt;비트 수&lt;/th&gt;
+&lt;th&gt;역할&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;부호(Sign)&lt;/td&gt;
+&lt;td&gt;1bit&lt;/td&gt;
+&lt;td&gt;양수(0) 또는 음수(1)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;지수(Exponent)&lt;/td&gt;
+&lt;td&gt;8bit&lt;/td&gt;
+&lt;td&gt;소수점 위치 결정&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;가수(Mantissa)&lt;/td&gt;
+&lt;td&gt;23bit&lt;/td&gt;
+&lt;td&gt;실제 숫자 값 저장&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;⚠️ 정밀도 한계&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;10진수 소수를 2진수로 표현할 때 10진수와 2진수의 표현이 딱 맞아떨어지지 않을 수 있다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;1/3 = 0.333333...  # 10진수 무한 소수
+0.1(10진수) = 0.0001100110011...(2진수)  # 2진수 무한 소수&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;이럴 경우 일부 소수점을 생략하여 저장하므로 오차가 발생한다.&lt;/p&gt;
+&lt;h2 id=&quot;3️-명령어&quot;&gt;3️⃣ 명령어&lt;/h2&gt;
+&lt;h3 id=&quot;명령어-구조&quot;&gt;명령어 구조&lt;/h3&gt;
+&lt;p&gt;명령어는 &lt;code class=&quot;language-text&quot;&gt;연산 코드(opcode)&lt;/code&gt;와 &lt;code class=&quot;language-text&quot;&gt;오퍼랜드(operand)&lt;/code&gt;로 구성되어 있다.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;구성 요소&lt;/th&gt;
+&lt;th&gt;역할&lt;/th&gt;
+&lt;th&gt;예시&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;연산 코드&lt;/td&gt;
+&lt;td&gt;명령어가 수행할 동작&lt;/td&gt;
+&lt;td&gt;ADD, SUB, LOAD, STORE&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;오퍼랜드&lt;/td&gt;
+&lt;td&gt;데이터가 저장된 위치&lt;/td&gt;
+&lt;td&gt;메모리 주소, 레지스터 이름&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;🎯 연산 코드의 주요 유형&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;데이터 전송&lt;/strong&gt;: LOAD, STORE, MOVE&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;산술 연산&lt;/strong&gt;: ADD, SUB, MUL, DIV&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;제어 흐름 변경&lt;/strong&gt;: JUMP, CALL, RETURN&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;입출력 제어&lt;/strong&gt;: READ, WRITE&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;주소-지정-방식&quot;&gt;주소 지정 방식&lt;/h3&gt;
+&lt;p&gt;오퍼랜드 필드에는 데이터가 직접 명시되기보다는 &lt;strong&gt;메모리 주소&lt;/strong&gt;나 &lt;strong&gt;레지스터 이름&lt;/strong&gt;이 명시된다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token constant&quot;&gt;LOAD&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;R1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1000&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;  # 메모리 주소 &lt;span class=&quot;token number&quot;&gt;1000&lt;/span&gt;의 값을 &lt;span class=&quot;token constant&quot;&gt;R1&lt;/span&gt; 레지스터로 로드
+&lt;span class=&quot;token constant&quot;&gt;ADD&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;R1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;R2&lt;/span&gt;       # &lt;span class=&quot;token constant&quot;&gt;R1&lt;/span&gt;과 &lt;span class=&quot;token constant&quot;&gt;R2&lt;/span&gt;의 값을 더해서 &lt;span class=&quot;token constant&quot;&gt;R1&lt;/span&gt;에 저장&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;CPU가 메모리에서 인출한 명령어를 곧바로 실행하지 못하고 한 번 더 메모리에 접근해야 하는 이유가 바로 이 때문이다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;💡 주소 지정 방식의 종류&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;즉시 주소 지정&lt;/strong&gt;: 오퍼랜드에 데이터 직접 명시&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;직접 주소 지정&lt;/strong&gt;: 오퍼랜드에 메모리 주소 명시&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;간접 주소 지정&lt;/strong&gt;: 오퍼랜드에 메모리 주소를 가리키는 주소 명시&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;레지스터 주소 지정&lt;/strong&gt;: 오퍼랜드에 레지스터 이름 명시&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;4️-명령어-사이클&quot;&gt;4️⃣ 명령어 사이클&lt;/h2&gt;
+&lt;p&gt;CPU가 명령어를 처리하는 과정을 &lt;code class=&quot;language-text&quot;&gt;명령어 사이클(instruction cycle)&lt;/code&gt;이라고 한다.&lt;/p&gt;
+&lt;h3 id=&quot;명령어-사이클의-단계&quot;&gt;명령어 사이클의 단계&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;1. 인출 사이클 (Fetch Cycle)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;메모리에서 실행할 명령어를 가져오는 단계이다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;1. PC(Program Counter)가 가리키는 메모리 주소에서 명령어 읽기
+2. 읽어온 명령어를 IR(Instruction Register)에 저장
+3. PC 값을 다음 명령어 주소로 증가&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;2. 실행 사이클 (Execution Cycle)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;인출한 명령어를 해석하고 실행하는 단계이다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token number&quot;&gt;1.&lt;/span&gt; 제어장치가 명령어 해독
+&lt;span class=&quot;token number&quot;&gt;2.&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;ALU&lt;/span&gt;에서 연산 수행
+&lt;span class=&quot;token number&quot;&gt;3.&lt;/span&gt; 결과를 레지스터나 메모리에 저장&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;3. 간접 사이클 (Indirect Cycle)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;오퍼랜드 필드에 주소가 명시된 경우, 명령어 실행을 위해 메모리에 접근하는 단계이다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token number&quot;&gt;1.&lt;/span&gt; 오퍼랜드가 가리키는 메모리 주소 접근
+&lt;span class=&quot;token number&quot;&gt;2.&lt;/span&gt; 실제 데이터 주소 획득
+&lt;span class=&quot;token number&quot;&gt;3.&lt;/span&gt; 해당 주소의 데이터 인출&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id=&quot;명령어-사이클의-흐름&quot;&gt;명령어 사이클의 흐름&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;인출 사이클 &lt;span class=&quot;token function&quot;&gt;→&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;간접 사이클&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; → 실행 사이클 → 인출 사이클 → &lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;간접 사이클은 필요한 경우에만 수행되며, 이 과정이 반복되면서 프로그램이 실행된다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;💡 명령어 사이클과 성능&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;명령어 사이클이 짧을수록 CPU 성능이 향상된다&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;클럭(Clock)&lt;/code&gt;: 명령어 사이클의 기본 단위 시간&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;CPI(Cycles Per Instruction)&lt;/code&gt;: 명령어당 필요한 클럭 수&lt;/li&gt;
+&lt;li&gt;CPU 성능 = 클럭 속도 / CPI&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;</content:encoded></item><item><title><![CDATA[[컴퓨터구조] 1. 컴퓨터구조의 큰 그림]]></title><description><![CDATA['이것이 취업을 위한 컴퓨터 과학이다 with CS…]]></description><link>https://rmdnps10.github.io/[컴퓨터구조]  컴퓨터 구조의 큰 그림/</link><guid isPermaLink="false">https://rmdnps10.github.io/[컴퓨터구조]  컴퓨터 구조의 큰 그림/</guid><pubDate>Thu, 15 Jan 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1000px; background: transparent;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/f0a910359965b97ebd62fb1d0d744e59/60f98/index.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 47.599999999999994%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsTAAALEwEAmpwYAAACaklEQVR42h2S124aURCG95Ej5SpSepMTEoc4NjZem2p6r0tZwNSlF4OxAVeiRJFf4svAxUhnz5n55y+rLG7WLG/X3K+fWNz8ZXn3j+XjE4PpktZwTH96LbXAGF5iDGZU6l1SWoUTu59ILMv1as3q7g/L1QPzq1uUhYBdrx7J6Q3SuSpGf8ZKwINxjXJzQHs0pzO+onexEOAlYbmPxHO8eW/Ccuig2Z7QG1zSMvqMJ3OUq+UDLk+Yjzs/UG0ezL+sDGc3xLUyg/kdk+Wa2eo3U6m5MAkncviCCWyuoMxFsRy7OTp24XT6aAqoksqW2N1T+f7TinlfFUCVnW8H2GVJttIiLxK1qoEmZ63cwnxwilOAQvE8Lm+UU2cQfyjNx08mtEIZxbRr4e2HL0yv7ml1pzx7/pIXrz9TrHVJ5s/xRjKYj2ycOAN4QykcAhJLl1AdfpxyDkaypPNVbHYPermGUpFB0+4+aTH6LBDn8OSMSmvI8PKWsSxp9KbojT75akdCmnMhFpTku9G9IFuobwE3nuaLNVqdIUpH0tOK9W0o/kiagDSEpMEbTuMOJKRihFNF7N4YbmHYkXDy52180SxZmdFrva30ZEanLYEq5+0R58amhhzZvMLQI/5FOHYEOFDd7KsuLKdnmPasuER+OK1jFbmZUoNATONQ3lMiudaZUKr3RLKA1YV+pTUiKs2+WG5bkUyZkHi1ATx2B4iJpGBKJ5wsooqfr959Ze/QTqZQ2xIqCmtdbFEK1R56vS++DCjIRTJfk+0GzdE1JWOMTeT4BaS88axsbOVuGAXl94mL7z5hnchWKJTqYl2V/w5jdma0jL+fAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+          &lt;source
+              srcset=&quot;/static/f0a910359965b97ebd62fb1d0d744e59/bc904/index.webp 250w,
+/static/f0a910359965b97ebd62fb1d0d744e59/4be29/index.webp 500w,
+/static/f0a910359965b97ebd62fb1d0d744e59/03f31/index.webp 1000w,
+/static/f0a910359965b97ebd62fb1d0d744e59/fab20/index.webp 1122w&quot;
+              sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
+              type=&quot;image/webp&quot;
+            /&gt;
+          &lt;source
+            srcset=&quot;/static/f0a910359965b97ebd62fb1d0d744e59/43fa5/index.png 250w,
+/static/f0a910359965b97ebd62fb1d0d744e59/c6e3d/index.png 500w,
+/static/f0a910359965b97ebd62fb1d0d744e59/da8b6/index.png 1000w,
+/static/f0a910359965b97ebd62fb1d0d744e59/60f98/index.png 1122w&quot;
+            sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
+            type=&quot;image/png&quot;
+          /&gt;
+          &lt;img
+            class=&quot;gatsby-resp-image-image&quot;
+            src=&quot;/static/f0a910359965b97ebd62fb1d0d744e59/da8b6/index.png&quot;
+            alt=&quot;index&quot;
+            title=&quot;&quot;
+            loading=&quot;lazy&quot;
+            decoding=&quot;async&quot;
+            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+          /&gt;
+        &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;blockquote&gt;
 &lt;p&gt;&apos;이것이 취업을 위한 컴퓨터 과학이다 with CS 기술 면접&apos; 책을 읽으면서 배운 점을 정리합니다.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&quot;컴퓨터가-이해하는-정보&quot;&gt;컴퓨터가 이해하는 정보&lt;/h2&gt;
