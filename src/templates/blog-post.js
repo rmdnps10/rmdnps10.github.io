@@ -1,16 +1,25 @@
 import * as React from "react"
+import { useEffect } from "react"
 import { Link, graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Comments from "../components/comment"
 import TableOfContents from "../components/TableOfContents"
+import { trackPostVisit } from "../lib/trackPostVisit"
 
 const BlogPostTemplate = ({
   data: { previous, next, site, markdownRemark: post },
   location,
 }) => {
   const siteTitle = site.siteMetadata?.title || `Title`
+
+  // 게시물 방문 추적
+  useEffect(() => {
+    if (post?.fields?.slug) {
+      trackPostVisit(post.fields.slug)
+    }
+  }, [post?.fields?.slug])
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -85,9 +94,9 @@ export const Head = ({ data: { markdownRemark: post, site } }) => {
     : null
 
   // keywords 생성: frontmatter의 keywords가 있으면 사용, 없으면 tags 사용
-  const keywords = post.frontmatter.keywords 
-    ? post.frontmatter.keywords 
-    : post.frontmatter.tags?.join(', ')
+  const keywords = post.frontmatter.keywords
+    ? post.frontmatter.keywords
+    : post.frontmatter.tags?.join(", ")
 
   return (
     <Seo

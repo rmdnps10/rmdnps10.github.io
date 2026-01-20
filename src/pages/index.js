@@ -8,6 +8,7 @@ import Bio from "../components/Bio"
 
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { getTagColor } from "../utils/tagColors"
+import { usePostVisit } from "../hooks/usePostVisit"
 
 //
 //
@@ -66,6 +67,10 @@ const PostCard = ({ post }) => {
     : null
   const tags = post.frontmatter.tags
   const pointColor = post.frontmatter.pointColor
+  const { formattedCount, formattedTime, loading } = usePostVisit(
+    post.fields.slug
+  )
+
   return (
     <div
       key={post.fields.slug}
@@ -92,9 +97,35 @@ const PostCard = ({ post }) => {
             >
               {title}
             </h2>
-            <small className="text-gray-400 text-xs md:text-sm">
-              {post.frontmatter.date}
-            </small>
+            <div className="flex items-center justify-between mb-2">
+              <small className="text-gray-400 text-xs md:text-sm">
+                {post.frontmatter.date}
+              </small>
+              {!loading && (
+                <div className="flex items-center gap-2 text-xs text-gray-400">
+                  <span className="flex items-center gap-1">
+                    <svg
+                      className="w-3 h-3 md:w-4 md:h-4"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
+                      <path
+                        fillRule="evenodd"
+                        d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                    {formattedCount}
+                  </span>
+                  {formattedTime && (
+                    <span className="text-[10px] md:text-xs">
+                      · {formattedTime}
+                    </span>
+                  )}
+                </div>
+              )}
+            </div>
 
             <div className="flex gap-1 md:gap-2 my-2 md:my-3 flex-wrap">
               {tags.map(tag => (
@@ -132,7 +163,7 @@ const PostCard = ({ post }) => {
 //
 
 const PostList = ({ posts }) => (
-  <div className="flex flex-col gap-6 md:gap-10 pt-4 w-full">
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 pt-4 w-full">
     {posts.map(post => (
       <PostCard key={post.fields.slug} post={post} />
     ))}
@@ -207,8 +238,8 @@ const BlogIndex = ({ data, location }) => {
 export default BlogIndex
 
 export const Head = () => (
-  <Seo 
-    title="난너의오른팔" 
+  <Seo
+    title="난너의오른팔"
     description="Web 기술과 AI 활용법을 공부하는 주니어 개발자, 커뮤니티 빌더의 기술 블로그"
     keywords="기술 블로그, 웹 개발, AI, 머신러닝, React, Gatsby, 프론트엔드, 백엔드, RAG, 프롬프트 엔지니어링, Flutter, 개발자 블로그"
   />
