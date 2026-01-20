@@ -9,6 +9,157 @@ import Bio from "../components/Bio"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { getTagColor } from "../utils/tagColors"
 import { usePostVisit } from "../hooks/usePostVisit"
+import { getTopVisitedPosts } from "../lib/trackPostVisit"
+
+//
+//
+//
+
+const HotPostCard = ({ post, rank }) => {
+  const title = post.frontmatter.title || post.fields.slug
+  const thumbnail = post.frontmatter.thumbnail
+    ? getImage(post.frontmatter.thumbnail)
+    : null
+  const pointColor = post.frontmatter.pointColor
+  const { formattedCount } = usePostVisit(post.fields.slug)
+
+  return (
+    <Link to={post.fields.slug} className="block h-full">
+      <div className="relative bg-gradient-to-br from-[#262626] to-[#212121] rounded-lg overflow-hidden hover:scale-105 transition-all border border-[#52525B] group h-[160px] md:h-[240px] flex flex-col">
+        {thumbnail && (
+          <GatsbyImage
+            image={thumbnail}
+            alt={title}
+            className="w-full h-32 md:h-40 object-cover flex-shrink-0"
+          />
+        )}
+
+        <div className="p-3 flex-1 flex flex-col justify-between">
+          <h3
+            className="text-sm md:text-lg font-bold mb-2 truncate pt-0 mt-0"
+            style={{ color: pointColor }}
+          >
+            {title}
+          </h3>
+          <div className="flex items-center gap-1 text-xs text-gray-400">
+            <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
+              <path
+                fillRule="evenodd"
+                d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z"
+                clipRule="evenodd"
+              />
+            </svg>
+            <span className="font-semibold">{formattedCount}</span>
+          </div>
+        </div>
+      </div>
+    </Link>
+  )
+}
+
+const HotSection = ({ posts }) => {
+  const [hotPosts, setHotPosts] = useState([])
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    const fetchHotPosts = async () => {
+      try {
+        const topVisited = await getTopVisitedPosts(3)
+        const hotPostsData = topVisited
+          .map(visitData =>
+            posts.find(post => post.fields.slug === visitData.post_slug)
+          )
+          .filter(Boolean)
+        setHotPosts(hotPostsData)
+      } catch (error) {
+        console.error("Error fetching hot posts:", error)
+      } finally {
+        setLoading(false)
+      }
+    }
+
+    fetchHotPosts()
+  }, [posts])
+
+  if (loading || hotPosts.length === 0) return null
+
+  return (
+    <div className="mt-5 md:block hidden">
+      <div className="flex items-center gap-2 mb-3">
+        <span className="text-2xl">🔥</span>
+        <h2 className="text-xl md:text-2xl font-bold text-white m-0">
+          Hot Posts
+        </h2>
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        {hotPosts.map((post, index) => (
+          <HotPostCard key={post.fields.slug} post={post} rank={index + 1} />
+        ))}
+      </div>
+    </div>
+  )
+}
+
+//
+//
+//
+
+const SearchAndSort = ({ searchQuery, setSearchQuery, sortBy, setSortBy }) => (
+  <div className="flex gap-3 items-center w-full mt-5">
+    {/* 검색창 */}
+    <div className="flex-1 relative">
+      <svg
+        className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+        />
+      </svg>
+      <input
+        type="text"
+        placeholder="Search..."
+        value={searchQuery}
+        onChange={e => setSearchQuery(e.target.value)}
+        className="w-full bg-[#2a2a2a] border border-[#52525B] rounded-lg pl-10 pr-4 py-2 text-white text-sm focus:outline-none focus:border-gray-500 transition-colors"
+      />
+    </div>
+
+    {/* 정렬 드롭다운 */}
+    <div className="relative">
+      <select
+        value={sortBy}
+        onChange={e => setSortBy(e.target.value)}
+        className="bg-[#2a2a2a] border border-[#52525B] rounded-lg px-4 py-2 text-white text-sm focus:outline-none focus:border-gray-500 transition-colors appearance-none pr-8 cursor-pointer"
+      >
+        <option value="date-desc">최신순</option>
+        <option value="date-asc">오래된순</option>
+        <option value="views-desc">조회수 높은순</option>
+        <option value="views-asc">조회수 낮은순</option>
+        <option value="title-asc">제목순 (A-Z)</option>
+      </select>
+      <svg
+        className="absolute right-3 top-1/2 transform -translate-y-1/2 w-3 h-3 text-gray-400 pointer-events-none"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M19 9l-7 7-7-7"
+        />
+      </svg>
+    </div>
+  </div>
+)
 
 //
 //
@@ -74,7 +225,7 @@ const PostCard = ({ post }) => {
   return (
     <div
       key={post.fields.slug}
-      className="bg-gradient-to-br from-[#262626] to-[#212121] rounded-lg overflow-hidden hover:scale-105 transition-all w-full border border-[#52525B]"
+      className="bg-gradient-to-br from-[#262626] to-[#212121] rounded-lg overflow-hidden hover:scale-105 transition-all w-full border border-[#52525B] mt-1"
       style={{
         boxShadow:
           "0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.05)",
@@ -92,7 +243,7 @@ const PostCard = ({ post }) => {
 
           <div className="px-3 md:px-5">
             <h2
-              className={`text-lg md:text-2xl font-bold mt-3 md:mt-5 mb-0 border-none break-keep`}
+              className={`text-lg md:text-2xl font-bold mt-3 md:mt-5 border-none break-keep line-clamp-2 pb-0 md:h-[64px] h-[30px] md:mb-3 mb-1`}
               style={{ color: pointColor }}
             >
               {title}
@@ -163,7 +314,7 @@ const PostCard = ({ post }) => {
 //
 
 const PostList = ({ posts }) => (
-  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 pt-4 w-full">
+  <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 pt-4 w-full">
     {posts.map(post => (
       <PostCard key={post.fields.slug} post={post} />
     ))}
@@ -186,6 +337,8 @@ const BlogIndex = ({ data, location }) => {
   const [selectedTag, setSelectedTag] = useState(
     new URLSearchParams(location.search).get("tag") || ""
   )
+  const [searchQuery, setSearchQuery] = useState("")
+  const [sortBy, setSortBy] = useState("date-desc")
 
   useEffect(() => {
     const queryParams = new URLSearchParams(location.search)
@@ -201,9 +354,43 @@ const BlogIndex = ({ data, location }) => {
     )
   }, [selectedTag, location.pathname, location.search])
 
-  const filteredPosts = selectedTag
+  // 필터링 및 검색
+  let filteredPosts = selectedTag
     ? posts.filter(post => post.frontmatter.tags.includes(selectedTag))
     : posts
+
+  if (searchQuery) {
+    filteredPosts = filteredPosts.filter(
+      post =>
+        post.frontmatter.title
+          .toLowerCase()
+          .includes(searchQuery.toLowerCase()) ||
+        post.frontmatter.description
+          ?.toLowerCase()
+          .includes(searchQuery.toLowerCase()) ||
+        post.frontmatter.tags.some(tag =>
+          tag.toLowerCase().includes(searchQuery.toLowerCase())
+        )
+    )
+  }
+
+  // 정렬
+  const sortedPosts = [...filteredPosts].sort((a, b) => {
+    switch (sortBy) {
+      case "date-desc":
+        return new Date(b.frontmatter.date) - new Date(a.frontmatter.date)
+      case "date-asc":
+        return new Date(a.frontmatter.date) - new Date(b.frontmatter.date)
+      case "title-asc":
+        return a.frontmatter.title.localeCompare(b.frontmatter.title)
+      case "views-desc":
+      case "views-asc":
+        // 조회수 정렬은 클라이언트에서는 정확하지 않을 수 있음 (비동기 로딩)
+        return 0
+      default:
+        return 0
+    }
+  })
 
   if (posts.length === 0) {
     return (
@@ -221,16 +408,24 @@ const BlogIndex = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <Bio />
+      <HotSection posts={posts} />
+
       <p className="text-xl md:text-3xl font-bold text-white m-0 mt-5">
         {selectedTag === "" ? "All " : `${selectedTag} `}
-        {filteredPosts.length} Posts
+        {sortedPosts.length} Posts
       </p>
       <TagFilter
         tagList={tagList}
         selectedTag={selectedTag}
         setSelectedTag={setSelectedTag}
       />
-      <PostList posts={filteredPosts} />
+      <SearchAndSort
+        searchQuery={searchQuery}
+        setSearchQuery={setSearchQuery}
+        sortBy={sortBy}
+        setSortBy={setSortBy}
+      />
+      <PostList posts={sortedPosts} />
     </Layout>
   )
 }

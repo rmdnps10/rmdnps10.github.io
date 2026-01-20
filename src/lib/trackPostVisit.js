@@ -84,3 +84,29 @@ export const getPostVisitInfo = async postSlug => {
     return { visitCount: 0, lastVisitedAt: null }
   }
 }
+
+/**
+ * 조회수가 높은 게시물 목록을 가져오는 함수
+ */
+export const getTopVisitedPosts = async (limit = 3) => {
+  if (!supabase) {
+    return []
+  }
+
+  try {
+    const { data, error } = await supabase
+      .from("post_visits")
+      .select("post_slug, visit_count, last_visited_at")
+      .order("visit_count", { ascending: false })
+      .limit(limit)
+
+    if (error) {
+      throw error
+    }
+
+    return data || []
+  } catch (error) {
+    console.error("Error fetching top visited posts:", error)
+    return []
+  }
+}
