@@ -105,7 +105,7 @@ const Seo = ({
       />
 
       {/* Google AdSense */}
-      <meta name="google-adsense-account" content="ca-pub-1707103676035407">
+      <meta name="google-adsense-account" content="ca-pub-1707103676035407" />
 
       {/* Open Graph */}
       <meta property="og:title" content={title} />
