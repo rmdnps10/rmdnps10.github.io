@@ -105,11 +105,7 @@ const Seo = ({
       />
 
       {/* Google AdSense */}
-      <script
-        async
-        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1707103676035407"
-        crossOrigin="anonymous"
-      />
+      <meta name="google-adsense-account" content="ca-pub-1707103676035407">
 
       {/* Open Graph */}
       <meta property="og:title" content={title} />
