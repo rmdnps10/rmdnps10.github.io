@@ -3,9 +3,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faGithub } from "@fortawesome/free-brands-svg-icons"
 import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons"
 
-const POINT_COLOR = "#4FC3F7"
-const POINT_COLOR_RGBA = "rgba(79, 195, 247, 0.15)"
-
 export default function ProjectCard({
   title,
   techStack = [],
