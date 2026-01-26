@@ -1,38 +1,296 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[난너의오른팔 기술 블로그 RSS Feed]]></title><description><![CDATA[Web 기술과 AI 활용법을 공부하는 주니어 개발자, 커뮤니티 빌더의 기술 블로그]]></description><link>https://inyoung.dev</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 21 Jan 2026 05:42:52 GMT</lastBuildDate><item><title><![CDATA[[컴퓨터구조] 3. CPU]]></title><description><![CDATA[책을 읽으면서 배운 점을 정리합니다. 이번 글에서는 개발자가 알아야 할 의 핵심 개념들을 학습합니다. 레지스터의 역할부터 인터럽트 처리 과정, 그리고 CPU 성능 향상을 위한 다양한 설계 기법에 대해 다룹니다. 1️⃣ 레지스터 는 CPU…]]></description><link>https://inyoung.dev/computer-architecture-cpu/</link><guid isPermaLink="false">https://inyoung.dev/computer-architecture-cpu/</guid><pubDate>Sun, 18 Jan 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[난너의오른팔 기술 블로그 RSS Feed]]></title><description><![CDATA[Web 기술과 AI 활용법을 공부하는 주니어 개발자, 커뮤니티 빌더의 기술 블로그]]></description><link>https://inyoung.dev</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 26 Jan 2026 08:18:16 GMT</lastBuildDate><item><title><![CDATA[[운영체제] 운영체제의 큰 그림]]></title><description><![CDATA[는 컴퓨터 시스템의 자원을 관리하고 프로그램 실행을 제어하는 핵심 소프트웨어다. 이 글에서는 운영체제의 주요 역할과 동작 원리를 살펴본다.…]]></description><link>https://inyoung.dev/os-big-picture/</link><guid isPermaLink="false">https://inyoung.dev/os-big-picture/</guid><pubDate>Sat, 24 Jan 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1000px; background: transparent;&quot;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/f0a910359965b97ebd62fb1d0d744e59/60f98/index.png&quot;
+    href=&quot;/static/8e6a6d4017c173b936b5f29b9e15cf45/7c474/index.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 47.599999999999994%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsTAAALEwEAmpwYAAACaklEQVR42h2S124aURCG95Ej5SpSepMTEoc4NjZem2p6r0tZwNSlF4OxAVeiRJFf4svAxUhnz5n55y+rLG7WLG/X3K+fWNz8ZXn3j+XjE4PpktZwTH96LbXAGF5iDGZU6l1SWoUTu59ILMv1as3q7g/L1QPzq1uUhYBdrx7J6Q3SuSpGf8ZKwINxjXJzQHs0pzO+onexEOAlYbmPxHO8eW/Ccuig2Z7QG1zSMvqMJ3OUq+UDLk+Yjzs/UG0ezL+sDGc3xLUyg/kdk+Wa2eo3U6m5MAkncviCCWyuoMxFsRy7OTp24XT6aAqoksqW2N1T+f7TinlfFUCVnW8H2GVJttIiLxK1qoEmZ63cwnxwilOAQvE8Lm+UU2cQfyjNx08mtEIZxbRr4e2HL0yv7ml1pzx7/pIXrz9TrHVJ5s/xRjKYj2ycOAN4QykcAhJLl1AdfpxyDkaypPNVbHYPermGUpFB0+4+aTH6LBDn8OSMSmvI8PKWsSxp9KbojT75akdCmnMhFpTku9G9IFuobwE3nuaLNVqdIUpH0tOK9W0o/kiagDSEpMEbTuMOJKRihFNF7N4YbmHYkXDy52180SxZmdFrva30ZEanLYEq5+0R58amhhzZvMLQI/5FOHYEOFDd7KsuLKdnmPasuER+OK1jFbmZUoNATONQ3lMiudaZUKr3RLKA1YV+pTUiKs2+WG5bkUyZkHi1ATx2B4iJpGBKJ5wsooqfr959Ze/QTqZQ2xIqCmtdbFEK1R56vS++DCjIRTJfk+0GzdE1JWOMTeT4BaS88axsbOVuGAXl94mL7z5hnchWKJTqYl2V/w5jdma0jL+fAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 48.800000000000004%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAACE4AAAhOAFFljFgAAABbUlEQVR42o1SSy8DURS+00ZIJCIWEokdEQmJCgk2tfAKseQXWKPt9KU0VYqgpq9Jy6StCl2I2FkQG48tCzYk/TGfe24fM2kmMYsv59wz5373O98cxrb8aIbEYQsFIHFQtG0H9bxWN7snYFr0y2CeTTDZpcc66OzzWCMkZSwgo/foAIuXBUxmVSyVCpjWzkXu1HJYKOYxqMTFo6ZKjQc7NXAFK+VrPFcqCD094uH3B8r7G0qfHzh5fcHt9xfW7u9En/0/QvKHxnGkk1gt38CRUgT5RDaDea6MQMrH1RTvc8NmaWSK5GHdM/dG1TfXesNPe8CLFv6jGI+mhFXvvOg53Ed7ZEcodF5U/ZotaELVTF7DwNkppnIqumNRDCXiWL4qoi0cAgv6TAiDXnRGI+jYDWMknRCkoxkdY2oaffFjDCcVdO1F0M/zOf5YqxlhA/TBCBqdVoRAOY3I61JdBNUs7aHBU6m2yJLB42bPjfgDz36d4mDY+4YAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;picture&gt;
           &lt;source
-              srcset=&quot;/static/f0a910359965b97ebd62fb1d0d744e59/bc904/index.webp 250w,
-/static/f0a910359965b97ebd62fb1d0d744e59/4be29/index.webp 500w,
-/static/f0a910359965b97ebd62fb1d0d744e59/03f31/index.webp 1000w,
-/static/f0a910359965b97ebd62fb1d0d744e59/fab20/index.webp 1122w&quot;
+              srcset=&quot;/static/8e6a6d4017c173b936b5f29b9e15cf45/bc904/index.webp 250w,
+/static/8e6a6d4017c173b936b5f29b9e15cf45/4be29/index.webp 500w,
+/static/8e6a6d4017c173b936b5f29b9e15cf45/03f31/index.webp 1000w,
+/static/8e6a6d4017c173b936b5f29b9e15cf45/84f56/index.webp 1329w&quot;
               sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
               type=&quot;image/webp&quot;
             /&gt;
           &lt;source
-            srcset=&quot;/static/f0a910359965b97ebd62fb1d0d744e59/43fa5/index.png 250w,
-/static/f0a910359965b97ebd62fb1d0d744e59/c6e3d/index.png 500w,
-/static/f0a910359965b97ebd62fb1d0d744e59/da8b6/index.png 1000w,
-/static/f0a910359965b97ebd62fb1d0d744e59/60f98/index.png 1122w&quot;
+            srcset=&quot;/static/8e6a6d4017c173b936b5f29b9e15cf45/43fa5/index.png 250w,
+/static/8e6a6d4017c173b936b5f29b9e15cf45/c6e3d/index.png 500w,
+/static/8e6a6d4017c173b936b5f29b9e15cf45/da8b6/index.png 1000w,
+/static/8e6a6d4017c173b936b5f29b9e15cf45/7c474/index.png 1329w&quot;
             sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
             type=&quot;image/png&quot;
           /&gt;
           &lt;img
             class=&quot;gatsby-resp-image-image&quot;
-            src=&quot;/static/f0a910359965b97ebd62fb1d0d744e59/da8b6/index.png&quot;
+            src=&quot;/static/8e6a6d4017c173b936b5f29b9e15cf45/da8b6/index.png&quot;
+            alt=&quot;index&quot;
+            title=&quot;&quot;
+            loading=&quot;lazy&quot;
+            decoding=&quot;async&quot;
+            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+          /&gt;
+        &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;운영체제&lt;/code&gt;는 컴퓨터 시스템의 자원을 관리하고 프로그램 실행을 제어하는 핵심 소프트웨어다. 이 글에서는 운영체제의 주요 역할과 동작 원리를 살펴본다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;1️-운영체제란&quot;&gt;1️⃣ 운영체제란?&lt;/h2&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;운영체제&lt;/code&gt;는 컴퓨터 하드웨어와 응용 프로그램 사이에서 자원을 관리하고 프로그램 실행을 제어하는 특별한 프로그램이다. Windows, macOS, Linux와 같은 데스크탑 운영체제와 Android, iOS와 같은 모바일 운영체제가 대표적이다.&lt;/p&gt;
+&lt;h3 id=&quot;커널kernel&quot;&gt;커널(Kernel)&lt;/h3&gt;
+&lt;p&gt;운영체제의 핵심 기능을 담당하는 부분을 &lt;code class=&quot;language-text&quot;&gt;커널&lt;/code&gt;이라고 한다. 커널은 자동차의 엔진이나 사람의 심장처럼 &lt;code class=&quot;language-text&quot;&gt;운영체제의 핵심부&lt;/code&gt;를 구성한다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;메모리 구조&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;커널 영역(Kernel Space)&lt;/code&gt;: 운영체제가 적재되어 실행되는 공간&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;사용자 영역(User Space)&lt;/code&gt;: 응용 프로그램이 적재되어 실행되는 공간&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;2️-운영체제의-핵심-역할&quot;&gt;2️⃣ 운영체제의 핵심 역할&lt;/h2&gt;
+&lt;p&gt;운영체제는 두 가지 핵심 기능을 수행한다.&lt;/p&gt;
+&lt;h3 id=&quot;자원-할당-및-관리&quot;&gt;자원 할당 및 관리&lt;/h3&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;자원(Resource)&lt;/code&gt;은 프로그램 실행에 필요한 요소를 의미한다. 하드웨어 자원(CPU, 메모리, 보조기억장치)과 소프트웨어 자원(데이터, 파일)이 있다.&lt;/p&gt;
+&lt;p&gt;운영체제는 다음과 같이 자원을 관리한다:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;관리 대상&lt;/th&gt;
+&lt;th&gt;관리 방법&lt;/th&gt;
+&lt;th&gt;설명&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;CPU&lt;/td&gt;
+&lt;td&gt;CPU 스케줄링&lt;/td&gt;
+&lt;td&gt;프로그램들이 공정하게 CPU를 할당받도록 순서와 시간을 결정&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;메모리&lt;/td&gt;
+&lt;td&gt;가상 메모리&lt;/td&gt;
+&lt;td&gt;물리적 메모리보다 큰 메모리를 사용할 수 있도록 관리&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;보조기억장치&lt;/td&gt;
+&lt;td&gt;파일 시스템&lt;/td&gt;
+&lt;td&gt;파일과 디렉터리 단위로 정보를 체계적으로 관리&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&quot;프로세스-및-스레드-관리&quot;&gt;프로세스 및 스레드 관리&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;프로세스(Process)&lt;/strong&gt;: 실행 중인 프로그램&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;스레드(Thread)&lt;/strong&gt;: 프로세스를 이루는 실행 단위&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;운영체제는 동시다발적으로 실행되는 프로세스와 스레드를 제어하고, 필요한 자원을 적절하게 배분한다.&lt;/p&gt;
+&lt;h2 id=&quot;3️-cpu-스케줄링&quot;&gt;3️⃣ CPU 스케줄링&lt;/h2&gt;
+&lt;p&gt;메모리에는 여러 프로그램이 동시에 적재될 수 있지만, CPU는 한 번에 하나의 작업만 처리한다. 따라서 운영체제는 &lt;code class=&quot;language-text&quot;&gt;CPU 스케줄링&lt;/code&gt;을 통해 프로그램들이 공정하게 CPU를 사용할 수 있도록 관리한다.&lt;/p&gt;
+&lt;h4 id=&quot;3-1-cpu-스케줄링의-구성-요소&quot;&gt;3-1 CPU 스케줄링의 구성 요소&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;스케줄링 큐(Scheduling Queue)&lt;/code&gt;&lt;/strong&gt;: CPU를 할당받기 위해 대기하는 프로세스들의 대기열이다.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;우선순위(Priority)&lt;/code&gt;&lt;/strong&gt;: 각 프로세스에 부여된 중요도로, 우선순위가 높은 프로세스가 먼저 CPU를 할당받는다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;선점형과 비선점형&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;선점형(Preemptive)&lt;/strong&gt;: 실행 중인 프로세스로부터 CPU를 강제로 빼앗을 수 있음&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;비선점형(Non-preemptive)&lt;/strong&gt;: 프로세스가 자발적으로 CPU를 반납할 때까지 대기&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;4️-메모리-관리-가상-메모리&quot;&gt;4️⃣ 메모리 관리: 가상 메모리&lt;/h2&gt;
+&lt;p&gt;운영체제는 &lt;code class=&quot;language-text&quot;&gt;가상 메모리&lt;/code&gt; 기술을 활용하여 메모리를 효율적으로 관리한다. 가상 메모리는 물리적 메모리 크기보다 더 큰 메모리를 사용할 수 있도록 하는 기술이다.&lt;/p&gt;
+&lt;h4 id=&quot;4-1-주소-체계&quot;&gt;4-1 주소 체계&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;물리 주소(Physical Address)&lt;/strong&gt;: 실제 메모리의 주소&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;논리 주소(Logical Address)&lt;/strong&gt;: 프로세스가 사용하는 가상의 주소&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;4-2-메모리-할당-기법&quot;&gt;4-2 메모리 할당 기법&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;📄 페이징(Paging)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;메모리를 고정 크기의 페이지 단위로 나누어 관리하는 기법이다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;🔄 페이지 교체 알고리즘&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;메모리가 부족할 때 어떤 페이지를 제거할지 결정하는 알고리즘이다. 대표적으로 LRU(Least Recently Used), FIFO(First In First Out) 등이 있다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;💡 &lt;strong&gt;페이징과 세그멘테이션&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;페이징&lt;/strong&gt;: 고정 크기로 메모리를 분할 (내부 단편화 발생 가능)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;세그멘테이션&lt;/strong&gt;: 논리적 단위로 메모리를 분할 (외부 단편화 발생 가능)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;5️-파일디렉터리-관리-파일-시스템&quot;&gt;5️⃣ 파일/디렉터리 관리: 파일 시스템&lt;/h2&gt;
+&lt;p&gt;보조기억장치는 방대한 용량을 가지므로 체계적인 관리가 필요하다. &lt;code class=&quot;language-text&quot;&gt;파일 시스템&lt;/code&gt;은 보조기억장치의 정보를 파일과 디렉터리 단위로 관리하는 운영체제의 핵심 기능이다.&lt;/p&gt;
+&lt;h4 id=&quot;5-1-파일과-디렉터리&quot;&gt;5-1 파일과 디렉터리&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;파일(File)&lt;/strong&gt;: 보조기억장치에 저장된 데이터의 기본 단위&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;디렉터리(Directory)&lt;/strong&gt;: 파일들을 그룹화하여 관리하는 폴더&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;5-2-파일-시스템의-종류&quot;&gt;5-2 파일 시스템의 종류&lt;/h4&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;파일 시스템&lt;/th&gt;
+&lt;th&gt;운영체제&lt;/th&gt;
+&lt;th&gt;특징&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;NTFS&lt;/td&gt;
+&lt;td&gt;Windows&lt;/td&gt;
+&lt;td&gt;대용량 파일 지원, 보안 기능 강화&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;ext4&lt;/td&gt;
+&lt;td&gt;Linux&lt;/td&gt;
+&lt;td&gt;저널링 지원, 안정성 우수&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;APFS&lt;/td&gt;
+&lt;td&gt;macOS&lt;/td&gt;
+&lt;td&gt;SSD 최적화, 암호화 지원&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&quot;6️-프로세스와-스레드&quot;&gt;6️⃣ 프로세스와 스레드&lt;/h2&gt;
+&lt;h4 id=&quot;6-1-프로세스process&quot;&gt;6-1 프로세스(Process)&lt;/h4&gt;
+&lt;p&gt;실행 중인 프로그램을 의미한다. 같은 프로그램이라도 여러 번 실행하면 각각 별도의 프로세스가 생성된다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;프로세스 계층 구조&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;프로세스는 &lt;code class=&quot;language-text&quot;&gt;시스템 콜&lt;/code&gt;을 통해 새로운 프로세스를 생성할 수 있다:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;부모 프로세스(Parent Process)&lt;/code&gt;&lt;/strong&gt;: 새 프로세스를 생성한 프로세스&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;자식 프로세스(Child Process)&lt;/code&gt;&lt;/strong&gt;: 부모 프로세스에 의해 생성된 프로세스&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;6-2-스레드thread&quot;&gt;6-2 스레드(Thread)&lt;/h4&gt;
+&lt;p&gt;프로세스를 이루는 실행의 단위다. 하나의 프로세스는 여러 스레드를 가질 수 있으며, 이를 통해 동일한 작업을 동시에 실행할 수 있다.&lt;/p&gt;
+&lt;h4 id=&quot;6-3-동기화와-교착-상태&quot;&gt;6-3 동기화와 교착 상태&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;동기화&lt;/code&gt;&lt;/strong&gt;: 여러 프로세스나 스레드가 공유 자원에 접근할 때 데이터 일관성을 유지하는 기법이다.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;교착 상태(Deadlock)&lt;/code&gt;&lt;/strong&gt;: 두 개 이상의 프로세스가 서로 상대방이 점유한 자원을 기다리며 무한정 대기하는 상태다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;7️-시스템-콜과-이중-모드&quot;&gt;7️⃣ 시스템 콜과 이중 모드&lt;/h2&gt;
+&lt;p&gt;응용 프로그램은 직접 하드웨어 자원에 접근할 수 없다. 대신 &lt;code class=&quot;language-text&quot;&gt;시스템 콜(System Call)&lt;/code&gt;을 통해 운영체제에게 자원 접근을 요청한다.&lt;/p&gt;
+&lt;h4 id=&quot;7-1-시스템-콜의-동작-과정&quot;&gt;7-1 시스템 콜의 동작 과정&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;응용 프로그램이 시스템 콜 호출&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;소프트웨어 인터럽트&lt;/code&gt; 발생&lt;/li&gt;
+&lt;li&gt;CPU가 &lt;code class=&quot;language-text&quot;&gt;커널 모드&lt;/code&gt;로 전환&lt;/li&gt;
+&lt;li&gt;운영체제 코드 실행&lt;/li&gt;
+&lt;li&gt;작업 완료 후 &lt;code class=&quot;language-text&quot;&gt;사용자 모드&lt;/code&gt;로 복귀&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&quot;7-2-이중-모드dual-mode&quot;&gt;7-2 이중 모드(Dual Mode)&lt;/h4&gt;
+&lt;p&gt;CPU는 두 가지 실행 모드를 구분하여 동작한다:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;모드&lt;/th&gt;
+&lt;th&gt;설명&lt;/th&gt;
+&lt;th&gt;권한&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;사용자 모드(User Mode)&lt;/td&gt;
+&lt;td&gt;응용 프로그램 실행&lt;/td&gt;
+&lt;td&gt;자원 접근 불가&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;커널 모드(Kernel Mode)&lt;/td&gt;
+&lt;td&gt;운영체제 실행&lt;/td&gt;
+&lt;td&gt;모든 자원 접근 가능&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;blockquote&gt;
+&lt;p&gt;💡 &lt;strong&gt;슈퍼바이저 플래그&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;CPU의 플래그 레지스터에는 &lt;code class=&quot;language-text&quot;&gt;슈퍼바이저 플래그&lt;/code&gt;가 있어, 현재 CPU가 어떤 모드로 실행 중인지 나타낸다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&quot;7-3-주요-시스템-콜의-종류&quot;&gt;7-3 주요 시스템 콜의 종류&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;프로세스 관리&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;fork()&lt;/code&gt;: 새 자식 프로세스 생성&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;execve()&lt;/code&gt;: 프로세스 실행&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;exit()&lt;/code&gt;: 프로세스 종료&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;waitpid()&lt;/code&gt;: 자식 프로세스 대기&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;파일 관리&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;open()&lt;/code&gt;: 파일 열기&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;close()&lt;/code&gt;: 파일 닫기&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;read()&lt;/code&gt;: 파일 읽기&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;write()&lt;/code&gt;: 파일 쓰기&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;디렉터리 관리&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;chdir()&lt;/code&gt;: 작업 디렉터리 변경&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;mkdir()&lt;/code&gt;: 디렉터리 생성&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;rmdir()&lt;/code&gt;: 디렉터리 삭제&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;파일 시스템 관리&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;mount()&lt;/code&gt;: 파일 시스템 마운트&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;umount()&lt;/code&gt;: 파일 시스템 마운트 해제&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;7-4-시스템-콜-호출-빈도&quot;&gt;7-4 시스템 콜 호출 빈도&lt;/h4&gt;
+&lt;p&gt;응용 프로그램은 실행 과정에서 시스템 콜을 매우 빈번하게 호출한다. 단순히 &quot;hello world&quot;를 출력하는 프로그램도 600회 이상의 시스템 콜을 호출한다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ &lt;span class=&quot;token function&quot;&gt;strace&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-c&lt;/span&gt; python3 test.py
+hello world&lt;span class=&quot;token operator&quot;&gt;!&lt;/span&gt;
+
+% &lt;span class=&quot;token function&quot;&gt;time&lt;/span&gt;     seconds  usecs/call     calls    errors syscall
+------ ----------- ----------- --------- --------- ----------------
+ &lt;span class=&quot;token number&quot;&gt;20.19&lt;/span&gt;    &lt;span class=&quot;token number&quot;&gt;0.000213&lt;/span&gt;           &lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;       &lt;span class=&quot;token number&quot;&gt;103&lt;/span&gt;        &lt;span class=&quot;token number&quot;&gt;24&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;stat&lt;/span&gt;
+ &lt;span class=&quot;token number&quot;&gt;18.39&lt;/span&gt;    &lt;span class=&quot;token number&quot;&gt;0.000194&lt;/span&gt;          &lt;span class=&quot;token number&quot;&gt;13&lt;/span&gt;        &lt;span class=&quot;token number&quot;&gt;14&lt;/span&gt;           getdents64
+ &lt;span class=&quot;token number&quot;&gt;10.14&lt;/span&gt;    &lt;span class=&quot;token number&quot;&gt;0.000107&lt;/span&gt;           &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;       &lt;span class=&quot;token number&quot;&gt;111&lt;/span&gt;        &lt;span class=&quot;token number&quot;&gt;72&lt;/span&gt; openat
+  &lt;span class=&quot;token number&quot;&gt;9.19&lt;/span&gt;    &lt;span class=&quot;token number&quot;&gt;0.000097&lt;/span&gt;           &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;        &lt;span class=&quot;token number&quot;&gt;54&lt;/span&gt;           &lt;span class=&quot;token builtin class-name&quot;&gt;read&lt;/span&gt;
+  &lt;span class=&quot;token number&quot;&gt;5.97&lt;/span&gt;    &lt;span class=&quot;token number&quot;&gt;0.000063&lt;/span&gt;           &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;        &lt;span class=&quot;token number&quot;&gt;63&lt;/span&gt;           fstat
+------ ----------- ----------- --------- --------- ----------------
+&lt;span class=&quot;token number&quot;&gt;100.00&lt;/span&gt;    &lt;span class=&quot;token number&quot;&gt;0.001055&lt;/span&gt;                   &lt;span class=&quot;token number&quot;&gt;605&lt;/span&gt;       &lt;span class=&quot;token number&quot;&gt;125&lt;/span&gt; total&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;프로그램은 시스템 콜을 통해 사용자 모드와 커널 모드를 빈번히 전환하며 운영체제의 서비스를 제공받는다.&lt;/p&gt;
+&lt;h2 id=&quot;8️-정리&quot;&gt;8️⃣ 정리&lt;/h2&gt;
+&lt;p&gt;운영체제는 다음과 같은 핵심 역할을 수행한다:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;자원 관리&lt;/strong&gt;: CPU 스케줄링, 가상 메모리, 파일 시스템을 통한 효율적인 자원 관리&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;프로세스 관리&lt;/strong&gt;: 프로세스와 스레드의 생성, 실행, 종료를 제어&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;시스템 콜 제공&lt;/strong&gt;: 응용 프로그램이 안전하게 하드웨어 자원에 접근할 수 있도록 인터페이스 제공&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;이중 모드 운영&lt;/strong&gt;: 사용자 모드와 커널 모드를 구분하여 시스템 보안 유지&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;이러한 기능들이 유기적으로 동작하여 안정적이고 효율적인 컴퓨팅 환경을 제공한다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[[컴퓨터구조] 3. CPU]]></title><description><![CDATA[책을 읽으면서 배운 점을 정리합니다. 이번 글에서는 개발자가 알아야 할 의 핵심 개념들을 학습합니다. 레지스터의 역할부터 인터럽트 처리 과정, 그리고 CPU 성능 향상을 위한 다양한 설계 기법에 대해 다룹니다. 1️⃣ 레지스터 는 CPU…]]></description><link>https://inyoung.dev/computer-architecture-cpu/</link><guid isPermaLink="false">https://inyoung.dev/computer-architecture-cpu/</guid><pubDate>Sun, 18 Jan 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; background: transparent;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/39674b7b51ef5df0ed8aa2aa4d44978c/50637/index.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 65.2%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAIAAAAmMtkJAAAACXBIWXMAAAsTAAALEwEAmpwYAAACsklEQVR42m1SbUxSYRR+KzNL2+pH9aO11b90tZZza9Vac/2r9bNfbbX1o9kikK8LKIIp2kxJh7KRUm2VWqGRwiURLa9fM0DSQmYfyocMuHxNBVK590LvBXNz6+zZu3Pe9zx7zjnvAen/GEWloNFeqUoF2KxdQgRw2TQE/G3IpqcoiiJJKmOZOJEi8XTaf03dAspZeRVCRPMO6dHsrxTlCvh5QsEeIQIBtmvScsTaUtQ/GQnYHTODd9qZgHO/RC73LyyE3O7LcnkOn1+AIAUCJB9BQLa+Gat1ENUb+nVjw/2x0ORXq+2HHfLnGF0SwGWcaWgIRyLx5eWbytYdTMYBLiefXX4EkrN1jo6PqTraVeoOTa8Gx6fCIWPQqVjxakub60FZ2bEaqe33L2ptzWSzFVVVnqgQFVWJT1dLAJVR7nXMybAR6fDQW/v355Zpll7/SKtTKzvuicSM7s5Zj3sCwwI4niapbvOXfWxW4UNpiaxmk2yx27sM6LDFPGae+vj5U5/J6MEDfu9SYMkDXyOhkAFFE4lELB4nCOJ6q+IowjsllYB0hhxfWQkHAn9isUgw6Flc9LpdJEHA6Y8uLky7XS6322I2r8ZWg+EwTEa072Evl+pkAFI3/zTjpP4NPetebGk+XC/TGo1DAwMwhMrwFKMoYLMPiStBlkOSZJKkpWAXGwSRpEOSJre1HqyWoCbTJIbBcCOZhOftzteA9WA3/Gc8FhMNGBqxEZ3DYfV62br+u709fFT/GBtRTIxfeao6LqstlNWerKstljcVP2k6K2/K5XPpbeNxwKzfd0GpZPZ9eGG1GObnC+WNV5+pb73p5ul1AlR/49XL822KvRXCzfXklNMQ8ICQTwOW8TMU+ub3uaLR1fV1ZzQy7nROe72zPh+8P6eA68nMEQl2CpEtbO32X2TXGwm6RJClAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+          &lt;source
+              srcset=&quot;/static/39674b7b51ef5df0ed8aa2aa4d44978c/bc904/index.webp 250w,
+/static/39674b7b51ef5df0ed8aa2aa4d44978c/4be29/index.webp 500w,
+/static/39674b7b51ef5df0ed8aa2aa4d44978c/4d353/index.webp 630w&quot;
+              sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+              type=&quot;image/webp&quot;
+            /&gt;
+          &lt;source
+            srcset=&quot;/static/39674b7b51ef5df0ed8aa2aa4d44978c/43fa5/index.png 250w,
+/static/39674b7b51ef5df0ed8aa2aa4d44978c/c6e3d/index.png 500w,
+/static/39674b7b51ef5df0ed8aa2aa4d44978c/50637/index.png 630w&quot;
+            sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+            type=&quot;image/png&quot;
+          /&gt;
+          &lt;img
+            class=&quot;gatsby-resp-image-image&quot;
+            src=&quot;/static/39674b7b51ef5df0ed8aa2aa4d44978c/50637/index.png&quot;
             alt=&quot;index&quot;
             title=&quot;&quot;
             loading=&quot;lazy&quot;
@@ -425,39 +683,37 @@ STORE R1, [R2]   ; R1 → 메모리&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 → 구조적 위험 발생
 → 한 명령어는 대기해야 함&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[[컴퓨터구조] 2. 컴퓨터가 이해하는 정보]]></title><description><![CDATA['이것이 취업을 위한 컴퓨터 과학이다 with CS 기술 면접' 책을 읽으면서 배운 점을 정리합니다. 2진법 체계와 명령어 구조를 중심으로 살펴봅니다. 1비트와 바이트 컴퓨터는 0과 1만을 이해한다. 0과…]]></description><link>https://inyoung.dev/computer-architecture-computer-information/</link><guid isPermaLink="false">https://inyoung.dev/computer-architecture-computer-information/</guid><pubDate>Sat, 17 Jan 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1000px; background: transparent;&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; background: transparent;&quot;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/f0a910359965b97ebd62fb1d0d744e59/60f98/index.png&quot;
+    href=&quot;/static/39674b7b51ef5df0ed8aa2aa4d44978c/50637/index.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 47.599999999999994%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsTAAALEwEAmpwYAAACaklEQVR42h2S124aURCG95Ej5SpSepMTEoc4NjZem2p6r0tZwNSlF4OxAVeiRJFf4svAxUhnz5n55y+rLG7WLG/X3K+fWNz8ZXn3j+XjE4PpktZwTH96LbXAGF5iDGZU6l1SWoUTu59ILMv1as3q7g/L1QPzq1uUhYBdrx7J6Q3SuSpGf8ZKwINxjXJzQHs0pzO+onexEOAlYbmPxHO8eW/Ccuig2Z7QG1zSMvqMJ3OUq+UDLk+Yjzs/UG0ezL+sDGc3xLUyg/kdk+Wa2eo3U6m5MAkncviCCWyuoMxFsRy7OTp24XT6aAqoksqW2N1T+f7TinlfFUCVnW8H2GVJttIiLxK1qoEmZ63cwnxwilOAQvE8Lm+UU2cQfyjNx08mtEIZxbRr4e2HL0yv7ml1pzx7/pIXrz9TrHVJ5s/xRjKYj2ycOAN4QykcAhJLl1AdfpxyDkaypPNVbHYPermGUpFB0+4+aTH6LBDn8OSMSmvI8PKWsSxp9KbojT75akdCmnMhFpTku9G9IFuobwE3nuaLNVqdIUpH0tOK9W0o/kiagDSEpMEbTuMOJKRihFNF7N4YbmHYkXDy52180SxZmdFrva30ZEanLYEq5+0R58amhhzZvMLQI/5FOHYEOFDd7KsuLKdnmPasuER+OK1jFbmZUoNATONQ3lMiudaZUKr3RLKA1YV+pTUiKs2+WG5bkUyZkHi1ATx2B4iJpGBKJ5wsooqfr959Ze/QTqZQ2xIqCmtdbFEK1R56vS++DCjIRTJfk+0GzdE1JWOMTeT4BaS88axsbOVuGAXl94mL7z5hnchWKJTqYl2V/w5jdma0jL+fAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 65.2%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAIAAAAmMtkJAAAACXBIWXMAAAsTAAALEwEAmpwYAAACsklEQVR42m1SbUxSYRR+KzNL2+pH9aO11b90tZZza9Vac/2r9bNfbbX1o9kikK8LKIIp2kxJh7KRUm2VWqGRwiURLa9fM0DSQmYfyocMuHxNBVK590LvBXNz6+zZu3Pe9zx7zjnvAen/GEWloNFeqUoF2KxdQgRw2TQE/G3IpqcoiiJJKmOZOJEi8XTaf03dAspZeRVCRPMO6dHsrxTlCvh5QsEeIQIBtmvScsTaUtQ/GQnYHTODd9qZgHO/RC73LyyE3O7LcnkOn1+AIAUCJB9BQLa+Gat1ENUb+nVjw/2x0ORXq+2HHfLnGF0SwGWcaWgIRyLx5eWbytYdTMYBLiefXX4EkrN1jo6PqTraVeoOTa8Gx6fCIWPQqVjxakub60FZ2bEaqe33L2ptzWSzFVVVnqgQFVWJT1dLAJVR7nXMybAR6fDQW/v355Zpll7/SKtTKzvuicSM7s5Zj3sCwwI4niapbvOXfWxW4UNpiaxmk2yx27sM6LDFPGae+vj5U5/J6MEDfu9SYMkDXyOhkAFFE4lELB4nCOJ6q+IowjsllYB0hhxfWQkHAn9isUgw6Flc9LpdJEHA6Y8uLky7XS6322I2r8ZWg+EwTEa072Evl+pkAFI3/zTjpP4NPetebGk+XC/TGo1DAwMwhMrwFKMoYLMPiStBlkOSZJKkpWAXGwSRpEOSJre1HqyWoCbTJIbBcCOZhOftzteA9WA3/Gc8FhMNGBqxEZ3DYfV62br+u709fFT/GBtRTIxfeao6LqstlNWerKstljcVP2k6K2/K5XPpbeNxwKzfd0GpZPZ9eGG1GObnC+WNV5+pb73p5ul1AlR/49XL822KvRXCzfXklNMQ8ICQTwOW8TMU+ub3uaLR1fV1ZzQy7nROe72zPh+8P6eA68nMEQl2CpEtbO32X2TXGwm6RJClAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;picture&gt;
           &lt;source
-              srcset=&quot;/static/f0a910359965b97ebd62fb1d0d744e59/bc904/index.webp 250w,
-/static/f0a910359965b97ebd62fb1d0d744e59/4be29/index.webp 500w,
-/static/f0a910359965b97ebd62fb1d0d744e59/03f31/index.webp 1000w,
-/static/f0a910359965b97ebd62fb1d0d744e59/fab20/index.webp 1122w&quot;
-              sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
+              srcset=&quot;/static/39674b7b51ef5df0ed8aa2aa4d44978c/bc904/index.webp 250w,
+/static/39674b7b51ef5df0ed8aa2aa4d44978c/4be29/index.webp 500w,
+/static/39674b7b51ef5df0ed8aa2aa4d44978c/4d353/index.webp 630w&quot;
+              sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
               type=&quot;image/webp&quot;
             /&gt;
           &lt;source
-            srcset=&quot;/static/f0a910359965b97ebd62fb1d0d744e59/43fa5/index.png 250w,
-/static/f0a910359965b97ebd62fb1d0d744e59/c6e3d/index.png 500w,
-/static/f0a910359965b97ebd62fb1d0d744e59/da8b6/index.png 1000w,
-/static/f0a910359965b97ebd62fb1d0d744e59/60f98/index.png 1122w&quot;
-            sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
+            srcset=&quot;/static/39674b7b51ef5df0ed8aa2aa4d44978c/43fa5/index.png 250w,
+/static/39674b7b51ef5df0ed8aa2aa4d44978c/c6e3d/index.png 500w,
+/static/39674b7b51ef5df0ed8aa2aa4d44978c/50637/index.png 630w&quot;
+            sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
             type=&quot;image/png&quot;
           /&gt;
           &lt;img
             class=&quot;gatsby-resp-image-image&quot;
-            src=&quot;/static/f0a910359965b97ebd62fb1d0d744e59/da8b6/index.png&quot;
+            src=&quot;/static/39674b7b51ef5df0ed8aa2aa4d44978c/50637/index.png&quot;
             alt=&quot;index&quot;
             title=&quot;&quot;
             loading=&quot;lazy&quot;
@@ -607,39 +863,37 @@ possible_values &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;
 &lt;/ul&gt;
 &lt;/blockquote&gt;</content:encoded></item><item><title><![CDATA[[컴퓨터구조] 1. 컴퓨터구조의 큰 그림]]></title><description><![CDATA['이것이 취업을 위한 컴퓨터 과학이다 with CS…]]></description><link>https://inyoung.dev/computer-architecture-big-picture/</link><guid isPermaLink="false">https://inyoung.dev/computer-architecture-big-picture/</guid><pubDate>Thu, 15 Jan 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1000px; background: transparent;&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; background: transparent;&quot;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/f0a910359965b97ebd62fb1d0d744e59/60f98/index.png&quot;
+    href=&quot;/static/39674b7b51ef5df0ed8aa2aa4d44978c/50637/index.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 47.599999999999994%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsTAAALEwEAmpwYAAACaklEQVR42h2S124aURCG95Ej5SpSepMTEoc4NjZem2p6r0tZwNSlF4OxAVeiRJFf4svAxUhnz5n55y+rLG7WLG/X3K+fWNz8ZXn3j+XjE4PpktZwTH96LbXAGF5iDGZU6l1SWoUTu59ILMv1as3q7g/L1QPzq1uUhYBdrx7J6Q3SuSpGf8ZKwINxjXJzQHs0pzO+onexEOAlYbmPxHO8eW/Ccuig2Z7QG1zSMvqMJ3OUq+UDLk+Yjzs/UG0ezL+sDGc3xLUyg/kdk+Wa2eo3U6m5MAkncviCCWyuoMxFsRy7OTp24XT6aAqoksqW2N1T+f7TinlfFUCVnW8H2GVJttIiLxK1qoEmZ63cwnxwilOAQvE8Lm+UU2cQfyjNx08mtEIZxbRr4e2HL0yv7ml1pzx7/pIXrz9TrHVJ5s/xRjKYj2ycOAN4QykcAhJLl1AdfpxyDkaypPNVbHYPermGUpFB0+4+aTH6LBDn8OSMSmvI8PKWsSxp9KbojT75akdCmnMhFpTku9G9IFuobwE3nuaLNVqdIUpH0tOK9W0o/kiagDSEpMEbTuMOJKRihFNF7N4YbmHYkXDy52180SxZmdFrva30ZEanLYEq5+0R58amhhzZvMLQI/5FOHYEOFDd7KsuLKdnmPasuER+OK1jFbmZUoNATONQ3lMiudaZUKr3RLKA1YV+pTUiKs2+WG5bkUyZkHi1ATx2B4iJpGBKJ5wsooqfr959Ze/QTqZQ2xIqCmtdbFEK1R56vS++DCjIRTJfk+0GzdE1JWOMTeT4BaS88axsbOVuGAXl94mL7z5hnchWKJTqYl2V/w5jdma0jL+fAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 65.2%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAIAAAAmMtkJAAAACXBIWXMAAAsTAAALEwEAmpwYAAACsklEQVR42m1SbUxSYRR+KzNL2+pH9aO11b90tZZza9Vac/2r9bNfbbX1o9kikK8LKIIp2kxJh7KRUm2VWqGRwiURLa9fM0DSQmYfyocMuHxNBVK590LvBXNz6+zZu3Pe9zx7zjnvAen/GEWloNFeqUoF2KxdQgRw2TQE/G3IpqcoiiJJKmOZOJEi8XTaf03dAspZeRVCRPMO6dHsrxTlCvh5QsEeIQIBtmvScsTaUtQ/GQnYHTODd9qZgHO/RC73LyyE3O7LcnkOn1+AIAUCJB9BQLa+Gat1ENUb+nVjw/2x0ORXq+2HHfLnGF0SwGWcaWgIRyLx5eWbytYdTMYBLiefXX4EkrN1jo6PqTraVeoOTa8Gx6fCIWPQqVjxakub60FZ2bEaqe33L2ptzWSzFVVVnqgQFVWJT1dLAJVR7nXMybAR6fDQW/v355Zpll7/SKtTKzvuicSM7s5Zj3sCwwI4niapbvOXfWxW4UNpiaxmk2yx27sM6LDFPGae+vj5U5/J6MEDfu9SYMkDXyOhkAFFE4lELB4nCOJ6q+IowjsllYB0hhxfWQkHAn9isUgw6Flc9LpdJEHA6Y8uLky7XS6322I2r8ZWg+EwTEa072Evl+pkAFI3/zTjpP4NPetebGk+XC/TGo1DAwMwhMrwFKMoYLMPiStBlkOSZJKkpWAXGwSRpEOSJre1HqyWoCbTJIbBcCOZhOftzteA9WA3/Gc8FhMNGBqxEZ3DYfV62br+u709fFT/GBtRTIxfeao6LqstlNWerKstljcVP2k6K2/K5XPpbeNxwKzfd0GpZPZ9eGG1GObnC+WNV5+pb73p5ul1AlR/49XL822KvRXCzfXklNMQ8ICQTwOW8TMU+ub3uaLR1fV1ZzQy7nROe72zPh+8P6eA68nMEQl2CpEtbO32X2TXGwm6RJClAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;picture&gt;
           &lt;source
-              srcset=&quot;/static/f0a910359965b97ebd62fb1d0d744e59/bc904/index.webp 250w,
-/static/f0a910359965b97ebd62fb1d0d744e59/4be29/index.webp 500w,
-/static/f0a910359965b97ebd62fb1d0d744e59/03f31/index.webp 1000w,
-/static/f0a910359965b97ebd62fb1d0d744e59/fab20/index.webp 1122w&quot;
-              sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
+              srcset=&quot;/static/39674b7b51ef5df0ed8aa2aa4d44978c/bc904/index.webp 250w,
+/static/39674b7b51ef5df0ed8aa2aa4d44978c/4be29/index.webp 500w,
+/static/39674b7b51ef5df0ed8aa2aa4d44978c/4d353/index.webp 630w&quot;
+              sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
               type=&quot;image/webp&quot;
             /&gt;
           &lt;source
-            srcset=&quot;/static/f0a910359965b97ebd62fb1d0d744e59/43fa5/index.png 250w,
-/static/f0a910359965b97ebd62fb1d0d744e59/c6e3d/index.png 500w,
-/static/f0a910359965b97ebd62fb1d0d744e59/da8b6/index.png 1000w,
-/static/f0a910359965b97ebd62fb1d0d744e59/60f98/index.png 1122w&quot;
-            sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
+            srcset=&quot;/static/39674b7b51ef5df0ed8aa2aa4d44978c/43fa5/index.png 250w,
+/static/39674b7b51ef5df0ed8aa2aa4d44978c/c6e3d/index.png 500w,
+/static/39674b7b51ef5df0ed8aa2aa4d44978c/50637/index.png 630w&quot;
+            sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
             type=&quot;image/png&quot;
           /&gt;
           &lt;img
             class=&quot;gatsby-resp-image-image&quot;
-            src=&quot;/static/f0a910359965b97ebd62fb1d0d744e59/da8b6/index.png&quot;
+            src=&quot;/static/39674b7b51ef5df0ed8aa2aa4d44978c/50637/index.png&quot;
             alt=&quot;index&quot;
             title=&quot;&quot;
             loading=&quot;lazy&quot;
