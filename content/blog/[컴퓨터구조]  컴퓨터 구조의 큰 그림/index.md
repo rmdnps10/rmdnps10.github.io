@@ -2,7 +2,7 @@
 title: "[컴퓨터구조] 1. 컴퓨터구조의 큰 그림"
 date: "2026-01-15"
 slug: "computer-architecture-big-picture"
-description: "이것이 컴퓨터 과학이다 + 혼자 공부하는 컴퓨터 구조/운영체제를 읽으면서 배운 내용을 정리합니다."
+description: "이것이 취업을 위한 컴퓨터 과학이다 + 혼자 공부하는 컴퓨터 구조/운영체제를 읽으면서 배운 내용을 정리합니다."
 thumbnail: "./index.png"
 pointColor: "#ffffff"
 tags: ["컴퓨터구조"]
