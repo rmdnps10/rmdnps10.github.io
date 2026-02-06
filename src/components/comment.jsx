@@ -8,7 +8,7 @@ const Comments = () => {
 
     const giscusConfig = {
       src: "https://giscus.app/client.js",
-      "data-repo": "rmdnps10/rmdnps10.github.io",
+      "data-repo": "rmdnps10/inyoung.dev",
       "data-repo-id": "R_kgDON4-0LA",
       "data-category": "Comments",
       "data-category-id": "DIC_kwDON4-0LM4Cm_Ns",
