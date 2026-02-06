@@ -28,16 +28,17 @@ html {
     display: block;
     position: sticky;
     top: 60px;
-    max-height: calc(100vh - 50px);
-    overflow-y: auto;
+    max-height: calc(100vh - 100px);
     align-self: start;
   }
 }
 
 .toc-container {
-  padding: 1.5rem;
+  padding: 1.5rem 0.5rem 1.5rem 1rem;
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 0.5rem;
+  max-height: calc(100vh - 150px);
+  overflow-y: scroll;
 }
 
 .toc-title {

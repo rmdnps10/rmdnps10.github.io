@@ -64,7 +64,7 @@ keywords: "데이터베이스, DB, Database, SQL, DBMS, 관계형 데이터베�
 
 ## 1-3 What is a Database?
 
-데이터베이스에서 가장 중요한 개념은 **지속적 데이터(persistent data)**다.
+데이터베이스에서 가장 중요한 개념은 **지속적 데이터(persistent data)** 이다.
 휘발성 데이터(I/O 버퍼, 제어문 등)와 달리, 삭제하지 않는 이상 오랫동안 보존된다.
 
 #### 📌 Database 정의
