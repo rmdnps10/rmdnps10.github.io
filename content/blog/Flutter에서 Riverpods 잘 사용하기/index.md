@@ -17,9 +17,8 @@ keywords: "Flutter, Riverpod, 상태관리, State Management, Dart, 모바일 �
 - Riverpod 상태 관리 구현
 - DevTools 사용
 - README 파일 작성
-  - 상태 자료구조, 위젯 구현 설명 
+  - 상태 자료구조, 위젯 구현 설명
   - DevTools에서 Inspector&Timeline&Memory&Performance 화면 스크린샷
-
 
 위 과제를 수행하며 나는 Flutter, Riverpod 공식문서를 살펴보면서 관련 내용을 학습하며 투두 리스트를 완성했다.
 

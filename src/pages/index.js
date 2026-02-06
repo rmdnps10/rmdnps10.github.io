@@ -15,6 +15,22 @@ import { getTopVisitedPosts } from "../lib/trackPostVisit"
 //
 //
 
+const HotPostCardSkeleton = () => (
+  <div
+    className="relative bg-gradient-to-br from-[#262626] to-[#212121] rounded-lg overflow-hidden border border-[#52525B] h-[160px] md:h-[240px] flex flex-col animate-pulse"
+    aria-hidden="true"
+  >
+    <div className="w-full h-32 md:h-40 bg-[#3f3f46] flex-shrink-0" />
+    <div className="p-3 flex-1 flex flex-col justify-between">
+      <div className="h-4 md:h-5 bg-[#3f3f46] rounded w-4/5 mb-2" />
+      <div className="flex items-center gap-1">
+        <div className="h-3 w-3 bg-[#3f3f46] rounded" />
+        <div className="h-3 w-8 bg-[#3f3f46] rounded" />
+      </div>
+    </div>
+  </div>
+)
+
 const HotPostCard = ({ post, rank }) => {
   const title = post.frontmatter.title || post.fields.slug
   const thumbnail = post.frontmatter.thumbnail
@@ -82,7 +98,7 @@ const HotSection = ({ posts }) => {
     fetchHotPosts()
   }, [posts])
 
-  if (loading || hotPosts.length === 0) return null
+  if (!loading && hotPosts.length === 0) return null
 
   return (
     <div className="mt-5 md:block hidden">
@@ -93,9 +109,11 @@ const HotSection = ({ posts }) => {
         </h2>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        {hotPosts.map((post, index) => (
-          <HotPostCard key={post.fields.slug} post={post} rank={index + 1} />
-        ))}
+        {loading
+          ? [1, 2, 3].map(i => <HotPostCardSkeleton key={i} />)
+          : hotPosts.map((post, index) => (
+              <HotPostCard key={post.fields.slug} post={post} rank={index + 1} />
+            ))}
       </div>
     </div>
   )

@@ -274,4 +274,3 @@ Kruskal과 동일한 등급의 효율을 가지며, `Dense graph`(간선이 많�
 #### 7-2 Second Best MST
 
 **MST는 unique할 수 있으나, Second Best MST는 unique할 필요가 없다.**
-

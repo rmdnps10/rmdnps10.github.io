@@ -13,7 +13,6 @@ keywords: "데이터베이스, DB, Database, SQL, DBMS, 관계형 데이터베�
 
 > 학부 수업 "데이터베이스시스템" Chapter 1 정리
 
-
 ## 1-1 An Introductory Example
 
 데이터베이스 시스템은 흔히 `전산화된 기록 관리 시스템(computerized record-keeping system)`이라고 불린다.
