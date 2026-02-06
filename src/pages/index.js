@@ -346,6 +346,7 @@ const PostList = ({ posts }) => (
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title
   const posts = data.allMarkdownRemark.nodes
+  const postsCountRef = React.useRef(null)
 
   const tagList = new Set()
   posts.forEach(post => {
@@ -362,6 +363,10 @@ const BlogIndex = ({ data, location }) => {
     const queryParams = new URLSearchParams(location.search)
     if (selectedTag) {
       queryParams.set("tag", selectedTag)
+      // 태그가 선택되었을 때 스크롤 이동
+      if (postsCountRef.current) {
+        postsCountRef.current.scrollIntoView({ behavior: "smooth" })
+      }
     } else {
       queryParams.delete("tag")
     }
@@ -428,7 +433,10 @@ const BlogIndex = ({ data, location }) => {
       <Bio />
       <HotSection posts={posts} />
 
-      <p className="text-xl md:text-3xl font-bold text-white m-0 mt-5">
+      <p
+        ref={postsCountRef}
+        className="text-xl md:text-3xl font-bold text-white m-0 mt-5 scroll-mt-10"
+      >
         {selectedTag === "" ? "All " : `${selectedTag} `}
         {sortedPosts.length} Posts
       </p>
