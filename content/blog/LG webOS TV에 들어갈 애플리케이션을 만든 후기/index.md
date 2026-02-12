@@ -28,15 +28,13 @@ keywords: "webOS, LG전자, LG, 임베디드, Flutter, TV 애플리케이션, �
 
 다음 주제에 대한 교육 세션이 진행되었다.
 
-```
-Application framework
-web
-devops
-cloud
-media
-connectivity
-AI
-```
+- Application framework
+- web
+- devops
+- cloud
+- media
+- connectivity
+- AI
 
 교육 세션을 들으며 컴퓨터공학 전 과정에서 배웠던 핵심 개념들을 다시 리마인드하고, 이를 실제 시스템 관점에서 재구성해볼 수 있었다. 특히 강사님들 대부분이 현직 개발자였기 때문에, 이론적인 개념이 실제 소프트웨어 아키텍처에서 어떤 문제를 해결하기 위해 사용되는지를 구체적인 사례를 통해 이해할 수 있었다.
 

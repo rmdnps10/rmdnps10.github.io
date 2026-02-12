@@ -7,7 +7,7 @@ pointColor: "#3ECF8D"
 tags: ["Web", "회고"]
 ---
 
-> 최근에 사이드 프로젝트로 **BOJ AI Helper**라는 서비스를 개발하고 있습니다.
+> 최근에 사이드 프로젝트로 **BOJ AI H별lper**라는 서비스를 개발하고 있습니다.
 >
 > Nest.js 서버, Next.js SSR&CSR, Chrome Extension 환경에서 Supabase Auth를 통합하며 몇가지 인증 에러들을 만났고, 이러한 에러를 맞닥뜨리며 인증/인가 아키텍처를 설계한 과정을 기록합니다.
 
@@ -343,30 +343,13 @@ Next.js의 SSR 환경에서는 브라우저 환경에 접근이 불가능하기 
 
 그렇다면 세션 갱신을, 주기적으로 백그라운드에서 수행하는 방법이 필요하겠다.
 
-## 4️⃣ 환경별 토큰 전략
+## 4️⃣ 환경별 토큰 갱신 전략
+
+위에서의 고민을 바탕으로 확립한 서버, 클라이언트, Extension 환경별 토큰 갱신 전략을 정리했다.
 
 ### Server: Proactive Refresh
 
 서버 컴포넌트에서는 **API 호출 전에 토큰을 미리 갱신**한다.
-
-**🚨 변경 전: 문제**
-
-```javascript
-export async function getAccessToken() {
-  const supabase = createClient()
-  const {
-    data: { session },
-  } = await supabase.auth.getSession()
-
-  return session?.access_token ?? null // ❌ 만료 여부 미확인
-}
-```
-
-- `getSession()`만 보고 토큰 그대로 반환
-- 토큰이 만료돼도 갱신하지 않음
-- API 호출 시 `401 Unauthorized` 발생
-
-**✅ 변경 후: 해결**
 
 ```javascript
 export async function getAccessToken() {
@@ -392,15 +375,15 @@ export async function getAccessToken() {
 }
 ```
 
-**🔥 동작 원리**
+#### 동작 원리
 
 - 만료 여부를 `expires_at`으로 사전 확인
-- 만료 전에 미리 갱신 (proactive)
+- 만료 전에 미리 갱신
 - API 호출 시 항상 유효한 토큰 사용
 
-### 4-2 Client: Reactive Refresh
+### Client: Reactive Refresh
 
-클라이언트 컴포넌트에서는 **401 응답을 받은 후에 갱신**한다.
+클라이언트 컴포넌트에서는 액세스 토큰 만료 시 **401 응답을 받은 후에 갱신**한다.
 
 ```javascript
 async function fetchWithRefreshMiddleware(url, options) {
@@ -438,7 +421,7 @@ async function fetchWithRefreshMiddleware(url, options) {
 }
 ```
 
-**🔥 동작 원리**
+##### 동작 원리
 
 - 만료 여부 확인 없이 일단 요청
 - 401 응답 시 갱신 (reactive)
@@ -453,16 +436,16 @@ async function fetchWithRefreshMiddleware(url, options) {
 | 방식          | Proactive (예방적)                       | Reactive (대응적)                      |
 | 토큰 저장     | 쿠키 (`cookies()`)                       | 브라우저 스토리지                      |
 
-### 4-3 Extension: Background Alarm
+### Extension: Background Alarm
 
 Chrome Extension에서는 **백그라운드에서 주기적으로 갱신**한다.
 
-**문제**
+##### 문제
 
 - content script는 Supabase SDK의 자동 갱신 메커니즘이 작동하지 않음
 - 1시간 후 토큰 만료 → 401 에러
 
-**해결: chrome.alarms 사용**
+##### 해결: chrome.alarms 사용
 
 ```javascript
 // background.js - 알람 등록
@@ -488,36 +471,17 @@ chrome.alarms.onAlarm.addListener(async alarm => {
 })
 ```
 
-**🔥 동작 원리**
+##### 동작 원리
 
 - Supabase access token 만료: 1시간
 - 알람 주기: 50분 (만료 전에 갱신)
 - 사용자 액션 불필요 (자동 갱신)
 - Manifest V3 service worker도 알람 시점에 깨어남
 
-**장점**
-
-- 사용자가 popup을 열거나 제출하지 않아도 갱신
-- API 호출 시 항상 최신 토큰 보유
-- 401 에러 가능성 최소화
-
 ## 5️⃣ 최종 교훈
 
-### 5-1 RLS는 DB 기능이 아니라 Auth-dependent 모델
 
-RLS를 단순히 "DB 보안 기능"으로 생각하면 안 된다.
-
-```sql
-USING (auth.uid() = user_id);
-```
-
-이 한 줄이 의미하는 것:
-
-- DB는 모든 쿼리마다 `auth.uid()`를 요구한다
-- `auth.uid()`는 Supabase client의 JWT 세션에서 온다
-- 세션이 없으면 → `auth.uid() = null` → RLS 조건 불만족
-
-### 5-2 Supabase는 "세션 일관성"을 요구한다
+### 1. 세션 일관성을 지키자
 
 ```
 하나의 사용자 세션 = 하나의 Supabase client
@@ -527,31 +491,12 @@ client를 매번 새로 생성하면:
 
 - 로그인 세션이 있어도
 - Supabase 내부 auth context는 리셋
-- RLS는 당신을 모른다
 
-**해결: Client 싱글톤 패턴**
+**해결: Client `싱글톤 패턴`**
 
-```javascript
-let browserClient = null
 
-if (browserClient) return browserClient // ✅
-```
+### 2. 환경별로 세션 관리 방법이 다르다
 
-### 5-3 Extension은 브라우저와 다르다
-
-Chrome Extension의 content script는:
-
-- 브라우저의 localStorage와 **완전히 분리**
-- Supabase SDK의 자동 갱신 메커니즘 **작동하지 않음**
-- 토큰 저장소: `chrome.storage.local`
-
-**해결: Background Alarm**
-
-```javascript
-chrome.alarms.create("refreshToken", { periodInMinutes: 50 })
-```
-
-### 5-4 환경별로 토큰 전략이 달라야 한다
 
 | 환경             | 토큰 저장         | 갱신 전략           | 갱신 시점                  |
 | ---------------- | ----------------- | ------------------- | -------------------------- |
@@ -559,7 +504,7 @@ chrome.alarms.create("refreshToken", { periodInMinutes: 50 })
 | Client Component | 브라우저 스토리지 | Reactive            | 401 응답 후                |
 | Chrome Extension | chrome.storage    | Background Periodic | 50분마다 자동              |
 
-### 5-5 보안은 다층 방어다
+### 3. Supabase 보안 설정
 
 ```
 Client (anon_key + JWT)
@@ -569,8 +514,7 @@ Client (anon_key + JWT)
 
 - 클라이언트: RLS로 row 단위 제한
 - 서버: `service_role`로 RLS 우회, 비즈니스 로직이 1차 방어
-- DB: RLS가 최후의 안전벨트
+- DB: RLS
 
-> `anon_key`는 신분증이 아니라 입장권이다. 서버가 `anon_key`를 쓰면 클라이언트와 같은 줄에 서는 것과 같다.
 
 ---
