@@ -12,6 +12,8 @@ export const tagColors = {
   알고리즘: "#adb5bd",
   컴퓨터구조: "#adb5bd",
   운영체제: "#adb5bd",
+  소프트웨어공학: "#adb5bd",
+  Web: "#E29FBF",
 }
 
 // 정의되지 않은 태그의 기본 색상
