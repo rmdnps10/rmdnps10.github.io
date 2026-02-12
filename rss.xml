@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[난너의오른팔 기술 블로그 RSS Feed]]></title><description><![CDATA[Web 기술과 AI 활용법을 공부하는 주니어 개발자, 커뮤니티 빌더의 기술 블로그]]></description><link>https://inyoung.dev</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 12 Feb 2026 05:01:28 GMT</lastBuildDate><item><title><![CDATA[[트러블슈팅] Supabase Auth를 활용한 다양한 환경에서의 세션 유지]]></title><description><![CDATA[최근에 사이드 프로젝트로 BOJ AI Helper라는 서비스를 개발하고 있습니다. Nest.js 서버, Next.js SSR&CSR, Chrome Extension 환경에서 Supabase Auth…]]></description><link>https://inyoung.dev/[트러블슈팅] Supabase를 활용한 인증, 인가/</link><guid isPermaLink="false">https://inyoung.dev/[트러블슈팅] Supabase를 활용한 인증, 인가/</guid><pubDate>Tue, 10 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
-&lt;p&gt;최근에 사이드 프로젝트로 &lt;strong&gt;BOJ AI Helper&lt;/strong&gt;라는 서비스를 개발하고 있습니다.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[난너의오른팔 기술 블로그 RSS Feed]]></title><description><![CDATA[Web 기술과 AI 활용법을 공부하는 주니어 개발자, 커뮤니티 빌더의 기술 블로그]]></description><link>https://inyoung.dev</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 12 Feb 2026 14:51:14 GMT</lastBuildDate><item><title><![CDATA[[트러블슈팅] Supabase Auth를 활용한 다양한 환경에서의 세션 유지]]></title><description><![CDATA[최근에 사이드 프로젝트로 BOJ AI H별lper라는 서비스를 개발하고 있습니다. Nest.js 서버, Next.js SSR&CSR, Chrome Extension 환경에서 Supabase Auth…]]></description><link>https://inyoung.dev/[트러블슈팅] Supabase를 활용한 인증, 인가/</link><guid isPermaLink="false">https://inyoung.dev/[트러블슈팅] Supabase를 활용한 인증, 인가/</guid><pubDate>Tue, 10 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+&lt;p&gt;최근에 사이드 프로젝트로 &lt;strong&gt;BOJ AI H별lper&lt;/strong&gt;라는 서비스를 개발하고 있습니다.&lt;/p&gt;
 &lt;p&gt;Nest.js 서버, Next.js SSR&amp;#x26;CSR, Chrome Extension 환경에서 Supabase Auth를 통합하며 몇가지 인증 에러들을 만났고, 이러한 에러를 맞닥뜨리며 인증/인가 아키텍처를 설계한 과정을 기록합니다.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;background: transparent;&quot;&gt;
@@ -367,24 +367,10 @@ Supabase access token의 주기가 1시간이기에, 유저 입장에서 1시간
 &lt;p&gt;브라우저 전역에서 저장할 수 있는 공간이 뭐가 있을까 찾아보다가, &lt;code class=&quot;language-text&quot;&gt;chrome.storage.local&lt;/code&gt; 이라는 공간이 있다는 것을 알게 되었다.&lt;/p&gt;
 &lt;p&gt;하지만 브라우저 환경과는 다르게, Chrome Extension의 content script 환경에서는 Supabase SDK의 자동 갱신 메커니즘이 작동하지 않는다. supabase sdk는 브라우저의 &lt;code class=&quot;language-text&quot;&gt;localStorage&lt;/code&gt;를 사용하여 세션을 관리하는데, content script는 브라우저의 localStorage와 완전히 분리되어 있기 때문이다.&lt;/p&gt;
 &lt;p&gt;그렇다면 세션 갱신을, 주기적으로 백그라운드에서 수행하는 방법이 필요하겠다.&lt;/p&gt;
-&lt;h2 id=&quot;4️-환경별-토큰-전략&quot;&gt;4️⃣ 환경별 토큰 전략&lt;/h2&gt;
+&lt;h2 id=&quot;4️-환경별-토큰-갱신-전략&quot;&gt;4️⃣ 환경별 토큰 갱신 전략&lt;/h2&gt;
+&lt;p&gt;위에서의 고민을 바탕으로 확립한 서버, 클라이언트, Extension 환경별 토큰 갱신 전략을 정리했다.&lt;/p&gt;
 &lt;h3 id=&quot;server-proactive-refresh&quot;&gt;Server: Proactive Refresh&lt;/h3&gt;
 &lt;p&gt;서버 컴포넌트에서는 &lt;strong&gt;API 호출 전에 토큰을 미리 갱신&lt;/strong&gt;한다.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;🚨 변경 전: 문제&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;async&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;getAccessToken&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; supabase &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;createClient&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;token literal-property property&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; session &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;await&lt;/span&gt; supabase&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;auth&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;getSession&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-
-  &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; session&lt;span class=&quot;token operator&quot;&gt;?.&lt;/span&gt;access_token &lt;span class=&quot;token operator&quot;&gt;??&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;null&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// ❌ 만료 여부 미확인&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;getSession()&lt;/code&gt;만 보고 토큰 그대로 반환&lt;/li&gt;
-&lt;li&gt;토큰이 만료돼도 갱신하지 않음&lt;/li&gt;
-&lt;li&gt;API 호출 시 &lt;code class=&quot;language-text&quot;&gt;401 Unauthorized&lt;/code&gt; 발생&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;✅ 변경 후: 해결&lt;/strong&gt;&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;async&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;getAccessToken&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
   &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; supabase &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;createClient&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// createServerClient (쿠키 기반)&lt;/span&gt;
   &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
@@ -406,14 +392,14 @@ Supabase access token의 주기가 1시간이기에, 유저 입장에서 1시간
 
   &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; session&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;access_token
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;🔥 동작 원리&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&quot;동작-원리&quot;&gt;동작 원리&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;만료 여부를 &lt;code class=&quot;language-text&quot;&gt;expires_at&lt;/code&gt;으로 사전 확인&lt;/li&gt;
-&lt;li&gt;만료 전에 미리 갱신 (proactive)&lt;/li&gt;
+&lt;li&gt;만료 전에 미리 갱신&lt;/li&gt;
 &lt;li&gt;API 호출 시 항상 유효한 토큰 사용&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&quot;4-2-client-reactive-refresh&quot;&gt;4-2 Client: Reactive Refresh&lt;/h3&gt;
-&lt;p&gt;클라이언트 컴포넌트에서는 &lt;strong&gt;401 응답을 받은 후에 갱신&lt;/strong&gt;한다.&lt;/p&gt;
+&lt;h3 id=&quot;client-reactive-refresh&quot;&gt;Client: Reactive Refresh&lt;/h3&gt;
+&lt;p&gt;클라이언트 컴포넌트에서는 액세스 토큰 만료 시 &lt;strong&gt;401 응답을 받은 후에 갱신&lt;/strong&gt;한다.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;async&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;fetchWithRefreshMiddleware&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;url&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; options&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
   &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; supabase &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;createClient&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// createBrowserClient&lt;/span&gt;
   &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
@@ -447,7 +433,7 @@ Supabase access token의 주기가 1시간이기에, 유저 입장에서 1시간
 
   &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; response
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;🔥 동작 원리&lt;/strong&gt;&lt;/p&gt;
+&lt;h5&gt;동작 원리&lt;/h5&gt;
 &lt;ul&gt;
 &lt;li&gt;만료 여부 확인 없이 일단 요청&lt;/li&gt;
 &lt;li&gt;401 응답 시 갱신 (reactive)&lt;/li&gt;
@@ -485,14 +471,14 @@ Supabase access token의 주기가 1시간이기에, 유저 입장에서 1시간
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h3 id=&quot;4-3-extension-background-alarm&quot;&gt;4-3 Extension: Background Alarm&lt;/h3&gt;
+&lt;h3 id=&quot;extension-background-alarm&quot;&gt;Extension: Background Alarm&lt;/h3&gt;
 &lt;p&gt;Chrome Extension에서는 &lt;strong&gt;백그라운드에서 주기적으로 갱신&lt;/strong&gt;한다.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;문제&lt;/strong&gt;&lt;/p&gt;
+&lt;h5&gt;문제&lt;/h5&gt;
 &lt;ul&gt;
 &lt;li&gt;content script는 Supabase SDK의 자동 갱신 메커니즘이 작동하지 않음&lt;/li&gt;
 &lt;li&gt;1시간 후 토큰 만료 → 401 에러&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;해결: chrome.alarms 사용&lt;/strong&gt;&lt;/p&gt;
+&lt;h5&gt;해결: chrome.alarms 사용&lt;/h5&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// background.js - 알람 등록&lt;/span&gt;
 chrome&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;alarms&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;create&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;refreshToken&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
   &lt;span class=&quot;token literal-property property&quot;&gt;periodInMinutes&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;50&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
@@ -514,51 +500,23 @@ chrome&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;alarms&lt;sp
     console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;Token refresh failed:&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; error&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
   &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;🔥 동작 원리&lt;/strong&gt;&lt;/p&gt;
+&lt;h5&gt;동작 원리&lt;/h5&gt;
 &lt;ul&gt;
 &lt;li&gt;Supabase access token 만료: 1시간&lt;/li&gt;
 &lt;li&gt;알람 주기: 50분 (만료 전에 갱신)&lt;/li&gt;
 &lt;li&gt;사용자 액션 불필요 (자동 갱신)&lt;/li&gt;
 &lt;li&gt;Manifest V3 service worker도 알람 시점에 깨어남&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;장점&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;사용자가 popup을 열거나 제출하지 않아도 갱신&lt;/li&gt;
-&lt;li&gt;API 호출 시 항상 최신 토큰 보유&lt;/li&gt;
-&lt;li&gt;401 에러 가능성 최소화&lt;/li&gt;
-&lt;/ul&gt;
 &lt;h2 id=&quot;5️-최종-교훈&quot;&gt;5️⃣ 최종 교훈&lt;/h2&gt;
-&lt;h3 id=&quot;5-1-rls는-db-기능이-아니라-auth-dependent-모델&quot;&gt;5-1 RLS는 DB 기능이 아니라 Auth-dependent 모델&lt;/h3&gt;
-&lt;p&gt;RLS를 단순히 &quot;DB 보안 기능&quot;으로 생각하면 안 된다.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;sql&quot;&gt;&lt;pre class=&quot;language-sql&quot;&gt;&lt;code class=&quot;language-sql&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;USING&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;auth&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;uid&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; user_id&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;이 한 줄이 의미하는 것:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;DB는 모든 쿼리마다 &lt;code class=&quot;language-text&quot;&gt;auth.uid()&lt;/code&gt;를 요구한다&lt;/li&gt;
-&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;auth.uid()&lt;/code&gt;는 Supabase client의 JWT 세션에서 온다&lt;/li&gt;
-&lt;li&gt;세션이 없으면 → &lt;code class=&quot;language-text&quot;&gt;auth.uid() = null&lt;/code&gt; → RLS 조건 불만족&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&quot;5-2-supabase는-세션-일관성을-요구한다&quot;&gt;5-2 Supabase는 &quot;세션 일관성&quot;을 요구한다&lt;/h3&gt;
+&lt;h3 id=&quot;1-세션-일관성을-지키자&quot;&gt;1. 세션 일관성을 지키자&lt;/h3&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;하나의 사용자 세션 = 하나의 Supabase client&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;client를 매번 새로 생성하면:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;로그인 세션이 있어도&lt;/li&gt;
 &lt;li&gt;Supabase 내부 auth context는 리셋&lt;/li&gt;
-&lt;li&gt;RLS는 당신을 모른다&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;해결: Client 싱글톤 패턴&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; browserClient &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;null&lt;/span&gt;
-
-&lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;browserClient&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; browserClient &lt;span class=&quot;token comment&quot;&gt;// ✅&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h3 id=&quot;5-3-extension은-브라우저와-다르다&quot;&gt;5-3 Extension은 브라우저와 다르다&lt;/h3&gt;
-&lt;p&gt;Chrome Extension의 content script는:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;브라우저의 localStorage와 &lt;strong&gt;완전히 분리&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;Supabase SDK의 자동 갱신 메커니즘 &lt;strong&gt;작동하지 않음&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;토큰 저장소: &lt;code class=&quot;language-text&quot;&gt;chrome.storage.local&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;해결: Background Alarm&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;chrome&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;alarms&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;create&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;refreshToken&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;token literal-property property&quot;&gt;periodInMinutes&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;50&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h3 id=&quot;5-4-환경별로-토큰-전략이-달라야-한다&quot;&gt;5-4 환경별로 토큰 전략이 달라야 한다&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;해결: Client &lt;code class=&quot;language-text&quot;&gt;싱글톤 패턴&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&quot;2-환경별로-세션-관리-방법이-다르다&quot;&gt;2. 환경별로 세션 관리 방법이 다르다&lt;/h3&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -589,18 +547,15 @@ chrome&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;alarms&lt;sp
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h3 id=&quot;5-5-보안은-다층-방어다&quot;&gt;5-5 보안은 다층 방어다&lt;/h3&gt;
+&lt;h3 id=&quot;3-supabase-보안-설정&quot;&gt;3. Supabase 보안 설정&lt;/h3&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;Client (anon_key + JWT)
   → Server (JWT 검증 + 비즈니스 로직)
     → DB (RLS 정책)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;ul&gt;
 &lt;li&gt;클라이언트: RLS로 row 단위 제한&lt;/li&gt;
 &lt;li&gt;서버: &lt;code class=&quot;language-text&quot;&gt;service_role&lt;/code&gt;로 RLS 우회, 비즈니스 로직이 1차 방어&lt;/li&gt;
-&lt;li&gt;DB: RLS가 최후의 안전벨트&lt;/li&gt;
+&lt;li&gt;DB: RLS&lt;/li&gt;
 &lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;anon_key&lt;/code&gt;는 신분증이 아니라 입장권이다. 서버가 &lt;code class=&quot;language-text&quot;&gt;anon_key&lt;/code&gt;를 쓰면 클라이언트와 같은 줄에 서는 것과 같다.&lt;/p&gt;
-&lt;/blockquote&gt;
 &lt;hr&gt;</content:encoded></item><item><title><![CDATA[[소프트웨어공학] Waterfall과 Agile]]></title><description><![CDATA[소프트웨어를 개발하는 방식은 프로젝트의 특성과 규모에 따라 달라진다. Waterfall과 Agile…]]></description><link>https://inyoung.dev/waterfall-agile/</link><guid isPermaLink="false">https://inyoung.dev/waterfall-agile/</guid><pubDate>Tue, 03 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
 &lt;p&gt;소프트웨어를 개발하는 방식은 프로젝트의 특성과 규모에 따라 달라진다. Waterfall과 Agile은 소프트웨어 개발 방법론의 대표적인 두 축으로, 각각의 철학과 프로세스가 명확히 구분된다. 두 방법론의 특징과 차이점을 통해 프로젝트 상황에 맞는 선택 기준을 이해해보자.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -4639,13 +4594,15 @@ list&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class
 &lt;p&gt;수업은 스탠바이미 실습 8회, 이론 수업 8회와 이론 수업을 바탕으로 한 기말 시험으로 구성되었다.&lt;/p&gt;
 &lt;h2 id=&quot;2️-교육-세션&quot;&gt;2️⃣ 교육 세션&lt;/h2&gt;
 &lt;p&gt;다음 주제에 대한 교육 세션이 진행되었다.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;Application framework
-web
-devops
-cloud
-media
-connectivity
-AI&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;Application framework&lt;/li&gt;
+&lt;li&gt;web&lt;/li&gt;
+&lt;li&gt;devops&lt;/li&gt;
+&lt;li&gt;cloud&lt;/li&gt;
+&lt;li&gt;media&lt;/li&gt;
+&lt;li&gt;connectivity&lt;/li&gt;
+&lt;li&gt;AI&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;교육 세션을 들으며 컴퓨터공학 전 과정에서 배웠던 핵심 개념들을 다시 리마인드하고, 이를 실제 시스템 관점에서 재구성해볼 수 있었다. 특히 강사님들 대부분이 현직 개발자였기 때문에, 이론적인 개념이 실제 소프트웨어 아키텍처에서 어떤 문제를 해결하기 위해 사용되는지를 구체적인 사례를 통해 이해할 수 있었다.&lt;/p&gt;
 &lt;p&gt;가장 인상 깊었던 강의는 웹 엔진(Web Engine)의 내부 구조와 멀티 프로세스 아키텍처를 다룬 세션이었다. 초기의 WebKit 기반 브라우저가 UI, 렌더링, JavaScript 실행을 하나의 프로세스 안에서 처리하는 Single Process Model을 사용했을 때, 특정 웹 페이지의 버그나 렌더링 엔진 오류가 곧바로 브라우저 전체의 크래시로 이어질 수 있다는 구조적 한계를 설명해주셨다. 단순히 &lt;code class=&quot;language-text&quot;&gt;스레드&lt;/code&gt;를 분리하는 방식만으로는 메모리 보호나 보안 격리를 보장하기 어렵다는 점에서, &lt;code class=&quot;language-text&quot;&gt;프로세스&lt;/code&gt; 단위 분리가 필요하다는 배경도 함께 이해할 수 있었다.&lt;/p&gt;
 &lt;p&gt;이러한 한계를 해결하기 위해 현대 브라우저, 특히 Chromium 기반 브라우저는 &lt;code class=&quot;language-text&quot;&gt;Browser Process&lt;/code&gt;와 &lt;code class=&quot;language-text&quot;&gt;Renderer Process&lt;/code&gt;를 분리하는 &lt;code class=&quot;language-text&quot;&gt;Multi-Process Architecture&lt;/code&gt;를 채택하고 있다는 점이 핵심이었다. Browser Process는 탭 관리, 네트워크 요청, 리소스 접근을 담당하고, 각 Renderer Process는 WebKit/Blink 엔진과 JavaScript 엔진(V8)을 포함해 개별 웹 페이지를 렌더링한다. 이 구조를 통해 특정 렌더링 프로세스에서 오류가 발생하더라도 브라우저 전체의 안정성은 유지될 수 있다.&lt;/p&gt;

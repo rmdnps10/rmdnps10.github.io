@@ -79,13 +79,15 @@
 <p>수업은 스탠바이미 실습 8회, 이론 수업 8회와 이론 수업을 바탕으로 한 기말 시험으로 구성되었다.</p>
 <h2 id="2️-교육-세션">2️⃣ 교육 세션</h2>
 <p>다음 주제에 대한 교육 세션이 진행되었다.</p>
-<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">Application framework
-web
-devops
-cloud
-media
-connectivity
-AI</code></pre></div>
+<ul>
+<li>Application framework</li>
+<li>web</li>
+<li>devops</li>
+<li>cloud</li>
+<li>media</li>
+<li>connectivity</li>
+<li>AI</li>
+</ul>
 <p>교육 세션을 들으며 컴퓨터공학 전 과정에서 배웠던 핵심 개념들을 다시 리마인드하고, 이를 실제 시스템 관점에서 재구성해볼 수 있었다. 특히 강사님들 대부분이 현직 개발자였기 때문에, 이론적인 개념이 실제 소프트웨어 아키텍처에서 어떤 문제를 해결하기 위해 사용되는지를 구체적인 사례를 통해 이해할 수 있었다.</p>
 <p>가장 인상 깊었던 강의는 웹 엔진(Web Engine)의 내부 구조와 멀티 프로세스 아키텍처를 다룬 세션이었다. 초기의 WebKit 기반 브라우저가 UI, 렌더링, JavaScript 실행을 하나의 프로세스 안에서 처리하는 Single Process Model을 사용했을 때, 특정 웹 페이지의 버그나 렌더링 엔진 오류가 곧바로 브라우저 전체의 크래시로 이어질 수 있다는 구조적 한계를 설명해주셨다. 단순히 <code class="language-text">스레드</code>를 분리하는 방식만으로는 메모리 보호나 보안 격리를 보장하기 어렵다는 점에서, <code class="language-text">프로세스</code> 단위 분리가 필요하다는 배경도 함께 이해할 수 있었다.</p>
 <p>이러한 한계를 해결하기 위해 현대 브라우저, 특히 Chromium 기반 브라우저는 <code class="language-text">Browser Process</code>와 <code class="language-text">Renderer Process</code>를 분리하는 <code class="language-text">Multi-Process Architecture</code>를 채택하고 있다는 점이 핵심이었다. Browser Process는 탭 관리, 네트워크 요청, 리소스 접근을 담당하고, 각 Renderer Process는 WebKit/Blink 엔진과 JavaScript 엔진(V8)을 포함해 개별 웹 페이지를 렌더링한다. 이 구조를 통해 특정 렌더링 프로세스에서 오류가 발생하더라도 브라우저 전체의 안정성은 유지될 수 있다.</p>
