@@ -44,7 +44,7 @@ const Seo = ({
   const metaDescription = description || site.siteMetadata.description
   const defaultTitle = site.siteMetadata.title
   const siteUrl = site.siteMetadata.siteUrl
-  const fullTitle = defaultTitle ? `${title} | ${defaultTitle}` : title
+  const fullTitle = title
   const canonicalUrl = url || siteUrl
   const ogImage = image
     ? image.startsWith("http")

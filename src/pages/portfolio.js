@@ -40,7 +40,7 @@ export default PortfolioPage
 
 export const Head = () => (
   <Seo
-    title="Portfolio — CHUNG INYOUNG (정인영, 난너의오른팔)"
+    title="정인영 포트폴리오 (Chung Inyoung"
     description="AI-driven developer portfolio featuring projects, activities, and career highlights by Chung Inyoung."
     keywords="정인영, Chung Inyoung, 포트폴리오, 개발자 포트폴리오, 웹 개발자, AI 개발자, 프론트엔드 개발자, 서강대학교, 카카오뱅크, 소프트웨어 개발자"
   />

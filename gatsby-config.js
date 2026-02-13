@@ -9,7 +9,7 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `메인`,
+    title: `홈`,
     author: {
       name: `Inyoung Chung`,
       university: `Sogang University`,
