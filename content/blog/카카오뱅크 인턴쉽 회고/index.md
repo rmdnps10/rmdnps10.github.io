@@ -1,5 +1,5 @@
 ---
-title: "카카오뱅크 개발 어시스턴트 회고"
+title: "서비스 개발부터 DevRel까지: 카카오뱅크 인턴쉽 회고"
 slug: "kakaobank-devrel-internship-retrospect"
 date: "2025-07-28"
 description: "금융으로 세상을 바꾸는 기업, 카카오뱅크에서 6개월의 인턴쉽을 회고합니다. (+ 네이버랩스 인턴 최종 면접후기))"
