@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[난너의오른팔 기술 블로그 RSS Feed]]></title><description><![CDATA[Web 기술과 AI 활용법을 공부하는 주니어 개발자, 커뮤니티 빌더의 기술 블로그]]></description><link>https://inyoung.dev</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 12 Feb 2026 14:51:14 GMT</lastBuildDate><item><title><![CDATA[[트러블슈팅] Supabase Auth를 활용한 다양한 환경에서의 세션 유지]]></title><description><![CDATA[최근에 사이드 프로젝트로 BOJ AI H별lper라는 서비스를 개발하고 있습니다. Nest.js 서버, Next.js SSR&CSR, Chrome Extension 환경에서 Supabase Auth…]]></description><link>https://inyoung.dev/[트러블슈팅] Supabase를 활용한 인증, 인가/</link><guid isPermaLink="false">https://inyoung.dev/[트러블슈팅] Supabase를 활용한 인증, 인가/</guid><pubDate>Tue, 10 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
-&lt;p&gt;최근에 사이드 프로젝트로 &lt;strong&gt;BOJ AI H별lper&lt;/strong&gt;라는 서비스를 개발하고 있습니다.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[난너의오른팔 기술 블로그 RSS Feed]]></title><description><![CDATA[Web 기술과 AI 활용법을 공부하는 주니어 개발자, 커뮤니티 빌더의 기술 블로그]]></description><link>https://inyoung.dev</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 13 Feb 2026 15:00:57 GMT</lastBuildDate><item><title><![CDATA[[트러블슈팅] Supabase Auth를 활용한 다양한 환경에서의 세션 유지]]></title><description><![CDATA[최근에 사이드 프로젝트로 BOJ AI Helper라는 서비스를 개발하고 있습니다. Nest.js 서버, Next.js SSR&CSR, Chrome Extension 환경에서 Supabase Auth…]]></description><link>https://inyoung.dev/[트러블슈팅] Supabase를 활용한 인증, 인가/</link><guid isPermaLink="false">https://inyoung.dev/[트러블슈팅] Supabase를 활용한 인증, 인가/</guid><pubDate>Tue, 10 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+&lt;p&gt;최근에 사이드 프로젝트로 &lt;strong&gt;BOJ AI Helper&lt;/strong&gt;라는 서비스를 개발하고 있습니다.&lt;/p&gt;
 &lt;p&gt;Nest.js 서버, Next.js SSR&amp;#x26;CSR, Chrome Extension 환경에서 Supabase Auth를 통합하며 몇가지 인증 에러들을 만났고, 이러한 에러를 맞닥뜨리며 인증/인가 아키텍처를 설계한 과정을 기록합니다.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;background: transparent;&quot;&gt;
@@ -139,11 +139,11 @@
 &lt;/ul&gt;
 &lt;h2 id=&quot;supabase-auth의-도입&quot;&gt;Supabase Auth의 도입&lt;/h2&gt;
 &lt;p&gt;이번 프로젝트에서는 &lt;code class=&quot;language-text&quot;&gt;Supabase&lt;/code&gt;를 Auth Provider로서 활용하며, 데이터 접근은 자체 백엔드 서버를 통해 수행했다.
-즉, 토큰 검증과 토큰 발급의 책임을 서버단이 아닌 Supabase Auth가 담당하도록 설계했다.&lt;/p&gt;
+즉, 토큰 검증과 토큰 발급의 책임을 서버단이 아닌 &lt;code class=&quot;language-text&quot;&gt;Supabase Auth&lt;/code&gt;가 담당하도록 설계했다.&lt;/p&gt;
 &lt;h3 id=&quot;도입-배경&quot;&gt;도입 배경&lt;/h3&gt;
 &lt;p&gt;예전에 참여한 AI 해커톤에서 &lt;code class=&quot;language-text&quot;&gt;Next.js&lt;/code&gt;로 프론트엔드 단만을 구현하며 &lt;code class=&quot;language-text&quot;&gt;Supabase&lt;/code&gt;를 사실상의 백엔드로서 활용한 경험이 있었는데, 당시에 직접 백엔드를 구현하지 않고 굉장히 수월하게 서비스를 만들 수 있었다.&lt;/p&gt;
-&lt;p&gt;그 당시에 경험으로 이번 프로젝트에서도 Supabase Auth를 도입하게 되었다.&lt;/p&gt;
-&lt;p&gt;하지만 이번 프로젝트는 단순한 프론트엔드 앱이 아니라, &lt;code class=&quot;language-text&quot;&gt;Next.js&lt;/code&gt; 풀스택 앱과 &lt;code class=&quot;language-text&quot;&gt;NestJS&lt;/code&gt; 백엔드 서버, 그리고 &lt;code class=&quot;language-text&quot;&gt;Chrome Extension&lt;/code&gt;까지 아우르는 복합적인 아키텍처였기에, Supabase Auth를 통합하는 과정에서 여러 가지 트러블슈팅 상황에 직면하게 되었다.&lt;/p&gt;
+&lt;p&gt;그 당시에 경험으로 이번 프로젝트에서도 &lt;code class=&quot;language-text&quot;&gt;Supabase Auth&lt;/code&gt;를 도입하게 되었다.&lt;/p&gt;
+&lt;p&gt;하지만 이번 프로젝트는 단순한 프론트엔드 앱이 아니라, &lt;code class=&quot;language-text&quot;&gt;Next.js&lt;/code&gt; 풀스택 앱과 &lt;code class=&quot;language-text&quot;&gt;NestJS&lt;/code&gt; 백엔드 서버, 그리고 &lt;code class=&quot;language-text&quot;&gt;Chrome Extension&lt;/code&gt;까지 아우르는 복합적인 아키텍처였기에, &lt;code class=&quot;language-text&quot;&gt;Supabase Auth&lt;/code&gt;를 통합하는 과정에서 여러 가지 트러블슈팅 상황에 직면하게 되었다.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;h5&gt;이 글에서는 &lt;code class=&quot;language-text&quot;&gt;Supabase Auth&lt;/code&gt;를 활용하여 풀스택 인증/인가 아키텍처를 설계하고, RLS 설정, 토큰 관리, 환경별 인증 처리 문제를 해결한 경험을 공유하고자 한다.&lt;/h5&gt;
 &lt;/blockquote&gt;
@@ -157,36 +157,53 @@
 &lt;li&gt;모든 API 요청에 JWT 포함&lt;/li&gt;
 &lt;li&gt;서버가 Supabase Auth를 통해 JWT 검증 후 DB 접근&lt;/li&gt;
 &lt;/ol&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;┌─────────────────────────────────────────────────────────────────────────┐
-│                           사용자 / 브라우저                               │
-└─────────────────────────────────────────────────────────────────────────┘
-         │                              │
-         │ 웹 앱                         │ acmicpc.net + 확장
-         ▼                              ▼
-┌─────────────────────┐      ┌─────────────────────┐
-│   boj-helper-app    │      │  boj-chrome-plugin  │
-│   (Next.js 16)      │      │  (Chrome Extension) │
-│   localhost:3001    │      │  content + popup     │
-└──────────┬──────────┘      └──────────┬──────────┘
-           │                            │
-           │ Bearer token               │ Bearer token
-           │ (API 호출 시)               │ (POST /submissions 등)
-           ▼                            ▼
-┌─────────────────────────────────────────────────────────────────────────┐
-│                      boj-helper-server (NestJS)                          │
-│                      localhost:3000                                      │
-│  • SubmissionController @UseGuards(SupabaseAuthGuard)                    │
-│  • 토큰 검증: Supabase Auth API (service_role)                           │
-│  • 비즈니스 데이터: Prisma → PostgreSQL (Supabase DB 또는 별도 DB)         │
-└─────────────────────────────────────────────────────────────────────────┘
-           │
-           │ 토큰 검증 (getUser(accessToken))
-           ▼
-┌─────────────────────────────────────────────────────────────────────────┐
-│                         Supabase                                         │
-│  • Auth API: 로그인/세션/리프레시 (anon key로 접근)                       │
-│  • DB: RLS 적용 테이블 (앱/확장은 직접 접근 안 함, Nest만 접근)           │
-└─────────────────────────────────────────────────────────────────────────┘&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;background: transparent;&quot;&gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1000px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/58823d90edb75d40ac5fd4c4b7338a34/e4a85/flow.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 62.8%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAACE4AAAhOAFFljFgAAAB0UlEQVR42nVTSW7bQBDU02xLMndSC6khKZFaKEVLfBBhBbAPQRSfBOQcIPmBAQP+QM75k2/lqQYoSDJ9KAxnpqe6q6vZcF0XjuPAtu0juOe5ZVnwPE/2/D6N4X0dGgzudDoIwxBKKQwGAwRBIGer1UqCoihCmqaC0WgkMZ8SMhuJsizDcDhEURSC6XSK3W6H8XiM+XyO2WwmZCT39EPTNKT6WsJ2uy1VxXEsVfARQRKuvV5PyCaTCQ6HA37/+avv5rWkDRIwsCxLkXjao6p/stdrEIX4//KMt3+veHwo0WzdwvcvCDebDfb7PbbbLZbLJfr9/gcZUoXjwg9cFOU9fv14wN0XBcPi3YVkmkE57CFBMyqXq5VglUy20klDFUPFab0p1XhUTp6OxGV/2NOB0g577qejI6bQjMViIT1klYZhYDyb4ufTkyRhwjzPj+4nSXJW/YcKfd8/SuUIkbxIUjzuviHSLWEiJmXFjJXqbEfGh2cVjoRn/dKrr8fk+5WFr9cGQsNCnMRYr9dCvNRQerCtqANbS7dME6ZWQBVnhKfE3W5XJObaLA47zeBK+VmeYaS/jYXCbeDg5uoaN80mWq1WPWEFSqskXv7rItmyayW/A9moAjD4MMYDAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+          &lt;source
+              srcset=&quot;/static/58823d90edb75d40ac5fd4c4b7338a34/bc904/flow.webp 250w,
+/static/58823d90edb75d40ac5fd4c4b7338a34/4be29/flow.webp 500w,
+/static/58823d90edb75d40ac5fd4c4b7338a34/03f31/flow.webp 1000w,
+/static/58823d90edb75d40ac5fd4c4b7338a34/6740d/flow.webp 1287w&quot;
+              sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
+              type=&quot;image/webp&quot;
+            /&gt;
+          &lt;source
+            srcset=&quot;/static/58823d90edb75d40ac5fd4c4b7338a34/43fa5/flow.png 250w,
+/static/58823d90edb75d40ac5fd4c4b7338a34/c6e3d/flow.png 500w,
+/static/58823d90edb75d40ac5fd4c4b7338a34/da8b6/flow.png 1000w,
+/static/58823d90edb75d40ac5fd4c4b7338a34/e4a85/flow.png 1287w&quot;
+            sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
+            type=&quot;image/png&quot;
+          /&gt;
+          &lt;img
+            class=&quot;gatsby-resp-image-image&quot;
+            src=&quot;/static/58823d90edb75d40ac5fd4c4b7338a34/da8b6/flow.png&quot;
+            alt=&quot;인증 플로우&quot;
+            title=&quot;&quot;
+            loading=&quot;lazy&quot;
+            decoding=&quot;async&quot;
+            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+          /&gt;
+        &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;인증 플로우&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Client (Next.js / Chrome Extension)&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;anon_key&lt;/code&gt; + Supabase Auth SDK로 JWT 발급&lt;/li&gt;
@@ -215,20 +232,53 @@
 서버는 Supabase Auth API를 통해 JWT를 검증하고 사용자 정보를 확인한다.
 실제 DB 접근은 NestJS 서버에서만 수행한다. 이때 service_role key는 서버에만 존재한다.&lt;/p&gt;
 &lt;h4 id=&quot;서비스-전체-아키텍처&quot;&gt;서비스 전체 아키텍처&lt;/h4&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;┌─────────────────────┐     제출 수집/전송         ┌────────────────────┐
-│  boj-chrome-plugin  │ ────────────────────►  │  boj-helper-server  │
-│  (Chrome Extension) │                        │  (NestJS + Prisma)  │
-└─────────────────────┘                        └──────────┬──────────┘
-         │                                                 │
-         │ 확장 프로그램 로그인 (auth-bridge)               │ REST API
-         ▼                                                 │
-┌─────────────────────┐      제출/대시보드 조회             │
-│   boj-helper-app    │ ◄──────────────────────────────────┤
-│   (Next.js + RSC)   │                                    │
-└─────────────────────┘                        ┌──────────▼──────────┐
-                                               │  PostgreSQL          │
-                                               │  (Supabase Auth)     │
-                                               └─────────────────────┘&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;background: transparent;&quot;&gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1000px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/99246e95272d0d7a074d637d13743bb7/e4a85/architecture.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 62.8%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAACE4AAAhOAFFljFgAAAB+klEQVR42n1T227aQBT0l7UiAuM72Nj4gsFcjGsDFRChCKG+VH3ra/+kykM+pK/9lunOSR0FouRhtPbZ3Tkzs7ua4zggbNtGr9eDrutoax/BfaeutWRBEODw8ICvx3t4rgtL1dq5W7Cuew5MV83fErpqc1+pqpoGf58e8efpN6IkFQWr1QqbzQZlWaJR8/wfDoew1Z5Tx8BCtxCY9hWpEFqmhaxI8fP7Dzz++oY49hEr0jzPURSFYDabYTqdYrlcYhRFuB+EWA9HSIIRHMXxQkgLlmUhTRPkVY2ybpCpb5LEcQzTNNHv92U0DEPGSBEmqkFZf0Exn19b9jwPg8FAfmbTHE1dg6rH4wjb7VZAAjal3fV6LWDmk8kEvu9LozZbjdlwU62I2sWsMTuqpO39fi9qSUDLFECSLMukRvCb4jR2D8NQVJBgriyMx2PJjBtpl4uPxyMWi4VYJqgoSZ6jOZ1OMtKF1kplR54iJ1jjfSQhibmRNTZmZmmcyHrOsTkjcv8fjBBS6uVywfl8xuFweDld2mNG7RpH3bsoVE7qErplIFWNmCVdXF1sYrfbCaqqEiLmwmtCm8yV6hnHar6As5mi5zvofPqMzt0dut3uW0Lao2yeJME8qIxqSUTFtM78XPt5D1UT7ut7+Pot3z4vgsTtQfBb6u77b/wfl/4HQnQIqm8AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+          &lt;source
+              srcset=&quot;/static/99246e95272d0d7a074d637d13743bb7/bc904/architecture.webp 250w,
+/static/99246e95272d0d7a074d637d13743bb7/4be29/architecture.webp 500w,
+/static/99246e95272d0d7a074d637d13743bb7/03f31/architecture.webp 1000w,
+/static/99246e95272d0d7a074d637d13743bb7/6740d/architecture.webp 1287w&quot;
+              sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
+              type=&quot;image/webp&quot;
+            /&gt;
+          &lt;source
+            srcset=&quot;/static/99246e95272d0d7a074d637d13743bb7/43fa5/architecture.png 250w,
+/static/99246e95272d0d7a074d637d13743bb7/c6e3d/architecture.png 500w,
+/static/99246e95272d0d7a074d637d13743bb7/da8b6/architecture.png 1000w,
+/static/99246e95272d0d7a074d637d13743bb7/e4a85/architecture.png 1287w&quot;
+            sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
+            type=&quot;image/png&quot;
+          /&gt;
+          &lt;img
+            class=&quot;gatsby-resp-image-image&quot;
+            src=&quot;/static/99246e95272d0d7a074d637d13743bb7/da8b6/architecture.png&quot;
+            alt=&quot;서비스 아키텍처&quot;
+            title=&quot;&quot;
+            loading=&quot;lazy&quot;
+            decoding=&quot;async&quot;
+            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+          /&gt;
+        &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;서비스 아키텍처&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;핵심 구성 요소&lt;/strong&gt;&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -472,13 +522,8 @@ Supabase access token의 주기가 1시간이기에, 유저 입장에서 1시간
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;h3 id=&quot;extension-background-alarm&quot;&gt;Extension: Background Alarm&lt;/h3&gt;
-&lt;p&gt;Chrome Extension에서는 &lt;strong&gt;백그라운드에서 주기적으로 갱신&lt;/strong&gt;한다.&lt;/p&gt;
-&lt;h5&gt;문제&lt;/h5&gt;
-&lt;ul&gt;
-&lt;li&gt;content script는 Supabase SDK의 자동 갱신 메커니즘이 작동하지 않음&lt;/li&gt;
-&lt;li&gt;1시간 후 토큰 만료 → 401 에러&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h5&gt;해결: chrome.alarms 사용&lt;/h5&gt;
+&lt;p&gt;Chrome Extension에서는 background alarm 기능을 통해 브라우저의 백그라운드에서 주기적인 작업을 수행할 수 있다.&lt;/p&gt;
+&lt;h5&gt;chrome.alarms 사용&lt;/h5&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// background.js - 알람 등록&lt;/span&gt;
 chrome&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;alarms&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;create&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;refreshToken&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
   &lt;span class=&quot;token literal-property property&quot;&gt;periodInMinutes&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;50&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
@@ -508,7 +553,7 @@ chrome&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;alarms&lt;sp
 &lt;li&gt;Manifest V3 service worker도 알람 시점에 깨어남&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&quot;5️-최종-교훈&quot;&gt;5️⃣ 최종 교훈&lt;/h2&gt;
-&lt;h3 id=&quot;1-세션-일관성을-지키자&quot;&gt;1. 세션 일관성을 지키자&lt;/h3&gt;
+&lt;h3 id=&quot;1-세션-일관성-지키기&quot;&gt;1. 세션 일관성 지키기&lt;/h3&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;하나의 사용자 세션 = 하나의 Supabase client&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;client를 매번 새로 생성하면:&lt;/p&gt;
 &lt;ul&gt;
@@ -516,7 +561,7 @@ chrome&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;alarms&lt;sp
 &lt;li&gt;Supabase 내부 auth context는 리셋&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;해결: Client &lt;code class=&quot;language-text&quot;&gt;싱글톤 패턴&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;h3 id=&quot;2-환경별로-세션-관리-방법이-다르다&quot;&gt;2. 환경별로 세션 관리 방법이 다르다&lt;/h3&gt;
+&lt;h3 id=&quot;2-환경별-세션-관리-방법의-차이&quot;&gt;2. 환경별 세션 관리 방법의 차이&lt;/h3&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -548,15 +593,9 @@ chrome&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;alarms&lt;sp
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;h3 id=&quot;3-supabase-보안-설정&quot;&gt;3. Supabase 보안 설정&lt;/h3&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;Client (anon_key + JWT)
-  → Server (JWT 검증 + 비즈니스 로직)
-    → DB (RLS 정책)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;클라이언트: RLS로 row 단위 제한&lt;/li&gt;
-&lt;li&gt;서버: &lt;code class=&quot;language-text&quot;&gt;service_role&lt;/code&gt;로 RLS 우회, 비즈니스 로직이 1차 방어&lt;/li&gt;
-&lt;li&gt;DB: RLS&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;</content:encoded></item><item><title><![CDATA[[소프트웨어공학] Waterfall과 Agile]]></title><description><![CDATA[소프트웨어를 개발하는 방식은 프로젝트의 특성과 규모에 따라 달라진다. Waterfall과 Agile…]]></description><link>https://inyoung.dev/waterfall-agile/</link><guid isPermaLink="false">https://inyoung.dev/waterfall-agile/</guid><pubDate>Tue, 03 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;tx&quot;&gt;&lt;pre class=&quot;language-tx&quot;&gt;&lt;code class=&quot;language-tx&quot;&gt;1단계: Client (anon_key + JWT)
+  2단계: → Server (JWT 검증 + 비즈니스 로직)
+    3단계: → DB (RLS 정책)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[[소프트웨어공학] Waterfall과 Agile]]></title><description><![CDATA[소프트웨어를 개발하는 방식은 프로젝트의 특성과 규모에 따라 달라진다. Waterfall과 Agile…]]></description><link>https://inyoung.dev/waterfall-agile/</link><guid isPermaLink="false">https://inyoung.dev/waterfall-agile/</guid><pubDate>Tue, 03 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
 &lt;p&gt;소프트웨어를 개발하는 방식은 프로젝트의 특성과 규모에 따라 달라진다. Waterfall과 Agile은 소프트웨어 개발 방법론의 대표적인 두 축으로, 각각의 철학과 프로세스가 명확히 구분된다. 두 방법론의 특징과 차이점을 통해 프로젝트 상황에 맞는 선택 기준을 이해해보자.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;span
@@ -10820,15 +10859,60 @@ state &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; state&lt;span 
 &lt;li&gt;🔗 &lt;strong&gt;데이터&lt;/strong&gt;는 엔티티와 관계를 중심으로 구조화되며, &lt;code class=&quot;language-text&quot;&gt;ER 모델&lt;/code&gt;과 &lt;code class=&quot;language-text&quot;&gt;관계형 모델&lt;/code&gt;로 표현된다&lt;/li&gt;
 &lt;li&gt;🆚 &lt;strong&gt;DBMS&lt;/strong&gt;는 FMS 대비 중복 제어, 무결성 보장, 보안, 동시성 제어, 데이터 독립성에서 큰 장점을 가진다&lt;/li&gt;
 &lt;li&gt;🎯 &lt;strong&gt;데이터 독립성(Data Independence)&lt;/strong&gt; ➡️ 시스템이 변해도 응용 프로그램은 그대로 유지된다&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[서비스 개발부터 DevRel까지: 카카오뱅크 인턴쉽 회고]]></title><description><![CDATA["금융으로 세상을 바꾸는 기업, 카카오뱅크에서 6개월의 인턴쉽을 회고합니다. (+ 네이버랩스 인턴 최종 면접후기)" 네이버랩스 최종 탈락에서 카카오뱅크 인턴 합격까지 지난 1월, 나는 네이버랩스의 Robot FE Developer…]]></description><link>https://inyoung.dev/kakaobank-devrel-internship-retrospect/</link><guid isPermaLink="false">https://inyoung.dev/kakaobank-devrel-internship-retrospect/</guid><pubDate>Mon, 28 Jul 2025 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
-&lt;p&gt;&quot;금융으로 세상을 바꾸는 기업, 카카오뱅크에서 6개월의 인턴쉽을 회고합니다. (+ 네이버랩스 인턴 최종 면접후기)&quot;&lt;/p&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[카카오뱅크 개발 어시스턴트 회고]]></title><description><![CDATA["금융으로 세상을 바꾸는 기업, 카카오뱅크에서의 6개월간의 인턴쉽을 회고합니다. (+ 네이버랩스 인턴 최종 면접후기)"  네이버랩스 최종 탈락에서 카카오뱅크 인턴 합격까지 지난 1월, 나는 네이버랩스의 Robot FE Developer…]]></description><link>https://inyoung.dev/kakaobank-devrel-internship-retrospect/</link><guid isPermaLink="false">https://inyoung.dev/kakaobank-devrel-internship-retrospect/</guid><pubDate>Mon, 28 Jul 2025 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+&lt;p&gt;&quot;금융으로 세상을 바꾸는 기업, 카카오뱅크에서의 6개월간의 인턴쉽을 회고합니다. (+ 네이버랩스 인턴 최종 면접후기)&quot;&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;background: transparent;&quot;&gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 894px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/c47585db9d02d5fdfac14e6be7614528/c56e5/index.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 62.8%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAAsTAAALEwEAmpwYAAADmUlEQVR42h2T6U/bBRyH+38YDLoJWDZWuZyMso5jDlCugoytQIUC5e641ta2UKCllN70GLRcZSJlXCvHOES2mZhNoyabJiYmavbCNxpf+Erdi8df9uL79snn+XzyFemdQRZW17CM6Bkz3sZiGsIw2E1Xaz2B6QkWFzzc3d5j9vApnpUNIuv3WYyf4FraxOZ04QpGsXiEm16j8roSkcETIrISY3J8mAkBOmHWY9Jq6FU3Eplxsh4LsxRbY/qzdWwjfTiMnfhsejyRRSZdbjzBeUYdEUZdd6lVNCEaCS4Q3Yjjc07gsA5jtwxjNgzR16EkOu9hPx5ldTOG1dSDqugt6mVnaShMwmYexOnz4vYHmAqEmZheorG5GVG/2YordIfKqjK61CrMRi1yeQXtqjpiUTene1G+efGLkK6Tqqxk6sryyb+QQudH+UxNjeEPB7EHBfDsDJpeNaL8y7mUVZWTKpGQffFd0jPTuZAuobS0kNWIhZ9/eEx8K4rmRhGdH2bTVVtAV3kmbksHY04rTo8DR9BGbNfB6EgHokp51StgjjSXJLGYxKQkklLFpJwTM+M18d8/f7CzFqK+4AxtFRJ6aiSYmi8S8XRjD7nQ6W7T29dMeE6Hz61B5J/20a5uoaSkGEl2Fslp53njbTFSWQ4nR2vA3zz//QXz9yLcupFH9ZVUmsqzUH+QjFX/MS3qOvq66wn5jEL/A4gUNVWUl5ZyreQqSqVCUC0WtN9B26/mt1+f8fLln3z94zPCG4d0Xi9CLn0dVUkK45pitFoFoeUm/HeGuBcfEvSFUcxWPzbLOMpGBbK8S1zJfY/qa1Iaayp5eHogJPyX759/y+xCEENbDkXSBDqqE5nzaRn1hQgvuwjMeZlbm2DQeBPR/uffoR3sI1+WS5qgmyEMUpQjoe1mJcszbo53Vjg42ufoKILbICftXAKa+jf566cBHp3YMZnN9PS20dzcgKpFSBj2+6l7P4+CzFRkGWJkmWLKZRnoOhS4R3U4hgcI+Hx4Q59i0dbSWZuIS3eGJ7uFPD1WM+lwMDs3x9b9LTa2txGtzAYYUlYhv5xOmTSDmqu5tNaVoetWYTP04xnT47WbmTRVoFMlMDmYLvR3HqM6gS83a3jy1SGPHh5z+sUxJyfHiNxjBjymfpz6Xhx6DW7TAC7jAPZP+nAOD7367/5brbQrJCgrXkPTcJaRHjFeUwaP98wC6AGHD3Y4ONhnZzfO/1KZdnqPCwMuAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+          &lt;source
+              srcset=&quot;/static/c47585db9d02d5fdfac14e6be7614528/bc904/index.webp 250w,
+/static/c47585db9d02d5fdfac14e6be7614528/4be29/index.webp 500w,
+/static/c47585db9d02d5fdfac14e6be7614528/c6baa/index.webp 894w&quot;
+              sizes=&quot;(max-width: 894px) 100vw, 894px&quot;
+              type=&quot;image/webp&quot;
+            /&gt;
+          &lt;source
+            srcset=&quot;/static/c47585db9d02d5fdfac14e6be7614528/43fa5/index.png 250w,
+/static/c47585db9d02d5fdfac14e6be7614528/c6e3d/index.png 500w,
+/static/c47585db9d02d5fdfac14e6be7614528/c56e5/index.png 894w&quot;
+            sizes=&quot;(max-width: 894px) 100vw, 894px&quot;
+            type=&quot;image/png&quot;
+          /&gt;
+          &lt;img
+            class=&quot;gatsby-resp-image-image&quot;
+            src=&quot;/static/c47585db9d02d5fdfac14e6be7614528/c56e5/index.png&quot;
+            alt=&quot;카뱅 춘식이&quot;
+            title=&quot;춘식아 안녕&quot;
+            loading=&quot;lazy&quot;
+            decoding=&quot;async&quot;
+            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+          /&gt;
+        &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;춘식아 안녕&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
 &lt;h3 id=&quot;네이버랩스-최종-탈락에서-카카오뱅크-인턴-합격까지&quot;&gt;네이버랩스 최종 탈락에서 카카오뱅크 인턴 합격까지&lt;/h3&gt;
 &lt;p&gt;지난 1월, 나는 &lt;strong&gt;네이버랩스의 Robot FE Developer&lt;/strong&gt;라는 인턴 직무에 지원했다. 내가 열심히 공부해 온 프론트엔드 분야이기도 하고, 로봇 엔지니어링을 경험할 수 있다는 것도 매력으로 다가와 합격을 위해 최선을 다했다.&lt;/p&gt;
 &lt;p&gt;참고로 인턴 전형은 아래와 같은 순서로 진행됐다.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;1차 서류 -&gt; 코딩 테스트 -&gt; 전화 면접 -&gt; 최종 면접&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h4 id=&quot;전화-인터뷰&quot;&gt;전화 인터뷰&lt;/h4&gt;
-&lt;p&gt;1차와 코딩 테스트를 통과한 뒤 현직자 분과 전화 인터뷰가 있었는데, 현직자 분께서 내 서류를 보고 지금까지 본 서류 중에 제일 잘 쓴 것 같다고 피드백을 주셔서 이미 그때부터 마음속으로 나는 네이버의 아들이 되었다.ㅋㅋㅋ&lt;/p&gt;
+&lt;p&gt;1차와 코딩 테스트를 통과한 뒤 현직자 분과 전화 인터뷰가 있었는데, 현직자 분께서 내 서류를 보고 지금까지 본 서류 중에 제일 잘 쓴 것 같다고 긍정적인 피드백을 주셔서 합격에 대한 기대감이 높아졌다.&lt;/p&gt;
 &lt;p&gt;전화 인터뷰에서는 학부 수업이나 스타트업 인턴십을 하면서 경험한 것들을 물어보시고, 특히 당시에 개발하고 있었던 &lt;code class=&quot;language-text&quot;&gt;연애 상담 서비스, 셰어마인드&lt;/code&gt; 프로젝트에 관한 이야기를 나누면서 개발 현황과 앞으로의 계획에 대해 이야기를 나눴다.&lt;/p&gt;
 &lt;p&gt;코테에 관한 이야기도 나누었다. 다익스트라 알고리즘을 쓰는 문제에서 약식으로 &lt;code class=&quot;language-text&quot;&gt;Priority Queue&lt;/code&gt;를 구현했는데, 당시 단순 배열로 구현했던 것의 시간복잡도 한계(O(n) 삽입/삭제)와 제대로 구현한다면 어떻게 할 수 있는지(Binary Heap으로 O(log n) 구현) 물어보셨다.&lt;/p&gt;
 &lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;background: transparent;&quot;&gt;
@@ -10928,8 +11012,8 @@ state &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; state&lt;span 
   &lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;면접 전에 HR 담당자 분과 10분 정도 면접, 직무에 대한 소개를 받았는데...
 나에게 마음을 단단히 먹으라고 하셨다. 면접 난이도가 어려울 수 있다.. 면접은 일대다(&lt;strong&gt;면접자 1, 면접관 4&lt;/strong&gt;)로 1-2시간 동안 진행될 거다...라고 해서, 긴장을 잔뜩 한 채로 면접에 들어갔다.&lt;/p&gt;
-&lt;h4 id=&quot;최종-면접-망함-&quot;&gt;최종 면접 (망함 ☠)&lt;/h4&gt;
-&lt;p&gt;면접은 약 1시간 30분 동안 진행되었는데, 40분은 내 발표와 발표에 대한 꼬리 질문으로, 나머지 시간은 현장에서 준비한 코딩 사고 테스트와 로봇과 관련된 사고 질문이 주를 이뤘다. 여러 질문이 오갔는데 지금 내 머릿속에 남는 아쉬웠던 것들을 아래에 정리해본다..🥹&lt;/p&gt;
+&lt;h4 id=&quot;최종-면접&quot;&gt;최종 면접&lt;/h4&gt;
+&lt;p&gt;면접은 약 1시간 30분 동안 진행되었는데, 40분은 내 발표와 발표에 대한 꼬리 질문으로, 나머지 시간은 현장에서 준비한 코딩 사고 테스트와 로봇과 관련된 사고 질문이 주를 이뤘다. 여러 질문이 오갔는데 지금 내 머릿속에 남는 아쉬웠던 것들을 아래에 정리해본다.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;발표 꼬리 질문&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;화이트보드로 발표에서 소개한 아키텍처 구조도를 그려보라는 질문에 나는 프론트 서버에서 axios 모듈을 통해 Tanstack query를 사용한 API를 호출해서 백엔드 서버로 통신한다는 걸로 답했는데, 실제로 질문의 의도는 Network 계층(TCP/IP, HTTP/HTTPS 프로토콜, DNS 해석 과정 등)에 대한 이해도를 묻는 질문이었던 것 같다. 애플리케이션 레벨이 아닌 더 로우레벨의 통신 메커니즘에 대한 설명을 원했던 것이었다.&lt;/li&gt;
@@ -10973,7 +11057,7 @@ state &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; state&lt;span 
             class=&quot;gatsby-resp-image-image&quot;
             src=&quot;/static/65aa6a8024e003881cb9be4379f5e38c/8fb8e/naver-labs.png&quot;
             alt=&quot;네이버랩스 면접 결과&quot;
-            title=&quot;탈락! ㅋㅋ&quot;
+            title=&quot;아쉬운 결과&quot;
             loading=&quot;lazy&quot;
             decoding=&quot;async&quot;
             style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
@@ -10981,7 +11065,7 @@ state &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; state&lt;span 
         &lt;/picture&gt;
   &lt;/a&gt;
     &lt;/span&gt;
-    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;탈락! ㅋㅋ&lt;/figcaption&gt;
+    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;아쉬운 결과&lt;/figcaption&gt;
   &lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;결론적으로 나는 최종 면접에서 탈락했다. 하지만 이 경험을 통해 내가 부족한 부분을 명확하게 알 수 있었고, 앞으로 어떤 방향으로 공부해야 할지 구체적인 로드맵을 그릴 수 있었다.&lt;/p&gt;
 &lt;p&gt;포기하지 않고 동시에 카카오뱅크 개발 어시스턴트에도 지원했었다. 당시 우대사항 및 요구되는 역량이&lt;/p&gt;
@@ -11089,11 +11173,13 @@ state &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; state&lt;span 
 &lt;p&gt;우리 팀은 카카오뱅크 기술 조직을 위한 활동을 지원하는 업무를 맡았다.
 특히 DR(Developer Relations), PR, IR, HR 업무 중에서 DR과 관련한 활동을 많이 했다.&lt;/p&gt;
 &lt;p&gt;업무 특성 상 주기적인 업무가 있기 보다는 매일매일 다른 컨텍스트 속에서 업무를 많이 했다.
-평소에 많이 했던 일들은,&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;- 카카오뱅크 테크 블로그에 올라가는 기술 글을 검토, 개발 유지보수
-- 기술 블로그 이미지 편집
-- 금요일에 격주 간격으로 있는 사내 개발 컨퍼런스 행사 과정의 end-to-end 지원&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;이런 일을 하면서 개발이 필요한 특정 기간동안에는 위의 일을 진행하며 개발의 비중을 높이면서 업무를 진행했다.&lt;/p&gt;
+평소에 하던 일들은,&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;카카오뱅크 테크 블로그에 올라가는 기술 글을 검토, 개발 유지보수&lt;/li&gt;
+&lt;li&gt;기술 블로그 이미지 편집&lt;/li&gt;
+&lt;li&gt;금요일에 격주 간격으로 있는 사내 개발 컨퍼런스 행사 과정의 end-to-end 지원&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;그리고 &lt;code class=&quot;language-text&quot;&gt;개발이 필요한 특정 기간동안에는&lt;/code&gt; 위의 일을 진행하며 개발의 비중을 높이면서 업무를 진행했다.&lt;/p&gt;
 &lt;p&gt;어떤 걸 개발했는지는 아래에 작성해보도록 하겠다.&lt;/p&gt;
 &lt;h3 id=&quot;카카오뱅크-최초-해커톤-뱅커톤-준비&quot;&gt;카카오뱅크 최초 해커톤, 뱅커톤 준비&lt;/h3&gt;
 &lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;background: transparent;&quot;&gt;
@@ -11244,7 +11330,7 @@ state &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; state&lt;span 
     &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;뱅커톤 애셋으로 꾸민 카페테리아&lt;/figcaption&gt;
   &lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;다들 AI를 활용하여서 생각보다 일찍 개발을 마치고 좋은 발표를 하기 위해 힘쓰곤 했다.
-(이후에 카카오에서 개최한 24K 해커톤을 참관했는데, 코딩하는 시간을 약 8시간밖에 제공하지 않고 심사도 AI로 돌리더라 ㄷㄷ)&lt;/p&gt;
+(이후에 카카오에서 개최한 24K 해커톤을 참관했는데, 코딩하는 시간을 약 8시간만 제공하고 심사도 AI로 진행하는 등 독특한 방식으로 운영되었다.)&lt;/p&gt;
 &lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;background: transparent;&quot;&gt;
     &lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
@@ -11294,11 +11380,11 @@ state &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; state&lt;span 
   &lt;/figure&gt;&lt;/p&gt;
 &lt;h4 id=&quot;행사-이후&quot;&gt;행사 이후&lt;/h4&gt;
 &lt;p&gt;뱅커톤 행사 이후에는 오히려 행사 뒷작업을 하느라 바빴다.
-뱅커톤에 출품한 모든 작품들에 대한 &lt;code class=&quot;language-text&quot;&gt;아카이빙 웹사이트&lt;/code&gt;를 만들고, 해커톤에 대한 &lt;code class=&quot;language-text&quot;&gt;KPT 회고&lt;/code&gt;를 진행했다. (Keep, Probelm, Try)
-결과물을 아카이빙하면서 코드를 뜯어볼 수 있는, 지금까지 내가 본 학생들로만 이루어진 해커톤에서 나온 결과물과는 확실히 수준 차이가 많이 났다. 카뱅 개발자의 프로페셜리즘을 여실히 느꼈다.&lt;/p&gt;
+뱅커톤에 출품한 모든 작품들에 대한 &lt;code class=&quot;language-text&quot;&gt;아카이빙 웹사이트&lt;/code&gt;를 만들고, 해커톤에 대한 &lt;code class=&quot;language-text&quot;&gt;KPT 회고&lt;/code&gt;를 진행했다. (Keep, Problem, Try)
+결과물을 아카이빙하면서 코드를 살펴본 결과, 지금까지 내가 본 학생들로만 이루어진 해커톤에서 나온 결과물과는 확실히 수준 차이가 많이 났다. 카카오뱅크 개발자들의 프로페셔널리즘을 여실히 느낄 수 있었다.&lt;/p&gt;
 &lt;p&gt;또 카카오뱅크 기술블로그에 DevRel로서 뱅커톤을 회고하는 글을 작성하고, PR팀의 검토를 받아서 release를 했다.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://tech.kakaobank.com/posts/2504-bankerthon-2025/&quot;&gt;🟨 카카오뱅크 기술블로그 뱅커톤 회고글&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;글을 세상 밖으로 내보내는 과정은... 정말 리소스가 많이 드는 작업이다. 이떄의 기억 때문에 지금 기술 블로그에 글을 쓸때도 습관적으로 퇴고의 과정을 거치고 있다.&lt;/p&gt;
+&lt;p&gt;글을 세상 밖으로 내보내는 과정은 정말 리소스가 많이 드는 작업이다. 이때의 경험 덕분에 지금 기술 블로그에 글을 쓸 때도 습관적으로 퇴고의 과정을 거치고 있다.&lt;/p&gt;
 &lt;h3 id=&quot;-devrel-활동&quot;&gt;🧑‍🧑‍🧒 DevRel 활동&lt;/h3&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&quot;개발자들을 위해서 우리가 뭘 해줄 수 있는 게 뭐가 있을까&quot;
@@ -11647,7 +11733,7 @@ DevRel로서 우리 팀이 장소와 시간과 관계 없이 항상 생각하는
             class=&quot;gatsby-resp-image-image&quot;
             src=&quot;/static/0522b845fa27a56be3a999b16919b375/da8b6/api-docs.png&quot;
             alt=&quot;API 명세서&quot;
-            title=&quot;API 명세서, 시간이 없어서 집에서 개발을 하면서 명세를 만들었다 ㅋㅋ&quot;
+            title=&quot;API 명세서&quot;
             loading=&quot;lazy&quot;
             decoding=&quot;async&quot;
             style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
@@ -11655,7 +11741,7 @@ DevRel로서 우리 팀이 장소와 시간과 관계 없이 항상 생각하는
         &lt;/picture&gt;
   &lt;/a&gt;
     &lt;/span&gt;
-    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;API 명세서, 시간이 없어서 집에서 개발을 하면서 명세를 만들었다 ㅋㅋ&lt;/figcaption&gt;
+    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;API 명세서&lt;/figcaption&gt;
   &lt;/figure&gt;&lt;/p&gt;
 &lt;h4 id=&quot;2-핸드북-참여자-클라이언트-웹&quot;&gt;2. 핸드북 (참여자 클라이언트 웹)&lt;/h4&gt;
 &lt;p&gt;핸드북은 코드러너 컨퍼런스 정보 제공과 베팅/출석 기능을 제공하는 참가자 전용 웹앱이다.&lt;/p&gt;
@@ -11720,9 +11806,9 @@ DevRel로서 우리 팀이 장소와 시간과 관계 없이 항상 생각하는
 &lt;p&gt;npm 생태계의 여러 QR 스캔 라이브러리들을 실제 테스트해보고 성능, 호환성, 사용성을 기준으로 최적의 라이브러리를 선택했다. 가장 마지막에 개발한 프로젝트라 시간이 촉박했지만, 핵심 기능에 집중해 안정적인 QR 스캔 환경을 구축할 수 있었다.&lt;/p&gt;
 &lt;h3 id=&quot;인턴을-마무리하며&quot;&gt;인턴을 마무리하며..&lt;/h3&gt;
 &lt;p&gt;팀 특성상 기술 조직에 있는 크루들과 이야기할 기회가 많아서, 현업 개발자들의 시각에서 내가 부족한 부분과 앞으로 필요한 역량에 대한 구체적인 조언을 들을 수 있었다.&lt;/p&gt;
-&lt;p&gt;카뱅같은 기술 조직에서 &lt;strong&gt;AI 활용 전략&lt;/strong&gt;에 대해 어떤 고민을 하고 있는지 엿볼 수 있었다.&lt;/p&gt;
+&lt;p&gt;카카오뱅크 같은 기술 조직에서 &lt;strong&gt;AI 활용 전략&lt;/strong&gt;에 대해 어떤 고민을 하고 있는지 엿볼 수 있었다.&lt;/p&gt;
 &lt;p&gt;단순히 코드 생성을 위한 도구가 아니라, 문제 해결의 사고 과정을 확장하고 학습 효율을 높이는 방향으로 AI를 활용하는 방법에 대해 많은 인사이트를 얻었다. 또한 &lt;strong&gt;기술 트렌드와 학습 로드맵&lt;/strong&gt;에 대해서도 실무진들의 경험담을 통해 어떤 기술을 언제, 어떻게 학습해야 효과적인지에 대한 현실적인 조언을 받을 수 있었다.&lt;/p&gt;
-&lt;p&gt;기술조직의 채용 과정을 옆에서 지켜보면서는... 개발자로서 어떤 역량을 어필해야 하고, 반대로 어떤 부분들이 감점 요소가 될 수 있는지에 대한 실질적인 인사이트도 얻었다.ㅋㅋㅋ&lt;/p&gt;
+&lt;p&gt;기술조직의 채용 과정을 옆에서 지켜보면서는 개발자로서 어떤 역량을 어필해야 하고, 반대로 어떤 부분들이 감점 요소가 될 수 있는지에 대한 실질적인 인사이트도 얻었다.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;6개월의 인턴십을 통해 얻은 가장 큰 수확은 &apos;개발자로서의 시야 확장&apos;이었다.&lt;/strong&gt; 단순히 코드를 작성하는 것을 넘어서, 사용자 경험, 시스템 아키텍처, 팀 협업, 기술 문서화, 커뮤니티 기여 등 개발자가 갖춰야 할 다양한 역량들을 실무 환경에서 직접 경험할 수 있었다는 것이 정말 값진 경험이었다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[나의 IT 스타트업 인턴쉽 회고]]></title><description><![CDATA["…]]></description><link>https://inyoung.dev/my-it-startup-internship-retrospect/</link><guid isPermaLink="false">https://inyoung.dev/my-it-startup-internship-retrospect/</guid><pubDate>Fri, 14 Mar 2025 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
 &lt;p&gt;&quot;6개월동안 코딩 교육 스타트업 코딩밸리 🚀에서 인턴으로 근무하며 프론트엔드 교육 코스를 기획/개발하게 된 기묘한 경험을 소개합니다.&quot;&lt;/p&gt;
 &lt;/blockquote&gt;

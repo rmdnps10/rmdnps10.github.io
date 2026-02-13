@@ -18,7 +18,7 @@
       }
     })
   </script><link rel="alternate" type="application/rss+xml" title="난너의오른팔 기술 블로그 RSS Feed" href="/rss.xml"/><title data-gatsby-head="true">[트러블슈팅] Supabase Auth를 활용한 다양한 환경에서의 세션 유지 | 메인</title><link rel="canonical" href="https://inyoung.dev/[트러블슈팅] Supabase를 활용한 인증, 인가/" data-gatsby-head="true"/><script type="application/ld+json" data-gatsby-head="true">{"@context":"https://schema.org","@type":"BlogPosting","name":"[트러블슈팅] Supabase Auth를 활용한 다양한 환경에서의 세션 유지 | 메인","description":"RLS를 켜자마자 permission denied, SSR에서 토큰 null, Extension에서 1시간 뒤 401. Supabase Auth 기반 인증 시스템을 구축하며 마주한 문제들과 해결 과정을 기록한다.","url":"https://inyoung.dev/[트러블슈팅] Supabase를 활용한 인증, 인가/","headline":"[트러블슈팅] Supabase Auth를 활용한 다양한 환경에서의 세션 유지","datePublished":"2026-02-10T00:00:00.000Z","dateModified":"2026-02-10T00:00:00.000Z","author":{"@type":"Person","name":"Inyoung Chung"},"publisher":{"@type":"Person","name":"Inyoung Chung"},"image":"https://inyoung.dev/static/568dd75c097bfe6c382803eb7236db7d/f3583/index.png"}</script></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><header class="fixed top-0 w-full h-[54px] m-0 p-0 border-bottom-2 z-50 bg-darkMain border-b border-zinc-600"><div class="flex h-full mx-auto max-w-wrapper items-center justify-between px-3"><h1 class="text-3 font-bold text-white m-0"><a class="transition-colors hover:text-cyan-300" href="/">난너의오른팔 🧑‍💻</a></h1><div class="flex items-center gap-2"><a class="flex h-[27px] w-[27px] items-center justify-center rounded-full bg-white font-pretendard text-sm font-bold text-black transition-transform hover:scale-110 hover:text-gray-500" href="/portfolio/">Me</a><a href="https://github.com/rmdnps10" class="text hover:text-gray-500 hover:scale-110 text-white block transition-all" target="_blank" rel="noreferrer"><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github" class="svg-inline--fa fa-github fa-xl " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" color="gray-500"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></a><a href="https://www.linkedin.com/in/rmdnps10/" target="_blank" rel="noreferrer" class="text hover:text-gray-500 hover:scale-110 text-white block transition-all"><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="linkedin" class="svg-inline--fa fa-linkedin fa-xl " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" color="white"><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></svg></a></div></div><div class="absolute bottom-0 left-0 h-0.5 bg-yellow" style="width:0%"></div></header><div class="global-wrapper" data-is-root-path="false"><main><div class="blog-post-container"><article class="blog-post" itemscope="" itemType="http://schema.org/Article"><header><h1 itemProp="headline">[트러블슈팅] Supabase Auth를 활용한 다양한 환경에서의 세션 유지</h1><div class="flex gap-2 mb-3 flex-wrap"><a class="px-2 py-0.5 rounded-lg text-white font-bold text-xs md:text-sm border-2 hover:shadow-md transition-all" style="color:#E29FBF;border-color:#E29FBF;background-color:#E29FBF15" href="/?tag=Web">#<!-- -->Web</a><a class="px-2 py-0.5 rounded-lg text-white font-bold text-xs md:text-sm border-2 hover:shadow-md transition-all" style="color:#95E1D3;border-color:#95E1D3;background-color:#95E1D315" href="/?tag=회고">#<!-- -->회고</a></div><div class="flex items-center gap-3 text-gray-400 text-sm mb-4"><time>2026-02-10</time></div></header><section itemProp="articleBody"><blockquote>
-<p>최근에 사이드 프로젝트로 <strong>BOJ AI H별lper</strong>라는 서비스를 개발하고 있습니다.</p>
+<p>최근에 사이드 프로젝트로 <strong>BOJ AI Helper</strong>라는 서비스를 개발하고 있습니다.</p>
 <p>Nest.js 서버, Next.js SSR&#x26;CSR, Chrome Extension 환경에서 Supabase Auth를 통합하며 몇가지 인증 에러들을 만났고, 이러한 에러를 맞닥뜨리며 인증/인가 아키텍처를 설계한 과정을 기록합니다.</p>
 </blockquote>
 <p><figure class="gatsby-resp-image-figure" style="background: transparent;">
@@ -158,11 +158,11 @@
 </ul>
 <h2 id="supabase-auth의-도입">Supabase Auth의 도입</h2>
 <p>이번 프로젝트에서는 <code class="language-text">Supabase</code>를 Auth Provider로서 활용하며, 데이터 접근은 자체 백엔드 서버를 통해 수행했다.
-즉, 토큰 검증과 토큰 발급의 책임을 서버단이 아닌 Supabase Auth가 담당하도록 설계했다.</p>
+즉, 토큰 검증과 토큰 발급의 책임을 서버단이 아닌 <code class="language-text">Supabase Auth</code>가 담당하도록 설계했다.</p>
 <h3 id="도입-배경">도입 배경</h3>
 <p>예전에 참여한 AI 해커톤에서 <code class="language-text">Next.js</code>로 프론트엔드 단만을 구현하며 <code class="language-text">Supabase</code>를 사실상의 백엔드로서 활용한 경험이 있었는데, 당시에 직접 백엔드를 구현하지 않고 굉장히 수월하게 서비스를 만들 수 있었다.</p>
-<p>그 당시에 경험으로 이번 프로젝트에서도 Supabase Auth를 도입하게 되었다.</p>
-<p>하지만 이번 프로젝트는 단순한 프론트엔드 앱이 아니라, <code class="language-text">Next.js</code> 풀스택 앱과 <code class="language-text">NestJS</code> 백엔드 서버, 그리고 <code class="language-text">Chrome Extension</code>까지 아우르는 복합적인 아키텍처였기에, Supabase Auth를 통합하는 과정에서 여러 가지 트러블슈팅 상황에 직면하게 되었다.</p>
+<p>그 당시에 경험으로 이번 프로젝트에서도 <code class="language-text">Supabase Auth</code>를 도입하게 되었다.</p>
+<p>하지만 이번 프로젝트는 단순한 프론트엔드 앱이 아니라, <code class="language-text">Next.js</code> 풀스택 앱과 <code class="language-text">NestJS</code> 백엔드 서버, 그리고 <code class="language-text">Chrome Extension</code>까지 아우르는 복합적인 아키텍처였기에, <code class="language-text">Supabase Auth</code>를 통합하는 과정에서 여러 가지 트러블슈팅 상황에 직면하게 되었다.</p>
 <blockquote>
 <h5>이 글에서는 <code class="language-text">Supabase Auth</code>를 활용하여 풀스택 인증/인가 아키텍처를 설계하고, RLS 설정, 토큰 관리, 환경별 인증 처리 문제를 해결한 경험을 공유하고자 한다.</h5>
 </blockquote>
@@ -176,36 +176,53 @@
 <li>모든 API 요청에 JWT 포함</li>
 <li>서버가 Supabase Auth를 통해 JWT 검증 후 DB 접근</li>
 </ol>
-<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">┌─────────────────────────────────────────────────────────────────────────┐
-│                           사용자 / 브라우저                               │
-└─────────────────────────────────────────────────────────────────────────┘
-         │                              │
-         │ 웹 앱                         │ acmicpc.net + 확장
-         ▼                              ▼
-┌─────────────────────┐      ┌─────────────────────┐
-│   boj-helper-app    │      │  boj-chrome-plugin  │
-│   (Next.js 16)      │      │  (Chrome Extension) │
-│   localhost:3001    │      │  content + popup     │
-└──────────┬──────────┘      └──────────┬──────────┘
-           │                            │
-           │ Bearer token               │ Bearer token
-           │ (API 호출 시)               │ (POST /submissions 등)
-           ▼                            ▼
-┌─────────────────────────────────────────────────────────────────────────┐
-│                      boj-helper-server (NestJS)                          │
-│                      localhost:3000                                      │
-│  • SubmissionController @UseGuards(SupabaseAuthGuard)                    │
-│  • 토큰 검증: Supabase Auth API (service_role)                           │
-│  • 비즈니스 데이터: Prisma → PostgreSQL (Supabase DB 또는 별도 DB)         │
-└─────────────────────────────────────────────────────────────────────────┘
-           │
-           │ 토큰 검증 (getUser(accessToken))
-           ▼
-┌─────────────────────────────────────────────────────────────────────────┐
-│                         Supabase                                         │
-│  • Auth API: 로그인/세션/리프레시 (anon key로 접근)                       │
-│  • DB: RLS 적용 테이블 (앱/확장은 직접 접근 안 함, Nest만 접근)           │
-└─────────────────────────────────────────────────────────────────────────┘</code></pre></div>
+<p><figure class="gatsby-resp-image-figure" style="background: transparent;">
+    <span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1000px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/58823d90edb75d40ac5fd4c4b7338a34/e4a85/flow.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 62.8%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAACE4AAAhOAFFljFgAAAB0UlEQVR42nVTSW7bQBDU02xLMndSC6khKZFaKEVLfBBhBbAPQRSfBOQcIPmBAQP+QM75k2/lqQYoSDJ9KAxnpqe6q6vZcF0XjuPAtu0juOe5ZVnwPE/2/D6N4X0dGgzudDoIwxBKKQwGAwRBIGer1UqCoihCmqaC0WgkMZ8SMhuJsizDcDhEURSC6XSK3W6H8XiM+XyO2WwmZCT39EPTNKT6WsJ2uy1VxXEsVfARQRKuvV5PyCaTCQ6HA37/+avv5rWkDRIwsCxLkXjao6p/stdrEIX4//KMt3+veHwo0WzdwvcvCDebDfb7PbbbLZbLJfr9/gcZUoXjwg9cFOU9fv14wN0XBcPi3YVkmkE57CFBMyqXq5VglUy20klDFUPFab0p1XhUTp6OxGV/2NOB0g577qejI6bQjMViIT1klYZhYDyb4ufTkyRhwjzPj+4nSXJW/YcKfd8/SuUIkbxIUjzuviHSLWEiJmXFjJXqbEfGh2cVjoRn/dKrr8fk+5WFr9cGQsNCnMRYr9dCvNRQerCtqANbS7dME6ZWQBVnhKfE3W5XJObaLA47zeBK+VmeYaS/jYXCbeDg5uoaN80mWq1WPWEFSqskXv7rItmyayW/A9moAjD4MMYDAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <picture>
+          <source
+              srcset="/static/58823d90edb75d40ac5fd4c4b7338a34/bc904/flow.webp 250w,
+/static/58823d90edb75d40ac5fd4c4b7338a34/4be29/flow.webp 500w,
+/static/58823d90edb75d40ac5fd4c4b7338a34/03f31/flow.webp 1000w,
+/static/58823d90edb75d40ac5fd4c4b7338a34/6740d/flow.webp 1287w"
+              sizes="(max-width: 1000px) 100vw, 1000px"
+              type="image/webp"
+            />
+          <source
+            srcset="/static/58823d90edb75d40ac5fd4c4b7338a34/43fa5/flow.png 250w,
+/static/58823d90edb75d40ac5fd4c4b7338a34/c6e3d/flow.png 500w,
+/static/58823d90edb75d40ac5fd4c4b7338a34/da8b6/flow.png 1000w,
+/static/58823d90edb75d40ac5fd4c4b7338a34/e4a85/flow.png 1287w"
+            sizes="(max-width: 1000px) 100vw, 1000px"
+            type="image/png"
+          />
+          <img
+            class="gatsby-resp-image-image"
+            src="/static/58823d90edb75d40ac5fd4c4b7338a34/da8b6/flow.png"
+            alt="인증 플로우"
+            title=""
+            loading="lazy"
+            decoding="async"
+            style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+          />
+        </picture>
+  </a>
+    </span>
+    <figcaption class="gatsby-resp-image-figcaption">인증 플로우</figcaption>
+  </figure></p>
 <p><strong>Client (Next.js / Chrome Extension)</strong></p>
 <ul>
 <li><code class="language-text">anon_key</code> + Supabase Auth SDK로 JWT 발급</li>
@@ -234,20 +251,53 @@
 서버는 Supabase Auth API를 통해 JWT를 검증하고 사용자 정보를 확인한다.
 실제 DB 접근은 NestJS 서버에서만 수행한다. 이때 service_role key는 서버에만 존재한다.</p>
 <h4 id="서비스-전체-아키텍처">서비스 전체 아키텍처</h4>
-<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">┌─────────────────────┐     제출 수집/전송         ┌────────────────────┐
-│  boj-chrome-plugin  │ ────────────────────►  │  boj-helper-server  │
-│  (Chrome Extension) │                        │  (NestJS + Prisma)  │
-└─────────────────────┘                        └──────────┬──────────┘
-         │                                                 │
-         │ 확장 프로그램 로그인 (auth-bridge)               │ REST API
-         ▼                                                 │
-┌─────────────────────┐      제출/대시보드 조회             │
-│   boj-helper-app    │ ◄──────────────────────────────────┤
-│   (Next.js + RSC)   │                                    │
-└─────────────────────┘                        ┌──────────▼──────────┐
-                                               │  PostgreSQL          │
-                                               │  (Supabase Auth)     │
-                                               └─────────────────────┘</code></pre></div>
+<p><figure class="gatsby-resp-image-figure" style="background: transparent;">
+    <span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1000px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/99246e95272d0d7a074d637d13743bb7/e4a85/architecture.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 62.8%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAACE4AAAhOAFFljFgAAAB+klEQVR42n1T227aQBT0l7UiAuM72Nj4gsFcjGsDFRChCKG+VH3ra/+kykM+pK/9lunOSR0FouRhtPbZ3Tkzs7ua4zggbNtGr9eDrutoax/BfaeutWRBEODw8ICvx3t4rgtL1dq5W7Cuew5MV83fErpqc1+pqpoGf58e8efpN6IkFQWr1QqbzQZlWaJR8/wfDoew1Z5Tx8BCtxCY9hWpEFqmhaxI8fP7Dzz++oY49hEr0jzPURSFYDabYTqdYrlcYhRFuB+EWA9HSIIRHMXxQkgLlmUhTRPkVY2ybpCpb5LEcQzTNNHv92U0DEPGSBEmqkFZf0Exn19b9jwPg8FAfmbTHE1dg6rH4wjb7VZAAjal3fV6LWDmk8kEvu9LozZbjdlwU62I2sWsMTuqpO39fi9qSUDLFECSLMukRvCb4jR2D8NQVJBgriyMx2PJjBtpl4uPxyMWi4VYJqgoSZ6jOZ1OMtKF1kplR54iJ1jjfSQhibmRNTZmZmmcyHrOsTkjcv8fjBBS6uVywfl8xuFweDld2mNG7RpH3bsoVE7qErplIFWNmCVdXF1sYrfbCaqqEiLmwmtCm8yV6hnHar6As5mi5zvofPqMzt0dut3uW0Lao2yeJME8qIxqSUTFtM78XPt5D1UT7ut7+Pot3z4vgsTtQfBb6u77b/wfl/4HQnQIqm8AAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <picture>
+          <source
+              srcset="/static/99246e95272d0d7a074d637d13743bb7/bc904/architecture.webp 250w,
+/static/99246e95272d0d7a074d637d13743bb7/4be29/architecture.webp 500w,
+/static/99246e95272d0d7a074d637d13743bb7/03f31/architecture.webp 1000w,
+/static/99246e95272d0d7a074d637d13743bb7/6740d/architecture.webp 1287w"
+              sizes="(max-width: 1000px) 100vw, 1000px"
+              type="image/webp"
+            />
+          <source
+            srcset="/static/99246e95272d0d7a074d637d13743bb7/43fa5/architecture.png 250w,
+/static/99246e95272d0d7a074d637d13743bb7/c6e3d/architecture.png 500w,
+/static/99246e95272d0d7a074d637d13743bb7/da8b6/architecture.png 1000w,
+/static/99246e95272d0d7a074d637d13743bb7/e4a85/architecture.png 1287w"
+            sizes="(max-width: 1000px) 100vw, 1000px"
+            type="image/png"
+          />
+          <img
+            class="gatsby-resp-image-image"
+            src="/static/99246e95272d0d7a074d637d13743bb7/da8b6/architecture.png"
+            alt="서비스 아키텍처"
+            title=""
+            loading="lazy"
+            decoding="async"
+            style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+          />
+        </picture>
+  </a>
+    </span>
+    <figcaption class="gatsby-resp-image-figcaption">서비스 아키텍처</figcaption>
+  </figure></p>
 <p><strong>핵심 구성 요소</strong></p>
 <table>
 <thead>
@@ -491,13 +541,8 @@ Supabase access token의 주기가 1시간이기에, 유저 입장에서 1시간
 </tbody>
 </table>
 <h3 id="extension-background-alarm">Extension: Background Alarm</h3>
-<p>Chrome Extension에서는 <strong>백그라운드에서 주기적으로 갱신</strong>한다.</p>
-<h5>문제</h5>
-<ul>
-<li>content script는 Supabase SDK의 자동 갱신 메커니즘이 작동하지 않음</li>
-<li>1시간 후 토큰 만료 → 401 에러</li>
-</ul>
-<h5>해결: chrome.alarms 사용</h5>
+<p>Chrome Extension에서는 background alarm 기능을 통해 브라우저의 백그라운드에서 주기적인 작업을 수행할 수 있다.</p>
+<h5>chrome.alarms 사용</h5>
 <div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token comment">// background.js - 알람 등록</span>
 chrome<span class="token punctuation">.</span>alarms<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span><span class="token string">"refreshToken"</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
   <span class="token literal-property property">periodInMinutes</span><span class="token operator">:</span> <span class="token number">50</span><span class="token punctuation">,</span>
@@ -527,7 +572,7 @@ chrome<span class="token punctuation">.</span>alarms<span class="token punctuati
 <li>Manifest V3 service worker도 알람 시점에 깨어남</li>
 </ul>
 <h2 id="5️-최종-교훈">5️⃣ 최종 교훈</h2>
-<h3 id="1-세션-일관성을-지키자">1. 세션 일관성을 지키자</h3>
+<h3 id="1-세션-일관성-지키기">1. 세션 일관성 지키기</h3>
 <div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">하나의 사용자 세션 = 하나의 Supabase client</code></pre></div>
 <p>client를 매번 새로 생성하면:</p>
 <ul>
@@ -535,7 +580,7 @@ chrome<span class="token punctuation">.</span>alarms<span class="token punctuati
 <li>Supabase 내부 auth context는 리셋</li>
 </ul>
 <p><strong>해결: Client <code class="language-text">싱글톤 패턴</code></strong></p>
-<h3 id="2-환경별로-세션-관리-방법이-다르다">2. 환경별로 세션 관리 방법이 다르다</h3>
+<h3 id="2-환경별-세션-관리-방법의-차이">2. 환경별 세션 관리 방법의 차이</h3>
 <table>
 <thead>
 <tr>
@@ -567,15 +612,9 @@ chrome<span class="token punctuation">.</span>alarms<span class="token punctuati
 </tbody>
 </table>
 <h3 id="3-supabase-보안-설정">3. Supabase 보안 설정</h3>
-<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">Client (anon_key + JWT)
-  → Server (JWT 검증 + 비즈니스 로직)
-    → DB (RLS 정책)</code></pre></div>
-<ul>
-<li>클라이언트: RLS로 row 단위 제한</li>
-<li>서버: <code class="language-text">service_role</code>로 RLS 우회, 비즈니스 로직이 1차 방어</li>
-<li>DB: RLS</li>
-</ul>
-<hr></section><footer class="mt-10"><div></div></footer></article><aside class="toc-sidebar"></aside></div><nav class="blog-post-nav mt-10"><div class="flex justify-between items-center py-6 border-t border-gray-800"><div class="flex-1"><a rel="prev" class="group flex flex-col gap-1" href="/waterfall-agile/"><span class="text-xs text-gray-500 group-hover:text-gray-400 transition-colors">← 이전 글</span><span class="text-sm md:text-base font-bold text-gray-300 group-hover:text-white transition-colors line-clamp-1">[소프트웨어공학] Waterfall과 Agile</span></a></div><div class="w-px h-10 bg-gray-800 mx-4"></div><div class="flex-1 text-right"></div></div></nav><div class="pt-10 border-t border-gray-800"><h3 class="text-xl md:text-2xl font-bold text-white mb-6"><span style="color:#E29FBF">#<!-- -->Web</span> <!-- -->관련 포스트</h3><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"><a class="group p-4 rounded-xl bg-[#1a1a1a] border border-gray-800 hover:border-gray-600 transition-all flex flex-col justify-between h-full" href="/lg-webos-tv-fullstack-appliaction/"><div><h4 class="text-base font-bold mb-2 group-hover:text-blue-400 transition-colors line-clamp-2" style="color:#ffffff">WebOS TV에 들어갈 풀스택 애플리케이션을 만들어보자 (LG전자 산학 프로젝트 후기)</h4></div><time class="text-xs text-gray-500">2025-12-22</time></a><a class="group p-4 rounded-xl bg-[#1a1a1a] border border-gray-800 hover:border-gray-600 transition-all flex flex-col justify-between h-full" href="/kakaobank-devrel-internship-retrospect/"><div><h4 class="text-base font-bold mb-2 group-hover:text-blue-400 transition-colors line-clamp-2" style="color:#ffe300">서비스 개발부터 DevRel까지: 카카오뱅크 인턴쉽 회고</h4></div><time class="text-xs text-gray-500">2025-07-28</time></a><a class="group p-4 rounded-xl bg-[#1a1a1a] border border-gray-800 hover:border-gray-600 transition-all flex flex-col justify-between h-full" href="/my-it-startup-internship-retrospect/"><div><h4 class="text-base font-bold mb-2 group-hover:text-blue-400 transition-colors line-clamp-2" style="color:#6FE7FF">나의 IT 스타트업 인턴쉽 회고</h4></div><time class="text-xs text-gray-500">2025-03-14</time></a><a class="group p-4 rounded-xl bg-[#1a1a1a] border border-gray-800 hover:border-gray-600 transition-all flex flex-col justify-between h-full" href="/sogang-likelion-management-retrospect/"><div><h4 class="text-base font-bold mb-2 group-hover:text-blue-400 transition-colors line-clamp-2" style="color:#FD7911">서강대학교 멋쟁이사자처럼 운영진 회고</h4></div><time class="text-xs text-gray-500">2025-02-27</time></a></div></div></main><footer class="text-center">© <!-- -->2026<!-- -->, Design &amp; Developed by 정인영</footer></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/[트러블슈팅] Supabase를 활용한 인증, 인가/";/*]]>*/</script><!-- slice-start id="_gatsby-scripts-1" -->
+<div class="gatsby-highlight" data-language="tx"><pre class="language-tx"><code class="language-tx">1단계: Client (anon_key + JWT)
+  2단계: → Server (JWT 검증 + 비즈니스 로직)
+    3단계: → DB (RLS 정책)</code></pre></div></section><footer class="mt-10"><div></div></footer></article><aside class="toc-sidebar"></aside></div><nav class="blog-post-nav mt-10"><div class="flex justify-between items-center py-6 border-t border-gray-800"><div class="flex-1"><a rel="prev" class="group flex flex-col gap-1" href="/waterfall-agile/"><span class="text-xs text-gray-500 group-hover:text-gray-400 transition-colors">← 이전 글</span><span class="text-sm md:text-base font-bold text-gray-300 group-hover:text-white transition-colors line-clamp-1">[소프트웨어공학] Waterfall과 Agile</span></a></div><div class="w-px h-10 bg-gray-800 mx-4"></div><div class="flex-1 text-right"></div></div></nav><div class="pt-10 border-t border-gray-800"><h3 class="text-xl md:text-2xl font-bold text-white mb-6"><span style="color:#E29FBF">#<!-- -->Web</span> <!-- -->관련 포스트</h3><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"><a class="group p-4 rounded-xl bg-[#1a1a1a] border border-gray-800 hover:border-gray-600 transition-all flex flex-col justify-between h-full" href="/lg-webos-tv-fullstack-appliaction/"><div><h4 class="text-base font-bold mb-2 group-hover:text-blue-400 transition-colors line-clamp-2" style="color:#ffffff">WebOS TV에 들어갈 풀스택 애플리케이션을 만들어보자 (LG전자 산학 프로젝트 후기)</h4></div><time class="text-xs text-gray-500">2025-12-22</time></a><a class="group p-4 rounded-xl bg-[#1a1a1a] border border-gray-800 hover:border-gray-600 transition-all flex flex-col justify-between h-full" href="/kakaobank-devrel-internship-retrospect/"><div><h4 class="text-base font-bold mb-2 group-hover:text-blue-400 transition-colors line-clamp-2" style="color:#ffe300">카카오뱅크 개발 어시스턴트 회고</h4></div><time class="text-xs text-gray-500">2025-07-28</time></a><a class="group p-4 rounded-xl bg-[#1a1a1a] border border-gray-800 hover:border-gray-600 transition-all flex flex-col justify-between h-full" href="/my-it-startup-internship-retrospect/"><div><h4 class="text-base font-bold mb-2 group-hover:text-blue-400 transition-colors line-clamp-2" style="color:#6FE7FF">나의 IT 스타트업 인턴쉽 회고</h4></div><time class="text-xs text-gray-500">2025-03-14</time></a><a class="group p-4 rounded-xl bg-[#1a1a1a] border border-gray-800 hover:border-gray-600 transition-all flex flex-col justify-between h-full" href="/sogang-likelion-management-retrospect/"><div><h4 class="text-base font-bold mb-2 group-hover:text-blue-400 transition-colors line-clamp-2" style="color:#FD7911">서강대학교 멋쟁이사자처럼 운영진 회고</h4></div><time class="text-xs text-gray-500">2025-02-27</time></a></div></div></main><footer class="text-center">© <!-- -->2026<!-- -->, Design &amp; Developed by 정인영</footer></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/[트러블슈팅] Supabase를 활용한 인증, 인가/";/*]]>*/</script><!-- slice-start id="_gatsby-scripts-1" -->
           <script
             id="gatsby-chunk-mapping"
           >
