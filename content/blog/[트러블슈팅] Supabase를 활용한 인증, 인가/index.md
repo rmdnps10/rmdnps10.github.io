@@ -7,7 +7,7 @@ pointColor: "#3ECF8D"
 tags: ["Web", "회고"]
 ---
 
-> 최근에 사이드 프로젝트로 **BOJ AI H별lper**라는 서비스를 개발하고 있습니다.
+> 최근에 사이드 프로젝트로 **BOJ AI Helper**라는 서비스를 개발하고 있습니다.
 >
 > Nest.js 서버, Next.js SSR&CSR, Chrome Extension 환경에서 Supabase Auth를 통합하며 몇가지 인증 에러들을 만났고, 이러한 에러를 맞닥뜨리며 인증/인가 아키텍처를 설계한 과정을 기록합니다.
 
@@ -60,15 +60,15 @@ BOJ AI Helper는 백준의 제출을 단순한 채점 요청이 아니라 `하�
 ## Supabase Auth의 도입
 
 이번 프로젝트에서는 `Supabase`를 Auth Provider로서 활용하며, 데이터 접근은 자체 백엔드 서버를 통해 수행했다.
-즉, 토큰 검증과 토큰 발급의 책임을 서버단이 아닌 Supabase Auth가 담당하도록 설계했다.
+즉, 토큰 검증과 토큰 발급의 책임을 서버단이 아닌 `Supabase Auth`가 담당하도록 설계했다.
 
 ### 도입 배경
 
 예전에 참여한 AI 해커톤에서 `Next.js`로 프론트엔드 단만을 구현하며 `Supabase`를 사실상의 백엔드로서 활용한 경험이 있었는데, 당시에 직접 백엔드를 구현하지 않고 굉장히 수월하게 서비스를 만들 수 있었다.
 
-그 당시에 경험으로 이번 프로젝트에서도 Supabase Auth를 도입하게 되었다.
+그 당시에 경험으로 이번 프로젝트에서도 `Supabase Auth`를 도입하게 되었다.
 
-하지만 이번 프로젝트는 단순한 프론트엔드 앱이 아니라, `Next.js` 풀스택 앱과 `NestJS` 백엔드 서버, 그리고 `Chrome Extension`까지 아우르는 복합적인 아키텍처였기에, Supabase Auth를 통합하는 과정에서 여러 가지 트러블슈팅 상황에 직면하게 되었다.
+하지만 이번 프로젝트는 단순한 프론트엔드 앱이 아니라, `Next.js` 풀스택 앱과 `NestJS` 백엔드 서버, 그리고 `Chrome Extension`까지 아우르는 복합적인 아키텍처였기에, `Supabase Auth`를 통합하는 과정에서 여러 가지 트러블슈팅 상황에 직면하게 되었다.
 
 > ##### 이 글에서는 `Supabase Auth`를 활용하여 풀스택 인증/인가 아키텍처를 설계하고, RLS 설정, 토큰 관리, 환경별 인증 처리 문제를 해결한 경험을 공유하고자 한다.
 
@@ -84,38 +84,7 @@ BOJ AI Helper는 백준의 제출을 단순한 채점 요청이 아니라 `하�
 4. 모든 API 요청에 JWT 포함
 5. 서버가 Supabase Auth를 통해 JWT 검증 후 DB 접근
 
-```
-┌─────────────────────────────────────────────────────────────────────────┐
-│                           사용자 / 브라우저                               │
-└─────────────────────────────────────────────────────────────────────────┘
-         │                              │
-         │ 웹 앱                         │ acmicpc.net + 확장
-         ▼                              ▼
-┌─────────────────────┐      ┌─────────────────────┐
-│   boj-helper-app    │      │  boj-chrome-plugin  │
-│   (Next.js 16)      │      │  (Chrome Extension) │
-│   localhost:3001    │      │  content + popup     │
-└──────────┬──────────┘      └──────────┬──────────┘
-           │                            │
-           │ Bearer token               │ Bearer token
-           │ (API 호출 시)               │ (POST /submissions 등)
-           ▼                            ▼
-┌─────────────────────────────────────────────────────────────────────────┐
-│                      boj-helper-server (NestJS)                          │
-│                      localhost:3000                                      │
-│  • SubmissionController @UseGuards(SupabaseAuthGuard)                    │
-│  • 토큰 검증: Supabase Auth API (service_role)                           │
-│  • 비즈니스 데이터: Prisma → PostgreSQL (Supabase DB 또는 별도 DB)         │
-└─────────────────────────────────────────────────────────────────────────┘
-           │
-           │ 토큰 검증 (getUser(accessToken))
-           ▼
-┌─────────────────────────────────────────────────────────────────────────┐
-│                         Supabase                                         │
-│  • Auth API: 로그인/세션/리프레시 (anon key로 접근)                       │
-│  • DB: RLS 적용 테이블 (앱/확장은 직접 접근 안 함, Nest만 접근)           │
-└─────────────────────────────────────────────────────────────────────────┘
-```
+![인증 플로우](./flow.png)
 
 **Client (Next.js / Chrome Extension)**
 
@@ -149,22 +118,7 @@ BOJ AI Helper는 백준의 제출을 단순한 채점 요청이 아니라 `하�
 
 #### 서비스 전체 아키텍처
 
-```
-┌─────────────────────┐     제출 수집/전송         ┌────────────────────┐
-│  boj-chrome-plugin  │ ────────────────────►  │  boj-helper-server  │
-│  (Chrome Extension) │                        │  (NestJS + Prisma)  │
-└─────────────────────┘                        └──────────┬──────────┘
-         │                                                 │
-         │ 확장 프로그램 로그인 (auth-bridge)               │ REST API
-         ▼                                                 │
-┌─────────────────────┐      제출/대시보드 조회             │
-│   boj-helper-app    │ ◄──────────────────────────────────┤
-│   (Next.js + RSC)   │                                    │
-└─────────────────────┘                        ┌──────────▼──────────┐
-                                               │  PostgreSQL          │
-                                               │  (Supabase Auth)     │
-                                               └─────────────────────┘
-```
+![서비스 아키텍처](./architecture.png)
 
 **핵심 구성 요소**
 
@@ -438,14 +392,9 @@ async function fetchWithRefreshMiddleware(url, options) {
 
 ### Extension: Background Alarm
 
-Chrome Extension에서는 **백그라운드에서 주기적으로 갱신**한다.
+Chrome Extension에서는 background alarm 기능을 통해 브라우저의 백그라운드에서 주기적인 작업을 수행할 수 있다.
 
-##### 문제
-
-- content script는 Supabase SDK의 자동 갱신 메커니즘이 작동하지 않음
-- 1시간 후 토큰 만료 → 401 에러
-
-##### 해결: chrome.alarms 사용
+##### chrome.alarms 사용
 
 ```javascript
 // background.js - 알람 등록
@@ -480,8 +429,7 @@ chrome.alarms.onAlarm.addListener(async alarm => {
 
 ## 5️⃣ 최종 교훈
 
-
-### 1. 세션 일관성을 지키자
+### 1. 세션 일관성 지키기
 
 ```
 하나의 사용자 세션 = 하나의 Supabase client
@@ -494,9 +442,7 @@ client를 매번 새로 생성하면:
 
 **해결: Client `싱글톤 패턴`**
 
-
-### 2. 환경별로 세션 관리 방법이 다르다
-
+### 2. 환경별 세션 관리 방법의 차이
 
 | 환경             | 토큰 저장         | 갱신 전략           | 갱신 시점                  |
 | ---------------- | ----------------- | ------------------- | -------------------------- |
@@ -506,15 +452,8 @@ client를 매번 새로 생성하면:
 
 ### 3. Supabase 보안 설정
 
+```tx
+1단계: Client (anon_key + JWT)
+  2단계: → Server (JWT 검증 + 비즈니스 로직)
+    3단계: → DB (RLS 정책)
 ```
-Client (anon_key + JWT)
-  → Server (JWT 검증 + 비즈니스 로직)
-    → DB (RLS 정책)
-```
-
-- 클라이언트: RLS로 row 단위 제한
-- 서버: `service_role`로 RLS 우회, 비즈니스 로직이 1차 방어
-- DB: RLS
-
-
----
