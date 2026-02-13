@@ -1,5 +1,6 @@
 ---
 title: "[트러블슈팅] Supabase Auth를 활용한 다양한 환경에서의 세션 유지"
+slug: "troubleshooting-supabase-auth"
 date: "2026-02-10"
 description: "RLS를 켜자마자 permission denied, SSR에서 토큰 null, Extension에서 1시간 뒤 401. Supabase Auth 기반 인증 시스템을 구축하며 마주한 문제들과 해결 과정을 기록한다."
 thumbnail: "./index.png"
