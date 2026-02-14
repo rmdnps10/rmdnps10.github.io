@@ -6,6 +6,7 @@ slug: network-big-picture
 pointColor: "#ffffff"
 thumbnail: index.png
 tags: ["네트워크"]
+keywords: "네트워크, CS, OSI, TCP/UDP, 계층 구조, 네트워크 계층 구조"
 ---
 
 > `혼자 공부하는 네트워크` 책을 읽으면서 배운 점을 정리합니다.
