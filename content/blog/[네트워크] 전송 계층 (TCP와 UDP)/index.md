@@ -2,7 +2,7 @@
 title: "[네트워크] 네트워크 계층과 IP 프로토콜"
 date: 2026-02-14
 slug: network-layer-ip-protocol
-description: 네트워크 계층의 핵심 프로토콜인 IP의 동작 원리와 주소 체계, 관련 프로토콜을 알아본다
+description: 네트워크 계층의 핵심 프로토콜인 IP의 동작 원리와 주소 체계, 관련 프로토콜을 정리합니다.
 thumbnail: index.png
 pointColor: "#ffffff"
 tags: ["네트워크"]
