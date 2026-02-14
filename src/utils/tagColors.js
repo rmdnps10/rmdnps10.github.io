@@ -13,6 +13,7 @@ export const tagColors = {
   컴퓨터구조: "#adb5bd",
   운영체제: "#adb5bd",
   소프트웨어공학: "#adb5bd",
+  네트워크: "#adb5bd",
   Web: "#E29FBF",
 }
 
