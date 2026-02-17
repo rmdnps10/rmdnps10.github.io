@@ -1,4 +1,2232 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[난너의오른팔 기술 블로그 RSS Feed]]></title><description><![CDATA[Web 기술과 AI 활용법을 공부하는 주니어 개발자, 커뮤니티 빌더의 기술 블로그]]></description><link>https://inyoung.dev</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 14 Feb 2026 09:41:59 GMT</lastBuildDate><item><title><![CDATA[[네트워크] 네트워크 계층과 IP 프로토콜]]></title><description><![CDATA[책을 읽으면서 배운 점을 정리합니다.
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[난너의오른팔 기술 블로그 RSS Feed]]></title><description><![CDATA[Web 기술과 AI 활용법을 공부하는 주니어 개발자, 커뮤니티 빌더의 기술 블로그]]></description><link>https://inyoung.dev</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 17 Feb 2026 07:04:24 GMT</lastBuildDate><item><title><![CDATA[[네트워크] HTTP의 응용 - 쿠키, 캐시, 보안]]></title><description><![CDATA[책을 읽으면서 배운 점을 정리합니다. HTTP는 스테이트리스 프로토콜이지만 쿠키를 통해 상태를 유지할 수 있고, 캐시를 통해 성능을 향상시킬 수 있다. 또한 SSL/TLS를 통해 보안 통신을 구현하는 HTTPS…]]></description><link>https://inyoung.dev/http-advanced-features/</link><guid isPermaLink="false">https://inyoung.dev/http-advanced-features/</guid><pubDate>Tue, 17 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;혼자 공부하는 네트워크&lt;/code&gt; 책을 읽으면서 배운 점을 정리합니다.&lt;/p&gt;
+&lt;p&gt;HTTP는 스테이트리스 프로토콜이지만 쿠키를 통해 상태를 유지할 수 있고, 캐시를 통해 성능을 향상시킬 수 있다. 또한 SSL/TLS를 통해 보안 통신을 구현하는 HTTPS가 오늘날 웹의 표준이 되었다. 이 글에서는 HTTP 기반의 핵심 응용 기술들을 정리해본다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;background: transparent;&quot;&gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1000px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/4242503070e950d20df222c357e86108/7c474/index.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 48.800000000000004%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAACE4AAAhOAFFljFgAAABUUlEQVR42o1SXUsCURDdX12WmUHRS5JWZhEU2FNIvdSDroWB67ofau7u3XX7MJKEyMDfcLozosmyVg/DvXNn5tw5Z0ax128Ra+m7iM29L6qRpsQ9WmtVmKsqzJUKjERldreSKt8p/n/AVBWd7Xs4WQ2iYCI8a8PN6RB5A86uhuDERnenvhBUidKkTp7OHzCyhvhqDTEWI7yrzxj7n3i7DvGhDdAvedx5HP0fwPTEiJJ/bGJwE+LlwkX/0uMuX6/ExC8JjlPetCYWkPQhuqyT/N1YKsNYLvPdksXsJyozI8pTTWMBvT2dtevJbsLTFvtEXeSbaG/V4O034R+Z8A8NqaMlfR09qedjsQN7Q1JPRQBJcAIMJJ1AFnYzdR6AOJCAmzU4chBOZmJurgE324BfMDiHAWMpT9eFVmO2Iir/TifTpJwkxf+gHBV3flC/LXJ0KN9X0GWY6s8h2wAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+          &lt;source
+              srcset=&quot;/static/4242503070e950d20df222c357e86108/bc904/index.webp 250w,
+/static/4242503070e950d20df222c357e86108/4be29/index.webp 500w,
+/static/4242503070e950d20df222c357e86108/03f31/index.webp 1000w,
+/static/4242503070e950d20df222c357e86108/84f56/index.webp 1329w&quot;
+              sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
+              type=&quot;image/webp&quot;
+            /&gt;
+          &lt;source
+            srcset=&quot;/static/4242503070e950d20df222c357e86108/43fa5/index.png 250w,
+/static/4242503070e950d20df222c357e86108/c6e3d/index.png 500w,
+/static/4242503070e950d20df222c357e86108/da8b6/index.png 1000w,
+/static/4242503070e950d20df222c357e86108/7c474/index.png 1329w&quot;
+            sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
+            type=&quot;image/png&quot;
+          /&gt;
+          &lt;img
+            class=&quot;gatsby-resp-image-image&quot;
+            src=&quot;/static/4242503070e950d20df222c357e86108/da8b6/index.png&quot;
+            alt=&quot;네트워크 - HTTP의 응용&quot;
+            title=&quot;&quot;
+            loading=&quot;lazy&quot;
+            decoding=&quot;async&quot;
+            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+          /&gt;
+        &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;네트워크 - HTTP의 응용&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
+&lt;h2 id=&quot;1️-쿠키&quot;&gt;1️⃣ 쿠키&lt;/h2&gt;
+&lt;h3 id=&quot;쿠키의-필요성&quot;&gt;쿠키의 필요성&lt;/h3&gt;
+&lt;h4 id=&quot;1-1-스테이트리스의-한계&quot;&gt;1-1 스테이트리스의 한계&lt;/h4&gt;
+&lt;p&gt;HTTP는 기본적으로 &lt;code class=&quot;language-text&quot;&gt;스테이트리스(Stateless)&lt;/code&gt; 프로토콜이기 때문에 모든 HTTP 요청 메시지는 &lt;strong&gt;독립된 메시지&lt;/strong&gt;로 간주된다. 그런데 웹 서비스를 이용하다 보면 다음과 같은 기능들을 자주 접하게 된다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&quot;3일간 보지 않기&quot; 팝업&lt;/li&gt;
+&lt;li&gt;로그인 상태 유지&lt;/li&gt;
+&lt;li&gt;장바구니 기능&lt;/li&gt;
+&lt;li&gt;사용자 선호 설정 기억&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;이런 기능들은 분명 &lt;strong&gt;클라이언트의 상태를 알고 있어야&lt;/strong&gt; 구현이 가능하다. 모든 클라이언트의 요청을 독립적인 메시지로 간주한다면 구현할 수 없을 것이다.&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;HTTP 쿠키(HTTP Cookie)&lt;/code&gt; 또는 단순히 &lt;code class=&quot;language-text&quot;&gt;쿠키(Cookie)&lt;/code&gt;를 활용하면 이와 같은 기능을 구현할 수 있다.&lt;/p&gt;
+&lt;h4 id=&quot;1-2-쿠키의-개념&quot;&gt;1-2 쿠키의 개념&lt;/h4&gt;
+&lt;p&gt;쿠키는 HTTP의 스테이트리스한 특성을 보완하기 위한 대표적 수단으로, &lt;strong&gt;서버에서 생성되어 클라이언트 측에 저장되는&lt;/strong&gt; &lt;code class=&quot;language-text&quot;&gt;&amp;lt;이름, 값&gt;&lt;/code&gt; 쌍 형태의 데이터이다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;txt&quot;&gt;&lt;pre class=&quot;language-txt&quot;&gt;&lt;code class=&quot;language-txt&quot;&gt;이름=값
+이름=값; 속성1
+이름=값; 속성1; 속성2&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;쿠키는 이름과 값 이외에도 쿠키의 &lt;strong&gt;만료 기간&lt;/strong&gt;과 같은 추가적인 속성값도 가질 수 있다. 클라이언트는 서버로부터 받은 쿠키를 주로 &lt;strong&gt;브라우저에 저장&lt;/strong&gt;한다.&lt;/p&gt;
+&lt;h5&gt;브라우저에서 쿠키 확인하기&lt;/h5&gt;
+&lt;p&gt;크롬 브라우저의 경우 &lt;strong&gt;[개발자 도구] → [Application] → [Storage] → [Cookies]&lt;/strong&gt; 항목에서 저장된 쿠키를 확인할 수 있다.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;쿠키 정보&lt;/th&gt;
+&lt;th&gt;설명&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Name&lt;/td&gt;
+&lt;td&gt;쿠키의 이름&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Value&lt;/td&gt;
+&lt;td&gt;쿠키의 값&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Domain&lt;/td&gt;
+&lt;td&gt;쿠키가 유효한 도메인&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Path&lt;/td&gt;
+&lt;td&gt;쿠키가 유효한 경로&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Expires / Max-Age&lt;/td&gt;
+&lt;td&gt;쿠키의 만료 시점 또는 유효 기간&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;HttpOnly&lt;/td&gt;
+&lt;td&gt;JavaScript 접근 제한 여부&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Secure&lt;/td&gt;
+&lt;td&gt;HTTPS에서만 전송 여부&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&quot;쿠키의-송수신&quot;&gt;쿠키의 송수신&lt;/h3&gt;
+&lt;h4 id=&quot;1-3-set-cookie-헤더&quot;&gt;1-3 Set-Cookie 헤더&lt;/h4&gt;
+&lt;p&gt;서버는 쿠키를 생성하여 클라이언트에 전송하고, 클라이언트는 쿠키를 저장해 두었다가 추후 같은 서버에 요청을 보낼 때 요청 메시지에 쿠키를 포함하여 전송한다.&lt;/p&gt;
+&lt;p&gt;서버가 클라이언트에게 쿠키를 전송할 때는 응답 메시지의 &lt;code class=&quot;language-text&quot;&gt;Set-Cookie&lt;/code&gt; 헤더가 활용된다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Set-Cookie 헤더 형식&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;Set-Cookie: 이름=값
+Set-Cookie: 이름=값; 속성1
+Set-Cookie: 이름=값; 속성1; 속성2&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;응답 메시지 예시&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;HTTP/1.1 200 OK
+Content-Type: text/html
+Set-Cookie: name=minchul
+Set-Cookie: phone=100-100
+Set-Cookie: message=Hello&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;쿠키의 이름과 값, 때로는 세미콜론(&lt;code class=&quot;language-text&quot;&gt;;&lt;/code&gt;)으로 구분한 쿠키의 속성이 명시될 수 있다. &lt;strong&gt;여러 쿠키를 전달할 때는 여러 개의 Set-Cookie 헤더&lt;/strong&gt;가 사용된다.&lt;/p&gt;
+&lt;h4 id=&quot;1-4-cookie-헤더&quot;&gt;1-4 Cookie 헤더&lt;/h4&gt;
+&lt;p&gt;클라이언트가 서버에게 쿠키를 건넬 때는 &lt;code class=&quot;language-text&quot;&gt;Cookie&lt;/code&gt; 헤더가 활용된다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Cookie 헤더 형식&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;Cookie: 이름=값; 이름=값; ...&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;요청 메시지 예시&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;GET /next_page HTTP/1.1
+Host: example.com
+Cookie: name=minchul; phone=100-100; message=Hello&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;서버에 여러 쿠키를 전달할 때는 세미콜론(&lt;code class=&quot;language-text&quot;&gt;;&lt;/code&gt;)으로 여러 쿠키의 &lt;code class=&quot;language-text&quot;&gt;&amp;lt;이름, 값&gt;&lt;/code&gt; 쌍을 구분한다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;💡 &lt;strong&gt;쿠키의 자동 전송&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;특정 서버로부터 쿠키를 전달받았다면 &lt;strong&gt;다음부터 해당 서버에 요청을 보낼 때 전달받은 쿠키를 자동으로 전송&lt;/strong&gt;한다. 즉, 어떤 서버로부터 쿠키를 전달받으면 해당 서버에 보내는 요청 메시지에는 자동으로 전달받은 쿠키가 포함된다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;쿠키의-속성&quot;&gt;쿠키의 속성&lt;/h3&gt;
+&lt;h4 id=&quot;1-5-domain과-path&quot;&gt;1-5 Domain과 Path&lt;/h4&gt;
+&lt;p&gt;쿠키는 &lt;code class=&quot;language-text&quot;&gt;Domain&lt;/code&gt;과 &lt;code class=&quot;language-text&quot;&gt;Path&lt;/code&gt; 속성을 통해 &lt;strong&gt;쿠키를 전송할 도메인과 경로를 제한&lt;/strong&gt;할 수 있다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;Set-Cookie: name=minchul; Domain=minchul.net
+Set-Cookie: name=minchul; Path=/lectures&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Domain&lt;/strong&gt;: 쿠키를 사용할 도메인 지정&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Path&lt;/strong&gt;: 쿠키를 사용할 경로 지정&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;1-6-expires와-max-age&quot;&gt;1-6 Expires와 Max-Age&lt;/h4&gt;
+&lt;p&gt;쿠키의 유효기간을 설정하는 속성이다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;Set-Cookie: sessionID=abc123; Expires=Fri, 23 Aug 2024 09:00:00 GMT
+Set-Cookie: sessionID=abc123; Max-Age=2592000&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;속성&lt;/th&gt;
+&lt;th&gt;설명&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Expires&lt;/td&gt;
+&lt;td&gt;쿠키 만료 시점 (요일, DD-MM-YY HH:MM:SS GMT 형식)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Max-Age&lt;/td&gt;
+&lt;td&gt;초 단위 유효기간&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;Expires&lt;/code&gt;로 명시된 시점이 지나거나 &lt;code class=&quot;language-text&quot;&gt;Max-Age&lt;/code&gt;로 명시된 유효기간이 지나면 해당 쿠키는 &lt;strong&gt;삭제되어 전달되지 않는다&lt;/strong&gt;.&lt;/p&gt;
+&lt;h4 id=&quot;1-7-보안-속성&quot;&gt;1-7 보안 속성&lt;/h4&gt;
+&lt;h5&gt;Secure&lt;/h5&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;Secure&lt;/code&gt; 속성은 &lt;strong&gt;HTTPS를 통해서만 쿠키를 송수신&lt;/strong&gt;하도록 하는 속성이다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;Set-Cookie: sessionID=abc123; Secure&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;HTTP의 더 안전한 방식인 HTTPS를 통해서만 쿠키가 전송되므로 보안을 강화할 수 있다.&lt;/p&gt;
+&lt;h5&gt;HttpOnly&lt;/h5&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;HttpOnly&lt;/code&gt; 속성은 &lt;strong&gt;JavaScript를 통한 쿠키의 접근을 제한&lt;/strong&gt;하고, 오직 HTTP 송수신을 통해서만(HTTP 헤더를 주고받는 방식으로만) 쿠키에 접근하도록 하는 방식이다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;Set-Cookie: sessionID=abc123; HttpOnly&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;이를 통해 XSS(Cross-Site Scripting) 공격으로부터 쿠키를 보호할 수 있다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// HttpOnly 속성이 없으면 JavaScript로 접근 가능&lt;/span&gt;
+document&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;cookie &lt;span class=&quot;token comment&quot;&gt;// 쿠키 접근 가능&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;// HttpOnly 속성이 있으면 JavaScript로 접근 불가&lt;/span&gt;
+document&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;cookie &lt;span class=&quot;token comment&quot;&gt;// HttpOnly 쿠키는 접근 불가&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;💡 &lt;strong&gt;웹 스토리지: 로컬 스토리지와 세션 스토리지&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;쿠키 이외에도 클라이언트의 상태를 저장할 수 있는 &lt;code class=&quot;language-text&quot;&gt;&amp;lt;키, 값&gt;&lt;/code&gt; 쌍 형태의 정보가 있다. 바로 &lt;code class=&quot;language-text&quot;&gt;웹 스토리지(Web Storage)&lt;/code&gt;이다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;웹 스토리지의 특징&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;웹 브라우저 내의 저장 공간&lt;/li&gt;
+&lt;li&gt;일반적으로 &lt;strong&gt;쿠키보다 더 큰 데이터&lt;/strong&gt; 저장 가능&lt;/li&gt;
+&lt;li&gt;서버로 &lt;strong&gt;자동 전송되지 않음&lt;/strong&gt; (쿠키와의 주요 차이점)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;로컬 스토리지 vs 세션 스토리지&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;종류&lt;/th&gt;
+&lt;th&gt;설명&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;로컬 스토리지&lt;/td&gt;
+&lt;td&gt;별도로 삭제하지 않는 한 &lt;strong&gt;영구적으로 저장&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;세션 스토리지&lt;/td&gt;
+&lt;td&gt;세션이 유지되는 동안(브라우저가 열려 있는 동안) 유지&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;브라우저 개발자 도구의 **[Application] → [Storage]**에서 확인할 수 있다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;2️-캐시&quot;&gt;2️⃣ 캐시&lt;/h2&gt;
+&lt;h3 id=&quot;캐시의-개념&quot;&gt;캐시의 개념&lt;/h3&gt;
+&lt;h4 id=&quot;2-1-http-캐시란&quot;&gt;2-1 HTTP 캐시란&lt;/h4&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;HTTP 캐시(HTTP Cache)&lt;/code&gt; 또는 &lt;code class=&quot;language-text&quot;&gt;웹 캐시(Web Cache)&lt;/code&gt;는 응답받은 자원의 사본을 임시 저장하여 &lt;strong&gt;불필요한 대역폭 낭비와 응답 지연을 방지&lt;/strong&gt;하는 기술이다.&lt;/p&gt;
+&lt;p&gt;클라이언트가 서버로부터 10MB 크기의 이미지를 전달받았다고 가정하자. 이 자원의 사본을 임시 저장하면 추후 동일한 요청 메시지를 보내야 할 때 &lt;strong&gt;임시 저장된 사본을 재활용&lt;/strong&gt;할 수 있고, 결과적으로 더 빠르게 자원에 접근할 수 있다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;💡 &lt;strong&gt;캐시의 종류&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;개인 전용 캐시(Private Cache)&lt;/strong&gt;: 클라이언트(주로 웹 브라우저)에 저장&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;공용 캐시(Public Cache)&lt;/strong&gt;: 클라이언트와 서버 사이에 위치한 중간 서버에 저장&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;캐시의-유효기간&quot;&gt;캐시의 유효기간&lt;/h3&gt;
+&lt;h4 id=&quot;2-2-expires와-cache-control&quot;&gt;2-2 Expires와 Cache-Control&lt;/h4&gt;
+&lt;p&gt;대부분의 캐시된 데이터에는 &lt;strong&gt;유효기간&lt;/strong&gt;이 설정되어 있다. 캐시할 데이터에 유효기간을 부여하기 위해 응답 메시지의 &lt;code class=&quot;language-text&quot;&gt;Expires&lt;/code&gt; 헤더와 &lt;code class=&quot;language-text&quot;&gt;Cache-Control&lt;/code&gt; 헤더의 &lt;code class=&quot;language-text&quot;&gt;Max-Age&lt;/code&gt; 값을 사용할 수 있다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Expires 헤더&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;캐시한 데이터의 &lt;strong&gt;만료 날짜&lt;/strong&gt;를 명시한다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;HTTP/1.1 200 OK
+Date: Mon, 05 Feb 2024 12:00:00 GMT
+Content-Type: text/plain
+Content-Length: 100
+Expires: Tue, 06 Feb 2024 12:00:00 GMT&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Cache-Control 헤더&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;캐시하여 사용 가능한 &lt;strong&gt;초 단위 시간&lt;/strong&gt;을 명시한다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;HTTP/1.1 200 OK
+Date: Mon, 05 Feb 2024 12:00:00 GMT
+Content-Type: text/plain
+Content-Length: 100
+Cache-Control: max-age=1200&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;클라이언트가 응답받은 자원을 임시 저장하여 이용하다가 유효기간이 만료되면 &lt;strong&gt;다시 서버에 자원을 요청&lt;/strong&gt;해야 한다.&lt;/p&gt;
+&lt;h4 id=&quot;2-3-캐시-신선도&quot;&gt;2-3 캐시 신선도&lt;/h4&gt;
+&lt;p&gt;캐시에 유효기간이 부여되는 근본적인 이유는 &lt;strong&gt;클라이언트가 캐시를 참조하는 사이 서버의 원본 데이터가 변경&lt;/strong&gt;되어 원본 데이터와 캐시된 사본 데이터 간의 일관성이 깨질 수 있기 때문이다.&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;캐시 신선도(Cache Freshness)&lt;/code&gt;는 캐시된 사본 데이터가 서버의 원본 데이터와 얼마나 유사한지의 정도를 나타낸다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;캐시의 유효기간을 설정하고 만료된 자원을 재요청함으로써 &lt;strong&gt;캐시 신선도를 검사&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;원본 데이터가 변경되었을 때 해당 자원을 다시 응답받음으로써 &lt;strong&gt;캐시 신선도를 높게 유지&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;캐시-검증&quot;&gt;캐시 검증&lt;/h3&gt;
+&lt;h4 id=&quot;2-4-if-modified-since-헤더&quot;&gt;2-4 If-Modified-Since 헤더&lt;/h4&gt;
+&lt;p&gt;캐시의 유효기간이 만료되었더라도 서버의 원본 데이터가 변하지 않았을 수 있다. 이런 경우에는 굳이 서버로부터 같은 자원을 다시 전달받을 필요가 없다. 그저 &lt;strong&gt;캐시의 유효기간을 연장&lt;/strong&gt;하여 이용하면 된다.&lt;/p&gt;
+&lt;p&gt;클라이언트는 캐시된 자원의 유효기간이 만료되었을 때, 서버에게 &lt;strong&gt;원본 자원이 변경된 적이 있는지&lt;/strong&gt;를 질의한다.&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;If-Modified-Since&lt;/code&gt; 헤더는 &lt;strong&gt;날짜를 기반으로 원본 자원의 변경 여부&lt;/strong&gt;를 묻는 헤더이다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;요청 메시지 예시&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;GET /index.html HTTP/1.1
+Host: www.example.com
+If-Modified-Since: Fri, 23 Aug 2024 09:00:00 GMT&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;이 시점 이후로 원본 자원에 변경이 있었다면 그때만 변경된 자원을 메시지 본문으로 응답하도록 서버에게 요청한다.&lt;/p&gt;
+&lt;h5&gt;서버의 응답&lt;/h5&gt;
+&lt;p&gt;If-Modified-Since 헤더를 받은 서버는 다음 3가지 중 하나로 응답한다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;① 서버가 요청받은 자원이 변경된 경우&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;HTTP/1.1 200 OK
+Content-Type: text/html
+Content-Length: 1234
+Last-Modified: Mon, 25 Aug 2024 10:00:00 GMT
+
+&amp;lt;!DOCTYPE html&gt;
+&amp;lt;html&gt;
+...
+&amp;lt;/html&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;서버는 &lt;code class=&quot;language-text&quot;&gt;200 (OK)&lt;/code&gt;과 함께 &lt;strong&gt;새로운 자원을 반환&lt;/strong&gt;한다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;② 서버가 요청받은 자원이 변경되지 않은 경우&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;HTTP/1.1 304 Not Modified
+Last-Modified: Fri, 23 Aug 2024 09:00:00 GMT&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;서버는 &lt;strong&gt;메시지 본문 없이&lt;/strong&gt; &lt;code class=&quot;language-text&quot;&gt;304 (Not Modified)&lt;/code&gt;를 통해 클라이언트에게 &apos;자원이 변경되지 않았음&apos;을 알린다. 이 경우 클라이언트는 &lt;strong&gt;캐시된 자원을 사용&lt;/strong&gt;할 수 있다.&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;Last-Modified&lt;/code&gt; 헤더로 자원의 &lt;strong&gt;마지막 변경 시점&lt;/strong&gt;을 알릴 수 있다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;③ 서버가 요청받은 자원이 삭제된 경우&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;HTTP/1.1 404 Not Found&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;서버는 &lt;code class=&quot;language-text&quot;&gt;404 (Not Found)&lt;/code&gt;를 통해 요청한 &apos;자원이 존재하지 않음&apos;을 알린다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;💡 &lt;strong&gt;304 Not Modified&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&apos;캐시된 자원을 참조하라&apos;는 의미의 상태 코드 &lt;code class=&quot;language-text&quot;&gt;304 (Not Modified)&lt;/code&gt;는 가장 흔히 볼 수 있는 상태 코드 중 하나이다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&quot;2-5-if-none-match-헤더와-etag&quot;&gt;2-5 If-None-Match 헤더와 ETag&lt;/h4&gt;
+&lt;p&gt;클라이언트가 서버에게 원본 자원의 변경 여부를 묻기 위해 날짜가 아닌 &lt;strong&gt;엔티티 태그&lt;/strong&gt;를 기반으로 물어볼 수도 있다.&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;ETag(Entity Tag)&lt;/code&gt;는 &lt;strong&gt;자원의 버전을 식별하기 위한 정보&lt;/strong&gt;를 말한다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;자원이 변경될 때마다 &lt;strong&gt;ETag 값이 변경&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;자원이 변경되지 않았다면 &lt;strong&gt;ETag 값도 변경되지 않음&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;따라서 서버에 특정 자원의 ETag 값이 변경되었는지를 물음으로써 자원의 변경 여부도 알 수 있다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;If-None-Match 헤더&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;If-None-Match&lt;/code&gt; 헤더에는 요청할 자원에 대한 &lt;strong&gt;ETag 값&lt;/strong&gt;이 명시된다. 명시된 ETag 값과 일치하는 ETag가 없다면(자원이 변경되어 ETag 값도 변경되었다면) 그때만 변경된 자원으로 응답하도록 서버에게 요청한다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;요청 메시지 예시&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;GET /index.html HTTP/1.1
+Host: www.example.com
+If-None-Match: &quot;abc123&quot;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h5&gt;서버의 응답&lt;/h5&gt;
+&lt;p&gt;If-None-Match 헤더를 받은 서버는 다음 3가지 중 하나로 응답한다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;① 서버가 요청받은 자원이 변경된 경우&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;서버는 &lt;code class=&quot;language-text&quot;&gt;200 (OK)&lt;/code&gt;과 함께 &lt;strong&gt;새로운 자원을 반환&lt;/strong&gt;한다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;② 서버가 요청받은 자원이 변경되지 않은 경우&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;서버는 &lt;strong&gt;메시지 본문 없이&lt;/strong&gt; &lt;code class=&quot;language-text&quot;&gt;304 (Not Modified)&lt;/code&gt;를 통해 &apos;자원이 변경되지 않았음&apos;을 알린다. 클라이언트는 &lt;strong&gt;캐시된 자원을 사용&lt;/strong&gt;할 수 있다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;③ 서버가 요청받은 자원이 삭제된 경우&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;서버는 &lt;code class=&quot;language-text&quot;&gt;404 (Not Found)&lt;/code&gt;를 통해 &apos;자원이 존재하지 않음&apos;을 알린다.&lt;/p&gt;
+&lt;h2 id=&quot;3️-콘텐츠-협상&quot;&gt;3️⃣ 콘텐츠 협상&lt;/h2&gt;
+&lt;h3 id=&quot;자원의-표현&quot;&gt;자원의 표현&lt;/h3&gt;
+&lt;h4 id=&quot;3-1-표현representation의-개념&quot;&gt;3-1 표현(Representation)의 개념&lt;/h4&gt;
+&lt;p&gt;서버와 클라이언트가 HTTP 메시지를 통해 주고받는 것을 &apos;자원&apos;이라고 설명했지만, 조금 더 엄밀하게 말하면 &lt;strong&gt;자원의 표현&lt;/strong&gt;이다.&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;표현(Representation)&lt;/code&gt;이란 &lt;strong&gt;송수신 가능한 자원의 형태&lt;/strong&gt;를 의미한다.&lt;/p&gt;
+&lt;p&gt;같은 자원에 대해서도 &lt;strong&gt;여러 가지 표현&lt;/strong&gt;이 있을 수 있다. 예를 들어 &apos;computer science를 검색한 결과&apos;라는 동일한 자원을 요청했더라도:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;한국어로 표현된 자원이 응답될 때&lt;/li&gt;
+&lt;li&gt;영어로 표현된 자원이 응답될 때&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;즉, 같은 URI(URL)에 대해서도 &lt;strong&gt;다른 자원의 표현&lt;/strong&gt;이 있을 수 있다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;💡 &lt;strong&gt;GET 메서드의 정확한 목적&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;GET 메서드의 정확한 목적은 &apos;자원 조회&apos;보다는 &lt;strong&gt;자원의 특정 표현 조회&lt;/strong&gt;에 가깝다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;콘텐츠-협상-헤더&quot;&gt;콘텐츠 협상 헤더&lt;/h3&gt;
+&lt;h4 id=&quot;3-2-콘텐츠-협상이란&quot;&gt;3-2 콘텐츠 협상이란&lt;/h4&gt;
+&lt;p&gt;같은 자원에 대해 할 수 있는 여러 표현 중 클라이언트가 &lt;strong&gt;가장 적합한 자원의 표현을 제공&lt;/strong&gt;하는 기술을 &lt;code class=&quot;language-text&quot;&gt;콘텐츠 협상(Content Negotiation)&lt;/code&gt;이라고 한다.&lt;/p&gt;
+&lt;p&gt;자원에 대한 다양한 표현 중 클라이언트가 선호하는 자원의 표현을 콘텐츠 협상 헤더를 통해 서버에게 전송하면 서버는 클라이언트가 요청한 자원의 표현을 응답한다.&lt;/p&gt;
+&lt;h5&gt;대표적인 콘텐츠 협상 헤더&lt;/h5&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;헤더&lt;/th&gt;
+&lt;th&gt;설명&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Accept&lt;/td&gt;
+&lt;td&gt;선호하는 미디어 타입&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Accept-Language&lt;/td&gt;
+&lt;td&gt;선호하는 언어&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Accept-Encoding&lt;/td&gt;
+&lt;td&gt;선호하는 인코딩 방식&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;요청 메시지 예시&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;GET /index.html HTTP/1.1
+Host: example.com
+Accept-Language: ko
+Accept: text/html&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h4 id=&quot;3-3-우선순위와-quality-value&quot;&gt;3-3 우선순위와 Quality Value&lt;/h4&gt;
+&lt;p&gt;클라이언트가 &lt;strong&gt;우선순위를 반영&lt;/strong&gt;하여 여러 표현에 대한 선호도를 서버에 알릴 수도 있다.&lt;/p&gt;
+&lt;p&gt;예를 들어:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&quot;언어는 한국어를 가장 선호하지만, 영어도 받을 용의가 있다&quot;&lt;/li&gt;
+&lt;li&gt;&quot;미디어 타입은 HTML 문서를 가장 선호하지만, XML을 그 다음으로 선호하고, 일반 텍스트를 그 다음으로 선호한다&quot;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;이러한 우선순위는 콘텐츠 협상 관련 헤더의 &lt;strong&gt;q값&lt;/strong&gt;으로 표현된다.&lt;/p&gt;
+&lt;h5&gt;Quality Value (q)&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;q&lt;/strong&gt;: Quality Value의 약자&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;범위&lt;/strong&gt;: 0부터 1까지&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;기본값&lt;/strong&gt;: 1 (생략 시)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;우선순위&lt;/strong&gt;: 값이 클수록 높음&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;우선순위 예시&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;GET /index.html HTTP/1.1
+Host: example.com
+Accept-Language: ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7
+Accept: text/html,application/xml;q=0.9,text/plain;q=0.6,*/*;q=0.5&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Accept-Language 해석&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;ko-KR&lt;/code&gt; (q=1.0, 생략): 한국(KR)의 한국어를 가장 선호&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;ko;q=0.9&lt;/code&gt;: 한국어를 두 번째로 선호&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;en-US;q=0.8&lt;/code&gt;: 미국 영어를 세 번째로 선호&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;en;q=0.7&lt;/code&gt;: 영어를 네 번째로 선호&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;Accept 해석&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;text/html&lt;/code&gt; (q=1.0, 생략): HTML을 가장 선호&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;application/xml;q=0.9&lt;/code&gt;: XML을 두 번째로 선호&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;text/plain;q=0.6&lt;/code&gt;: 일반 텍스트를 세 번째로 선호&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;*/*;q=0.5&lt;/code&gt;: 모든 타입을 네 번째로 선호&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&quot;4️-보안-ssltls와-https&quot;&gt;4️⃣ 보안: SSL/TLS와 HTTPS&lt;/h2&gt;
+&lt;h3 id=&quot;https의-개념&quot;&gt;HTTPS의 개념&lt;/h3&gt;
+&lt;h4 id=&quot;4-1-https란&quot;&gt;4-1 HTTPS란&lt;/h4&gt;
+&lt;p&gt;오늘날 많은 웹 서비스는 HTTP에 안전성을 더한 프로토콜인 &lt;code class=&quot;language-text&quot;&gt;HTTPS(HTTP Secure, HTTP over TLS)&lt;/code&gt;로 동작한다.&lt;/p&gt;
+&lt;p&gt;정확히 말하자면, HTTPS는 &lt;strong&gt;HTTP에 SSL 혹은 TLS라는 프로토콜의 동작이 추가된 프로토콜&lt;/strong&gt;이다.&lt;/p&gt;
+&lt;p&gt;웹 브라우저에서 도메인 네임 좌측의 &lt;strong&gt;자물쇠 모양 아이콘&lt;/strong&gt;을 볼 수 있다. 이는 해당 사이트가 &lt;strong&gt;HTTPS를 사용&lt;/strong&gt;한다는 의미로, 해당 웹사이트와 브라우저 간에 &lt;strong&gt;SSL/TLS 기반 암호화 통신&lt;/strong&gt;이 이루어진다는 점을 시사한다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;🔒 https://www.example.com&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h4 id=&quot;4-2-ssl과-tls&quot;&gt;4-2 SSL과 TLS&lt;/h4&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;SSL(Secure Sockets Layer)&lt;/code&gt;과 &lt;code class=&quot;language-text&quot;&gt;TLS(Transport Layer Security)&lt;/code&gt;는 모두 &lt;strong&gt;인증과 암호화를 수행&lt;/strong&gt;하는 프로토콜이다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;TLS&lt;/strong&gt;: SSL을 계승한 프로토콜&lt;/li&gt;
+&lt;li&gt;SSL과 TLS의 작동 과정은 세부적인 차이가 있을 수 있지만 &lt;strong&gt;큰 틀에서는 유사&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5&gt;버전의 발전&lt;/h5&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;버전&lt;/th&gt;
+&lt;th&gt;설명&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;SSL 2.0, 3.0&lt;/td&gt;
+&lt;td&gt;초기 버전 (현재 사용 중단)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;TLS 1.0, 1.1&lt;/td&gt;
+&lt;td&gt;SSL을 계승한 초기 TLS 버전&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;TLS 1.2, 1.3&lt;/td&gt;
+&lt;td&gt;오늘날 주로 사용되는 버전&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;상대적으로 최근에 출시된 &lt;strong&gt;TLS 1.3의 비중&lt;/strong&gt;이 커지고 있다.&lt;/p&gt;
+&lt;h3 id=&quot;https의-동작-과정&quot;&gt;HTTPS의 동작 과정&lt;/h3&gt;
+&lt;h4 id=&quot;4-3-https-메시지-송수신-단계&quot;&gt;4-3 HTTPS 메시지 송수신 단계&lt;/h4&gt;
+&lt;p&gt;TLS 1.3 기반 HTTPS 메시지는 크게 다음과 같은 단계를 거쳐 송수신된다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;txt&quot;&gt;&lt;pre class=&quot;language-txt&quot;&gt;&lt;code class=&quot;language-txt&quot;&gt;1. TCP 쓰리 웨이 핸드셰이크
+2. TLS 핸드셰이크
+3. 메시지 송수신&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;HTTPS 메시지 송수신은 일반적인 HTTP 메시지 송수신에 &lt;strong&gt;TLS 핸드셰이크가 더해진 것&lt;/strong&gt;이다. TLS 핸드셰이크 과정을 거쳐 (서로에 대한 인증과 더불어) 메시지 암호화가 이루어지므로 이후 주고받는 메시지는 &lt;strong&gt;암호화된 메시지&lt;/strong&gt;이다.&lt;/p&gt;
+&lt;h3 id=&quot;tls-핸드셰이크&quot;&gt;TLS 핸드셰이크&lt;/h3&gt;
+&lt;h4 id=&quot;4-4-tls-핸드셰이크-과정&quot;&gt;4-4 TLS 핸드셰이크 과정&lt;/h4&gt;
+&lt;p&gt;TLS 핸드셰이크는 다음과 같은 메시지를 주고받는 과정을 의미한다.
+TLS 핸드셰이크의 핵심 내용은 크게 2가지이다.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;암호화 통신을 위한 키를 생성/교환&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;인증서 송수신과 검증&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&quot;4-5-암호화-키의-생성과-교환&quot;&gt;4-5 암호화 키의 생성과 교환&lt;/h4&gt;
+&lt;h5&gt;암호화 알고리즘과 키&lt;/h5&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;암호화 알고리즘&lt;/code&gt;을 통해 평문을 암호화하거나 암호문을 복호화하려면 &lt;code class=&quot;language-text&quot;&gt;키(Key)&lt;/code&gt;라는 정보가 필요하다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;평문 + 암호화 알고리즘 + 키 = 암호문
+암호문 + 복호화 알고리즘 + 키 = 평문&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;키는 암호화 통신을 수행하는 두 호스트만 알고 있어야 하는 정보&lt;/strong&gt;로, TLS 핸드셰이크 과정에서 &lt;code class=&quot;language-text&quot;&gt;ClientHello&lt;/code&gt; 메시지, &lt;code class=&quot;language-text&quot;&gt;ServerHello&lt;/code&gt; 메시지를 주고받으며 생성/교환된다.&lt;/p&gt;
+&lt;h5&gt;ClientHello 메시지&lt;/h5&gt;
+&lt;p&gt;클라이언트는 &lt;code class=&quot;language-text&quot;&gt;ClientHello&lt;/code&gt; 메시지를 보낸다. 이 메시지는 &lt;strong&gt;암호화된 통신을 위해 서로 맞춰 봐야 할 정보들을 제시&lt;/strong&gt;하는 메시지이다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;ClientHello 메시지 포함 내용&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;지원되는 TLS 버전&lt;/li&gt;
+&lt;li&gt;사용 가능한 암호화 알고리즘과 해시 함수&lt;/li&gt;
+&lt;li&gt;키를 만들기 위해 사용할 클라이언트의 난수&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5&gt;암호 스위트(Cipher Suite)&lt;/h5&gt;
+&lt;p&gt;클라이언트는 &apos;사용 가능한 암호화 알고리즘과 해시 함수&apos;를 서버에 알리기 위해 ClientHello 메시지에 &lt;code class=&quot;language-text&quot;&gt;암호 스위트(Cipher Suite)&lt;/code&gt;를 포함하여 전송한다.&lt;/p&gt;
+&lt;p&gt;한 줄 한 줄이 &lt;strong&gt;암호화 알고리즘과 해시 함수의 종류&lt;/strong&gt;를 나타낸다.&lt;/p&gt;
+&lt;h5&gt;ServerHello 메시지&lt;/h5&gt;
+&lt;p&gt;서버는 &lt;code class=&quot;language-text&quot;&gt;ClientHello&lt;/code&gt; 메시지에 대한 응답으로 &lt;code class=&quot;language-text&quot;&gt;ServerHello&lt;/code&gt; 메시지를 전송한다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;ClientHello&lt;/strong&gt;: 암호화 이전에 맞춰 봐야 할 정보들을 &lt;strong&gt;제시&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;ServerHello&lt;/strong&gt;: 제시된 정보들을 &lt;strong&gt;선택&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;ServerHello 메시지 포함 내용&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;선택된 TLS 버전&lt;/li&gt;
+&lt;li&gt;선택된 암호 스위트&lt;/li&gt;
+&lt;li&gt;키를 만들기 위해 사용할 서버의 난수&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;ClientHello 메시지와 ServerHello 메시지를 주고받으면 암호화된 통신을 위해 &lt;strong&gt;사전 협의해야 할 정보들이 결정&lt;/strong&gt;되고, 결정된 정보를 토대로 서버와 클라이언트가 &lt;strong&gt;암호화에 사용할 키를 만들어&lt;/strong&gt; 암호화에 사용할 수 있다.&lt;/p&gt;
+&lt;h4 id=&quot;4-6-인증서의-송수신과-검증&quot;&gt;4-6 인증서의 송수신과 검증&lt;/h4&gt;
+&lt;h5&gt;인증서(Certificate)란&lt;/h5&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;인증서(Certificate)&lt;/code&gt; 또는 정확하게는 &lt;code class=&quot;language-text&quot;&gt;공개 키 인증서(Public Key Certificate)&lt;/code&gt;는 &lt;strong&gt;당신이 통신을 주고받는 상대방은 틀림없이 당신이 의도한 대상이 맞다&lt;/strong&gt;라는 사실을 입증하기 위한 정보이다.&lt;/p&gt;
+&lt;p&gt;예를 들어 인증서는 &lt;code class=&quot;language-text&quot;&gt;www.hanbit.co.kr&lt;/code&gt;이라는 호스트와 메시지를 주고받을 때, 송수신하는 대상은 틀림없이 &lt;code class=&quot;language-text&quot;&gt;www.hanbit.co.kr&lt;/code&gt;이라고 &lt;strong&gt;보장&lt;/strong&gt;하기 위한 정보이다.&lt;/p&gt;
+&lt;h5&gt;인증 기관(CA)&lt;/h5&gt;
+&lt;p&gt;송수신하는 당사자가 &quot;내가 맞다&quot;는 사실을 보장하면 아무런 의미가 없다. &lt;strong&gt;제3의 기관이 보장&lt;/strong&gt;해야 한다.&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;CA(Certificate Authority)&lt;/code&gt; 또는 &lt;code class=&quot;language-text&quot;&gt;인증 기관&lt;/code&gt;은 인증서의 &lt;strong&gt;발급과 검증, 저장&lt;/strong&gt; 등의 역할을 수행하는 공인 기관이다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;주요 CA&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;DigiCert&lt;/li&gt;
+&lt;li&gt;GlobalSign&lt;/li&gt;
+&lt;li&gt;Let&apos;s Encrypt&lt;/li&gt;
+&lt;li&gt;등&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5&gt;Certificate와 CertificateVerify 메시지&lt;/h5&gt;
+&lt;p&gt;TLS 핸드셰이크에서 인증서 및 인증서 검증과 관련한 메시지는 다음과 같다.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;메시지&lt;/th&gt;
+&lt;th&gt;설명&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Certificate&lt;/td&gt;
+&lt;td&gt;인증서 내용 포함 (인증서 서명 값 등)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;CertificateVerify&lt;/td&gt;
+&lt;td&gt;인증서의 내용이 올바른지 검증하기 위한 메시지&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;서버와 클라이언트는 &lt;strong&gt;암호화에 사용할 키를 획득&lt;/strong&gt;하고, &lt;strong&gt;서로가 틀림없다는 사실까지 인증&lt;/strong&gt;했다.&lt;/p&gt;
+&lt;h4 id=&quot;4-7-finished-메시지와-메시지-송수신&quot;&gt;4-7 Finished 메시지와 메시지 송수신&lt;/h4&gt;
+&lt;p&gt;서버와 클라이언트는 마지막으로 &lt;strong&gt;TLS 핸드셰이크의 마지막&lt;/strong&gt;을 의미하는 &lt;code class=&quot;language-text&quot;&gt;Finished&lt;/code&gt; 메시지를 주고받는다.
+이후부터 서버와 클라이언트는 &lt;strong&gt;암호화된 HTTP 메시지&lt;/strong&gt;를 주고받을 수 있다.&lt;/p&gt;
+&lt;h2 id=&quot;5️-정리&quot;&gt;5️⃣ 정리&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;쿠키&lt;/code&gt;는 HTTP의 &lt;code class=&quot;language-text&quot;&gt;스테이트리스&lt;/code&gt;한 특성을 보완하여 로그인 상태 유지, 사용자 선호 설정 기억 등의 기능을 구현할 수 있게 한다. &lt;code class=&quot;language-text&quot;&gt;Set-Cookie&lt;/code&gt;와 &lt;code class=&quot;language-text&quot;&gt;Cookie&lt;/code&gt; 헤더를 통해 서버와 클라이언트 간 쿠키를 주고받으며, Domain, Path, Expires, Max-Age, Secure, HttpOnly 등의 속성으로 쿠키의 동작을 제어한다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;캐시&lt;/code&gt;는 응답받은 &lt;code class=&quot;language-text&quot;&gt;자원&lt;/code&gt;의 사본을 &lt;code class=&quot;language-text&quot;&gt;임시 저장&lt;/code&gt;하여 불필요한 대역폭 낭비와 응답 지연을 방지한다. &lt;code class=&quot;language-text&quot;&gt;Expires&lt;/code&gt;와 &lt;code class=&quot;language-text&quot;&gt;Cache-Control&lt;/code&gt; 헤더로 캐시의 유효기간을 설정하고, &lt;code class=&quot;language-text&quot;&gt;If-Modified-Since&lt;/code&gt;와 &lt;code class=&quot;language-text&quot;&gt;If-None-Match&lt;/code&gt; 헤더로 캐시의 신선도를 검증하여 효율적인 자원 관리가 가능하다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;콘텐츠 협상은 같은 자원에 대한 여러 표현 중 클라이언트가 가장 적합한 표현을 제공받을 수 있게 한다. Accept, Accept-Language, Accept-Encoding 헤더와 Quality Value를 통해 클라이언트의 선호도를 서버에 전달할 수 있다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;HTTPS&lt;/code&gt;는 &lt;code class=&quot;language-text&quot;&gt;HTTP&lt;/code&gt;에 &lt;code class=&quot;language-text&quot;&gt;SSL/TLS&lt;/code&gt;를 추가하여 안전한 통신을 제공한다. &lt;code class=&quot;language-text&quot;&gt;TLS 핸드셰이크&lt;/code&gt;를 통해 &lt;code class=&quot;language-text&quot;&gt;암호화 키&lt;/code&gt;를 생성/교환하고 &lt;code class=&quot;language-text&quot;&gt;인증서&lt;/code&gt;를 통해 상대방을 검증함으로써, 오늘날 웹의 표준 보안 프로토콜로 자리잡았다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;</content:encoded></item><item><title><![CDATA[[네트워크] HTTP의 기초 - DNS와 HTTP Message, Method, Status (스압 주의) ]]></title><description><![CDATA[책을 읽으면서 배운 점을 정리합니다. 응용 계층의 핵심은 HTTP이다. 개발자가 가장 자주 접하고 다루게 될 프로토콜로, 웹의 근간을 이루는 프로토콜이다. HTTP를 이해하기 위해서는 DNS와 URI/URL에 대한 배경지식이 필요하며, HTTP…]]></description><link>https://inyoung.dev/http-fundamentals/</link><guid isPermaLink="false">https://inyoung.dev/http-fundamentals/</guid><pubDate>Mon, 16 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;혼자 공부하는 네트워크&lt;/code&gt; 책을 읽으면서 배운 점을 정리합니다.&lt;/p&gt;
+&lt;p&gt;응용 계층의 핵심은 HTTP이다. 개발자가 가장 자주 접하고 다루게 될 프로토콜로, 웹의 근간을 이루는 프로토콜이다. HTTP를 이해하기 위해서는 DNS와 URI/URL에 대한 배경지식이 필요하며, HTTP의 특징과 메시지 구조, 메서드와 상태 코드에 대한 이해가 필수적이다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1000px; background: transparent;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/207c8b7097ff2de1790c0289a5f6716c/7c474/index.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 48.800000000000004%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAACE4AAAhOAFFljFgAAABVElEQVR42o1Sy07CUBDlqxVFrImPjQ984CMmuHBliG50wTOQgNCWgrS9hUbFSCQxYsI3HGemSUVSgovJnTtz7pk5cyfWWi8h0rTyjE3F570hi0UFzbUijNUCjJU89Hg+9M1EQXzO/58wWURnpwo7VYc6M+BfteEcNqDSOuyDOnqXLXR3a3NJY7MyuZPn6yeMzRG+rREmaoyPwgsm3hfe73181ocYZF3pPEr+L6EWGEvyLgwMH3y83jgY3LrS5dudCu5ZJXmD5IdzjSI0E0WRK3Oi6vpSDvpyTnyTisg9ng+NJTOWc5GETuoRne0q+tSNn7HgHjVEuko30d6qwD1uwjs34J3q6NMcbcK76cC3Nsp/CU3qjAfNn8FyevSwu1eTD1AnRLhZgU15m2J8cjHG2/s1KWhp5WjJ4brwaoQrQpKSJTlFJmNYquADzMI9nP2ohZgpwh8Xn2VNjiNOowAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+          &lt;source
+              srcset=&quot;/static/207c8b7097ff2de1790c0289a5f6716c/bc904/index.webp 250w,
+/static/207c8b7097ff2de1790c0289a5f6716c/4be29/index.webp 500w,
+/static/207c8b7097ff2de1790c0289a5f6716c/03f31/index.webp 1000w,
+/static/207c8b7097ff2de1790c0289a5f6716c/84f56/index.webp 1329w&quot;
+              sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
+              type=&quot;image/webp&quot;
+            /&gt;
+          &lt;source
+            srcset=&quot;/static/207c8b7097ff2de1790c0289a5f6716c/43fa5/index.png 250w,
+/static/207c8b7097ff2de1790c0289a5f6716c/c6e3d/index.png 500w,
+/static/207c8b7097ff2de1790c0289a5f6716c/da8b6/index.png 1000w,
+/static/207c8b7097ff2de1790c0289a5f6716c/7c474/index.png 1329w&quot;
+            sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
+            type=&quot;image/png&quot;
+          /&gt;
+          &lt;img
+            class=&quot;gatsby-resp-image-image&quot;
+            src=&quot;/static/207c8b7097ff2de1790c0289a5f6716c/da8b6/index.png&quot;
+            alt=&quot;index&quot;
+            title=&quot;&quot;
+            loading=&quot;lazy&quot;
+            decoding=&quot;async&quot;
+            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+          /&gt;
+        &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h2 id=&quot;1️-dns와-uriurl&quot;&gt;1️⃣ DNS와 URI/URL&lt;/h2&gt;
+&lt;h3 id=&quot;도메인-네임과-dns&quot;&gt;도메인 네임과 DNS&lt;/h3&gt;
+&lt;h4 id=&quot;1-1-도메인-네임의-필요성&quot;&gt;1-1 도메인 네임의 필요성&lt;/h4&gt;
+&lt;p&gt;네트워크 상의 호스트를 식별하기 위해 기본적으로 사용되는 정보는 &lt;code class=&quot;language-text&quot;&gt;IP 주소&lt;/code&gt;이다. 하지만 IP 주소만을 사용하기에는 다소 번거롭다. IP 주소로는 특정 호스트의 특징을 나타내기 어렵고, 호스트의 IP 주소는 언제든 바뀔 수 있기 때문이다.&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;도메인 네임(Domain Name)&lt;/code&gt;은 이러한 문제를 해결하기 위한 문자열 형태의 호스트 식별 정보로, 호스트의 IP 주소와 대응된다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;txt&quot;&gt;&lt;pre class=&quot;language-txt&quot;&gt;&lt;code class=&quot;language-txt&quot;&gt;이런 것들이 다 도메인 네임이다.
+www.example.com
+developers.naver.com
+git.kernel.org&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;도메인 네임은 IP 주소에 비해 &lt;strong&gt;기억이 쉽다&lt;/strong&gt;. 또한 IP 주소가 바뀌더라도 바뀐 IP 주소에 도메인 네임을 다시 대응하면 되므로 IP 주소만으로 호스트를 특정하는 것보다 더 간편하다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;💡 &lt;strong&gt;도메인 네임의 리졸빙(Resolving)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;도메인 네임과 그에 대응하는 IP 주소는 &lt;code class=&quot;language-text&quot;&gt;네임 서버(Name Server)&lt;/code&gt; 또는 &lt;code class=&quot;language-text&quot;&gt;DNS 서버&lt;/code&gt;에서 관리된다. IP 주소를 모르는 상태에서 도메인 네임에 대응되는 IP 주소를 알아내는 과정을 &lt;strong&gt;리졸빙(Resolving)&lt;/strong&gt; 한다고 표현한다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre class=&quot;language-java&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// 도메인 네임 리졸빙 개념&lt;/span&gt;
+&lt;span class=&quot;token class-name&quot;&gt;String&lt;/span&gt; domainName &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;www.example.com&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token class-name&quot;&gt;InetAddress&lt;/span&gt; ipAddress &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;InetAddress&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;getByName&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;domainName&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;// DNS 서버에 질의하여 IP 주소 획득&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&quot;1-2-도메인-네임의-계층-구조&quot;&gt;1-2 도메인 네임의 계층 구조&lt;/h4&gt;
+&lt;p&gt;하나의 도메인 네임은 점(.)을 기준으로 &lt;strong&gt;계층적으로 분류&lt;/strong&gt;되어 있다.&lt;/p&gt;
+&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;background: transparent;&quot;&gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 361px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/9448e03dc20e616e8c1b2ab752de0b0b/d0bd4/dns-hierarchy.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 50%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAIAAAA7N+mxAAAACXBIWXMAAAsTAAALEwEAmpwYAAABGUlEQVR42mWR2W6FMAxE+f+PQ4IHQCCB2PetLaVQlh7FcFXaebCcxDMeO5rv+7quG4ZhmmaWZdM0jeP4/sTHjbcntG3b9n0nHscBzbZt+PM8E79uiBw32xPaeQMyz5Zl0aFt277vkfhUCMMQU3VdU3P+wkUWAs+YaZqm6zqYy7LA/L4hR7nHzkVe19XzvKIooMEn0gqreZ5HUYRh2pLHccw9saoqIi40NHhAEhryOC/LkiNeOMo6ZgUaSkKN+NfI6EkF8lRjmJ2R8wuMPSngiyPdgiAgd133Ip//MAwDXuDTiv60Ei12yRQy4LWwQ0G2TaQUJiMgwUT4R4IcpuM4SZIw8N9tv8hsO1EgwTDbQo5WaZqywleZkH8ALHc3PZgpoboAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+          &lt;source
+              srcset=&quot;/static/9448e03dc20e616e8c1b2ab752de0b0b/bc904/dns-hierarchy.webp 250w,
+/static/9448e03dc20e616e8c1b2ab752de0b0b/94667/dns-hierarchy.webp 361w&quot;
+              sizes=&quot;(max-width: 361px) 100vw, 361px&quot;
+              type=&quot;image/webp&quot;
+            /&gt;
+          &lt;source
+            srcset=&quot;/static/9448e03dc20e616e8c1b2ab752de0b0b/43fa5/dns-hierarchy.png 250w,
+/static/9448e03dc20e616e8c1b2ab752de0b0b/d0bd4/dns-hierarchy.png 361w&quot;
+            sizes=&quot;(max-width: 361px) 100vw, 361px&quot;
+            type=&quot;image/png&quot;
+          /&gt;
+          &lt;img
+            class=&quot;gatsby-resp-image-image&quot;
+            src=&quot;/static/9448e03dc20e616e8c1b2ab752de0b0b/d0bd4/dns-hierarchy.png&quot;
+            alt=&quot;도메인 계층 구조&quot;
+            title=&quot;&quot;
+            loading=&quot;lazy&quot;
+            decoding=&quot;async&quot;
+            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+          /&gt;
+        &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;도메인 계층 구조&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;계층&lt;/th&gt;
+&lt;th&gt;명칭&lt;/th&gt;
+&lt;th&gt;예시&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;루트 도메인&lt;/td&gt;
+&lt;td&gt;Root Domain&lt;/td&gt;
+&lt;td&gt;&lt;code class=&quot;language-text&quot;&gt;.&lt;/code&gt; (생략 가능)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;최상위 도메인&lt;/td&gt;
+&lt;td&gt;TLD (Top-Level Domain)&lt;/td&gt;
+&lt;td&gt;com, net, org, kr, jp&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2단계 도메인&lt;/td&gt;
+&lt;td&gt;Second-Level Domain&lt;/td&gt;
+&lt;td&gt;example&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;3단계 도메인&lt;/td&gt;
+&lt;td&gt;Third-Level Domain&lt;/td&gt;
+&lt;td&gt;www, mail, developer&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;FQDN(Fully Qualified Domain Name)&lt;/code&gt;은 도메인 네임을 모두 포함하는 전체 주소 도메인 네임을 의미하며, 이를 통해 호스트를 식별할 수 있다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;💡 &lt;strong&gt;서브 도메인(Subdomain)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;다른 도메인이 포함된 도메인을 서브 도메인이라고 부른다. 예를 들어 다음은 모두 &lt;code class=&quot;language-text&quot;&gt;example.com&lt;/code&gt;의 서브 도메인이다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;mail.example.com&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;www.example.com&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;developer.example.com&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&quot;1-3-dns의-계층-구조&quot;&gt;1-3 DNS의 계층 구조&lt;/h4&gt;
+&lt;p&gt;계층적 형태로 이뤄진 도메인 네임을 관리하는 네임 서버 또한 계층적 형태를 이룬다. 네임 서버는 여러 개가 존재하며 전 세계 여러 곳에 분산되어 있다. 이렇게 계층적으로 분산되어 있는 도메인 네임에 대한 관리 체계를 &lt;code class=&quot;language-text&quot;&gt;DNS(Domain Name System)&lt;/code&gt;라고 부른다.&lt;/p&gt;
+&lt;h5&gt;DNS 리졸빙 과정&lt;/h5&gt;
+&lt;p&gt;호스트가 &lt;code class=&quot;language-text&quot;&gt;minchul.net&lt;/code&gt;이라는 도메인 네임을 통해 IP 주소를 알아내고자 하는 경우를 가정해보자.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1. 로컬 네임 서버에 질의&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;로컬 네임 서버(Local Name Server)&lt;/code&gt;는 클라이언트와 맞닿아 있는 네임 서버&lt;/li&gt;
+&lt;li&gt;클라이언트가 도메인 네임을 통해 IP 주소를 알아내고자 할 때 가장 먼저 찾는 서버&lt;/li&gt;
+&lt;li&gt;ISP가 자동으로 할당하거나 공개 DNS 서버(구글의 &lt;code class=&quot;language-text&quot;&gt;8.8.8.8&lt;/code&gt;, 클라우드플레어의 &lt;code class=&quot;language-text&quot;&gt;1.1.1.1&lt;/code&gt;) 사용&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;2. 계층적 질의&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;로컬 네임 서버가 IP 주소를 알고 있다면 즉시 반환&lt;/li&gt;
+&lt;li&gt;모른다면 &lt;code class=&quot;language-text&quot;&gt;루트 네임 서버&lt;/code&gt; → &lt;code class=&quot;language-text&quot;&gt;TLD 네임 서버&lt;/code&gt; → 하위 네임 서버 순으로 질의&lt;/li&gt;
+&lt;li&gt;최종적으로 IP 주소를 찾아 클라이언트에게 전달&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;클라이언트
+    ↓ ① 도메인 질의
+로컬 네임 서버
+    ↓ ② 루트 네임 서버 질의
+루트 네임 서버
+    ↓ ③ TLD 네임 서버 정보 응답
+로컬 네임 서버
+    ↓ ④ TLD 네임 서버 질의
+TLD 네임 서버
+    ↓ ⑤ 권한 네임 서버 정보 응답
+로컬 네임 서버
+    ↓ ⑥ 권한 네임 서버 질의
+권한 네임 서버
+    ↓ ⑦ IP 주소 응답
+로컬 네임 서버
+    ↓ ⑧ IP 주소 전달
+클라이언트&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;💡 &lt;strong&gt;DNS 캐시(DNS Cache)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;질의 과정이 반복되면 네트워크 트래픽이 증가하고 리졸빙에 오랜 시간이 걸린다. 따라서 실제로는 네임 서버들이 기존에 응답받은 결과를 임시로 저장했다가 추후 같은 질의에 활용한다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;DNS 캐시&lt;/strong&gt;: 이전 질의 결과를 임시 저장&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;TTL(Time To Live)&lt;/strong&gt;: 캐시될 수 있는 시간 (IP 헤더의 TTL과는 무관)&lt;/li&gt;
+&lt;li&gt;자주 접속하는 웹사이트는 대부분 로컬 네임 서버 선에서 캐시되어 있음&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&quot;1-4-dns-레코드-타입&quot;&gt;1-4 DNS 레코드 타입&lt;/h4&gt;
+&lt;p&gt;도메인 네임을 IP 주소에 대응하기 위해서는 네임 서버에 &lt;code class=&quot;language-text&quot;&gt;DNS 자원 레코드(DNS Resource Record)&lt;/code&gt; 또는 &lt;code class=&quot;language-text&quot;&gt;DNS 레코드&lt;/code&gt;를 추가해야 한다.&lt;/p&gt;
+&lt;h5&gt;DNS 레코드의 구성&lt;/h5&gt;
+&lt;p&gt;모든 DNS 레코드는 기본적으로 다음 정보를 포함한다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;이름(Record Name)&lt;/strong&gt;: 도메인 네임&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;값(Value)&lt;/strong&gt;: 이름에 대응하는 값&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;레코드 타입(Record Type)&lt;/strong&gt;: &amp;#x3C;이름, 값&gt; 쌍의 유형&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;TTL&lt;/strong&gt;: 레코드가 캐시될 수 있는 시간&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5&gt;주요 레코드 타입&lt;/h5&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;레코드 유형&lt;/th&gt;
+&lt;th&gt;설명&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;A&lt;/td&gt;
+&lt;td&gt;도메인 네임과 IPv4 주소의 대응 관계&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;AAAA&lt;/td&gt;
+&lt;td&gt;도메인 네임과 IPv6 주소의 대응 관계&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;CNAME&lt;/td&gt;
+&lt;td&gt;호스트 네임에 대한 별칭 지정&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;NS&lt;/td&gt;
+&lt;td&gt;특정 호스트의 IP 주소를 찾을 수 있는 네임 서버&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;MX&lt;/td&gt;
+&lt;td&gt;해당 도메인과 연동되어 있는 메일 서버&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;레코드 예시&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;레코드 유형&lt;/th&gt;
+&lt;th&gt;이름&lt;/th&gt;
+&lt;th&gt;값&lt;/th&gt;
+&lt;th&gt;TTL&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;A&lt;/td&gt;
+&lt;td&gt;example.com.&lt;/td&gt;
+&lt;td&gt;1.2.3.4&lt;/td&gt;
+&lt;td&gt;300&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;CNAME&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;http://www.example.com&quot;&gt;www.example.com&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;example.com.&lt;/td&gt;
+&lt;td&gt;300&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;첫 번째 레코드는 &lt;code class=&quot;language-text&quot;&gt;example.com.&lt;/code&gt;이 &lt;code class=&quot;language-text&quot;&gt;1.2.3.4&lt;/code&gt;에 대응됨을 의미한다. 두 번째 레코드는 &lt;code class=&quot;language-text&quot;&gt;www.example.com.&lt;/code&gt;을 &lt;code class=&quot;language-text&quot;&gt;example.com.&lt;/code&gt;의 별칭으로 사용하므로, &lt;code class=&quot;language-text&quot;&gt;www.example.com.&lt;/code&gt;을 질의하면 &lt;code class=&quot;language-text&quot;&gt;1.2.3.4&lt;/code&gt;를 응답받게 된다.&lt;/p&gt;
+&lt;h3 id=&quot;자원과-uriurl&quot;&gt;자원과 URI/URL&lt;/h3&gt;
+&lt;h4 id=&quot;1-5-자원의-개념&quot;&gt;1-5 자원의 개념&lt;/h4&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;자원(Resource)&lt;/code&gt;이란 네트워크 상의 메시지를 통해 주고받는 최종 대상을 의미한다. HTML 파일, 이미지, 동영상 파일, 텍스트 파일 등이 모두 자원이 될 수 있다. 두 호스트가 네트워크를 통해 서로 정보를 주고받을 때 송수신하는 대상이 바로 자원이다.&lt;/p&gt;
+&lt;h4 id=&quot;1-6-uri와-url&quot;&gt;1-6 URI와 URL&lt;/h4&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;URI(Uniform Resource Identifier)&lt;/code&gt;는 웹 상에서의 자원을 식별하기 위한 정보를 의미한다. 자원을 &lt;strong&gt;통일된 방식(Uniform)&lt;/strong&gt; 으로 &lt;strong&gt;식별(Identifier)&lt;/strong&gt; 하는 것이 URI이다.&lt;/p&gt;
+&lt;p&gt;자원을 식별할 때는 &lt;strong&gt;이름&lt;/strong&gt;을 기반으로 식별하기도 하고, &lt;strong&gt;위치&lt;/strong&gt;를 기반으로 식별하기도 한다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;URN(Uniform Resource Name)&lt;/strong&gt;: 이름으로 자원을 식별&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;URL(Uniform Resource Locator)&lt;/strong&gt;: 위치로 자원을 식별&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;오늘날 인터넷 환경에서는 &lt;strong&gt;위치 기반의 식별자인 URL&lt;/strong&gt;이 더 많이 사용된다.&lt;/p&gt;
+&lt;h4 id=&quot;1-7-url의-구조&quot;&gt;1-7 URL의 구조&lt;/h4&gt;
+&lt;p&gt;일반적인 URL의 구조는 다음과 같다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;http://www.example.com:8042/over/there?name=ferret#nose
+└─┬─┘ └──────┬──────┘└─┬─┘└────┬────┘└────┬────┘└─┬─┘
+scheme    authority   port   path      query    fragment&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h5&gt;① scheme&lt;/h5&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;scheme&lt;/code&gt;는 자원에 접근하는 방법을 나타낸다. 일반적으로 &lt;strong&gt;사용할 프로토콜&lt;/strong&gt;이 명시된다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;http://   → HTTP 프로토콜 사용
+https://  → HTTPS 프로토콜 사용&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h5&gt;② authority&lt;/h5&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;authority&lt;/code&gt;에는 호스트를 특정할 수 있는 &lt;strong&gt;IP 주소나 도메인 네임&lt;/strong&gt;이 명시된다. 콜론(&lt;code class=&quot;language-text&quot;&gt;:&lt;/code&gt;) 뒤에 포트 번호를 명시할 수도 있다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;www.example.com:8042&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h5&gt;③ path&lt;/h5&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;path&lt;/code&gt;에는 자원이 위치하고 있는 &lt;strong&gt;경로&lt;/strong&gt;가 명시된다. 슬래시(&lt;code class=&quot;language-text&quot;&gt;/&lt;/code&gt;)를 기준으로 계층적으로 표현된다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;http://example.com/home/images/a.png
+                   └─────┬─────────┘
+                       path&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h5&gt;④ query&lt;/h5&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;query&lt;/code&gt;는 URL에 대한 &lt;strong&gt;매개변수&lt;/strong&gt; 역할을 하는 문자열이다. &lt;code class=&quot;language-text&quot;&gt;쿼리 문자열(Query String)&lt;/code&gt; 또는 &lt;code class=&quot;language-text&quot;&gt;쿼리 파라미터(Query Parameter)&lt;/code&gt;라고도 부른다.&lt;/p&gt;
+&lt;p&gt;쿼리 문자열은 &lt;strong&gt;물음표(&lt;code class=&quot;language-text&quot;&gt;?&lt;/code&gt;)로 시작&lt;/strong&gt;되는 &lt;code class=&quot;language-text&quot;&gt;&amp;lt;키=값&gt;&lt;/code&gt; 형태의 데이터로, **앰퍼샌드(&lt;code class=&quot;language-text&quot;&gt;&amp;amp;&lt;/code&gt;)**를 사용하여 여러 쿼리 문자열을 연결할 수 있다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;쿼리 문자열 예시 1: 부동산 검색&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;http://example.com/search?location=seoul&amp;amp;rooms=2&amp;amp;size=100&amp;amp;min_price=200000
+
+지역: seoul
+침실 수: 2개
+면적: 100
+최소 가격: 200000&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;쿼리 문자열 예시 2: 상품 검색&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;http://example.com/search?category=books&amp;amp;brand=hanbit&amp;amp;discounted=true&amp;amp;sorted=price_desc
+
+카테고리: 도서
+브랜드: 한빛
+할인: 진행 중
+정렬: 가격별 내림차순&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h5&gt;⑤ fragment&lt;/h5&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;fragment&lt;/code&gt;는 자원의 일부분, 자원의 한 조각을 가리키기 위한 정보이다. 일반적으로 HTML 파일에서 &lt;strong&gt;특정 부분을 가리키는 데&lt;/strong&gt; 사용된다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre class=&quot;language-java&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// URL 비교&lt;/span&gt;
+&lt;span class=&quot;token class-name&quot;&gt;String&lt;/span&gt; url1 &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;https://datatracker.ietf.org/doc/html/rfc3986&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;// → HTML 파일의 첫 부분으로 이동&lt;/span&gt;
+
+&lt;span class=&quot;token class-name&quot;&gt;String&lt;/span&gt; url2 &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;https://datatracker.ietf.org/doc/html/rfc3986#section-1.1.2&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;// → HTML 파일의 특정 섹션(section-1.1.2)으로 이동&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;💡 &lt;strong&gt;URN의 특징&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;URN&lt;/code&gt;은 자원에 고유한 이름을 붙이는 이름 기반의 식별자이다. &lt;strong&gt;자원의 위치와 무관&lt;/strong&gt;하게 자원을 식별할 수 있다는 장점이 있다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;urn:isbn:0451450523&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;위는 ISBN이 &lt;code class=&quot;language-text&quot;&gt;0451450523&lt;/code&gt;인 도서를 나타내는 URN이다. 위치나 프로토콜과 무관하게 자원을 식별할 수 있다. 다만 URN은 아직 URL만큼 널리 채택된 방식은 아니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;2️-http의-특징과-메시지-구조&quot;&gt;2️⃣ HTTP의 특징과 메시지 구조&lt;/h2&gt;
+&lt;h3 id=&quot;http의-목적과-특징&quot;&gt;HTTP의 목적과 특징&lt;/h3&gt;
+&lt;p&gt;HTTP의 목적은 애플리케이션의 다양한 자원을 네트워크를 통해 송수신하는 것이다. &lt;strong&gt;데이터의 형식에 구애받지 않고&lt;/strong&gt; 다양한 애플리케이션 데이터의 송수신을 가능하게 하는 것이 HTTP의 주된 목적이다.&lt;/p&gt;
+&lt;h4 id=&quot;2-1-http의-4가지-특징&quot;&gt;2-1 HTTP의 4가지 특징&lt;/h4&gt;
+&lt;p&gt;HTTP에는 주요한 특징 4가지가 있으며, 이는 프로그래밍에 큰 영향을 끼친다.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;특징&lt;/th&gt;
+&lt;th&gt;설명&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;요청-응답 기반 프로토콜&lt;/td&gt;
+&lt;td&gt;요청 메시지와 응답 메시지를 주고받는 구조&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;미디어 독립적 프로토콜&lt;/td&gt;
+&lt;td&gt;다양한 종류의 자원을 주고받을 수 있음&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;스테이트리스 프로토콜&lt;/td&gt;
+&lt;td&gt;상태를 유지하지 않음&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;지속 연결 프로토콜&lt;/td&gt;
+&lt;td&gt;하나의 TCP 연결로 여러 요청-응답 처리 가능&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h5&gt;요청-응답 기반 프로토콜&lt;/h5&gt;
+&lt;p&gt;HTTP는 기본적으로 요청 메시지를 보내는 &lt;strong&gt;클라이언트&lt;/strong&gt;와 이에 대한 응답 메시지를 보내는 &lt;strong&gt;서버&lt;/strong&gt;가 서로 HTTP 요청 메시지와 HTTP 응답 메시지를 주고받는 구조로 작동한다.&lt;/p&gt;
+&lt;h5&gt;미디어 독립적 프로토콜&lt;/h5&gt;
+&lt;p&gt;HTTP 메시지를 통해 HTML, JPEG, PNG, JSON, XML, PDF 등 &lt;strong&gt;다양한 종류의 자원&lt;/strong&gt;을 주고받을 수 있다. HTTP는 주고받을 자원의 특성과 무관하게 자원을 주고받는 수단의 역할만 수행한다.&lt;/p&gt;
+&lt;p&gt;HTTP에서 메시지로 주고받는 자원의 종류를 &lt;code class=&quot;language-text&quot;&gt;미디어 타입(Media Type)&lt;/code&gt; 또는 &lt;code class=&quot;language-text&quot;&gt;MIME 타입(Multipurpose Internet Mail Extensions Type)&lt;/code&gt;이라고 부른다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;미디어 타입 구조&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;미디어 타입은 슬래시를 기준으로 하는 &lt;code class=&quot;language-text&quot;&gt;타입/서브타입(type/subtype)&lt;/code&gt; 형식으로 구성된다.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;타입&lt;/th&gt;
+&lt;th&gt;설명&lt;/th&gt;
+&lt;th&gt;서브타입 예시&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;text&lt;/td&gt;
+&lt;td&gt;텍스트 형식 데이터&lt;/td&gt;
+&lt;td&gt;plain, html, css, javascript&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;image&lt;/td&gt;
+&lt;td&gt;이미지 형식 데이터&lt;/td&gt;
+&lt;td&gt;png, jpeg, webp, gif&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;video&lt;/td&gt;
+&lt;td&gt;비디오 형식 데이터&lt;/td&gt;
+&lt;td&gt;mp4, ogg, webm&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;audio&lt;/td&gt;
+&lt;td&gt;오디오 형식 데이터&lt;/td&gt;
+&lt;td&gt;midi, wav&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;application&lt;/td&gt;
+&lt;td&gt;바이너리 형식 데이터&lt;/td&gt;
+&lt;td&gt;octet-stream, pdf, xml, json, x-www-form-urlencoded&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;multipart&lt;/td&gt;
+&lt;td&gt;여러 요소로 구성된 데이터&lt;/td&gt;
+&lt;td&gt;form-data, encrypted&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;blockquote&gt;
+&lt;p&gt;💡 &lt;strong&gt;미디어 타입의 추가 표기&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;별표(&lt;code class=&quot;language-text&quot;&gt;*&lt;/code&gt;)&lt;/strong&gt;: 여러 미디어 타입을 통칭 (&lt;code class=&quot;language-text&quot;&gt;text/*&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;*/*&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;매개변수&lt;/strong&gt;: 부가 설명 추가 가능 (&lt;code class=&quot;language-text&quot;&gt;text/html;charset=UTF-8&lt;/code&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h5&gt;스테이트리스 프로토콜&lt;/h5&gt;
+&lt;p&gt;HTTP는 &lt;strong&gt;상태를 유지하지 않는&lt;/strong&gt; &lt;code class=&quot;language-text&quot;&gt;스테이트리스(Stateless)&lt;/code&gt; 프로토콜이다. 서버는 HTTP 요청을 보낸 클라이언트 관련 상태를 기억하지 않는다. 클라이언트의 모든 HTTP 요청은 기본적으로 &lt;strong&gt;독립적인 요청&lt;/strong&gt;으로 간주된다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;1. Introduction
+1.1. Purpose
+The Hypertext Transfer Protocol (HTTP) is a family of stateless,
+application-level, request/response protocols...&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;스테이트리스의 이유와 장점&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;HTTP 서버는 많은 클라이언트와 동시에 상호작용한다. 모든 클라이언트의 상태 정보를 유지하는 것은 서버에 큰 부담이 된다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;확장성(Scalability)&lt;/strong&gt;: 서버의 추가나 대체가 쉬움&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;견고성(Robustness)&lt;/strong&gt;: 서버 하나에 문제가 생기더라도 다른 서버로 쉽게 대체 가능&lt;/li&gt;
+&lt;li&gt;특정 클라이언트가 특정 서버에 종속되지 않음&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5&gt;지속 연결 프로토콜&lt;/h5&gt;
+&lt;p&gt;오늘날 많이 사용되는 HTTP 버전(HTTP 1.1 이상)에서는 &lt;code class=&quot;language-text&quot;&gt;지속 연결(Persistent Connection)&lt;/code&gt; 또는 &lt;code class=&quot;language-text&quot;&gt;킵 얼라이브(Keep-Alive)&lt;/code&gt; 기술을 제공한다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;비지속 연결(HTTP 1.0 이하)&lt;/strong&gt;: 요청-응답마다 TCP 연결 수립 및 종료 반복&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;지속 연결(HTTP 1.1 이상)&lt;/strong&gt;: 하나의 TCP 연결 상에서 여러 요청-응답 처리&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;background: transparent;&quot;&gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 742px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/5eff72a8a19eec5ccae538a3ae155975/14945/keep-alive.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 28.4%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAGCAIAAABM9SnKAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA8ElEQVR42k2QXW6FIBCF3f8a+txN9LndQZ/aVCuot3hhdPhRwIFyJTWdTCYnZ+YLJzQ5ZwA13m4/YubjqACKk86q4nGgYJimeZ57xu5SXn7D+eCMDnAPIOMKCPDVtlJK733btkKI4Ky31mv0++YNBmd2oxljnPHmoEQOSfRJTSSnFEPBYghEFGOglI5VkjNUpt8IJVksHY7D774pr/v93QxP3fdz138cIZ+pcoFzLp03/XIE5sUrmk6YN72UlFhvHnDOcV1Gxj9XxPxXJ1yFSyniMvOBaQtEqYStqwpnrc0CuLntguuXXBpRKwXObv/9X895WMPAqtdhAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+          &lt;source
+              srcset=&quot;/static/5eff72a8a19eec5ccae538a3ae155975/bc904/keep-alive.webp 250w,
+/static/5eff72a8a19eec5ccae538a3ae155975/4be29/keep-alive.webp 500w,
+/static/5eff72a8a19eec5ccae538a3ae155975/e40a6/keep-alive.webp 742w&quot;
+              sizes=&quot;(max-width: 742px) 100vw, 742px&quot;
+              type=&quot;image/webp&quot;
+            /&gt;
+          &lt;source
+            srcset=&quot;/static/5eff72a8a19eec5ccae538a3ae155975/43fa5/keep-alive.png 250w,
+/static/5eff72a8a19eec5ccae538a3ae155975/c6e3d/keep-alive.png 500w,
+/static/5eff72a8a19eec5ccae538a3ae155975/14945/keep-alive.png 742w&quot;
+            sizes=&quot;(max-width: 742px) 100vw, 742px&quot;
+            type=&quot;image/png&quot;
+          /&gt;
+          &lt;img
+            class=&quot;gatsby-resp-image-image&quot;
+            src=&quot;/static/5eff72a8a19eec5ccae538a3ae155975/14945/keep-alive.png&quot;
+            alt=&quot;keep-alive OFF/ON&quot;
+            title=&quot;&quot;
+            loading=&quot;lazy&quot;
+            decoding=&quot;async&quot;
+            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+          /&gt;
+        &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;keep-alive OFF/ON&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;💡 &lt;strong&gt;HTTP 버전별 특징&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;HTTP 1.1&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;지속 연결 기능&lt;/code&gt; 공식 지원&lt;/li&gt;
+&lt;li&gt;평문으로 메시지 송수신&lt;/li&gt;
+&lt;li&gt;콘텐츠 협상 기능 추가&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;HTTP 2.0&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;바이너리 데이터 기반 송수신&lt;/li&gt;
+&lt;li&gt;헤더 압축으로 네트워크 효율 향상&lt;/li&gt;
+&lt;li&gt;서버 푸시(Server Push): 미래에 필요할 자원을 미리 전송&lt;/li&gt;
+&lt;li&gt;HTTP &lt;code class=&quot;language-text&quot;&gt;멀티플렉싱&lt;/code&gt;: 여러 독립적인 스트림으로 요청-응답 병렬 처리&lt;/li&gt;
+&lt;li&gt;HOL 블로킹(Head-Of-Line blocking) 문제 완화&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;HTTP 3.0&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;UDP&lt;/code&gt; 기반의 QUIC(Quick UDP Internet Connections) 프로토콜 사용&lt;/li&gt;
+&lt;li&gt;송수신 속도 개선&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;http-메시지-구조&quot;&gt;HTTP 메시지 구조&lt;/h3&gt;
+&lt;h4 id=&quot;2-2-http-메시지의-기본-구조&quot;&gt;2-2 HTTP 메시지의 기본 구조&lt;/h4&gt;
+&lt;p&gt;HTTP 메시지는 &lt;strong&gt;시작 라인&lt;/strong&gt;, &lt;strong&gt;필드 라인&lt;/strong&gt;, &lt;strong&gt;메시지 본문&lt;/strong&gt;으로 이루어져 있다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;txt&quot;&gt;&lt;pre class=&quot;language-txt&quot;&gt;&lt;code class=&quot;language-txt&quot;&gt;시작 라인 (줄바꿈)
+필드 라인* (줄바꿈)
+(줄바꿈)
+메시지 본문**
+
+* 0개 이상
+** 선택적&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;HTTP는 요청-응답 기반의 프로토콜로, 시작 라인으로 메시지가 &lt;strong&gt;요청 메시지&lt;/strong&gt;인지 &lt;strong&gt;응답 메시지&lt;/strong&gt;인지를 구분할 수 있다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;HTTP 요청 메시지&lt;/strong&gt;: 시작 라인 = 요청 라인&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;HTTP 응답 메시지&lt;/strong&gt;: 시작 라인 = 상태 라인&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;2-3-요청-라인과-상태-라인&quot;&gt;2-3 요청 라인과 상태 라인&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;요청 라인 구조&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;메서드 (공백) 요청 대상 (공백) HTTP 버전 (줄바꿈)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;필드&lt;/th&gt;
+&lt;th&gt;설명&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;메서드&lt;/td&gt;
+&lt;td&gt;클라이언트가 서버의 자원에 대해 수행할 작업의 종류&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;요청 대상&lt;/td&gt;
+&lt;td&gt;요청을 보낼 서버의 자원 (일반적으로 URL의 path)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;HTTP 버전&lt;/td&gt;
+&lt;td&gt;사용된 HTTP 버전 (예: HTTP/1.1)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;상태 라인 구조&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;HTTP 버전 (공백) 상태 코드 (공백) 이유 구문 (줄바꿈)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;필드&lt;/th&gt;
+&lt;th&gt;설명&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;HTTP 버전&lt;/td&gt;
+&lt;td&gt;사용된 HTTP 버전&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;상태 코드&lt;/td&gt;
+&lt;td&gt;요청에 대한 결과를 나타내는 3자리 정수&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;이유 구문&lt;/td&gt;
+&lt;td&gt;상태 코드에 대한 문자열 형태의 설명&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;상태 라인 예시&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;txt&quot;&gt;&lt;pre class=&quot;language-txt&quot;&gt;&lt;code class=&quot;language-txt&quot;&gt;HTTP/1.1 200 OK
+HTTP/1.1 404 Not Found&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h4 id=&quot;2-4-http-헤더&quot;&gt;2-4 HTTP 헤더&lt;/h4&gt;
+&lt;p&gt;HTTP 메시지의 필드 라인에는 &lt;code class=&quot;language-text&quot;&gt;HTTP 헤더(HTTP Header)&lt;/code&gt;가 명시된다. HTTP 헤더는 &lt;strong&gt;HTTP 메시지 전송과 관련한 부가 정보이자 제어 정보&lt;/strong&gt;이다.&lt;/p&gt;
+&lt;p&gt;HTTP 헤더는 콜론(&lt;code class=&quot;language-text&quot;&gt;:&lt;/code&gt;)을 기준으로 &lt;strong&gt;헤더 이름&lt;/strong&gt;과 &lt;strong&gt;헤더 값&lt;/strong&gt;으로 구성된다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;txt&quot;&gt;&lt;pre class=&quot;language-txt&quot;&gt;&lt;code class=&quot;language-txt&quot;&gt;HTTP/1.1 200 OK // 시작 라인 (상태 라인)
+Content-Type: text/html // 필드 라인 , name: value 형태
+Content-Length: 648
+
+&amp;lt;!DOCTYPE html&gt;
+&amp;lt;html태&gt;
+...
+&amp;lt;/html태&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;HTTP 메시지는 웹 브라우저의 &lt;strong&gt;개발자 도구&lt;/strong&gt;에서 쉽게 조회할 수 있다. 크롬 브라우저의 경우 &lt;strong&gt;[개발자 도구] → [네트워크]&lt;/strong&gt; 탭에서 확인할 수 있다.&lt;/p&gt;
+&lt;h2 id=&quot;3️-http-메서드와-상태-코드&quot;&gt;3️⃣ HTTP 메서드와 상태 코드&lt;/h2&gt;
+&lt;h3 id=&quot;http-메서드&quot;&gt;HTTP 메서드&lt;/h3&gt;
+&lt;h4 id=&quot;3-1-주요-http-메서드&quot;&gt;3-1 주요 HTTP 메서드&lt;/h4&gt;
+&lt;p&gt;HTTP 메서드 중 자주 사용되는 중요 메서드는 &lt;strong&gt;GET, HEAD, POST, PUT, PATCH, DELETE&lt;/strong&gt;이다.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;HTTP 메서드&lt;/th&gt;
+&lt;th&gt;설명&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;GET&lt;/td&gt;
+&lt;td&gt;자원을 조회하기 위한 메서드&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;HEAD&lt;/td&gt;
+&lt;td&gt;GET과 동일하나 헤더만을 응답받는 메서드&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;POST&lt;/td&gt;
+&lt;td&gt;서버로 하여금 특정 작업을 처리하게끔 하는 메서드&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;PUT&lt;/td&gt;
+&lt;td&gt;자원을 대체하기 위한 메서드 (덮어쓰기)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;PATCH&lt;/td&gt;
+&lt;td&gt;자원에 대한 부분적 수정을 위한 메서드&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;DELETE&lt;/td&gt;
+&lt;td&gt;자원을 삭제하기 위한 메서드&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;CONNECT&lt;/td&gt;
+&lt;td&gt;자원에 대한 양방향 연결을 시작하는 메서드&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;OPTIONS&lt;/td&gt;
+&lt;td&gt;사용 가능한 메서드 등 통신 옵션을 확인하는 메서드&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;TRACE&lt;/td&gt;
+&lt;td&gt;자원에 대한 루프백 테스트를 수행하는 메서드&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4 id=&quot;3-2-get과-head&quot;&gt;3-2 GET과 HEAD&lt;/h4&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;GET&lt;/code&gt;은 가장 흔히 사용되는 메서드로, &lt;strong&gt;자원을 조회&lt;/strong&gt;하는 용도의 메서드이다. 웹 브라우저를 통해 웹사이트의 자원을 조회하는 것은 모두 해당 웹사이트에 GET 요청을 보내는 것과 같다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;GET 요청 메시지 예시&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;txt&quot;&gt;&lt;pre class=&quot;language-txt&quot;&gt;&lt;code class=&quot;language-txt&quot;&gt;GET /example-page HTTP/1.1
+Host: www.example.com
+Accept: */*&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;GET 응답 메시지 예시&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;txt&quot;&gt;&lt;pre class=&quot;language-txt&quot;&gt;&lt;code class=&quot;language-txt&quot;&gt;HTTP/1.1 200 OK
+Content-Type: text/html
+Content-Length: 648
+
+&amp;lt;!DOCTYPE html&gt;
+&amp;lt;html&gt;
+&amp;lt;head&gt;
+    &amp;lt;title&gt;Example Page&amp;lt;/title&gt;
+&amp;lt;/head&gt;
+&amp;lt;body&gt;
+    &amp;lt;h1&gt;Hello, World!&amp;lt;/h1&gt;
+&amp;lt;/body&gt;
+&amp;lt;/html&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;HEAD&lt;/code&gt; 메서드는 응답 메시지에 &lt;strong&gt;메시지 본문이 포함되지 않는다&lt;/strong&gt;는 점을 제외하면 GET 메서드와 동일하다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;HEAD /example-page HTTP/1.1
+Host: www.example.com
+Accept: */*
+
+───────────────────────────
+
+HTTP/1.1 200 OK
+Content-Type: text/html
+Content-Length: 648
+(메시지 본문 없음)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;💡 &lt;strong&gt;Host 헤더&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;Host&lt;/code&gt; 헤더에는 요청을 보낼 호스트가 명시된다. Host 헤더와 요청 라인의 요청 대상을 조합하면 요청을 보내는 전체 URL을 알 수 있다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&quot;3-3-post&quot;&gt;3-3 POST&lt;/h4&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;POST&lt;/code&gt;는 서버로 하여금 &lt;strong&gt;특정 작업을 처리&lt;/strong&gt;하도록 요청하는 용도로 사용되는 메서드이다. 많은 경우 &lt;strong&gt;새로운 자원을 생성&lt;/strong&gt;할 때 사용된다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;POST 요청 메시지 예시&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;txt&quot;&gt;&lt;pre class=&quot;language-txt&quot;&gt;&lt;code class=&quot;language-txt&quot;&gt;POST /posting HTTP/1.1
+Host: example.com
+Content-Type: application/json
+Content-Length: 123
+
+{
+    &quot;id&quot;: 1,
+    &quot;title&quot;: &quot;컴퓨터 네트워크&quot;,
+    &quot;contents&quot;: &quot;너무 중요한 과목이니 힘들어도 끝까지 화이팅해서 읽어 주세요!!!!!&quot;
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;POST 응답 메시지 예시 (자원 생성 성공)&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;txt&quot;&gt;&lt;pre class=&quot;language-txt&quot;&gt;&lt;code class=&quot;language-txt&quot;&gt;HTTP/1.1 201 Created
+Content-Type: application/json
+Content-Length: 100
+Date: Mon, 14 Oct 2024 16:35:00 PST
+Location: /posting/1
+
+{
+    &quot;id&quot;: 1,
+    &quot;title&quot;: &quot;컴퓨터 네트워크&quot;,
+    &quot;contents&quot;: &quot;너무 중요한 과목이니 힘들어도 끝까지 화이팅해서 읽어 주세요!!!!!&quot;
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;일반적으로 &lt;code class=&quot;language-text&quot;&gt;Location&lt;/code&gt; 헤더를 통해 생성된 자원의 위치를 응답하고, 메시지 본문으로 생성된 자원을 응답한다.&lt;/p&gt;
+&lt;h4 id=&quot;3-4-put과-patch&quot;&gt;3-4 PUT과 PATCH&lt;/h4&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;PUT&lt;/code&gt;과 &lt;code class=&quot;language-text&quot;&gt;PATCH&lt;/code&gt;는 둘의 차이점에 유의해야 한다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;PUT&lt;/strong&gt;: 덮어쓰기 (자원 전체를 대체)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;PATCH&lt;/strong&gt;: 부분적 수정 (요청한 부분만 수정)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;서버에 존재하는 자원&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;json&quot;&gt;&lt;pre class=&quot;language-json&quot;&gt;&lt;code class=&quot;language-json&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;id&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;title&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;오늘도 즐거운 날입니다&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;contents&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;재미있는 글 보고 가세요&quot;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;PUT 요청&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;txt&quot;&gt;&lt;pre class=&quot;language-txt&quot;&gt;&lt;code class=&quot;language-txt&quot;&gt;PUT /posting HTTP/1.1
+Host: example.com
+Content-Type: application/json
+
+{
+    &quot;id&quot;: 1,
+    &quot;title&quot;: &quot;수정된 제목입니다&quot;
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;PUT 결과 (전체 대체)&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;json&quot;&gt;&lt;pre class=&quot;language-json&quot;&gt;&lt;code class=&quot;language-json&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;id&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;title&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;수정된 제목입니다&quot;&lt;/span&gt;
+  &lt;span class=&quot;token comment&quot;&gt;// contents 필드가 사라짐&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;PATCH 요청&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;txt&quot;&gt;&lt;pre class=&quot;language-txt&quot;&gt;&lt;code class=&quot;language-txt&quot;&gt;PATCH /posting HTTP/1.1
+Host: example.com
+Content-Type: application/json
+
+{
+    &quot;id&quot;: 1,
+    &quot;title&quot;: &quot;수정된 제목입니다&quot;
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;PATCH 결과 (부분 수정)&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;json&quot;&gt;&lt;pre class=&quot;language-json&quot;&gt;&lt;code class=&quot;language-json&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;id&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;title&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;수정된 제목입니다&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;contents&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;재미있는 글 보고 가세요&quot;&lt;/span&gt;
+  &lt;span class=&quot;token comment&quot;&gt;// contents 필드가 유지됨&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h4 id=&quot;3-5-delete&quot;&gt;3-5 DELETE&lt;/h4&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;DELETE&lt;/code&gt; 메서드는 &lt;strong&gt;특정 자원의 삭제&lt;/strong&gt;를 요청할 때 사용되는 메서드이다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;txt&quot;&gt;&lt;pre class=&quot;language-txt&quot;&gt;&lt;code class=&quot;language-txt&quot;&gt;DELETE /texts/a.txt HTTP/1.1
+Host: example.com&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;서버가 어떤 URI(URL)에 어떤 메서드로 요청을 받았을 때 어떻게 행동해야 하는지를 설계하는 것은 &lt;strong&gt;개발자의 몫&lt;/strong&gt;이다. 같은 URL에 대한 요청이라고 하더라도 여러 메서드에 대한 동작을 구현할 수도 있고, 어떤 메서드에 대한 동작은 구현하지 않을 수도 있다.&lt;/p&gt;
+&lt;h3 id=&quot;http-상태-코드&quot;&gt;HTTP 상태 코드&lt;/h3&gt;
+&lt;h4 id=&quot;3-6-상태-코드의-분류&quot;&gt;3-6 상태 코드의 분류&lt;/h4&gt;
+&lt;p&gt;상태 코드는 요청의 결과를 나타내는 &lt;strong&gt;3자리 정수&lt;/strong&gt;이다. &lt;strong&gt;백의 자릿수&lt;/strong&gt;를 기준으로 요청 결과의 유형을 구분할 수 있다.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;상태 코드&lt;/th&gt;
+&lt;th&gt;설명&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;100번대 (100~199)&lt;/td&gt;
+&lt;td&gt;정보성 상태 코드&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;200번대 (200~299)&lt;/td&gt;
+&lt;td&gt;성공 상태 코드&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;300번대 (300~399)&lt;/td&gt;
+&lt;td&gt;리다이렉션 상태 코드&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;400번대 (400~499)&lt;/td&gt;
+&lt;td&gt;클라이언트 에러 상태 코드&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;500번대 (500~599)&lt;/td&gt;
+&lt;td&gt;서버 에러 상태 코드&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4 id=&quot;3-7-200번대-성공-상태-코드&quot;&gt;3-7 200번대: 성공 상태 코드&lt;/h4&gt;
+&lt;p&gt;200번대 상태 코드는 &lt;strong&gt;요청이 성공했음&lt;/strong&gt;을 의미한다.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;상태 코드&lt;/th&gt;
+&lt;th&gt;이유 구문&lt;/th&gt;
+&lt;th&gt;설명&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;200&lt;/td&gt;
+&lt;td&gt;OK&lt;/td&gt;
+&lt;td&gt;요청이 성공했음&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;201&lt;/td&gt;
+&lt;td&gt;Created&lt;/td&gt;
+&lt;td&gt;요청이 성공했으며 새로운 자원이 생성되었음&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;202&lt;/td&gt;
+&lt;td&gt;Accepted&lt;/td&gt;
+&lt;td&gt;요청을 잘 받았으나 아직 작업을 끝내지 않았음&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;204&lt;/td&gt;
+&lt;td&gt;No Content&lt;/td&gt;
+&lt;td&gt;요청이 성공했지만 메시지 본문으로 표시할 데이터가 없음&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4 id=&quot;3-8-300번대-리다이렉션-상태-코드&quot;&gt;3-8 300번대: 리다이렉션 상태 코드&lt;/h4&gt;
+&lt;p&gt;300번대 상태 코드는 &lt;strong&gt;리다이렉션&lt;/strong&gt;과 관련된 상태 코드이다. &lt;code class=&quot;language-text&quot;&gt;리다이렉션(Redirection)&lt;/code&gt;이란 클라이언트가 요청한 자원이 다른 곳에 있을 때 &lt;strong&gt;다른 곳으로 요청을 이동&lt;/strong&gt;시키는 것을 의미한다.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;상태 코드&lt;/th&gt;
+&lt;th&gt;이유 구문&lt;/th&gt;
+&lt;th&gt;설명&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;301&lt;/td&gt;
+&lt;td&gt;Moved Permanently&lt;/td&gt;
+&lt;td&gt;영구적 리다이렉션 - 재요청 메서드가 변경될 수 있음&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;308&lt;/td&gt;
+&lt;td&gt;Permanent Redirect&lt;/td&gt;
+&lt;td&gt;영구적 리다이렉션 - 재요청 메서드가 변경되지 않음&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;302&lt;/td&gt;
+&lt;td&gt;Found&lt;/td&gt;
+&lt;td&gt;일시적 리다이렉션 - 재요청 메서드가 변경될 수 있음&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;303&lt;/td&gt;
+&lt;td&gt;See Other&lt;/td&gt;
+&lt;td&gt;일시적 리다이렉션 - 재요청 메서드가 GET으로 변경됨&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;307&lt;/td&gt;
+&lt;td&gt;Temporary Redirect&lt;/td&gt;
+&lt;td&gt;일시적 리다이렉션 - 재요청 메서드가 변경되지 않음&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;304&lt;/td&gt;
+&lt;td&gt;Not Modified&lt;/td&gt;
+&lt;td&gt;캐시 - 자원이 변경되지 않음&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h5&gt;영구적 리다이렉션 vs 일시적 리다이렉션&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;영구적 리다이렉션(Permanent Redirection)&lt;/strong&gt;: 자원이 완전히 새로운 곳으로 이동하여 경로가 영구적으로 재지정됨. 기존 URL은 기억할 필요가 없음&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;일시적 리다이렉션(Temporary Redirection)&lt;/strong&gt;: 자원의 위치가 임시로 변경되었거나 임시로 사용할 URL이 필요한 경우. 기존 URL을 기억해야 함&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5&gt;재요청 메서드 변경 여부&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;301, 302&lt;/strong&gt;: 재요청 메서드가 GET으로 변경될 &lt;strong&gt;가능성&lt;/strong&gt;이 있음 (애매모호)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;308, 307&lt;/strong&gt;: 재요청 메서드가 &lt;strong&gt;변경되지 않음&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;303&lt;/strong&gt;: 재요청 메서드가 &lt;strong&gt;반드시 GET&lt;/strong&gt;으로 변경됨&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;3-9-400번대-클라이언트-에러-상태-코드&quot;&gt;3-9 400번대: 클라이언트 에러 상태 코드&lt;/h4&gt;
+&lt;p&gt;400번대 상태 코드는 &lt;strong&gt;클라이언트에게 잘못이 있음&lt;/strong&gt;을 나타낸다.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;상태 코드&lt;/th&gt;
+&lt;th&gt;이유 구문&lt;/th&gt;
+&lt;th&gt;설명&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;400&lt;/td&gt;
+&lt;td&gt;Bad Request&lt;/td&gt;
+&lt;td&gt;요청 메시지의 내용이나 형식 자체에 문제가 있음&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;401&lt;/td&gt;
+&lt;td&gt;Unauthorized&lt;/td&gt;
+&lt;td&gt;요청한 자원에 대한 유효한 &lt;strong&gt;인증(Authentication)&lt;/strong&gt; 이 없음&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;403&lt;/td&gt;
+&lt;td&gt;Forbidden&lt;/td&gt;
+&lt;td&gt;요청이 서버에 의해 거부됨. 자원에 대한 접근 &lt;strong&gt;권한(Authorization)&lt;/strong&gt; 이 충분하지 않음&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;404&lt;/td&gt;
+&lt;td&gt;Not Found&lt;/td&gt;
+&lt;td&gt;요청받은 자원을 찾을 수 없음&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;405&lt;/td&gt;
+&lt;td&gt;Method Not Allowed&lt;/td&gt;
+&lt;td&gt;요청한 메서드를 지원하지 않음&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;blockquote&gt;
+&lt;p&gt;💡 &lt;strong&gt;401 vs 403: 인증과 권한&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;인증(Authentication)&lt;/strong&gt;: 자신이 누구인지를 증명하는 작업 (예: 로그인)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;권한(Authorization)&lt;/strong&gt;: 인증된 주체에게 허용된 작업 (예: 관리자 권한)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;로그인된 모든 유저는 인증된 유저지만, 로그인된 모든 유저가 관리자 페이지에 들어갈 수는 없다. &lt;strong&gt;인증이 되었더라도 권한은 충분하지 않을 수 있다.&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&quot;3-10-500번대-서버-에러-상태-코드&quot;&gt;3-10 500번대: 서버 에러 상태 코드&lt;/h4&gt;
+&lt;p&gt;500번대 상태 코드는 &lt;strong&gt;서버에게 잘못이 있음&lt;/strong&gt;을 나타낸다.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;상태 코드&lt;/th&gt;
+&lt;th&gt;이유 구문&lt;/th&gt;
+&lt;th&gt;설명&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;500&lt;/td&gt;
+&lt;td&gt;Internal Server Error&lt;/td&gt;
+&lt;td&gt;요청을 처리할 수 없음&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;502&lt;/td&gt;
+&lt;td&gt;Bad Gateway&lt;/td&gt;
+&lt;td&gt;중간 서버의 통신 오류&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;대부분의 500번대 상태 코드는 &lt;code class=&quot;language-text&quot;&gt;500 (Internal Server Error)&lt;/code&gt;이다. 서버에 어떤 문제가 발생했을 때, 익명의 다수 사용자에게 문제의 발생 원인을 상세히 공개하는 것은 &lt;strong&gt;보안상 좋지 않기&lt;/strong&gt; 때문에 서버 문제를 가리키는 상태 코드는 500으로 통칭하는 경우가 많다.&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;502 (Bad Gateway)&lt;/code&gt;는 클라이언트와 서버 사이에 위치한 중간 서버에서 &lt;strong&gt;통신 오류&lt;/strong&gt;가 있었음을 나타낸다.&lt;/p&gt;
+&lt;h3 id=&quot;http-주요-헤더&quot;&gt;HTTP 주요 헤더&lt;/h3&gt;
+&lt;h4 id=&quot;3-11-요청-메시지에서-주로-활용되는-헤더&quot;&gt;3-11 요청 메시지에서 주로 활용되는 헤더&lt;/h4&gt;
+&lt;h5&gt;Host&lt;/h5&gt;
+&lt;p&gt;요청을 보낼 호스트가 명시되는 헤더이다. 도메인 네임이나 IP 주소로 표현되며, 포트 번호가 포함될 수도 있다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;txt&quot;&gt;&lt;pre class=&quot;language-txt&quot;&gt;&lt;code class=&quot;language-txt&quot;&gt;GET /hypertext/WWW/TheProject.html HTTP/1.1
+Host: info.cern.ch&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Host 헤더와 요청 라인을 조합하면 요청을 보낸 URL을 짐작할 수 있다.
+→ &lt;code class=&quot;language-text&quot;&gt;http://info.cern.ch/hypertext/WWW/TheProject.html&lt;/code&gt;&lt;/p&gt;
+&lt;h5&gt;User-Agent&lt;/h5&gt;
+&lt;p&gt;요청 메시지를 보낸 &lt;strong&gt;클라이언트의 프로그램&lt;/strong&gt;과 관련한 정보가 명시된다. 사용된 브라우저의 종류, 운영체제 및 아키텍처 정보, 렌더링 엔진의 종류 등이 포함된다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;txt&quot;&gt;&lt;pre class=&quot;language-txt&quot;&gt;&lt;code class=&quot;language-txt&quot;&gt;User-Agent: Mozilla/5.0 (&amp;lt;system-information&gt;) &amp;lt;platform&gt; (&amp;lt;platform-details&gt;) &amp;lt;extensions&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;User-Agent 헤더를 통해 HTTP 요청 메시지를 보낸 클라이언트의 접속 수단을 유추할 수 있다.&lt;/p&gt;
+&lt;h5&gt;Referer&lt;/h5&gt;
+&lt;p&gt;클라이언트가 요청을 보낼 때 &lt;strong&gt;머무르던 URL&lt;/strong&gt;이 명시된다. 이를 통해 &lt;strong&gt;클라이언트의 유입 경로&lt;/strong&gt;를 파악할 수 있다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;txt&quot;&gt;&lt;pre class=&quot;language-txt&quot;&gt;&lt;code class=&quot;language-txt&quot;&gt;Referer: https://minchul.net&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;💡 &lt;strong&gt;Referer는 오타가 아니다&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;개발 초기 당시 오타로 표기됐던 &apos;Referer&apos;라는 단어가 오늘날까지 헤더의 이름으로 사용되고 있다. (올바른 철자는 &apos;Referrer&apos;)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&quot;3-12-응답-메시지에서-주로-활용되는-헤더&quot;&gt;3-12 응답 메시지에서 주로 활용되는 헤더&lt;/h4&gt;
+&lt;h5&gt;Server&lt;/h5&gt;
+&lt;p&gt;HTTP 응답 메시지를 보내는 &lt;strong&gt;서버 호스트와 관련된 정보&lt;/strong&gt;가 명시된다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;txt&quot;&gt;&lt;pre class=&quot;language-txt&quot;&gt;&lt;code class=&quot;language-txt&quot;&gt;Server: Apache/2.4.1 (Unix)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h5&gt;Allow&lt;/h5&gt;
+&lt;p&gt;&lt;strong&gt;처리 가능한 HTTP 메서드 목록&lt;/strong&gt;을 알리기 위해 사용된다. 주로 &lt;code class=&quot;language-text&quot;&gt;405 (Method Not Allowed)&lt;/code&gt; 상태 코드와 함께 사용된다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;txt&quot;&gt;&lt;pre class=&quot;language-txt&quot;&gt;&lt;code class=&quot;language-txt&quot;&gt;HTTP/1.1 405 Method Not Allowed
+Allow: POST, OPTIONS&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h5&gt;Location&lt;/h5&gt;
+&lt;p&gt;클라이언트에게 &lt;strong&gt;자원의 위치&lt;/strong&gt;를 알려 주기 위해 사용된다. 주로 리다이렉션이 발생했을 때나 새로운 자원이 생성되었을 때 사용된다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;txt&quot;&gt;&lt;pre class=&quot;language-txt&quot;&gt;&lt;code class=&quot;language-txt&quot;&gt;HTTP/1.1 301 Moved Permanently
+Location: /new
+
+또는
+
+HTTP/1.1 201 Created
+Location: /posting/1&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h4 id=&quot;3-13-요청과-응답-모두에서-활용되는-헤더&quot;&gt;3-13 요청과 응답 모두에서 활용되는 헤더&lt;/h4&gt;
+&lt;h5&gt;Date&lt;/h5&gt;
+&lt;p&gt;메시지가 생성된 &lt;strong&gt;날짜와 시각&lt;/strong&gt;에 관련된 정보를 담은 헤더이다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;txt&quot;&gt;&lt;pre class=&quot;language-txt&quot;&gt;&lt;code class=&quot;language-txt&quot;&gt;Date: Tue, 15 Nov 1994 08:12:31 GMT&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h5&gt;Content-Length&lt;/h5&gt;
+&lt;p&gt;메시지 본문의 &lt;strong&gt;바이트 단위 크기(길이)&lt;/strong&gt; 를 표현한다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;txt&quot;&gt;&lt;pre class=&quot;language-txt&quot;&gt;&lt;code class=&quot;language-txt&quot;&gt;Content-Length: 123&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h5&gt;Content-Type, Content-Language, Content-Encoding&lt;/h5&gt;
+&lt;p&gt;메시지 본문이 어떻게 &lt;strong&gt;표현&lt;/strong&gt;되었는지와 관련된 헤더로 &lt;code class=&quot;language-text&quot;&gt;표현 헤더(Representation Header)&lt;/code&gt;라고도 부른다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Content-Type&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;메시지 본문에서 사용된 &lt;strong&gt;미디어 타입&lt;/strong&gt;을 의미한다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;txt&quot;&gt;&lt;pre class=&quot;language-txt&quot;&gt;&lt;code class=&quot;language-txt&quot;&gt;Content-Type: text/html;charset=UTF-8&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Content-Language&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;메시지 본문에 어떤 &lt;strong&gt;자연어&lt;/strong&gt;가 사용되었는지를 나타낸다. 언어 태그는 하이픈(-)으로 여러 서브 태그가 구분된다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;txt&quot;&gt;&lt;pre class=&quot;language-txt&quot;&gt;&lt;code class=&quot;language-txt&quot;&gt;&amp;lt;언어 코드&gt;-&amp;lt;국가 코드&gt;
+
+예시:
+ko-KR  → 한국에서 사용하는 한국어
+en-US  → 미국에서 사용하는 영어
+en-GB  → 영국에서 사용하는 영어&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;언어 코드&lt;/th&gt;
+&lt;th&gt;언어&lt;/th&gt;
+&lt;th&gt;국가 코드&lt;/th&gt;
+&lt;th&gt;국가&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;ko&lt;/td&gt;
+&lt;td&gt;한국어&lt;/td&gt;
+&lt;td&gt;KR&lt;/td&gt;
+&lt;td&gt;대한민국&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;en&lt;/td&gt;
+&lt;td&gt;영어&lt;/td&gt;
+&lt;td&gt;US&lt;/td&gt;
+&lt;td&gt;미국&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;ja&lt;/td&gt;
+&lt;td&gt;일본어&lt;/td&gt;
+&lt;td&gt;GB&lt;/td&gt;
+&lt;td&gt;영국&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;zh&lt;/td&gt;
+&lt;td&gt;중국어&lt;/td&gt;
+&lt;td&gt;JP&lt;/td&gt;
+&lt;td&gt;일본&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;fr&lt;/td&gt;
+&lt;td&gt;프랑스어&lt;/td&gt;
+&lt;td&gt;FR&lt;/td&gt;
+&lt;td&gt;프랑스&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;Content-Encoding&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;메시지 본문을 &lt;strong&gt;압축하거나 변환한 방식&lt;/strong&gt;이 명시된다. 메시지 본문이 압축/변환될 수 있으며, 수신지 측에서 압축을 해제하고 재변환하기 위해 필요한 정보이다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;txt&quot;&gt;&lt;pre class=&quot;language-txt&quot;&gt;&lt;code class=&quot;language-txt&quot;&gt;Content-Encoding: gzip
+Content-Encoding: br
+Content-Encoding: deflate, gzip  // 여러 인코딩이 사용된 경우 순서대로 명시&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;대표적인 인코딩 방식: &lt;code class=&quot;language-text&quot;&gt;gzip&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;compress&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;deflate&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;br&lt;/code&gt;&lt;/p&gt;
+&lt;h5&gt;Connection&lt;/h5&gt;
+&lt;p&gt;HTTP 메시지를 송신하는 호스트가 어떠한 방식의 &lt;strong&gt;연결을 원하는지&lt;/strong&gt; 명시하는 헤더이다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;txt&quot;&gt;&lt;pre class=&quot;language-txt&quot;&gt;&lt;code class=&quot;language-txt&quot;&gt;Connection: keep-alive  // 지속 연결 희망
+Connection: close       // 연결 종료 희망&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id=&quot;4️-정리&quot;&gt;4️⃣ 정리&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;HTTP&lt;/code&gt;는 응용 계층의 핵심 프로토콜로, 웹의 근간을 이루는 프로토콜이다. HTTP를 이해하기 위해서는 &lt;code class=&quot;language-text&quot;&gt;DNS&lt;/code&gt;를 통한 &lt;code class=&quot;language-text&quot;&gt;도메인 네임 리졸빙&lt;/code&gt; 과정과 &lt;code class=&quot;language-text&quot;&gt;URI/URL&lt;/code&gt;을 통한 자원 식별 방법에 대한 배경지식이 필요하다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;HTTP는 &lt;code class=&quot;language-text&quot;&gt;요청-응답 기반&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;미디어 독립적&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;스테이트리스&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;지속 연결&lt;/code&gt;이라는 4가지 핵심 특징을 가진다. HTTP 메시지는 &lt;code class=&quot;language-text&quot;&gt;시작 라인&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;필드 라인&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;메시지 본문&lt;/code&gt;으로 구성되며, 요청 메시지와 응답 메시지의 구조가 다르다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;HTTP 메서드&lt;/code&gt;는 클라이언트가 서버의 자원에 대해&lt;code class=&quot;language-text&quot;&gt;수행할 작업&lt;/code&gt;의 종류를 나타내며, &lt;code class=&quot;language-text&quot;&gt;GET&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;POST&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;PUT&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;PATCH&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;DELETE&lt;/code&gt; 등이 대표적이다. HTTP 상태 코드는 요청의 결과를 나타내는 3자리 정수로, &lt;code class=&quot;language-text&quot;&gt;2xx(성공)&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;3xx(리다이렉션)&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;4xx(클라이언트 에러)&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;5xx(서버 에러)&lt;/code&gt;로 분류된다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;HTTP 헤더&lt;/code&gt;는 메시지 전송과 관련한 &lt;code class=&quot;language-text&quot;&gt;부가 정보&lt;/code&gt;를 제공하며, &lt;code class=&quot;language-text&quot;&gt;Host&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;User-Agent&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;Content-Type&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;Content-Length&lt;/code&gt; 등 다양한 헤더가 존재한다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;</content:encoded></item><item><title><![CDATA[[네트워크] 전송 계층 - TCP와 UDP]]></title><description><![CDATA[책을 읽으면서 배운 점을 정리합니다. 네트워크 계층에서 IP가 핵심이었다면, 전송 계층에서는 TCP와 UDP…]]></description><link>https://inyoung.dev/transport-layer-tcp-udp/</link><guid isPermaLink="false">https://inyoung.dev/transport-layer-tcp-udp/</guid><pubDate>Sun, 15 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;혼자 공부하는 네트워크&lt;/code&gt; 책을 읽으면서 배운 점을 정리합니다.&lt;/p&gt;
+&lt;p&gt;네트워크 계층에서 IP가 핵심이었다면, 전송 계층에서는 TCP와 UDP가 핵심이다. 이 두 프로토콜은 각각 &lt;code class=&quot;language-text&quot;&gt;신뢰성&lt;/code&gt;과 &lt;code class=&quot;language-text&quot;&gt;속도&lt;/code&gt;라는 서로 다른 목적을 가지고 있으며, 패킷의 최종 목적지인 프로세스까지 데이터를 전달하는 역할을 한다. 이 글에서는 &lt;code class=&quot;language-text&quot;&gt;TCP&lt;/code&gt;와 &lt;code class=&quot;language-text&quot;&gt;UDP&lt;/code&gt;의 동작 원리와 차이점, 그리고 &lt;code class=&quot;language-text&quot;&gt;TCP&lt;/code&gt;의 연결 관리와 제어 메커니즘을 다룬다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;background: transparent;&quot;&gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1000px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/05bcda411ff011ba9334113ad4b0817b/7c474/index.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 48.800000000000004%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAACE4AAAhOAFFljFgAAABVUlEQVR42o2S20sCQRTG/astWysI6qGLSje6QA+9FBI99JDuKgWuujOauTeT0kgSIgP/hq8zZ3EJm40eDnPmnJ1vzvfbSbVWKtDGanUuftSTzlCkdEWZtSCWTIhMGc5iOc6lYXKu+v8XXLbQ2biHm7cRHAr0zx7gFRoI9h24ORu9kxa6W7VE0dS8TTXJ8/kjJnKMr/YY02CCd/MF0/ATbzd9fNgjDIs+T66zPydYgSBb4ZHEiA4PLjwMr3ye8vU6xOCS9sWA+oKtx1x1gmyB7MoscaLbnXQJzkKJ8hKza6ZvI560Fxkz+k7xNKzfgpKEups1dNbv8HTaQkjsvEKdrYcHDtprVeLpwN9rMkuPWLr5OnrHEgH19YLbNf4Z/m6DBd0dOz7QJlYu9dVPUXUvV+dVXaBWvWUaXbJliy3Ono7KZ0i4bkQ2VQgjwXLy465owf/1sL8BxztlBeXl47IAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+          &lt;source
+              srcset=&quot;/static/05bcda411ff011ba9334113ad4b0817b/bc904/index.webp 250w,
+/static/05bcda411ff011ba9334113ad4b0817b/4be29/index.webp 500w,
+/static/05bcda411ff011ba9334113ad4b0817b/03f31/index.webp 1000w,
+/static/05bcda411ff011ba9334113ad4b0817b/84f56/index.webp 1329w&quot;
+              sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
+              type=&quot;image/webp&quot;
+            /&gt;
+          &lt;source
+            srcset=&quot;/static/05bcda411ff011ba9334113ad4b0817b/43fa5/index.png 250w,
+/static/05bcda411ff011ba9334113ad4b0817b/c6e3d/index.png 500w,
+/static/05bcda411ff011ba9334113ad4b0817b/da8b6/index.png 1000w,
+/static/05bcda411ff011ba9334113ad4b0817b/7c474/index.png 1329w&quot;
+            sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
+            type=&quot;image/png&quot;
+          /&gt;
+          &lt;img
+            class=&quot;gatsby-resp-image-image&quot;
+            src=&quot;/static/05bcda411ff011ba9334113ad4b0817b/da8b6/index.png&quot;
+            alt=&quot;4. 전송 계층 TCP와 UDP&quot;
+            title=&quot;&quot;
+            loading=&quot;lazy&quot;
+            decoding=&quot;async&quot;
+            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+          /&gt;
+        &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;4. 전송 계층 TCP와 UDP&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
+&lt;h2 id=&quot;1️-전송-계층의-역할&quot;&gt;1️⃣ 전송 계층의 역할&lt;/h2&gt;
+&lt;h3 id=&quot;포트를-통한-프로세스-식별&quot;&gt;포트를 통한 프로세스 식별&lt;/h3&gt;
+&lt;h4 id=&quot;1-1-포트-번호의-필요성&quot;&gt;1-1 포트 번호의 필요성&lt;/h4&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;IP 주소&lt;/code&gt;와 &lt;code class=&quot;language-text&quot;&gt;MAC 주소&lt;/code&gt;는 패킷을 송수신하는 호스트를 특정할 수 있다. 그러나 패킷의 최종 송수신 대상은 호스트가 아니라 &lt;strong&gt;호스트가 실행하는 프로세스&lt;/strong&gt;이다. 하나의 호스트는 웹 브라우저, 게임, 채팅 프로그램 등 다양한 프로세스를 동시에 실행할 수 있으며, 네트워크를 통해 주고받는 패킷은 최종적으로 이러한 프로세스에 전달되어야 한다.&lt;/p&gt;
+&lt;p&gt;네트워크 패킷을 주고받는 프로세스에는 &lt;code class=&quot;language-text&quot;&gt;포트(Port)&lt;/code&gt; 번호가 할당된다. &lt;strong&gt;IP 주소와 포트 번호의 조합&lt;/strong&gt;을 통해 특정 호스트가 실행하는 특정 프로세스를 식별할 수 있다.&lt;/p&gt;
+&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;background: transparent;&quot;&gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1000px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/dd2c5d6ef9dba2154040b1c56e229be3/da8b6/network-host-id.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 25.6%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAIAAADKYVtkAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA7klEQVR42jWPyYqDYBCEff/X8OBJb15cQHCJ4pYouIS4IYI4riFoIC5TM5KGH7qa+r+uJvZ937bt+Xy+Xq+qqniel2VZVVVFUeI4XpZlHMd5nuE5jiPPc03TTNOEE5LAa9s2DMNhGJqmqesaDsMwfr41TZPv+/h//BdY9/sdDbYSSZJ4nue67vV6jaKoKAosfDweQRCAeLvdAMIqXdcBdRzncrlAWpaVZRnR970kSSRJMgwDjRSiKFIUhQm4aZqCxXEcWF3XwQAcy7KYw/kXGx1N0zjyzAYHQIIg4OB1XTEpy/L9fn8+nzO2bdvnCb9ecASwxdTuIwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+          &lt;source
+              srcset=&quot;/static/dd2c5d6ef9dba2154040b1c56e229be3/bc904/network-host-id.webp 250w,
+/static/dd2c5d6ef9dba2154040b1c56e229be3/4be29/network-host-id.webp 500w,
+/static/dd2c5d6ef9dba2154040b1c56e229be3/03f31/network-host-id.webp 1000w&quot;
+              sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
+              type=&quot;image/webp&quot;
+            /&gt;
+          &lt;source
+            srcset=&quot;/static/dd2c5d6ef9dba2154040b1c56e229be3/43fa5/network-host-id.png 250w,
+/static/dd2c5d6ef9dba2154040b1c56e229be3/c6e3d/network-host-id.png 500w,
+/static/dd2c5d6ef9dba2154040b1c56e229be3/da8b6/network-host-id.png 1000w&quot;
+            sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
+            type=&quot;image/png&quot;
+          /&gt;
+          &lt;img
+            class=&quot;gatsby-resp-image-image&quot;
+            src=&quot;/static/dd2c5d6ef9dba2154040b1c56e229be3/da8b6/network-host-id.png&quot;
+            alt=&quot;IP 주소(network id)와 포트 번호(host id)&quot;
+            title=&quot;&quot;
+            loading=&quot;lazy&quot;
+            decoding=&quot;async&quot;
+            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+          /&gt;
+        &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;IP 주소(network id)와 포트 번호(host id)&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
+&lt;h4 id=&quot;1-2-포트-번호의-구조&quot;&gt;1-2 포트 번호의 구조&lt;/h4&gt;
+&lt;p&gt;TCP와 UDP 헤더는 모두 &lt;code class=&quot;language-text&quot;&gt;송신지 포트 번호&lt;/code&gt;와 &lt;code class=&quot;language-text&quot;&gt;수신지 포트 번호&lt;/code&gt; 필드를 포함한다. 포트 번호는 &lt;strong&gt;16비트&lt;/strong&gt;로 표현되어 총 65536개(0~65535번)를 사용할 수 있으며, 번호 범위에 따라 3가지 종류로 구분된다.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;포트 종류&lt;/th&gt;
+&lt;th&gt;포트 번호 범위&lt;/th&gt;
+&lt;th&gt;설명&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;잘 알려진 포트 (Well-known Port)&lt;/td&gt;
+&lt;td&gt;0~1023&lt;/td&gt;
+&lt;td&gt;범용적으로 사용되는 프로토콜을 위한 포트&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;등록된 포트 (Registered Port)&lt;/td&gt;
+&lt;td&gt;1024~49151&lt;/td&gt;
+&lt;td&gt;특정 애플리케이션 프로토콜을 위한 포트&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;동적 포트 (Dynamic Port)&lt;/td&gt;
+&lt;td&gt;49152~65535&lt;/td&gt;
+&lt;td&gt;임시 포트, 클라이언트가 주로 사용&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h5&gt;잘 알려진 포트 예시&lt;/h5&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;포트 번호&lt;/th&gt;
+&lt;th&gt;프로토콜&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;20, 21&lt;/td&gt;
+&lt;td&gt;FTP&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;22&lt;/td&gt;
+&lt;td&gt;SSH&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;23&lt;/td&gt;
+&lt;td&gt;TELNET&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;53&lt;/td&gt;
+&lt;td&gt;DNS&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;67, 68&lt;/td&gt;
+&lt;td&gt;DHCP&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;80&lt;/td&gt;
+&lt;td&gt;HTTP&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;443&lt;/td&gt;
+&lt;td&gt;HTTPS&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h5&gt;등록된 포트 예시&lt;/h5&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;포트 번호&lt;/th&gt;
+&lt;th&gt;서비스&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;1194&lt;/td&gt;
+&lt;td&gt;OpenVPN&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1433&lt;/td&gt;
+&lt;td&gt;Microsoft SQL Server&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;3306&lt;/td&gt;
+&lt;td&gt;MySQL&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;6379&lt;/td&gt;
+&lt;td&gt;Redis&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;8080&lt;/td&gt;
+&lt;td&gt;HTTP 대체&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4 id=&quot;1-3-포트의-실사용-사례&quot;&gt;1-3 포트의 실사용 사례&lt;/h4&gt;
+&lt;p&gt;서버로 동작하는 프로그램은 주로 &lt;strong&gt;잘 알려진 포트&lt;/strong&gt;나 &lt;strong&gt;등록된 포트&lt;/strong&gt;를 사용한다. MySQL 데이터베이스 서버는 3306번 포트를, 웹 서버는 80번(HTTP) 또는 443번(HTTPS) 포트를 사용한다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;apache&quot;&gt;&lt;pre class=&quot;language-apache&quot;&gt;&lt;code class=&quot;language-apache&quot;&gt;# Apache HTTP 서버 설정 예시
+Listen 80
+
+&amp;lt;IfModule ssl_module&amp;gt;
+    Listen 443
+&amp;lt;/IfModule&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;클라이언트로 동작하는 프로그램은 &lt;strong&gt;동적 포트&lt;/strong&gt; 범위 내에서 임의의 포트 번호를 자동으로 할당받는다. 웹 브라우저로 웹사이트에 접속할 때 브라우저는 동적 포트를 할당받아 서버의 80번 또는 443번 포트와 통신한다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;💡 &lt;strong&gt;NAT와 NAPT&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;NAT(Network Address Translation)&lt;/code&gt;는 공인 IP 주소와 사설 IP 주소 간 변환을 위한 기술이다. 사설 네트워크 내의 호스트가 외부와 통신하기 위해서는 공인 IP 주소로 변환이 필요하다.&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;NAPT(Network Address Port Translation)&lt;/code&gt;는 &lt;strong&gt;포트 번호까지 함께 변환&lt;/strong&gt;하는 NAT의 일종이다. 여러 사설 IP 주소가 하나의 공인 IP 주소를 공유할 수 있도록 하여, 공인 IP 주소 부족 문제를 개선하는 기술로 활용된다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;사설 IP:포트&lt;/code&gt; ↔ &lt;code class=&quot;language-text&quot;&gt;공인 IP:포트&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;N개의 사설 IP를 1개의 공인 IP로 관리 가능&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;2️-tcp와-udp의-특징&quot;&gt;2️⃣ TCP와 UDP의 특징&lt;/h2&gt;
+&lt;h3 id=&quot;신뢰성과-연결-방식&quot;&gt;신뢰성과 연결 방식&lt;/h3&gt;
+&lt;h4 id=&quot;2-1-tcp와-udp의-기본-특성&quot;&gt;2-1 TCP와 UDP의 기본 특성&lt;/h4&gt;
+&lt;p&gt;TCP와 UDP는 전송 계층의 대표적인 프로토콜이지만 서로 다른 특성을 가진다.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;특성&lt;/th&gt;
+&lt;th&gt;TCP&lt;/th&gt;
+&lt;th&gt;UDP&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;신뢰성&lt;/td&gt;
+&lt;td&gt;신뢰할 수 있는 통신&lt;/td&gt;
+&lt;td&gt;신뢰할 수 없는 통신&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;연결 방식&lt;/td&gt;
+&lt;td&gt;연결형(Connection-oriented)&lt;/td&gt;
+&lt;td&gt;비연결형(Connectionless)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;속도&lt;/td&gt;
+&lt;td&gt;상대적으로 느림&lt;/td&gt;
+&lt;td&gt;상대적으로 빠름&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;제어 기능&lt;/td&gt;
+&lt;td&gt;흐름·오류·혼잡 제어 제공&lt;/td&gt;
+&lt;td&gt;제어 기능 미제공&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;연결 과정&lt;/td&gt;
+&lt;td&gt;수립 및 종료 단계 존재&lt;/td&gt;
+&lt;td&gt;수립 및 종료 단계 없음&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;TCP&lt;/strong&gt;는 패킷을 주고받기 전에 연결 수립 과정을 거치며, 연결 수립 이후 신뢰성 보장을 위해 상태 관리, 흐름 제어, 오류 제어, 혼잡 제어 등의 기능을 제공한다. 패킷 송수신이 완료되면 연결을 종료한다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;UDP&lt;/strong&gt;는 연결 수립이나 종료 단계를 거치지 않으며, 신뢰성을 높이기 위한 기능도 제공하지 않는다. 따라서 패킷 유실 없는 송수신이 필요하면 TCP를, 빠른 송수신이 필요하면 UDP를 선택하는 것이 유리하다.&lt;/p&gt;
+&lt;h4 id=&quot;2-2-udp-헤더-구조&quot;&gt;2-2 UDP 헤더 구조&lt;/h4&gt;
+&lt;p&gt;UDP 헤더는 단순한 구조를 가진다.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;필드&lt;/th&gt;
+&lt;th&gt;크기&lt;/th&gt;
+&lt;th&gt;설명&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;송신지 포트&lt;/td&gt;
+&lt;td&gt;16비트&lt;/td&gt;
+&lt;td&gt;송신 프로세스의 포트 번호&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;수신지 포트&lt;/td&gt;
+&lt;td&gt;16비트&lt;/td&gt;
+&lt;td&gt;수신 프로세스의 포트 번호&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;길이&lt;/td&gt;
+&lt;td&gt;16비트&lt;/td&gt;
+&lt;td&gt;UDP 데이터그램의 바이트 크기&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;체크섬&lt;/td&gt;
+&lt;td&gt;16비트&lt;/td&gt;
+&lt;td&gt;데이터그램 훼손 여부 확인 정보&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;UDP 헤더는 사실상 IP 헤더를 감싸는 일종의 껍데기와 같다. 최소한의 정보만 제공하여 오버헤드가 작고 빠른 전송이 가능하다.&lt;/p&gt;
+&lt;h4 id=&quot;2-3-tcp-헤더-구조&quot;&gt;2-3 TCP 헤더 구조&lt;/h4&gt;
+&lt;p&gt;TCP 헤더는 UDP보다 훨씬 많은 필드를 포함한다. 연결 수립과 종료, 신뢰성 보장을 위한 다양한 기능을 제공하기 때문이다.&lt;/p&gt;
+&lt;h5&gt;주요 필드&lt;/h5&gt;
+&lt;p&gt;&lt;strong&gt;순서 번호 (Sequence Number)&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;TCP 세그먼트의 올바른 송수신 순서를 보장하기 위해 세그먼트 첫 바이트에 매겨진 번호&lt;/li&gt;
+&lt;li&gt;현재 주고받는 세그먼트가 데이터의 몇 번째 바이트에 해당하는지 식별&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;확인 응답 번호 (Acknowledgment Number)&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;상대 호스트가 보낸 세그먼트에 대한 응답&lt;/li&gt;
+&lt;li&gt;다음으로 수신하길 기대하는 순서 번호&lt;/li&gt;
+&lt;li&gt;일반적으로 &lt;strong&gt;올바르게 수신한 순서 번호 + 1&lt;/strong&gt;로 설정&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;💡 &lt;strong&gt;순서 번호와 확인 응답 번호의 관계&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre class=&quot;language-java&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// 호스트 A가 순서 번호 100인 세그먼트 전송&lt;/span&gt;
+segment&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;sequenceNumber &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;// 호스트 B가 올바르게 수신 후 응답&lt;/span&gt;
+responseSegment&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;acknowledgmentNumber &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;101&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;  &lt;span class=&quot;token comment&quot;&gt;// 다음 받을 번호&lt;/span&gt;
+responseSegment&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;setACKFlag&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token boolean&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;  &lt;span class=&quot;token comment&quot;&gt;// ACK 플래그 설정&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;TCP의 신뢰성 보장은 대부분 확인 응답 번호를 통해 이루어진다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;제어 비트 (Control Bits)&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;현재 세그먼트에 대한 부가 정보를 나타내는 플래그&lt;/li&gt;
+&lt;li&gt;8비트로 구성되며 각 비트가 서로 다른 의미를 가짐&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;제어 비트&lt;/th&gt;
+&lt;th&gt;설명&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;ACK&lt;/td&gt;
+&lt;td&gt;세그먼트의 승인을 나타냄&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;SYN&lt;/td&gt;
+&lt;td&gt;연결을 수립하기 위해 사용&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;FIN&lt;/td&gt;
+&lt;td&gt;연결을 종료하기 위해 사용&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&quot;3️-tcp의-연결-관리&quot;&gt;3️⃣ TCP의 연결 관리&lt;/h2&gt;
+&lt;h3 id=&quot;tcp-연결-수립-3-way-handshake&quot;&gt;TCP 연결 수립: 3-way-handshake&lt;/h3&gt;
+&lt;h4 id=&quot;3-1-연결-과정-설명&quot;&gt;3-1 연결 과정 설명&lt;/h4&gt;
+&lt;p&gt;TCP의 연결 수립은 &lt;code class=&quot;language-text&quot;&gt;쓰리 웨이 핸드셰이크(3-way Handshake)&lt;/code&gt;를 통해 이루어진다. 이는 세 단계로 이루어진 TCP 연결 수립 과정을 의미한다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1단계: SYN 세그먼트 전송 (A → B)&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;호스트 A가 &lt;code class=&quot;language-text&quot;&gt;SYN&lt;/code&gt; 비트를 1로 설정한 세그먼트를 호스트 B에게 전송&lt;/li&gt;
+&lt;li&gt;세그먼트의 순서 번호에 호스트 A의 순서 번호 포함&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;2단계: SYN+ACK 세그먼트 전송 (B → A)&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;호스트 B가 &lt;code class=&quot;language-text&quot;&gt;SYN&lt;/code&gt;과 &lt;code class=&quot;language-text&quot;&gt;ACK&lt;/code&gt; 비트를 모두 1로 설정한 세그먼트를 전송&lt;/li&gt;
+&lt;li&gt;호스트 B의 순서 번호와 1단계 세그먼트에 대한 확인 응답 번호 포함&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;3단계: ACK 세그먼트 전송 (A → B)&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;호스트 A가 &lt;code class=&quot;language-text&quot;&gt;ACK&lt;/code&gt; 비트를 1로 설정한 세그먼트를 전송&lt;/li&gt;
+&lt;li&gt;호스트 A의 순서 번호와 2단계 세그먼트에 대한 확인 응답 번호 포함&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;background: transparent;&quot;&gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 471px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/942c4ea62dae1b7884b63eec588b1892/9fd7e/tcp.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 99.2%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAIAAAAC64paAAAACXBIWXMAAAsTAAALEwEAmpwYAAACOUlEQVR42qVU2W6jQBD0/3/QvqyUVbKW4wOIcGzAmMODOWfG3MNh7GQ7TJY4Fi+r7Qc00001XdUlJu//EZPhZB+DnYmMg2sib3/wussFkm99yQuptrdV3dQMSzXsJCs+Sm9vn2A4bXb2bCH8fHh6XgjSRm/a89DXRL603jw8TqfPC1FWQhJ/A0PQOME0ftnuQ0zzoqwY67qOl0pWnZJMVgwvJGleDPkJ7wFPQrC4Wj3NVgE+QZf5UiCU8ip/wfFxXhSX7jzCuesupmG+rBUSpzTJolNqIR/4H318DAiNU808KqqmKkrTNJdekcmdgMiL2rYdpOpnruOsIKf0x8NypxsIHVRVzbJsBHxwg7pthms/7ycvx4uquhlZ1UAMwCVjhBDGGKWkbZrr9VqUDHR6lraY0DzPvwl2G44P7Wt9v1c1fQZ72epA5ACk43RnOYvVShRFz/Pquv4Cp2kKNOqKPc1lYa1HNPGiU17WYBUQchjKsm0YByGUJMkHmBdkWRYEQZKkX7/nrKp5cgiYvNcyHOd86oNS+qru4FPAKopCWMktuJej4lfe/YszjJ3EsbRWd9bRdtzZUvSC6HK9nruOv4r8MbV5DWSYTqfyVgOesNuyaoA5uNpyfORiN6SP8/UBOZSQe8EgYMgoikzktufz3QoYq/OSzURlvlxtXl8xxvfgvwYOG+6w7wEZN8ARJkWRj3ibh2agutfpVnB+1q1jVpS3zr0H7223be/H5mDTCcBng2dHwP/0G/oDO1p0m5Ke5FcAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+          &lt;source
+              srcset=&quot;/static/942c4ea62dae1b7884b63eec588b1892/bc904/tcp.webp 250w,
+/static/942c4ea62dae1b7884b63eec588b1892/aab61/tcp.webp 471w&quot;
+              sizes=&quot;(max-width: 471px) 100vw, 471px&quot;
+              type=&quot;image/webp&quot;
+            /&gt;
+          &lt;source
+            srcset=&quot;/static/942c4ea62dae1b7884b63eec588b1892/43fa5/tcp.png 250w,
+/static/942c4ea62dae1b7884b63eec588b1892/9fd7e/tcp.png 471w&quot;
+            sizes=&quot;(max-width: 471px) 100vw, 471px&quot;
+            type=&quot;image/png&quot;
+          /&gt;
+          &lt;img
+            class=&quot;gatsby-resp-image-image&quot;
+            src=&quot;/static/942c4ea62dae1b7884b63eec588b1892/9fd7e/tcp.png&quot;
+            alt=&quot;3-way-handshake 과정&quot;
+            title=&quot;&quot;
+            loading=&quot;lazy&quot;
+            decoding=&quot;async&quot;
+            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+          /&gt;
+        &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;3-way-handshake 과정&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;💡 &lt;strong&gt;액티브 오픈과 패시브 오픈&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;액티브 오픈(Active Open)&lt;/strong&gt;: 처음 연결을 시작하는 과정 (주로 클라이언트)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;패시브 오픈(Passive Open)&lt;/strong&gt;: 연결 요청을 수신한 뒤 연결을 수립하는 과정 (주로 서버)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;SYN 비트가 설정된 패킷을 처음 보내는 호스트가 액티브 오픈을 수행하는 호스트이다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&quot;3-2-실제-패킷-분석을-통한-예시&quot;&gt;3-2 실제 패킷 분석을 통한 예시&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;1단계: SYN 세그먼트&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;Source Port: 49859 (동적 포트)
+Destination Port: 80 (HTTP)
+Sequence Number: 3588415412
+Flags: SYN=1&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;클라이언트가 동적 포트 49859를 할당받아 HTTP 서버(80번 포트)에 연결 요청을 보낸다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2단계: SYN+ACK 세그먼트&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;Source Port: 80
+Destination Port: 49859
+Sequence Number: 697411256
+Acknowledgment Number: 3588415413
+Flags: SYN=1, ACK=1&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;서버가 자신의 순서 번호를 보내고, 클라이언트가 보낸 순서 번호에 1을 더한 확인 응답 번호를 설정한다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;3단계: ACK 세그먼트&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;Source Port: 49859
+Destination Port: 80
+Sequence Number: 3588415413
+Acknowledgment Number: 697411257
+Flags: ACK=1&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;클라이언트가 서버의 순서 번호에 1을 더한 확인 응답 번호로 응답하면 연결이 수립된다.&lt;/p&gt;
+&lt;h3 id=&quot;tcp의-제어-메커니즘&quot;&gt;TCP의 제어 메커니즘&lt;/h3&gt;
+&lt;h4 id=&quot;3-3-재전송을-통한-오류-제어&quot;&gt;3-3 재전송을 통한 오류 제어&lt;/h4&gt;
+&lt;p&gt;TCP는 전송 과정에서 잘못된 세그먼트가 있을 경우 &lt;strong&gt;재전송&lt;/strong&gt;을 통해 오류를 제어한다. 재전송이 발생하는 상황은 크게 2가지이다.&lt;/p&gt;
+&lt;h5&gt;중복된 ACK 세그먼트 수신&lt;/h5&gt;
+&lt;p&gt;송신한 세그먼트의 일부가 전송 중 유실되면 수신 측은 계속해서 같은 확인 응답 번호를 보낸다.&lt;/p&gt;
+&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;background: transparent;&quot;&gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 846px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/1151a3369dadcd4837f78ea1c632e959/ccfff/tcp-2.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 120.39999999999999%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAYCAYAAAD6S912AAAACXBIWXMAAAsTAAALEwEAmpwYAAADU0lEQVR42o1Ua08bSRDkh5+i00n5mp8SKYoUcXdEggTwOWCDAMfYxvi9rM3ann2/XVc9G7+wgxhptLMzPdXV1T19AI7FYoEg8Dk9RFGEt44wDKHUnFPxXqz3DgrAHOfnF/j69RSGMcLSye/G8kzAzs7+w+XlFTzXXQPmeYp//m3h0+c7MccrWKuR54XRWamH4xOD/9kasNfv4Y93f+LL4d96M8uyVxkWgLn+npcu8df7D3jsPBaAy4vjsQlbzTbC2g1z08lyPRoNKdUR9Q/WDOfzOWYzB8OhQrlcwe1tA09PY0wmYziOQpomK0aC89KZS/2W5wfFhoPp1MZgoPDx4wk9Vin2LY6Pr3F0VEar1UWpVEG93tgbvlL2NqDQnU4VAT3UagZ+/uwTsMbstfHtWwWHh5esgnvOO3S7Cs9mSBIp72UQHM97wTAMA4Y3R78f0FtOCXL+J7CsmAA2JRiR3RAn329welRFfFeDsjPqF6LR8NBsTnV17ACa9Cwgg0HI/1ivTTOmjjlsO8fISNHvBTAeLHQ6ElXC/Yz626skrUK2LMWZ0Ags7oBZ98gg0qwfH33c3AhTG+22j3Yn1GfjcYxeL+J6vs3Q8zw9J5MJKpU7nJ5KMu7x8BBqMAlLAIRRjww7HZ9nPmVwaS9ONkIWplEU4vnZwdXVgIYTahgjjhNtkCQLOst4HmtgAazXPQ1Wq7l63WhYa8AkSeihzUs+9XBZiwOGVqdxhyAJWUdaz/k8oZYp9Uo0uAAbRsiKcCnLRshBEJJZlcYBdeqxsO91RlstE76f68QIiFw2jEhnVhwolTKyfLewozBCl+/QsSWUAarVOmvwhto0CRDrzA+HIfUrQNJ0t3k4jqs71iopoqFSLq6vOyziMpNS43pAw4UOM8sWO81i8wluMUz57JzJE0bdJz6vPvW0WJcZmQhQuvIsF2QWTeIVwIzl4rAJzMxn6jbm8/rBTDcZ+hVfQJNspfGWmKR7XFyU9d7LBrzTHKSwbdvWTVI6i/TDLMt15mazkJ3H5wyYWalHnzJkesZxvh/Q930NWID8ru3jV/Nd6KxLkUu2peClYew8vYJhvhdoXw/cPJMsbzGc8gGbpqkT8ZaxdlJ4sSxrG1Beyz52bx2bd/8Hfd4ppSUO0mcAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+          &lt;source
+              srcset=&quot;/static/1151a3369dadcd4837f78ea1c632e959/bc904/tcp-2.webp 250w,
+/static/1151a3369dadcd4837f78ea1c632e959/4be29/tcp-2.webp 500w,
+/static/1151a3369dadcd4837f78ea1c632e959/ffdf3/tcp-2.webp 846w&quot;
+              sizes=&quot;(max-width: 846px) 100vw, 846px&quot;
+              type=&quot;image/webp&quot;
+            /&gt;
+          &lt;source
+            srcset=&quot;/static/1151a3369dadcd4837f78ea1c632e959/43fa5/tcp-2.png 250w,
+/static/1151a3369dadcd4837f78ea1c632e959/c6e3d/tcp-2.png 500w,
+/static/1151a3369dadcd4837f78ea1c632e959/ccfff/tcp-2.png 846w&quot;
+            sizes=&quot;(max-width: 846px) 100vw, 846px&quot;
+            type=&quot;image/png&quot;
+          /&gt;
+          &lt;img
+            class=&quot;gatsby-resp-image-image&quot;
+            src=&quot;/static/1151a3369dadcd4837f78ea1c632e959/ccfff/tcp-2.png&quot;
+            alt=&quot;세그먼트 유실 시, 서버가 동일한 ACK Number을 3번 받으면 해당 세그먼트를 다시 보냄&quot;
+            title=&quot;&quot;
+            loading=&quot;lazy&quot;
+            decoding=&quot;async&quot;
+            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+          /&gt;
+        &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;세그먼트 유실 시, 서버가 동일한 ACK Number을 3번 받으면 해당 세그먼트를 다시 보냄&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;중복된 ACK를 받으면 송신 측은 해당 세그먼트를 재전송한다.&lt;/p&gt;
+&lt;h5&gt;타임아웃 발생&lt;/h5&gt;
+&lt;p&gt;TCP는 &lt;code class=&quot;language-text&quot;&gt;재전송 타이머(Retransmission Timer)&lt;/code&gt;를 사용한다. 세그먼트를 전송할 때마다 타이머를 시작하고, 타임아웃 시점까지 ACK를 받지 못하면 세그먼트를 재전송한다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;💡 &lt;strong&gt;파이프라이닝 전송&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;기본적으로 TCP는 순서 번호를 보내고 확인 응답을 받는 과정을 반복한다. 그러나 이는 비효율적이므로, 현대 TCP는 &lt;strong&gt;파이프라이닝(Pipelining)&lt;/strong&gt; 방식을 사용한다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;기존 방식&lt;/strong&gt;: 한 번에 하나의 세그먼트만 송수신&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;파이프라이닝&lt;/strong&gt;: 확인 응답을 받기 전에 여러 세그먼트를 연속으로 전송&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;파이프라이닝을 통해 네트워크 대역폭을 효율적으로 활용할 수 있다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&quot;3-4-흐름-제어&quot;&gt;3-4 흐름 제어&lt;/h4&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;흐름 제어(Flow Control)&lt;/code&gt;는 수신 호스트가 한 번에 처리할 수 있을 만큼만 전송하는 것을 의미한다. 송신 호스트가 수신 호스트의 &lt;strong&gt;처리 속도를 고려&lt;/strong&gt;하여 송수신 속도를 균일하게 맞추는 기능이다.&lt;/p&gt;
+&lt;h5&gt;수신 윈도우&lt;/h5&gt;
+&lt;p&gt;TCP 헤더의 &lt;code class=&quot;language-text&quot;&gt;윈도우(Window)&lt;/code&gt; 필드에는 수신 호스트가 한 번에 처리할 수 있는 &lt;strong&gt;수신 윈도우(Receiver Window)&lt;/strong&gt; 크기가 명시된다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;수신 호스트: &quot;나는 한 번에 8192바이트를 처리할 수 있어&quot;
+             ↓ (윈도우 필드로 전달)
+송신 호스트: &quot;그럼 8192바이트 이하로만 보내겠어&quot;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;수신 윈도우 크기는 &lt;strong&gt;TCP 수신 버퍼&lt;/strong&gt;의 크기에 의해 결정된다. 수신 버퍼는 수신된 세그먼트가 애플리케이션 프로세스에 의해 읽히기 전에 임시 저장되는 공간이다.&lt;/p&gt;
+&lt;h4 id=&quot;3-5-혼잡-제어&quot;&gt;3-5 혼잡 제어&lt;/h4&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;혼잡(Congestion)&lt;/code&gt;이란 많은 트래픽으로 인해 패킷의 처리 속도가 느려지거나 유실될 수 있는 상황을 의미한다. &lt;code class=&quot;language-text&quot;&gt;혼잡 제어(Congestion Control)&lt;/code&gt;는 네트워크의 혼잡 정도에 따라 전송량을 조절하는 기능이다.&lt;/p&gt;
+&lt;h5&gt;혼잡 감지&lt;/h5&gt;
+&lt;p&gt;송신 호스트는 다음 상황에서 네트워크 혼잡을 감지한다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;중복된 ACK 세그먼트 도착&lt;/li&gt;
+&lt;li&gt;타임아웃 발생&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5&gt;혼잡 윈도우&lt;/h5&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;혼잡 윈도우(Congestion Window)&lt;/code&gt;는 혼잡 없이 전송할 수 있을 정도의 양을 나타낸다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;큰 혼잡 윈도우&lt;/strong&gt;: 한 번에 전송할 수 있는 세그먼트 수가 많음&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;작은 혼잡 윈도우&lt;/strong&gt;: 네트워크가 혼잡하여 전송할 수 있는 세그먼트 수가 적음&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5&gt;AIMD 알고리즘&lt;/h5&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;AIMD(Additive Increase/Multiplicative Decrease)&lt;/code&gt;는 가장 기본적인 혼잡 제어 알고리즘이다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;증가&lt;/strong&gt;: 혼잡이 감지되지 않으면 혼잡 윈도우를 &lt;strong&gt;1씩 선형적으로 증가&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;감소&lt;/strong&gt;: 혼잡이 감지되면 혼잡 윈도우를 &lt;strong&gt;절반으로 감소&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;💡 &lt;strong&gt;RTT (Round Trip Time)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;RTT&lt;/code&gt;는 패킷을 보내고 그에 대한 응답을 수신하기까지의 시간이다. AIMD는 RTT마다 혼잡 윈도우를 1씩 증가시킨다고 표현할 수 있다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;네트워크 성능 측정의 중요한 지표&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;ping&lt;/code&gt; 명령어로 RTT 확인 가능&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;혼잡 윈도우는 AIMD에 따라 톱니 모양으로 변화한다. 네트워크 상태에 따라 적응적으로 전송량을 조절하여 네트워크 효율성을 높인다.&lt;/p&gt;
+&lt;h3 id=&quot;tcp-연결-종료-포-웨이-핸드셰이크&quot;&gt;TCP 연결 종료: 포 웨이 핸드셰이크&lt;/h3&gt;
+&lt;h4 id=&quot;3-6-포-웨이-핸드셰이크-과정&quot;&gt;3-6 포 웨이 핸드셰이크 과정&lt;/h4&gt;
+&lt;p&gt;TCP 연결 종료는 송수신 호스트가 각자 한 번씩 &lt;code class=&quot;language-text&quot;&gt;FIN&lt;/code&gt;과 &lt;code class=&quot;language-text&quot;&gt;ACK&lt;/code&gt;를 주고받으며 이루어진다. 4개의 단계를 거친다는 점에서 &lt;code class=&quot;language-text&quot;&gt;포 웨이 핸드셰이크(Four-way Handshake)&lt;/code&gt;라고 부른다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1단계: FIN 세그먼트 전송 (A → B)&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;호스트 A가 &lt;code class=&quot;language-text&quot;&gt;FIN&lt;/code&gt; 비트를 1로 설정한 세그먼트를 전송&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;2단계: ACK 세그먼트 전송 (B → A)&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;호스트 B가 &lt;code class=&quot;language-text&quot;&gt;ACK&lt;/code&gt; 세그먼트로 응답&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;3단계: FIN 세그먼트 전송 (B → A)&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;호스트 B가 &lt;code class=&quot;language-text&quot;&gt;FIN&lt;/code&gt; 세그먼트를 전송&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;4단계: ACK 세그먼트 전송 (A → B)&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;호스트 A가 &lt;code class=&quot;language-text&quot;&gt;ACK&lt;/code&gt; 세그먼트로 응답&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;💡 &lt;strong&gt;액티브 클로즈와 패시브 클로즈&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;액티브 클로즈(Active Close)&lt;/strong&gt;: 먼저 연결 종료를 요청하는 호스트의 동작&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;패시브 클로즈(Passive Close)&lt;/strong&gt;: 연결 종료 요청을 받아들이는 호스트의 동작&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;FIN 세그먼트를 먼저 보내는 호스트가 액티브 클로즈를 수행한다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;tcp-상태-관리&quot;&gt;TCP 상태 관리&lt;/h3&gt;
+&lt;h4 id=&quot;3-7-tcp-상태의-개념&quot;&gt;3-7 TCP 상태의 개념&lt;/h4&gt;
+&lt;p&gt;TCP는 &lt;strong&gt;상태를 유지하고 관리&lt;/strong&gt;하는 프로토콜이라는 점에서 &lt;code class=&quot;language-text&quot;&gt;스테이트풀 프로토콜(Stateful Protocol)&lt;/code&gt;이라고 부른다. 상태(State)란 현재 어떤 통신 과정에 있는지를 나타내는 정보이다.&lt;/p&gt;
+&lt;p&gt;TCP의 상태 정보는 네트워크 명령어(&lt;code class=&quot;language-text&quot;&gt;netstat&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;ss&lt;/code&gt; 등)를 통해 확인할 수 있으며, 현재 TCP 송수신 현황을 판단하고 디버깅에 활용할 수 있다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ &lt;span class=&quot;token function&quot;&gt;netstat&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-a&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-p&lt;/span&gt; tcp
+Proto Local Address      Foreign Address     State
+tcp4  &lt;span class=&quot;token number&quot;&gt;10.11&lt;/span&gt;.12.13.53625  &lt;span class=&quot;token number&quot;&gt;123.123&lt;/span&gt;.123.123     ESTABLISHED
+tcp4  &lt;span class=&quot;token number&quot;&gt;10.11&lt;/span&gt;.12.13.50102  &lt;span class=&quot;token number&quot;&gt;123.123&lt;/span&gt;.123.127     TIME_WAIT
+tcp4  localhost.16107    *.*                 LISTEN&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h4 id=&quot;3-8-tcp-상태-분류&quot;&gt;3-8 TCP 상태 분류&lt;/h4&gt;
+&lt;p&gt;TCP 상태는 연결 단계에 따라 3가지로 분류할 수 있다.&lt;/p&gt;
+&lt;h5&gt;연결 수립 전 상태&lt;/h5&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;상태&lt;/th&gt;
+&lt;th&gt;설명&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;CLOSED&lt;/td&gt;
+&lt;td&gt;아무런 연결이 없는 상태&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;LISTEN&lt;/td&gt;
+&lt;td&gt;연결 대기 상태 (SYN 세그먼트를 대기)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;서버는 일반적으로 &lt;code class=&quot;language-text&quot;&gt;LISTEN&lt;/code&gt; 상태에서 클라이언트의 연결 요청을 기다린다.&lt;/p&gt;
+&lt;h5&gt;연결 수립 과정 상태&lt;/h5&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;상태&lt;/th&gt;
+&lt;th&gt;설명&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;SYN-SENT&lt;/td&gt;
+&lt;td&gt;액티브 오픈 호스트가 SYN을 보낸 후 SYN+ACK를 기다리는 상태&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;SYN-RECEIVED&lt;/td&gt;
+&lt;td&gt;패시브 오픈 호스트가 SYN+ACK를 보낸 후 ACK를 기다리는 상태&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;ESTABLISHED&lt;/td&gt;
+&lt;td&gt;쓰리 웨이 핸드셰이크 완료 후 데이터를 송수신할 수 있는 상태&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h5&gt;연결 종료 과정 상태&lt;/h5&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;상태&lt;/th&gt;
+&lt;th&gt;설명&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;FIN-WAIT-1&lt;/td&gt;
+&lt;td&gt;액티브 클로즈 호스트가 FIN을 보낸 상태&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;CLOSE-WAIT&lt;/td&gt;
+&lt;td&gt;패시브 클로즈 호스트가 FIN을 받고 ACK를 보낸 후 대기 상태&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;FIN-WAIT-2&lt;/td&gt;
+&lt;td&gt;FIN-WAIT-1 상태에서 ACK를 받은 상태&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;LAST-ACK&lt;/td&gt;
+&lt;td&gt;CLOSE-WAIT 상태에서 FIN을 보낸 후 ACK를 기다리는 상태&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;TIME-WAIT&lt;/td&gt;
+&lt;td&gt;액티브 클로즈 호스트가 마지막 ACK를 보낸 후 대기 상태&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4 id=&quot;3-9-closing-상태&quot;&gt;3-9 CLOSING 상태&lt;/h4&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;CLOSING&lt;/code&gt; 상태는 양쪽 호스트가 동시에 FIN을 보내는 특수한 상황에서 발생한다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;서로 FIN 세그먼트를 보내고 받음&lt;/li&gt;
+&lt;li&gt;각자 ACK 세그먼트를 보냄&lt;/li&gt;
+&lt;li&gt;아직 자신의 FIN에 대한 ACK를 받지 못한 상태&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;이는 드문 경우이지만, 양쪽에서 동시에 연결 종료를 시도할 때 발생할 수 있다.&lt;/p&gt;
+&lt;h2 id=&quot;4️-정리&quot;&gt;4️⃣ 정리&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;TCP와 UDP는 각각 &lt;strong&gt;신뢰성&lt;/strong&gt;과 &lt;strong&gt;속도&lt;/strong&gt;라는 서로 다른 목표를 가진 프로토콜이다.
+&lt;ul&gt;
+&lt;li&gt;TCP는 &lt;code class=&quot;language-text&quot;&gt;3-way-handshake&lt;/code&gt;를 통한 연결 수립, &lt;code class=&quot;language-text&quot;&gt;순서 번호&lt;/code&gt;와 &lt;code class=&quot;language-text&quot;&gt;확인 응답 번호&lt;/code&gt;를 통한 신뢰성 보장, 흐름·오류·혼잡 제어를 통한 안정적인 전송, 그리고 &lt;code class=&quot;language-text&quot;&gt;4-way-handshake&lt;/code&gt;를 통한 안전한 연결 종료를 제공한다.&lt;/li&gt;
+&lt;li&gt;UDP는 최소한의 기능만 제공하여 빠른 전송이 가능하다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;포트 번호를 통한 프로세스 식별은 TCP와 UDP 모두가 제공하는 전송 계층의 핵심 기능이다. 이를 통해 네트워크 패킷은 &lt;strong&gt;호스트를 넘어 최종 목적지인 애플리케이션 프로세스&lt;/strong&gt;까지 정확히 전달될 수 있다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[[네트워크] 네트워크 계층과 IP 프로토콜]]></title><description><![CDATA[책을 읽으면서 배운 점을 정리합니다.
 물리 계층과 데이터 링크 계층은 LAN 내부 통신을 담당하지만, 서로 다른 네트워크 간의 통신을 위해서는 네트워크 계층이 필요하다. 이 글에서는 네트워크 계층의 핵심 프로토콜인 IP의 목적과 특징, IP…]]></description><link>https://inyoung.dev/network-layer-ip-protocol/</link><guid isPermaLink="false">https://inyoung.dev/network-layer-ip-protocol/</guid><pubDate>Sat, 14 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
 &lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;혼자 공부하는 네트워크&lt;/code&gt; 책을 읽으면서 배운 점을 정리합니다.
 물리 계층과 데이터 링크 계층은 LAN 내부 통신을 담당하지만, 서로 다른 네트워크 간의 통신을 위해서는 네트워크 계층이 필요하다. 이 글에서는 네트워크 계층의 핵심 프로토콜인 IP의 목적과 특징, IP 주소 체계, 그리고 관련 프로토콜들을 다룬다.&lt;/p&gt;

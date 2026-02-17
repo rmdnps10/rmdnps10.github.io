@@ -1,0 +1,1069 @@
+<!DOCTYPE html><html lang="ko"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><meta name="generator" content="Gatsby 5.14.1"/><meta name="theme-color" content="#000000"/><meta name="description" content="응용 계층의 핵심 프로토콜 HTTP의 기초 개념과 동작 원리를 정리합니다." data-gatsby-head="true"/><meta name="keywords" content="HTTP, DNS, URI, URL, 도메인 네임, HTTP 메서드, 상태 코드, HTTP 헤더, 요청-응답, REST API, HTTP status" data-gatsby-head="true"/><meta name="google-site-verification" content="xQKLF2y2-wtxhlY8T_2vxX7OTpw80YwsTUcOGBzgJh0" data-gatsby-head="true"/><meta name="naver-site-verification" content="6b66d2dd57797b90627f661b558aca36ceac6104" data-gatsby-head="true"/><meta name="google-adsense-account" content="ca-pub-1707103676035407" data-gatsby-head="true"/><meta property="og:title" content="[네트워크] HTTP의 기초 - DNS와 HTTP Message, Method, Status (스압 주의) " data-gatsby-head="true"/><meta property="og:description" content="응용 계층의 핵심 프로토콜 HTTP의 기초 개념과 동작 원리를 정리합니다." data-gatsby-head="true"/><meta property="og:type" content="article" data-gatsby-head="true"/><meta property="og:url" content="https://inyoung.dev/http-fundamentals/" data-gatsby-head="true"/><meta property="og:image" content="https://inyoung.dev/static/207c8b7097ff2de1790c0289a5f6716c/f3583/index.png" data-gatsby-head="true"/><meta property="og:image:alt" content="[네트워크] HTTP의 기초 - DNS와 HTTP Message, Method, Status (스압 주의) " data-gatsby-head="true"/><meta property="og:site_name" content="홈" data-gatsby-head="true"/><meta property="og:locale" content="ko_KR" data-gatsby-head="true"/><meta property="article:published_time" content="2026-02-16T00:00:00.000Z" data-gatsby-head="true"/><meta property="article:author" content="Inyoung Chung" data-gatsby-head="true"/><meta name="twitter:card" content="summary_large_image" data-gatsby-head="true"/><meta name="twitter:title" content="[네트워크] HTTP의 기초 - DNS와 HTTP Message, Method, Status (스압 주의) " data-gatsby-head="true"/><meta name="twitter:description" content="응용 계층의 핵심 프로토콜 HTTP의 기초 개념과 동작 원리를 정리합니다." data-gatsby-head="true"/><meta name="twitter:image" content="https://inyoung.dev/static/207c8b7097ff2de1790c0289a5f6716c/f3583/index.png" data-gatsby-head="true"/><style data-href="/styles.c7e97cbcbebdc9f30ad0.css" data-identity="gatsby-global-css">@import url(https://cdn.jsdelivr.net/npm/pretendard/dist/web/static/pretendard.css);@font-face{font-display:swap;font-family:Montserrat Variable;font-style:normal;font-weight:100 900;src:url(/static/montserrat-cyrillic-ext-wght-normal-a37a0a99fe7114b059fc5c727df1b240.woff2) format("woff2-variations");unicode-range:u+0460-052f,u+1c80-1c8a,u+20b4,u+2de0-2dff,u+a640-a69f,u+fe2e-fe2f}@font-face{font-display:swap;font-family:Montserrat Variable;font-style:normal;font-weight:100 900;src:url(/static/montserrat-cyrillic-wght-normal-2d3f60b3651996e1e1b91b51647219c9.woff2) format("woff2-variations");unicode-range:u+0301,u+0400-045f,u+0490-0491,u+04b0-04b1,u+2116}@font-face{font-display:swap;font-family:Montserrat Variable;font-style:normal;font-weight:100 900;src:url(/static/montserrat-vietnamese-wght-normal-f7d3e187fbfa74d13432c68b2d1e1535.woff2) format("woff2-variations");unicode-range:u+0102-0103,u+0110-0111,u+0128-0129,u+0168-0169,u+01a0-01a1,u+01af-01b0,u+0300-0301,u+0303-0304,u+0308-0309,u+0323,u+0329,u+1ea0-1ef9,u+20ab}@font-face{font-display:swap;font-family:Montserrat Variable;font-style:normal;font-weight:100 900;src:url(/static/montserrat-latin-ext-wght-normal-e82538774f550ca997db8e917f8825a5.woff2) format("woff2-variations");unicode-range:u+0100-02ba,u+02bd-02c5,u+02c7-02cc,u+02ce-02d7,u+02dd-02ff,u+0304,u+0308,u+0329,u+1d00-1dbf,u+1e00-1e9f,u+1ef2-1eff,u+2020,u+20a0-20ab,u+20ad-20c0,u+2113,u+2c60-2c7f,u+a720-a7ff}@font-face{font-display:swap;font-family:Montserrat Variable;font-style:normal;font-weight:100 900;src:url(/static/montserrat-latin-wght-normal-551b13d3bdcbbd92d8a75a6b8d05a51e.woff2) format("woff2-variations");unicode-range:u+00??,u+0131,u+0152-0153,u+02bb-02bc,u+02c6,u+02da,u+02dc,u+0304,u+0308,u+0329,u+2000-206f,u+20ac,u+2122,u+2191,u+2193,u+2212,u+2215,u+feff,u+fffd}@font-face{font-display:swap;font-family:Merriweather;font-style:normal;font-weight:400;src:url(/static/merriweather-cyrillic-ext-400-normal-2a880e22b1b888ab54652a36d43b7f16.woff2) format("woff2"),url(/static/merriweather-cyrillic-ext-400-normal-7d8546944154663cc54693d15bb31721.woff) format("woff");unicode-range:u+0460-052f,u+1c80-1c8a,u+20b4,u+2de0-2dff,u+a640-a69f,u+fe2e-fe2f}@font-face{font-display:swap;font-family:Merriweather;font-style:normal;font-weight:400;src:url(/static/merriweather-cyrillic-400-normal-fde0b55efc50742fb57fbebbb11c572f.woff2) format("woff2"),url(/static/merriweather-cyrillic-400-normal-2e7c71643f6e0e4c1e73f28a7a1798e6.woff) format("woff");unicode-range:u+0301,u+0400-045f,u+0490-0491,u+04b0-04b1,u+2116}@font-face{font-display:swap;font-family:Merriweather;font-style:normal;font-weight:400;src:url(data:font/woff2;base64,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) format("woff2"),url(data:font/woff;base64,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) format("woff");unicode-range:u+0102-0103,u+0110-0111,u+0128-0129,u+0168-0169,u+01a0-01a1,u+01af-01b0,u+0300-0301,u+0303-0304,u+0308-0309,u+0323,u+0329,u+1ea0-1ef9,u+20ab}@font-face{font-display:swap;font-family:Merriweather;font-style:normal;font-weight:400;src:url(/static/merriweather-latin-ext-400-normal-4657f5ab02d5923d223f96a9155a9bdc.woff2) format("woff2"),url(/static/merriweather-latin-ext-400-normal-7b1ee735b2541bc831bd57bacecc9d41.woff) format("woff");unicode-range:u+0100-02ba,u+02bd-02c5,u+02c7-02cc,u+02ce-02d7,u+02dd-02ff,u+0304,u+0308,u+0329,u+1d00-1dbf,u+1e00-1e9f,u+1ef2-1eff,u+2020,u+20a0-20ab,u+20ad-20c0,u+2113,u+2c60-2c7f,u+a720-a7ff}@font-face{font-display:swap;font-family:Merriweather;font-style:normal;font-weight:400;src:url(/static/merriweather-latin-400-normal-e009f21405b4d7e893674b69deb4cf4a.woff2) format("woff2"),url(/static/merriweather-latin-400-normal-2c455928024d0ee049d896a25f9e30e1.woff) format("woff");unicode-range:u+00??,u+0131,u+0152-0153,u+02bb-02bc,u+02c6,u+02da,u+02dc,u+0304,u+0308,u+0329,u+2000-206f,u+20ac,u+2122,u+2191,u+2193,u+2212,u+2215,u+feff,u+fffd}
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */html{-webkit-text-size-adjust:100%;line-height:1.15}main{display:block}h1{font-size:2em;margin:.67em 0}hr{box-sizing:content-box;overflow:visible}pre{font-family:monospace,monospace}a{background-color:transparent}abbr[title]{border-bottom:none;text-decoration:underline;-webkit-text-decoration:underline dotted;text-decoration:underline dotted}code,kbd,samp{font-family:monospace,monospace}img{border-style:none}button,input,optgroup,select,textarea{-moz-appearance:none;appearance:none;-webkit-appearance:none;font-family:var(--fontFamily-pretendard);line-height:1.15}button,input{overflow:visible}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button;-moz-appearance:button;appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;white-space:normal}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]::-webkit-search-decoration{-webkit-appearance:none}details{display:block}[hidden]{display:none}input[type=text]{-moz-appearance:textfield;appearance:textfield;-webkit-appearance:textfield}code[class*=language-],pre[class*=language-]{word-wrap:normal;background:none;color:#fff;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;hyphens:none;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;text-align:left;text-shadow:0 -.1em .2em #000;white-space:pre;word-break:normal;word-spacing:normal}:not(pre)>code[class*=language-],pre[class*=language-]{background:#141414}pre[class*=language-]{border:.3em solid #545454;border-radius:.5em;box-shadow:inset 1px 1px .5em #000;margin:.5em 0;overflow:auto;padding:1em}pre[class*=language-]::-moz-selection{background:#27292a}pre[class*=language-]::selection{background:#27292a}code[class*=language-] ::-moz-selection,code[class*=language-]::-moz-selection,pre[class*=language-] ::-moz-selection,pre[class*=language-]::-moz-selection{background:hsla(0,0%,93%,.15);text-shadow:none}code[class*=language-] ::selection,code[class*=language-]::selection,pre[class*=language-] ::selection,pre[class*=language-]::selection{background:hsla(0,0%,93%,.15);text-shadow:none}:not(pre)>code[class*=language-]{border:.13em solid #545454;border-radius:.3em;box-shadow:inset 1px 1px .3em -.1em #000;padding:.15em .2em .05em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#787878}.token.namespace,.token.punctuation{opacity:.7}.token.boolean,.token.deleted,.token.number,.token.tag{color:#cf694a}.token.builtin,.token.constant,.token.keyword,.token.property,.token.selector,.token.symbol{color:#f9ee9a}.language-css .token.string,.style .token.string,.token.attr-name,.token.attr-value,.token.char,.token.entity,.token.inserted,.token.operator,.token.string,.token.url,.token.variable{color:#919e6b}.token.atrule{color:#7386a5}.token.important,.token.regex{color:#e9c163}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}.language-markup .token.attr-name,.language-markup .token.punctuation,.language-markup .token.tag{color:#ad895c}.token{position:relative;z-index:1}.line-highlight.line-highlight{background:rgba(84,84,84,.25);background:linear-gradient(90deg,rgba(84,84,84,.1) 70%,rgba(84,84,84,0));border-bottom:1px dashed #545454;border-top:1px dashed #545454;margin-top:.75em;z-index:0}.line-highlight.line-highlight:before,.line-highlight.line-highlight[data-end]:after{background-color:#8794a6;color:#f5f2f0}@font-face{font-display:swap;font-family:Paperozi;font-weight:100;src:url(https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-1Thin.woff2) format("woff2")}@font-face{font-display:swap;font-family:Paperozi;font-weight:200;src:url(https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-2ExtraLight.woff2) format("woff2")}@font-face{font-display:swap;font-family:Paperozi;font-weight:300;src:url(https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-3Light.woff2) format("woff2")}@font-face{font-display:swap;font-family:Paperozi;font-weight:400;src:url(https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-4Regular.woff2) format("woff2")}@font-face{font-display:swap;font-family:Paperozi;font-weight:500;src:url(https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-5Medium.woff2) format("woff2")}@font-face{font-display:swap;font-family:Paperozi;font-weight:600;src:url(https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-6SemiBold.woff2) format("woff2")}@font-face{font-display:swap;font-family:Paperozi;font-weight:700;src:url(https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-7Bold.woff2) format("woff2")}@font-face{font-display:swap;font-family:Paperozi;font-weight:800;src:url(https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-8ExtraBold.woff2) format("woff2")}@font-face{font-display:swap;font-family:Paperozi;font-weight:900;src:url(https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-9Black.woff2) format("woff2")}*{box-sizing:border-box;margin:0;padding:0}p,span{word-break:keep-all}.portfolio-activity,.portfolio-activity *,section[id=about],section[id=about] *,section[id=activity],section[id=activity] *,section[id=career],section[id=career] *,section[id=featured],section[id=featured] *,section[id=hero],section[id=hero] *,section[id=projects],section[id=projects] *{font-family:Paperozi,sans-serif!important}.career-period-badge{font-weight:500;position:relative;transition:all .2s ease}.career-period-badge:hover{opacity:.9;transform:scale(1.05)}.career-position-button{cursor:default;position:relative}.text-stroke{-webkit-text-stroke:.1rem #fff;color:transparent;font-size:80px}.featured-swiper{overflow:visible!important;padding:40px 0 80px;width:100%}.featured-swiper .swiper-slide{align-items:center;display:flex;justify-content:center;transition:transform .6s cubic-bezier(.25,.46,.45,.94)!important}.featured-swiper .swiper-slide-active{z-index:10}.featured-swiper .swiper-slide-shadow-left,.featured-swiper .swiper-slide-shadow-right{display:none!important}.featured-swiper .swiper-wrapper{background:transparent!important;transition-timing-function:cubic-bezier(.25,.46,.45,.94)!important}.featured-swiper{background:transparent!important}.featured-swiper .swiper-slide:after,.featured-swiper .swiper-slide:before{display:none!important}.featured-swiper .swiper-slide{box-shadow:none!important}.featured-swiper .swiper-button-next,.featured-swiper .swiper-button-prev{display:none!important}.featured-swiper .swiper-pagination{bottom:0!important}.featured-swiper .swiper-pagination-bullet{background:hsla(0,0%,100%,.5);height:12px;opacity:1;transition:all .3s ease;width:12px}.featured-swiper .swiper-pagination-bullet-active{background:#fff;border-radius:6px;width:24px}.featured-swiper .swiper-slide>div{opacity:1!important;transform:none!important}.featured-swiper .swiper-slide-active>div{opacity:1!important;transform:scale(1)!important}*,:after,:before{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }
+
+/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,:after,:before{border:0 solid #e5e7eb}:after,:before{--tw-content:""}:host,html{-webkit-text-size-adjust:100%;font-feature-settings:normal;-webkit-tap-highlight-color:transparent;font-family:MontserratVariable,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;font-variation-settings:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4}body{line-height:inherit;margin:0}hr{border-top-width:1px;color:inherit;height:0}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-feature-settings:normal;font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;font-size:1em;font-variation-settings:normal}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{border-color:inherit;text-indent:0}button,input,optgroup,select,textarea{font-feature-settings:inherit;color:inherit;font-family:inherit;font-size:100%;font-variation-settings:inherit;font-weight:inherit;letter-spacing:inherit;line-height:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0}fieldset,legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::-moz-placeholder,textarea::-moz-placeholder{color:#9ca3af;opacity:1}input::placeholder,textarea::placeholder{color:#9ca3af;opacity:1}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{height:auto;max-width:100%}[hidden]:where(:not([hidden=until-found])){display:none}:root{--background:0 0% 100%;--foreground:224 71.4% 4.1%;--card:0 0% 100%;--card-foreground:224 71.4% 4.1%;--popover:0 0% 100%;--popover-foreground:224 71.4% 4.1%;--primary:220.9 39.3% 11%;--primary-foreground:210 20% 98%;--secondary:220 14.3% 95.9%;--secondary-foreground:220.9 39.3% 11%;--muted:220 14.3% 95.9%;--muted-foreground:220 8.9% 46.1%;--accent:220 14.3% 95.9%;--accent-foreground:220.9 39.3% 11%;--destructive:0 84.2% 60.2%;--destructive-foreground:210 20% 98%;--border:220 13% 91%;--input:220 13% 91%;--ring:224 71.4% 4.1%;--chart-1:12 76% 61%;--chart-2:173 58% 39%;--chart-3:197 37% 24%;--chart-4:43 74% 66%;--chart-5:27 87% 67%;--radius:0.5rem}.dark{--background:224 71.4% 4.1%;--foreground:210 20% 98%;--card:224 71.4% 4.1%;--card-foreground:210 20% 98%;--popover:224 71.4% 4.1%;--popover-foreground:210 20% 98%;--primary:210 20% 98%;--primary-foreground:220.9 39.3% 11%;--secondary:215 27.9% 16.9%;--secondary-foreground:210 20% 98%;--muted:215 27.9% 16.9%;--muted-foreground:217.9 10.6% 64.9%;--accent:215 27.9% 16.9%;--accent-foreground:210 20% 98%;--destructive:0 62.8% 30.6%;--destructive-foreground:210 20% 98%;--border:215 27.9% 16.9%;--input:215 27.9% 16.9%;--ring:216 12.2% 83.9%;--chart-1:220 70% 50%;--chart-2:160 60% 45%;--chart-3:30 80% 55%;--chart-4:280 65% 60%;--chart-5:340 75% 55%}*{border-color:hsl(var(--border))}body{background-color:hsl(var(--background));color:hsl(var(--foreground))}.sr-only{clip:rect(0,0,0,0);border-width:0;height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;white-space:nowrap;width:1px}.pointer-events-none{pointer-events:none}.visible{visibility:visible}.static{position:static}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.-top-8{top:-2rem}.bottom-0{bottom:0}.bottom-\[100px\]{bottom:100px}.bottom-\[20px\]{bottom:20px}.left-0{left:0}.left-1\/2{left:50%}.left-3{left:.75rem}.left-\[10px\]{left:10px}.left-\[24px\]{left:24px}.left-\[30px\]{left:30px}.right-0{right:0}.right-3{right:.75rem}.right-6{right:1.5rem}.right-\[10px\]{right:10px}.top-0{top:0}.top-1\/2{top:50%}.top-6{top:1.5rem}.top-\[10px\]{top:10px}.top-\[30px\]{top:30px}.z-0{z-index:0}.z-10{z-index:10}.z-20{z-index:20}.z-50{z-index:50}.z-\[1\]{z-index:1}.m-0{margin:0}.m-1{margin:.25rem}.mx-4{margin-left:1rem;margin-right:1rem}.mx-\[2px\]{margin-left:2px;margin-right:2px}.mx-auto{margin-left:auto;margin-right:auto}.my-2{margin-bottom:.5rem;margin-top:.5rem}.mb-0{margin-bottom:0}.mb-1{margin-bottom:.25rem}.mb-2{margin-bottom:.5rem}.mb-3{margin-bottom:.75rem}.mb-4{margin-bottom:1rem}.mb-6{margin-bottom:1.5rem}.mb-8{margin-bottom:2rem}.mb-\[50px\]{margin-bottom:50px}.ml-auto{margin-left:auto}.mr-2{margin-right:.5rem}.mt-0{margin-top:0}.mt-1{margin-top:.25rem}.mt-1\.5{margin-top:.375rem}.mt-10{margin-top:2.5rem}.mt-12{margin-top:3rem}.mt-2{margin-top:.5rem}.mt-3{margin-top:.75rem}.mt-5{margin-top:1.25rem}.mt-6{margin-top:1.5rem}.mt-8{margin-top:2rem}.mt-\[100px\]{margin-top:100px}.mt-\[10px\]{margin-top:10px}.mt-\[150px\]{margin-top:150px}.mt-\[200px\]{margin-top:200px}.mt-\[50px\]{margin-top:50px}.mt-auto{margin-top:auto}.line-clamp-1{-webkit-line-clamp:1}.line-clamp-1,.line-clamp-2{-webkit-box-orient:vertical;display:-webkit-box;overflow:hidden}.line-clamp-2{-webkit-line-clamp:2}.block{display:block}.inline-block{display:inline-block}.flex{display:flex}.inline-flex{display:inline-flex}.grid{display:grid}.hidden{display:none}.h-0\.5{height:.125rem}.h-10{height:2.5rem}.h-3{height:.75rem}.h-32{height:8rem}.h-4{height:1rem}.h-40{height:10rem}.h-\[120px\]{height:120px}.h-\[160px\]{height:160px}.h-\[180px\]{height:180px}.h-\[200px\]{height:200px}.h-\[20px\]{height:20px}.h-\[250px\]{height:250px}.h-\[27px\]{height:27px}.h-\[30px\]{height:30px}.h-\[54px\]{height:54px}.h-\[calc\(100vh_-_53px\)\]{height:calc(100vh - 53px)}.h-full{height:100%}.min-h-\[60vh\]{min-height:60vh}.\!w-auto{width:auto!important}.w-0\.5{width:.125rem}.w-3{width:.75rem}.w-4{width:1rem}.w-4\/5{width:80%}.w-8{width:2rem}.w-\[120px\]{width:120px}.w-\[250px\]{width:250px}.w-\[27px\]{width:27px}.w-\[350px\]{width:350px}.w-\[600px\]{width:600px}.w-full{width:100%}.w-px{width:1px}.max-w-7xl{max-width:80rem}.max-w-\[90vw\]{max-width:90vw}.max-w-fit{max-width:-moz-fit-content;max-width:fit-content}.max-w-md{max-width:28rem}.max-w-wrapper{max-width:var(--maxWidth-wrapper)}.flex-1{flex:1 1 0%}.flex-shrink-0{flex-shrink:0}.flex-grow{flex-grow:1}.-translate-x-1\/2{--tw-translate-x:-50%}.-translate-x-1\/2,.-translate-y-1\/2{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.-translate-y-1\/2{--tw-translate-y:-50%}.translate-y-0{--tw-translate-y:0}.translate-y-0,.translate-y-full{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.translate-y-full{--tw-translate-y:100%}.transform{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}@keyframes pulse{50%{opacity:.5}}.animate-pulse{animation:pulse 2s cubic-bezier(.4,0,.6,1) infinite}.cursor-pointer{cursor:pointer}.select-none{-webkit-user-select:none;-moz-user-select:none;user-select:none}.resize{resize:both}.scroll-mt-10{scroll-margin-top:2.5rem}.list-none{list-style-type:none}.appearance-none{-webkit-appearance:none;-moz-appearance:none;appearance:none}.grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-start{align-items:flex-start}.items-center{align-items:center}.justify-end{justify-content:flex-end}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-0{gap:0}.gap-1{gap:.25rem}.gap-2{gap:.5rem}.gap-3{gap:.75rem}.gap-4{gap:1rem}.gap-6{gap:1.5rem}.gap-8{gap:2rem}.gap-\[10px\]{gap:10px}.gap-\[50px\]{gap:50px}.gap-\[6px\]{gap:6px}.space-y-2>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-bottom:calc(.5rem*var(--tw-space-y-reverse));margin-top:calc(.5rem*(1 - var(--tw-space-y-reverse)))}.space-y-2\.5>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-bottom:calc(.625rem*var(--tw-space-y-reverse));margin-top:calc(.625rem*(1 - var(--tw-space-y-reverse)))}.overflow-hidden{overflow:hidden}.overflow-x-auto{overflow-x:auto}.truncate{overflow:hidden;text-overflow:ellipsis}.truncate,.whitespace-nowrap{white-space:nowrap}.whitespace-pre-wrap{white-space:pre-wrap}.break-keep{word-break:keep-all}.rounded{border-radius:.25rem}.rounded-\[14px\]{border-radius:14px}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:var(--radius)}.rounded-md{border-radius:calc(var(--radius) - 2px)}.rounded-xl{border-radius:.75rem}.border{border-width:1px}.border-2{border-width:2px}.border-b{border-bottom-width:1px}.border-t{border-top-width:1px}.border-none{border-style:none}.border-\[\#52525B\]{--tw-border-opacity:1;border-color:rgb(82 82 91/var(--tw-border-opacity,1))}.border-gray-500{--tw-border-opacity:1;border-color:rgb(107 114 128/var(--tw-border-opacity,1))}.border-gray-800{--tw-border-opacity:1;border-color:rgb(31 41 55/var(--tw-border-opacity,1))}.border-white\/10{border-color:hsla(0,0%,100%,.1)}.border-zinc-600{--tw-border-opacity:1;border-color:rgb(82 82 91/var(--tw-border-opacity,1))}.bg-\[\#1a1a1a\]{--tw-bg-opacity:1;background-color:rgb(26 26 26/var(--tw-bg-opacity,1))}.bg-\[\#1e1e1d\]{--tw-bg-opacity:1;background-color:rgb(30 30 29/var(--tw-bg-opacity,1))}.bg-\[\#252525\]{--tw-bg-opacity:1;background-color:rgb(37 37 37/var(--tw-bg-opacity,1))}.bg-\[\#2A2A2A\],.bg-\[\#2a2a2a\]{--tw-bg-opacity:1;background-color:rgb(42 42 42/var(--tw-bg-opacity,1))}.bg-\[\#3f3f46\]{--tw-bg-opacity:1;background-color:rgb(63 63 70/var(--tw-bg-opacity,1))}.bg-\[\#444857\]{--tw-bg-opacity:1;background-color:rgb(68 72 87/var(--tw-bg-opacity,1))}.bg-darkMain{background-color:var(--color-dark-main)}.bg-gray-600{--tw-bg-opacity:1;background-color:rgb(75 85 99/var(--tw-bg-opacity,1))}.bg-gray-700{--tw-bg-opacity:1;background-color:rgb(55 65 81/var(--tw-bg-opacity,1))}.bg-gray-800{--tw-bg-opacity:1;background-color:rgb(31 41 55/var(--tw-bg-opacity,1))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255/var(--tw-bg-opacity,1))}.bg-yellow{background-color:var(--color-yellow)}.bg-gradient-to-br{background-image:linear-gradient(to bottom right,var(--tw-gradient-stops))}.bg-gradient-to-r{background-image:linear-gradient(to right,var(--tw-gradient-stops))}.from-\[\#262626\]{--tw-gradient-from:#262626 var(--tw-gradient-from-position);--tw-gradient-to:rgba(38,38,38,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-\[\#fede22\]{--tw-gradient-from:#fede22 var(--tw-gradient-from-position);--tw-gradient-to:rgba(254,222,34,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.to-\[\#212121\]{--tw-gradient-to:#212121 var(--tw-gradient-to-position)}.to-\[\#3b82f6\]{--tw-gradient-to:#3b82f6 var(--tw-gradient-to-position)}.bg-clip-text{-webkit-background-clip:text;background-clip:text}.object-cover{-o-object-fit:cover;object-fit:cover}.p-0{padding:0}.p-3{padding:.75rem}.p-4{padding:1rem}.px-1\.5{padding-left:.375rem;padding-right:.375rem}.px-2{padding-left:.5rem;padding-right:.5rem}.px-2\.5{padding-left:.625rem;padding-right:.625rem}.px-3{padding-left:.75rem;padding-right:.75rem}.px-4{padding-left:1rem;padding-right:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.px-\[0px\]{padding-left:0;padding-right:0}.px-\[10px\]{padding-left:10px;padding-right:10px}.px-\[24px\]{padding-left:24px;padding-right:24px}.py-0\.5{padding-bottom:.125rem;padding-top:.125rem}.py-1{padding-bottom:.25rem;padding-top:.25rem}.py-1\.5{padding-bottom:.375rem;padding-top:.375rem}.py-12{padding-bottom:3rem;padding-top:3rem}.py-2{padding-bottom:.5rem;padding-top:.5rem}.py-3{padding-bottom:.75rem;padding-top:.75rem}.py-6{padding-bottom:1.5rem;padding-top:1.5rem}.py-8{padding-bottom:2rem;padding-top:2rem}.py-\[100px\]{padding-bottom:100px;padding-top:100px}.py-\[15px\]{padding-bottom:15px;padding-top:15px}.py-\[20px\]{padding-bottom:20px;padding-top:20px}.pb-0{padding-bottom:0}.pb-4{padding-bottom:1rem}.pb-8{padding-bottom:2rem}.pb-\[50px\]{padding-bottom:50px}.pl-10{padding-left:2.5rem}.pr-4{padding-right:1rem}.pr-8{padding-right:2rem}.pt-0{padding-top:0}.pt-10{padding-top:2.5rem}.pt-4{padding-top:1rem}.pt-8{padding-top:2rem}.pt-\[100px\]{padding-top:100px}.text-center{text-align:center}.text-right{text-align:right}.font-paperozi{font-family:Paperozi,sans-serif}.font-pretendard{font-family:Pretendard,sans-serif}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3{font-size:1.44rem}.text-6xl{font-size:3.75rem;line-height:1}.text-\[1\.1rem\]{font-size:1.1rem}.text-\[10px\]{font-size:10px}.text-\[12px\]{font-size:12px}.text-\[13px\]{font-size:13px}.text-\[14px\]{font-size:14px}.text-\[16px\]{font-size:16px}.text-\[20px\]{font-size:20px}.text-\[24px\]{font-size:24px}.text-\[40px\]{font-size:40px}.text-base{font-size:1rem;line-height:1.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:.75rem;line-height:1rem}.font-black{font-weight:900}.font-bold{font-weight:700}.font-extralight{font-weight:200}.font-light{font-weight:300}.font-medium{font-weight:500}.font-normal{font-weight:400}.font-semibold{font-weight:600}.leading-relaxed{line-height:1.625}.leading-tight{line-height:1.1}.text-\[\#1e1e1d\]{--tw-text-opacity:1;color:rgb(30 30 29/var(--tw-text-opacity,1))}.text-\[\#252525\]{--tw-text-opacity:1;color:rgb(37 37 37/var(--tw-text-opacity,1))}.text-\[\#CFCFCF\]{--tw-text-opacity:1;color:rgb(207 207 207/var(--tw-text-opacity,1))}.text-black{--tw-text-opacity:1;color:rgb(0 0 0/var(--tw-text-opacity,1))}.text-cyan-300{--tw-text-opacity:1;color:rgb(103 232 249/var(--tw-text-opacity,1))}.text-cyan-500{--tw-text-opacity:1;color:rgb(6 182 212/var(--tw-text-opacity,1))}.text-gray-300{--tw-text-opacity:1;color:rgb(209 213 219/var(--tw-text-opacity,1))}.text-gray-400{--tw-text-opacity:1;color:rgb(156 163 175/var(--tw-text-opacity,1))}.text-gray-500{--tw-text-opacity:1;color:rgb(107 114 128/var(--tw-text-opacity,1))}.text-transparent{color:transparent}.text-white{--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity,1))}.drop-shadow{--tw-drop-shadow:drop-shadow(0 1px 2px rgba(0,0,0,.1)) drop-shadow(0 1px 1px rgba(0,0,0,.06))}.drop-shadow,.filter{filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.transition{transition-duration:.15s;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter;transition-timing-function:cubic-bezier(.4,0,.2,1)}.transition-all{transition-duration:.15s;transition-property:all;transition-timing-function:cubic-bezier(.4,0,.2,1)}.transition-colors{transition-duration:.15s;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke;transition-timing-function:cubic-bezier(.4,0,.2,1)}.transition-transform{transition-duration:.15s;transition-property:transform;transition-timing-function:cubic-bezier(.4,0,.2,1)}.duration-1000{transition-duration:1s}.duration-200{transition-duration:.2s}.duration-300{transition-duration:.3s}.ease-in-out{transition-timing-function:cubic-bezier(.4,0,.2,1)}.ease-out{transition-timing-function:cubic-bezier(0,0,.2,1)}@keyframes enter{0%{opacity:var(--tw-enter-opacity,1);transform:translate3d(var(--tw-enter-translate-x,0),var(--tw-enter-translate-y,0),0) scale3d(var(--tw-enter-scale,1),var(--tw-enter-scale,1),var(--tw-enter-scale,1)) rotate(var(--tw-enter-rotate,0))}}@keyframes exit{to{opacity:var(--tw-exit-opacity,1);transform:translate3d(var(--tw-exit-translate-x,0),var(--tw-exit-translate-y,0),0) scale3d(var(--tw-exit-scale,1),var(--tw-exit-scale,1),var(--tw-exit-scale,1)) rotate(var(--tw-exit-rotate,0))}}.duration-1000{animation-duration:1s}.duration-200{animation-duration:.2s}.duration-300{animation-duration:.3s}.ease-in-out{animation-timing-function:cubic-bezier(.4,0,.2,1)}.ease-out{animation-timing-function:cubic-bezier(0,0,.2,1)}:root{--maxWidth-none:"none";--maxWidth-xs:20rem;--maxWidth-sm:24rem;--maxWidth-md:28rem;--maxWidth-lg:32rem;--maxWidth-xl:36rem;--maxWidth-2xl:42rem;--maxWidth-3xl:48rem;--maxWidth-4xl:65rem;--maxWidth-5xl:70rem;--maxWidth-6xl:75rem;--maxWidth-full:"100%";--maxWidth-wrapper:var(--maxWidth-6xl);--spacing-px:"1px";--spacing-0:0;--spacing-1:0.25rem;--spacing-2:0.5rem;--spacing-3:0.75rem;--spacing-4:1rem;--spacing-5:1.25rem;--spacing-6:1.5rem;--spacing-8:2rem;--spacing-10:2.5rem;--spacing-12:3rem;--spacing-16:4rem;--spacing-20:5rem;--spacing-24:6rem;--spacing-32:8rem;--fontFamily-sans:"MontserratVariable",system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";--fontFamily-serif:"Merriweather","Georgia",Cambria,"Times New Roman",Times,serif;--fontFamily-pretendard:"Pretendard",system-ui;--font-body:var(--fontFamily-serif);--font-heading:var(--fontFamily-sans);--fontWeight-normal:400;--fontWeight-bold:700;--fontWeight-black:900;--fontSize-root:16px;--fontSize-0:0.833rem;--fontSize-1:1rem;--fontSize-2:1.2rem;--fontSize-3:1.44rem;--fontSize-4:1.728rem;--fontSize-5:2.074rem;--fontSize-6:2.488rem;--fontSize-7:2.986rem;--lineHeight-none:1;--lineHeight-tight:1.1;--lineHeight-normal:1.5;--lineHeight-relaxed:1.625;--color-primary:#005b99;--color-dark-background:#121212;--color-background:#1c1c1c;--color-text:#ededed;--color-text-light:#d3d3d3;--color-heading:#fff;--color-heading-black:#fff;--color-accent:#d1dce5;--color-dark-main:#1e1e1e;--color-lightdark:#424242;--color-yellow:#fede22;--color-lightdark-translucent:rgba(66,66,66,.8);--color-light:#ededed;--color-lightgreen:#d3ffcf;--color-darkgreen:#003900;color-scheme:light dark}*,:after,:before{box-sizing:border-box}html{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-size:var(--fontSize-root);line-height:var(--lineHeight-normal)}body{background-color:var(--color-dark-main);color:var(--color-text);font-family:var(--fontFamily-pretendard);font-size:var(--fontSize-1)}footer{padding:var(--spacing-6) var(--spacing-0)}hr{background:var(--color-accent);border:0;height:1px}.global-wrapper{margin:var(--spacing-0) auto;max-width:var(--maxWidth-wrapper);padding:var(--spacing-10) var(--spacing-5)}.bio{display:flex;margin-bottom:var(--spacing-16)}.bio p,.bio-avatar{margin-bottom:var(--spacing-0)}.bio-avatar{border-radius:100%;margin-right:var(--spacing-4);min-width:50px}.last\:pb-0:last-child{padding-bottom:0}.hover\:scale-105:hover{--tw-scale-x:1.05;--tw-scale-y:1.05}.hover\:scale-105:hover,.hover\:scale-110:hover{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.hover\:scale-110:hover{--tw-scale-x:1.1;--tw-scale-y:1.1}.hover\:border-\[\#3b82f6\]:hover{--tw-border-opacity:1;border-color:rgb(59 130 246/var(--tw-border-opacity,1))}.hover\:border-\[\#fede22\]:hover{--tw-border-opacity:1;border-color:rgb(254 222 34/var(--tw-border-opacity,1))}.hover\:border-gray-600:hover{--tw-border-opacity:1;border-color:rgb(75 85 99/var(--tw-border-opacity,1))}.hover\:border-white:hover{--tw-border-opacity:1;border-color:rgb(255 255 255/var(--tw-border-opacity,1))}.hover\:border-white\/20:hover{border-color:hsla(0,0%,100%,.2)}.hover\:border-opacity-80:hover{--tw-border-opacity:0.8}.hover\:text-cyan-300:hover{--tw-text-opacity:1;color:rgb(103 232 249/var(--tw-text-opacity,1))}.hover\:text-gray-500:hover{--tw-text-opacity:1;color:rgb(107 114 128/var(--tw-text-opacity,1))}.hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity,1))}.hover\:opacity-70:hover{opacity:.7}.hover\:shadow-\[0_0_12px_rgba\(254\2c 222\2c 34\2c 0\.4\)\]:hover{--tw-shadow:0 0 12px rgba(254,222,34,.4);--tw-shadow-colored:0 0 12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.hover\:shadow-\[0_0_12px_rgba\(59\2c 130\2c 246\2c 0\.4\)\]:hover{--tw-shadow:0 0 12px rgba(59,130,246,.4);--tw-shadow-colored:0 0 12px var(--tw-shadow-color)}.hover\:shadow-\[0_0_12px_rgba\(59\2c 130\2c 246\2c 0\.4\)\]:hover,.hover\:shadow-md:hover{box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.hover\:shadow-md:hover{--tw-shadow:0 4px 6px -1px rgba(0,0,0,.1),0 2px 4px -2px rgba(0,0,0,.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color),0 2px 4px -2px var(--tw-shadow-color)}.focus\:border-gray-500:focus{--tw-border-opacity:1;border-color:rgb(107 114 128/var(--tw-border-opacity,1))}.focus\:outline-none:focus{outline:2px solid transparent;outline-offset:2px}.group:hover .group-hover\:text-blue-400{--tw-text-opacity:1;color:rgb(96 165 250/var(--tw-text-opacity,1))}.group:hover .group-hover\:text-gray-400{--tw-text-opacity:1;color:rgb(156 163 175/var(--tw-text-opacity,1))}.group:hover .group-hover\:text-white{--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity,1))}@media (min-width:640px){.sm\:flex-row{flex-direction:row}.sm\:text-base{font-size:1rem;line-height:1.5rem}}@media (min-width:768px){.md\:sticky{position:sticky}.md\:-top-12{top:-3rem}.md\:left-auto{left:auto}.md\:right-\[10px\]{right:10px}.md\:top-20{top:5rem}.md\:my-3{margin-bottom:.75rem;margin-top:.75rem}.md\:mb-12{margin-bottom:3rem}.md\:mb-3{margin-bottom:.75rem}.md\:mb-\[500px\]{margin-bottom:500px}.md\:mt-12{margin-top:3rem}.md\:mt-5{margin-top:1.25rem}.md\:mt-\[100px\]{margin-top:100px}.md\:mt-\[200px\]{margin-top:200px}.md\:mt-\[300px\]{margin-top:300px}.md\:mt-\[400px\]{margin-top:400px}.md\:block{display:block}.md\:flex{display:flex}.md\:h-4{height:1rem}.md\:h-40{height:10rem}.md\:h-5{height:1.25rem}.md\:h-60{height:15rem}.md\:h-\[240px\]{height:240px}.md\:h-\[300px\]{height:300px}.md\:h-\[30px\]{height:30px}.md\:h-\[500px\]{height:500px}.md\:h-\[64px\]{height:64px}.md\:min-h-\[3000px\]{min-height:3000px}.md\:w-4{width:1rem}.md\:w-\[400px\]{width:400px}.md\:w-\[500px\]{width:500px}.md\:w-auto{width:auto}.md\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.md\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}.md\:flex-row{flex-direction:row}.md\:items-end{align-items:flex-end}.md\:items-center{align-items:center}.md\:gap-2{gap:.5rem}.md\:gap-3{gap:.75rem}.md\:gap-6{gap:1.5rem}.md\:gap-\[100px\]{gap:100px}.md\:px-2{padding-left:.5rem;padding-right:.5rem}.md\:px-4{padding-left:1rem;padding-right:1rem}.md\:px-5{padding-left:1.25rem;padding-right:1.25rem}.md\:py-16{padding-bottom:4rem;padding-top:4rem}.md\:py-2{padding-bottom:.5rem;padding-top:.5rem}.md\:py-4{padding-bottom:1rem;padding-top:1rem}.md\:py-\[500px\]{padding-bottom:500px;padding-top:500px}.md\:py-\[50px\]{padding-bottom:50px;padding-top:50px}.md\:pb-4{padding-bottom:1rem}.md\:pb-\[100px\]{padding-bottom:100px}.md\:pt-\[200px\]{padding-top:200px}.md\:text-right{text-align:right}.md\:text-2xl{font-size:1.5rem;line-height:2rem}.md\:text-3xl{font-size:1.875rem;line-height:2.25rem}.md\:text-8xl{font-size:6rem;line-height:1}.md\:text-\[100px\]{font-size:100px}.md\:text-\[14px\]{font-size:14px}.md\:text-\[16px\]{font-size:16px}.md\:text-\[24px\]{font-size:24px}.md\:text-\[32px\]{font-size:32px}.md\:text-\[3vw\]{font-size:3vw}.md\:text-\[40px\]{font-size:40px}.md\:text-\[5vw\]{font-size:5vw}.md\:text-\[80px\]{font-size:80px}.md\:text-base{font-size:1rem;line-height:1.5rem}.md\:text-lg{font-size:1.125rem;line-height:1.75rem}.md\:text-sm{font-size:.875rem;line-height:1.25rem}.md\:text-xs{font-size:.75rem;line-height:1rem}}@media (min-width:1024px){.lg\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}}.gatsby-highlight{margin-bottom:var(--spacing-8);max-width:100%;overflow-x:auto}.gatsby-highlight pre{border:none;border:1px solid hsla(0,0%,100%,.08);border-radius:1rem;box-shadow:inset 0 1px 3px rgba(0,0,0,.5),0 4px 12px rgba(0,0,0,.3);font-family:var(--fontFamily-pretendard);line-height:1.5;max-width:100%;overflow-x:auto;padding:var(--spacing-8)}.gatsby-highlight code{color:#e0e0e0;font-size:14px;line-height:1.5;overflow-wrap:normal;white-space:pre}.gatsby-highlight span{font-family:var(--fontFamily-pretendard)!important}code.language-text{background-color:hsla(0,100%,71%,.15);border:1px solid hsla(0,100%,71%,.3);border-radius:.25rem;color:#ff6b6b;font-size:14px;margin-right:.2rem;overflow-wrap:break-word;padding:.2rem .25rem;word-break:break-all}code.language-text,pre.language-text code.language-text,pre.language-text>*{font-family:var(--fontFamily-pretendard)}pre.language-text code.language-text{background:transparent;border:none;color:#fff}@media (max-width:768px){.gatsby-highlight pre{font-size:.75rem;padding:var(--spacing-3)}.gatsby-highlight code{font-size:.75rem;line-height:1.4}code.language-text{font-size:12px}}@media (max-width:480px){.gatsby-highlight code{font-size:.7rem;line-height:1.3}}.gatsby-resp-image-figcaption{color:#888;font-size:var(--fontSize-0);padding:var(--spacing-2) var(--spacing-0);text-align:center}figure.gatsby-resp-image-figure{margin:var(--spacing-10) 0}html{scroll-behavior:smooth}.blog-post-container{display:grid;gap:2rem;grid-template-columns:1fr;position:relative}@media (min-width:1280px){.blog-post-container{grid-template-columns:minmax(0,1fr) 280px}}.blog-post{min-width:0}.toc-sidebar{display:none}@media (min-width:1280px){.toc-sidebar{align-self:start;display:block;max-height:calc(100vh - 100px);position:sticky;top:60px}}.toc-container{border:1px solid hsla(0,0%,100%,.08);border-radius:.5rem;max-height:calc(100vh - 150px);overflow-y:scroll;padding:1.5rem .5rem 1.5rem 1rem}.toc-title{color:#fede22;font-family:var(--fontFamily-pretendard);font-size:1.125rem;font-weight:700;margin:0 0 1rem}.toc-list{list-style:none;margin:0;padding:0}.toc-item{margin:.2rem 0;transition:all .2s ease}.toc-level-1{font-size:.95rem;font-weight:600;padding-left:0}.toc-level-2{font-size:.9rem;font-weight:500;padding-left:1rem}.toc-level-3{font-size:.85rem;padding-left:2rem}.toc-level-4{font-size:.8rem;padding-left:3rem}.toc-link{color:#d3d3d3;display:block;font-family:var(--fontFamily-pretendard);line-height:1.5;text-decoration:none;transition:all .2s ease}.toc-link:hover{color:#3b82f6}.toc-item.active .toc-link{background-color:rgba(59,130,246,.1);border-radius:.25rem;color:#3b82f6;font-weight:600}.anchor{float:left;margin-left:-20px;padding-right:4px}.anchor svg{visibility:hidden}h1:hover .anchor svg,h2:hover .anchor svg,h3:hover .anchor svg,h4:hover .anchor svg{visibility:visible}table{border-collapse:collapse;border-spacing:.25rem;display:table;margin-bottom:var(--spacing-8)}article table,table{min-width:100%;width:auto}article table{-webkit-overflow-scrolling:touch;display:block;max-width:100%;overflow-x:auto}article table tbody,article table thead{display:table-header-group;width:100%}article table tbody{display:table-row-group}article table tr{display:table-row}article table td,article table th{display:table-cell}.table-container{-webkit-overflow-scrolling:touch;border-radius:.5rem;margin-bottom:var(--spacing-8);max-width:100%;overflow-x:auto;overflow:hidden}.table-container table{display:table;margin-bottom:0;min-width:100%;overflow-x:visible;width:auto}table thead{background:linear-gradient(135deg,rgba(0,91,153,.4),rgba(0,91,153,.25));display:table-header-group}table tbody{display:table-row-group}table tr{border-bottom:1px solid hsla(0,0%,100%,.1);display:table-row}table td,table th{display:table-cell;white-space:nowrap}table thead tr th{border:1px solid rgba(0,91,153,.4);color:#fff;font-weight:600;min-width:120px;padding:var(--spacing-3) var(--spacing-4);text-align:center;white-space:nowrap}table tbody tr:nth-child(2n) td{background-color:rgba(30,30,30,.6)}table tbody tr:nth-child(odd) td{background-color:rgba(25,25,25,.8)}table tbody tr td{border:1px solid hsla(0,0%,100%,.12);color:#e0e0e0;min-width:120px;padding:var(--spacing-3) var(--spacing-4);text-align:center;transition:background-color .2s ease;white-space:nowrap}@media (max-width:768px){table tbody tr td,table thead tr th{font-size:.875rem;min-width:100px;padding:var(--spacing-2) var(--spacing-3)}table tbody,table thead{min-width:500px}}@media (max-width:480px){table tbody tr td,table thead tr th{font-size:.75rem;min-width:80px;padding:var(--spacing-1) var(--spacing-2)}table tbody,table thead{min-width:400px}}h1,h2,h3,h4,h5,h6{font-family:var(--fontFamily-pretendard);letter-spacing:-.025em;line-height:var(--lineHeight-normal)}h1{color:var(--color-heading-black);font-size:var(--fontSize-6);margin-bottom:var(--spacing-6);margin-top:var(--spacing-16);word-break:keep-all}h1,h2,h3,h4,h5,h6{font-weight:var(--fontWeight-bold)}h2{color:var(--color-yellow);font-size:var(--fontSize-5);margin-bottom:var(--spacing-5);margin-top:var(--spacing-12)}h3{font-size:var(--fontSize-4);margin-bottom:var(--spacing-4);margin-top:var(--spacing-10)}h4{font-size:var(--fontSize-3);margin-bottom:var(--spacing-3);margin-top:var(--spacing-8)}h5{font-size:var(--fontSize-2);margin-top:var(--spacing-6)}h5,h6{margin-bottom:var(--spacing-2)}h6{font-size:var(--fontSize-1);margin-top:var(--spacing-4)}h2{border-bottom:2px solid var(--color-yellow);padding-bottom:var(--spacing-2)}h3,h4{border-bottom:2px solid var(--color-lightdark-translucent);padding-bottom:var(--spacing-1)}h1>a,h2>a,h3>a,h4>a,h5>a,h6>a{color:inherit;text-decoration:none}header a{background:none}p{--baseline-multiplier:0.179;--x-height-multiplier:0.35;font-size:var(--fontSize-1);line-height:var(--lineHeight-relaxed);margin:var(--spacing-0) var(--spacing-0) var(--spacing-4) var(--spacing-0)}ol,p,ul{padding:var(--spacing-0)}ol,ul{list-style-image:none;list-style-position:outside;margin-bottom:var(--spacing-8);margin-left:var(--spacing-0);margin-right:var(--spacing-0)}ul{list-style-position:inside;list-style-type:disc;padding-left:var(--spacing-2)}ol{list-style-type:decimal;padding-left:var(--spacing-8)}ol li,ul li{margin-bottom:calc(var(--spacing-5)/4);padding-left:var(--spacing-0)}li>p{margin-bottom:calc(var(--spacing-8)/2)}li :last-child{margin-bottom:var(--spacing-0)}li>ul{list-style-type:circle}li>ol,li>ul{margin-left:var(--spacing-8);margin-top:calc(var(--spacing-8)/2)}blockquote{background:linear-gradient(90deg,rgba(38,38,38,.6),rgba(33,33,33,.4));border-left:var(--spacing-1) solid var(--color-yellow);border-radius:.25rem;box-shadow:inset 1px 0 0 hsla(0,0%,100%,.05);box-sizing:border-box;color:#d3d3d3;font-size:var(--fontSize-1);margin-bottom:var(--spacing-8);margin-right:var(--spacing-8);margin-top:var(--spacing-8);padding:var(--spacing-3) var(--spacing-3) var(--spacing-3) var(--spacing-6);width:100%}section>blockquote:first-child,section>blockquote:nth-child(2){background:linear-gradient(135deg,rgba(38,38,38,.8),rgba(33,33,33,.5));border-left:5px solid var(--color-yellow);color:#e0e0e0;font-weight:400}blockquote>:last-child{margin-bottom:var(--spacing-0)}blockquote>ol,blockquote>ul{list-style-position:inside}blockquote p{font-size:var(--fontSize-1)}blockquote p a{background:hsla(0,0%,83%,.15);border-radius:.25rem;color:#3b82f6;padding:2px 4px}a{color:var(--color-primary);font-weight:var(--fontWeight-normal)}a:focus,a:hover{text-decoration:none}@media (max-width:768px){li,p{font-size:var(--fontSize-1)}}@media (max-width:480px){h1{line-height:140%}h1,h2{font-size:var(--fontSize-4)}h3{font-size:var(--fontSize-3)}h4{font-size:var(--fontSize-2)}p{font-size:var(--fontSize-1)}}.admonition{margin-bottom:1em;padding:15px 30px 15px 15px}.admonition h5{margin-bottom:8px;margin-top:0;text-transform:uppercase}.admonition-icon{display:inline-block;margin-right:.2em;vertical-align:middle}.admonition-icon svg{stroke-width:0;display:inline-block;height:22px;width:22px}.admonition-content>:last-child{margin-bottom:0}.admonition{background-color:rgba(118,51,219,.1);border-left:8px solid #7633db}.admonition h5{color:#7633db}.admonition .admonition-icon svg{stroke:#7633db;fill:#7633db}.admonition-caution{background-color:rgba(230,126,34,.1);border-left:8px solid #e67e22}.admonition-caution h5{color:#e67e22}.admonition-caution .admonition-icon svg{stroke:#e67e22;fill:#e67e22}.admonition-tip{background-color:rgba(46,204,113,.1);border-left:8px solid #2ecc71}.admonition-tip h5{color:#2ecc71}.admonition-tip .admonition-icon svg{stroke:#2ecc71;fill:#2ecc71}.admonition-warning{background-color:rgba(231,76,60,.1);border-left:8px solid #e74c3c}.admonition-warning h5{color:#e74c3c}.admonition-warning .admonition-icon svg{stroke:#e74c3c;fill:#e74c3c}.admonition-important{background-color:rgba(52,152,219,.1);border-left:8px solid #3498db}.admonition-important h5{color:#3498db}.admonition-important .admonition-icon svg{stroke:#3498db;fill:#3498db}.admonition-note{background-color:rgba(241,196,15,.1);border-left:8px solid #f1c40f}.admonition-note h5{color:#f1c40f}.admonition-note .admonition-icon svg{stroke:#f1c40f;fill:#f1c40f}:host,:root{--fa-font-solid:normal 900 1em/1 "Font Awesome 6 Free";--fa-font-regular:normal 400 1em/1 "Font Awesome 6 Free";--fa-font-light:normal 300 1em/1 "Font Awesome 6 Pro";--fa-font-thin:normal 100 1em/1 "Font Awesome 6 Pro";--fa-font-duotone:normal 900 1em/1 "Font Awesome 6 Duotone";--fa-font-duotone-regular:normal 400 1em/1 "Font Awesome 6 Duotone";--fa-font-duotone-light:normal 300 1em/1 "Font Awesome 6 Duotone";--fa-font-duotone-thin:normal 100 1em/1 "Font Awesome 6 Duotone";--fa-font-brands:normal 400 1em/1 "Font Awesome 6 Brands";--fa-font-sharp-solid:normal 900 1em/1 "Font Awesome 6 Sharp";--fa-font-sharp-regular:normal 400 1em/1 "Font Awesome 6 Sharp";--fa-font-sharp-light:normal 300 1em/1 "Font Awesome 6 Sharp";--fa-font-sharp-thin:normal 100 1em/1 "Font Awesome 6 Sharp";--fa-font-sharp-duotone-solid:normal 900 1em/1 "Font Awesome 6 Sharp Duotone";--fa-font-sharp-duotone-regular:normal 400 1em/1 "Font Awesome 6 Sharp Duotone";--fa-font-sharp-duotone-light:normal 300 1em/1 "Font Awesome 6 Sharp Duotone";--fa-font-sharp-duotone-thin:normal 100 1em/1 "Font Awesome 6 Sharp Duotone"}svg.svg-inline--fa:not(:host),svg.svg-inline--fa:not(:root){box-sizing:content-box;overflow:visible}.svg-inline--fa{display:var(--fa-display,inline-block);height:1em;overflow:visible;vertical-align:-.125em}.svg-inline--fa.fa-2xs{vertical-align:.1em}.svg-inline--fa.fa-xs{vertical-align:0}.svg-inline--fa.fa-sm{vertical-align:-.07143em}.svg-inline--fa.fa-lg{vertical-align:-.2em}.svg-inline--fa.fa-xl{vertical-align:-.25em}.svg-inline--fa.fa-2xl{vertical-align:-.3125em}.svg-inline--fa.fa-pull-left{margin-right:var(--fa-pull-margin,.3em);width:auto}.svg-inline--fa.fa-pull-right{margin-left:var(--fa-pull-margin,.3em);width:auto}.svg-inline--fa.fa-li{top:.25em;width:var(--fa-li-width,2em)}.svg-inline--fa.fa-fw{width:var(--fa-fw-width,1.25em)}.fa-layers svg.svg-inline--fa{bottom:0;left:0;margin:auto;position:absolute;right:0;top:0}.fa-layers-counter,.fa-layers-text{display:inline-block;position:absolute;text-align:center}.fa-layers{display:inline-block;height:1em;position:relative;text-align:center;vertical-align:-.125em;width:1em}.fa-layers svg.svg-inline--fa{transform-origin:center center}.fa-layers-text{left:50%;top:50%;transform:translate(-50%,-50%);transform-origin:center center}.fa-layers-counter{background-color:var(--fa-counter-background-color,#ff253a);border-radius:var(--fa-counter-border-radius,1em);box-sizing:border-box;color:var(--fa-inverse,#fff);line-height:var(--fa-counter-line-height,1);max-width:var(--fa-counter-max-width,5em);min-width:var(--fa-counter-min-width,1.5em);overflow:hidden;padding:var(--fa-counter-padding,.25em .5em);right:var(--fa-right,0);text-overflow:ellipsis;top:var(--fa-top,0);transform:scale(var(--fa-counter-scale,.25));transform-origin:top right}.fa-layers-bottom-right{bottom:var(--fa-bottom,0);right:var(--fa-right,0);top:auto;transform:scale(var(--fa-layers-scale,.25));transform-origin:bottom right}.fa-layers-bottom-left{bottom:var(--fa-bottom,0);left:var(--fa-left,0);right:auto;top:auto;transform:scale(var(--fa-layers-scale,.25));transform-origin:bottom left}.fa-layers-top-right{right:var(--fa-right,0);top:var(--fa-top,0);transform:scale(var(--fa-layers-scale,.25));transform-origin:top right}.fa-layers-top-left{left:var(--fa-left,0);right:auto;top:var(--fa-top,0);transform:scale(var(--fa-layers-scale,.25));transform-origin:top left}.fa-1x{font-size:1em}.fa-2x{font-size:2em}.fa-3x{font-size:3em}.fa-4x{font-size:4em}.fa-5x{font-size:5em}.fa-6x{font-size:6em}.fa-7x{font-size:7em}.fa-8x{font-size:8em}.fa-9x{font-size:9em}.fa-10x{font-size:10em}.fa-2xs{font-size:.625em;line-height:.1em;vertical-align:.225em}.fa-xs{font-size:.75em;line-height:.08333em;vertical-align:.125em}.fa-sm{font-size:.875em;line-height:.07143em;vertical-align:.05357em}.fa-lg{font-size:1.25em;line-height:.05em;vertical-align:-.075em}.fa-xl{font-size:1.5em;line-height:.04167em;vertical-align:-.125em}.fa-2xl{font-size:2em;line-height:.03125em;vertical-align:-.1875em}.fa-fw{text-align:center;width:1.25em}.fa-ul{list-style-type:none;margin-left:var(--fa-li-margin,2.5em);padding-left:0}.fa-ul>li{position:relative}.fa-li{left:calc(var(--fa-li-width, 2em)*-1);line-height:inherit;position:absolute;text-align:center;width:var(--fa-li-width,2em)}.fa-border{border-color:var(--fa-border-color,#eee);border-radius:var(--fa-border-radius,.1em);border-style:var(--fa-border-style,solid);border-width:var(--fa-border-width,.08em);padding:var(--fa-border-padding,.2em .25em .15em)}.fa-pull-left{float:left;margin-right:var(--fa-pull-margin,.3em)}.fa-pull-right{float:right;margin-left:var(--fa-pull-margin,.3em)}.fa-beat{animation-delay:var(--fa-animation-delay,0s);animation-direction:var(--fa-animation-direction,normal);animation-duration:var(--fa-animation-duration,1s);animation-iteration-count:var(--fa-animation-iteration-count,infinite);animation-name:fa-beat;animation-timing-function:var(--fa-animation-timing,ease-in-out)}.fa-bounce{animation-delay:var(--fa-animation-delay,0s);animation-direction:var(--fa-animation-direction,normal);animation-duration:var(--fa-animation-duration,1s);animation-iteration-count:var(--fa-animation-iteration-count,infinite);animation-name:fa-bounce;animation-timing-function:var(--fa-animation-timing,cubic-bezier(.28,.84,.42,1))}.fa-fade{animation-iteration-count:var(--fa-animation-iteration-count,infinite);animation-name:fa-fade;animation-timing-function:var(--fa-animation-timing,cubic-bezier(.4,0,.6,1))}.fa-beat-fade,.fa-fade{animation-delay:var(--fa-animation-delay,0s);animation-direction:var(--fa-animation-direction,normal);animation-duration:var(--fa-animation-duration,1s)}.fa-beat-fade{animation-iteration-count:var(--fa-animation-iteration-count,infinite);animation-name:fa-beat-fade;animation-timing-function:var(--fa-animation-timing,cubic-bezier(.4,0,.6,1))}.fa-flip{animation-delay:var(--fa-animation-delay,0s);animation-direction:var(--fa-animation-direction,normal);animation-duration:var(--fa-animation-duration,1s);animation-iteration-count:var(--fa-animation-iteration-count,infinite);animation-name:fa-flip;animation-timing-function:var(--fa-animation-timing,ease-in-out)}.fa-shake{animation-duration:var(--fa-animation-duration,1s);animation-iteration-count:var(--fa-animation-iteration-count,infinite);animation-name:fa-shake;animation-timing-function:var(--fa-animation-timing,linear)}.fa-shake,.fa-spin{animation-delay:var(--fa-animation-delay,0s);animation-direction:var(--fa-animation-direction,normal)}.fa-spin{animation-duration:var(--fa-animation-duration,2s);animation-iteration-count:var(--fa-animation-iteration-count,infinite);animation-name:fa-spin;animation-timing-function:var(--fa-animation-timing,linear)}.fa-spin-reverse{--fa-animation-direction:reverse}.fa-pulse,.fa-spin-pulse{animation-direction:var(--fa-animation-direction,normal);animation-duration:var(--fa-animation-duration,1s);animation-iteration-count:var(--fa-animation-iteration-count,infinite);animation-name:fa-spin;animation-timing-function:var(--fa-animation-timing,steps(8))}@media (prefers-reduced-motion:reduce){.fa-beat,.fa-beat-fade,.fa-bounce,.fa-fade,.fa-flip,.fa-pulse,.fa-shake,.fa-spin,.fa-spin-pulse{animation-delay:-1ms;animation-duration:1ms;animation-iteration-count:1;transition-delay:0s;transition-duration:0s}}@keyframes fa-beat{0%,90%{transform:scale(1)}45%{transform:scale(var(--fa-beat-scale,1.25))}}@keyframes fa-bounce{0%{transform:scale(1) translateY(0)}10%{transform:scale(var(--fa-bounce-start-scale-x,1.1),var(--fa-bounce-start-scale-y,.9)) translateY(0)}30%{transform:scale(var(--fa-bounce-jump-scale-x,.9),var(--fa-bounce-jump-scale-y,1.1)) translateY(var(--fa-bounce-height,-.5em))}50%{transform:scale(var(--fa-bounce-land-scale-x,1.05),var(--fa-bounce-land-scale-y,.95)) translateY(0)}57%{transform:scale(1) translateY(var(--fa-bounce-rebound,-.125em))}64%{transform:scale(1) translateY(0)}to{transform:scale(1) translateY(0)}}@keyframes fa-fade{50%{opacity:var(--fa-fade-opacity,.4)}}@keyframes fa-beat-fade{0%,to{opacity:var(--fa-beat-fade-opacity,.4);transform:scale(1)}50%{opacity:1;transform:scale(var(--fa-beat-fade-scale,1.125))}}@keyframes fa-flip{50%{transform:rotate3d(var(--fa-flip-x,0),var(--fa-flip-y,1),var(--fa-flip-z,0),var(--fa-flip-angle,-180deg))}}@keyframes fa-shake{0%{transform:rotate(-15deg)}4%{transform:rotate(15deg)}24%,8%{transform:rotate(-18deg)}12%,28%{transform:rotate(18deg)}16%{transform:rotate(-22deg)}20%{transform:rotate(22deg)}32%{transform:rotate(-12deg)}36%{transform:rotate(12deg)}40%,to{transform:rotate(0deg)}}@keyframes fa-spin{0%{transform:rotate(0deg)}to{transform:rotate(1turn)}}.fa-rotate-90{transform:rotate(90deg)}.fa-rotate-180{transform:rotate(180deg)}.fa-rotate-270{transform:rotate(270deg)}.fa-flip-horizontal{transform:scaleX(-1)}.fa-flip-vertical{transform:scaleY(-1)}.fa-flip-both,.fa-flip-horizontal.fa-flip-vertical{transform:scale(-1)}.fa-rotate-by{transform:rotate(var(--fa-rotate-angle,0))}.fa-stack{display:inline-block;height:2em;position:relative;vertical-align:middle;width:2.5em}.fa-stack-1x,.fa-stack-2x{bottom:0;left:0;margin:auto;position:absolute;right:0;top:0;z-index:var(--fa-stack-z-index,auto)}.svg-inline--fa.fa-stack-1x{height:1em;width:1.25em}.svg-inline--fa.fa-stack-2x{height:2em;width:2.5em}.fa-inverse{color:var(--fa-inverse,#fff)}.fa-sr-only,.fa-sr-only-focusable:not(:focus),.sr-only,.sr-only-focusable:not(:focus){clip:rect(0,0,0,0);border-width:0;height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;white-space:nowrap;width:1px}.svg-inline--fa .fa-primary{fill:var(--fa-primary-color,currentColor);opacity:var(--fa-primary-opacity,1)}.svg-inline--fa .fa-secondary{fill:var(--fa-secondary-color,currentColor)}.svg-inline--fa .fa-secondary,.svg-inline--fa.fa-swap-opacity .fa-primary{opacity:var(--fa-secondary-opacity,.4)}.svg-inline--fa.fa-swap-opacity .fa-secondary{opacity:var(--fa-primary-opacity,1)}.svg-inline--fa mask .fa-primary,.svg-inline--fa mask .fa-secondary{fill:#000}:root{--swiper-theme-color:#007aff}:host{display:block;margin-left:auto;margin-right:auto;position:relative;z-index:1}.swiper{display:block;list-style:none;margin-left:auto;margin-right:auto;overflow:hidden;padding:0;position:relative;z-index:1}.swiper-vertical>.swiper-wrapper{flex-direction:column}.swiper-wrapper{box-sizing:content-box;display:flex;height:100%;position:relative;transition-property:transform;transition-timing-function:var(--swiper-wrapper-transition-timing-function,initial);width:100%;z-index:1}.swiper-android .swiper-slide,.swiper-ios .swiper-slide,.swiper-wrapper{transform:translateZ(0)}.swiper-horizontal{touch-action:pan-y}.swiper-vertical{touch-action:pan-x}.swiper-slide{display:block;flex-shrink:0;height:100%;position:relative;transition-property:transform;width:100%}.swiper-slide-invisible-blank{visibility:hidden}.swiper-autoheight,.swiper-autoheight .swiper-slide{height:auto}.swiper-autoheight .swiper-wrapper{align-items:flex-start;transition-property:transform,height}.swiper-backface-hidden .swiper-slide{backface-visibility:hidden;transform:translateZ(0)}.swiper-3d.swiper-css-mode .swiper-wrapper{perspective:1200px}.swiper-3d .swiper-wrapper{transform-style:preserve-3d}.swiper-3d{perspective:1200px;.swiper-cube-shadow,.swiper-slide{transform-style:preserve-3d}}.swiper-css-mode{>.swiper-wrapper{-ms-overflow-style:none;overflow:auto;scrollbar-width:none;&::-webkit-scrollbar{display:none}}>.swiper-wrapper>.swiper-slide{scroll-snap-align:start start}&.swiper-horizontal{>.swiper-wrapper{scroll-snap-type:x mandatory}}&.swiper-vertical{>.swiper-wrapper{scroll-snap-type:y mandatory}}&.swiper-free-mode{>.swiper-wrapper{scroll-snap-type:none}>.swiper-wrapper>.swiper-slide{scroll-snap-align:none}}&.swiper-centered{>.swiper-wrapper:before{content:"";flex-shrink:0;order:9999}>.swiper-wrapper>.swiper-slide{scroll-snap-align:center center;scroll-snap-stop:always}}&.swiper-centered.swiper-horizontal{>.swiper-wrapper>.swiper-slide:first-child{margin-inline-start:var(--swiper-centered-offset-before)}>.swiper-wrapper:before{height:100%;min-height:1px;width:var(--swiper-centered-offset-after)}}&.swiper-centered.swiper-vertical{>.swiper-wrapper>.swiper-slide:first-child{margin-block-start:var(--swiper-centered-offset-before)}>.swiper-wrapper:before{height:var(--swiper-centered-offset-after);min-width:1px;width:100%}}}.swiper-3d{.swiper-slide-shadow,.swiper-slide-shadow-bottom,.swiper-slide-shadow-left,.swiper-slide-shadow-right,.swiper-slide-shadow-top{height:100%;left:0;pointer-events:none;position:absolute;top:0;width:100%;z-index:10}.swiper-slide-shadow{background:rgba(0,0,0,.15)}.swiper-slide-shadow-left{background-image:linear-gradient(270deg,rgba(0,0,0,.5),transparent)}.swiper-slide-shadow-right{background-image:linear-gradient(90deg,rgba(0,0,0,.5),transparent)}.swiper-slide-shadow-top{background-image:linear-gradient(0deg,rgba(0,0,0,.5),transparent)}.swiper-slide-shadow-bottom{background-image:linear-gradient(180deg,rgba(0,0,0,.5),transparent)}}.swiper-lazy-preloader{border:4px solid var(--swiper-preloader-color,var(--swiper-theme-color));border-radius:50%;border-top:4px solid transparent;box-sizing:border-box;height:42px;left:50%;margin-left:-21px;margin-top:-21px;position:absolute;top:50%;transform-origin:50%;width:42px;z-index:10}.swiper-watch-progress .swiper-slide-visible,.swiper:not(.swiper-watch-progress){.swiper-lazy-preloader{animation:swiper-preloader-spin 1s linear infinite}}.swiper-lazy-preloader-white{--swiper-preloader-color:#fff}.swiper-lazy-preloader-black{--swiper-preloader-color:#000}@keyframes swiper-preloader-spin{0%{transform:rotate(0deg)}to{transform:rotate(1turn)}}:root{--swiper-navigation-size:44px}.swiper-button-next,.swiper-button-prev{align-items:center;color:var(--swiper-navigation-color,var(--swiper-theme-color));cursor:pointer;display:flex;height:var(--swiper-navigation-size);justify-content:center;position:absolute;width:var(--swiper-navigation-size);z-index:10;&.swiper-button-disabled{cursor:auto;opacity:.35;pointer-events:none}&.swiper-button-hidden{cursor:auto;opacity:0;pointer-events:none}.swiper-navigation-disabled &{display:none!important}svg{fill:currentColor;height:100%;-o-object-fit:contain;object-fit:contain;pointer-events:none;transform-origin:center;width:100%}}.swiper-button-lock{display:none}.swiper-button-next,.swiper-button-prev{margin-top:calc(0px - var(--swiper-navigation-size)/2);top:var(--swiper-navigation-top-offset,50%)}.swiper-button-prev{left:var(--swiper-navigation-sides-offset,4px);right:auto;.swiper-navigation-icon{transform:rotate(180deg)}}.swiper-button-next{left:auto;right:var(--swiper-navigation-sides-offset,4px)}.swiper-horizontal{.swiper-button-next,.swiper-button-prev,~.swiper-button-next,~.swiper-button-prev{margin-left:0;margin-top:calc(0px - var(--swiper-navigation-size)/2);top:var(--swiper-navigation-top-offset,50%)}&.swiper-rtl .swiper-button-next,&.swiper-rtl~.swiper-button-next,&~.swiper-button-prev,.swiper-button-prev{left:var(--swiper-navigation-sides-offset,4px);right:auto}&.swiper-rtl .swiper-button-prev,&.swiper-rtl~.swiper-button-prev,&~.swiper-button-next,.swiper-button-next{left:auto;right:var(--swiper-navigation-sides-offset,4px)}&.swiper-rtl .swiper-button-next,&.swiper-rtl~.swiper-button-next,&~.swiper-button-prev,.swiper-button-prev{.swiper-navigation-icon{transform:rotate(180deg)}}&.swiper-rtl .swiper-button-prev,&.swiper-rtl~.swiper-button-prev{.swiper-navigation-icon{transform:rotate(0deg)}}}.swiper-vertical{.swiper-button-next,.swiper-button-prev,~.swiper-button-next,~.swiper-button-prev{left:var(--swiper-navigation-top-offset,50%);margin-left:calc(0px - var(--swiper-navigation-size)/2);margin-top:0;right:auto}.swiper-button-prev,~.swiper-button-prev{bottom:auto;top:var(--swiper-navigation-sides-offset,4px);.swiper-navigation-icon{transform:rotate(-90deg)}}.swiper-button-next,~.swiper-button-next{bottom:var(--swiper-navigation-sides-offset,4px);top:auto;.swiper-navigation-icon{transform:rotate(90deg)}}}.swiper-pagination{position:absolute;text-align:center;transform:translateZ(0);transition:opacity .3s;z-index:10;&.swiper-pagination-hidden{opacity:0}&.swiper-pagination-disabled,.swiper-pagination-disabled>&{display:none!important}}.swiper-horizontal>.swiper-pagination-bullets,.swiper-pagination-bullets.swiper-pagination-horizontal,.swiper-pagination-custom,.swiper-pagination-fraction{bottom:var(--swiper-pagination-bottom,8px);left:0;top:var(--swiper-pagination-top,auto);width:100%}.swiper-pagination-bullets-dynamic{font-size:0;overflow:hidden;.swiper-pagination-bullet{position:relative;transform:scale(.33)}.swiper-pagination-bullet-active,.swiper-pagination-bullet-active-main{transform:scale(1)}.swiper-pagination-bullet-active-prev{transform:scale(.66)}.swiper-pagination-bullet-active-prev-prev{transform:scale(.33)}.swiper-pagination-bullet-active-next{transform:scale(.66)}.swiper-pagination-bullet-active-next-next{transform:scale(.33)}}.swiper-pagination-bullet{background:var(--swiper-pagination-bullet-inactive-color,#000);border-radius:var(--swiper-pagination-bullet-border-radius,50%);display:inline-block;height:var(--swiper-pagination-bullet-height,var(--swiper-pagination-bullet-size,8px));opacity:var(--swiper-pagination-bullet-inactive-opacity,.2);width:var(--swiper-pagination-bullet-width,var(--swiper-pagination-bullet-size,8px));button&{-webkit-appearance:none;-moz-appearance:none;appearance:none;border:none;box-shadow:none;margin:0;padding:0}.swiper-pagination-clickable &{cursor:pointer}&:only-child{display:none!important}}.swiper-pagination-bullet-active{background:var(--swiper-pagination-color,var(--swiper-theme-color));opacity:var(--swiper-pagination-bullet-opacity,1)}.swiper-pagination-vertical.swiper-pagination-bullets,.swiper-vertical>.swiper-pagination-bullets{left:var(--swiper-pagination-left,auto);right:var(--swiper-pagination-right,8px);top:50%;transform:translate3d(0,-50%,0);.swiper-pagination-bullet{display:block;margin:var(--swiper-pagination-bullet-vertical-gap,6px) 0}&.swiper-pagination-bullets-dynamic{top:50%;transform:translateY(-50%);width:8px;.swiper-pagination-bullet{display:inline-block;transition:transform .2s,top .2s}}}.swiper-horizontal>.swiper-pagination-bullets,.swiper-pagination-horizontal.swiper-pagination-bullets{.swiper-pagination-bullet{margin:0 var(--swiper-pagination-bullet-horizontal-gap,4px)}&.swiper-pagination-bullets-dynamic{left:50%;transform:translateX(-50%);white-space:nowrap;.swiper-pagination-bullet{transition:transform .2s,left .2s}}}.swiper-horizontal.swiper-rtl>.swiper-pagination-bullets-dynamic .swiper-pagination-bullet{transition:transform .2s,right .2s}.swiper-pagination-fraction{color:var(--swiper-pagination-fraction-color,inherit)}.swiper-pagination-progressbar{background:var(--swiper-pagination-progressbar-bg-color,rgba(0,0,0,.25));position:absolute;.swiper-pagination-progressbar-fill{background:var(--swiper-pagination-color,var(--swiper-theme-color));height:100%;left:0;position:absolute;top:0;transform:scale(0);transform-origin:left top;width:100%}.swiper-rtl & .swiper-pagination-progressbar-fill{transform-origin:right top}&.swiper-pagination-horizontal,&.swiper-pagination-vertical.swiper-pagination-progressbar-opposite,.swiper-horizontal>&,.swiper-vertical>&.swiper-pagination-progressbar-opposite{height:var(--swiper-pagination-progressbar-size,4px);left:0;top:0;width:100%}&.swiper-pagination-horizontal.swiper-pagination-progressbar-opposite,&.swiper-pagination-vertical,.swiper-horizontal>&.swiper-pagination-progressbar-opposite,.swiper-vertical>&{height:100%;left:0;top:0;width:var(--swiper-pagination-progressbar-size,4px)}}.swiper-pagination-lock{display:none}</style><style>.gatsby-image-wrapper{position:relative;overflow:hidden}.gatsby-image-wrapper picture.object-fit-polyfill{position:static!important}.gatsby-image-wrapper img{bottom:0;height:100%;left:0;margin:0;max-width:none;padding:0;position:absolute;right:0;top:0;width:100%;object-fit:cover}.gatsby-image-wrapper [data-main-image]{opacity:0;transform:translateZ(0);transition:opacity .25s linear;will-change:opacity}.gatsby-image-wrapper-constrained{display:inline-block;vertical-align:top}</style><noscript><style>.gatsby-image-wrapper noscript [data-main-image]{opacity:1!important}.gatsby-image-wrapper [data-placeholder-image]{opacity:0!important}</style></noscript><script type="module">const e="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;e&&document.body.addEventListener("load",(function(e){const t=e.target;if(void 0===t.dataset.mainImage)return;if(void 0===t.dataset.gatsbyImageSsr)return;let a=null,n=t;for(;null===a&&n;)void 0!==n.parentNode.dataset.gatsbyImageWrapper&&(a=n.parentNode),n=n.parentNode;const o=a.querySelector("[data-placeholder-image]"),r=new Image;r.src=t.currentSrc,r.decode().catch((()=>{})).then((()=>{t.style.opacity=1,o&&(o.style.opacity=0,o.style.transition="opacity 500ms linear")}))}),!0);</script><link rel="sitemap" type="application/xml" href="/sitemap-index.xml"/><link rel="canonical" href="https://inyoung.dev/http-fundamentals/" data-baseprotocol="https:" data-basehost="inyoung.dev"/><link rel="icon" href="/favicon-32x32.png?v=1cd658b7cecac2f5b317e988dc14c8c1" type="image/png"/><link rel="manifest" href="/manifest.webmanifest" crossorigin="anonymous"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=1cd658b7cecac2f5b317e988dc14c8c1"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=1cd658b7cecac2f5b317e988dc14c8c1"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=1cd658b7cecac2f5b317e988dc14c8c1"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=1cd658b7cecac2f5b317e988dc14c8c1"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=1cd658b7cecac2f5b317e988dc14c8c1"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=1cd658b7cecac2f5b317e988dc14c8c1"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=1cd658b7cecac2f5b317e988dc14c8c1"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=1cd658b7cecac2f5b317e988dc14c8c1"/><script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+      var hash = window.decodeURI(location.hash.replace('#', ''))
+      if (hash !== '') {
+        var element = document.getElementById(hash)
+        if (element) {
+          var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+          var clientTop = document.documentElement.clientTop || document.body.clientTop || 0
+          var offset = element.getBoundingClientRect().top + scrollTop - clientTop
+          // Wait for the browser to finish rendering before scrolling.
+          setTimeout((function() {
+            window.scrollTo(0, offset - 100)
+          }), 0)
+        }
+      }
+    })
+  </script><link rel="alternate" type="application/rss+xml" title="난너의오른팔 기술 블로그 RSS Feed" href="/rss.xml"/><title data-gatsby-head="true">[네트워크] HTTP의 기초 - DNS와 HTTP Message, Method, Status (스압 주의) </title><link rel="canonical" href="https://inyoung.dev/http-fundamentals/" data-gatsby-head="true"/><script type="application/ld+json" data-gatsby-head="true">{"@context":"https://schema.org","@type":"BlogPosting","name":"[네트워크] HTTP의 기초 - DNS와 HTTP Message, Method, Status (스압 주의) ","description":"응용 계층의 핵심 프로토콜 HTTP의 기초 개념과 동작 원리를 정리합니다.","url":"https://inyoung.dev/http-fundamentals/","headline":"[네트워크] HTTP의 기초 - DNS와 HTTP Message, Method, Status (스압 주의) ","datePublished":"2026-02-16T00:00:00.000Z","dateModified":"2026-02-16T00:00:00.000Z","author":{"@type":"Person","name":"Inyoung Chung"},"publisher":{"@type":"Person","name":"Inyoung Chung"},"image":"https://inyoung.dev/static/207c8b7097ff2de1790c0289a5f6716c/f3583/index.png"}</script></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><header class="fixed top-0 w-full h-[54px] m-0 p-0 border-bottom-2 z-50 bg-darkMain border-b border-zinc-600"><div class="flex h-full mx-auto max-w-wrapper items-center justify-between px-3"><h1 class="text-3 font-bold text-white m-0"><a class="transition-colors hover:text-cyan-300" href="/">난너의오른팔 🧑‍💻</a></h1><div class="flex items-center gap-2"><a class="flex h-[27px] w-[27px] items-center justify-center rounded-full bg-white font-pretendard text-sm font-bold text-black transition-transform hover:scale-110 hover:text-gray-500" href="/portfolio/">Me</a><a href="https://github.com/rmdnps10" class="text hover:text-gray-500 hover:scale-110 text-white block transition-all" target="_blank" rel="noreferrer"><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github" class="svg-inline--fa fa-github fa-xl " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" color="gray-500"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></a><a href="https://www.linkedin.com/in/rmdnps10/" target="_blank" rel="noreferrer" class="text hover:text-gray-500 hover:scale-110 text-white block transition-all"><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="linkedin" class="svg-inline--fa fa-linkedin fa-xl " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" color="white"><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></svg></a></div></div><div class="absolute bottom-0 left-0 h-0.5 bg-yellow" style="width:0%"></div></header><div class="global-wrapper" data-is-root-path="false"><main><div class="blog-post-container"><article class="blog-post" itemscope="" itemType="http://schema.org/Article"><header><h1 itemProp="headline">[네트워크] HTTP의 기초 - DNS와 HTTP Message, Method, Status (스압 주의) </h1><div class="flex gap-2 mb-3 flex-wrap"><a class="px-2 py-0.5 rounded-lg text-white font-bold text-xs md:text-sm border-2 hover:shadow-md transition-all" style="color:#adb5bd;border-color:#adb5bd;background-color:#adb5bd15" href="/?tag=네트워크">#<!-- -->네트워크</a></div><div class="flex items-center gap-3 text-gray-400 text-sm mb-4"><time>2026-02-16</time></div></header><section itemProp="articleBody"><blockquote>
+<p><code class="language-text">혼자 공부하는 네트워크</code> 책을 읽으면서 배운 점을 정리합니다.</p>
+<p>응용 계층의 핵심은 HTTP이다. 개발자가 가장 자주 접하고 다루게 될 프로토콜로, 웹의 근간을 이루는 프로토콜이다. HTTP를 이해하기 위해서는 DNS와 URI/URL에 대한 배경지식이 필요하며, HTTP의 특징과 메시지 구조, 메서드와 상태 코드에 대한 이해가 필수적이다.</p>
+</blockquote>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1000px; background: transparent;"
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/207c8b7097ff2de1790c0289a5f6716c/7c474/index.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 48.800000000000004%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAACE4AAAhOAFFljFgAAABVElEQVR42o1Sy07CUBDlqxVFrImPjQ984CMmuHBliG50wTOQgNCWgrS9hUbFSCQxYsI3HGemSUVSgovJnTtz7pk5cyfWWi8h0rTyjE3F570hi0UFzbUijNUCjJU89Hg+9M1EQXzO/58wWURnpwo7VYc6M+BfteEcNqDSOuyDOnqXLXR3a3NJY7MyuZPn6yeMzRG+rREmaoyPwgsm3hfe73181ocYZF3pPEr+L6EWGEvyLgwMH3y83jgY3LrS5dudCu5ZJXmD5IdzjSI0E0WRK3Oi6vpSDvpyTnyTisg9ng+NJTOWc5GETuoRne0q+tSNn7HgHjVEuko30d6qwD1uwjs34J3q6NMcbcK76cC3Nsp/CU3qjAfNn8FyevSwu1eTD1AnRLhZgU15m2J8cjHG2/s1KWhp5WjJ4brwaoQrQpKSJTlFJmNYquADzMI9nP2ohZgpwh8Xn2VNjiNOowAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <picture>
+          <source
+              srcset="/static/207c8b7097ff2de1790c0289a5f6716c/bc904/index.webp 250w,
+/static/207c8b7097ff2de1790c0289a5f6716c/4be29/index.webp 500w,
+/static/207c8b7097ff2de1790c0289a5f6716c/03f31/index.webp 1000w,
+/static/207c8b7097ff2de1790c0289a5f6716c/84f56/index.webp 1329w"
+              sizes="(max-width: 1000px) 100vw, 1000px"
+              type="image/webp"
+            />
+          <source
+            srcset="/static/207c8b7097ff2de1790c0289a5f6716c/43fa5/index.png 250w,
+/static/207c8b7097ff2de1790c0289a5f6716c/c6e3d/index.png 500w,
+/static/207c8b7097ff2de1790c0289a5f6716c/da8b6/index.png 1000w,
+/static/207c8b7097ff2de1790c0289a5f6716c/7c474/index.png 1329w"
+            sizes="(max-width: 1000px) 100vw, 1000px"
+            type="image/png"
+          />
+          <img
+            class="gatsby-resp-image-image"
+            src="/static/207c8b7097ff2de1790c0289a5f6716c/da8b6/index.png"
+            alt="index"
+            title=""
+            loading="lazy"
+            decoding="async"
+            style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+          />
+        </picture>
+  </a>
+    </span></p>
+<h2 id="1️-dns와-uriurl">1️⃣ DNS와 URI/URL</h2>
+<h3 id="도메인-네임과-dns">도메인 네임과 DNS</h3>
+<h4 id="1-1-도메인-네임의-필요성">1-1 도메인 네임의 필요성</h4>
+<p>네트워크 상의 호스트를 식별하기 위해 기본적으로 사용되는 정보는 <code class="language-text">IP 주소</code>이다. 하지만 IP 주소만을 사용하기에는 다소 번거롭다. IP 주소로는 특정 호스트의 특징을 나타내기 어렵고, 호스트의 IP 주소는 언제든 바뀔 수 있기 때문이다.</p>
+<p><code class="language-text">도메인 네임(Domain Name)</code>은 이러한 문제를 해결하기 위한 문자열 형태의 호스트 식별 정보로, 호스트의 IP 주소와 대응된다.</p>
+<div class="gatsby-highlight" data-language="txt"><pre class="language-txt"><code class="language-txt">이런 것들이 다 도메인 네임이다.
+www.example.com
+developers.naver.com
+git.kernel.org</code></pre></div>
+<p>도메인 네임은 IP 주소에 비해 <strong>기억이 쉽다</strong>. 또한 IP 주소가 바뀌더라도 바뀐 IP 주소에 도메인 네임을 다시 대응하면 되므로 IP 주소만으로 호스트를 특정하는 것보다 더 간편하다.</p>
+<blockquote>
+<p>💡 <strong>도메인 네임의 리졸빙(Resolving)</strong></p>
+<p>도메인 네임과 그에 대응하는 IP 주소는 <code class="language-text">네임 서버(Name Server)</code> 또는 <code class="language-text">DNS 서버</code>에서 관리된다. IP 주소를 모르는 상태에서 도메인 네임에 대응되는 IP 주소를 알아내는 과정을 <strong>리졸빙(Resolving)</strong> 한다고 표현한다.</p>
+<div class="gatsby-highlight" data-language="java"><pre class="language-java"><code class="language-java"><span class="token comment">// 도메인 네임 리졸빙 개념</span>
+<span class="token class-name">String</span> domainName <span class="token operator">=</span> <span class="token string">"www.example.com"</span><span class="token punctuation">;</span>
+<span class="token class-name">InetAddress</span> ipAddress <span class="token operator">=</span> <span class="token class-name">InetAddress</span><span class="token punctuation">.</span><span class="token function">getByName</span><span class="token punctuation">(</span>domainName<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// DNS 서버에 질의하여 IP 주소 획득</span></code></pre></div>
+</blockquote>
+<h4 id="1-2-도메인-네임의-계층-구조">1-2 도메인 네임의 계층 구조</h4>
+<p>하나의 도메인 네임은 점(.)을 기준으로 <strong>계층적으로 분류</strong>되어 있다.</p>
+<p><figure class="gatsby-resp-image-figure" style="background: transparent;">
+    <span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 361px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/9448e03dc20e616e8c1b2ab752de0b0b/d0bd4/dns-hierarchy.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 50%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAIAAAA7N+mxAAAACXBIWXMAAAsTAAALEwEAmpwYAAABGUlEQVR42mWR2W6FMAxE+f+PQ4IHQCCB2PetLaVQlh7FcFXaebCcxDMeO5rv+7quG4ZhmmaWZdM0jeP4/sTHjbcntG3b9n0nHscBzbZt+PM8E79uiBw32xPaeQMyz5Zl0aFt277vkfhUCMMQU3VdU3P+wkUWAs+YaZqm6zqYy7LA/L4hR7nHzkVe19XzvKIooMEn0gqreZ5HUYRh2pLHccw9saoqIi40NHhAEhryOC/LkiNeOMo6ZgUaSkKN+NfI6EkF8lRjmJ2R8wuMPSngiyPdgiAgd133Ip//MAwDXuDTiv60Ei12yRQy4LWwQ0G2TaQUJiMgwUT4R4IcpuM4SZIw8N9tv8hsO1EgwTDbQo5WaZqywleZkH8ALHc3PZgpoboAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <picture>
+          <source
+              srcset="/static/9448e03dc20e616e8c1b2ab752de0b0b/bc904/dns-hierarchy.webp 250w,
+/static/9448e03dc20e616e8c1b2ab752de0b0b/94667/dns-hierarchy.webp 361w"
+              sizes="(max-width: 361px) 100vw, 361px"
+              type="image/webp"
+            />
+          <source
+            srcset="/static/9448e03dc20e616e8c1b2ab752de0b0b/43fa5/dns-hierarchy.png 250w,
+/static/9448e03dc20e616e8c1b2ab752de0b0b/d0bd4/dns-hierarchy.png 361w"
+            sizes="(max-width: 361px) 100vw, 361px"
+            type="image/png"
+          />
+          <img
+            class="gatsby-resp-image-image"
+            src="/static/9448e03dc20e616e8c1b2ab752de0b0b/d0bd4/dns-hierarchy.png"
+            alt="도메인 계층 구조"
+            title=""
+            loading="lazy"
+            decoding="async"
+            style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+          />
+        </picture>
+  </a>
+    </span>
+    <figcaption class="gatsby-resp-image-figcaption">도메인 계층 구조</figcaption>
+  </figure></p>
+<table>
+<thead>
+<tr>
+<th>계층</th>
+<th>명칭</th>
+<th>예시</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>루트 도메인</td>
+<td>Root Domain</td>
+<td><code class="language-text">.</code> (생략 가능)</td>
+</tr>
+<tr>
+<td>최상위 도메인</td>
+<td>TLD (Top-Level Domain)</td>
+<td>com, net, org, kr, jp</td>
+</tr>
+<tr>
+<td>2단계 도메인</td>
+<td>Second-Level Domain</td>
+<td>example</td>
+</tr>
+<tr>
+<td>3단계 도메인</td>
+<td>Third-Level Domain</td>
+<td>www, mail, developer</td>
+</tr>
+</tbody>
+</table>
+<p><code class="language-text">FQDN(Fully Qualified Domain Name)</code>은 도메인 네임을 모두 포함하는 전체 주소 도메인 네임을 의미하며, 이를 통해 호스트를 식별할 수 있다.</p>
+<blockquote>
+<p>💡 <strong>서브 도메인(Subdomain)</strong></p>
+<p>다른 도메인이 포함된 도메인을 서브 도메인이라고 부른다. 예를 들어 다음은 모두 <code class="language-text">example.com</code>의 서브 도메인이다.</p>
+<ul>
+<li><code class="language-text">mail.example.com</code></li>
+<li><code class="language-text">www.example.com</code></li>
+<li><code class="language-text">developer.example.com</code></li>
+</ul>
+</blockquote>
+<h4 id="1-3-dns의-계층-구조">1-3 DNS의 계층 구조</h4>
+<p>계층적 형태로 이뤄진 도메인 네임을 관리하는 네임 서버 또한 계층적 형태를 이룬다. 네임 서버는 여러 개가 존재하며 전 세계 여러 곳에 분산되어 있다. 이렇게 계층적으로 분산되어 있는 도메인 네임에 대한 관리 체계를 <code class="language-text">DNS(Domain Name System)</code>라고 부른다.</p>
+<h5>DNS 리졸빙 과정</h5>
+<p>호스트가 <code class="language-text">minchul.net</code>이라는 도메인 네임을 통해 IP 주소를 알아내고자 하는 경우를 가정해보자.</p>
+<p><strong>1. 로컬 네임 서버에 질의</strong></p>
+<ul>
+<li><code class="language-text">로컬 네임 서버(Local Name Server)</code>는 클라이언트와 맞닿아 있는 네임 서버</li>
+<li>클라이언트가 도메인 네임을 통해 IP 주소를 알아내고자 할 때 가장 먼저 찾는 서버</li>
+<li>ISP가 자동으로 할당하거나 공개 DNS 서버(구글의 <code class="language-text">8.8.8.8</code>, 클라우드플레어의 <code class="language-text">1.1.1.1</code>) 사용</li>
+</ul>
+<p><strong>2. 계층적 질의</strong></p>
+<ul>
+<li>로컬 네임 서버가 IP 주소를 알고 있다면 즉시 반환</li>
+<li>모른다면 <code class="language-text">루트 네임 서버</code> → <code class="language-text">TLD 네임 서버</code> → 하위 네임 서버 순으로 질의</li>
+<li>최종적으로 IP 주소를 찾아 클라이언트에게 전달</li>
+</ul>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">클라이언트
+    ↓ ① 도메인 질의
+로컬 네임 서버
+    ↓ ② 루트 네임 서버 질의
+루트 네임 서버
+    ↓ ③ TLD 네임 서버 정보 응답
+로컬 네임 서버
+    ↓ ④ TLD 네임 서버 질의
+TLD 네임 서버
+    ↓ ⑤ 권한 네임 서버 정보 응답
+로컬 네임 서버
+    ↓ ⑥ 권한 네임 서버 질의
+권한 네임 서버
+    ↓ ⑦ IP 주소 응답
+로컬 네임 서버
+    ↓ ⑧ IP 주소 전달
+클라이언트</code></pre></div>
+<blockquote>
+<p>💡 <strong>DNS 캐시(DNS Cache)</strong></p>
+<p>질의 과정이 반복되면 네트워크 트래픽이 증가하고 리졸빙에 오랜 시간이 걸린다. 따라서 실제로는 네임 서버들이 기존에 응답받은 결과를 임시로 저장했다가 추후 같은 질의에 활용한다.</p>
+<ul>
+<li><strong>DNS 캐시</strong>: 이전 질의 결과를 임시 저장</li>
+<li><strong>TTL(Time To Live)</strong>: 캐시될 수 있는 시간 (IP 헤더의 TTL과는 무관)</li>
+<li>자주 접속하는 웹사이트는 대부분 로컬 네임 서버 선에서 캐시되어 있음</li>
+</ul>
+</blockquote>
+<h4 id="1-4-dns-레코드-타입">1-4 DNS 레코드 타입</h4>
+<p>도메인 네임을 IP 주소에 대응하기 위해서는 네임 서버에 <code class="language-text">DNS 자원 레코드(DNS Resource Record)</code> 또는 <code class="language-text">DNS 레코드</code>를 추가해야 한다.</p>
+<h5>DNS 레코드의 구성</h5>
+<p>모든 DNS 레코드는 기본적으로 다음 정보를 포함한다.</p>
+<ul>
+<li><strong>이름(Record Name)</strong>: 도메인 네임</li>
+<li><strong>값(Value)</strong>: 이름에 대응하는 값</li>
+<li><strong>레코드 타입(Record Type)</strong>: &#x3C;이름, 값> 쌍의 유형</li>
+<li><strong>TTL</strong>: 레코드가 캐시될 수 있는 시간</li>
+</ul>
+<h5>주요 레코드 타입</h5>
+<table>
+<thead>
+<tr>
+<th>레코드 유형</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>도메인 네임과 IPv4 주소의 대응 관계</td>
+</tr>
+<tr>
+<td>AAAA</td>
+<td>도메인 네임과 IPv6 주소의 대응 관계</td>
+</tr>
+<tr>
+<td>CNAME</td>
+<td>호스트 네임에 대한 별칭 지정</td>
+</tr>
+<tr>
+<td>NS</td>
+<td>특정 호스트의 IP 주소를 찾을 수 있는 네임 서버</td>
+</tr>
+<tr>
+<td>MX</td>
+<td>해당 도메인과 연동되어 있는 메일 서버</td>
+</tr>
+</tbody>
+</table>
+<p><strong>레코드 예시</strong></p>
+<table>
+<thead>
+<tr>
+<th>레코드 유형</th>
+<th>이름</th>
+<th>값</th>
+<th>TTL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>example.com.</td>
+<td>1.2.3.4</td>
+<td>300</td>
+</tr>
+<tr>
+<td>CNAME</td>
+<td><a href="http://www.example.com">www.example.com</a></td>
+<td>example.com.</td>
+<td>300</td>
+</tr>
+</tbody>
+</table>
+<p>첫 번째 레코드는 <code class="language-text">example.com.</code>이 <code class="language-text">1.2.3.4</code>에 대응됨을 의미한다. 두 번째 레코드는 <code class="language-text">www.example.com.</code>을 <code class="language-text">example.com.</code>의 별칭으로 사용하므로, <code class="language-text">www.example.com.</code>을 질의하면 <code class="language-text">1.2.3.4</code>를 응답받게 된다.</p>
+<h3 id="자원과-uriurl">자원과 URI/URL</h3>
+<h4 id="1-5-자원의-개념">1-5 자원의 개념</h4>
+<p><code class="language-text">자원(Resource)</code>이란 네트워크 상의 메시지를 통해 주고받는 최종 대상을 의미한다. HTML 파일, 이미지, 동영상 파일, 텍스트 파일 등이 모두 자원이 될 수 있다. 두 호스트가 네트워크를 통해 서로 정보를 주고받을 때 송수신하는 대상이 바로 자원이다.</p>
+<h4 id="1-6-uri와-url">1-6 URI와 URL</h4>
+<p><code class="language-text">URI(Uniform Resource Identifier)</code>는 웹 상에서의 자원을 식별하기 위한 정보를 의미한다. 자원을 <strong>통일된 방식(Uniform)</strong> 으로 <strong>식별(Identifier)</strong> 하는 것이 URI이다.</p>
+<p>자원을 식별할 때는 <strong>이름</strong>을 기반으로 식별하기도 하고, <strong>위치</strong>를 기반으로 식별하기도 한다.</p>
+<ul>
+<li><strong>URN(Uniform Resource Name)</strong>: 이름으로 자원을 식별</li>
+<li><strong>URL(Uniform Resource Locator)</strong>: 위치로 자원을 식별</li>
+</ul>
+<p>오늘날 인터넷 환경에서는 <strong>위치 기반의 식별자인 URL</strong>이 더 많이 사용된다.</p>
+<h4 id="1-7-url의-구조">1-7 URL의 구조</h4>
+<p>일반적인 URL의 구조는 다음과 같다.</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">http://www.example.com:8042/over/there?name=ferret#nose
+└─┬─┘ └──────┬──────┘└─┬─┘└────┬────┘└────┬────┘└─┬─┘
+scheme    authority   port   path      query    fragment</code></pre></div>
+<h5>① scheme</h5>
+<p><code class="language-text">scheme</code>는 자원에 접근하는 방법을 나타낸다. 일반적으로 <strong>사용할 프로토콜</strong>이 명시된다.</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">http://   → HTTP 프로토콜 사용
+https://  → HTTPS 프로토콜 사용</code></pre></div>
+<h5>② authority</h5>
+<p><code class="language-text">authority</code>에는 호스트를 특정할 수 있는 <strong>IP 주소나 도메인 네임</strong>이 명시된다. 콜론(<code class="language-text">:</code>) 뒤에 포트 번호를 명시할 수도 있다.</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">www.example.com:8042</code></pre></div>
+<h5>③ path</h5>
+<p><code class="language-text">path</code>에는 자원이 위치하고 있는 <strong>경로</strong>가 명시된다. 슬래시(<code class="language-text">/</code>)를 기준으로 계층적으로 표현된다.</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">http://example.com/home/images/a.png
+                   └─────┬─────────┘
+                       path</code></pre></div>
+<h5>④ query</h5>
+<p><code class="language-text">query</code>는 URL에 대한 <strong>매개변수</strong> 역할을 하는 문자열이다. <code class="language-text">쿼리 문자열(Query String)</code> 또는 <code class="language-text">쿼리 파라미터(Query Parameter)</code>라고도 부른다.</p>
+<p>쿼리 문자열은 <strong>물음표(<code class="language-text">?</code>)로 시작</strong>되는 <code class="language-text">&lt;키=값></code> 형태의 데이터로, **앰퍼샌드(<code class="language-text">&amp;</code>)**를 사용하여 여러 쿼리 문자열을 연결할 수 있다.</p>
+<p><strong>쿼리 문자열 예시 1: 부동산 검색</strong></p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">http://example.com/search?location=seoul&amp;rooms=2&amp;size=100&amp;min_price=200000
+
+지역: seoul
+침실 수: 2개
+면적: 100
+최소 가격: 200000</code></pre></div>
+<p><strong>쿼리 문자열 예시 2: 상품 검색</strong></p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">http://example.com/search?category=books&amp;brand=hanbit&amp;discounted=true&amp;sorted=price_desc
+
+카테고리: 도서
+브랜드: 한빛
+할인: 진행 중
+정렬: 가격별 내림차순</code></pre></div>
+<h5>⑤ fragment</h5>
+<p><code class="language-text">fragment</code>는 자원의 일부분, 자원의 한 조각을 가리키기 위한 정보이다. 일반적으로 HTML 파일에서 <strong>특정 부분을 가리키는 데</strong> 사용된다.</p>
+<div class="gatsby-highlight" data-language="java"><pre class="language-java"><code class="language-java"><span class="token comment">// URL 비교</span>
+<span class="token class-name">String</span> url1 <span class="token operator">=</span> <span class="token string">"https://datatracker.ietf.org/doc/html/rfc3986"</span><span class="token punctuation">;</span>
+<span class="token comment">// → HTML 파일의 첫 부분으로 이동</span>
+
+<span class="token class-name">String</span> url2 <span class="token operator">=</span> <span class="token string">"https://datatracker.ietf.org/doc/html/rfc3986#section-1.1.2"</span><span class="token punctuation">;</span>
+<span class="token comment">// → HTML 파일의 특정 섹션(section-1.1.2)으로 이동</span></code></pre></div>
+<blockquote>
+<p>💡 <strong>URN의 특징</strong></p>
+<p><code class="language-text">URN</code>은 자원에 고유한 이름을 붙이는 이름 기반의 식별자이다. <strong>자원의 위치와 무관</strong>하게 자원을 식별할 수 있다는 장점이 있다.</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">urn:isbn:0451450523</code></pre></div>
+<p>위는 ISBN이 <code class="language-text">0451450523</code>인 도서를 나타내는 URN이다. 위치나 프로토콜과 무관하게 자원을 식별할 수 있다. 다만 URN은 아직 URL만큼 널리 채택된 방식은 아니다.</p>
+</blockquote>
+<h2 id="2️-http의-특징과-메시지-구조">2️⃣ HTTP의 특징과 메시지 구조</h2>
+<h3 id="http의-목적과-특징">HTTP의 목적과 특징</h3>
+<p>HTTP의 목적은 애플리케이션의 다양한 자원을 네트워크를 통해 송수신하는 것이다. <strong>데이터의 형식에 구애받지 않고</strong> 다양한 애플리케이션 데이터의 송수신을 가능하게 하는 것이 HTTP의 주된 목적이다.</p>
+<h4 id="2-1-http의-4가지-특징">2-1 HTTP의 4가지 특징</h4>
+<p>HTTP에는 주요한 특징 4가지가 있으며, 이는 프로그래밍에 큰 영향을 끼친다.</p>
+<table>
+<thead>
+<tr>
+<th>특징</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>요청-응답 기반 프로토콜</td>
+<td>요청 메시지와 응답 메시지를 주고받는 구조</td>
+</tr>
+<tr>
+<td>미디어 독립적 프로토콜</td>
+<td>다양한 종류의 자원을 주고받을 수 있음</td>
+</tr>
+<tr>
+<td>스테이트리스 프로토콜</td>
+<td>상태를 유지하지 않음</td>
+</tr>
+<tr>
+<td>지속 연결 프로토콜</td>
+<td>하나의 TCP 연결로 여러 요청-응답 처리 가능</td>
+</tr>
+</tbody>
+</table>
+<h5>요청-응답 기반 프로토콜</h5>
+<p>HTTP는 기본적으로 요청 메시지를 보내는 <strong>클라이언트</strong>와 이에 대한 응답 메시지를 보내는 <strong>서버</strong>가 서로 HTTP 요청 메시지와 HTTP 응답 메시지를 주고받는 구조로 작동한다.</p>
+<h5>미디어 독립적 프로토콜</h5>
+<p>HTTP 메시지를 통해 HTML, JPEG, PNG, JSON, XML, PDF 등 <strong>다양한 종류의 자원</strong>을 주고받을 수 있다. HTTP는 주고받을 자원의 특성과 무관하게 자원을 주고받는 수단의 역할만 수행한다.</p>
+<p>HTTP에서 메시지로 주고받는 자원의 종류를 <code class="language-text">미디어 타입(Media Type)</code> 또는 <code class="language-text">MIME 타입(Multipurpose Internet Mail Extensions Type)</code>이라고 부른다.</p>
+<p><strong>미디어 타입 구조</strong></p>
+<p>미디어 타입은 슬래시를 기준으로 하는 <code class="language-text">타입/서브타입(type/subtype)</code> 형식으로 구성된다.</p>
+<table>
+<thead>
+<tr>
+<th>타입</th>
+<th>설명</th>
+<th>서브타입 예시</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>text</td>
+<td>텍스트 형식 데이터</td>
+<td>plain, html, css, javascript</td>
+</tr>
+<tr>
+<td>image</td>
+<td>이미지 형식 데이터</td>
+<td>png, jpeg, webp, gif</td>
+</tr>
+<tr>
+<td>video</td>
+<td>비디오 형식 데이터</td>
+<td>mp4, ogg, webm</td>
+</tr>
+<tr>
+<td>audio</td>
+<td>오디오 형식 데이터</td>
+<td>midi, wav</td>
+</tr>
+<tr>
+<td>application</td>
+<td>바이너리 형식 데이터</td>
+<td>octet-stream, pdf, xml, json, x-www-form-urlencoded</td>
+</tr>
+<tr>
+<td>multipart</td>
+<td>여러 요소로 구성된 데이터</td>
+<td>form-data, encrypted</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>💡 <strong>미디어 타입의 추가 표기</strong></p>
+<ul>
+<li><strong>별표(<code class="language-text">*</code>)</strong>: 여러 미디어 타입을 통칭 (<code class="language-text">text/*</code>, <code class="language-text">*/*</code>)</li>
+<li><strong>매개변수</strong>: 부가 설명 추가 가능 (<code class="language-text">text/html;charset=UTF-8</code>)</li>
+</ul>
+</blockquote>
+<h5>스테이트리스 프로토콜</h5>
+<p>HTTP는 <strong>상태를 유지하지 않는</strong> <code class="language-text">스테이트리스(Stateless)</code> 프로토콜이다. 서버는 HTTP 요청을 보낸 클라이언트 관련 상태를 기억하지 않는다. 클라이언트의 모든 HTTP 요청은 기본적으로 <strong>독립적인 요청</strong>으로 간주된다.</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">1. Introduction
+1.1. Purpose
+The Hypertext Transfer Protocol (HTTP) is a family of stateless,
+application-level, request/response protocols...</code></pre></div>
+<p><strong>스테이트리스의 이유와 장점</strong></p>
+<p>HTTP 서버는 많은 클라이언트와 동시에 상호작용한다. 모든 클라이언트의 상태 정보를 유지하는 것은 서버에 큰 부담이 된다.</p>
+<ul>
+<li><strong>확장성(Scalability)</strong>: 서버의 추가나 대체가 쉬움</li>
+<li><strong>견고성(Robustness)</strong>: 서버 하나에 문제가 생기더라도 다른 서버로 쉽게 대체 가능</li>
+<li>특정 클라이언트가 특정 서버에 종속되지 않음</li>
+</ul>
+<h5>지속 연결 프로토콜</h5>
+<p>오늘날 많이 사용되는 HTTP 버전(HTTP 1.1 이상)에서는 <code class="language-text">지속 연결(Persistent Connection)</code> 또는 <code class="language-text">킵 얼라이브(Keep-Alive)</code> 기술을 제공한다.</p>
+<ul>
+<li><strong>비지속 연결(HTTP 1.0 이하)</strong>: 요청-응답마다 TCP 연결 수립 및 종료 반복</li>
+<li><strong>지속 연결(HTTP 1.1 이상)</strong>: 하나의 TCP 연결 상에서 여러 요청-응답 처리</li>
+</ul>
+<p><figure class="gatsby-resp-image-figure" style="background: transparent;">
+    <span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 742px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/5eff72a8a19eec5ccae538a3ae155975/14945/keep-alive.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 28.4%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAGCAIAAABM9SnKAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA8ElEQVR42k2QXW6FIBCF3f8a+txN9LndQZ/aVCuot3hhdPhRwIFyJTWdTCYnZ+YLJzQ5ZwA13m4/YubjqACKk86q4nGgYJimeZ57xu5SXn7D+eCMDnAPIOMKCPDVtlJK733btkKI4Ky31mv0++YNBmd2oxljnPHmoEQOSfRJTSSnFEPBYghEFGOglI5VkjNUpt8IJVksHY7D774pr/v93QxP3fdz138cIZ+pcoFzLp03/XIE5sUrmk6YN72UlFhvHnDOcV1Gxj9XxPxXJ1yFSyniMvOBaQtEqYStqwpnrc0CuLntguuXXBpRKwXObv/9X895WMPAqtdhAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <picture>
+          <source
+              srcset="/static/5eff72a8a19eec5ccae538a3ae155975/bc904/keep-alive.webp 250w,
+/static/5eff72a8a19eec5ccae538a3ae155975/4be29/keep-alive.webp 500w,
+/static/5eff72a8a19eec5ccae538a3ae155975/e40a6/keep-alive.webp 742w"
+              sizes="(max-width: 742px) 100vw, 742px"
+              type="image/webp"
+            />
+          <source
+            srcset="/static/5eff72a8a19eec5ccae538a3ae155975/43fa5/keep-alive.png 250w,
+/static/5eff72a8a19eec5ccae538a3ae155975/c6e3d/keep-alive.png 500w,
+/static/5eff72a8a19eec5ccae538a3ae155975/14945/keep-alive.png 742w"
+            sizes="(max-width: 742px) 100vw, 742px"
+            type="image/png"
+          />
+          <img
+            class="gatsby-resp-image-image"
+            src="/static/5eff72a8a19eec5ccae538a3ae155975/14945/keep-alive.png"
+            alt="keep-alive OFF/ON"
+            title=""
+            loading="lazy"
+            decoding="async"
+            style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+          />
+        </picture>
+  </a>
+    </span>
+    <figcaption class="gatsby-resp-image-figcaption">keep-alive OFF/ON</figcaption>
+  </figure></p>
+<blockquote>
+<p>💡 <strong>HTTP 버전별 특징</strong></p>
+<p><strong>HTTP 1.1</strong></p>
+<ul>
+<li><code class="language-text">지속 연결 기능</code> 공식 지원</li>
+<li>평문으로 메시지 송수신</li>
+<li>콘텐츠 협상 기능 추가</li>
+</ul>
+<p><strong>HTTP 2.0</strong></p>
+<ul>
+<li>바이너리 데이터 기반 송수신</li>
+<li>헤더 압축으로 네트워크 효율 향상</li>
+<li>서버 푸시(Server Push): 미래에 필요할 자원을 미리 전송</li>
+<li>HTTP <code class="language-text">멀티플렉싱</code>: 여러 독립적인 스트림으로 요청-응답 병렬 처리</li>
+<li>HOL 블로킹(Head-Of-Line blocking) 문제 완화</li>
+</ul>
+<p><strong>HTTP 3.0</strong></p>
+<ul>
+<li><code class="language-text">UDP</code> 기반의 QUIC(Quick UDP Internet Connections) 프로토콜 사용</li>
+<li>송수신 속도 개선</li>
+</ul>
+</blockquote>
+<h3 id="http-메시지-구조">HTTP 메시지 구조</h3>
+<h4 id="2-2-http-메시지의-기본-구조">2-2 HTTP 메시지의 기본 구조</h4>
+<p>HTTP 메시지는 <strong>시작 라인</strong>, <strong>필드 라인</strong>, <strong>메시지 본문</strong>으로 이루어져 있다.</p>
+<div class="gatsby-highlight" data-language="txt"><pre class="language-txt"><code class="language-txt">시작 라인 (줄바꿈)
+필드 라인* (줄바꿈)
+(줄바꿈)
+메시지 본문**
+
+* 0개 이상
+** 선택적</code></pre></div>
+<p>HTTP는 요청-응답 기반의 프로토콜로, 시작 라인으로 메시지가 <strong>요청 메시지</strong>인지 <strong>응답 메시지</strong>인지를 구분할 수 있다.</p>
+<ul>
+<li><strong>HTTP 요청 메시지</strong>: 시작 라인 = 요청 라인</li>
+<li><strong>HTTP 응답 메시지</strong>: 시작 라인 = 상태 라인</li>
+</ul>
+<h4 id="2-3-요청-라인과-상태-라인">2-3 요청 라인과 상태 라인</h4>
+<p><strong>요청 라인 구조</strong></p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">메서드 (공백) 요청 대상 (공백) HTTP 버전 (줄바꿈)</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>필드</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>메서드</td>
+<td>클라이언트가 서버의 자원에 대해 수행할 작업의 종류</td>
+</tr>
+<tr>
+<td>요청 대상</td>
+<td>요청을 보낼 서버의 자원 (일반적으로 URL의 path)</td>
+</tr>
+<tr>
+<td>HTTP 버전</td>
+<td>사용된 HTTP 버전 (예: HTTP/1.1)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>상태 라인 구조</strong></p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">HTTP 버전 (공백) 상태 코드 (공백) 이유 구문 (줄바꿈)</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>필드</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HTTP 버전</td>
+<td>사용된 HTTP 버전</td>
+</tr>
+<tr>
+<td>상태 코드</td>
+<td>요청에 대한 결과를 나타내는 3자리 정수</td>
+</tr>
+<tr>
+<td>이유 구문</td>
+<td>상태 코드에 대한 문자열 형태의 설명</td>
+</tr>
+</tbody>
+</table>
+<p><strong>상태 라인 예시</strong></p>
+<div class="gatsby-highlight" data-language="txt"><pre class="language-txt"><code class="language-txt">HTTP/1.1 200 OK
+HTTP/1.1 404 Not Found</code></pre></div>
+<h4 id="2-4-http-헤더">2-4 HTTP 헤더</h4>
+<p>HTTP 메시지의 필드 라인에는 <code class="language-text">HTTP 헤더(HTTP Header)</code>가 명시된다. HTTP 헤더는 <strong>HTTP 메시지 전송과 관련한 부가 정보이자 제어 정보</strong>이다.</p>
+<p>HTTP 헤더는 콜론(<code class="language-text">:</code>)을 기준으로 <strong>헤더 이름</strong>과 <strong>헤더 값</strong>으로 구성된다.</p>
+<div class="gatsby-highlight" data-language="txt"><pre class="language-txt"><code class="language-txt">HTTP/1.1 200 OK // 시작 라인 (상태 라인)
+Content-Type: text/html // 필드 라인 , name: value 형태
+Content-Length: 648
+
+&lt;!DOCTYPE html>
+&lt;html태>
+...
+&lt;/html태></code></pre></div>
+<p>HTTP 메시지는 웹 브라우저의 <strong>개발자 도구</strong>에서 쉽게 조회할 수 있다. 크롬 브라우저의 경우 <strong>[개발자 도구] → [네트워크]</strong> 탭에서 확인할 수 있다.</p>
+<h2 id="3️-http-메서드와-상태-코드">3️⃣ HTTP 메서드와 상태 코드</h2>
+<h3 id="http-메서드">HTTP 메서드</h3>
+<h4 id="3-1-주요-http-메서드">3-1 주요 HTTP 메서드</h4>
+<p>HTTP 메서드 중 자주 사용되는 중요 메서드는 <strong>GET, HEAD, POST, PUT, PATCH, DELETE</strong>이다.</p>
+<table>
+<thead>
+<tr>
+<th>HTTP 메서드</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GET</td>
+<td>자원을 조회하기 위한 메서드</td>
+</tr>
+<tr>
+<td>HEAD</td>
+<td>GET과 동일하나 헤더만을 응답받는 메서드</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>서버로 하여금 특정 작업을 처리하게끔 하는 메서드</td>
+</tr>
+<tr>
+<td>PUT</td>
+<td>자원을 대체하기 위한 메서드 (덮어쓰기)</td>
+</tr>
+<tr>
+<td>PATCH</td>
+<td>자원에 대한 부분적 수정을 위한 메서드</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>자원을 삭제하기 위한 메서드</td>
+</tr>
+<tr>
+<td>CONNECT</td>
+<td>자원에 대한 양방향 연결을 시작하는 메서드</td>
+</tr>
+<tr>
+<td>OPTIONS</td>
+<td>사용 가능한 메서드 등 통신 옵션을 확인하는 메서드</td>
+</tr>
+<tr>
+<td>TRACE</td>
+<td>자원에 대한 루프백 테스트를 수행하는 메서드</td>
+</tr>
+</tbody>
+</table>
+<h4 id="3-2-get과-head">3-2 GET과 HEAD</h4>
+<p><code class="language-text">GET</code>은 가장 흔히 사용되는 메서드로, <strong>자원을 조회</strong>하는 용도의 메서드이다. 웹 브라우저를 통해 웹사이트의 자원을 조회하는 것은 모두 해당 웹사이트에 GET 요청을 보내는 것과 같다.</p>
+<p><strong>GET 요청 메시지 예시</strong></p>
+<div class="gatsby-highlight" data-language="txt"><pre class="language-txt"><code class="language-txt">GET /example-page HTTP/1.1
+Host: www.example.com
+Accept: */*</code></pre></div>
+<p><strong>GET 응답 메시지 예시</strong></p>
+<div class="gatsby-highlight" data-language="txt"><pre class="language-txt"><code class="language-txt">HTTP/1.1 200 OK
+Content-Type: text/html
+Content-Length: 648
+
+&lt;!DOCTYPE html>
+&lt;html>
+&lt;head>
+    &lt;title>Example Page&lt;/title>
+&lt;/head>
+&lt;body>
+    &lt;h1>Hello, World!&lt;/h1>
+&lt;/body>
+&lt;/html></code></pre></div>
+<p><code class="language-text">HEAD</code> 메서드는 응답 메시지에 <strong>메시지 본문이 포함되지 않는다</strong>는 점을 제외하면 GET 메서드와 동일하다.</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">HEAD /example-page HTTP/1.1
+Host: www.example.com
+Accept: */*
+
+───────────────────────────
+
+HTTP/1.1 200 OK
+Content-Type: text/html
+Content-Length: 648
+(메시지 본문 없음)</code></pre></div>
+<blockquote>
+<p>💡 <strong>Host 헤더</strong></p>
+<p><code class="language-text">Host</code> 헤더에는 요청을 보낼 호스트가 명시된다. Host 헤더와 요청 라인의 요청 대상을 조합하면 요청을 보내는 전체 URL을 알 수 있다.</p>
+</blockquote>
+<h4 id="3-3-post">3-3 POST</h4>
+<p><code class="language-text">POST</code>는 서버로 하여금 <strong>특정 작업을 처리</strong>하도록 요청하는 용도로 사용되는 메서드이다. 많은 경우 <strong>새로운 자원을 생성</strong>할 때 사용된다.</p>
+<p><strong>POST 요청 메시지 예시</strong></p>
+<div class="gatsby-highlight" data-language="txt"><pre class="language-txt"><code class="language-txt">POST /posting HTTP/1.1
+Host: example.com
+Content-Type: application/json
+Content-Length: 123
+
+{
+    "id": 1,
+    "title": "컴퓨터 네트워크",
+    "contents": "너무 중요한 과목이니 힘들어도 끝까지 화이팅해서 읽어 주세요!!!!!"
+}</code></pre></div>
+<p><strong>POST 응답 메시지 예시 (자원 생성 성공)</strong></p>
+<div class="gatsby-highlight" data-language="txt"><pre class="language-txt"><code class="language-txt">HTTP/1.1 201 Created
+Content-Type: application/json
+Content-Length: 100
+Date: Mon, 14 Oct 2024 16:35:00 PST
+Location: /posting/1
+
+{
+    "id": 1,
+    "title": "컴퓨터 네트워크",
+    "contents": "너무 중요한 과목이니 힘들어도 끝까지 화이팅해서 읽어 주세요!!!!!"
+}</code></pre></div>
+<p>일반적으로 <code class="language-text">Location</code> 헤더를 통해 생성된 자원의 위치를 응답하고, 메시지 본문으로 생성된 자원을 응답한다.</p>
+<h4 id="3-4-put과-patch">3-4 PUT과 PATCH</h4>
+<p><code class="language-text">PUT</code>과 <code class="language-text">PATCH</code>는 둘의 차이점에 유의해야 한다.</p>
+<ul>
+<li><strong>PUT</strong>: 덮어쓰기 (자원 전체를 대체)</li>
+<li><strong>PATCH</strong>: 부분적 수정 (요청한 부분만 수정)</li>
+</ul>
+<p><strong>서버에 존재하는 자원</strong></p>
+<div class="gatsby-highlight" data-language="json"><pre class="language-json"><code class="language-json"><span class="token punctuation">{</span>
+  <span class="token property">"id"</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+  <span class="token property">"title"</span><span class="token operator">:</span> <span class="token string">"오늘도 즐거운 날입니다"</span><span class="token punctuation">,</span>
+  <span class="token property">"contents"</span><span class="token operator">:</span> <span class="token string">"재미있는 글 보고 가세요"</span>
+<span class="token punctuation">}</span></code></pre></div>
+<p><strong>PUT 요청</strong></p>
+<div class="gatsby-highlight" data-language="txt"><pre class="language-txt"><code class="language-txt">PUT /posting HTTP/1.1
+Host: example.com
+Content-Type: application/json
+
+{
+    "id": 1,
+    "title": "수정된 제목입니다"
+}</code></pre></div>
+<p><strong>PUT 결과 (전체 대체)</strong></p>
+<div class="gatsby-highlight" data-language="json"><pre class="language-json"><code class="language-json"><span class="token punctuation">{</span>
+  <span class="token property">"id"</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+  <span class="token property">"title"</span><span class="token operator">:</span> <span class="token string">"수정된 제목입니다"</span>
+  <span class="token comment">// contents 필드가 사라짐</span>
+<span class="token punctuation">}</span></code></pre></div>
+<p><strong>PATCH 요청</strong></p>
+<div class="gatsby-highlight" data-language="txt"><pre class="language-txt"><code class="language-txt">PATCH /posting HTTP/1.1
+Host: example.com
+Content-Type: application/json
+
+{
+    "id": 1,
+    "title": "수정된 제목입니다"
+}</code></pre></div>
+<p><strong>PATCH 결과 (부분 수정)</strong></p>
+<div class="gatsby-highlight" data-language="json"><pre class="language-json"><code class="language-json"><span class="token punctuation">{</span>
+  <span class="token property">"id"</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+  <span class="token property">"title"</span><span class="token operator">:</span> <span class="token string">"수정된 제목입니다"</span><span class="token punctuation">,</span>
+  <span class="token property">"contents"</span><span class="token operator">:</span> <span class="token string">"재미있는 글 보고 가세요"</span>
+  <span class="token comment">// contents 필드가 유지됨</span>
+<span class="token punctuation">}</span></code></pre></div>
+<h4 id="3-5-delete">3-5 DELETE</h4>
+<p><code class="language-text">DELETE</code> 메서드는 <strong>특정 자원의 삭제</strong>를 요청할 때 사용되는 메서드이다.</p>
+<div class="gatsby-highlight" data-language="txt"><pre class="language-txt"><code class="language-txt">DELETE /texts/a.txt HTTP/1.1
+Host: example.com</code></pre></div>
+<p>서버가 어떤 URI(URL)에 어떤 메서드로 요청을 받았을 때 어떻게 행동해야 하는지를 설계하는 것은 <strong>개발자의 몫</strong>이다. 같은 URL에 대한 요청이라고 하더라도 여러 메서드에 대한 동작을 구현할 수도 있고, 어떤 메서드에 대한 동작은 구현하지 않을 수도 있다.</p>
+<h3 id="http-상태-코드">HTTP 상태 코드</h3>
+<h4 id="3-6-상태-코드의-분류">3-6 상태 코드의 분류</h4>
+<p>상태 코드는 요청의 결과를 나타내는 <strong>3자리 정수</strong>이다. <strong>백의 자릿수</strong>를 기준으로 요청 결과의 유형을 구분할 수 있다.</p>
+<table>
+<thead>
+<tr>
+<th>상태 코드</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>100번대 (100~199)</td>
+<td>정보성 상태 코드</td>
+</tr>
+<tr>
+<td>200번대 (200~299)</td>
+<td>성공 상태 코드</td>
+</tr>
+<tr>
+<td>300번대 (300~399)</td>
+<td>리다이렉션 상태 코드</td>
+</tr>
+<tr>
+<td>400번대 (400~499)</td>
+<td>클라이언트 에러 상태 코드</td>
+</tr>
+<tr>
+<td>500번대 (500~599)</td>
+<td>서버 에러 상태 코드</td>
+</tr>
+</tbody>
+</table>
+<h4 id="3-7-200번대-성공-상태-코드">3-7 200번대: 성공 상태 코드</h4>
+<p>200번대 상태 코드는 <strong>요청이 성공했음</strong>을 의미한다.</p>
+<table>
+<thead>
+<tr>
+<th>상태 코드</th>
+<th>이유 구문</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>200</td>
+<td>OK</td>
+<td>요청이 성공했음</td>
+</tr>
+<tr>
+<td>201</td>
+<td>Created</td>
+<td>요청이 성공했으며 새로운 자원이 생성되었음</td>
+</tr>
+<tr>
+<td>202</td>
+<td>Accepted</td>
+<td>요청을 잘 받았으나 아직 작업을 끝내지 않았음</td>
+</tr>
+<tr>
+<td>204</td>
+<td>No Content</td>
+<td>요청이 성공했지만 메시지 본문으로 표시할 데이터가 없음</td>
+</tr>
+</tbody>
+</table>
+<h4 id="3-8-300번대-리다이렉션-상태-코드">3-8 300번대: 리다이렉션 상태 코드</h4>
+<p>300번대 상태 코드는 <strong>리다이렉션</strong>과 관련된 상태 코드이다. <code class="language-text">리다이렉션(Redirection)</code>이란 클라이언트가 요청한 자원이 다른 곳에 있을 때 <strong>다른 곳으로 요청을 이동</strong>시키는 것을 의미한다.</p>
+<table>
+<thead>
+<tr>
+<th>상태 코드</th>
+<th>이유 구문</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>301</td>
+<td>Moved Permanently</td>
+<td>영구적 리다이렉션 - 재요청 메서드가 변경될 수 있음</td>
+</tr>
+<tr>
+<td>308</td>
+<td>Permanent Redirect</td>
+<td>영구적 리다이렉션 - 재요청 메서드가 변경되지 않음</td>
+</tr>
+<tr>
+<td>302</td>
+<td>Found</td>
+<td>일시적 리다이렉션 - 재요청 메서드가 변경될 수 있음</td>
+</tr>
+<tr>
+<td>303</td>
+<td>See Other</td>
+<td>일시적 리다이렉션 - 재요청 메서드가 GET으로 변경됨</td>
+</tr>
+<tr>
+<td>307</td>
+<td>Temporary Redirect</td>
+<td>일시적 리다이렉션 - 재요청 메서드가 변경되지 않음</td>
+</tr>
+<tr>
+<td>304</td>
+<td>Not Modified</td>
+<td>캐시 - 자원이 변경되지 않음</td>
+</tr>
+</tbody>
+</table>
+<h5>영구적 리다이렉션 vs 일시적 리다이렉션</h5>
+<ul>
+<li><strong>영구적 리다이렉션(Permanent Redirection)</strong>: 자원이 완전히 새로운 곳으로 이동하여 경로가 영구적으로 재지정됨. 기존 URL은 기억할 필요가 없음</li>
+<li><strong>일시적 리다이렉션(Temporary Redirection)</strong>: 자원의 위치가 임시로 변경되었거나 임시로 사용할 URL이 필요한 경우. 기존 URL을 기억해야 함</li>
+</ul>
+<h5>재요청 메서드 변경 여부</h5>
+<ul>
+<li><strong>301, 302</strong>: 재요청 메서드가 GET으로 변경될 <strong>가능성</strong>이 있음 (애매모호)</li>
+<li><strong>308, 307</strong>: 재요청 메서드가 <strong>변경되지 않음</strong></li>
+<li><strong>303</strong>: 재요청 메서드가 <strong>반드시 GET</strong>으로 변경됨</li>
+</ul>
+<h4 id="3-9-400번대-클라이언트-에러-상태-코드">3-9 400번대: 클라이언트 에러 상태 코드</h4>
+<p>400번대 상태 코드는 <strong>클라이언트에게 잘못이 있음</strong>을 나타낸다.</p>
+<table>
+<thead>
+<tr>
+<th>상태 코드</th>
+<th>이유 구문</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>400</td>
+<td>Bad Request</td>
+<td>요청 메시지의 내용이나 형식 자체에 문제가 있음</td>
+</tr>
+<tr>
+<td>401</td>
+<td>Unauthorized</td>
+<td>요청한 자원에 대한 유효한 <strong>인증(Authentication)</strong> 이 없음</td>
+</tr>
+<tr>
+<td>403</td>
+<td>Forbidden</td>
+<td>요청이 서버에 의해 거부됨. 자원에 대한 접근 <strong>권한(Authorization)</strong> 이 충분하지 않음</td>
+</tr>
+<tr>
+<td>404</td>
+<td>Not Found</td>
+<td>요청받은 자원을 찾을 수 없음</td>
+</tr>
+<tr>
+<td>405</td>
+<td>Method Not Allowed</td>
+<td>요청한 메서드를 지원하지 않음</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>💡 <strong>401 vs 403: 인증과 권한</strong></p>
+<ul>
+<li><strong>인증(Authentication)</strong>: 자신이 누구인지를 증명하는 작업 (예: 로그인)</li>
+<li><strong>권한(Authorization)</strong>: 인증된 주체에게 허용된 작업 (예: 관리자 권한)</li>
+</ul>
+<p>로그인된 모든 유저는 인증된 유저지만, 로그인된 모든 유저가 관리자 페이지에 들어갈 수는 없다. <strong>인증이 되었더라도 권한은 충분하지 않을 수 있다.</strong></p>
+</blockquote>
+<h4 id="3-10-500번대-서버-에러-상태-코드">3-10 500번대: 서버 에러 상태 코드</h4>
+<p>500번대 상태 코드는 <strong>서버에게 잘못이 있음</strong>을 나타낸다.</p>
+<table>
+<thead>
+<tr>
+<th>상태 코드</th>
+<th>이유 구문</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>500</td>
+<td>Internal Server Error</td>
+<td>요청을 처리할 수 없음</td>
+</tr>
+<tr>
+<td>502</td>
+<td>Bad Gateway</td>
+<td>중간 서버의 통신 오류</td>
+</tr>
+</tbody>
+</table>
+<p>대부분의 500번대 상태 코드는 <code class="language-text">500 (Internal Server Error)</code>이다. 서버에 어떤 문제가 발생했을 때, 익명의 다수 사용자에게 문제의 발생 원인을 상세히 공개하는 것은 <strong>보안상 좋지 않기</strong> 때문에 서버 문제를 가리키는 상태 코드는 500으로 통칭하는 경우가 많다.</p>
+<p><code class="language-text">502 (Bad Gateway)</code>는 클라이언트와 서버 사이에 위치한 중간 서버에서 <strong>통신 오류</strong>가 있었음을 나타낸다.</p>
+<h3 id="http-주요-헤더">HTTP 주요 헤더</h3>
+<h4 id="3-11-요청-메시지에서-주로-활용되는-헤더">3-11 요청 메시지에서 주로 활용되는 헤더</h4>
+<h5>Host</h5>
+<p>요청을 보낼 호스트가 명시되는 헤더이다. 도메인 네임이나 IP 주소로 표현되며, 포트 번호가 포함될 수도 있다.</p>
+<div class="gatsby-highlight" data-language="txt"><pre class="language-txt"><code class="language-txt">GET /hypertext/WWW/TheProject.html HTTP/1.1
+Host: info.cern.ch</code></pre></div>
+<p>Host 헤더와 요청 라인을 조합하면 요청을 보낸 URL을 짐작할 수 있다.
+→ <code class="language-text">http://info.cern.ch/hypertext/WWW/TheProject.html</code></p>
+<h5>User-Agent</h5>
+<p>요청 메시지를 보낸 <strong>클라이언트의 프로그램</strong>과 관련한 정보가 명시된다. 사용된 브라우저의 종류, 운영체제 및 아키텍처 정보, 렌더링 엔진의 종류 등이 포함된다.</p>
+<div class="gatsby-highlight" data-language="txt"><pre class="language-txt"><code class="language-txt">User-Agent: Mozilla/5.0 (&lt;system-information>) &lt;platform> (&lt;platform-details>) &lt;extensions></code></pre></div>
+<p>User-Agent 헤더를 통해 HTTP 요청 메시지를 보낸 클라이언트의 접속 수단을 유추할 수 있다.</p>
+<h5>Referer</h5>
+<p>클라이언트가 요청을 보낼 때 <strong>머무르던 URL</strong>이 명시된다. 이를 통해 <strong>클라이언트의 유입 경로</strong>를 파악할 수 있다.</p>
+<div class="gatsby-highlight" data-language="txt"><pre class="language-txt"><code class="language-txt">Referer: https://minchul.net</code></pre></div>
+<blockquote>
+<p>💡 <strong>Referer는 오타가 아니다</strong></p>
+<p>개발 초기 당시 오타로 표기됐던 'Referer'라는 단어가 오늘날까지 헤더의 이름으로 사용되고 있다. (올바른 철자는 'Referrer')</p>
+</blockquote>
+<h4 id="3-12-응답-메시지에서-주로-활용되는-헤더">3-12 응답 메시지에서 주로 활용되는 헤더</h4>
+<h5>Server</h5>
+<p>HTTP 응답 메시지를 보내는 <strong>서버 호스트와 관련된 정보</strong>가 명시된다.</p>
+<div class="gatsby-highlight" data-language="txt"><pre class="language-txt"><code class="language-txt">Server: Apache/2.4.1 (Unix)</code></pre></div>
+<h5>Allow</h5>
+<p><strong>처리 가능한 HTTP 메서드 목록</strong>을 알리기 위해 사용된다. 주로 <code class="language-text">405 (Method Not Allowed)</code> 상태 코드와 함께 사용된다.</p>
+<div class="gatsby-highlight" data-language="txt"><pre class="language-txt"><code class="language-txt">HTTP/1.1 405 Method Not Allowed
+Allow: POST, OPTIONS</code></pre></div>
+<h5>Location</h5>
+<p>클라이언트에게 <strong>자원의 위치</strong>를 알려 주기 위해 사용된다. 주로 리다이렉션이 발생했을 때나 새로운 자원이 생성되었을 때 사용된다.</p>
+<div class="gatsby-highlight" data-language="txt"><pre class="language-txt"><code class="language-txt">HTTP/1.1 301 Moved Permanently
+Location: /new
+
+또는
+
+HTTP/1.1 201 Created
+Location: /posting/1</code></pre></div>
+<h4 id="3-13-요청과-응답-모두에서-활용되는-헤더">3-13 요청과 응답 모두에서 활용되는 헤더</h4>
+<h5>Date</h5>
+<p>메시지가 생성된 <strong>날짜와 시각</strong>에 관련된 정보를 담은 헤더이다.</p>
+<div class="gatsby-highlight" data-language="txt"><pre class="language-txt"><code class="language-txt">Date: Tue, 15 Nov 1994 08:12:31 GMT</code></pre></div>
+<h5>Content-Length</h5>
+<p>메시지 본문의 <strong>바이트 단위 크기(길이)</strong> 를 표현한다.</p>
+<div class="gatsby-highlight" data-language="txt"><pre class="language-txt"><code class="language-txt">Content-Length: 123</code></pre></div>
+<h5>Content-Type, Content-Language, Content-Encoding</h5>
+<p>메시지 본문이 어떻게 <strong>표현</strong>되었는지와 관련된 헤더로 <code class="language-text">표현 헤더(Representation Header)</code>라고도 부른다.</p>
+<p><strong>Content-Type</strong></p>
+<p>메시지 본문에서 사용된 <strong>미디어 타입</strong>을 의미한다.</p>
+<div class="gatsby-highlight" data-language="txt"><pre class="language-txt"><code class="language-txt">Content-Type: text/html;charset=UTF-8</code></pre></div>
+<p><strong>Content-Language</strong></p>
+<p>메시지 본문에 어떤 <strong>자연어</strong>가 사용되었는지를 나타낸다. 언어 태그는 하이픈(-)으로 여러 서브 태그가 구분된다.</p>
+<div class="gatsby-highlight" data-language="txt"><pre class="language-txt"><code class="language-txt">&lt;언어 코드>-&lt;국가 코드>
+
+예시:
+ko-KR  → 한국에서 사용하는 한국어
+en-US  → 미국에서 사용하는 영어
+en-GB  → 영국에서 사용하는 영어</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>언어 코드</th>
+<th>언어</th>
+<th>국가 코드</th>
+<th>국가</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ko</td>
+<td>한국어</td>
+<td>KR</td>
+<td>대한민국</td>
+</tr>
+<tr>
+<td>en</td>
+<td>영어</td>
+<td>US</td>
+<td>미국</td>
+</tr>
+<tr>
+<td>ja</td>
+<td>일본어</td>
+<td>GB</td>
+<td>영국</td>
+</tr>
+<tr>
+<td>zh</td>
+<td>중국어</td>
+<td>JP</td>
+<td>일본</td>
+</tr>
+<tr>
+<td>fr</td>
+<td>프랑스어</td>
+<td>FR</td>
+<td>프랑스</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Content-Encoding</strong></p>
+<p>메시지 본문을 <strong>압축하거나 변환한 방식</strong>이 명시된다. 메시지 본문이 압축/변환될 수 있으며, 수신지 측에서 압축을 해제하고 재변환하기 위해 필요한 정보이다.</p>
+<div class="gatsby-highlight" data-language="txt"><pre class="language-txt"><code class="language-txt">Content-Encoding: gzip
+Content-Encoding: br
+Content-Encoding: deflate, gzip  // 여러 인코딩이 사용된 경우 순서대로 명시</code></pre></div>
+<p>대표적인 인코딩 방식: <code class="language-text">gzip</code>, <code class="language-text">compress</code>, <code class="language-text">deflate</code>, <code class="language-text">br</code></p>
+<h5>Connection</h5>
+<p>HTTP 메시지를 송신하는 호스트가 어떠한 방식의 <strong>연결을 원하는지</strong> 명시하는 헤더이다.</p>
+<div class="gatsby-highlight" data-language="txt"><pre class="language-txt"><code class="language-txt">Connection: keep-alive  // 지속 연결 희망
+Connection: close       // 연결 종료 희망</code></pre></div>
+<h2 id="4️-정리">4️⃣ 정리</h2>
+<ol>
+<li>
+<p><code class="language-text">HTTP</code>는 응용 계층의 핵심 프로토콜로, 웹의 근간을 이루는 프로토콜이다. HTTP를 이해하기 위해서는 <code class="language-text">DNS</code>를 통한 <code class="language-text">도메인 네임 리졸빙</code> 과정과 <code class="language-text">URI/URL</code>을 통한 자원 식별 방법에 대한 배경지식이 필요하다.</p>
+</li>
+<li>
+<p>HTTP는 <code class="language-text">요청-응답 기반</code>, <code class="language-text">미디어 독립적</code>, <code class="language-text">스테이트리스</code>, <code class="language-text">지속 연결</code>이라는 4가지 핵심 특징을 가진다. HTTP 메시지는 <code class="language-text">시작 라인</code>, <code class="language-text">필드 라인</code>, <code class="language-text">메시지 본문</code>으로 구성되며, 요청 메시지와 응답 메시지의 구조가 다르다.</p>
+</li>
+<li>
+<p><code class="language-text">HTTP 메서드</code>는 클라이언트가 서버의 자원에 대해<code class="language-text">수행할 작업</code>의 종류를 나타내며, <code class="language-text">GET</code>, <code class="language-text">POST</code>, <code class="language-text">PUT</code>, <code class="language-text">PATCH</code>, <code class="language-text">DELETE</code> 등이 대표적이다. HTTP 상태 코드는 요청의 결과를 나타내는 3자리 정수로, <code class="language-text">2xx(성공)</code>, <code class="language-text">3xx(리다이렉션)</code>, <code class="language-text">4xx(클라이언트 에러)</code>, <code class="language-text">5xx(서버 에러)</code>로 분류된다.</p>
+</li>
+<li>
+<p><code class="language-text">HTTP 헤더</code>는 메시지 전송과 관련한 <code class="language-text">부가 정보</code>를 제공하며, <code class="language-text">Host</code>, <code class="language-text">User-Agent</code>, <code class="language-text">Content-Type</code>, <code class="language-text">Content-Length</code> 등 다양한 헤더가 존재한다.</p>
+</li>
+</ol></section><footer class="mt-10"><div></div></footer></article><aside class="toc-sidebar"></aside></div><nav class="blog-post-nav mt-10"><div class="flex justify-between items-center py-6 border-t border-gray-800"><div class="flex-1"><a rel="prev" class="group flex flex-col gap-1" href="/transport-layer-tcp-udp/"><span class="text-xs text-gray-500 group-hover:text-gray-400 transition-colors">← 이전 글</span><span class="text-sm md:text-base font-bold text-gray-300 group-hover:text-white transition-colors line-clamp-1">[네트워크] 전송 계층 - TCP와 UDP</span></a></div><div class="w-px h-10 bg-gray-800 mx-4"></div><div class="flex-1 text-right"><a rel="next" class="group flex flex-col gap-1" href="/http-advanced-features/"><span class="text-xs text-gray-500 group-hover:text-gray-400 transition-colors">다음 글 →</span><span class="text-sm md:text-base font-bold text-gray-300 group-hover:text-white transition-colors line-clamp-1">[네트워크] HTTP의 응용 - 쿠키, 캐시, 보안</span></a></div></div></nav><div class="pt-10 border-t border-gray-800"><h3 class="text-xl md:text-2xl font-bold text-white mb-6"><span style="color:#adb5bd">#<!-- -->네트워크</span> <!-- -->관련 포스트</h3><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"><a class="group p-4 rounded-xl bg-[#1a1a1a] border border-gray-800 hover:border-gray-600 transition-all flex flex-col justify-between h-full" href="/http-advanced-features/"><div><h4 class="text-base font-bold mb-2 group-hover:text-blue-400 transition-colors line-clamp-2" style="color:#ffffff">[네트워크] HTTP의 응용 - 쿠키, 캐시, 보안</h4></div><time class="text-xs text-gray-500">2026-02-17</time></a><a class="group p-4 rounded-xl bg-[#1a1a1a] border border-gray-800 hover:border-gray-600 transition-all flex flex-col justify-between h-full" href="/transport-layer-tcp-udp/"><div><h4 class="text-base font-bold mb-2 group-hover:text-blue-400 transition-colors line-clamp-2" style="color:#ffffff">[네트워크] 전송 계층 - TCP와 UDP</h4></div><time class="text-xs text-gray-500">2026-02-15</time></a><a class="group p-4 rounded-xl bg-[#1a1a1a] border border-gray-800 hover:border-gray-600 transition-all flex flex-col justify-between h-full" href="/network-layer-ip-protocol/"><div><h4 class="text-base font-bold mb-2 group-hover:text-blue-400 transition-colors line-clamp-2" style="color:#ffffff">[네트워크] 네트워크 계층과 IP 프로토콜</h4></div><time class="text-xs text-gray-500">2026-02-14</time></a><a class="group p-4 rounded-xl bg-[#1a1a1a] border border-gray-800 hover:border-gray-600 transition-all flex flex-col justify-between h-full" href="/physical-and-data-link-layer/"><div><h4 class="text-base font-bold mb-2 group-hover:text-blue-400 transition-colors line-clamp-2" style="color:#ffffff">[네트워크] 물리 계층과 데이터 링크 계층 - 이더넷과 네트워크 장비</h4></div><time class="text-xs text-gray-500">2026-02-13</time></a><a class="group p-4 rounded-xl bg-[#1a1a1a] border border-gray-800 hover:border-gray-600 transition-all flex flex-col justify-between h-full" href="/network-big-picture/"><div><h4 class="text-base font-bold mb-2 group-hover:text-blue-400 transition-colors line-clamp-2" style="color:#ffffff">[네트워크] 네트워크의 큰 그림</h4></div><time class="text-xs text-gray-500">2026-02-12</time></a></div></div></main><footer class="text-center">© <!-- -->2026<!-- -->, Design &amp; Developed by 정인영</footer></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/http-fundamentals/";/*]]>*/</script><!-- slice-start id="_gatsby-scripts-1" -->
+          <script
+            id="gatsby-chunk-mapping"
+          >
+            window.___chunkMapping="{\"app\":[\"/app-2563c1d81e856d1a0745.js\"],\"component---src-pages-404-jsx\":[\"/component---src-pages-404-jsx-22d4b79fbaf3b4325d8b.js\"],\"component---src-pages-index-js\":[\"/component---src-pages-index-js-c314cd629e62770274de.js\"],\"component---src-pages-portfolio-js\":[\"/component---src-pages-portfolio-js-a2326abe0915726a6a44.js\"],\"component---src-templates-blog-post-js\":[\"/component---src-templates-blog-post-js-100bf5422e3c3027506c.js\"]}";
+          </script>
+        <script>window.___webpackCompilationHash="361e774d4cb727004112";</script><script src="/webpack-runtime-12dc55100d57bcb87940.js" async></script><script src="/framework-32bef892c5f913f2c732.js" async></script><script src="/app-2563c1d81e856d1a0745.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>
