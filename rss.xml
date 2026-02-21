@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[난너의오른팔 기술 블로그 RSS Feed]]></title><description><![CDATA[Web 기술과 AI 활용법을 공부하는 주니어 개발자, 커뮤니티 빌더의 기술 블로그]]></description><link>https://inyoung.dev</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 21 Feb 2026 09:00:48 GMT</lastBuildDate><item><title><![CDATA[[백준 JAVA] 호텔 1106 머릿속에 박아넣기]]></title><description><![CDATA[…]]></description><link>https://inyoung.dev/boj-1106-hotel/</link><guid isPermaLink="false">https://inyoung.dev/boj-1106-hotel/</guid><pubDate>Fri, 20 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;문제&quot;&gt;문제&lt;/h2&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[난너의오른팔 기술 블로그 RSS Feed]]></title><description><![CDATA[Web 기술과 AI 활용법을 공부하는 주니어 개발자, 커뮤니티 빌더의 기술 블로그]]></description><link>https://inyoung.dev</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 21 Feb 2026 09:30:51 GMT</lastBuildDate><item><title><![CDATA[[백준 JAVA] 호텔 1106 머릿속에 박아넣기]]></title><description><![CDATA[…]]></description><link>https://inyoung.dev/boj-1106-hotel/</link><guid isPermaLink="false">https://inyoung.dev/boj-1106-hotel/</guid><pubDate>Fri, 20 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;문제&quot;&gt;문제&lt;/h2&gt;
 &lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;background: transparent;&quot;&gt;
     &lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
@@ -11236,7 +11236,7 @@ child&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;parent &lt;sp
 &lt;li&gt;&lt;strong&gt;적절한 키 설계&lt;/strong&gt;: 엔티티의 고유성과 관계의 무결성 보장&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;효율적인 변환&lt;/strong&gt;: E-R 모델에서 관계형 스키마로의 최적화된 변환&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;E-R 모델은 복잡한 데이터 요구사항을 체계적으로 분석하고 설계할 수 있는 강력한 도구다. 기본 개념의 정확한 이해와 단계적 접근을 통해 효과적인 데이터베이스 설계가 가능하다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[허깅페이스로 파이프라인을 만들어보자 - 트랜스포머 모델 활용 가이드]]></title><description><![CDATA[수많은 트랜스포머 모델이 쏟아져 나오지만 각각 다른 구현 방식으로 인해 활용이 어려웠다. 허깅페이스는 통일된 인터페이스로 이 문제를 해결하고, 복잡한 NLP 파이프라인을 간단하게 구축할 수 있게 해준다. 0️⃣ 구글 코랩과 깃허브 연동하기 0-…]]></description><link>https://inyoung.dev/make-huggingface-pipeline/</link><guid isPermaLink="false">https://inyoung.dev/make-huggingface-pipeline/</guid><pubDate>Sat, 04 Oct 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;background: transparent;&quot;&gt;
+&lt;p&gt;E-R 모델은 복잡한 데이터 요구사항을 체계적으로 분석하고 설계할 수 있는 강력한 도구다. 기본 개념의 정확한 이해와 단계적 접근을 통해 효과적인 데이터베이스 설계가 가능하다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[허깅페이스로 파이프라인을 만들어보자]]></title><description><![CDATA[수많은 트랜스포머 모델이 쏟아져 나오지만 각각 다른 구현 방식으로 인해 활용이 어려웠다. 허깅페이스는 통일된 인터페이스로 이 문제를 해결하고, 복잡한 NLP 파이프라인을 간단하게 구축할 수 있게 해준다. 0️⃣ 구글 코랩과 깃허브 연동하기 0-…]]></description><link>https://inyoung.dev/make-huggingface-pipeline/</link><guid isPermaLink="false">https://inyoung.dev/make-huggingface-pipeline/</guid><pubDate>Sat, 04 Oct 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;background: transparent;&quot;&gt;
     &lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 600px; &quot;
@@ -11296,13 +11296,13 @@ device &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span clas
 !pip install transformers datasets torch pandas&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h2 id=&quot;1️-허깅페이스-개요&quot;&gt;1️⃣ 허깅페이스 개요&lt;/h2&gt;
 &lt;h4 id=&quot;1-1-등장-배경&quot;&gt;1-1 등장 배경&lt;/h4&gt;
-&lt;p&gt;&lt;strong&gt;💡 문제점&lt;/strong&gt;&lt;/p&gt;
+&lt;h5&gt;문제점&lt;/h5&gt;
 &lt;ul&gt;
 &lt;li&gt;트랜스포머 아키텍처 기반 모델들이 급속히 증가 ⬆&lt;/li&gt;
 &lt;li&gt;모델마다 서로 다른 구현 방식과 인터페이스 존재&lt;/li&gt;
 &lt;li&gt;새로운 모델 사용법을 매번 새로 익혀야 하는 어려움&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;✅ 해결 방안&lt;/strong&gt;&lt;/p&gt;
+&lt;h5&gt;해결 방안&lt;/h5&gt;
 &lt;p&gt;공통된 인터페이스로 다양한 트랜스포머 모델을 활용할 수 있도록 지원하는 라이브러리 개발 → &lt;code class=&quot;language-text&quot;&gt;Huggingface&lt;/code&gt; 팀의 &lt;code class=&quot;language-text&quot;&gt;transformers&lt;/code&gt; 라이브러리&lt;/p&gt;
 &lt;h4 id=&quot;1-2-허깅페이스란&quot;&gt;1-2 허깅페이스란?&lt;/h4&gt;
 &lt;p&gt;다양한 트랜스포머 모델을 &lt;strong&gt;통일된 인터페이스&lt;/strong&gt;로 사용 가능하도록 지원하는 오픈소스 라이브러리/플랫폼이다.&lt;/p&gt;
@@ -11867,52 +11867,79 @@ final_dataset &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; transl
 
 &lt;span class=&quot;token comment&quot;&gt;# CSV로 저장 (선택사항)&lt;/span&gt;
 df_final &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; pd&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;DataFrame&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;final_dataset&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-df_final&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;to_csv&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;news_analysis_pipeline_results.csv&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; index&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token boolean&quot;&gt;False&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[RAG의 핵심 개념과 실습]]></title><description><![CDATA[대형 언어 모델의 한계를 극복하고 실시간 정보 활용을 가능하게 하는 RAG 기술이 주목받고 있다. 검색과 생성을 결합한 이 혁신적인 접근법을 이론부터 실습까지 알아보자. 1️⃣ RAG란? 1-1 RAG…]]></description><link>https://inyoung.dev/rag-core-concept/</link><guid isPermaLink="false">https://inyoung.dev/rag-core-concept/</guid><pubDate>Wed, 01 Oct 2025 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+df_final&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;to_csv&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;news_analysis_pipeline_results.csv&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; index&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token boolean&quot;&gt;False&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[RAG의 핵심 개념과 원리를 실습과 함께 알아봅니다.]]></title><description><![CDATA[대형 언어 모델의 한계를 극복하고 실시간 정보 활용을 가능하게 하는 RAG 기술이 주목받고 있다. 검색과 생성을 결합한 이 혁신적인 접근법을 이론부터 실습까지 알아보자.  1️⃣ RAG란? RAG…]]></description><link>https://inyoung.dev/rag-core-concept/</link><guid isPermaLink="false">https://inyoung.dev/rag-core-concept/</guid><pubDate>Wed, 01 Oct 2025 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
 &lt;p&gt;대형 언어 모델의 한계를 극복하고 실시간 정보 활용을 가능하게 하는 RAG 기술이 주목받고 있다. 검색과 생성을 결합한 이 혁신적인 접근법을 이론부터 실습까지 알아보자.&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 568px; background: transparent;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/c4d3f090e61c211003c9351ae4baa2f3/310ad/index.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 66.39999999999999%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAAsTAAALEwEAmpwYAAACLElEQVR42pWT30/TUBTH9zf6qC8mJsZHHo2E+ONJH+TBBB8w0RhFIhIVEiCLZkiYgMCWzf2irGzrtq4dGdtKXbt16z7edqtCooInOWlu7/l+7/d+z7khLojhcEij4/h5mQgFIC86lkW5UqNa1UVq6McNiorKu40ECyK1Wh1V1alUNKriWy6rWJZ9ntCjcl3XXxiGSSotkc4ckspIVJUypbzMQVbiSC6SO5DJ5vIkUwf+vldrmh0f63EMA4XuWKVpmvT7/V+nJZtdto9tHFHcE+rP7nnhOI6P8bCDQKFuu3xYXWJha5+pLZVXaY0fzoCVQpNrKxI3wjIzMRWtecqXvMazbXEDvU27N2BO1HqYN1/3WV77iCZuH9o5drj7+iXX364zGWvxKF5nQz3l3k6VyWiJx7Eatz4XiNZt5hMKq8kjFlMqEdVkOqEz8a3B1fl1n2O30R95GCupFBoGUXGE1O760nXR1dubCjc/yaRPrJHH3T75eotOf+T5YatLVLcpCvV7gmMYNOVsDIRfpmEQ1wzKZo+2INmqGrRbbXrOaHT8Rg7/MTauMHWUwuiBS010NyzXkY0ehuOyJJ+glBQsuzuezRHYqx+Mce74Z+jP0+yiGhZ7SoOcVCJZ0M8RXTjYv1/F2Bv1OwszUzx4+p7ni6s8fLGM1LIJbnNpwmDAw+kITyausDY7TXhjmTuzc9yPZP+fMHiCklYhvbuJlM1wWC6SyeeJy6W/NuIs4U8ZiMyIXp+s4wAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+          &lt;source
+              srcset=&quot;/static/c4d3f090e61c211003c9351ae4baa2f3/bc904/index.webp 250w,
+/static/c4d3f090e61c211003c9351ae4baa2f3/4be29/index.webp 500w,
+/static/c4d3f090e61c211003c9351ae4baa2f3/af7d9/index.webp 568w&quot;
+              sizes=&quot;(max-width: 568px) 100vw, 568px&quot;
+              type=&quot;image/webp&quot;
+            /&gt;
+          &lt;source
+            srcset=&quot;/static/c4d3f090e61c211003c9351ae4baa2f3/43fa5/index.png 250w,
+/static/c4d3f090e61c211003c9351ae4baa2f3/c6e3d/index.png 500w,
+/static/c4d3f090e61c211003c9351ae4baa2f3/310ad/index.png 568w&quot;
+            sizes=&quot;(max-width: 568px) 100vw, 568px&quot;
+            type=&quot;image/png&quot;
+          /&gt;
+          &lt;img
+            class=&quot;gatsby-resp-image-image&quot;
+            src=&quot;/static/c4d3f090e61c211003c9351ae4baa2f3/310ad/index.png&quot;
+            alt=&quot;index&quot;
+            title=&quot;&quot;
+            loading=&quot;lazy&quot;
+            decoding=&quot;async&quot;
+            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+          /&gt;
+        &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
 &lt;h2 id=&quot;1️-rag란&quot;&gt;1️⃣ RAG란?&lt;/h2&gt;
-&lt;h4 id=&quot;1-1-rag의-정의&quot;&gt;1-1 RAG의 정의&lt;/h4&gt;
+&lt;h4 id=&quot;rag의-정의&quot;&gt;RAG의 정의&lt;/h4&gt;
 &lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;RAG(Retrieval-Augmented Generation)&lt;/code&gt;는 자연어 처리 분야에서 사용되는 기술로 &lt;strong&gt;정보 검색을 통해&lt;/strong&gt; 언어 생성 과정을 향상시키는 방식이다.&lt;/p&gt;
-&lt;p&gt;기존 언어 모델이 사전 학습된 지식에만 의존하는 반면, RAG는 외부 데이터베이스에서 관련 정보를 실시간으로 검색하여 더 정확하고 최신의 답변을 생성한다.&lt;/p&gt;
-&lt;h4 id=&quot;1-2-rag-작동-원리&quot;&gt;1-2 RAG 작동 원리&lt;/h4&gt;
+&lt;p&gt;기존 언어 모델이 사전 학습된 지식에만 의존하는 반면, &lt;code class=&quot;language-text&quot;&gt;RAG&lt;/code&gt;는 &lt;code class=&quot;language-text&quot;&gt;외부 데이터베이스&lt;/code&gt;에서 관련 정보를 실시간으로 검색하여 더 정확하고 최신의 답변을 생성한다.&lt;/p&gt;
+&lt;h4 id=&quot;rag-작동-원리&quot;&gt;RAG 작동 원리&lt;/h4&gt;
 &lt;p&gt;RAG의 작동 과정은 다음과 같다:&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;사용자가 질문을 입력한다&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;RAG는 외부 데이터베이스에서 질문과 관련된 정보를 검색한다&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;검색된 정보를 기반으로 LLM이 답변을 생성한다&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;사용자가 질문을 입력한다.&lt;/li&gt;
+&lt;li&gt;RAG는 외부 데이터베이스에서 질문과 관련된 정보를 검색한다.&lt;/li&gt;
+&lt;li&gt;검색된 정보를 기반으로 LLM이 답변을 생성한다.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# RAG 작동 원리 예시&lt;/span&gt;
-&lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;rag_process&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;user_query&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;token comment&quot;&gt;# 1. 사용자 질문 입력&lt;/span&gt;
-    query &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; user_query
-
-    &lt;span class=&quot;token comment&quot;&gt;# 2. 외부 DB에서 관련 정보 검색&lt;/span&gt;
-    relevant_docs &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; vector_db&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;search&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;query&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; top_k&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-
-    &lt;span class=&quot;token comment&quot;&gt;# 3. 검색된 정보와 함께 LLM에 전달&lt;/span&gt;
-    context &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;\n&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;join&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;relevant_docs&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-    prompt &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string-interpolation&quot;&gt;&lt;span class=&quot;token string&quot;&gt;f&quot;Context: &lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;context&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;\nQuestion: &lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;query&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;\nAnswer:&quot;&lt;/span&gt;&lt;/span&gt;
-
-    &lt;span class=&quot;token comment&quot;&gt;# 4. 최종 답변 생성&lt;/span&gt;
-    answer &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; llm&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;generate&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;prompt&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; answer&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2 id=&quot;2️-rag는-왜-필요할까&quot;&gt;2️⃣ RAG는 왜 필요할까?&lt;/h2&gt;
-&lt;h4 id=&quot;2-1-대형-언어-모델의-한계&quot;&gt;2-1 대형 언어 모델의 한계&lt;/h4&gt;
-&lt;p&gt;ChatGPT와 같은 &lt;strong&gt;대량의 데이터를 학습한 대규모 언어 모델&lt;/strong&gt;도 다음과 같은 한계를 가진다:&lt;/p&gt;
+&lt;h2 id=&quot;2️-rag의-필요성과-등장-계기&quot;&gt;2️⃣ RAG의 필요성과 등장 계기&lt;/h2&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;ChatGPT&lt;/code&gt;와 같은 &lt;strong&gt;대량의 데이터를 학습한 대규모 언어 모델&lt;/strong&gt;도 한계가 있다.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Knowledge Cutoff&lt;/strong&gt;: 학습 이후에 새로 나온 데이터에 대해서는 답변이 어려움&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Training Data Cutoff&lt;/strong&gt;: 학습하지 않은 특정 도메인 데이터들에 대한 제한적 지식&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;할루시네이션&lt;/strong&gt;: 사실이 아닌 내용을 그럴듯하게 생성하는 문제&lt;/li&gt;
+&lt;li&gt;학습 이후에 새로 나온 데이터에 대해서는 답변이 어려움 (&lt;code class=&quot;language-text&quot;&gt;Knowldege Cutoff&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;사실이 아닌 내용을 그럴듯하게 생성하는 문제 (&lt;code class=&quot;language-text&quot;&gt;Hallucination&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;학습하지 않은 특정 도메인 데이터들에 대한 제한적 지식 (&lt;code class=&quot;language-text&quot;&gt;Training Data Cutoff&lt;/code&gt;)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&quot;2-2-rag의-해결-방안&quot;&gt;2-2 RAG의 해결 방안&lt;/h4&gt;
-&lt;p&gt;RAG는 &lt;strong&gt;실시간으로 부족한 데이터를 주입&lt;/strong&gt;하기 위해 고안된 방법으로 다음과 같은 이점을 제공한다:&lt;/p&gt;
+&lt;p&gt;이러한 문제점을 해결하는 기법이 &lt;code class=&quot;language-text&quot;&gt;RAG&lt;/code&gt; 인데, &lt;code class=&quot;language-text&quot;&gt;RAG&lt;/code&gt;는 &lt;strong&gt;실시간으로 부족한 데이터를 주입&lt;/strong&gt;하기 위해 답변 전에 외부 문서에 대한 맥락을 주입시켜 준다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;💡 RAG vs Fine-tuning 선택 기준&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;최신 정보에 기반한 정확한 답변 생성&lt;/li&gt;
-&lt;li&gt;특정 도메인 지식의 실시간 활용&lt;/li&gt;
-&lt;li&gt;출처가 명확한 신뢰할 수 있는 응답 제공&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;RAG&lt;/strong&gt;: 실시간 정보 업데이트, 비용 효율성, 출처 명시가 중요한 경우&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Fine-tuning&lt;/strong&gt;: 특정 스타일/톤 학습, 응답 속도, 일관된 행동 패턴이 중요한 경우&lt;/li&gt;
 &lt;/ul&gt;
+&lt;/blockquote&gt;
 &lt;h2 id=&quot;3️-rag-작동-과정&quot;&gt;3️⃣ RAG 작동 과정&lt;/h2&gt;
-&lt;h4 id=&quot;3-1-데이터-임베딩-및-vector-db-구축&quot;&gt;3-1 데이터 임베딩 및 Vector DB 구축&lt;/h4&gt;
+&lt;h4 id=&quot;데이터-임베딩-및-vector-db-구축&quot;&gt;데이터 임베딩 및 Vector DB 구축&lt;/h4&gt;
 &lt;p&gt;RAG의 첫 번째 단계는 &lt;strong&gt;데이터를 임베딩 모델에 통합&lt;/strong&gt;하는 것이다.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# 임베딩 과정 예시&lt;/span&gt;
 &lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;create_embeddings&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;text_data&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
@@ -11935,8 +11962,8 @@ df_final&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;to_csv&lt;
 &lt;li&gt;배 = [0.00234, -0.00222, 0.00635...]&lt;/li&gt;
 &lt;li&gt;컴퓨터 = [-0.078, 0.00986, 0.00123...]&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&quot;chunking의-이해&quot;&gt;Chunking의 이해&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;Chunking&lt;/strong&gt;이란 긴 문서를 AI에게 통째로 전달하면 성능이 떨어지거나 context 길이 제한을 초과해 제대로 처리하지 못할 수 있어서, &lt;strong&gt;긴 문서를 작은 덩어리로 나누는 작업&lt;/strong&gt;이다.&lt;/p&gt;
+&lt;h4 id=&quot;chunking이란&quot;&gt;Chunking이란&lt;/h4&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;Chunking&lt;/code&gt;이란 긴 문서를 AI에게 통째로 전달하면 성능이 떨어지거나 context 길이 제한을 초과해 제대로 처리하지 못할 수 있어서, &lt;strong&gt;긴 문서를 작은 덩어리로 나누는 작업&lt;/strong&gt;이다.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# Chunking 예시&lt;/span&gt;
 document &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token triple-quoted-string string&quot;&gt;&quot;&quot;&quot;안녕하세요. 저는 인공지능에 관심이 많고 생성형 AI에 대해서
 공부하고 있습니다. 오늘은 RAG를 배웠습니다.&quot;&quot;&quot;&lt;/span&gt;
@@ -11948,14 +11975,22 @@ chunks &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span clas
 &lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;&lt;strong&gt;주요 파라미터:&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;chunk_size&lt;/strong&gt;: 하나의 chunk에 포함되는 글자 수&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;chunk_overlap&lt;/strong&gt;: 청크끼리 일정 부분 겹치게 만드는 설정&lt;/li&gt;
+&lt;li&gt;chunk_size: 하나의 chunk에 포함되는 글자 수&lt;/li&gt;
+&lt;li&gt;chunk_overlap: 청크끼리 일정 부분 겹치게 만드는 설정&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;chunk_overlap&lt;/code&gt;을 사용하는 이유는 chunk가 정확히 잘리는 지점에서 문장의 맥락이 끊기면 AI가 의미를 파악하기 어려워지기 때문이다.&lt;/p&gt;
-&lt;h4 id=&quot;3-2-쿼리-벡터화-및-관련-정보-추출&quot;&gt;3-2 쿼리 벡터화 및 관련 정보 추출&lt;/h4&gt;
-&lt;p&gt;사용자의 &lt;strong&gt;질문을 벡터화&lt;/strong&gt;하고, &lt;strong&gt;벡터 DB를 대상으로 유사도 검색&lt;/strong&gt;을 사용하여 가장 관련성이 높은 상위 K개의 항목을 추출한다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;💡 chunk 사이즈에 따른 성능&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;chunk size&lt;/code&gt;가 작을수록 정밀도가 올라가나, 문맥이 잘리고 chunk 개수가 많아져서 검색 속도가 느림&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;chunk size&lt;/code&gt;가 클수록 문맥 보존에는 유리하나 의미가 희석되어 정밀도가 낮아지고 관계 없는 정보가 함께 포함될 수 있음&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&quot;쿼리-벡터화-및-관련-정보-추출&quot;&gt;쿼리 벡터화 및 관련 정보 추출&lt;/h4&gt;
+&lt;p&gt;사용자의 &lt;strong&gt;질문을 벡터화&lt;/strong&gt;하고, &lt;code class=&quot;language-text&quot;&gt;벡터 DB&lt;/code&gt;를 대상으로 &lt;code class=&quot;language-text&quot;&gt;유사도 검색&lt;/code&gt;을 사용하여 가장 관련성이 높은 상위 K개의 항목을 추출한다.&lt;/p&gt;
 &lt;h5&gt;벡터 유사도 검색&lt;/h5&gt;
-&lt;p&gt;임베딩을 통해 저장된 데이터는 &lt;strong&gt;벡터 간의 거리를 측정&lt;/strong&gt;하여 얼마나 유사한지를 평가한다. 주요 유사도 측정 방식은 다음과 같다:&lt;/p&gt;
+&lt;p&gt;임베딩을 통해 저장된 데이터는 &lt;strong&gt;벡터 간의 거리를 측정&lt;/strong&gt;하여 얼마나 유사한지를 평가한다.
+유사도 측정 방식에는 아래와 같은 방법들이 있다.&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -11982,6 +12017,7 @@ chunks &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span clas
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
+&lt;h5&gt;실습 코드&lt;/h5&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;vector_similarity_search&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;query_vector&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; database_vectors&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; top_k&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
     &lt;span class=&quot;token triple-quoted-string string&quot;&gt;&quot;&quot;&quot;
     쿼리 벡터와 가장 유사한 상위 k개 벡터 검색
@@ -11996,7 +12032,7 @@ chunks &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span clas
     &lt;span class=&quot;token comment&quot;&gt;# 유사도 기준 정렬 후 상위 k개 반환&lt;/span&gt;
     similarities&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;sort&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;key&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;lambda&lt;/span&gt; x&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; x&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; reverse&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token boolean&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
     &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; similarities&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;top_k&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h4 id=&quot;3-3-llm을-통한-답변-생성&quot;&gt;3-3 LLM을 통한 답변 생성&lt;/h4&gt;
+&lt;h4 id=&quot;llm을-통한-답변-생성&quot;&gt;LLM을 통한 답변 생성&lt;/h4&gt;
 &lt;p&gt;LLM은 &lt;strong&gt;쿼리 텍스트와 추출된 관련 정보&lt;/strong&gt;를 바탕으로 최종 답변을 생성한다. 이 과정에서 &lt;strong&gt;정확한 출처에 기반한 답변&lt;/strong&gt;이 가능해진다.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;generate_final_answer&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;query&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; retrieved_docs&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
     &lt;span class=&quot;token triple-quoted-string string&quot;&gt;&quot;&quot;&quot;
@@ -12019,11 +12055,11 @@ chunks &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span clas
     &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; response&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h2 id=&quot;4️-rag-vs-fine-tuning&quot;&gt;4️⃣ RAG vs Fine-tuning&lt;/h2&gt;
 &lt;p&gt;두 가지 접근법의 차이점을 명확히 이해해보자.&lt;/p&gt;
-&lt;h4 id=&quot;4-1-rag-검색-기반-생성&quot;&gt;4-1 RAG (검색 기반 생성)&lt;/h4&gt;
-&lt;p&gt;&lt;strong&gt;외부 지식을 검색해 GPT에게 전달&lt;/strong&gt;하고 그를 바탕으로 응답을 생성하는 방식이다.&lt;/p&gt;
-&lt;h4 id=&quot;4-2-fine-tuning-모델-미세조정&quot;&gt;4-2 Fine-tuning (모델 미세조정)&lt;/h4&gt;
-&lt;p&gt;&lt;strong&gt;기존 GPT 모델에 새로운 데이터를 학습&lt;/strong&gt;시켜, 모델 자체를 바꾸는 방식이다.&lt;/p&gt;
-&lt;h4 id=&quot;4-3-비교-분석&quot;&gt;4-3 비교 분석&lt;/h4&gt;
+&lt;h4 id=&quot;rag&quot;&gt;RAG&lt;/h4&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;외부 지식&lt;/code&gt;을 검색해 &lt;code class=&quot;language-text&quot;&gt;기존 모델&lt;/code&gt;에 전달하고 그를 바탕으로 응답을 생성하는 방식이다.&lt;/p&gt;
+&lt;h4 id=&quot;fine-tuning&quot;&gt;Fine-tuning&lt;/h4&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;기존 모델&lt;/code&gt;에 &lt;code class=&quot;language-text&quot;&gt;새로운 데이터&lt;/code&gt;를 학습시켜, 모델 자체를 바꾸는 방식이다.&lt;/p&gt;
+&lt;h4 id=&quot;비교&quot;&gt;비교&lt;/h4&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -12060,24 +12096,13 @@ chunks &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span clas
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# RAG 방식 예시&lt;/span&gt;
-&lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;rag_approach&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;query&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
-    docs &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; vector_db&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;search&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;query&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;  &lt;span class=&quot;token comment&quot;&gt;# 실시간 검색&lt;/span&gt;
-    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; llm&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;generate_with_context&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;query&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; docs&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;token comment&quot;&gt;# Fine-tuning 방식 예시&lt;/span&gt;
-&lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;finetuned_approach&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;query&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; finetuned_model&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;generate&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;query&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;  &lt;span class=&quot;token comment&quot;&gt;# 학습된 지식 활용&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h2 id=&quot;5️-vector-db&quot;&gt;5️⃣ Vector DB&lt;/h2&gt;
-&lt;h4 id=&quot;5-1-vector-db의-정의&quot;&gt;5-1 Vector DB의 정의&lt;/h4&gt;
-&lt;p&gt;&lt;strong&gt;Vector DB&lt;/strong&gt;는 데이터를 &lt;strong&gt;벡터 형태로 저장&lt;/strong&gt;하고, &lt;strong&gt;벡터 간 유사도를 기반으로 검색&lt;/strong&gt;하는 데이터베이스다.&lt;/p&gt;
-&lt;p&gt;기존의 관계형 DB가 행과 열의 2차원 형식으로 데이터를 표현하는 반면, Vector DB는 &lt;strong&gt;다차원 공간으로 개념을 확장&lt;/strong&gt;한다.&lt;/p&gt;
-&lt;h4 id=&quot;5-2-vector-db가-필요한-이유&quot;&gt;5-2 Vector DB가 필요한 이유&lt;/h4&gt;
-&lt;p&gt;생성형 AI나 RAG에서 Vector DB를 사용하는 이유:&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;Vector DB&lt;/code&gt;는 데이터를 &lt;code class=&quot;language-text&quot;&gt;벡터 형태로 저&lt;/code&gt; 하고, &lt;strong&gt;벡터 간 유사도를 기반으로 검색&lt;/strong&gt;하는 데이터베이스다.
+기존의 관계형 DB가 행과 열의 2차원 형식으로 데이터를 표현하는 반면, &lt;code class=&quot;language-text&quot;&gt;Vector DB&lt;/code&gt;는 &lt;strong&gt;다차원 공간으로 개념을 확장&lt;/strong&gt;한다.&lt;/p&gt;
+&lt;h4 id=&quot;vector-db가-필요한-이유&quot;&gt;Vector DB가 필요한 이유&lt;/h4&gt;
 &lt;ul&gt;
-&lt;li&gt;자연어 문서를 텍스트 그대로 저장하지 않음&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;AI가 이해 가능한 형태인 벡터로 변환&lt;/strong&gt;하여 저장&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;유사한 의미의 문서나 문장들을 빠르게 검색&lt;/strong&gt; 가능&lt;/li&gt;
+&lt;li&gt;텍스트를 AI가 이해 가능한 형태인 벡터로 변환하여 저장&lt;/li&gt;
+&lt;li&gt;유사한 의미의 문서나 문장들을 빠르게 검색 가능&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# Vector DB 저장 및 검색 예시&lt;/span&gt;
 &lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;SimpleVectorDB&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
@@ -12104,7 +12129,7 @@ chunks &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span clas
             results&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;append&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;self&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;documents&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;i&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
 
         &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; results&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h4 id=&quot;5-3-주요-vector-db-종류&quot;&gt;5-3 주요 Vector DB 종류&lt;/h4&gt;
+&lt;h4 id=&quot;주요-vector-db-종류&quot;&gt;주요 Vector DB 종류&lt;/h4&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -12136,15 +12161,12 @@ chunks &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span clas
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h4 id=&quot;5-4-chroma-선택-이유&quot;&gt;5-4 Chroma 선택 이유&lt;/h4&gt;
-&lt;p&gt;실습에서 &lt;strong&gt;Chroma&lt;/strong&gt;를 선택한 이유:&lt;/p&gt;
+&lt;h4 id=&quot;chroma-db&quot;&gt;Chroma DB&lt;/h4&gt;
+&lt;p&gt;실습 코드에서는 &lt;code class=&quot;language-text&quot;&gt;Chroma DB&lt;/code&gt;를 선택했다.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Python 기반의 오픈소스 라이브러리로 &lt;strong&gt;설치 과정이 단순&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;별도의 서버를 띄우거나 복잡한 설정 없이 &lt;strong&gt;몇 줄의 코드만으로 벡터 DB 구축 가능&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;빠르게 개념을 익히고 간단한 환경에서 직접 체험하기에 적합&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# Chroma 설치&lt;/span&gt;
-pip &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; chromadb&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h2 id=&quot;6️-실습코드-1---vector-db-구축&quot;&gt;6️⃣ 실습코드 1 - Vector DB 구축&lt;/h2&gt;
 &lt;h4 id=&quot;6-1-전체-흐름-요약&quot;&gt;6-1 전체 흐름 요약&lt;/h4&gt;
 &lt;ul&gt;
@@ -12357,28 +12379,7 @@ collection &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; dbclient&
   &lt;span class=&quot;token string&quot;&gt;&quot;metadatas&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;
     &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;메타데이터&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; 메타데이터&lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; 메타데이터&lt;span class=&quot;token number&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;  &lt;span class=&quot;token comment&quot;&gt;# 각 문서에 해당하는 메타데이터 리스트&lt;/span&gt;
   &lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2 id=&quot;-정리&quot;&gt;✅ 정리&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;RAG의 핵심 포인트&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;🔍 &lt;strong&gt;검색 기반&lt;/strong&gt;: 외부 지식을 실시간으로 검색하여 활용&lt;/li&gt;
-&lt;li&gt;📊 &lt;strong&gt;벡터 검색&lt;/strong&gt;: 의미적 유사도 기반의 정확한 문서 검색&lt;/li&gt;
-&lt;li&gt;🎯 &lt;strong&gt;맥락 제공&lt;/strong&gt;: 검색된 문서를 맥락으로 활용한 정확한 답변 생성&lt;/li&gt;
-&lt;li&gt;⚡ &lt;strong&gt;실시간 반영&lt;/strong&gt;: 새로운 데이터를 즉시 활용 가능&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;RAG vs Fine-tuning 선택 기준&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;RAG&lt;/strong&gt;: 실시간 정보 업데이트, 비용 효율성, 출처 명시가 중요한 경우&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Fine-tuning&lt;/strong&gt;: 특정 스타일/톤 학습, 응답 속도, 일관된 행동 패턴이 중요한 경우&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;구현 시 고려사항&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;청킹 전략&lt;/strong&gt;: chunk_size와 overlap 최적화&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;벡터 DB 선택&lt;/strong&gt;: 용량과 성능 요구사항에 맞는 DB 선택&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;임베딩 모델&lt;/strong&gt;: 도메인에 특화된 임베딩 모델 활용&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;검색 최적화&lt;/strong&gt;: 유사도 기준과 상위 K개 결과 수 조정&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;RAG는 현재 생성형 AI의 한계를 극복하고 신뢰할 수 있는 AI 서비스를 구축하는 핵심 기술이다. 체계적인 이해와 실습을 통해 실무에서 효과적으로 활용할 수 있다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[프롬프트 엔지니어링 기초 - AI와 효과적으로 소통하는 방법]]></title><description><![CDATA[AI 시대에 접어들면서 프롬프트 엔지니어링은 필수 스킬이 되었다. 단순히 질문을 던지는 것을 넘어서, AI로부터 원하는 결과를 정확하게 얻어내는 기술을 체계적으로 알아보자.  1️⃣ 프롬프트 엔지니어링이란? 1-1. 프롬프트 엔지니어링의 정의 은 AI…]]></description><link>https://inyoung.dev/prompt-engineering-basic/</link><guid isPermaLink="false">https://inyoung.dev/prompt-engineering-basic/</guid><pubDate>Sun, 28 Sep 2025 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[프롬프트 엔지니어링 기초 - AI와 효과적으로 소통하는 방법]]></title><description><![CDATA[AI 시대에 접어들면서 프롬프트 엔지니어링은 필수 스킬이 되었다. 단순히 질문을 던지는 것을 넘어서, AI로부터 원하는 결과를 정확하게 얻어내는 기술을 체계적으로 알아보자.  1️⃣ 프롬프트 엔지니어링이란? 1-1. 프롬프트 엔지니어링의 정의 은 AI…]]></description><link>https://inyoung.dev/prompt-engineering-basic/</link><guid isPermaLink="false">https://inyoung.dev/prompt-engineering-basic/</guid><pubDate>Sun, 28 Sep 2025 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
 &lt;p&gt;AI 시대에 접어들면서 프롬프트 엔지니어링은 필수 스킬이 되었다. 단순히 질문을 던지는 것을 넘어서, AI로부터 원하는 결과를 정확하게 얻어내는 기술을 체계적으로 알아보자.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;background: transparent;&quot;&gt;
