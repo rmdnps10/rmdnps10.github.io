@@ -46,6 +46,7 @@
   "Certification": [
     { "title": "정보처리기사", "organization": "한국산업인력공단", "year": "2025" },
     { "title": "네트워크관리사 2급", "organization": "한국정보통신자격협회", "year": "2026" },
-    { "title": "SQLD", "organization": "Kdata", "year": "2026" }
+    { "title": "SQLD", "organization": "Kdata", "year": "2026" },
+    { "title": "AWS SAA", "organization": "AWS", "year": "2026" }
   ]
 }
